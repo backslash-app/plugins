@@ -1,0 +1,35 @@
+name: colors
+label: Colors
+version: 1.0.0
+author: a3chron
+
+commands:
+  - name: hex
+    label: Hex
+    isImmediate: false
+    bgColor: "#cdd6f4"
+    color: "#181825"
+    icon: palette
+    keywords:
+      - hex
+      - color
+
+  - name: rgb
+    label: RGB
+    isImmediate: false
+    bgColor: "#cdd6f4"
+    color: "#181825"
+    icon: palette
+    keywords:
+      - rgb
+      - color
+
+  - name: hsl
+    label: HSL
+    isImmediate: false
+    bgColor: "#cdd6f4"
+    color: "#181825"
+    icon: palette
+    keywords:
+      - hsl
+      - color
