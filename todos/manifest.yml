@@ -1,0 +1,26 @@
+name: todo
+label: Todo
+version: 1.0.0
+author: a3chron
+
+commands:
+  - name: add-todo
+    label: Add Todo
+    isImmediate: false
+    bgColor: "#cdd6f4"
+    color: "#181825"
+    icon: check
+    keywords:
+      - todo
+      - add
+
+  - name: list-todos
+    label: List Todos
+    isImmediate: false
+    bgColor: "#cdd6f4"
+    color: "#181825"
+    icon: check
+    keywords:
+      - todo
+      - todos
+      - list
