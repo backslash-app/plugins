@@ -1,0 +1,22 @@
+name: Check
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  extensions:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Get the SDK types
+        run: git clone --depth 1 https://github.com/backslash-app/backslash .backslash
+      - uses: denoland/setup-deno@v2
+        with:
+          deno-version: v2.x
+      - run: deno fmt --check extensions scripts
+      - run: deno lint extensions scripts
+      - run: deno check extensions/*/commands/*.ts
+      - name: Verify registry entries (clones each extension at its commit)
+        run: deno run -A scripts/validate.ts

@@ -1,55 +1,81 @@
-![bs_banner](https://github.com/user-attachments/assets/ca33bf1a-9910-4d18-9bf4-bbfc62be8df3)
-[Backslash app](https://github.com/backslash-app/backslash) | [Documentation](https://github.com/backslash-app/backslash/blob/main/DOCUMENTATION.md) | [Releases](https://github.com/backslash-app/backslash/releases) | [Discord server](https://discord.gg/sTzwBzDkK9)
+# Backslash extensions
 
-## Backslash Plugins: Where Dreams Come to Compile (Sometimes)
+The registry of [Backslash](https://github.com/backslash-app/backslash) extensions, and the first-party extensions
+themselves.
 
-Welcome to the Backslash Plugins repository, the digital equivalent of that one drawer in your kitchen where you throw all the gadgets you're convinced will change your life... someday.
+```sh
+backslash search            # browse the registry (or "Browse Extensions" in the launcher)
+backslash install github    # install, after showing what it is allowed to do
+backslash update            # update everything installed
+```
 
-### What is this madness?
+## How the registry works
 
-This is where the Backslash community comes to share their plugins, snippets of code that range from "mildly useful" to "why does this exist?" It's like a potluck, but instead of questionable casseroles, you're sharing questionable code. Yum!
+`registry/<id>.toml` is a small file per extension. It points to the extension's code **wherever it lives** (your own
+repository), pinned to a commit, with a checksum of its files and the list of what it is allowed to do:
 
-### Why should I care?
+```toml
+id = "github"
+title = "GitHub"
+description = "Search repositories and follow your pull requests"
+author = "Backslash"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/github"
+commit = "a64f60074557298bf4cabf235c6e91e1f4e54082"
+checksum = "sha256:37f89a1e…"
+permissions = ["Access api.github.com"]
+commands = ["Search GitHub Repositories", "My Pull Requests"]
+```
 
-Because, dear Linux enthusiast, this is your chance to:
+Backslash installs exactly that commit and refuses anything whose files, version or permissions differ from the entry.
+So:
 
-1. Show off your coding skills
-2. Solve problems you didn't know you had
-3. Create problems you definitely don't need
+- **You keep your code** in your repository; publishing a version is a one-file pull request.
+- **Reviews are small and meaningful**: reviewers read the code at one commit and see the permissions it gets. Nothing
+  can change after the review.
+- **Users see the permissions before installing**, and are asked again when an update wants more. The sandbox (Deno)
+  enforces them.
 
-### How do I contribute?
+## Publishing an extension
 
-1. Fork this repo (it's like stealing, but legal)
-2. Create your plugin (coffee recommended, sanity optional)
-3. Submit a pull request (and pray to Linus Torvalds for mercy)
+1. Write it (see the [extension guide](https://github.com/backslash-app/backslash/blob/main/docs/EXTENSIONS.md)), commit
+   and push it to a public git repository.
+2. Run `backslash publish path/to/extension`. It prints the registry entry for your last commit.
+3. Open a pull request adding that file as `registry/<id>.toml`.
+4. To release a new version: bump `version` in `backslash.toml`, commit, push, run `backslash publish` again, and open a
+   pull request updating the file.
 
-Remember, the only bad plugin is the one that doesn't compile. Actually, scratch that. We've seen some that compile and are still pretty bad.
+CI checks every entry: it clones your repository at the commit, recomputes the checksum and compares the manifest and
+permissions (`deno run -A scripts/validate.ts`).
 
-### Community Guidelines
+Anyone can also install straight from a repository, without the registry:
+`backslash install https://github.com/you/your-extension` (users are told it is not reviewed).
 
-1. Be nice (or at least pretend to be)
-2. Don't break things (unless it's funny, then maybe)
-3. Document your code (future you will thank present you)
-4. Have fun (that's an order)
+### Review guidelines
 
-### FAQ
+- The extension does what its title and description say, nothing else.
+- Permissions are as narrow as possible: specific hosts, specific programs.
+- No obfuscated or minified code, no downloading and running code at runtime.
+- Secrets are `type = "secret"` preferences, never hardcoded.
+- Destructive actions are marked `destructive` and ask for confirmation.
 
-**Q: Can I create a plugin that [insert ridiculous idea here]?**  
-**A:** We were going to say "within reason," but who are we kidding? Go nuts! Just remember, with great power comes great responsibility... and possibly some raised eyebrows.
+## First-party extensions
 
-**Q: Will my plugin be accepted?**  
-**A:** If it runs without setting fire to the user's computer, you're already ahead of 50% of the submissions. We have standards, they're just very, very low.
+| Extension                           | Commands                                       | Permissions                          |
+| ----------------------------------- | ---------------------------------------------- | ------------------------------------ |
+| [GitHub](extensions/github)         | Search repositories, my pull requests          | `api.github.com`                     |
+| [Packages](extensions/packages)     | Search apt/dnf/pacman/zypper and Flathub       | runs the package tools (search only) |
+| [Services](extensions/systemd)      | Start, stop, restart, logs of systemd services | `systemctl`, `journalctl`            |
+| [Containers](extensions/docker)     | Docker/Podman: start, stop, logs, remove       | `docker`, `podman`                   |
+| [Emoji & Symbols](extensions/emoji) | Search and copy                                | none                                 |
 
-**Q: What icon library does backslash use for the plugins?**  
-**A:** It's [Phosphor Icons](https://phosphoricons.com/), you can use their icons for your plugins.
+Their registry entries are regenerated with `scripts/update-entries.sh` after a change is merged.
 
-**Q: I found a bug in a plugin. What should I do?**  
-**A:** First, make sure it's actually a bug and not a "feature." If it's indeed a bug, congratulations! You've discovered a new species. Report it, and maybe the plugin author will name it after you.
+## Developing here
 
-## In Conclusion
-
-This is your playground, your canvas, your digital sandbox. Create, share, and most importantly, try not to break too many things in the process. Remember, in the world of Backslash plugins, you're not just a coder – you're an artist. A slightly unhinged, possibly caffeinated artist, but an artist nonetheless.
-
-Now go forth and plugin! May your code be bug-free and your compiler errors be few.
-
-_P.S. If you accidentally create SkyNet while making a plugin, we take no responsibility. But we'd appreciate a heads-up before the robot apocalypse, thanks._
+```sh
+git clone https://github.com/backslash-app/backslash .backslash   # for the SDK types
+deno check extensions/*/commands/*.ts
+backslash dev extensions/github     # live reload in the launcher
+```

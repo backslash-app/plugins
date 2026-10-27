@@ -1,0 +1,13 @@
+id = "packages"
+title = "Packages"
+description = "Search your distribution's packages and Flathub"
+author = "Backslash"
+icon = "system-software-install"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/packages"
+commit = "a64f60074557298bf4cabf235c6e91e1f4e54082"
+checksum = "sha256:b16dfa71c1501ab138039585387b2d1e8d05d65129b18845e17316606990571d"
+permissions = ["Run apt-cache", "Run dnf", "Run pacman", "Run zypper", "Run flatpak"]
+commands = ["Search Packages"]
+

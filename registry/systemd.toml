@@ -1,0 +1,13 @@
+id = "systemd"
+title = "Services"
+description = "Start, stop and inspect systemd services"
+author = "Backslash"
+icon = "preferences-system"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/systemd"
+commit = "a64f60074557298bf4cabf235c6e91e1f4e54082"
+checksum = "sha256:9234b202cf96d9a49fe707f2c2048420cbb6c380a67acb40c7377805a5b06b83"
+permissions = ["Run systemctl", "Run journalctl"]
+commands = ["Services"]
+

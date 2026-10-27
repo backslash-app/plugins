@@ -1,0 +1,13 @@
+[extension]
+id = "emoji"
+title = "Emoji & Symbols"
+description = "Search emoji and symbols by name and copy them"
+version = "1.0.0"
+author = "Backslash"
+icon = "😀"
+license = "MIT"
+
+[[commands]]
+name = "search"
+title = "Search Emoji & Symbols"
+keywords = ["emoji", "smiley", "symbol", "unicode", "emoticon"]

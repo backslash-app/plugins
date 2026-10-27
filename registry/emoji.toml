@@ -1,0 +1,13 @@
+id = "emoji"
+title = "Emoji & Symbols"
+description = "Search emoji and symbols by name and copy them"
+author = "Backslash"
+icon = "😀"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/emoji"
+commit = "a64f60074557298bf4cabf235c6e91e1f4e54082"
+checksum = "sha256:fd9b92b103190fe973a4a048ec275371c4b187a4bc41365c1a7a4694f3d62992"
+permissions = []
+commands = ["Search Emoji & Symbols"]
+

@@ -1,0 +1,13 @@
+id = "docker"
+title = "Containers"
+description = "Docker and Podman containers: start, stop, logs"
+author = "Backslash"
+icon = "utilities-terminal"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/docker"
+commit = "a64f60074557298bf4cabf235c6e91e1f4e54082"
+checksum = "sha256:7b338ac7fb63f6b846d10366f2c680dd62069ab442d46816b02430fd8ff0addc"
+permissions = ["Run docker", "Run podman"]
+commands = ["Containers"]
+

@@ -1,0 +1,26 @@
+{
+  "version": "5",
+  "specifiers": {
+    "jsr:@std/collections@^1.1.3": "1.4.0",
+    "jsr:@std/toml@1": "1.0.11"
+  },
+  "jsr": {
+    "@std/collections@1.4.0": {
+      "integrity": "bd7f74966e11de11b1f0420b7e8cb7bb381d8af7872b738443b92050db28c9c0"
+    },
+    "@std/toml@1.0.11": {
+      "integrity": "e084988b872ca4bad6aedfb7350f6eeed0e8ba88e9ee5e1590621c5b5bb8f715",
+      "dependencies": [
+        "jsr:@std/collections"
+      ]
+    }
+  },
+  "workspace": {
+    "dependencies": [
+      "jsr:@std/toml@1"
+    ],
+    "links": {
+      "jsr:@backslash/api@0.1.0": {}
+    }
+  }
+}
