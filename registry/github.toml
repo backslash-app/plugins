@@ -1,0 +1,13 @@
+id = "github"
+title = "GitHub"
+description = "Search repositories and follow your pull requests"
+author = "Backslash"
+icon = "folder-remote"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/github"
+commit = "a64f60074557298bf4cabf235c6e91e1f4e54082"
+checksum = "sha256:37f89a1ec235d4369ac134883ce1a6e9288ffa7e5f3e903ecaca127ee881b346"
+permissions = ["Access api.github.com"]
+commands = ["Search GitHub Repositories", "My Pull Requests"]
+
