@@ -1,0 +1,20 @@
+[extension]
+id = "ports"
+title = "Ports"
+description = "What listens on :3000? Dev servers and services by port, with their process and project"
+version = "1.0.0"
+author = "Backslash"
+icon = "network-server"
+license = "MIT"
+
+# ss (iproute2) lists sockets, ps and readlink describe their processes.
+# Processes of other users show without details.
+[permissions]
+run = ["ss", "ps", "readlink", "kill"]
+env = ["HOME"]
+
+[[commands]]
+name = "ports"
+title = "Listening Ports"
+description = "Open, stop or inspect what listens on each port"
+keywords = ["port", "localhost", "server", "dev", "kill", "lsof", "netstat", "process"]

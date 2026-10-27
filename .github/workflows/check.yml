@@ -18,5 +18,6 @@ jobs:
       - run: deno fmt --check extensions scripts
       - run: deno lint extensions scripts
       - run: deno check extensions/*/commands/*.ts
+      - run: deno test extensions
       - name: Verify registry entries (clones each extension at its commit)
         run: deno run -A scripts/validate.ts

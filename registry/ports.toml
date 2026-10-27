@@ -1,0 +1,13 @@
+id = "ports"
+title = "Ports"
+description = "What listens on :3000? Dev servers and services by port, with their process and project"
+author = "Backslash"
+icon = "network-server"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/ports"
+commit = "e2762ad04c6bc8eddadcd95bc2640611cdd763fc"
+checksum = "sha256:89743571c50453b6a803c13ee14b40dadff04a3e2adaf0ed147d0cb17486b196"
+permissions = ["Run ss", "Run ps", "Run readlink", "Run kill", "Read the environment variable HOME"]
+commands = ["Listening Ports"]
+

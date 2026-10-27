@@ -1,0 +1,13 @@
+id = "media"
+title = "Media Controls"
+description = "Control Spotify, browsers, VLC, mpv and any MPRIS player"
+author = "Backslash"
+icon = "multimedia-player"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/media"
+commit = "e2762ad04c6bc8eddadcd95bc2640611cdd763fc"
+checksum = "sha256:deefc94c41d8c0927383d084a785f54321d7df5348be0073541dfdb764dcfa1f"
+permissions = ["Access i.scdn.co", "Run busctl", "Read /tmp/backslash-media", "Write /tmp/backslash-media"]
+commands = ["Now Playing", "Play / Pause", "Next Track", "Previous Track"]
+

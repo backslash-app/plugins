@@ -1,8 +1,17 @@
 {
   "imports": {
     "@backslash/api": "./.backslash/sdk/mod.ts",
-    "@std/toml": "jsr:@std/toml@^1"
+    "@std/toml": "jsr:@std/toml@^1",
+    "@std/assert": "jsr:@std/assert@^1"
   },
-  "fmt": { "lineWidth": 120 },
-  "lint": { "rules": { "exclude": ["no-explicit-any"] } }
+  "fmt": {
+    "lineWidth": 120
+  },
+  "lint": {
+    "rules": {
+      "exclude": [
+        "no-explicit-any"
+      ]
+    }
+  }
 }

@@ -1,0 +1,33 @@
+[extension]
+id = "timers"
+title = "Timers"
+description = "Timers and Pomodoro that ring even when Backslash is closed (systemd timers)"
+version = "1.0.0"
+author = "Backslash"
+icon = "alarm"
+license = "MIT"
+
+# Timers are transient systemd user units: they survive the launcher and
+# ring with a desktop notification (notify-send) and a sound when possible.
+[permissions]
+run = ["systemd-run", "systemctl"]
+
+[[commands]]
+name = "timers"
+title = "Timers"
+description = "Running timers, presets and Pomodoro"
+keywords = ["timer", "pomodoro", "minuteur", "countdown", "alarm", "chrono"]
+
+[[commands]]
+name = "start"
+title = "Start Timer"
+description = "e.g. 25m, 1h30, 90s, 10:00"
+mode = "no-view"
+keywords = ["timer", "minuteur", "countdown"]
+[[commands.arguments]]
+name = "duration"
+placeholder = "25m, 1h30, 90s"
+required = true
+[[commands.arguments]]
+name = "name"
+placeholder = "Name (optional)"

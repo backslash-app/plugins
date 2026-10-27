@@ -62,13 +62,20 @@ Anyone can also install straight from a repository, without the registry:
 
 ## First-party extensions
 
-| Extension                           | Commands                                       | Permissions                          |
-| ----------------------------------- | ---------------------------------------------- | ------------------------------------ |
-| [GitHub](extensions/github)         | Search repositories, my pull requests          | `api.github.com`                     |
-| [Packages](extensions/packages)     | Search apt/dnf/pacman/zypper and Flathub       | runs the package tools (search only) |
-| [Services](extensions/systemd)      | Start, stop, restart, logs of systemd services | `systemctl`, `journalctl`            |
-| [Containers](extensions/docker)     | Docker/Podman: start, stop, logs, remove       | `docker`, `podman`                   |
-| [Emoji & Symbols](extensions/emoji) | Search and copy                                | none                                 |
+| Extension                               | Commands                                                                                    | Permissions                                       |
+| --------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| [GitHub](extensions/github)             | Search repositories, my pull requests                                                       | `api.github.com`                                  |
+| [Packages](extensions/packages)         | Search apt/dnf/pacman/zypper and Flathub                                                    | runs the package tools (search only)              |
+| [Services](extensions/systemd)          | Start, stop, restart, logs of systemd services                                              | `systemctl`, `journalctl`                         |
+| [Containers](extensions/docker)         | Docker/Podman: start, stop, logs, remove                                                    | `docker`, `podman`                                |
+| [Emoji & Symbols](extensions/emoji)     | Search and copy                                                                             | none                                              |
+| [Browser](extensions/browser)           | History and bookmarks of Firefox, Chrome, Brave, Chromium, Edge, Vivaldi; Firefox tabs      | reads the browsers' profiles                      |
+| [Media Controls](extensions/media)      | Now playing, play/pause, next, volume of any MPRIS player                                   | `busctl`, Spotify covers                          |
+| [Code Projects](extensions/projects)    | Recent projects of VS Code, Cursor, Zed, JetBrains, git folders; open in editor or terminal | reads editor history, runs editors and terminals  |
+| [Timers](extensions/timers)             | Timers and Pomodoro that ring even with Backslash closed                                    | `systemd-run`, `systemctl`                        |
+| [Ports](extensions/ports)               | What listens on each port, with its process and project; stop it                            | `ss`, `ps`, `readlink`, `kill`                    |
+| [Network & Devices](extensions/network) | Wi-Fi, Bluetooth, audio outputs, VPN and Tailscale                                          | `nmcli`, `bluetoothctl`, `pactl`, `tailscale`     |
+| [AI](extensions/ai)                     | Ask AI, fix, improve, summarize, translate, explain copied text                             | Claude, OpenAI, Mistral, Groq, OpenRouter, Ollama |
 
 Their registry entries are regenerated with `scripts/update-entries.sh` after a change is merged.
 
@@ -77,5 +84,6 @@ Their registry entries are regenerated with `scripts/update-entries.sh` after a 
 ```sh
 git clone https://github.com/backslash-app/backslash .backslash   # for the SDK types
 deno check extensions/*/commands/*.ts
+deno test extensions                # parsers of each extension (lib_test.ts)
 backslash dev extensions/github     # live reload in the launcher
 ```
