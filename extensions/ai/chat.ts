@@ -1,5 +1,6 @@
 import { action, clipboard, close, detail, field, form, replace, storage } from "@backslash/api";
 import { languageRule, type Message, type Prefs } from "./lib.ts";
+import { canPaste, pasteText } from "./paste.ts";
 import { answer, modelName } from "./llm.ts";
 
 export interface Conversation {
@@ -72,6 +73,7 @@ export function chat(prefs: Prefs, previous: Conversation | undefined, question?
         return close("Answer copied");
       }, { icon: "edit-copy" }),
       action("Ask a Follow-up…", () => followUp, { icon: "mail-reply-sender", shortcut: "<Ctrl>r" }),
+      ...(canPaste ? [action("Paste Answer", () => pasteText(last), { icon: "edit-paste", shortcut: "<Ctrl>p" })] : []),
       action("Copy Conversation", async () => {
         await clipboard.write(transcript(convo.messages));
         return close("Conversation copied");

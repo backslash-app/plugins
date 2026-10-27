@@ -1,6 +1,7 @@
 import { type Action, action, clipboard, close, type Context, detail, replace } from "@backslash/api";
 import { chat } from "./chat.ts";
 import { languageRule, type Prefs } from "./lib.ts";
+import { canPaste, pasteText } from "./paste.ts";
 import { answer, modelName } from "./llm.ts";
 
 /** The streamed result of an instruction applied to `text`; Enter copies it. */
@@ -23,6 +24,7 @@ export function toolView(
       }
     },
     actions: [
+      ...(canPaste ? [action("Paste Result", () => pasteText(result), { icon: "edit-paste" })] : []),
       action("Copy Result", async () => {
         await clipboard.write(result);
         return close("Copied");
