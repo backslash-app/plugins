@@ -1,0 +1,13 @@
+id = "network"
+title = "Network & Devices"
+description = "Wi-Fi, Bluetooth, audio outputs and VPNs in two keystrokes"
+author = "Backslash"
+icon = "network-wireless"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/network"
+commit = "e2762ad04c6bc8eddadcd95bc2640611cdd763fc"
+checksum = "sha256:1852ff1ea8397cc9c3bdf8a68cecbb79039102bd19d84be02053b43024a67a72"
+permissions = ["Run nmcli", "Run bluetoothctl", "Run pactl", "Run tailscale"]
+commands = ["Wi-Fi", "Bluetooth Devices", "Audio Output", "VPN"]
+
