@@ -1,4 +1,8 @@
+import * as api from "@backslash/api";
 import { copy, list } from "@backslash/api";
+
+// paste() came with Backslash 0.4; older launchers only copy.
+const pasteFirst = (text: string) => ("paste" in api ? [api.paste(text, "Paste Emoji")] : []);
 import data from "../emoji.json" with { type: "json" };
 
 // Names are "common words · official unicode name"; the title keeps the
@@ -22,6 +26,7 @@ export default list({
       icon: emoji,
       keywords: name.includes(" · ") ? [name.split(" · ")[0], ...name.split(" ")] : name.split(" "),
       actions: [
+        ...pasteFirst(emoji),
         copy(emoji, "Copy Emoji"),
         copy(title(name), "Copy Name"),
         copy(codepoints, "Copy Code Point"),
