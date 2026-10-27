@@ -1,0 +1,28 @@
+[extension]
+id = "github"
+title = "GitHub"
+description = "Search repositories and follow your pull requests"
+version = "1.0.0"
+author = "Backslash"
+icon = "folder-remote"
+license = "MIT"
+
+[permissions]
+net = ["api.github.com"]
+
+[[commands]]
+name = "repositories"
+title = "Search GitHub Repositories"
+keywords = ["github", "repo", "git", "code"]
+
+[[commands]]
+name = "pull-requests"
+title = "My Pull Requests"
+description = "Pull requests you opened and those waiting for your review"
+keywords = ["github", "pr", "review"]
+
+[[preferences]]
+name = "token"
+title = "Personal access token"
+description = "Needed for your pull requests; raises the search rate limit. Read-only scopes are enough."
+type = "secret"
