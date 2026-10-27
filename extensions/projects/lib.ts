@@ -58,7 +58,7 @@ export function jetbrainsRecents(xml: string, home: string, editor: string, comm
 /** Absolute paths stored by Zed (text or binary columns, depending on its version). */
 export function zedPaths(value: unknown): string[] {
   const text = value instanceof Uint8Array ? new TextDecoder().decode(value) : String(value ?? "");
-  return [...text.matchAll(/\/[^\x00-\x1f"\[\]]+/g)].map((m) => m[0].replace(/\/$/, ""));
+  return [...text.matchAll(/\/[^\p{Cc}"[\]]+/gu)].map((m) => m[0].replace(/\/$/, ""));
 }
 
 /** The newest entry per path. */
