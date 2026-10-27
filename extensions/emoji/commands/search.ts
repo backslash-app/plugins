@@ -8,6 +8,8 @@ const title = (name: string) => official(name).replace(/\b\w/g, (c) => c.toUpper
 
 export default list({
   placeholder: "Search emoji and symbols…",
+  layout: "grid",
+  columns: 8,
   items: (data as [string, string][]).map(([emoji, name]) => {
     const codepoints = [...emoji]
       .filter((c) => c !== "️")
