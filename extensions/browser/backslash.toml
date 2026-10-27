@@ -1,0 +1,40 @@
+[extension]
+id = "browser"
+title = "Browser"
+description = "History, bookmarks and open tabs of Firefox, Chrome, Brave, Chromium, Edge and Vivaldi"
+version = "1.0.0"
+author = "Backslash"
+icon = "web-browser"
+license = "MIT"
+
+# Browsers lock their databases: they are copied to /tmp/backslash-browser to be read.
+[permissions]
+read = [
+  "~/.mozilla/firefox",
+  "~/snap/firefox/common/.mozilla/firefox",
+  "~/.var/app/org.mozilla.firefox/.mozilla/firefox",
+  "~/.librewolf",
+  "~/.config/google-chrome",
+  "~/.config/chromium",
+  "~/.config/BraveSoftware/Brave-Browser",
+  "~/.config/microsoft-edge",
+  "~/.config/vivaldi",
+  "~/.var/app/com.google.Chrome/config/google-chrome",
+  "~/.var/app/org.chromium.Chromium/config/chromium",
+  "~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser",
+  "/tmp/backslash-browser",
+]
+write = ["/tmp/backslash-browser"]
+env = ["HOME"]
+
+[[commands]]
+name = "search"
+title = "Search Browser History"
+description = "Bookmarks and history of all your browsers, by how often you visit"
+keywords = ["history", "bookmarks", "favoris", "historique", "firefox", "chrome", "brave", "web"]
+
+[[commands]]
+name = "tabs"
+title = "Search Firefox Tabs"
+description = "Tabs open in Firefox"
+keywords = ["tabs", "onglets", "firefox"]

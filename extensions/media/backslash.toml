@@ -1,0 +1,41 @@
+[extension]
+id = "media"
+title = "Media Controls"
+description = "Control Spotify, browsers, VLC, mpv and any MPRIS player"
+version = "1.0.0"
+author = "Backslash"
+icon = "multimedia-player"
+license = "MIT"
+
+# Players are driven over D-Bus (MPRIS) with busctl, part of systemd.
+# Spotify's covers are downloaded to /tmp/backslash-media to be shown.
+[permissions]
+run = ["busctl"]
+net = ["i.scdn.co"]
+read = ["/tmp/backslash-media"]
+write = ["/tmp/backslash-media"]
+
+[[commands]]
+name = "players"
+title = "Now Playing"
+description = "What is playing, in every player"
+keywords = ["music", "spotify", "player", "mpris", "musique", "song"]
+
+[[commands]]
+name = "play-pause"
+title = "Play / Pause"
+description = "Toggles the current player"
+mode = "no-view"
+keywords = ["music", "pause", "resume", "lecture"]
+
+[[commands]]
+name = "next"
+title = "Next Track"
+mode = "no-view"
+keywords = ["music", "skip", "suivant"]
+
+[[commands]]
+name = "previous"
+title = "Previous Track"
+mode = "no-view"
+keywords = ["music", "back", "précédent"]
