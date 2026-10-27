@@ -76,6 +76,8 @@ Anyone can also install straight from a repository, without the registry:
 | [Ports](extensions/ports)               | What listens on each port, with its process and project; stop it                            | `ss`, `ps`, `readlink`, `kill`                    |
 | [Network & Devices](extensions/network) | Wi-Fi, Bluetooth, audio outputs, VPN and Tailscale                                          | `nmcli`, `bluetoothctl`, `pactl`, `tailscale`     |
 | [AI](extensions/ai)                     | Ask AI, fix, improve, summarize, translate, explain copied text                             | Claude, OpenAI, Mistral, Groq, OpenRouter, Ollama |
+| [Linear](extensions/linear)             | My issues by status, change status, search, create an issue                                 | `api.linear.app`                                  |
+| [Todoist](extensions/todoist)           | Today and overdue tasks, complete them, search, quick add                                   | `api.todoist.com`                                 |
 
 Their registry entries are regenerated with `scripts/update-entries.sh` after a change is merged.
 
