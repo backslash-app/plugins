@@ -1,0 +1,34 @@
+[extension]
+id = "linear"
+title = "Linear"
+description = "Your issues, search and quick issue creation for Linear"
+version = "1.0.0"
+author = "Backslash"
+icon = "📐"
+license = "MIT"
+
+[permissions]
+net = ["api.linear.app"]
+
+[[commands]]
+name = "my-issues"
+title = "My Linear Issues"
+description = "Issues assigned to you, by status"
+keywords = ["linear", "issues", "tickets", "tasks", "todo"]
+
+[[commands]]
+name = "search-issues"
+title = "Search Linear Issues"
+keywords = ["linear", "issues", "find", "tickets"]
+
+[[commands]]
+name = "create-issue"
+title = "Create Linear Issue"
+keywords = ["linear", "new", "issue", "bug", "ticket"]
+
+[[preferences]]
+name = "apiKey"
+title = "Personal API key"
+description = "Linear → Settings → Security & access → Personal API keys"
+type = "secret"
+required = true
