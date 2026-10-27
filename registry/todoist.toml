@@ -3,12 +3,12 @@ id = "todoist"
 title = "Todoist"
 description = "Today's tasks, search and quick add in natural language"
 author = "Backslash"
-icon = "✅"
-version = "1.0.0"
+icon = "bs-circle-check"
+version = "1.1.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/todoist"
-commit = "97cc142208fb8d4e194971568d5ba739e99038e0"
-checksum = "sha256:9e648dc34ea5adb317bc05033378c5a258fa9f35ba3132ff87a6d78ce6f418ae"
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:ef675d92fdd7aaaedf21e4fe7de0258b59ae2fddba499d61271b177d972d4bdf"
 permissions = ["Access api.todoist.com"]
 commands = ["Todoist Today", "Search Todoist Tasks", "Add Todoist Task"]
 
