@@ -6,8 +6,8 @@ icon = "applications-development"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/projects"
-commit = "e2762ad04c6bc8eddadcd95bc2640611cdd763fc"
-checksum = "sha256:d6b96e7c89b963f6d6f3d1ac60139517e252df8d925831d8228e3234d701a1a4"
+commit = "2c1d52fecbad855c1b7f802d09dcdf75920f92b1"
+checksum = "sha256:93986363f7e123275c098a9549b428b953c7c9ab249672a63afc6fa5e0e2873f"
 permissions = ["Run git", "Run code", "Run code-oss", "Run codium", "Run cursor", "Run windsurf", "Run zed", "Run zeditor", "Run idea", "Run pycharm", "Run webstorm", "Run goland", "Run clion", "Run rustrover", "Run phpstorm", "Run rider", "Run rubymine", "Run datagrip", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.config/Code", "Read ~/.config/Code - OSS", "Read ~/.config/VSCodium", "Read ~/.config/Cursor", "Read ~/.config/Windsurf", "Read ~/.var/app/com.visualstudio.code/config/Code", "Read ~/.var/app/com.vscodium.codium/config/VSCodium", "Read ~/.config/JetBrains", "Read ~/.local/share/zed", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read /tmp/backslash-projects", "Write /tmp/backslash-projects", "Read the environment variable HOME"]
 commands = ["Search Projects"]
 
