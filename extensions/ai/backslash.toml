@@ -2,9 +2,9 @@
 id = "ai"
 title = "AI"
 description = "Ask questions, fix, rewrite, summarize, translate and explain text, with Claude, OpenAI, Mistral, Groq, OpenRouter or a local Ollama"
-version = "1.1.0"
+version = "1.2.0"
 author = "Backslash"
-icon = "✨"
+icon = "bs-sparkle"
 license = "MIT"
 
 # The text commands work on what you copied last.

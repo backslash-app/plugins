@@ -2,9 +2,9 @@
 id = "timers"
 title = "Timers"
 description = "Timers and Pomodoro that ring even when Backslash is closed (systemd timers)"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
-icon = "alarm"
+icon = "bs-timer"
 license = "MIT"
 
 # Timers are transient systemd user units: they survive the launcher and

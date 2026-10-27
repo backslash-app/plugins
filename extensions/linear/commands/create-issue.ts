@@ -1,4 +1,4 @@
-import { action, close, type Context, copy, detail, field, form, open } from "@backslash/api";
+import { action, close, type Context, copy, detail, field, form, meta, open } from "@backslash/api";
 import { linear, PRIORITIES } from "../lib.ts";
 
 interface Team {
@@ -47,8 +47,20 @@ export default async ({ preferences }: Context) => {
       const { identifier, url } = issueCreate.issue;
       return detail({
         title: identifier,
-        markdown: `# ${identifier} created\n\n${String(values.title)}`,
-        actions: [open(url, "Open in Linear"), copy(url, "Copy URL"), action("Done", () => close())],
+        markdown: `# ${String(values.title)}\n\nCreated in Linear as **${identifier}**.`,
+        metadata: [
+          meta.text("Identifier", identifier),
+          meta.text("Team", teams.nodes.find((t) => t.id === values.team)?.name ?? ""),
+          meta.text("Priority", PRIORITIES.find((p) => p.value === values.priority)?.title ?? ""),
+          meta.link("Link", "Open in Linear", url),
+        ],
+        status: "Issue created",
+        actions: [
+          open(url, "Open in Linear"),
+          copy(identifier, "Copy Identifier", { shortcut: "<Ctrl>period" }),
+          copy(url, "Copy URL", { shortcut: "<Ctrl><Shift>c" }),
+          action("Done", () => close()),
+        ],
       });
     },
   });

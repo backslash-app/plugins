@@ -1,4 +1,4 @@
-import { action, copy, exec, type Item, list, open, refresh, toast } from "@backslash/api";
+import { action, copy, exec, Icons, type Item, list, meta, open, refresh, toast } from "@backslash/api";
 import { byPort, isLocal, KNOWN, type Listener, parseSs } from "../lib.ts";
 
 const HOME = Deno.env.get("HOME") ?? "";
@@ -41,44 +41,74 @@ function item(port: number, sockets: Listener[], proc?: Process): Item {
       await new Promise((r) => setTimeout(r, 300));
       return refresh();
     }, options);
+  const addresses = [...new Set(sockets.map((s) => s.address))];
   return {
     id: String(port),
     title: `:${port}`,
-    subtitle: proc
-      ? [proc.name, project && `in ${tilde(proc.cwd!)}`].filter(Boolean).join(" ")
-      : KNOWN[port] ?? "System service",
-    icon: proc ? "application-x-executable" : "network-server",
+    subtitle: proc ? proc.name : KNOWN[port] ?? "System service",
+    icon: { source: proc ? Icons.plug : Icons.server, tint: proc ? (local ? "green" : "orange") : "gray" },
     section: proc ? "Yours" : "System",
     keywords: [proc?.command ?? "", proc?.cwd ?? "", KNOWN[port] ?? "", String(proc?.pid ?? "")],
     accessories: [
-      ...(project ? [{ text: project }] : []),
+      ...(project ? [{ icon: Icons.folder, text: project }] : []),
       local ? { tag: "localhost", color: "gray" as const } : { tag: "network", color: "orange" as const },
       ...(proc ? [{ text: `pid ${proc.pid}` }] : []),
     ],
+    detail: {
+      markdown: proc ? `\`${proc.command.length > 300 ? proc.command.slice(0, 300) + "…" : proc.command}\`` : undefined,
+      metadata: [
+        meta.text("Port", port, { icon: Icons.plug }),
+        meta.text(
+          "Reachable",
+          local ? "From this computer only" : "From the network",
+          { icon: local ? Icons.lock : Icons.globe, color: local ? undefined : "orange" },
+        ),
+        meta.tags("Listening on", addresses),
+        ...(proc
+          ? [
+            meta.separator(),
+            meta.text("Program", proc.name, { icon: Icons.terminal }),
+            meta.text("PID", proc.pid),
+            ...(proc.cwd ? [meta.text("Folder", tilde(proc.cwd), { icon: Icons.folder })] : []),
+          ]
+          : [meta.text("Service", KNOWN[port] ?? "Unknown")]),
+        meta.link("Open", url.replace("http://", ""), url),
+      ],
+    },
     actions: [
       open(url, "Open in Browser"),
       ...(proc
         ? [
           kill("TERM", "Stop Process", {
-            icon: "process-stop",
+            icon: Icons.stop,
             destructive: true,
             confirm: `Stop ${proc.name} (pid ${proc.pid})?`,
             shortcut: "<Ctrl>k",
+            section: "Process",
           }),
-          kill("KILL", "Force Kill", { destructive: true, confirm: `Kill ${proc.name} right away?` }),
-          ...(proc.cwd ? [open(proc.cwd, "Open Folder", { icon: "folder-open" })] : []),
-          copy(proc.command, "Copy Command Line"),
-          copy(String(proc.pid), "Copy PID"),
+          kill("KILL", "Force Kill", {
+            icon: Icons.cross,
+            destructive: true,
+            confirm: `Kill ${proc.name} right away?`,
+            section: "Process",
+          }),
+          ...(proc.cwd ? [open(proc.cwd, "Open Folder", { icon: Icons.folder, section: "Process" })] : []),
+          copy(proc.command, "Copy Command Line", { section: "Copy" }),
+          copy(String(proc.pid), "Copy PID", { section: "Copy" }),
         ]
         : []),
-      copy(url, "Copy URL"),
+      copy(url, "Copy URL", { shortcut: "<Ctrl><Shift>c", section: "Copy" }),
     ],
   };
 }
 
 export default list({
   placeholder: "Filter ports, programs, projects…",
-  empty: { title: "Nothing is listening", description: "Start a dev server and it shows up here" },
+  empty: { title: "Nothing is listening", description: "Start a dev server and it shows up here", icon: "bs-plug" },
+  status: (items) => {
+    const yours = items.filter((i) => i.section === "Yours").length;
+    return `${items.length} port${items.length === 1 ? "" : "s"} · ${yours} yours`;
+  },
   items: async () => {
     const sockets = parseSs(await exec("ss", ["-Hltnp"]));
     const procs = await describe(sockets.flatMap((s) => s.pids));

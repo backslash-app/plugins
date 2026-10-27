@@ -1,4 +1,4 @@
-import { copy, exec, type Item, list, open } from "@backslash/api";
+import { copy, exec, Icons, type Item, list, meta, open, paste } from "@backslash/api";
 
 interface Package {
   name: string;
@@ -77,30 +77,51 @@ async function flathub(query: string, signal: AbortSignal): Promise<Package[]> {
   });
 }
 
-function item(p: Package): Item {
+const SOURCES: Record<Package["source"], string> = {
+  apt: "Debian / Ubuntu (apt)",
+  dnf: "Fedora (dnf)",
+  pacman: "Arch (pacman)",
+  zypper: "openSUSE (zypper)",
+  flatpak: "Flathub",
+};
+
+function item(p: Package, query: string): Item {
+  const exact = p.name === query || p.name.endsWith(`.${query}`);
+  const install = INSTALL[p.source](p.name);
   return {
     id: `${p.source}:${p.name}`,
     title: p.name,
     subtitle: p.summary,
-    icon: p.source === "flatpak" ? "application-x-flatpak" : "package-x-generic",
+    icon: { source: p.source === "flatpak" ? Icons.apps : Icons.package, tint: exact ? "blue" : "gray" },
     section: p.source === "flatpak" ? "Flathub" : "Distribution",
-    accessories: [{ tag: p.source }, ...(p.version ? [{ text: p.version }] : [])],
+    accessories: [...(p.version ? [{ text: p.version }] : []), { tag: p.source }],
+    detail: {
+      markdown: `\`${install}\``,
+      metadata: [
+        meta.text("Package", p.name, { icon: Icons.package }),
+        ...(p.version ? [meta.text("Version", p.version)] : []),
+        meta.text("From", SOURCES[p.source]),
+        meta.link("Page", PAGE[p.source](p.name).replace(/^https:\/\//, ""), PAGE[p.source](p.name)),
+      ],
+    },
     actions: [
-      copy(INSTALL[p.source](p.name), "Copy Install Command"),
+      copy(install, "Copy Install Command"),
+      paste(install, "Paste Install Command", { icon: Icons.terminal }),
       open(PAGE[p.source](p.name), "Open Package Page"),
-      copy(p.name, "Copy Name"),
+      copy(p.name, "Copy Name", { section: "Copy" }),
     ],
   };
 }
 
 export default list({
   placeholder: "Search packages…",
-  empty: { title: "Search packages", description: "apt, dnf, pacman or zypper, and Flathub" },
+  empty: { title: "Search packages", description: "apt, dnf, pacman or zypper, and Flathub", icon: "bs-package" },
+  status: (items) => items.length ? `${items.length} package${items.length === 1 ? "" : "s"}` : "Packages",
   async search(query, { signal }) {
     if (query.trim().length < 2) return [];
     const [sys, flat] = await Promise.all([system(query, signal), flathub(query, signal)]);
     // Exact and prefix matches first.
     const rank = (p: Package) => (p.name === query ? 0 : p.name.startsWith(query) ? 1 : 2);
-    return [...sys.sort((a, b) => rank(a) - rank(b)).slice(0, 40), ...flat.slice(0, 20)].map(item);
+    return [...sys.sort((a, b) => rank(a) - rank(b)).slice(0, 40), ...flat.slice(0, 20)].map((p) => item(p, query));
   },
 });

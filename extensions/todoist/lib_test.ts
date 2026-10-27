@@ -1,5 +1,5 @@
 import { assertEquals } from "@std/assert";
-import { dueSection, sortTasks, type Task, taskItem } from "./lib.ts";
+import { dueSection, projectColor, sortTasks, type Task, taskItem, taskMetadata } from "./lib.ts";
 
 const task = (id: string, date: string | null, priority = 1, extra: Partial<Task> = {}): Task => ({
   id,
@@ -12,12 +12,14 @@ const task = (id: string, date: string | null, priority = 1, extra: Partial<Task
   ...extra,
 });
 
-const NOW = new Date(2026, 9, 27, 10, 0); // 27 October 2026, local time
+const NOW = new Date(2026, 9, 27, 10, 0); // Tuesday 27 October 2026, local time
 
 Deno.test("due sections", () => {
   assertEquals(
-    ["2026-10-20", "2026-10-27", "2026-10-28", "2026-11-02", null].map((d) => dueSection(task("x", d), NOW)),
-    ["Overdue", "Today", "Tomorrow", "2026-11-02", "No date"],
+    ["2026-10-20", "2026-10-27", "2026-10-28", "2026-10-30", "2026-11-12", null].map((d) =>
+      dueSection(task("x", d), NOW)
+    ),
+    ["Overdue", "Today", "Tomorrow", "Friday", "Thu, Nov 12", "No date"],
   );
   assertEquals(dueSection(task("x", "2026-10-27T18:00:00"), NOW), "Today");
 });
@@ -33,12 +35,20 @@ Deno.test("sorted by day, then priority (4 = P1), then time", () => {
   assertEquals(sorted.map((t) => t.id), ["c", "b", "a", "e", "d"]);
 });
 
-Deno.test("task item", () => {
-  const item = taskItem(task("1", "2026-10-30", 4, { labels: ["work"], description: "Details\nmore" }), "tok", {
-    project: "Inbox",
-    now: NOW,
-  });
-  assertEquals(item.subtitle, "Inbox · Details");
-  assertEquals(item.accessories, [{ tag: "P1", color: "red" }, { text: "@work" }, { text: "2026-10-30" }]);
-  assertEquals(item.actions?.map((a) => a.title), ["Complete Task", "Open in Todoist", "Copy Task", "Copy Link"]);
+Deno.test("task item and panel", () => {
+  const project = { id: "p", name: "Work", color: "blue" };
+  const t = task("1", "2026-10-26", 4, { labels: ["work"], description: "Details\nmore" });
+  const item = taskItem(t, "tok", { project, now: NOW });
+  assertEquals(item.icon, { source: "bs-circle", tint: "red" });
+  assertEquals(item.subtitle, "Details");
+  assertEquals(item.accessories?.map((a) => a.text), ["@work", "Overdue", "Work"]);
+  assertEquals(item.accessories?.[1].color, "red");
+  assertEquals(item.actions?.map((a) => a.title).slice(0, 4), [
+    "Complete Task",
+    "Open in Todoist",
+    "Reschedule",
+    "Set Priority",
+  ]);
+  assertEquals(taskMetadata(t, project, NOW).map((m) => m.label), ["Due", "Priority", "Project", "Labels"]);
+  assertEquals(projectColor(project), "blue");
 });

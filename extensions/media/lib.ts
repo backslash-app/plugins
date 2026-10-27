@@ -28,6 +28,10 @@ export interface Player {
   length: number;
   position: number;
   volume?: number;
+  /** A web page for the track (Spotify gives one). */
+  url?: string;
+  shuffle?: boolean;
+  loop?: "None" | "Track" | "Playlist";
   canNext: boolean;
   canPrevious: boolean;
   canRaise: boolean;
@@ -47,6 +51,11 @@ export function player(bus: string, props: Record<string, any>, root: Record<str
     length: Number(meta["mpris:length"] ?? 0),
     position: Number(props.Position ?? 0),
     volume: typeof props.Volume === "number" ? props.Volume : undefined,
+    url: typeof meta["xesam:url"] === "string" && meta["xesam:url"].startsWith("https://")
+      ? meta["xesam:url"]
+      : undefined,
+    shuffle: typeof props.Shuffle === "boolean" ? props.Shuffle : undefined,
+    loop: props.LoopStatus,
     canNext: props.CanGoNext !== false,
     canPrevious: props.CanGoPrevious !== false,
     canRaise: root.CanRaise === true,

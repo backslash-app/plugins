@@ -2,9 +2,9 @@
 id = "network"
 title = "Network & Devices"
 description = "Wi-Fi, Bluetooth, audio outputs and VPNs in two keystrokes"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
-icon = "network-wireless"
+icon = "bs-wifi"
 license = "MIT"
 
 # NetworkManager (nmcli), BlueZ (bluetoothctl), PulseAudio/PipeWire (pactl), Tailscale.

@@ -61,3 +61,8 @@ export async function cover(p: Player): Promise<string | undefined> {
     }
   }
 }
+
+export const setShuffle = (p: Player, on: boolean) =>
+  busctl("set-property", p.bus, PATH, IFACE, "Shuffle", "b", String(on));
+export const setLoop = (p: Player, loop: "None" | "Track" | "Playlist") =>
+  busctl("set-property", p.bus, PATH, IFACE, "LoopStatus", "s", loop);

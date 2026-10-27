@@ -1,4 +1,4 @@
-import { action, type Context, type DetailSpec, replace } from "@backslash/api";
+import { action, type Context, type DetailSpec, Icons, replace } from "@backslash/api";
 import type { Prefs } from "../lib.ts";
 import { copiedText, nothingCopied, toolView } from "../tools.ts";
 
@@ -11,7 +11,10 @@ function translate(prefs: Prefs, text: string, to: string): DetailSpec {
     other ? ` If it is already in ${to}, translate it into ${other}.` : ""
   } Keep the formatting. Reply with the translation only.`;
   const others = LANGUAGES.filter((l) => l.toLowerCase() !== to.toLowerCase()).map((l) =>
-    action(`Translate into ${l}`, () => replace(translate(prefs, text, l)), { icon: "preferences-desktop-locale" })
+    action(`Translate into ${l}`, () => replace(translate(prefs, text, l)), {
+      icon: Icons.globe,
+      section: "Other Languages",
+    })
   );
   return toolView(prefs, `Translate into ${to}`, instructions, text, others);
 }

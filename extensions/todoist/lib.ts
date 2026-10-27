@@ -1,6 +1,19 @@
 // Todoist API v1 helper and the mapping from tasks to launcher items.
 
-import { action, copy, type Item, open, refresh, toast } from "@backslash/api";
+import {
+  type Action,
+  action,
+  type Color,
+  copy,
+  Icons,
+  type Item,
+  meta,
+  type Metadata,
+  open,
+  refresh,
+  submenu,
+  toast,
+} from "@backslash/api";
 
 export const API = "https://api.todoist.com/api/v1";
 
@@ -47,14 +60,45 @@ export interface Task {
   project_id: string;
   labels: string[];
   due: { date: string; string: string; is_recurring: boolean; datetime?: string | null } | null;
+  duration?: { amount: number; unit: string } | null;
+  added_at?: string | null;
+  note_count?: number;
 }
 
 export interface Project {
   id: string;
   name: string;
+  color?: string;
+  is_inbox_project?: boolean;
 }
 
 export const taskUrl = (id: string) => `https://app.todoist.com/app/task/${id}`;
+
+/** Todoist's project colors, as the launcher's palette. */
+const PROJECT_COLORS: Record<string, Color> = {
+  berry_red: "pink",
+  red: "red",
+  orange: "orange",
+  yellow: "yellow",
+  olive_green: "green",
+  lime_green: "green",
+  green: "green",
+  mint_green: "teal",
+  teal: "teal",
+  sky_blue: "blue",
+  light_blue: "blue",
+  blue: "blue",
+  grape: "purple",
+  violet: "purple",
+  lavender: "purple",
+  magenta: "pink",
+  salmon: "orange",
+  charcoal: "gray",
+  grey: "gray",
+  taupe: "gray",
+};
+
+export const projectColor = (p: Project | undefined): Color => PROJECT_COLORS[p?.color ?? ""] ?? "gray";
 
 /** `YYYY-MM-DD` in local time. */
 export function localDate(d: Date): string {
@@ -72,7 +116,10 @@ export function dueSection(task: Task, now = new Date()): string {
   const tomorrow = new Date(now);
   tomorrow.setDate(now.getDate() + 1);
   if (date === localDate(tomorrow)) return "Tomorrow";
-  return date;
+  const d = new Date(`${date}T12:00:00`);
+  const days = Math.round((d.getTime() - now.getTime()) / 86_400_000);
+  if (days < 7) return d.toLocaleDateString("en", { weekday: "long" });
+  return d.toLocaleDateString("en", { weekday: "short", day: "numeric", month: "short" });
 }
 
 /** Time of day for tasks due at a precise time. */
@@ -84,11 +131,14 @@ export function dueTime(task: Task): string | undefined {
 }
 
 /** The API's priority 4 is the app's P1. */
-const PRIORITY: Record<number, { tag: string; color: "red" | "orange" | "blue" }> = {
-  4: { tag: "P1", color: "red" },
-  3: { tag: "P2", color: "orange" },
-  2: { tag: "P3", color: "blue" },
+const PRIORITY: Record<number, { name: string; color: Color }> = {
+  4: { name: "P1", color: "red" },
+  3: { name: "P2", color: "orange" },
+  2: { name: "P3", color: "blue" },
+  1: { name: "P4", color: "gray" },
 };
+
+export const priorityOf = (n: number) => PRIORITY[n] ?? PRIORITY[1];
 
 export function sortTasks(tasks: Task[]): Task[] {
   const due = (t: Task) => t.due?.datetime ?? t.due?.date ?? "9999";
@@ -97,36 +147,112 @@ export function sortTasks(tasks: Task[]): Task[] {
   );
 }
 
+function overdue(task: Task, now = new Date()): boolean {
+  return !!task.due && task.due.date.slice(0, 10) < localDate(now);
+}
+
+export function taskMetadata(task: Task, project: Project | undefined, now = new Date()): Metadata[] {
+  const p = priorityOf(task.priority);
+  const lines: Metadata[] = [];
+  if (task.due) {
+    const when = [dueSection(task, now), dueTime(task)].filter(Boolean).join(" at ");
+    lines.push(meta.text("Due", when, { icon: Icons.calendar, color: overdue(task, now) ? "red" : undefined }));
+    if (task.due.is_recurring) lines.push(meta.text("Repeats", task.due.string, { icon: Icons.refresh }));
+  } else {
+    lines.push(meta.text("Due", "No date", { icon: Icons.calendar }));
+  }
+  lines.push(meta.text("Priority", p.name, { icon: Icons.flag, color: p.color === "gray" ? undefined : p.color }));
+  if (project) lines.push(meta.text("Project", project.name, { icon: Icons.dot, color: projectColor(project) }));
+  if (task.labels.length) lines.push(meta.tags("Labels", task.labels));
+  if (task.duration) lines.push(meta.text("Duration", `${task.duration.amount} ${task.duration.unit}`));
+  if (task.note_count) lines.push(meta.text("Comments", task.note_count, { icon: Icons.comment }));
+  return lines;
+}
+
+async function edit(token: string, task: Task, body: Record<string, unknown>, message: string) {
+  await todoist(token, `/tasks/${task.id}`, { method: "POST", body });
+  await toast(message, { style: "success" });
+  return refresh();
+}
+
+export function taskActions(task: Task, token: string): Action[] {
+  return [
+    action("Complete Task", async () => {
+      await todoist(token, `/tasks/${task.id}/close`, { method: "POST" });
+      await toast(task.due?.is_recurring ? "Done, next one scheduled" : "Completed", { style: "success" });
+      return refresh();
+    }, { icon: Icons.check }),
+    open(taskUrl(task.id), "Open in Todoist"),
+    submenu(
+      "Reschedule",
+      [
+        ["Today", "today"],
+        ["Tomorrow", "tomorrow"],
+        ["This Weekend", "saturday"],
+        ["Next Week", "next monday"],
+        ["No Date", "no date"],
+      ].map(([title, due]) =>
+        action(title, () => edit(token, task, { due_string: due }, `Moved to ${title.toLowerCase()}`), {
+          icon: Icons.calendar,
+        })
+      ),
+      { icon: Icons.calendar, shortcut: "<Ctrl>d", section: "Task" },
+    ),
+    submenu(
+      "Set Priority",
+      [4, 3, 2, 1].map((n) =>
+        action(priorityOf(n).name, () => edit(token, task, { priority: n }, `Priority ${priorityOf(n).name}`), {
+          icon: Icons.flag,
+        })
+      ),
+      { icon: Icons.flag, shortcut: "<Ctrl>p", section: "Task" },
+    ),
+    copy(task.content, "Copy Task", { shortcut: "<Ctrl><Shift>c", section: "Copy" }),
+    copy(taskUrl(task.id), "Copy Link", { section: "Copy" }),
+    action("Delete Task", async () => {
+      await todoist(token, `/tasks/${task.id}`, { method: "DELETE" });
+      await toast("Deleted", { style: "success" });
+      return refresh();
+    }, {
+      icon: Icons.trash,
+      destructive: true,
+      confirm: "Delete this task?",
+      section: "Danger",
+      shortcut: "<Ctrl>Delete",
+    }),
+  ];
+}
+
 export function taskItem(
   task: Task,
   token: string,
-  options: { section?: string; project?: string; now?: Date } = {},
+  options: { section?: string; project?: Project; now?: Date } = {},
 ): Item {
-  const priority = PRIORITY[task.priority];
+  const p = priorityOf(task.priority);
   const time = dueTime(task);
-  const section = options.section ?? dueSection(task, options.now);
+  const now = options.now ?? new Date();
+  const when = time ?? (task.due && !options.section ? dueSection(task, now) : undefined);
   return {
     id: task.id,
     title: task.content,
-    subtitle: [options.project, task.description.split("\n")[0]].filter(Boolean).join(" · "),
-    icon: "⭕",
+    subtitle: task.description.split("\n")[0] || undefined,
+    icon: { source: Icons.todo, tint: p.color },
     section: options.section,
-    keywords: [...task.labels, options.project ?? "", task.due?.string ?? ""].filter(Boolean),
+    keywords: [...task.labels, options.project?.name ?? "", task.due?.string ?? ""].filter(Boolean),
     accessories: [
-      ...(priority ? [priority] : []),
-      ...task.labels.map((l) => ({ text: `@${l}` })),
-      ...(time ? [{ text: time }] : task.due && !options.section ? [{ text: section }] : []),
-      ...(task.due?.is_recurring ? [{ icon: "view-refresh" }] : []),
+      ...task.labels.slice(0, 2).map((l) => ({ text: `@${l}` })),
+      ...(task.due?.is_recurring ? [{ icon: Icons.refresh, tooltip: task.due.string }] : []),
+      ...(when
+        ? [{ text: when, color: overdue(task, now) ? "red" as const : time ? "green" as const : undefined }]
+        : []),
+      ...(options.project
+        ? [{ icon: { source: Icons.dot, tint: projectColor(options.project) }, text: options.project.name }]
+        : []),
     ],
-    actions: [
-      action("Complete Task", async () => {
-        await todoist(token, `/tasks/${task.id}/close`, { method: "POST" });
-        await toast(task.due?.is_recurring ? "Done, next occurrence scheduled" : "Completed", { style: "success" });
-        return refresh();
-      }, { icon: "object-select" }),
-      open(taskUrl(task.id), "Open in Todoist"),
-      copy(task.content, "Copy Task", { shortcut: "<Ctrl><Shift>c" }),
-      copy(taskUrl(task.id), "Copy Link"),
-    ],
+    detail: {
+      markdown: task.description || undefined,
+      metadata: taskMetadata(task, options.project, now),
+    },
+    actions: taskActions(task, token),
   };
 }
