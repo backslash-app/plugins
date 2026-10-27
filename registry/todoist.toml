@@ -1,0 +1,14 @@
+# registry/todoist.toml
+id = "todoist"
+title = "Todoist"
+description = "Today's tasks, search and quick add in natural language"
+author = "Backslash"
+icon = "✅"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/todoist"
+commit = "97cc142208fb8d4e194971568d5ba739e99038e0"
+checksum = "sha256:9e648dc34ea5adb317bc05033378c5a258fa9f35ba3132ff87a6d78ce6f418ae"
+permissions = ["Access api.todoist.com"]
+commands = ["Todoist Today", "Search Todoist Tasks", "Add Todoist Task"]
+
