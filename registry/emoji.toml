@@ -3,11 +3,11 @@ title = "Emoji & Symbols"
 description = "Search emoji and symbols by name and copy them"
 author = "Backslash"
 icon = "😀"
-version = "1.1.0"
+version = "1.2.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/emoji"
-commit = "5b791b35805a9d4c6c3e3cb8ccb89796c84a0a97"
-checksum = "sha256:27f4e8abf5cf616d7f38625b709225ffb69f8720d997243dc7efb3091c706b7e"
+commit = "4355eb15974003b4d0f61febb95dd5dca5c4d614"
+checksum = "sha256:3d6c8065bb45587d5e68b3226ab7ab0ed73cc0772f7daf494f53b6b0575b543f"
 permissions = []
 commands = ["Search Emoji & Symbols"]
 
