@@ -1,0 +1,13 @@
+id = "datadog"
+title = "Datadog"
+description = "Datadog monitors in alert first with mute and unmute, dashboard search and incidents with their severity and state, on every Datadog site"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/datadog"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:e511ee2fbc61b694d995ba9d43792318520eae304e98f6f9169cc6726d90c240"
+permissions = ["Access api.datadoghq.com", "Access api.us3.datadoghq.com", "Access api.us5.datadoghq.com", "Access api.datadoghq.eu", "Access api.ap1.datadoghq.com", "Access api.ddog-gov.com"]
+commands = ["Datadog Monitors", "Search Datadog Dashboards", "Datadog Incidents"]
+

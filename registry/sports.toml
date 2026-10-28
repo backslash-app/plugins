@@ -1,0 +1,13 @@
+id = "sports"
+title = "Sports Scores"
+description = "Football scores live and today, standings and your teams' next matches (football-data.org), Formula 1 weekends, results and standings, and NBA scores"
+author = "Backslash"
+icon = "bs-flag"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/sports"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:2dd8489af7e99ddd3a5f55fdb4f6ec1f1ace7be97ef185470b3dd5c6b2314d6c"
+permissions = ["Access api.football-data.org", "Access crests.football-data.org", "Access api.jolpi.ca", "Access api.balldontlie.io"]
+commands = ["Football Matches", "Football Standings", "Formula 1", "NBA Scores"]
+

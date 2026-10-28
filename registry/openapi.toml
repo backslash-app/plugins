@@ -1,0 +1,13 @@
+id = "openapi"
+title = "OpenAPI"
+description = "Browse the endpoints of the OpenAPI and Swagger specs in your projects or at saved URLs, and copy curl commands and example bodies"
+author = "Backslash"
+icon = "bs-braces"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/openapi"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:b7b68d2731b624c0bf0985c9964d7610219a76cc7fec4014492a9c70527ca6d7"
+permissions = ["Access any website", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Read the environment variable HOME"]
+commands = ["OpenAPI Specs", "Search API Endpoints"]
+

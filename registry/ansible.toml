@@ -1,0 +1,13 @@
+id = "ansible"
+title = "Ansible"
+description = "Your Ansible projects with their playbooks, plays, inventories, groups and hosts; run, check with diff or limit a playbook, SSH and ping hosts in your terminal"
+author = "Backslash"
+icon = "bs-server"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/ansible"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:aaf7ffd78557fba0543c90f203c414fa47eb05d139bbdc2307b89330eb457c59"
+permissions = ["Run ansible-inventory", "Run ansible-playbook", "Run find", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release", "Read /etc/ansible", "Read ~/Projects", "Read ~/projects", "Read ~/code", "Read ~/Code", "Read ~/src", "Read ~/dev", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/infra", "Read ~/ansible", "Read the environment variable HOME"]
+commands = ["Ansible Projects"]
+

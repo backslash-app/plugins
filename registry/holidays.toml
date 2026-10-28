@@ -1,0 +1,13 @@
+id = "holidays"
+title = "Public Holidays"
+description = "Upcoming public holidays of your country with countdowns, French school holidays by zone, and the bridge days worth taking off"
+author = "Backslash"
+icon = "bs-calendar"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/holidays"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:5a6bef2e955d2bb5680d1a45a31534ee6d37845271fe163b905096b0dc01e10d"
+permissions = ["Access date.nager.at", "Access data.education.gouv.fr"]
+commands = ["Public Holidays", "School Holidays", "Bridge Days"]
+

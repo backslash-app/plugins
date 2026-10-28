@@ -1,0 +1,13 @@
+id = "vault"
+title = "Vault Secrets"
+description = "HashiCorp Vault and OpenBao KV secrets with your own token: browse, copy values kept out of clipboard history, versions, token TTL and policies"
+author = "Backslash"
+icon = "bs-lock"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/vault"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:6c23097b7ea6691a8c7bff5112de080f36cd74fe79b321dd34ea73f31ef2d5a9"
+permissions = ["Run vault", "Run bao", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read the environment variable VAULT_ADDR", "Read the environment variable VAULT_TOKEN", "Read the environment variable BAO_ADDR", "Read the environment variable BAO_TOKEN"]
+commands = ["Vault Secrets", "Vault Status"]
+

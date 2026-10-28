@@ -1,0 +1,13 @@
+id = "time-tracking"
+title = "Time Tracking"
+description = "Start, stop and resume timers of Toggl Track, Clockify, Timewarrior or Kimai, with today's and this week's entries and totals"
+author = "Backslash"
+icon = "bs-timer"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/time-tracking"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:dc7a783a60253291181002cce92a1155d77742ba71245e8eb08b736404fff815"
+permissions = ["Access api.track.toggl.com", "Access api.clockify.me", "Access *.kimai.cloud", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run timew", "Show “Running Timer in Menu Bar” in the system tray, updated every 5 minutes"]
+commands = ["Start Time Tracking", "Stop Time Tracking", "Time Entries", "Running Timer in Menu Bar"]
+

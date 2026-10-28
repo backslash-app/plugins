@@ -1,0 +1,13 @@
+id = "nextcloud"
+title = "Nextcloud"
+description = "Search everything in your Nextcloud, browse files and share them, read and write notes, and follow your Deck cards"
+author = "Backslash"
+icon = "bs-cloud"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/nextcloud"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:c085d790f88e68d4a3bf48d3aedf9b791d560605fa603a3dfbc5abe08e630999"
+permissions = ["Access any website", "Read ~/Downloads", "Read ~/.cache/backslash/nextcloud", "Write ~/Downloads", "Write ~/.cache/backslash/nextcloud", "Read the environment variable HOME"]
+commands = ["Search Nextcloud", "Nextcloud Files", "Nextcloud Notes", "Nextcloud Deck"]
+

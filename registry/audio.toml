@@ -1,0 +1,13 @@
+id = "audio"
+title = "Audio"
+description = "Microphones, the volume of each application playing or recording, and EasyEffects presets on PipeWire or PulseAudio"
+author = "Backslash"
+icon = "bs-mic"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/audio"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:4b54618c313f369cf4c0d753e42c424fa0a096eeebddb68c3b04f4268fc0d408"
+permissions = ["Run pactl", "Run wpctl", "Run easyeffects", "Run flatpak", "Run gsettings", "Read ~/.config/easyeffects", "Read ~/.local/share/easyeffects", "Read ~/.var/app/com.github.wwmm.easyeffects", "Read the environment variable HOME"]
+commands = ["Microphones", "Toggle Microphone", "Application Volume", "EasyEffects Presets"]
+

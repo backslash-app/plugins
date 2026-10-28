@@ -1,0 +1,13 @@
+id = "azure"
+title = "Azure"
+description = "Switch Azure subscriptions, start, stop and SSH into virtual machines, and restart or tail the logs of App Service web apps with the az CLI"
+author = "Backslash"
+icon = "bs-cloud"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/azure"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:c50a322c33b96f74806c75fe51b4a54815486a01766613313b7bda86d07ebbc3"
+permissions = ["Run az", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release"]
+commands = ["Azure Subscriptions", "Azure Virtual Machines", "Azure Web Apps"]
+

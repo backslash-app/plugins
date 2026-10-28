@@ -1,0 +1,13 @@
+id = "parcels"
+title = "Parcel Tracking"
+description = "Track Colissimo, Chronopost and La Poste letters with La Poste's API, and UPS, DHL, FedEx, Amazon and 2,000 more carriers with 17TRACK, with a timeline and change alerts"
+author = "Backslash"
+icon = "bs-package"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/parcels"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:c787f954d0f9643dd27333a9af450df51bafaa42085bbf612fd14fbcd47ff8c6"
+permissions = ["Access api.laposte.fr", "Access api.17track.net", "Run notify-send", "Run “Refresh Parcels” in the background every hour"]
+commands = ["My Parcels", "Track Parcel", "Refresh Parcels"]
+

@@ -1,0 +1,13 @@
+id = "peripherals"
+title = "Peripherals"
+description = "Battery level and state of your wireless mice, keyboards, headsets and gamepads, with headset sidetone and lights"
+author = "Backslash"
+icon = "bs-mouse"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/peripherals"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:d5ce61ad40fc050e01cfd8d51b8e86ee89a0a0decc3133635eb120958756a351"
+permissions = ["Run upower", "Run solaar", "Run headsetcontrol", "Run “Peripheral Batteries” in the background every 30 minutes"]
+commands = ["Peripherals", "Peripheral Batteries"]
+

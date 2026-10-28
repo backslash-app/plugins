@@ -1,0 +1,13 @@
+id = "scheduled-tasks"
+title = "Scheduled Tasks"
+description = "Your cron jobs and systemd timers in plain words with their next and last runs; run now, see logs, enable or disable"
+author = "Backslash"
+icon = "bs-calendar"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/scheduled-tasks"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:1b4c834d0ef560058deb4c88af39c3a1be53892baa5e7f5e52125f681dce54f7"
+permissions = ["Run crontab", "Run systemctl", "Run journalctl", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/crontab", "Read /etc/cron.d", "Read /etc/cron.hourly", "Read /etc/cron.daily", "Read /etc/cron.weekly", "Read /etc/cron.monthly", "Read the environment variable USER"]
+commands = ["Scheduled Tasks"]
+
