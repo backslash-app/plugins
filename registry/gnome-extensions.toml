@@ -1,0 +1,13 @@
+id = "gnome-extensions"
+title = "GNOME Extensions"
+description = "Enable, disable, configure or uninstall your GNOME Shell extensions, and install new ones from extensions.gnome.org"
+author = "Backslash"
+icon = "bs-apps"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/gnome-extensions"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:301848ab65f9be7756bffa1627a41bdab2987aa8d0877ceba0d665737ff12ea3"
+permissions = ["Access extensions.gnome.org", "Run gnome-extensions", "Run gnome-shell", "Run gsettings", "Run gdbus", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP"]
+commands = ["GNOME Extensions", "Install GNOME Extension"]
+

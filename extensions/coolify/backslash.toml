@@ -1,0 +1,63 @@
+[extension]
+id = "coolify"
+title = "Coolify"
+description = "Applications, services and databases of your Coolify and Dokploy instances with status, domains and last deployment; deploy, restart, stop, logs and deployment history"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+
+# Coolify and Dokploy are self-hosted at addresses only the user knows, usually
+# public domains (and app.coolify.io for Coolify Cloud), so no fixed host list
+# can cover them. Only the instances set in the preferences are contacted.
+[permissions]
+net = ["*"]
+
+[[commands]]
+name = "apps"
+title = "Coolify & Dokploy Apps"
+description = "Applications, services and databases with status, domains and last deployment; deploy, restart, stop"
+icon = "bs-rocket"
+keywords = [
+  "coolify",
+  "dokploy",
+  "paas",
+  "self-hosted",
+  "deploy",
+  "deployment",
+  "redeploy",
+  "restart",
+  "docker",
+  "compose",
+  "apps",
+  "logs",
+  "vps",
+  "déployer",
+  "déploiement",
+  "redémarrer",
+  "arrêter",
+  "auto-hébergé",
+  "journaux",
+]
+
+[[preferences]]
+name = "coolifyUrl"
+title = "Coolify URL"
+description = "Optional. Your instance, e.g. https://coolify.example.com (https://app.coolify.io for Coolify Cloud)"
+
+[[preferences]]
+name = "coolifyToken"
+title = "Coolify API token"
+description = "Keys & Tokens → API tokens, with read and deploy permissions"
+type = "secret"
+
+[[preferences]]
+name = "dokployUrl"
+title = "Dokploy URL"
+description = "Optional. Your panel, e.g. https://dokploy.example.com"
+
+[[preferences]]
+name = "dokployKey"
+title = "Dokploy API key"
+description = "Profile → API/CLI → Generate"
+type = "secret"

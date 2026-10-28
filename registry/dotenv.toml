@@ -1,0 +1,13 @@
+id = "dotenv"
+title = "Env Files"
+description = "The .env files of your projects with their variables masked, the keys missing from .env.example, and copy or export them"
+author = "Backslash"
+icon = "bs-key"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/dotenv"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:b666e5eba8ee1b8a9347db0cd4b7c36c8d853fa5a19374d64590d7ffc9f824fa"
+permissions = ["Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Write ~/Projects", "Write ~/projects", "Write ~/Code", "Write ~/code", "Write ~/dev", "Write ~/Developer", "Write ~/src", "Write ~/git", "Write ~/repos", "Write ~/workspace", "Write ~/work", "Write ~/Work", "Read the environment variable HOME"]
+commands = ["Env Files"]
+

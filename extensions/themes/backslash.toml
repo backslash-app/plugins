@@ -1,0 +1,77 @@
+[extension]
+id = "themes"
+title = "Themes"
+description = "Switch GTK, icon and cursor themes, Plasma color schemes and global themes, the accent color and dark mode"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-palette"
+license = "MIT"
+
+# Themes are found by reading the folders they are installed in (their index.theme gives
+# their names; Plasma's look-and-feel packages their metadata). XDG_CURRENT_DESKTOP tells
+# which settings to change: gsettings on GNOME, Cinnamon, MATE and most others,
+# xfconf-query on Xfce, and on KDE Plasma its plasma-apply-* tools, kreadconfig and
+# kwriteconfig (icons, then gdbus tells running apps to reload them). systemsettings
+# opens Plasma's GTK settings.
+[permissions]
+env = ["HOME", "XDG_CURRENT_DESKTOP"]
+read = [
+  "/usr/share/themes",
+  "/usr/local/share/themes",
+  "~/.themes",
+  "~/.local/share/themes",
+  "/usr/share/icons",
+  "/usr/local/share/icons",
+  "~/.icons",
+  "~/.local/share/icons",
+  "/usr/share/plasma/look-and-feel",
+  "~/.local/share/plasma/look-and-feel",
+]
+run = [
+  "gsettings",
+  "xfconf-query",
+  "plasma-apply-colorscheme",
+  "plasma-apply-lookandfeel",
+  "plasma-apply-cursortheme",
+  "kreadconfig6",
+  "kreadconfig5",
+  "kwriteconfig6",
+  "kwriteconfig5",
+  "gdbus",
+  "systemsettings",
+]
+
+[[commands]]
+name = "themes"
+title = "Themes"
+description = "Installed GTK, icon and cursor themes, color schemes and accents; the current ones marked"
+icon = "bs-palette"
+keywords = [
+  "theme",
+  "themes",
+  "thème",
+  "thèmes",
+  "apparence",
+  "appearance",
+  "gtk",
+  "icons",
+  "icônes",
+  "cursor",
+  "curseur",
+  "pointeur",
+  "color scheme",
+  "couleurs",
+  "accent",
+  "dark mode",
+  "mode sombre",
+  "plasma",
+  "look and feel",
+]
+
+[[commands]]
+name = "toggle-dark"
+title = "Toggle Dark Mode"
+description = "Switch between dark and light: the style, the GTK theme's variant or Plasma's colors"
+icon = "bs-moon"
+mode = "no-view"
+keywords = ["dark", "light", "mode sombre", "mode clair", "thème sombre", "nuit", "night", "basculer", "dark theme"]

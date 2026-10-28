@@ -1,0 +1,86 @@
+[extension]
+id = "transit"
+title = "Public Transport"
+description = "Next departures from your stops with real-time delays and disruptions, and journeys with changes and CO₂, for SNCF trains, Île-de-France and French networks (Navitia)"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-clock"
+license = "MIT"
+
+# Navitia's public API: places, departures, disruptions and journeys. Same list
+# as HOSTS in api.ts.
+[permissions]
+net = ["api.navitia.io"]
+
+[[commands]]
+name = "departures"
+title = "Next Departures"
+description = "Departures from your favourite stops: line, direction, real time or timetable, delays and disruptions"
+icon = "bs-clock"
+keywords = [
+  "departures",
+  "next train",
+  "next bus",
+  "timetable",
+  "schedule",
+  "prochains départs",
+  "prochain train",
+  "prochain bus",
+  "horaires",
+  "départs",
+  "gare",
+  "arrêt",
+  "station",
+  "métro",
+  "rer",
+  "tram",
+  "transilien",
+  "ter",
+  "sncf",
+  "ratp",
+  "navitia",
+  "perturbations",
+]
+
+[[commands]]
+name = "journey"
+title = "Plan a Journey"
+description = "From one station, address or city to another: departure and arrival times, lines, changes, walking and CO₂"
+icon = "bs-arrow-right"
+keywords = [
+  "journey",
+  "route",
+  "itinerary",
+  "trip",
+  "directions",
+  "itinéraire",
+  "trajet",
+  "calculer un itinéraire",
+  "aller à",
+  "train",
+  "métro",
+  "bus",
+  "rer",
+  "sncf",
+  "navitia",
+  "transport en commun",
+]
+[[commands.arguments]]
+name = "from"
+placeholder = "From (optional)"
+[[commands.arguments]]
+name = "to"
+placeholder = "To (optional)"
+
+[[preferences]]
+name = "token"
+title = "Navitia token"
+description = "Free token from navitia.io (sent by email when you sign up)"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "coverage"
+title = "Coverage"
+description = "Navitia regions to search: auto (sncf and fr-idf), or region ids separated by commas: sncf, fr-idf, fr-se, fr-ne…"
+default = "auto"

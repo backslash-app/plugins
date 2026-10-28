@@ -1,0 +1,98 @@
+[extension]
+id = "paperless"
+title = "Paperless-ngx"
+description = "Search your Paperless-ngx documents by their text with correspondents, types, tags and thumbnails; download, share, tag, and upload copied files"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-archive"
+license = "MIT"
+
+# Paperless-ngx runs on your own server, and hosts must be declared ahead
+# (as the Home Assistant and Jellyfin extensions do): this computer, local and
+# container names, private IPv4 ranges (Deno's --allow-net accepts CIDR),
+# Tailscale and DuckDNS. A server on a custom public domain is not reachable:
+# use its local or Tailscale address; a document archive is rarely worth
+# opening the extension to every host. Same list as HOSTS in lib.ts.
+# Thumbnails need the token in a header, so they are downloaded into
+# ~/.cache/backslash/paperless and shown from there; downloads go to
+# ~/Downloads. Upload to Paperless reads files copied in the file manager with
+# wl-paste (Wayland) or xclip (X11) as text/uri-list, falling back to the
+# clipboard's text, and lists recent documents of the usual folders; those
+# files can be anywhere in the home folder or on a mounted drive.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "paperless",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+run = ["wl-paste", "xclip"]
+read = ["~", "/media", "/run/media", "/mnt"]
+write = ["~/Downloads", "~/.cache/backslash/paperless"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "search"
+title = "Search Paperless"
+description = "Full-text search of your documents, newest first when empty; open, download, share, edit tags"
+icon = "bs-archive"
+keywords = [
+  "paperless",
+  "paperless-ngx",
+  "documents",
+  "document",
+  "scan",
+  "scans",
+  "invoice",
+  "facture",
+  "receipt",
+  "reçu",
+  "contract",
+  "contrat",
+  "papiers",
+  "archive",
+  "ocr",
+  "dms",
+]
+
+[[commands]]
+name = "upload"
+title = "Upload to Paperless"
+description = "Send files copied in the file manager, or recent downloads, to Paperless-ngx and follow their processing"
+icon = "bs-upload"
+keywords = [
+  "paperless",
+  "upload",
+  "envoyer",
+  "téléverser",
+  "importer",
+  "consume",
+  "scan",
+  "document",
+  "pdf",
+  "archiver",
+]
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open it in the browser, e.g. http://paperless.local:8000 or http://192.168.1.20:8000"
+required = true
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "Paperless-ngx → My Profile → API Auth Token"
+type = "secret"
+required = true

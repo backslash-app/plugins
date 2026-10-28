@@ -1,0 +1,13 @@
+id = "ci-runs"
+title = "CI Pipelines"
+description = "Recent CircleCI, Buildkite, Woodpecker and Jenkins runs in one list, failing and running first, with branch, commit and duration; rerun or cancel them"
+author = "Backslash"
+icon = "bs-cycle"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/ci-runs"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:177cce0301012cc55466b397aa8a7d88f1e35eb3767c2ba42fd3551ca548acb2"
+permissions = ["Access any website", "Access circleci.com", "Access api.buildkite.com", "Access avatars.githubusercontent.com", "Access secure.gravatar.com", "Access www.gravatar.com"]
+commands = ["CI Pipelines"]
+

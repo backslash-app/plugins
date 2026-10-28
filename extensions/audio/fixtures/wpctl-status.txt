@@ -1,0 +1,40 @@
+PipeWire 'pipewire-0' [1.0.5, ada@laptop, cookie:1234567890]
+ └─ Clients:
+        31. WirePlumber                         [1.0.5, ada@laptop, pid:1234]
+        52. pipewire                            [1.0.5, ada@laptop, pid:1240]
+
+Audio
+ ├─ Devices:
+ │      45. Built-in Audio                      [alsa]
+ │      60. HD Pro Webcam C920                  [alsa]
+ │  
+ ├─ Sinks:
+ │  *   46. Built-in Audio Analog Stereo        [vol: 0.40]
+ │  
+ ├─ Sink endpoints:
+ │  
+ ├─ Sources:
+ │  *   47. Built-in Audio Analog Stereo        [vol: 1.00]
+ │      61. HD Pro Webcam C920 Analog Stereo    [vol: 0.75 MUTED]
+ │  
+ ├─ Source endpoints:
+ │  
+ └─ Streams:
+        64. Firefox                                                     
+             65. output_FL       > Built-in Audio:playback_FL	[active]
+             66. output_FR       > Built-in Audio:playback_FR	[active]
+        70. Zoom
+             71. input_MONO      < HD Pro Webcam C920:capture_MONO	[active]
+
+Video
+ ├─ Devices:
+ │      58. HD Pro Webcam C920                  [v4l2]
+ │  
+ ├─ Sinks:
+ │  
+ └─ Sources:
+ │  *   62. HD Pro Webcam C920 (V4L2)
+
+Settings
+ └─ Default Configured Node Names:
+         0. Audio/Sink    alsa_output.pci-0000_00_1f.3.analog-stereo

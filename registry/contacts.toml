@@ -1,0 +1,13 @@
+id = "contacts"
+title = "Contacts"
+description = "Your CardDAV or vCard contacts with emails, phones, addresses and upcoming birthdays: write, call, copy"
+author = "Backslash"
+icon = "bs-user"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/contacts"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:a215d1e7312fc46fcd5b8b0dd8f431bdfee675ed05981d9c916f036594ebc707"
+permissions = ["Access www.googleapis.com", "Access *.icloud.com", "Access carddav.fastmail.com", "Access dav.mailbox.org", "Access posteo.de", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read ~/Contacts", "Read ~/.contacts", "Read ~/.local/share/contacts", "Read ~/.local/share/vdirsyncer", "Read ~/.cache/backslash/contacts", "Write ~/.cache/backslash/contacts", "Read the environment variable HOME"]
+commands = ["Search Contacts"]
+

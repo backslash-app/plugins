@@ -1,0 +1,54 @@
+[extension]
+id = "gitignore"
+title = "Gitignore Templates"
+description = "Browse github/gitignore templates, preview and combine them, and add them to a project's .gitignore without duplicate lines"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-file"
+license = "MIT"
+
+# The template list comes from the GitHub API (github/gitignore's file tree) and
+# the templates from raw.githubusercontent.com; both are cached for a week.
+# Projects can be anywhere in your home folder, so writing a .gitignore needs read
+# and write access to ~ (the extension lists the configured folders, reads the
+# .gitignore there and writes that one file).
+[permissions]
+net = ["api.github.com", "raw.githubusercontent.com"]
+read = ["~"]
+write = ["~"]
+env = ["HOME"]
+
+[[commands]]
+name = "templates"
+title = "Gitignore Templates"
+description = "Node, Python, macOS, JetBrains…: preview, copy, combine several and append them to a project's .gitignore"
+icon = "bs-file"
+keywords = [
+  "gitignore",
+  ".gitignore",
+  "git",
+  "ignore",
+  "template",
+  "github",
+  "node",
+  "python",
+  "macos",
+  "jetbrains",
+  "vscode",
+  "ignorer",
+  "fichiers ignorés",
+  "modèle",
+]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where your projects are, separated by commas"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folder levels below those to look for projects (1–5)"
+type = "number"
+default = 2

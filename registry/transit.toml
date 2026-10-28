@@ -1,0 +1,13 @@
+id = "transit"
+title = "Public Transport"
+description = "Next departures from your stops with real-time delays and disruptions, and journeys with changes and CO₂, for SNCF trains, Île-de-France and French networks (Navitia)"
+author = "Backslash"
+icon = "bs-clock"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/transit"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:8f3e2106b4a1b5783af7ad75d93b49f256a201af6c06785408876b18d8e34e86"
+permissions = ["Access api.navitia.io"]
+commands = ["Next Departures", "Plan a Journey"]
+

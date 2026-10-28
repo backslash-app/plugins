@@ -1,0 +1,13 @@
+id = "dependency-updates"
+title = "Dependency Updates"
+description = "Open Renovate and Dependabot pull requests across your GitHub repositories with package, versions, semver jump and checks; approve, squash-merge or ask for a rebase"
+author = "Backslash"
+icon = "bs-package"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/dependency-updates"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:df73fa54f3ba6b7324f4aed500873c46b29dc580e62aebb4f9932cfeb8c63e1b"
+permissions = ["Access api.github.com", "Run gh"]
+commands = ["Dependency Updates"]
+

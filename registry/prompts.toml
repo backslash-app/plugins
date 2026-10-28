@@ -1,0 +1,13 @@
+id = "prompts"
+title = "Prompt Library"
+description = "Your own library of reusable AI prompts with {{variables}}, filled in a form and pasted into any app"
+author = "Backslash"
+icon = "bs-sparkle"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/prompts"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:54c0ff7c9bc90be543774be4b06567499e1f1236f199b3bcc97b88b84b7e7fc7"
+permissions = ["Read the clipboard"]
+commands = ["Search Prompts", "Add Prompt"]
+

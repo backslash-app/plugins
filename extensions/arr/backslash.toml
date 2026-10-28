@@ -1,0 +1,146 @@
+[extension]
+id = "arr"
+title = "Sonarr & Radarr"
+description = "Upcoming episodes and movies with posters, the download queue and adding series, movies or artists to Sonarr, Radarr and Lidarr"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-film"
+license = "MIT"
+
+# Sonarr, Radarr and Lidarr run on your own server, and hosts must be
+# declared ahead: this computer, local and container names, private IPv4
+# ranges (Deno's --allow-net accepts CIDR) and Tailscale. A public domain is
+# out of reach. Same list as HOSTS in lib.ts. Then TheTVDB and TMDB, where
+# the posters of search results not in the library yet come from (shown by
+# the launcher, never fetched with your key); same list as POSTER_HOSTS.
+# The apps' own posters need the API key, so they are downloaded into
+# ~/.cache/backslash/arr and shown from there (HOME locates it).
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "sonarr",
+  "radarr",
+  "lidarr",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+  "artworks.thetvdb.com",
+  "image.tmdb.org",
+]
+read = ["~/.cache/backslash/arr"]
+write = ["~/.cache/backslash/arr"]
+env = ["HOME"]
+
+[[commands]]
+name = "upcoming"
+title = "Upcoming Episodes & Movies"
+description = "The next 14 days of Sonarr, Radarr and Lidarr's calendar, by day, with posters"
+icon = "bs-calendar"
+keywords = [
+  "sonarr",
+  "radarr",
+  "lidarr",
+  "arr",
+  "calendar",
+  "calendrier",
+  "upcoming",
+  "à venir",
+  "prochainement",
+  "episodes",
+  "épisodes",
+  "series",
+  "séries",
+  "tv",
+  "movies",
+  "films",
+  "sorties",
+  "releases",
+  "missing",
+  "manquants",
+]
+
+[[commands]]
+name = "queue"
+title = "Download Queue"
+description = "What Sonarr, Radarr and Lidarr are downloading, with progress, status and errors; remove or blocklist"
+icon = "bs-download"
+keywords = [
+  "sonarr",
+  "radarr",
+  "lidarr",
+  "arr",
+  "queue",
+  "file d'attente",
+  "activity",
+  "activité",
+  "downloads",
+  "téléchargements",
+  "import",
+  "blocklist",
+  "usenet",
+  "torrent",
+]
+
+[[commands]]
+name = "add"
+title = "Add Series or Movie"
+description = "Look up a series, movie or artist and add it to Sonarr, Radarr or Lidarr, monitored, with a search"
+icon = "bs-plus"
+keywords = [
+  "sonarr",
+  "radarr",
+  "lidarr",
+  "arr",
+  "add",
+  "ajouter",
+  "series",
+  "série",
+  "movie",
+  "film",
+  "artist",
+  "artiste",
+  "tv show",
+  "lookup",
+  "rechercher",
+]
+
+[[preferences]]
+name = "sonarrUrl"
+title = "Sonarr address"
+description = "As you open it in the browser, e.g. http://nas.local:8989 (with the URL base if you set one)"
+
+[[preferences]]
+name = "sonarrKey"
+title = "Sonarr API key"
+description = "Sonarr → Settings → General → Security → API Key"
+type = "secret"
+
+[[preferences]]
+name = "radarrUrl"
+title = "Radarr address"
+description = "e.g. http://nas.local:7878"
+
+[[preferences]]
+name = "radarrKey"
+title = "Radarr API key"
+description = "Radarr → Settings → General → Security → API Key"
+type = "secret"
+
+[[preferences]]
+name = "lidarrUrl"
+title = "Lidarr address"
+description = "Optional, e.g. http://nas.local:8686"
+
+[[preferences]]
+name = "lidarrKey"
+title = "Lidarr API key"
+description = "Lidarr → Settings → General → Security → API Key"
+type = "secret"

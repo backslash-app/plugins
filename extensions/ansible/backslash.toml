@@ -1,0 +1,108 @@
+[extension]
+id = "ansible"
+title = "Ansible"
+description = "Your Ansible projects with their playbooks, plays, inventories, groups and hosts; run, check with diff or limit a playbook, SSH and ping hosts in your terminal"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-server"
+license = "MIT"
+
+# find scans the folders set in the preferences for ansible.cfg, inventories and
+# playbooks (a fixed read list couldn't cover them); ansible-inventory and
+# ansible-playbook read the projects it finds. Playbooks are parsed to show their
+# plays when they are in the default folders below (or /etc/ansible); elsewhere,
+# ansible-playbook --list-tasks shows them. /etc/os-release is for the install
+# hint. Then the terminals runs, ad-hoc pings and SSH sessions open in.
+[permissions]
+env = ["HOME"]
+read = [
+  "/etc/os-release",
+  "/etc/ansible",
+  "~/Projects",
+  "~/projects",
+  "~/code",
+  "~/Code",
+  "~/src",
+  "~/dev",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/infra",
+  "~/ansible",
+]
+run = [
+  "ansible-inventory",
+  "ansible-playbook",
+  "find",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "projects"
+title = "Ansible Projects"
+description = "Playbooks with their plays, inventories with groups and hosts; run, check, limit, SSH, ping"
+icon = "bs-server"
+keywords = [
+  "ansible",
+  "playbook",
+  "inventory",
+  "hosts",
+  "provisioning",
+  "configuration management",
+  "automation",
+  "deploy",
+  "ssh",
+  "ping",
+  "roles",
+  "dry run",
+  "check",
+  "inventaire",
+  "hôtes",
+  "automatisation",
+  "déploiement",
+  "gestion de configuration",
+  "serveurs",
+]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where to look for Ansible projects, separated by commas"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace, ~/infra, ~/ansible, /etc/ansible"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folders deep to look below each folder (1 to 8)"
+type = "number"
+default = 4
+
+[[preferences]]
+name = "askBecome"
+title = "Ask sudo password"
+description = "Add --ask-become-pass to playbook runs"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "askVault"
+title = "Ask vault password"
+description = "Add --ask-vault-pass to playbook runs (or set vault_password_file in ansible.cfg)"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

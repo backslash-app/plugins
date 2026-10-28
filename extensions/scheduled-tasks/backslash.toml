@@ -1,0 +1,62 @@
+[extension]
+id = "scheduled-tasks"
+title = "Scheduled Tasks"
+description = "Your cron jobs and systemd timers in plain words with their next and last runs; run now, see logs, enable or disable"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calendar"
+license = "MIT"
+
+# crontab reads (-l) and rewrites (- from stdin, to comment a line out or back
+# in) your own crontab; systemctl lists, starts, enables and disables timers;
+# journalctl shows their logs. The system crontabs and periodic script folders
+# are only read. Terminals run a job now, follow logs and open crontab -e.
+# USER tells your jobs from those that run as another user.
+[permissions]
+run = [
+  "crontab",
+  "systemctl",
+  "journalctl",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+read = ["/etc/crontab", "/etc/cron.d", "/etc/cron.hourly", "/etc/cron.daily", "/etc/cron.weekly", "/etc/cron.monthly"]
+env = ["USER"]
+
+[[commands]]
+name = "tasks"
+title = "Scheduled Tasks"
+description = "Cron jobs and systemd timers (yours and the system's): schedule in words, next and last run"
+icon = "bs-calendar"
+keywords = [
+  "cron",
+  "crontab",
+  "timer",
+  "timers",
+  "systemd",
+  "schedule",
+  "scheduled",
+  "jobs",
+  "anacron",
+  "next run",
+  "tâches planifiées",
+  "planificateur",
+  "planification",
+  "minuteurs",
+  "tâches",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

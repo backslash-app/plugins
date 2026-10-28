@@ -1,0 +1,13 @@
+id = "keys"
+title = "SSH & GPG Keys"
+description = "Your SSH and GPG keys with their type, fingerprint, agent status and expiry; copy, load in the agent, add to GitHub or GitLab, generate new ones"
+author = "Backslash"
+icon = "bs-key"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/keys"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:2aec1d28edd0a1795ea8a7d8b70e31cb4bd5bd83073b0036454bfeb8a7c7e945"
+permissions = ["Run ssh-keygen", "Run ssh-add", "Run gpg", "Run mkdir", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.ssh", "Read /etc/hostname", "Read the environment variable HOME", "Read the environment variable USER"]
+commands = ["SSH & GPG Keys", "Generate SSH Key"]
+

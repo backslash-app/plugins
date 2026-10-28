@@ -1,0 +1,9 @@
+{
+  "output": {
+    "blocklist": [],
+    "bass_enhancer#0": { "amount": 6.0, "bypass": false },
+    "equalizer#0": { "mode": "IIR", "num-bands": 10 },
+    "limiter#0": { "threshold": -1.0 },
+    "plugins_order": ["equalizer#0", "bass_enhancer#0", "limiter#0"]
+  }
+}

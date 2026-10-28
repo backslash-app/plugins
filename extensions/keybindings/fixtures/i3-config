@@ -1,0 +1,10 @@
+set $mod Mod1
+font pango:monospace 8
+bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Shift+q kill
+bindsym $mod+j focus left
+bindsym $mod+2 workspace number $ws2
+set $ws2 "2"
+bindsym $mod+Shift+r restart
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+bindsym --release button2 kill

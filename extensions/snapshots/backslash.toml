@@ -1,0 +1,88 @@
+[extension]
+id = "snapshots"
+title = "System Snapshots"
+description = "Timeshift and Snapper snapshots with their date, type and changed files; create, compare, delete or restore them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-history"
+license = "MIT"
+
+# Timeshift's configuration is read from /etc/timeshift (no root); its snapshots are
+# listed and changed as root, through pkexec (polkit), once per change.
+# snapper talks to snapperd as the user; configs the user may not read go through pkexec.
+# /proc/mounts tells whether / is on Btrfs, for a read-only listing (btrfs, as root).
+# Restoring is interactive, so it opens in a terminal (sudo there).
+[permissions]
+read = ["/etc/timeshift", "/proc/mounts"]
+run = [
+  "snapper",
+  "pkexec",
+  "timeshift-launcher",
+  "timeshift-gtk",
+  "btrfs-assistant-launcher",
+  "btrfs-assistant",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "snapshots"
+title = "System Snapshots"
+description = "Timeshift, Snapper or Btrfs snapshots, newest first, with what changed"
+icon = "bs-history"
+keywords = [
+  "snapshot",
+  "snapshots",
+  "instantané",
+  "instantanés",
+  "timeshift",
+  "snapper",
+  "btrfs",
+  "rollback",
+  "restore",
+  "restaurer",
+  "restauration",
+  "undo",
+  "annuler",
+  "system",
+  "système",
+  "point de restauration",
+  "restore point",
+  "sauvegarde système",
+]
+
+[[commands]]
+name = "create"
+title = "Create System Snapshot"
+description = "A Snapper (root) or Timeshift snapshot, before an upgrade or a risky change"
+icon = "bs-plus"
+mode = "no-view"
+keywords = [
+  "snapshot",
+  "create",
+  "créer",
+  "instantané",
+  "timeshift",
+  "snapper",
+  "btrfs",
+  "point de restauration",
+  "restore point",
+]
+[[commands.arguments]]
+name = "description"
+placeholder = "Description"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For restoring and undoing changes. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

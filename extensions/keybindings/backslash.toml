@@ -1,0 +1,51 @@
+[extension]
+id = "keybindings"
+title = "Keyboard Shortcuts"
+description = "A searchable cheat sheet of your desktop's real keyboard shortcuts on GNOME, KDE Plasma, Hyprland, Sway, niri and i3"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-keyboard"
+license = "MIT"
+
+# The session's variables tell which desktop is running. GNOME's shortcuts come from
+# gsettings, Hyprland's from hyprctl and Sway's from swaymsg (its configuration file
+# when Sway isn't running); KDE Plasma, niri and i3 keep them in the files below.
+# gnome-control-center and systemsettings open the desktop's shortcut settings.
+[permissions]
+env = ["HOME", "XDG_CURRENT_DESKTOP", "HYPRLAND_INSTANCE_SIGNATURE", "SWAYSOCK", "NIRI_SOCKET", "I3SOCK"]
+run = ["gsettings", "hyprctl", "swaymsg", "gnome-control-center", "systemsettings"]
+read = [
+  "~/.config/kglobalshortcutsrc",
+  "~/.config/sway/config",
+  "~/.config/niri/config.kdl",
+  "~/.config/i3/config",
+  "~/.i3/config",
+]
+
+[[commands]]
+name = "keybindings"
+title = "Keyboard Shortcuts"
+description = "Every shortcut of your desktop by section, searchable by action or key"
+icon = "bs-keyboard"
+keywords = [
+  "shortcuts",
+  "keybindings",
+  "keybinds",
+  "hotkeys",
+  "keys",
+  "cheat sheet",
+  "raccourcis",
+  "raccourcis clavier",
+  "touches",
+  "aide-mémoire",
+  "antisèche",
+  "bindsym",
+  "binds",
+  "gnome",
+  "kde",
+  "plasma",
+  "hyprland",
+  "sway",
+  "niri",
+  "i3",
+]

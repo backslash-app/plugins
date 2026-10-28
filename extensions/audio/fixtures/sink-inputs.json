@@ -1,0 +1,71 @@
+[{
+  "index": 112,
+  "driver": "PipeWire",
+  "owner_module": "",
+  "client": "98",
+  "sink": 52,
+  "sample_specification": "float32le 2ch 48000Hz",
+  "channel_map": "front-left,front-right",
+  "format": "pcm, format.sample_format = \"\\\"float32le\\\"\"  format.rate = \"48000\"",
+  "corked": false,
+  "mute": false,
+  "volume": {
+    "front-left": { "value": 52429, "value_percent": "80%", "db": "-5.81 dB" },
+    "front-right": { "value": 52429, "value_percent": "80%", "db": "-5.81 dB" }
+  },
+  "balance": 0.000000,
+  "buffer_latency": 0.000000,
+  "sink_latency": 0.000000,
+  "resample_method": "PipeWire",
+  "properties": {
+    "application.name": "Firefox",
+    "application.process.id": "4242",
+    "application.process.binary": "firefox",
+    "application.icon_name": "firefox",
+    "media.name": "AudioStream",
+    "node.name": "Firefox",
+    "media.class": "Stream/Output/Audio"
+  }
+}, {
+  "index": 130,
+  "driver": "PipeWire",
+  "owner_module": "",
+  "client": "120",
+  "sink": 52,
+  "sample_specification": "s16le 2ch 44100Hz",
+  "channel_map": "front-left,front-right",
+  "format": "pcm",
+  "corked": true,
+  "mute": true,
+  "volume": {
+    "front-left": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" },
+    "front-right": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" }
+  },
+  "balance": 0.000000,
+  "buffer_latency": 0.000000,
+  "sink_latency": 0.000000,
+  "resample_method": "PipeWire",
+  "properties": {
+    "application.name": "Spotify",
+    "application.process.binary": "spotify",
+    "media.name": "Daft Punk - Veridis Quo",
+    "media.class": "Stream/Output/Audio"
+  }
+}, {
+  "index": 140,
+  "driver": "PipeWire",
+  "owner_module": "",
+  "client": "121",
+  "sink": 52,
+  "sample_specification": "float32le 1ch 25Hz",
+  "channel_map": "mono",
+  "format": "pcm",
+  "corked": false,
+  "mute": false,
+  "volume": { "mono": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" } },
+  "properties": {
+    "application.name": "PulseAudio Volume Control",
+    "application.id": "org.PulseAudio.pavucontrol",
+    "media.name": "Peak detect"
+  }
+}]

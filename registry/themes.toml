@@ -1,0 +1,13 @@
+id = "themes"
+title = "Themes"
+description = "Switch GTK, icon and cursor themes, Plasma color schemes and global themes, the accent color and dark mode"
+author = "Backslash"
+icon = "bs-palette"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/themes"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:b304fdfac45367a43408ef62da71231b921bd528dcc367b12448a1c88505dc2a"
+permissions = ["Run gsettings", "Run xfconf-query", "Run plasma-apply-colorscheme", "Run plasma-apply-lookandfeel", "Run plasma-apply-cursortheme", "Run kreadconfig6", "Run kreadconfig5", "Run kwriteconfig6", "Run kwriteconfig5", "Run gdbus", "Run systemsettings", "Read /usr/share/themes", "Read /usr/local/share/themes", "Read ~/.themes", "Read ~/.local/share/themes", "Read /usr/share/icons", "Read /usr/local/share/icons", "Read ~/.icons", "Read ~/.local/share/icons", "Read /usr/share/plasma/look-and-feel", "Read ~/.local/share/plasma/look-and-feel", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP"]
+commands = ["Themes", "Toggle Dark Mode"]
+

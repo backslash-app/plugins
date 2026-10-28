@@ -1,0 +1,105 @@
+[extension]
+id = "graphql"
+title = "GraphQL Explorer"
+description = "Browse a GraphQL API's queries, mutations and types with their arguments, copy query skeletons and run queries with variables"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-braces"
+license = "MIT"
+
+[permissions]
+# Any host: the endpoints are whatever GraphQL APIs you add (public APIs, your
+# company's, staging or local servers), which can't be known in advance. Only
+# the endpoints you configure are contacted.
+net = ["*"]
+
+[[commands]]
+name = "explorer"
+title = "GraphQL Explorer"
+description = "Your endpoints: browse the schema (fields, arguments, SDL), copy a query skeleton, run it"
+icon = "bs-braces"
+keywords = [
+  "graphql",
+  "gql",
+  "schema",
+  "introspection",
+  "sdl",
+  "query",
+  "mutation",
+  "api",
+  "graphiql",
+  "apollo",
+  "explorateur",
+  "requête",
+  "schéma",
+]
+
+[[commands]]
+name = "query"
+title = "Run GraphQL Query"
+description = "Type a query and its variables JSON, pick an endpoint, read the formatted result"
+icon = "bs-play"
+keywords = ["graphql", "gql", "query", "mutation", "variables", "run", "execute", "exécuter", "requête", "lancer"]
+
+[[preferences]]
+name = "name1"
+title = "Endpoint 1: name"
+description = "Shown in the list, e.g. GitHub"
+
+[[preferences]]
+name = "url1"
+title = "Endpoint 1: URL"
+description = "https://api.github.com/graphql"
+
+[[preferences]]
+name = "header1"
+title = "Endpoint 1: auth header"
+description = "The header carrying the token (default Authorization; X-API-Key, X-Shopify-Access-Token…)"
+
+[[preferences]]
+name = "token1"
+title = "Endpoint 1: token"
+description = "Sent in that header; with Authorization, a bare token gets “Bearer ”"
+type = "secret"
+
+[[preferences]]
+name = "name2"
+title = "Endpoint 2: name"
+description = "Shown in the list"
+
+[[preferences]]
+name = "url2"
+title = "Endpoint 2: URL"
+description = "The GraphQL endpoint"
+
+[[preferences]]
+name = "header2"
+title = "Endpoint 2: auth header"
+description = "Default Authorization"
+
+[[preferences]]
+name = "token2"
+title = "Endpoint 2: token"
+description = "Kept in the keyring"
+type = "secret"
+
+[[preferences]]
+name = "name3"
+title = "Endpoint 3: name"
+description = "Shown in the list"
+
+[[preferences]]
+name = "url3"
+title = "Endpoint 3: URL"
+description = "The GraphQL endpoint"
+
+[[preferences]]
+name = "header3"
+title = "Endpoint 3: auth header"
+description = "Default Authorization"
+
+[[preferences]]
+name = "token3"
+title = "Endpoint 3: token"
+description = "Kept in the keyring"
+type = "secret"

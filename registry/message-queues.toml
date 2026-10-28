@@ -1,0 +1,13 @@
+id = "message-queues"
+title = "Message Queues"
+description = "RabbitMQ queues with ready and unacked messages, consumers and rates, NATS JetStream streams and Kafka or Redpanda topics; consumer lag, peek, purge and tail"
+author = "Backslash"
+icon = "bs-inbox"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/message-queues"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:1ee19a2278eeb7d43e575d5fde23ec173ba3893442c60f0bf76efd51909bb496"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run rpk", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm"]
+commands = ["Message Queues", "Consumer Lag"]
+

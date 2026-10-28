@@ -1,0 +1,90 @@
+[extension]
+id = "ci-runs"
+title = "CI Pipelines"
+description = "Recent CircleCI, Buildkite, Woodpecker and Jenkins runs in one list, failing and running first, with branch, commit and duration; rerun or cancel them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cycle"
+license = "MIT"
+
+# CircleCI and Buildkite are fixed hosts. Woodpecker and Jenkins run on your own
+# servers, at any address chosen in the preferences and usually on a company domain
+# (ci.example.com), so their host can't be listed ahead, hence "*": the extension only
+# calls the addresses you set. The exact hosts let authors' avatars show (pictures need
+# an exact host).
+[permissions]
+net = [
+  "*",
+  "circleci.com",
+  "api.buildkite.com",
+  "avatars.githubusercontent.com",
+  "secure.gravatar.com",
+  "www.gravatar.com",
+]
+
+[[commands]]
+name = "runs"
+title = "CI Pipelines"
+description = "Recent runs of every CI you connected, failing and running first: open, rerun, cancel, copy the URL"
+icon = "bs-cycle"
+keywords = [
+  "ci",
+  "cd",
+  "pipeline",
+  "build",
+  "circleci",
+  "buildkite",
+  "woodpecker",
+  "jenkins",
+  "workflow",
+  "job",
+  "rerun",
+  "intégration continue",
+  "compilation",
+  "construction",
+  "relancer",
+]
+
+[[preferences]]
+name = "circleciToken"
+title = "CircleCI token"
+description = "User Settings → Personal API Tokens → Create New Token"
+type = "secret"
+
+[[preferences]]
+name = "circleciOrgs"
+title = "CircleCI organizations"
+description = "Organization slugs, comma-separated (gh/acme, bb/acme, circleci/<org id>). Empty: every organization you belong to"
+
+[[preferences]]
+name = "buildkiteToken"
+title = "Buildkite token"
+description = "Personal Settings → API Access Tokens, with read_builds and write_builds scopes"
+type = "secret"
+
+[[preferences]]
+name = "woodpeckerUrl"
+title = "Woodpecker address"
+description = "Your Woodpecker server, e.g. https://ci.example.com"
+
+[[preferences]]
+name = "woodpeckerToken"
+title = "Woodpecker token"
+description = "Your user menu → Personal Access Token"
+type = "secret"
+
+[[preferences]]
+name = "jenkinsUrl"
+title = "Jenkins address"
+description = "Your Jenkins server, e.g. https://jenkins.example.com"
+
+[[preferences]]
+name = "jenkinsUser"
+title = "Jenkins user"
+description = "Your Jenkins user ID"
+
+[[preferences]]
+name = "jenkinsToken"
+title = "Jenkins API token"
+description = "Your user → Security → API Token → Add new Token"
+type = "secret"

@@ -1,0 +1,13 @@
+id = "gitignore"
+title = "Gitignore Templates"
+description = "Browse github/gitignore templates, preview and combine them, and add them to a project's .gitignore without duplicate lines"
+author = "Backslash"
+icon = "bs-file"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/gitignore"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:1b2559aea57dcacb9a5243b5dc003b2095999e84c9893986b38081d07c3edb4a"
+permissions = ["Access api.github.com", "Access raw.githubusercontent.com", "Read ~", "Write ~", "Read the environment variable HOME"]
+commands = ["Gitignore Templates"]
+

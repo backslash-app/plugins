@@ -1,0 +1,47 @@
+solaar version 1.1.10
+
+Unifying Receiver
+  Device path  : /dev/hidraw0
+  USB id       : 046d:c52b
+  Serial       : ABCD1234
+    Firmware   : 12.11.B0032
+  Has 2 paired device(s) out of a maximum of 6.
+  Notifications: wireless, software present (0x000900)
+
+  1: MX Master 3 Wireless Mouse
+     Device path  : /dev/hidraw2
+     WPID         : 4082
+     Codename     : MX Master 3
+     Kind         : mouse
+     Protocol     : HID++ 4.5
+     Report Rate  : 8ms
+     Serial number: 8A1B2C3D
+     Model ID     : B02340820000
+          Firmware: RBM 00.12.B0011
+     The power switch is located on the base.
+     Supports 31 HID++ 2.0 features:
+         0: ROOT                   {0000}   V0     
+         1: FEATURE SET            {0001}   V0     
+     Battery: 15%, discharging.
+
+  2: Wireless Keyboard K270
+     Device path  : None
+     WPID         : 4003
+     Codename     : K270
+     Kind         : keyboard
+     Protocol     : HID++ 2.0
+     Serial number: 11223344
+     Battery: good, discharging.
+
+MX Anywhere 3
+     Device path  : /dev/hidraw5
+     Codename     : MX Anywhere 3
+     Kind         : mouse
+     Protocol     : HID++ 4.5 over Bluetooth
+     Serial number: 99887766
+     Battery: 90%, BatteryStatus.RECHARGING.
+
+G915 TKL
+     Device path  : /dev/hidraw7
+     Kind         : keyboard
+     Battery status unavailable.

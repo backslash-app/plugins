@@ -1,0 +1,13 @@
+id = "coolify"
+title = "Coolify"
+description = "Applications, services and databases of your Coolify and Dokploy instances with status, domains and last deployment; deploy, restart, stop, logs and deployment history"
+author = "Backslash"
+icon = "bs-rocket"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/coolify"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:06da1dc21d6b1c58de2e43c2000f5d8af5ec047d6e9404b83a4082a056120d8f"
+permissions = ["Access any website"]
+commands = ["Coolify & Dokploy Apps"]
+

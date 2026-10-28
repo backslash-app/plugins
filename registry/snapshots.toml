@@ -1,0 +1,13 @@
+id = "snapshots"
+title = "System Snapshots"
+description = "Timeshift and Snapper snapshots with their date, type and changed files; create, compare, delete or restore them"
+author = "Backslash"
+icon = "bs-history"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/snapshots"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:cbdf68ae2237507cadea2a7feb8ec4e9ecd9d45efc9bc21790cdb0461a5e0a46"
+permissions = ["Run snapper", "Run pkexec", "Run timeshift-launcher", "Run timeshift-gtk", "Run btrfs-assistant-launcher", "Run btrfs-assistant", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/timeshift", "Read /proc/mounts"]
+commands = ["System Snapshots", "Create System Snapshot"]
+

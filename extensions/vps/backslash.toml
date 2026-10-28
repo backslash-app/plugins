@@ -1,0 +1,91 @@
+[extension]
+id = "vps"
+title = "Cloud Servers"
+description = "Your Hetzner Cloud, DigitalOcean, Linode and Scaleway servers in one list with status, IPs, region and price; SSH, power on, shut down and reboot"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-server"
+license = "MIT"
+
+# The four providers' APIs, each called only when its token is set (same list as
+# HOSTS in api.ts). Terminals open SSH sessions: ssh itself runs inside them.
+[permissions]
+net = ["api.hetzner.cloud", "api.digitalocean.com", "api.linode.com", "api.scaleway.com"]
+run = [
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "servers"
+title = "Cloud Servers"
+description = "Servers of every provider you connected, by provider: SSH, copy IPs, console, power on, off and reboot"
+icon = "bs-server"
+keywords = [
+  "vps",
+  "server",
+  "cloud",
+  "hetzner",
+  "digitalocean",
+  "droplet",
+  "linode",
+  "akamai",
+  "scaleway",
+  "instance",
+  "ssh",
+  "serveur",
+  "serveur privé",
+  "machine virtuelle",
+  "hébergement",
+]
+
+[[preferences]]
+name = "hetznerToken"
+title = "Hetzner Cloud token"
+description = "Hetzner Console → your project → Security → API tokens (Read & Write to power servers on and off)"
+type = "secret"
+
+[[preferences]]
+name = "digitaloceanToken"
+title = "DigitalOcean token"
+description = "Control panel → API → Generate New Token (droplet read and update scopes)"
+type = "secret"
+
+[[preferences]]
+name = "linodeToken"
+title = "Linode token"
+description = "Cloud Manager → your profile → API Tokens → Create a Personal Access Token (Linodes: Read/Write)"
+type = "secret"
+
+[[preferences]]
+name = "scalewaySecretKey"
+title = "Scaleway secret key"
+description = "Console → IAM → API keys → Generate an API key: its secret key (InstancesFullAccess)"
+type = "secret"
+
+[[preferences]]
+name = "scalewayZones"
+title = "Scaleway zones"
+description = "Zones to list, comma-separated (fr-par-1, nl-ams-1, pl-waw-1…)"
+default = "fr-par-1, fr-par-2, nl-ams-1, pl-waw-1"
+
+[[preferences]]
+name = "sshUser"
+title = "SSH user"
+description = "User for SSH sessions (root on a fresh server)"
+default = "root"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For SSH sessions. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

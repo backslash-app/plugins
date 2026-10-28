@@ -1,0 +1,59 @@
+[extension]
+id = "argocd"
+title = "Argo CD"
+description = "Argo CD applications with their sync status and health, out of sync and degraded first; sync, hard refresh, roll back and open them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+
+# The Argo CD server is yours: any address, chosen in the preferences, so its host
+# can't be listed ahead. It usually lives on a company domain (argocd.example.com)
+# rather than only the local network, hence "*": the extension only ever calls the
+# address you set. A private CA can be pasted in the preferences (no file access).
+[permissions]
+net = ["*"]
+
+[[commands]]
+name = "applications"
+title = "Argo CD Applications"
+description = "Applications with sync status, health and resources: sync, hard refresh, rollback, open in Argo CD"
+icon = "bs-rocket"
+keywords = [
+  "argo",
+  "argocd",
+  "gitops",
+  "kubernetes",
+  "k8s",
+  "sync",
+  "deploy",
+  "rollback",
+  "application",
+  "synchroniser",
+  "déploiement",
+  "déployer",
+  "retour arrière",
+]
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "The Argo CD web UI, e.g. https://argocd.example.com or http://localhost:8080"
+required = true
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "Settings → Accounts → an account with the apiKey capability → Generate New, or: argocd account generate-token"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "project"
+title = "Project"
+description = "Only show the applications of this Argo CD project. Leave empty for all"
+
+[[preferences]]
+name = "caCert"
+title = "CA certificate"
+description = "For a server with a private or self-signed certificate: paste its CA in PEM format (-----BEGIN CERTIFICATE-----…)"

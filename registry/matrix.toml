@@ -1,0 +1,13 @@
+id = "matrix"
+title = "Matrix"
+description = "Your Matrix rooms and direct chats with unread counts and the last message; reply, send, mark as read, open in Element"
+author = "Backslash"
+icon = "bs-comment"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/matrix"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:c9d62e2a18f59985da0fe8113b6b40fcf5feb51aa38ebeabeaa20e7a2b4e900a"
+permissions = ["Access any website"]
+commands = ["Matrix Rooms", "Send Matrix Message"]
+

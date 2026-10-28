@@ -1,0 +1,74 @@
+[extension]
+id = "datadog"
+title = "Datadog"
+description = "Datadog monitors in alert first with mute and unmute, dashboard search and incidents with their severity and state, on every Datadog site"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+
+# The API host of each Datadog site (US1, US3, US5, EU1, AP1, US1-FED); only the
+# one of the site you pick is called. Same list as SITES in api.ts.
+[permissions]
+net = [
+  "api.datadoghq.com",
+  "api.us3.datadoghq.com",
+  "api.us5.datadoghq.com",
+  "api.datadoghq.eu",
+  "api.ap1.datadoghq.com",
+  "api.ddog-gov.com",
+]
+
+[[commands]]
+name = "monitors"
+title = "Datadog Monitors"
+description = "Monitors in Alert, Warn and No Data first, with their failing groups: mute for an hour or a day, unmute, open"
+icon = "bs-bell"
+keywords = [
+  "datadog",
+  "dd",
+  "monitor",
+  "alert",
+  "alerting",
+  "mute",
+  "downtime",
+  "warn",
+  "surveillance",
+  "alerte",
+  "moniteur",
+  "silence",
+]
+
+[[commands]]
+name = "dashboards"
+title = "Search Datadog Dashboards"
+description = "Your Datadog dashboards by title, author and description: open, copy the link"
+icon = "bs-chart-up"
+keywords = ["datadog", "dd", "dashboard", "graph", "metrics", "tableau de bord", "graphique", "métriques"]
+
+[[commands]]
+name = "incidents"
+title = "Datadog Incidents"
+description = "Active and stable incidents with their severity, commander and impact; resolved ones too"
+icon = "bs-alert"
+keywords = ["datadog", "dd", "incident", "outage", "sev", "severity", "on-call", "panne", "gravité", "astreinte"]
+
+[[preferences]]
+name = "site"
+title = "Site"
+description = "Your Datadog site: datadoghq.com (US1), us3.datadoghq.com, us5.datadoghq.com, datadoghq.eu, ap1.datadoghq.com or ddog-gov.com"
+default = "datadoghq.com"
+
+[[preferences]]
+name = "apiKey"
+title = "API key"
+description = "Organization Settings → API Keys"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "appKey"
+title = "Application key"
+description = "Organization Settings → Application Keys (scopes: monitors_read, monitors_downtime, dashboards_read, incident_read)"
+type = "secret"
+required = true
