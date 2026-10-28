@@ -1,0 +1,50 @@
+[extension]
+id = "system-monitor"
+title = "System Monitor"
+description = "Live CPU, memory, disk, network, GPU and battery usage, and the processes behind it"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+
+# Deno opens /proc and /sys only with --allow-all, so their files are read in one batch by
+# `grep -sH` (fixed paths under /proc and /sys only). ps names the owner and command of the top
+# processes, df measures mounted filesystems, kill stops a process you picked, nvidia-smi is
+# used only when an NVIDIA driver is installed.
+[permissions]
+read = ["/etc/os-release"]
+run = ["grep", "ps", "df", "kill", "nvidia-smi"]
+
+[[commands]]
+name = "monitor"
+title = "System Monitor"
+description = "CPU, memory, disks, network and uptime, refreshed every 2 seconds"
+icon = "bs-activity"
+keywords = [
+  "cpu",
+  "ram",
+  "memory",
+  "mémoire",
+  "processeur",
+  "disk",
+  "disque",
+  "network",
+  "réseau",
+  "temperature",
+  "température",
+  "gpu",
+  "battery",
+  "batterie",
+  "uptime",
+  "stats",
+  "moniteur",
+  "système",
+  "htop",
+]
+
+[[commands]]
+name = "processes"
+title = "Top Processes"
+description = "The busiest processes by CPU or memory; quit or kill one"
+icon = "bs-cpu"
+keywords = ["process", "processus", "task manager", "gestionnaire des tâches", "kill", "tuer", "top", "htop", "pid"]

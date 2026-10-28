@@ -1,0 +1,38 @@
+[extension]
+id = "drives"
+title = "Drives"
+description = "Mount, open, unmount and safely eject USB sticks, SD cards and internal drives"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-drive"
+license = "MIT"
+
+# lsblk (util-linux) lists drives; udisksctl (udisks2, used by every file manager) mounts,
+# unlocks and powers them off as your user, asking through polkit when needed.
+[permissions]
+run = ["lsblk", "udisksctl"]
+
+[[commands]]
+name = "drives"
+title = "Drives"
+description = "Removable and internal drives with their space; mount, open or eject them"
+icon = "bs-drive"
+keywords = [
+  "drive",
+  "disk",
+  "disque",
+  "usb",
+  "clé usb",
+  "sd card",
+  "carte sd",
+  "mount",
+  "monter",
+  "unmount",
+  "démonter",
+  "eject",
+  "éjecter",
+  "partition",
+  "volume",
+  "storage",
+  "stockage",
+]
