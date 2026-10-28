@@ -1,0 +1,40 @@
+[extension]
+id = "startup-apps"
+title = "Startup Apps"
+description = "See and change what starts when you log in: autostart apps, systemd user services and Hyprland"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+
+# Autostart entries are .desktop files in ~/.config/autostart (yours) and
+# /etc/xdg/autostart (installed by packages); turning a system entry off writes
+# a copy with Hidden=true in your folder, as GNOME Tweaks does. systemctl
+# --user lists and toggles your systemd services. ~/.config/hypr is only read,
+# for Hyprland's exec-once lines.
+[permissions]
+run = ["systemctl"]
+read = ["~/.config/autostart", "/etc/xdg/autostart", "~/.config/hypr"]
+write = ["~/.config/autostart"]
+env = ["HOME", "XDG_CURRENT_DESKTOP"]
+
+[[commands]]
+name = "startup-apps"
+title = "Startup Apps"
+description = "Apps and services started at login; turn them on or off, add your own"
+icon = "bs-rocket"
+keywords = [
+  "startup",
+  "autostart",
+  "login",
+  "boot",
+  "démarrage",
+  "démarrage automatique",
+  "connexion",
+  "session",
+  "systemd",
+  "services",
+  "exec-once",
+  "hyprland",
+  "tweaks",
+]

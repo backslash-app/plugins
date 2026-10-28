@@ -1,0 +1,50 @@
+[extension]
+id = "default-apps"
+title = "Default Apps"
+description = "See and change your default browser, mail app, file manager, viewers, players, editor and terminal"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-apps"
+license = "MIT"
+
+# xdg-mime and xdg-settings (xdg-utils) read and change the defaults, the way
+# every desktop does. The applications folders are read to find the apps that
+# can open each type. The terminal is set in ~/.config/xdg-terminals.list
+# (xdg-terminal-exec).
+[permissions]
+run = ["xdg-mime", "xdg-settings"]
+read = [
+  "~/.local/share/applications",
+  "~/.local/share/flatpak/exports/share/applications",
+  "/usr/share/applications",
+  "/usr/local/share/applications",
+  "/var/lib/flatpak/exports/share/applications",
+  "/var/lib/snapd/desktop/applications",
+  "~/.nix-profile/share/applications",
+  "/run/current-system/sw/share/applications",
+  "~/.config/xdg-terminals.list",
+  "/etc/os-release",
+]
+write = ["~/.config/xdg-terminals.list"]
+env = ["HOME", "XDG_DATA_HOME", "XDG_DATA_DIRS", "TERMINAL"]
+
+[[commands]]
+name = "default-apps"
+title = "Default Apps"
+description = "The app that opens links, folders, pictures, videos, music, PDFs, text and terminals"
+icon = "bs-apps"
+keywords = [
+  "default apps",
+  "applications par défaut",
+  "default browser",
+  "navigateur par défaut",
+  "open with",
+  "ouvrir avec",
+  "mime",
+  "file association",
+  "association de fichiers",
+  "xdg-mime",
+  "mimeapps",
+  "terminal",
+  "pdf",
+]

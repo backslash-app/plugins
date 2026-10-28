@@ -1,0 +1,54 @@
+[extension]
+id = "system-logs"
+title = "System Logs"
+description = "Errors and warnings of this boot from systemd's journal, grouped by service"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+
+# journalctl reads the system journal (when your account may: systemd-journal
+# or adm group) and your own. The terminals only follow a unit's logs live.
+[permissions]
+run = [
+  "journalctl",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "logs"
+title = "System Logs"
+description = "Errors and warnings of this boot by unit, previous boots, and live logs in a terminal"
+icon = "bs-activity"
+keywords = [
+  "logs",
+  "journal",
+  "journalctl",
+  "errors",
+  "warnings",
+  "erreurs",
+  "avertissements",
+  "journaux",
+  "systemd",
+  "syslog",
+  "dmesg",
+  "kernel",
+  "boot",
+  "démarrage",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Used to follow logs live. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"
