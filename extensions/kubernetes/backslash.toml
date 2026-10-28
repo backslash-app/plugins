@@ -1,0 +1,51 @@
+[extension]
+id = "kubernetes"
+title = "Kubernetes"
+description = "Browse pods with their status, logs and restarts, and switch kubectl contexts and namespaces."
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+
+[permissions]
+run = [
+  "kubectl",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "pods"
+title = "Kubernetes Pods"
+description = "Pods of the current context and namespace: logs, describe, shell, port-forward, restart"
+icon = "bs-box"
+keywords = ["kubernetes", "k8s", "kubectl", "pods", "logs", "cluster", "deployment", "conteneurs", "journaux"]
+
+[[commands]]
+name = "contexts"
+title = "Switch Kubernetes Context"
+description = "Your kubeconfig contexts, the current one first"
+icon = "bs-server"
+keywords = ["kubernetes", "k8s", "kubectl", "context", "cluster", "kubeconfig", "contexte", "changer"]
+
+[[commands]]
+name = "namespaces"
+title = "Switch Kubernetes Namespace"
+description = "Namespaces of the current context"
+icon = "bs-layers"
+keywords = ["kubernetes", "k8s", "kubectl", "namespace", "ns", "espace de noms"]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For logs, shells and port-forwards. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

@@ -1,0 +1,39 @@
+[extension]
+id = "ssh"
+title = "SSH Hosts"
+description = "Connect to the hosts of your SSH config and known_hosts in a terminal or the file manager."
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-server"
+license = "MIT"
+
+[permissions]
+env = ["HOME"]
+read = ["~/.ssh"]
+# Terminals that open the session (ssh itself runs inside them).
+run = [
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "hosts"
+title = "SSH Hosts"
+description = "Hosts of ~/.ssh/config and known_hosts, recent first"
+icon = "bs-server"
+keywords = ["ssh", "sftp", "remote", "server", "host", "connect", "serveur", "distant", "connexion"]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"
