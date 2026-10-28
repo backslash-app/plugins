@@ -1,0 +1,31 @@
+[extension]
+id = "release-radar"
+title = "Release Radar"
+description = "The latest release of the GitHub repositories you follow"
+version = "0.1.0"
+author = "you"
+icon = "bs-tag"
+license = "MIT"
+
+# Everything not listed is denied. Users see these lines before the first run.
+[permissions]
+net = ["api.github.com", "avatars.githubusercontent.com"]
+
+[[commands]]
+name = "releases"
+title = "Latest Releases"
+description = "The newest release of each repository you follow"
+icon = "bs-tag"
+keywords = ["github", "release", "version", "changelog"]
+
+[[preferences]]
+name = "repos"
+title = "Repositories"
+description = "owner/name, separated by commas: denoland/deno, rust-lang/rust"
+required = true
+
+[[preferences]]
+name = "token"
+title = "GitHub token"
+description = "Optional: raises the rate limit from 60 to 5,000 requests an hour"
+type = "secret"
