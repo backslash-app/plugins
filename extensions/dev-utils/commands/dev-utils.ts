@@ -38,9 +38,9 @@ const fence = (text: string, lang = "") => {
   return `${ticks}${lang}\n${shown}\n${ticks}`;
 };
 
-const valueActions = (value: string): Action[] => [
-  copy(value, "Copy to Clipboard"),
-  paste(value, "Paste in Active App"),
+const valueActions = (value: string, concealed = false): Action[] => [
+  copy(value, "Copy to Clipboard", { concealed }),
+  paste(value, "Paste in Active App", { concealed }),
 ];
 
 function resultItem(r: Result, depth: number): Item {
@@ -124,16 +124,19 @@ function passwordItem(length: number, symbols: boolean): Item {
       ],
     },
     actions: [
-      ...valueActions(value),
+      // Kept out of clipboard histories.
+      ...valueActions(value, true),
       action("Generate Another", () => refresh(), { icon: Icons.refresh, shortcut: "<Ctrl>r" }),
       submenu(
         "Other Length",
-        LENGTHS.filter((l) => l !== length).map((l) => copy(password(l, symbols), `${l} characters`)),
+        LENGTHS.filter((l) => l !== length).map((l) =>
+          copy(password(l, symbols), `${l} characters`, { concealed: true })
+        ),
         { icon: Icons.hash, section: "Generate" },
       ),
       submenu(
         symbols ? "Without Symbols" : "With Symbols",
-        LENGTHS.map((l) => copy(password(l, !symbols), `${l} characters`)),
+        LENGTHS.map((l) => copy(password(l, !symbols), `${l} characters`, { concealed: true })),
         { icon: Icons.key, section: "Generate" },
       ),
     ],
@@ -165,7 +168,8 @@ function uuidItem(version: 4 | 7): Item {
       ],
     },
     actions: [
-      ...valueActions(value),
+      // Kept out of clipboard histories.
+      ...valueActions(value, true),
       action("Generate Another", () => refresh(), { icon: Icons.refresh, shortcut: "<Ctrl>r" }),
       submenu("Copy As", variants.map(([title, v]) => copy(v, title)), { icon: Icons.copy, section: "Copy" }),
       submenu(
@@ -202,7 +206,8 @@ function loremItems(paragraphs?: number): Item[] {
       metadata: [meta.text("Words", value.split(/\s+/).length), meta.text("Characters", value.length)],
     },
     actions: [
-      ...valueActions(value),
+      // Kept out of clipboard histories.
+      ...valueActions(value, true),
       action("Generate Another", () => refresh(), { icon: Icons.refresh, shortcut: "<Ctrl>r" }),
     ],
   }));

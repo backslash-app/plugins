@@ -46,11 +46,13 @@ function secretAction(entry: Entry, what: Secret, prefs: Record<string, unknown>
   const title = `${how === "copy" ? "Copy" : "Paste"} ${what === "totp" ? "One-Time Code" : LABEL[what]}`;
   return action(title, async () => {
     const value = await reveal(entry, what, prefs);
+    // Clipboard histories (Backslash's included) skip concealed text.
+    const concealed = what !== "username";
     if (how === "paste") {
-      await clipboard.paste(value);
+      await clipboard.paste(value, { concealed });
       return close();
     }
-    await clipboard.write(value);
+    await clipboard.write(value, { concealed });
     return close(`${LABEL[what]} copied`);
   }, {
     icon: what === "totp"
