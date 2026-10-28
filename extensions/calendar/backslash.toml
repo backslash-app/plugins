@@ -1,0 +1,62 @@
+[extension]
+id = "calendar"
+title = "Calendar"
+description = "Your upcoming events from Google, Outlook, iCloud, Fastmail or Proton calendars, with one-key meeting joins"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calendar"
+license = "MIT"
+
+# Calendars are read from their private iCal (.ics) addresses. Only these
+# services can be reached; *.icloud.com covers iCloud's p01…p180-caldav hosts.
+[permissions]
+net = [
+  "calendar.google.com",
+  "outlook.office365.com",
+  "outlook.office.com",
+  "outlook.live.com",
+  "caldav.fastmail.com",
+  "user.fm",
+  "*.icloud.com",
+  "calendar.proton.me",
+  "calendar.zoho.com",
+  "calendar.zoho.eu",
+  "export.calendar.yahoo.com",
+]
+
+[[commands]]
+name = "upcoming"
+title = "Upcoming Events"
+description = "Today, tomorrow and the week ahead; Enter joins the meeting"
+icon = "bs-calendar"
+keywords = [
+  "calendar",
+  "events",
+  "meeting",
+  "meetings",
+  "schedule",
+  "agenda",
+  "today",
+  "zoom",
+  "meet",
+  "teams",
+  "calendrier",
+  "agenda",
+  "réunion",
+  "réunions",
+  "rendez-vous",
+  "événements",
+]
+
+[[preferences]]
+name = "urls"
+title = "Calendar addresses"
+description = "Private iCal (.ics) addresses, one per line. Google: Settings → your calendar → Integrate calendar → Secret address in iCal format."
+type = "secret"
+
+[[preferences]]
+name = "hour12"
+title = "12-hour clock"
+description = "Show 3:00 PM instead of 15:00"
+type = "boolean"
+default = false

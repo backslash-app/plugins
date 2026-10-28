@@ -1,0 +1,10 @@
+#!/bin/sh
+# Fake 1Password CLI.
+case "$1" in
+  --version) echo "2.30.0" ;;
+  item)
+    if [ "$2" = "list" ]; then echo '[{"id":"abc","title":"Gmail","category":"LOGIN","additional_information":"ada@gmail.com","vault":{"id":"v1","name":"Personal"},"urls":[{"href":"https://mail.google.com","primary":true}],"updated_at":"2026-10-01T10:00:00Z"}]'
+    else echo "112233"; fi ;;
+  read) echo "op-secret-for-$3" ;;
+  *) exit 1 ;;
+esac

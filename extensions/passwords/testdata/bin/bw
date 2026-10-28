@@ -1,0 +1,26 @@
+#!/bin/sh
+# Fake Bitwarden CLI: unlocked when a session is passed.
+session=""
+prev=""
+for a in "$@"; do [ "$prev" = "--session" ] && session="$a"; prev="$a"; done
+case "$1" in
+  --version) echo "2026.1.0" ;;
+  status)
+    if [ -n "$session" ]; then echo '{"status":"unlocked","userEmail":"ada@example.com"}'
+    else echo '{"status":"locked","userEmail":"ada@example.com"}'; fi ;;
+  unlock)
+    eval "pw=\$$4"
+    [ "$pw" = "hunter2" ] || { echo "Invalid master password." >&2; exit 1; }
+    echo "SESSIONKEY" ;;
+  list)
+    [ -n "$session" ] || { echo "Vault is locked." >&2; exit 1; }
+    if [ "$2" = "folders" ]; then echo '[{"id":"f1","name":"Work"},{"id":null,"name":"No Folder"}]'
+    else echo '[{"id":"i1","name":"GitHub","type":1,"folderId":"f1","favorite":true,"login":{"username":"ada","password":"pw-github","totp":"otpauth://x","uris":[{"uri":"https://github.com"}]}},{"id":"i2","name":"Card","type":3}]'; fi ;;
+  get)
+    case "$2" in
+      password) echo "pw-$3" ;;
+      username) echo "ada" ;;
+      totp) echo "654321" ;;
+    esac ;;
+  *) exit 1 ;;
+esac

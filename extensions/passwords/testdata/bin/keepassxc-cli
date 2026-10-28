@@ -1,0 +1,15 @@
+#!/bin/sh
+# Fake keepassxc-cli: the password comes on stdin.
+[ "$1" = "--version" ] && { echo "2.7.9"; exit 0; }
+read -r pw
+[ "$pw" = "kdbx-pass" ] || { echo "Error while reading the database: Invalid credentials were provided" >&2; exit 1; }
+case "$1" in
+  ls) printf 'Internet/\nInternet/GitHub\nInternet/Forum\nEmail\nRecycle Bin/\nRecycle Bin/Old\n' ;;
+  show)
+    for a in "$@"; do last="$a"; done
+    case "$*" in
+      *-t*) echo "998877" ;;
+      *UserName*) echo "ada-$last" ;;
+      *) echo "kp-$last" ;;
+    esac ;;
+esac

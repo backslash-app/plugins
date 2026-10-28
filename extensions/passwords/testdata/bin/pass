@@ -1,0 +1,9 @@
+#!/bin/sh
+# Fake `pass` for the tests.
+case "$1" in
+  --version) echo "v1.7.4" ;;
+  ls) printf 'Password Store\n├── email\n│   └── fastmail.com\n└── github.com\n    └── ada\n' ;;
+  show) printf 's3cr3t-%s\nlogin: ada@example.com\nurl: https://github.com/login\notpauth://totp/x?secret=ABC\n' "$2" ;;
+  otp) [ "$2" = "--help" ] && exit 0; echo "123456" ;;
+  *) exit 1 ;;
+esac
