@@ -6,8 +6,9 @@ icon = "bs-braces"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/json-explorer"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:cfdd06db088df1a938c7b0ba2fddebee4e79f2124cd1b2cc9859d985ed47746b"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:bb578608495bd0e947e8532323f25d7a8616047ddcfb6e407fc7da4960551216"
 permissions = ["Read the clipboard"]
 commands = ["Explore JSON", "Format JSON in Clipboard", "Minify JSON in Clipboard"]
+categories = ["developer"]
 

@@ -6,8 +6,9 @@ icon = "bs-keyboard"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/espanso"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:dad9f86aee819dd4213ed45932c8b68eb911d902d1bc4a9b2b4accb4215238f1"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:97236f28e87f045eb826a645a2a4977519db30ec3431e54e394fa383c97cee2e"
 permissions = ["Run espanso", "Read ~/.config/espanso", "Read ~/.local/share/espanso", "Write ~/.config/espanso/match", "Read the environment variable HOME"]
 commands = ["Espanso Matches", "Add Espanso Match", "Toggle Espanso", "Restart Espanso"]
+categories = ["productivity"]
 

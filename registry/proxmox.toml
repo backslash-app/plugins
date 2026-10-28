@@ -6,8 +6,9 @@ icon = "bs-server"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/proxmox"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:8c7699041c1fee0072e85627185a4c2ed494930cb4be207f192895ea85993c94"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:99120438977ef373be4c01d61a5e0914e19877421dbf3261037cb3d5d025cb54"
 permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read ~/.config/proxmox", "Read the environment variable HOME"]
 commands = ["Proxmox"]
+categories = ["network"]
 

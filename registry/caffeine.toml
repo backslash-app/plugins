@@ -1,4 +1,3 @@
-# registry/caffeine.toml
 id = "caffeine"
 title = "Caffeine"
 description = "Keep the computer awake for a while, or until you turn it off, even with Backslash closed"
@@ -7,8 +6,9 @@ icon = "bs-coffee"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/caffeine"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:86031e3739bdf4dc71c5af09d32dc5737495bc16b342901f3d20b9ad01e495e5"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:2053635882732816083b79fe6cc8c6abfbcd2fe4886c23f4bfd2d5e0f13fd614"
 permissions = ["Run systemd-run", "Run systemctl", "Run systemd-inhibit", "Read the environment variable XDG_CURRENT_DESKTOP"]
 commands = ["Caffeine", "Toggle Caffeine", "Keep Awake For…"]
+categories = ["system"]
 

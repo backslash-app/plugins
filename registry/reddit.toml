@@ -1,4 +1,3 @@
-# registry/reddit.toml
 id = "reddit"
 title = "Reddit"
 description = "Hot, new and top posts from your subreddits with scores, comments, flairs, pictures and the top comments, without an account"
@@ -7,8 +6,9 @@ icon = "bs-comment"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/reddit"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:3dc371a9c7b692ec28fc2cc3bed742dba952780d85ecac5a0820db829b2b1250"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:35b60497be500568db37150c838e15caa8752382d525cb7646833c49d2f20ed9"
 permissions = ["Access www.reddit.com", "Access i.redd.it", "Access preview.redd.it", "Access external-preview.redd.it"]
 commands = ["Reddit", "Reddit Subreddits"]
+categories = ["everyday"]
 

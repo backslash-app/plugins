@@ -1,4 +1,3 @@
-# registry/joplin.toml
 id = "joplin"
 title = "Joplin"
 description = "Search your Joplin notes by notebook, preview them with their tags, create notes and copy links"
@@ -7,8 +6,9 @@ icon = "bs-note"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/joplin"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:c16a0059bfdd54d85a2b6c8d7521bd6536da3ac2486a87add45d687a2fce9e9d"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:e15fed936c2997516f8e9b7d2d49f943f05bee84fa9669774361784f0e9ba48a"
 permissions = ["Access 127.0.0.1:41184"]
 commands = ["Search Joplin Notes", "New Joplin Note"]
+categories = ["productivity"]
 

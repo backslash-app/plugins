@@ -6,8 +6,9 @@ icon = "bs-rocket"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/paas"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:ab53e3e7b832dd83affb96ea318fc1a24b3b04e83a358d1fc016598237b0b613"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:a39133a96f4132b5705f8caf6fa833ecde3c58f280e274f7c9d461c92a59ce85"
 permissions = ["Access backboard.railway.com", "Run flyctl", "Run fly", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.railway/config.json", "Read /etc/os-release", "Read the environment variable HOME"]
 commands = ["Fly.io & Railway Apps"]
+categories = ["developer"]
 

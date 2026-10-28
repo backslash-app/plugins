@@ -6,8 +6,9 @@ icon = "bs-image"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/immich"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:f1fa0b46380db6173c65c550d4bd7f767067d9aa0d26dff0c1b122a4eb21e7cc"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:2a1abfcb0d600d9fc1adb07fbc636206d7224ca1542cea6de9b859614251112a"
 permissions = ["Access localhost", "Access 127.0.0.1", "Access immich", "Access immich-server", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read ~/.cache/backslash/immich", "Read ~/Pictures", "Write ~/.cache/backslash/immich", "Write ~/Pictures", "Read the environment variable HOME"]
 commands = ["Search Photos", "Immich Albums", "Photos On This Day"]
+categories = ["media"]
 

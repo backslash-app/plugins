@@ -6,8 +6,9 @@ icon = "bs-package"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/nix-search"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:4351c92c8d692c3ad0a5015bfb4d2d9a6acf2de8fe56b7281d6ac9c2bcd91f48"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:7bf5a1435dfd87f9a0f911565d71c59748ec9319dce884116a266ae250ecb3f6"
 permissions = ["Access search.nixos.org"]
 commands = ["Search Nix Packages", "Search NixOS Options"]
+categories = ["system"]
 

@@ -6,8 +6,9 @@ icon = "bs-mic"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/podcasts"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:37ed9b2335f3e8801e62713c4cc13aa7c58de187ccd699d212e61f31130d5455"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:5f9e9e3be4dc8c2c976c2fda5d32a60d4e3bd281bb8ec7224ca6f93ed115cfff"
 permissions = ["Access any website", "Run systemd-run", "Run systemctl", "Run mpv", "Read ~/.cache/backslash/podcasts", "Read /etc/os-release", "Write ~/.cache/backslash/podcasts", "Read the environment variable HOME"]
 commands = ["Podcasts", "Search Podcasts", "Pause or Resume Podcast", "Stop Podcast"]
+categories = ["media"]
 

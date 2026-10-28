@@ -6,8 +6,9 @@ icon = "bs-video"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/twitch"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:cb820b5a0864ec6e6ede3e19c4176f427ad654ab01ef6a189e46acd42b8f4003"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:7c4b0a5df98036e5ad4807295f358a9aabf9749f01a445c2d5d45daeb55d707e"
 permissions = ["Access api.twitch.tv", "Access id.twitch.tv", "Access static-cdn.jtvnw.net", "Run systemd-run", "Run systemctl", "Run streamlink", "Run mpv", "Run yt-dlp", "Read /etc/os-release", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable XDG_RUNTIME_DIR"]
 commands = ["Twitch"]
+categories = ["media"]
 

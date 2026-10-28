@@ -6,8 +6,9 @@ icon = "bs-activity"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/grafana"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:40fffb01aa98ca6fe65f34b6ee8f3a2dda1520f47118098705984e24bd320d41"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:6bca2409fd554f0dba12c0275fba343d8c21ee9fea33ea22902c09e47caec390"
 permissions = ["Access *.grafana.net", "Access localhost", "Access 127.0.0.1", "Access grafana", "Access grafana.local", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
 commands = ["Search Grafana Dashboards", "Grafana Alerts"]
+categories = ["developer"]
 

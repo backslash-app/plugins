@@ -6,8 +6,9 @@ icon = "bs-apps"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/appimages"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:338e9751e40cfa0e68f7e82a06b5c20904ef8ac4f49637258e9b0c1fb9b86586"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:a26026117d3ba5458b3c7d2035fdf5b2b0900e8cdf69c911c51d7685143923d2"
 permissions = ["Run systemd-run", "Run chmod", "Run mv", "Run gio", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~", "Read /opt", "Write ~/.local/share/applications", "Write ~/Applications", "Read the environment variable HOME"]
 commands = ["AppImages"]
+categories = ["system"]
 

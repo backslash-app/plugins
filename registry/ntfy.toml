@@ -6,8 +6,9 @@ icon = "bs-bell"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/ntfy"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:5f23cdf6cae341758e7345ae1484aaac919bd2b41812be4ea959f02fa37b36a5"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:117bae7b12b4b1788535d8334cbe4c47ed006e35ced62f2a6ff7287ade403b19"
 permissions = ["Access ntfy.sh", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read the clipboard"]
 commands = ["Send Push Notification", "Compose Push Notification", "Push Clipboard to Phone", "Notification Topics"]
+categories = ["productivity"]
 

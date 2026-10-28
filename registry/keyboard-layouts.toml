@@ -1,4 +1,3 @@
-# registry/keyboard-layouts.toml
 id = "keyboard-layouts"
 title = "Keyboard Layouts"
 description = "See the current keyboard layout and switch between layouts and input methods"
@@ -7,8 +6,9 @@ icon = "bs-keyboard"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/keyboard-layouts"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:9a3e73491995678ce3122e13ebfe274f5280784abd74f83ca5ee93ab05521238"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:3032f43d371b8a0bd96deb1fb24775f1c7b23cbed5309d07cd675f756075799d"
 permissions = ["Run gsettings", "Run gdbus", "Run hyprctl", "Run swaymsg", "Run setxkbmap", "Run xkb-switch", "Run ibus", "Run fcitx5-remote", "Read /usr/share/X11/xkb/rules/evdev.lst", "Read /usr/share/X11/xkb/rules/base.lst", "Read ~/.config/fcitx5/profile", "Read /etc/os-release", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK", "Read the environment variable HOME"]
 commands = ["Keyboard Layouts", "Next Keyboard Layout"]
+categories = ["system"]
 

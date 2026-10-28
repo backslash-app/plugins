@@ -1,4 +1,3 @@
-# registry/projects.toml
 id = "projects"
 title = "Code Projects"
 description = "Recent projects of VS Code, VSCodium, Cursor, Zed and JetBrains IDEs, plus your git folders"
@@ -7,8 +6,9 @@ icon = "bs-code"
 version = "1.1.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/projects"
-commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
-checksum = "sha256:0f1caedea3098f8e6c54b74b1235150346f6c6fbe32fcd6b66b9dbfd1b47a9fb"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:a9eb4a996d5a8b676aec7afc61d91db5da439bacbedd8044e08c6417326b0a92"
 permissions = ["Run git", "Run code", "Run code-oss", "Run codium", "Run cursor", "Run windsurf", "Run zed", "Run zeditor", "Run idea", "Run pycharm", "Run webstorm", "Run goland", "Run clion", "Run rustrover", "Run phpstorm", "Run rider", "Run rubymine", "Run datagrip", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.config/Code", "Read ~/.config/Code - OSS", "Read ~/.config/VSCodium", "Read ~/.config/Cursor", "Read ~/.config/Windsurf", "Read ~/.var/app/com.visualstudio.code/config/Code", "Read ~/.var/app/com.vscodium.codium/config/VSCodium", "Read ~/.config/JetBrains", "Read ~/.local/share/zed", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read /tmp/backslash-projects", "Write /tmp/backslash-projects", "Read the environment variable HOME"]
 commands = ["Search Projects"]
+categories = ["developer"]
 

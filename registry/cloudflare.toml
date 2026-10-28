@@ -1,4 +1,3 @@
-# registry/cloudflare.toml
 id = "cloudflare"
 title = "Cloudflare"
 description = "Manage Cloudflare zones and DNS records, purge the cache and follow Pages deployments"
@@ -7,8 +6,9 @@ icon = "bs-cloud"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/cloudflare"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:9dc158729fcc0176854fb436090b839cbe3584051eca54b772b96f82ce66d0e2"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:4e97b5d1f1a377c5fbf21bf51991212c9760a050abaab5b6300af12b886fd2ce"
 permissions = ["Access api.cloudflare.com", "Read the environment variable CLOUDFLARE_API_TOKEN"]
 commands = ["Cloudflare Zones", "Cloudflare DNS Records", "Cloudflare Pages"]
+categories = ["developer"]
 

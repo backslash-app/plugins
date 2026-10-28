@@ -6,8 +6,9 @@ icon = "bs-mail"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/microsoft-365"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:74bf1f3b077557edf14c9513cfdec55f4bbfec62e8144a3ab73e43f6664daf10"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:90da2de0f736c14127363cbeb06be9c96ae46e6899cd9bc4b9489b6a972a7564"
 permissions = ["Access graph.microsoft.com", "Access login.microsoftonline.com"]
 commands = ["Outlook Unread Mail", "Microsoft To Do", "Add To Do Task", "Search OneDrive", "Today's Outlook Events"]
+categories = ["productivity"]
 

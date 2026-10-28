@@ -1,4 +1,3 @@
-# registry/fonts.toml
 id = "fonts"
 title = "Fonts"
 description = "Browse installed font families with previews, copy their CSS and install new ones"
@@ -7,8 +6,9 @@ icon = "bs-font"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/fonts"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:7eec4799f8b531c5aa6a5fd5000782c95a1db808470083b912bcaa78170de3a6"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:7ce1b5863add6eaaa091feb4117d837f99ebd17a294d4ab55597754031f98c4b"
 permissions = ["Run fc-list", "Run fc-cache", "Run pango-view", "Run convert", "Run cp", "Read ~/.cache/backslash/fonts", "Read ~/.local/share/fonts", "Write ~/.cache/backslash/fonts", "Write ~/.local/share/fonts", "Read the environment variable HOME"]
 commands = ["Fonts", "Install Font"]
+categories = ["system"]
 

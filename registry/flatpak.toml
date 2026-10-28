@@ -1,4 +1,3 @@
-# registry/flatpak.toml
 id = "flatpak"
 title = "Flatpak Apps"
 description = "Browse installed Flatpak apps and runtimes, see their size and permissions, run or uninstall them"
@@ -7,8 +6,9 @@ icon = "bs-package"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/flatpak"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:68a1e2aa3496b7740647380303c9dd2a1f3a3a0f0b13d02e4408ba71cfdaf338"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:3f7a9769a35fd59ba40e9803f6ab7df8943919321326394d89241ba10411eff3"
 permissions = ["Run flatpak", "Read /var/lib/flatpak/exports/share/icons/hicolor", "Read ~/.local/share/flatpak/exports/share/icons/hicolor", "Read ~/.var/app", "Read /etc/os-release", "Read the environment variable HOME"]
 commands = ["Flatpak Apps"]
+categories = ["system"]
 

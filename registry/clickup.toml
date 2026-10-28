@@ -1,4 +1,3 @@
-# registry/clickup.toml
 id = "clickup"
 title = "ClickUp"
 description = "Your ClickUp tasks across workspaces with their status, priority and due date; change status and create tasks"
@@ -7,8 +6,9 @@ icon = "bs-circle-half"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/clickup"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:e00bff13dbc66c90913ae3a0ebe002675e2f3c34b7f3465fe9eb5e34efdd8c58"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:a8ff69e5ca5709bc8825f32d8e7b8e87f20d1ec73293e75058c3132d80001654"
 permissions = ["Access api.clickup.com", "Access attachments.clickup.com"]
 commands = ["My ClickUp Tasks", "Create ClickUp Task"]
+categories = ["productivity"]
 

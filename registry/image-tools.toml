@@ -6,8 +6,9 @@ icon = "bs-image"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/image-tools"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:2744bf946fe133d370bcb1342e8d02d6f530456afd3954b9a48d815f374e0a31"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:be382373a6420c03789f9c2aece71260dbc7fa0bb422f128b0f507da3fdfd1cb"
 permissions = ["Run magick", "Run convert", "Run identify", "Run exiftool", "Run cwebp", "Run avifenc", "Run wl-paste", "Run xclip", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Read /etc/os-release", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
 commands = ["Image Tools"]
+categories = ["system"]
 

@@ -1,4 +1,3 @@
-# registry/slack.toml
 id = "slack"
 title = "Slack"
 description = "Set your Slack status from presets, pause notifications, jump to channels and search messages"
@@ -7,8 +6,9 @@ icon = "bs-hash"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/slack"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:af8c6f500afaf001b5757b8567a284a1e0388f0b0d3dedf901c2e7b6cc9e2c22"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:089be9ca24611a974f8b0512f2e065da0b8f58b757d4de213fac5402540ef87e"
 permissions = ["Access slack.com", "Access avatars.slack-edge.com", "Access secure.gravatar.com", "Access a.slack-edge.com"]
 commands = ["Set Slack Status", "Clear Slack Status", "Pause Slack Notifications", "Slack Channels", "Search Slack Messages"]
+categories = ["productivity"]
 

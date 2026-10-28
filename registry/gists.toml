@@ -6,8 +6,9 @@ icon = "bs-code"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/gists"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:161cee03557ebccef984b8c052094592f10f5e5bfd2efb022bb41b60651ab233"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:7cbf3acf379a9258a066fc2a30205016a74e24674d8aa2ebcb0b5e57f0ebe8b7"
 permissions = ["Access api.github.com", "Access avatars.githubusercontent.com", "Access gist.githubusercontent.com", "Run gh", "Read the clipboard"]
 commands = ["Search Gists", "Create Gist from Clipboard"]
+categories = ["developer"]
 

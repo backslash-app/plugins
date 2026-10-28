@@ -1,4 +1,3 @@
-# registry/ai.toml
 id = "ai"
 title = "AI"
 description = "Ask questions, fix, rewrite, summarize, translate and explain text, with Claude, OpenAI, Mistral, Groq, OpenRouter or a local Ollama"
@@ -7,8 +6,9 @@ icon = "bs-sparkle"
 version = "1.2.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/ai"
-commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
-checksum = "sha256:a3400b0015f17c90fb0eaa755cf8ff9d8deec040d33eba8047f83d846ec13560"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:d060d72c3a882aa5938750308c1fb1befc5acd7409e36750374d249625ee23b4"
 permissions = ["Access api.anthropic.com", "Access api.openai.com", "Access api.mistral.ai", "Access api.groq.com", "Access openrouter.ai", "Access localhost:11434", "Read the clipboard"]
 commands = ["Ask AI", "Fix Spelling and Grammar", "Improve Writing", "Summarize", "Translate", "Explain"]
+categories = ["developer"]
 

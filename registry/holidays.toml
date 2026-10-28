@@ -6,8 +6,9 @@ icon = "bs-calendar"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/holidays"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:5a6bef2e955d2bb5680d1a45a31534ee6d37845271fe163b905096b0dc01e10d"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:67f329afec0c2b511d8d1b28636adb866bc11a9c3a2d2fcfa773d24c611cd068"
 permissions = ["Access date.nager.at", "Access data.education.gouv.fr"]
 commands = ["Public Holidays", "School Holidays", "Bridge Days"]
+categories = ["everyday"]
 
