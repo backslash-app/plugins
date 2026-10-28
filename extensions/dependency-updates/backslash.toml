@@ -1,0 +1,57 @@
+[extension]
+id = "dependency-updates"
+title = "Dependency Updates"
+description = "Open Renovate and Dependabot pull requests across your GitHub repositories with package, versions, semver jump and checks; approve, squash-merge or ask for a rebase"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+
+# The GitHub API; gh only to reuse the GitHub CLI's sign-in when no token is set.
+[permissions]
+net = ["api.github.com"]
+run = ["gh"]
+
+[[commands]]
+name = "updates"
+title = "Dependency Updates"
+description = "Renovate and Dependabot pull requests by repository, with versions, major/minor/patch and checks"
+icon = "bs-package"
+keywords = [
+  "renovate",
+  "dependabot",
+  "dependencies",
+  "dependency",
+  "updates",
+  "bump",
+  "upgrade",
+  "pull request",
+  "pr",
+  "semver",
+  "merge",
+  "approve",
+  "github",
+  "dépendances",
+  "mises à jour",
+  "mise à jour",
+  "montée de version",
+  "fusionner",
+  "approuver",
+]
+
+[[preferences]]
+name = "token"
+title = "GitHub token"
+description = "repo scope to approve and merge. Optional when the GitHub CLI is signed in (gh auth login)"
+type = "secret"
+
+[[preferences]]
+name = "scope"
+title = "Owners and repositories"
+description = "Separated by commas, e.g. acme, ada/dotfiles. Empty: the repositories of your own account"
+
+[[preferences]]
+name = "authors"
+title = "Bots"
+description = "Pull request authors to list. A self-hosted Renovate has its own user, e.g. app/renovate, app/dependabot, renovate-bot"
+default = "app/renovate, app/dependabot"

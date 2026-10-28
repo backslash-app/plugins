@@ -1,0 +1,137 @@
+[extension]
+id = "message-queues"
+title = "Message Queues"
+description = "RabbitMQ queues with ready and unacked messages, consumers and rates, NATS JetStream streams and Kafka or Redpanda topics; consumer lag, peek, purge and tail"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-inbox"
+license = "MIT"
+
+# Brokers run on your own machines, and hosts must be declared ahead: local names,
+# private IPv4 ranges (Deno's --allow-net accepts CIDR) and Tailscale, for the
+# RabbitMQ management API and the NATS monitoring endpoints. Same list as HOSTS in
+# lib.ts. Kafka and Redpanda are read with rpk, which connects by itself; the
+# terminals are for consuming a topic and describing a group.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+run = [
+  "rpk",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "queues"
+title = "Message Queues"
+description = "RabbitMQ queues, NATS JetStream streams and Kafka topics: backlog, consumers, rates; peek, purge, tail"
+icon = "bs-inbox"
+keywords = [
+  "rabbitmq",
+  "amqp",
+  "nats",
+  "jetstream",
+  "kafka",
+  "redpanda",
+  "rpk",
+  "queue",
+  "queues",
+  "broker",
+  "stream",
+  "topic",
+  "messages",
+  "purge",
+  "file d'attente",
+  "files d'attente",
+  "messages en attente",
+  "courtier",
+  "sujet",
+  "vider",
+]
+
+[[commands]]
+name = "lag"
+title = "Consumer Lag"
+description = "Kafka consumer groups and NATS JetStream consumers, the most behind first"
+icon = "bs-hourglass"
+keywords = [
+  "kafka",
+  "redpanda",
+  "nats",
+  "jetstream",
+  "consumer",
+  "consumer group",
+  "lag",
+  "offset",
+  "pending",
+  "backlog",
+  "consommateur",
+  "retard",
+  "groupe de consommateurs",
+  "décalage",
+]
+
+[[preferences]]
+name = "rabbitUrl"
+title = "RabbitMQ URL"
+description = "Optional. The management plugin, e.g. http://localhost:15672 or http://rabbit.lan:15672"
+
+[[preferences]]
+name = "rabbitUser"
+title = "RabbitMQ user"
+description = "A user tagged monitoring (read) or management (purge, peek). guest only works from localhost"
+default = "guest"
+
+[[preferences]]
+name = "rabbitPassword"
+title = "RabbitMQ password"
+type = "secret"
+
+[[preferences]]
+name = "natsUrl"
+title = "NATS monitoring URL"
+description = "Optional. nats-server's monitoring port (-m 8222), e.g. http://localhost:8222"
+
+[[preferences]]
+name = "kafkaBrokers"
+title = "Kafka brokers"
+description = "Optional. e.g. localhost:9092, read with rpk (Redpanda's CLI, works with Apache Kafka too)"
+
+[[preferences]]
+name = "rpkProfile"
+title = "Use rpk profile"
+description = "Use rpk's current profile (rpk profile create …) instead of the brokers above, e.g. for SASL or TLS"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "consoleUrl"
+title = "Kafka console URL"
+description = "Optional. Redpanda Console, for the Open in Console links, e.g. http://localhost:8080"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For consuming topics. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"
