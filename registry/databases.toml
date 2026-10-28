@@ -1,0 +1,14 @@
+# registry/databases.toml
+id = "databases"
+title = "Databases"
+description = "Open your PostgreSQL, MySQL, SQLite and Redis connections in a terminal, check that they answer and copy their URLs"
+author = "Backslash"
+icon = "bs-database"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/databases"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:64bddfcf0c619965ab8dec359e2b89b8bfd2ce47286ee75fba3b841b261ea9b4"
+permissions = ["Run psql", "Run pgcli", "Run pg_isready", "Run mysql", "Run mariadb", "Run mycli", "Run mysqladmin", "Run sqlite3", "Run litecli", "Run redis-cli", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.pgpass", "Read ~/.pg_service.conf", "Read ~/.my.cnf", "Read /etc/os-release", "Read the environment variable HOME"]
+commands = ["Database Connections", "Add Database Connection"]
+

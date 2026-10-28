@@ -1,0 +1,87 @@
+[extension]
+id = "disk-usage"
+title = "Disk Usage"
+description = "Find what fills your disk: biggest folders and files, caches, trash, logs and containers, with cleanups"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-drive"
+license = "MIT"
+
+# du, find and df measure (the files are never opened); journalctl, docker and
+# podman report their own usage; gio empties the trash and moves files to it;
+# flatpak is only probed; gdbus shows a file in the file manager. Cleanups that
+# need sudo (journal, package cache) or ask before deleting (docker prune,
+# flatpak --unused) run in a terminal, the ones listed last.
+[permissions]
+run = [
+  "du",
+  "find",
+  "df",
+  "journalctl",
+  "docker",
+  "podman",
+  "gio",
+  "flatpak",
+  "gdbus",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+# The home folder is read only to tell files from folders while browsing by size
+# (Deno.stat), and ~/.cache to list the cache folders to empty.
+read = ["~", "/etc/os-release"]
+# Emptying a cache folder deletes what is inside it.
+write = ["~/.cache"]
+env = ["HOME"]
+
+[[commands]]
+name = "disk-usage"
+title = "Disk Usage"
+description = "Biggest folders and files in your home, caches, trash, journal and containers"
+icon = "bs-drive"
+keywords = [
+  "disk",
+  "disque",
+  "space",
+  "espace",
+  "storage",
+  "stockage",
+  "du",
+  "ncdu",
+  "baobab",
+  "free space",
+  "espace libre",
+  "clean",
+  "nettoyer",
+  "cache",
+  "big files",
+  "gros fichiers",
+  "taille",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For cleanups that ask for your password. Leave empty to use the first one installed (kitty, alacritty, GNOME Console, Konsole…)"
+
+[[preferences]]
+name = "timeout"
+title = "Scan time limit (seconds)"
+description = "The scan stops after this and shows what it found"
+type = "number"
+default = 60
+
+[[preferences]]
+name = "minFileMb"
+title = "Big files from (MB)"
+type = "number"
+default = 100

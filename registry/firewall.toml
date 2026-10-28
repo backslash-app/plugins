@@ -1,0 +1,13 @@
+id = "firewall"
+title = "Firewall"
+description = "State, default policies and rules of ufw or firewalld; allow or block a port, delete a rule, turn the firewall on or off"
+author = "Backslash"
+icon = "bs-shield"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/firewall"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:8fa6879f75bcef47966b6a0adbd6012248bf4fc6a4700af57c1a551922772bbc"
+permissions = ["Run firewall-cmd", "Run pkexec", "Read /etc/ufw/ufw.conf", "Read /etc/default/ufw", "Read /etc/os-release"]
+commands = ["Firewall"]
+

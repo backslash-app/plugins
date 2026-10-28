@@ -1,0 +1,44 @@
+[extension]
+id = "trello"
+title = "Trello"
+description = "Your boards and cards with labels, due dates and members; move, complete, archive and create cards"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-kanban"
+license = "MIT"
+
+# The REST API, members' avatars and the scaled board backgrounds.
+[permissions]
+net = ["api.trello.com", "trello-members.s3.amazonaws.com", "trello-backgrounds.s3.amazonaws.com"]
+
+[[commands]]
+name = "boards"
+title = "Trello Boards"
+description = "Starred boards first; Enter shows the cards, by list"
+icon = "bs-kanban"
+keywords = ["trello", "boards", "kanban", "cards", "lists", "tableaux", "cartes"]
+
+[[commands]]
+name = "my-cards"
+title = "My Trello Cards"
+description = "Cards you are a member of, by due date"
+icon = "bs-square-check"
+keywords = ["trello", "cards", "my cards", "due", "tasks", "todo", "mes cartes", "échéance", "tâches"]
+
+[[commands]]
+name = "create-card"
+title = "Create Trello Card"
+description = "Pick a board and list, a title, a due date"
+icon = "bs-plus"
+keywords = ["trello", "new", "card", "add", "create", "nouvelle carte", "ajouter", "créer"]
+
+[[preferences]]
+name = "apiKey"
+title = "API key"
+description = "The API key of a Power-Up of yours: trello.com/power-ups/admin → New → API key"
+
+[[preferences]]
+name = "token"
+title = "Token"
+description = "Generated from your API key page (“Token” link), or by opening the setup row in Trello Boards"
+type = "secret"

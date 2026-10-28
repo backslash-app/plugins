@@ -1,0 +1,78 @@
+[extension]
+id = "databases"
+title = "Databases"
+description = "Open your PostgreSQL, MySQL, SQLite and Redis connections in a terminal, check that they answer and copy their URLs"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-database"
+license = "MIT"
+
+[permissions]
+env = ["HOME"]
+# Connection files the clients read themselves; the distribution, for install hints.
+read = ["~/.pgpass", "~/.pg_service.conf", "~/.my.cnf", "/etc/os-release"]
+run = [
+  # Clients (opened in a terminal) and status checks.
+  "psql",
+  "pgcli",
+  "pg_isready",
+  "mysql",
+  "mariadb",
+  "mycli",
+  "mysqladmin",
+  "sqlite3",
+  "litecli",
+  "redis-cli",
+  # Terminals.
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "connections"
+title = "Database Connections"
+description = "Saved connections and those of ~/.pgpass, ~/.pg_service.conf and ~/.my.cnf, with their status"
+icon = "bs-database"
+keywords = [
+  "database",
+  "db",
+  "postgres",
+  "postgresql",
+  "psql",
+  "mysql",
+  "mariadb",
+  "sqlite",
+  "redis",
+  "sql",
+  "base de données",
+  "bdd",
+  "connexion",
+]
+
+[[commands]]
+name = "add"
+title = "Add Database Connection"
+description = "Save a PostgreSQL, MySQL, SQLite or Redis connection (no password stored)"
+icon = "bs-plus"
+keywords = ["database", "db", "connection", "postgres", "mysql", "redis", "sqlite", "ajouter", "base de données", "connexion"]
+
+[[preferences]]
+name = "passwords"
+title = "Passwords"
+description = "Passwords of saved connections as name=password pairs separated by ; (escape a ; with \\;). PostgreSQL connections also use ~/.pgpass"
+type = "secret"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

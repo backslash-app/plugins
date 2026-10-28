@@ -1,0 +1,68 @@
+[extension]
+id = "updates"
+title = "System Updates"
+description = "Available updates from APT, DNF, Pacman, Zypper, Flatpak, Snap and firmware, applied in a terminal"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-download"
+license = "MIT"
+
+# The package managers only list updates here (no root needed); installing them runs in a
+# terminal you can watch, where sudo asks for your password. rpm gives the installed versions
+# on DNF systems, /etc/os-release tells openSUSE Tumbleweed apart (it updates with dist-upgrade).
+[permissions]
+env = ["XDG_CURRENT_DESKTOP"]
+read = ["/etc/os-release"]
+run = [
+  "apt",
+  "dnf",
+  "rpm",
+  "pacman",
+  "checkupdates",
+  "zypper",
+  "flatpak",
+  "snap",
+  "fwupdmgr",
+  "x-terminal-emulator",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "foot",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "ghostty",
+  "xterm",
+]
+
+[[commands]]
+name = "updates"
+title = "System Updates"
+description = "What can be updated, by source, with versions; update everything in a terminal"
+icon = "bs-download"
+keywords = [
+  "updates",
+  "update",
+  "upgrade",
+  "mises à jour",
+  "mise à jour",
+  "apt",
+  "dnf",
+  "pacman",
+  "zypper",
+  "flatpak",
+  "snap",
+  "firmware",
+  "fwupd",
+  "packages",
+  "paquets",
+  "security",
+  "sécurité",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use your desktop's terminal, else the first one installed (Konsole, GNOME Console, kitty, foot…)"

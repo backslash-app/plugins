@@ -1,0 +1,14 @@
+# registry/network.toml
+id = "network"
+title = "Network & Devices"
+description = "Wi-Fi, Bluetooth, audio outputs and VPNs in two keystrokes"
+author = "Backslash"
+icon = "bs-wifi"
+version = "1.1.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/network"
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:8a253af22ce5a7897d663aadb9e23d0de219dff16ce2b50d0b3c46791919e8fe"
+permissions = ["Run nmcli", "Run bluetoothctl", "Run pactl", "Run tailscale"]
+commands = ["Wi-Fi", "Bluetooth Devices", "Audio Output", "VPN"]
+

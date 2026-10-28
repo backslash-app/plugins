@@ -1,0 +1,51 @@
+[extension]
+id = "web-search"
+title = "Web Search"
+description = "Search the web with live suggestions, 50 !bangs and your recent searches, on the engine you prefer"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-search"
+license = "MIT"
+
+# Suggestions only: searches open in your browser.
+[permissions]
+net = ["duckduckgo.com", "suggestqueries.google.com"]
+
+[[commands]]
+name = "search"
+title = "Search the Web"
+description = "Live suggestions; “!yt lofi”, “!gh deno”, “!w Rust” search a site directly"
+icon = "bs-search"
+keywords = [
+  "web",
+  "search",
+  "google",
+  "duckduckgo",
+  "ddg",
+  "bang",
+  "internet",
+  "recherche",
+  "rechercher",
+  "chercher",
+  "moteur",
+]
+
+[[preferences]]
+name = "engine"
+title = "Search engine"
+description = "DuckDuckGo, Google, Brave, Startpage, Kagi, Ecosia, Qwant or Bing"
+default = "DuckDuckGo"
+
+[[preferences]]
+name = "suggestions"
+title = "Live suggestions"
+description = "Ask DuckDuckGo (Google suggest when Google is your engine) as you type"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "history"
+title = "Remember recent searches"
+description = "Kept in the extension's private storage on this computer"
+type = "boolean"
+default = true

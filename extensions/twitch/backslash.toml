@@ -1,0 +1,64 @@
+[extension]
+id = "twitch"
+title = "Twitch"
+description = "Followed channels that are live with game, viewers and uptime, top categories and channel search; watch in the browser or with streamlink"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-video"
+license = "MIT"
+
+# The Helix API (api.twitch.tv), the sign-in's token endpoint (id.twitch.tv),
+# and static-cdn.jtvnw.net where stream previews, box art and profile
+# pictures are served.
+# Streams play with streamlink (or mpv and yt-dlp) as a transient systemd user
+# unit, so the player outlives the launcher; the tools are run once to check
+# they are installed, and the player gets the display variables.
+# /etc/os-release picks the install command to suggest.
+[permissions]
+net = ["api.twitch.tv", "id.twitch.tv", "static-cdn.jtvnw.net"]
+run = ["systemd-run", "systemctl", "streamlink", "mpv", "yt-dlp"]
+read = ["/etc/os-release"]
+env = ["WAYLAND_DISPLAY", "DISPLAY", "XAUTHORITY", "XDG_RUNTIME_DIR"]
+
+[[commands]]
+name = "twitch"
+title = "Twitch"
+description = "Who's live among the channels you follow; top categories and channel search"
+icon = "bs-video"
+keywords = ["twitch", "stream", "streams", "live", "streaming", "gaming", "games", "streamlink", "direct", "en direct", "jeux"]
+
+[[preferences]]
+name = "clientId"
+title = "Client ID"
+description = "Register an app on dev.twitch.tv/console (redirect URL http://127.0.0.1:43120/callback) and paste its Client ID"
+
+[[preferences]]
+name = "clientSecret"
+title = "Client Secret"
+description = "The app's secret, to sign in through the browser"
+type = "secret"
+
+[[preferences]]
+name = "accessToken"
+title = "User access token"
+description = "Instead of signing in: a token with the user:read:follows scope for the same Client ID (twitch token -u -s user:read:follows)"
+type = "secret"
+
+[[preferences]]
+name = "redirectPort"
+title = "Redirect port"
+description = "The port of the redirect URL registered in your app (default 43120)"
+type = "number"
+default = 43120
+
+[[preferences]]
+name = "enter"
+title = "Enter on a stream"
+description = "browser (open on twitch.tv) or player (streamlink, or mpv with yt-dlp)"
+default = "browser"
+
+[[preferences]]
+name = "quality"
+title = "Quality"
+description = "streamlink quality: best, 1080p60, 720p60, 480p… (falls back to best)"
+default = "best"

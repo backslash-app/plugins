@@ -1,0 +1,49 @@
+[extension]
+id = "ticktick"
+title = "TickTick"
+description = "Today's and upcoming TickTick tasks by project; complete, reschedule and quick-add tasks in plain language"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-square-check"
+license = "MIT"
+
+# The Open API, and the sign-in (token endpoint) on ticktick.com.
+[permissions]
+net = ["api.ticktick.com", "ticktick.com"]
+
+[[commands]]
+name = "tasks"
+title = "TickTick Tasks"
+description = "Overdue, today and upcoming, across your lists; Enter completes"
+icon = "bs-square-check"
+keywords = ["ticktick", "tasks", "todo", "today", "upcoming", "tâches", "aujourd'hui", "à faire"]
+
+[[commands]]
+name = "add"
+title = "Add TickTick Task"
+description = "“Call Bob tomorrow 3pm ^Work !high”: date, list and priority are understood"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["ticktick", "add", "new", "task", "quick add", "ajouter", "nouvelle tâche"]
+[[commands.arguments]]
+name = "task"
+placeholder = "Call Bob tomorrow 3pm ^Work !high"
+required = true
+
+[[preferences]]
+name = "clientId"
+title = "Client ID"
+description = "Create an app on developer.ticktick.com → Manage Apps, with the OAuth redirect URL http://127.0.0.1:43118/callback, and paste its Client ID"
+
+[[preferences]]
+name = "clientSecret"
+title = "Client Secret"
+description = "The Client Secret of the same app"
+type = "secret"
+
+[[preferences]]
+name = "redirectPort"
+title = "Redirect port"
+description = "The port of the redirect URL registered in your app (default 43118)"
+type = "number"
+default = 43118

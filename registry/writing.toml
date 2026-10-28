@@ -1,0 +1,13 @@
+id = "writing"
+title = "DeepL & LanguageTool"
+description = "Translate text with DeepL and fix grammar and spelling with LanguageTool, from what you type, select or copy"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/writing"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:cbbc1f07a7998a6c99435da0c4385e8c2e5103667be211d13f795c122c2fe467"
+permissions = ["Access api-free.deepl.com", "Access api.deepl.com", "Access api.languagetool.org", "Access api.languagetoolplus.com", "Access localhost", "Access 127.0.0.1", "Run wl-paste", "Run xclip", "Run xsel", "Read the clipboard"]
+commands = ["Translate", "Translate Selected Text", "Translate Clipboard", "Check Grammar and Spelling"]
+

@@ -1,0 +1,105 @@
+[extension]
+id = "jellyfin"
+title = "Jellyfin & Plex"
+description = "Continue watching, next up, recently added and search on your Jellyfin and Plex servers, with posters; play in mpv or VLC, mark watched"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-film"
+license = "MIT"
+
+# Media servers run on your own machine, and hosts must be declared ahead
+# (the approach of the Home Assistant extension): the local network (mDNS
+# names, private IPv4 ranges, which Deno's --allow-net accepts as CIDR),
+# Tailscale, DuckDNS and Plex's *.plex.direct addresses. A custom domain
+# outside these is not reachable. Same list as HOSTS in lib.ts.
+# Posters need the server's token, so they are downloaded into
+# ~/.cache/backslash/jellyfin and shown from there (HOME locates it).
+# Movies, episodes and albums play in mpv or VLC as a transient systemd user
+# unit (systemd-run) so the player outlives the launcher; the players are run
+# once to find which is installed, and get the display variables.
+# /etc/os-release picks the install command to suggest.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "jellyfin",
+  "jellyfin.local",
+  "plex",
+  "plex.local",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.plex.direct",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+run = ["systemd-run", "mpv", "vlc"]
+read = ["~/.cache/backslash/jellyfin", "/etc/os-release"]
+write = ["~/.cache/backslash/jellyfin"]
+env = ["HOME", "WAYLAND_DISPLAY", "DISPLAY", "XAUTHORITY", "XDG_RUNTIME_DIR"]
+
+[[commands]]
+name = "library"
+title = "Jellyfin & Plex"
+description = "Continue watching, next up and recently added; type to search movies, series, episodes and albums"
+icon = "bs-film"
+keywords = [
+  "jellyfin",
+  "plex",
+  "emby",
+  "movies",
+  "tv",
+  "series",
+  "shows",
+  "media server",
+  "watch",
+  "films",
+  "séries",
+  "regarder",
+  "médiathèque",
+]
+
+[[preferences]]
+name = "jellyfinUrl"
+title = "Jellyfin address"
+description = "As you open it in the browser: http://192.168.1.10:8096 or http://jellyfin.local:8096"
+
+[[preferences]]
+name = "jellyfinApiKey"
+title = "Jellyfin API key"
+description = "Dashboard → API Keys → +. Or leave empty and set your user name and password below"
+type = "secret"
+
+[[preferences]]
+name = "jellyfinUser"
+title = "Jellyfin user name"
+description = "Whose watched state to show (with an API key, the first administrator by default)"
+
+[[preferences]]
+name = "jellyfinPassword"
+title = "Jellyfin password"
+description = "Only without an API key"
+type = "secret"
+
+[[preferences]]
+name = "plexUrl"
+title = "Plex address"
+description = "http://192.168.1.10:32400 (the port is added when missing)"
+
+[[preferences]]
+name = "plexToken"
+title = "X-Plex-Token"
+description = "Plex Web → an item → ⋯ → Get Info → View XML: the X-Plex-Token= part of the address"
+type = "secret"
+
+[[preferences]]
+name = "player"
+title = "Player"
+description = "mpv (default) or vlc"
+default = "mpv"

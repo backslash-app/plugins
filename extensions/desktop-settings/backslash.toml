@@ -1,0 +1,96 @@
+[extension]
+id = "desktop-settings"
+title = "Desktop Settings"
+description = "Search every settings panel of GNOME, KDE Plasma, Xfce or Cinnamon in English or French, and flip quick toggles"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-settings"
+license = "MIT"
+
+# XDG_CURRENT_DESKTOP tells the desktop; PATH and the bin folders tell which settings apps are
+# installed. The programs below open settings panels; gsettings, kreadconfig and
+# plasma-apply-colorscheme read and flip the quick toggles.
+[permissions]
+env = ["XDG_CURRENT_DESKTOP", "PATH"]
+read = [
+  "/usr/bin",
+  "/usr/local/bin",
+  "/bin",
+  "/usr/sbin",
+  "/sbin",
+  "/usr/games",
+  "~/.local/bin",
+  "/run/current-system/sw/bin",
+  "~/.nix-profile/bin",
+  "/snap/bin",
+]
+run = [
+  "gsettings",
+  "kreadconfig6",
+  "kreadconfig5",
+  "plasma-apply-colorscheme",
+  "gnome-control-center",
+  "systemsettings",
+  "systemsettings5",
+  "kcmshell6",
+  "kcmshell5",
+  "cinnamon-settings",
+  "xfce4-settings-manager",
+  "xfce4-appearance-settings",
+  "xfce4-display-settings",
+  "xfce4-color-settings",
+  "xfce4-keyboard-settings",
+  "xfce4-mouse-settings",
+  "xfce4-power-manager-settings",
+  "xfce4-notifyd-config",
+  "xfce4-mime-settings",
+  "exo-preferred-applications",
+  "xfce4-session-settings",
+  "xfce4-screensaver-preferences",
+  "light-locker-settings",
+  "xfce4-accessibility-settings",
+  "xfce4-about",
+  "xfce4-settings-editor",
+  "xfce4-panel",
+  "xfdesktop-settings",
+  "xfwm4-settings",
+  "xfwm4-tweaks-settings",
+  "xfwm4-workspace-settings",
+  "thunar-volman-settings",
+  "nm-connection-editor",
+  "blueman-manager",
+  "blueberry",
+  "overskride",
+  "pavucontrol",
+  "pwvucontrol",
+  "pavucontrol-qt",
+  "nwg-displays",
+  "wdisplays",
+  "arandr",
+  "nwg-look",
+  "lxappearance",
+  "qt6ct",
+  "qt5ct",
+  "system-config-printer",
+]
+
+[[commands]]
+name = "settings"
+title = "Desktop Settings"
+description = "Open any settings panel: Wi-Fi, displays, sound, keyboard, printers…"
+icon = "bs-settings"
+keywords = [
+  "settings",
+  "preferences",
+  "control center",
+  "system settings",
+  "réglages",
+  "paramètres",
+  "préférences",
+  "configuration",
+  "gnome-control-center",
+  "systemsettings",
+  "kcm",
+  "dark mode",
+  "mode sombre",
+]

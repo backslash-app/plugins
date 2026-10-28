@@ -1,0 +1,61 @@
+[extension]
+id = "keyboard-layouts"
+title = "Keyboard Layouts"
+description = "See the current keyboard layout and switch between layouts and input methods"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-keyboard"
+license = "MIT"
+
+# The desktop's own tools, the first that answers: gsettings (GNOME, plus gdbus to
+# GNOME Shell), gdbus to org.kde.keyboard (KDE Plasma), hyprctl (Hyprland),
+# swaymsg (Sway), setxkbmap and xkb-switch (X11). ibus and fcitx5-remote switch
+# input methods. The xkb rules files give layout names; the fcitx5 profile lists
+# its input methods.
+[permissions]
+run = ["gsettings", "gdbus", "hyprctl", "swaymsg", "setxkbmap", "xkb-switch", "ibus", "fcitx5-remote"]
+read = [
+  "/usr/share/X11/xkb/rules/evdev.lst",
+  "/usr/share/X11/xkb/rules/base.lst",
+  "~/.config/fcitx5/profile",
+  "/etc/os-release",
+]
+env = [
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+  "HOME",
+]
+
+[[commands]]
+name = "layouts"
+title = "Keyboard Layouts"
+description = "Your layouts and input methods, the current one marked"
+icon = "bs-keyboard"
+keywords = [
+  "keyboard",
+  "clavier",
+  "layout",
+  "disposition",
+  "disposition du clavier",
+  "azerty",
+  "qwerty",
+  "language",
+  "langue",
+  "input method",
+  "méthode de saisie",
+  "ibus",
+  "fcitx",
+  "xkb",
+]
+
+[[commands]]
+name = "next-layout"
+title = "Next Keyboard Layout"
+description = "Switch to the next layout"
+icon = "bs-keyboard"
+mode = "no-view"
+keywords = ["keyboard", "clavier", "layout", "disposition", "switch", "changer", "suivant", "next", "cycle"]

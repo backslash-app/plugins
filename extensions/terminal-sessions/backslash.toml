@@ -1,0 +1,39 @@
+[extension]
+id = "terminal-sessions"
+title = "Terminal Sessions"
+description = "Attach to, create, rename and kill your tmux and zellij sessions"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-terminal"
+license = "MIT"
+
+[permissions]
+env = ["HOME"]
+run = [
+  "tmux",
+  "zellij",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "sessions"
+title = "Terminal Sessions"
+description = "tmux and zellij sessions: attach, create, rename, kill"
+icon = "bs-terminal"
+keywords = ["tmux", "zellij", "session", "multiplexer", "attach", "terminal", "multiplexeur", "attacher"]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

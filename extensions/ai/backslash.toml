@@ -1,0 +1,76 @@
+[extension]
+id = "ai"
+title = "AI"
+description = "Ask questions, fix, rewrite, summarize, translate and explain text, with Claude, OpenAI, Mistral, Groq, OpenRouter or a local Ollama"
+version = "1.2.0"
+author = "Backslash"
+icon = "bs-sparkle"
+license = "MIT"
+
+# The text commands work on what you copied last.
+[permissions]
+net = ["api.anthropic.com", "api.openai.com", "api.mistral.ai", "api.groq.com", "openrouter.ai", "localhost:11434"]
+clipboard-read = true
+
+[[commands]]
+name = "ask"
+title = "Ask AI"
+description = "Ask anything; your conversations are kept"
+keywords = ["ai", "chat", "claude", "gpt", "llm", "question", "ia", "assistant"]
+
+[[commands]]
+name = "fix"
+title = "Fix Spelling and Grammar"
+description = "Corrects the text you copied"
+keywords = ["ai", "spelling", "grammar", "orthographe", "corriger", "typo"]
+
+[[commands]]
+name = "improve"
+title = "Improve Writing"
+description = "Rewrites the text you copied, clearer"
+keywords = ["ai", "rewrite", "reformuler", "améliorer", "style"]
+
+[[commands]]
+name = "summarize"
+title = "Summarize"
+description = "Summarizes the text you copied"
+keywords = ["ai", "summary", "résumé", "tldr"]
+
+[[commands]]
+name = "translate"
+title = "Translate"
+description = "Translates the text you copied"
+keywords = ["ai", "translate", "traduire", "traduction", "language"]
+
+[[commands]]
+name = "explain"
+title = "Explain"
+description = "Explains the text or code you copied"
+keywords = ["ai", "explain", "expliquer", "code", "what is"]
+
+[[preferences]]
+name = "provider"
+title = "Provider"
+description = "anthropic, openai, mistral, groq, openrouter, or ollama (local, no key)"
+default = "anthropic"
+
+[[preferences]]
+name = "api_key"
+title = "API key"
+description = "Kept in your system keyring. Not needed for Ollama."
+type = "secret"
+
+[[preferences]]
+name = "model"
+title = "Model"
+description = "Leave empty for the provider's default (Claude Opus 5.5 for Anthropic)"
+
+[[preferences]]
+name = "language"
+title = "Answer language"
+description = "e.g. French. Empty: the language of your question or text."
+
+[[preferences]]
+name = "translate_to"
+title = "Translate into"
+default = "English"

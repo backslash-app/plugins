@@ -1,0 +1,45 @@
+[extension]
+id = "youtube"
+title = "YouTube"
+description = "Search YouTube with thumbnails, views and durations, open videos in the browser or play them in mpv in the background, and browse channels"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-video"
+license = "MIT"
+
+# The YouTube Data API v3 (www.googleapis.com) with the user's own API key,
+# and i.ytimg.com where thumbnails are served.
+# Videos play in mpv (with yt-dlp) as a transient systemd user unit, so they
+# keep playing once the launcher is hidden; mpv and yt-dlp are also run once to
+# check they are installed. The display variables let mpv open its window from
+# that unit; /etc/os-release picks the install command to suggest.
+[permissions]
+net = ["www.googleapis.com", "i.ytimg.com"]
+run = ["systemd-run", "systemctl", "mpv", "yt-dlp"]
+read = ["/etc/os-release"]
+env = ["WAYLAND_DISPLAY", "DISPLAY", "XAUTHORITY", "XDG_RUNTIME_DIR"]
+
+[[commands]]
+name = "search"
+title = "Search YouTube"
+description = "Trending videos, or type to search; open, play in mpv, copy the link, browse the channel"
+icon = "bs-video"
+keywords = ["youtube", "yt", "video", "videos", "watch", "music", "channel", "vidéo", "vidéos", "regarder", "chaîne"]
+
+[[preferences]]
+name = "apiKey"
+title = "YouTube Data API key"
+description = "Google Cloud console → enable YouTube Data API v3 → Credentials → Create API key"
+type = "secret"
+
+[[preferences]]
+name = "region"
+title = "Region"
+description = "Two-letter country code for trending videos and results: US, GB, FR, DE…"
+default = "US"
+
+[[preferences]]
+name = "enter"
+title = "Enter"
+description = "What Enter does on a video: browser (open on youtube.com) or mpv (play in mpv)"
+default = "browser"

@@ -1,0 +1,46 @@
+[extension]
+id = "stripe"
+title = "Stripe"
+description = "Payments, customers, subscriptions and balance of your Stripe account, test or live, with refunds behind a confirmation"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coin"
+license = "MIT"
+
+# The Stripe API only. Dashboard links open in your browser.
+[permissions]
+net = ["api.stripe.com"]
+
+[[commands]]
+name = "payments"
+title = "Stripe Payments"
+description = "Latest payments with amount, status and card; refund with confirmation"
+icon = "bs-coin"
+keywords = ["stripe", "payments", "charges", "refund", "card", "paiements", "remboursement", "carte", "transactions"]
+
+[[commands]]
+name = "customers"
+title = "Search Stripe Customers"
+description = "By name, email or ID, with their payments and subscriptions"
+icon = "bs-user"
+keywords = ["stripe", "customers", "clients", "client", "email", "search", "rechercher"]
+
+[[commands]]
+name = "subscriptions"
+title = "Stripe Subscriptions"
+description = "Active, trialing and past-due subscriptions with their next renewal"
+icon = "bs-repeat"
+keywords = ["stripe", "subscriptions", "abonnements", "mrr", "renewal", "renouvellement", "billing", "facturation"]
+
+[[commands]]
+name = "balance"
+title = "Stripe Balance"
+description = "Available and pending balance, and the latest payouts"
+icon = "bs-chart-up"
+keywords = ["stripe", "balance", "solde", "payouts", "virements", "revenue", "revenus", "money"]
+
+[[preferences]]
+name = "secretKey"
+title = "API key"
+description = "A restricted key (rk_test_… or rk_live_…) with Read on Charges, PaymentIntents, Customers, Subscriptions, Products, Balance and Payouts; add Refunds: Write only to refund from here. sk_… keys work too"
+type = "secret"

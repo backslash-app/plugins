@@ -1,0 +1,14 @@
+# registry/regex.toml
+id = "regex"
+title = "Regex Tester"
+description = "Test JavaScript regular expressions with groups, replacements, explanations and a library of common patterns"
+author = "Backslash"
+icon = "bs-braces"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/regex"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:501d2e6ebdaebfe0eaeec0f6269c001cfbb87126fba7a76af0839b2ab7067c02"
+permissions = []
+commands = ["Regex Tester"]
+

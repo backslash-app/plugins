@@ -1,0 +1,66 @@
+[extension]
+id = "tunnels"
+title = "Tunnels"
+description = "Share a local port on a public HTTPS URL with ngrok or a Cloudflare quick tunnel, and keep track of the open ones"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+
+# Tunnels are transient systemd user services (systemd-run), so they keep
+# running after the launcher closes; journalctl reads their public URL and
+# errors. ss lists the listening ports. ngrok's local agent API (one port per
+# tunnel, 4040-4044) gives its URL and traffic. PATH and HOME are passed to the
+# service so it finds ngrok/cloudflared and their configuration.
+[permissions]
+net = ["127.0.0.1:4040", "127.0.0.1:4041", "127.0.0.1:4042", "127.0.0.1:4043", "127.0.0.1:4044"]
+run = ["systemd-run", "systemctl", "journalctl", "ss", "ngrok", "cloudflared"]
+read = ["/etc/os-release"]
+env = ["PATH", "HOME"]
+
+[[commands]]
+name = "tunnels"
+title = "Tunnels"
+description = "Open tunnels with their public URL, and the listening ports to share"
+icon = "bs-globe"
+keywords = [
+  "tunnel",
+  "ngrok",
+  "cloudflared",
+  "cloudflare",
+  "expose",
+  "share",
+  "localhost",
+  "port",
+  "public url",
+  "webhook",
+  "partager",
+  "exposer",
+  "publier",
+]
+
+[[commands]]
+name = "share"
+title = "Share Port"
+description = "Open a tunnel to a local port and copy its public URL"
+icon = "bs-upload"
+mode = "no-view"
+keywords = ["tunnel", "ngrok", "cloudflared", "expose", "share", "port", "partager", "exposer"]
+[[commands.arguments]]
+name = "port"
+placeholder = "3000"
+type = "number"
+min = 1
+max = 65535
+required = true
+[[commands.arguments]]
+name = "provider"
+type = "choice"
+options = ["cloudflared", "ngrok"]
+placeholder = "Provider"
+
+[[preferences]]
+name = "provider"
+title = "Preferred provider"
+description = "cloudflared (no account needed) or ngrok (needs an authtoken: ngrok config add-authtoken)"
+default = "cloudflared"

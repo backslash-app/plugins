@@ -1,0 +1,14 @@
+# registry/radio.toml
+id = "radio"
+title = "Internet Radio"
+description = "Search 50,000 internet radio stations by name, genre or country and play them in the background with mpv, ffplay or VLC"
+author = "Backslash"
+icon = "bs-radio"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/radio"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:2a2cad0188df48ff3fda28aca41ac67d0ca75a454f4397ab40c3534b0aed2019"
+permissions = ["Access de1.api.radio-browser.info", "Access de2.api.radio-browser.info", "Access fi1.api.radio-browser.info", "Access all.api.radio-browser.info", "Run systemd-run", "Run systemctl", "Run mpv", "Run ffplay", "Run cvlc", "Read ~/.cache/backslash/radio", "Read /etc/os-release", "Write ~/.cache/backslash/radio", "Read the environment variable HOME"]
+commands = ["Internet Radio", "Stop Radio"]
+

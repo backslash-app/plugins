@@ -1,0 +1,13 @@
+id = "can-i-use"
+title = "Can I Use"
+description = "Browser support for web platform features from caniuse.com, with versions, partial support and notes"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/can-i-use"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:ecfb74ffe8649ac35f9b0bf9eb47aae4ca1e0bd18652264ffb774e5178e15d70"
+permissions = ["Access raw.githubusercontent.com", "Read ~/.cache/backslash/can-i-use", "Write ~/.cache/backslash/can-i-use", "Read the environment variable HOME"]
+commands = ["Can I Use"]
+

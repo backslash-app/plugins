@@ -1,0 +1,13 @@
+id = "syncthing"
+title = "Syncthing"
+description = "Folders and devices of Syncthing with sync progress, conflicts and last scan; rescan, pause and resume"
+author = "Backslash"
+icon = "bs-cloud"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/syncthing"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:e18655b3c1fdfa4f12aeea899d0b9a3053b7d04696a759d18fe6d3a308701a99"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run find", "Run systemctl", "Read ~/.local/state/syncthing/config.xml", "Read ~/.config/syncthing/config.xml", "Read /etc/os-release", "Read the environment variable HOME"]
+commands = ["Syncthing"]
+

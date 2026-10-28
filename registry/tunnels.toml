@@ -1,0 +1,13 @@
+id = "tunnels"
+title = "Tunnels"
+description = "Share a local port on a public HTTPS URL with ngrok or a Cloudflare quick tunnel, and keep track of the open ones"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/tunnels"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:c248942f1f2c43902a3672c8a0d234c29c6f69630e5e7f4cd6f57c02b36fd8a8"
+permissions = ["Access 127.0.0.1:4040", "Access 127.0.0.1:4041", "Access 127.0.0.1:4042", "Access 127.0.0.1:4043", "Access 127.0.0.1:4044", "Run systemd-run", "Run systemctl", "Run journalctl", "Run ss", "Run ngrok", "Run cloudflared", "Read /etc/os-release", "Read the environment variable PATH", "Read the environment variable HOME"]
+commands = ["Tunnels", "Share Port"]
+

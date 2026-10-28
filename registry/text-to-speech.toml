@@ -1,0 +1,14 @@
+# registry/text-to-speech.toml
+id = "text-to-speech"
+title = "Text to Speech"
+description = "Read the clipboard, the selection or any text aloud with Piper, eSpeak NG, Speech Dispatcher or Festival"
+author = "Backslash"
+icon = "bs-speaker"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/text-to-speech"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:e99be9ff99322eecbae9a75a41a2b78f8425e067d15d2146637bf55c0324f091"
+permissions = ["Run systemd-run", "Run systemctl", "Run piper", "Run espeak-ng", "Run spd-say", "Run festival", "Run wl-paste", "Run xclip", "Run xsel", "Read ~/.cache/backslash/tts", "Read ~/.local/share/piper", "Read /etc/os-release", "Write ~/.cache/backslash/tts", "Read the environment variable HOME", "Read the environment variable XDG_RUNTIME_DIR", "Read the environment variable DBUS_SESSION_BUS_ADDRESS", "Read the environment variable PULSE_SERVER", "Read the environment variable PIPEWIRE_REMOTE", "Read the clipboard"]
+commands = ["Text to Speech", "Speak Clipboard", "Speak Selected Text", "Speak Text", "Stop Speaking", "Text to Speech Voices"]
+

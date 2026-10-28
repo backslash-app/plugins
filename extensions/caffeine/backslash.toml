@@ -1,0 +1,49 @@
+[extension]
+id = "caffeine"
+title = "Caffeine"
+description = "Keep the computer awake for a while, or until you turn it off, even with Backslash closed"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coffee"
+license = "MIT"
+
+# A transient systemd user unit (systemd-run) holds a systemd-inhibit lock on
+# idle and sleep, plus GNOME's or KDE's own inhibitor when available, so it
+# survives the launcher; systemctl stops it. systemd-inhibit --list shows the
+# other programs keeping the computer awake.
+[permissions]
+run = ["systemd-run", "systemctl", "systemd-inhibit"]
+env = ["XDG_CURRENT_DESKTOP"]
+
+[[commands]]
+name = "caffeine"
+title = "Caffeine"
+description = "Keep the computer awake: 15 min, 30 min, 1 h, 2 h or until turned off"
+icon = "bs-coffee"
+keywords = ["caffeine", "awake", "keep awake", "sleep", "veille", "mise en veille", "réveil", "café", "inhibit", "amphetamine", "insomnia"]
+
+[[commands]]
+name = "toggle"
+title = "Toggle Caffeine"
+description = "Keep awake, or let the computer sleep again"
+icon = "bs-coffee"
+mode = "no-view"
+keywords = ["caffeine", "awake", "sleep", "veille", "café", "inhibit"]
+
+[[commands]]
+name = "keep-awake"
+title = "Keep Awake For…"
+description = "e.g. 45m, 1h30, 3h"
+icon = "bs-timer"
+mode = "no-view"
+keywords = ["caffeine", "awake", "veille", "durée", "duration"]
+[[commands.arguments]]
+name = "duration"
+placeholder = "45m, 1h30, 3h"
+required = true
+
+[[preferences]]
+name = "duration"
+title = "Toggle Caffeine keeps awake for"
+description = "A duration like 1h or 30m; empty means until turned off"
+default = ""

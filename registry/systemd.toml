@@ -1,0 +1,14 @@
+# registry/systemd.toml
+id = "systemd"
+title = "Services"
+description = "Start, stop and inspect systemd services"
+author = "Backslash"
+icon = "bs-server"
+version = "1.1.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/systemd"
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:e74b08775317f85ab6e840075a3ac53da7f4f8d3f6775d6854bf81b07dd73bfa"
+permissions = ["Run systemctl", "Run journalctl"]
+commands = ["Services"]
+

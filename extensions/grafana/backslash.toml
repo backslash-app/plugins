@@ -1,0 +1,80 @@
+[extension]
+id = "grafana"
+title = "Grafana"
+description = "Search Grafana dashboards and follow firing alerts; silence an alert for an hour or a day, expire silences"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+
+# Grafana Cloud stacks, and self-hosted Grafana where it usually lives: this
+# computer, the local network (mDNS names and private IPv4 ranges, which Deno
+# accepts as CIDR) and Tailscale. Hosts must be declared ahead, so a Grafana
+# on another public domain is not reachable. Same list as HOSTS in api.ts.
+[permissions]
+net = [
+  "*.grafana.net",
+  "localhost",
+  "127.0.0.1",
+  "grafana",
+  "grafana.local",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "dashboards"
+title = "Search Grafana Dashboards"
+description = "Starred first, then by folder, with their tags"
+icon = "bs-chart-up"
+keywords = [
+  "grafana",
+  "dashboard",
+  "dashboards",
+  "metrics",
+  "monitoring",
+  "observability",
+  "graphs",
+  "tableau de bord",
+  "métriques",
+  "supervision",
+]
+
+[[commands]]
+name = "alerts"
+title = "Grafana Alerts"
+description = "Firing alerts by severity with their labels; silence them, expire silences"
+icon = "bs-bell"
+keywords = [
+  "grafana",
+  "alerts",
+  "alerting",
+  "firing",
+  "silence",
+  "alertmanager",
+  "incident",
+  "on-call",
+  "alertes",
+  "silencer",
+  "supervision",
+]
+
+[[preferences]]
+name = "url"
+title = "Grafana URL"
+description = "Your stack (https://acme.grafana.net) or your server (http://grafana.local:3000)"
+required = true
+
+[[preferences]]
+name = "token"
+title = "Service account token"
+description = "Administration → Users and access → Service accounts → Add service account (Editor role to create silences) → Add token"
+type = "secret"
+required = true

@@ -1,0 +1,30 @@
+[extension]
+id = "weather"
+title = "Weather"
+description = "Current conditions, the next 24 hours and the week ahead for any city, from Open-Meteo"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud-sun"
+license = "MIT"
+
+# Open-Meteo is free and needs no API key: one host to find cities, one for forecasts.
+[permissions]
+net = ["geocoding-api.open-meteo.com", "api.open-meteo.com"]
+
+[[commands]]
+name = "weather"
+title = "Weather"
+description = "Forecast for your city and saved cities; type a city name to look it up"
+icon = "bs-cloud-sun"
+keywords = ["weather", "forecast", "temperature", "rain", "météo", "meteo", "prévisions", "température", "pluie"]
+
+[[preferences]]
+name = "city"
+title = "Default city"
+description = "Shown when you open the command, e.g. \"Paris\" or \"Lyon, France\""
+
+[[preferences]]
+name = "units"
+title = "Units"
+description = "\"metric\" (°C, km/h, mm) or \"imperial\" (°F, mph, in)"
+default = "metric"

@@ -1,0 +1,46 @@
+[extension]
+id = "stack-overflow"
+title = "Stack Overflow"
+description = "Search Stack Overflow, Super User, Ask Ubuntu, Unix & Linux and Server Fault, and read the accepted answer"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-comment"
+license = "MIT"
+
+# The Stack Exchange API. Searches and answers are cached for a few hours in
+# the extension's storage: without a key the API allows 300 requests a day.
+[permissions]
+net = ["api.stackexchange.com"]
+
+[[commands]]
+name = "search"
+title = "Search Stack Overflow"
+description = "Questions with their votes, answers and the accepted answer's code"
+icon = "bs-comment"
+keywords = [
+  "stackoverflow",
+  "stack overflow",
+  "stack exchange",
+  "superuser",
+  "askubuntu",
+  "serverfault",
+  "unix",
+  "question",
+  "answer",
+  "programming",
+  "réponse",
+  "programmation",
+  "aide",
+]
+
+[[preferences]]
+name = "site"
+title = "Default site"
+description = "stackoverflow, superuser, askubuntu, unix or serverfault; Tab switches in the command"
+default = "stackoverflow"
+
+[[preferences]]
+name = "apiKey"
+title = "Stack Apps key"
+description = "Optional: raises the daily quota from 300 to 10,000 requests (stackapps.com → Register your app)"
+type = "secret"

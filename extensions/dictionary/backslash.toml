@@ -1,0 +1,33 @@
+[extension]
+id = "dictionary"
+title = "Dictionary"
+description = "Definitions, examples, pronunciation and synonyms in English and French from Wiktionary, and quick translations"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+
+# English: Wiktionary's REST API, with pronunciation and synonyms from dictionaryapi.dev.
+# French: the French Wiktionary (MediaWiki API). Translations: MyMemory (free, no key).
+[permissions]
+net = ["en.wiktionary.org", "fr.wiktionary.org", "api.dictionaryapi.dev", "api.mymemory.translated.net"]
+
+[[commands]]
+name = "define"
+title = "Define Word"
+description = "Definitions by part of speech, with examples; prefix with fr: or en: to switch language"
+icon = "bs-book"
+keywords = ["dictionary", "define", "definition", "meaning", "synonym", "wiktionary", "dictionnaire", "définition", "définir", "sens", "synonyme", "mot"]
+
+[[commands]]
+name = "translate"
+title = "Translate"
+description = "English ↔ French and other languages, with MyMemory"
+icon = "bs-globe"
+keywords = ["translate", "translation", "traduire", "traduction", "traducteur", "english", "french", "anglais", "français"]
+
+[[preferences]]
+name = "language"
+title = "Language"
+description = "\"en\" (English) or \"fr\" (French): the language of the words you look up, and the source language of translations"
+default = "en"

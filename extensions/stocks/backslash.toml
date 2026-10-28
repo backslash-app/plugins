@@ -1,0 +1,38 @@
+[extension]
+id = "stocks"
+title = "Stocks"
+description = "A stock watchlist with live quotes, day ranges, company profiles and news, from Finnhub's free API"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-chart-up"
+license = "MIT"
+
+# The Finnhub API, and static2.finnhub.io where it serves company logos.
+[permissions]
+net = ["finnhub.io", "static2.finnhub.io"]
+
+[[commands]]
+name = "stocks"
+title = "Stock Watchlist"
+description = "Your stocks with price and change; type a symbol or a company to search"
+icon = "bs-chart-up"
+keywords = [
+  "stocks",
+  "stock",
+  "shares",
+  "ticker",
+  "quote",
+  "market",
+  "nasdaq",
+  "finnhub",
+  "bourse",
+  "actions",
+  "cours",
+  "marché",
+]
+
+[[preferences]]
+name = "apiKey"
+title = "Finnhub API key"
+description = "Free at finnhub.io/register; the key is on finnhub.io/dashboard"
+type = "secret"

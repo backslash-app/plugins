@@ -1,0 +1,14 @@
+# registry/youtube.toml
+id = "youtube"
+title = "YouTube"
+description = "Search YouTube with thumbnails, views and durations, open videos in the browser or play them in mpv in the background, and browse channels"
+author = "Backslash"
+icon = "bs-video"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/youtube"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:f971fd9c169cd4b6c19bde16f29041cca21ece25e5e4d84e8ce67c2edbfe23dc"
+permissions = ["Access www.googleapis.com", "Access i.ytimg.com", "Run systemd-run", "Run systemctl", "Run mpv", "Run yt-dlp", "Read /etc/os-release", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable XDG_RUNTIME_DIR"]
+commands = ["Search YouTube"]
+

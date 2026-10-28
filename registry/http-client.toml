@@ -1,0 +1,14 @@
+# registry/http-client.toml
+id = "http-client"
+title = "HTTP Client"
+description = "Send HTTP requests from the launcher and read the status, timing, headers and formatted body"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/http-client"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:c1f9e0d3ea0a419ce3592a4c43b62d1b8dbe00f1f684b8fd039b92ef3bdae07d"
+permissions = ["Access any website"]
+commands = ["Send HTTP Request", "Saved HTTP Requests"]
+

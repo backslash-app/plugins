@@ -1,0 +1,58 @@
+[extension]
+id = "text-diff"
+title = "Text Diff"
+description = "Compare two texts line by line and word by word: clipboard, selection or clipboard history, with a unified patch to copy"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+
+[permissions]
+# The texts to compare: the clipboard, and the primary selection (the text
+# selected with the mouse) through whichever of these is installed.
+clipboard-read = true
+run = ["wl-paste", "xclip", "xsel"]
+# Backslash's own clipboard history, to compare the last two copies. Read only,
+# never sent anywhere.
+read = ["~/.local/state/backslash/clipboard.json"]
+env = ["HOME"]
+
+[[commands]]
+name = "compare"
+title = "Compare Clipboard with Selection"
+description = "The clipboard against the selected text, or your last two copies: line and word changes, patch"
+icon = "bs-layers"
+keywords = [
+  "diff",
+  "compare",
+  "difference",
+  "patch",
+  "changes",
+  "clipboard",
+  "selection",
+  "comparer",
+  "différence",
+  "différences",
+  "presse-papiers",
+]
+
+[[commands]]
+name = "texts"
+title = "Compare Texts"
+description = "Paste or type two texts and see what changed, line by line and word by word"
+icon = "bs-layers"
+keywords = ["diff", "compare", "texts", "patch", "unified", "comparer", "textes", "différence"]
+
+[[commands]]
+name = "history"
+title = "Compare Clipboard History"
+description = "Pick two of your recent copies and compare them"
+icon = "bs-history"
+keywords = ["diff", "compare", "clipboard", "history", "copies", "historique", "comparer", "presse-papiers"]
+
+[[preferences]]
+name = "context"
+title = "Context lines"
+description = "Unchanged lines shown around each change (0 to 50)"
+type = "number"
+default = 3

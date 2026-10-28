@@ -1,0 +1,43 @@
+[extension]
+id = "deployments"
+title = "Deployments"
+description = "Recent Vercel deployments and Netlify deploys with their status, commit, branch and build time; open, copy, redeploy, cancel, build logs"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+
+# The two APIs, and vercel.com for the avatars of who deployed.
+[permissions]
+net = ["api.vercel.com", "api.netlify.com", "vercel.com"]
+
+[[commands]]
+name = "deployments"
+title = "Recent Deployments"
+description = "Vercel and Netlify, newest first; builds in progress on top"
+icon = "bs-rocket"
+keywords = ["deploy", "deployments", "vercel", "netlify", "build", "ci", "preview", "production", "hosting"]
+
+[[commands]]
+name = "projects"
+title = "Deployment Projects"
+description = "Vercel projects and Netlify sites, with their production status"
+icon = "bs-cloud"
+keywords = ["vercel", "netlify", "projects", "sites", "domains", "hosting"]
+
+[[preferences]]
+name = "vercelToken"
+title = "Vercel token"
+description = "Optional. Vercel → Account Settings → Tokens"
+type = "secret"
+
+[[preferences]]
+name = "vercelTeam"
+title = "Vercel team"
+description = "Optional: the team slug or id (team_…) whose projects to show; empty for your personal account"
+
+[[preferences]]
+name = "netlifyToken"
+title = "Netlify token"
+description = "Optional. Netlify → User settings → Applications → Personal access tokens"
+type = "secret"

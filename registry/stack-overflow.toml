@@ -1,0 +1,13 @@
+id = "stack-overflow"
+title = "Stack Overflow"
+description = "Search Stack Overflow, Super User, Ask Ubuntu, Unix & Linux and Server Fault, and read the accepted answer"
+author = "Backslash"
+icon = "bs-comment"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/stack-overflow"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:abb701ddd72bc3f75efa30e38059e6873763606e2f92c16bcf980b4b7c1d7962"
+permissions = ["Access api.stackexchange.com"]
+commands = ["Search Stack Overflow"]
+

@@ -1,0 +1,36 @@
+[extension]
+id = "network"
+title = "Network & Devices"
+description = "Wi-Fi, Bluetooth, audio outputs and VPNs in two keystrokes"
+version = "1.1.0"
+author = "Backslash"
+icon = "bs-wifi"
+license = "MIT"
+
+# NetworkManager (nmcli), BlueZ (bluetoothctl), PulseAudio/PipeWire (pactl), Tailscale.
+[permissions]
+run = ["nmcli", "bluetoothctl", "pactl", "tailscale"]
+
+[[commands]]
+name = "wifi"
+title = "Wi-Fi"
+description = "Join a network, disconnect, turn Wi-Fi on or off"
+keywords = ["wifi", "wlan", "network", "réseau", "internet", "nmcli"]
+
+[[commands]]
+name = "bluetooth"
+title = "Bluetooth Devices"
+description = "Connect your headphones, mouse or keyboard"
+keywords = ["bluetooth", "headphones", "casque", "écouteurs", "airpods", "mouse", "keyboard"]
+
+[[commands]]
+name = "audio"
+title = "Audio Output"
+description = "Switch speakers, headphones and microphones"
+keywords = ["sound", "audio", "speakers", "headphones", "son", "sortie", "micro", "output", "input"]
+
+[[commands]]
+name = "vpn"
+title = "VPN"
+description = "Turn VPNs, WireGuard and Tailscale on or off"
+keywords = ["vpn", "wireguard", "tailscale", "openvpn"]

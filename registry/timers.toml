@@ -1,0 +1,14 @@
+# registry/timers.toml
+id = "timers"
+title = "Timers"
+description = "Timers and Pomodoro that ring even when Backslash is closed (systemd timers)"
+author = "Backslash"
+icon = "bs-timer"
+version = "1.1.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/timers"
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:f701bc42e379b145b28c400093d9e9036363d519e1dd9c1b710c08b415858ed1"
+permissions = ["Run systemd-run", "Run systemctl"]
+commands = ["Timers", "Start Timer"]
+

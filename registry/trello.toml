@@ -1,0 +1,14 @@
+# registry/trello.toml
+id = "trello"
+title = "Trello"
+description = "Your boards and cards with labels, due dates and members; move, complete, archive and create cards"
+author = "Backslash"
+icon = "bs-kanban"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/trello"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:5f0861191f1932a88cabc9daaff670c32b3d298c5deec741f1847ae29db79a8d"
+permissions = ["Access api.trello.com", "Access trello-members.s3.amazonaws.com", "Access trello-backgrounds.s3.amazonaws.com"]
+commands = ["Trello Boards", "My Trello Cards", "Create Trello Card"]
+

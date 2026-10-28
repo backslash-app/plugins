@@ -1,0 +1,101 @@
+[extension]
+id = "project-scripts"
+title = "Project Scripts"
+description = "Scripts, Make targets, just recipes and tasks of your recent projects, run in a terminal"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-terminal"
+license = "MIT"
+
+# Projects come from editors' recent lists (VS Code, Cursor, Zed, JetBrains) and the usual
+# code folders; only those folders can be read for package.json, Makefile, justfile…
+# Editor databases are copied to /tmp/backslash-project-scripts to be read while the
+# editor runs. just and task describe their recipes; tasks run in your terminal, through
+# your shell ($SHELL) so nvm, pyenv and the like are set up.
+[permissions]
+env = ["HOME", "SHELL"]
+read = [
+  "/etc/os-release",
+  "~/.config/Code",
+  "~/.config/Code - OSS",
+  "~/.config/VSCodium",
+  "~/.config/Cursor",
+  "~/.config/Windsurf",
+  "~/.var/app/com.visualstudio.code/config/Code",
+  "~/.var/app/com.vscodium.codium/config/VSCodium",
+  "~/.config/JetBrains",
+  "~/.local/share/zed",
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+  "/tmp/backslash-project-scripts",
+]
+write = ["/tmp/backslash-project-scripts"]
+run = [
+  "just",
+  "task",
+  "go-task",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "scripts"
+title = "Project Scripts"
+description = "package.json scripts, Make targets, just recipes, Taskfile, Cargo, deno, Composer and Python tasks, by project"
+icon = "bs-terminal"
+keywords = [
+  "scripts",
+  "npm run",
+  "pnpm",
+  "yarn",
+  "bun",
+  "make",
+  "makefile",
+  "just",
+  "justfile",
+  "taskfile",
+  "cargo",
+  "deno task",
+  "composer",
+  "poetry",
+  "uv",
+  "tasks",
+  "run",
+  "build",
+  "tâches",
+  "lancer",
+  "exécuter",
+  "projet",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"
+
+[[preferences]]
+name = "max"
+title = "Projects to scan"
+description = "The most recent projects whose tasks are listed"
+type = "number"
+default = 40

@@ -1,0 +1,13 @@
+id = "stripe"
+title = "Stripe"
+description = "Payments, customers, subscriptions and balance of your Stripe account, test or live, with refunds behind a confirmation"
+author = "Backslash"
+icon = "bs-coin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/stripe"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:c43381509cb2a6a299d38729271bbbe60d82f5ec0af3e0028c0e0179cfe20e70"
+permissions = ["Access api.stripe.com"]
+commands = ["Stripe Payments", "Search Stripe Customers", "Stripe Subscriptions", "Stripe Balance"]
+

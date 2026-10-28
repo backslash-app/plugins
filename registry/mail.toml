@@ -1,0 +1,13 @@
+id = "mail"
+title = "Mail"
+description = "Unread mail of up to three IMAP accounts (Gmail, Fastmail, iCloud, Yahoo, Proton Mail Bridge or any server): preview, mark read, archive, delete"
+author = "Backslash"
+icon = "bs-mail"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/mail"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:4d2ed25b701d582bcb5236a8d60b23f4a8ffa38a2ad9f816114b75207188c2b9"
+permissions = ["Access any website", "Read ~/.config/protonmail/bridge-v3/cert.pem", "Read ~/.config/protonmail/bridge/cert.pem", "Read the environment variable HOME"]
+commands = ["Unread Mail"]
+

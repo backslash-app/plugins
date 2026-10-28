@@ -1,0 +1,94 @@
+[extension]
+id = "pihole"
+title = "Pi-hole & AdGuard Home"
+description = "Queries, blocked share and top blocked domains of your Pi-hole v6 or AdGuard Home; pause blocking, allow or block a domain"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-shield"
+license = "MIT"
+
+# Pi-hole and AdGuard Home run on your own network, and hosts must be declared ahead:
+# pi.hole, local names, private IPv4 ranges (Deno's --allow-net accepts CIDR) and
+# Tailscale, as extensions/home-assistant does. A public domain is out of reach.
+# Same list as HOSTS in api.ts.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "pi.hole",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "blocking"
+title = "Ad Blocking"
+description = "Pi-hole or AdGuard Home: blocking state, queries, top blocked domains"
+icon = "bs-shield"
+keywords = [
+  "pihole",
+  "pi-hole",
+  "adguard",
+  "adguard home",
+  "dns",
+  "ad blocker",
+  "adblock",
+  "bloqueur de pub",
+  "publicité",
+  "blocklist",
+  "allowlist",
+  "liste blanche",
+  "liste noire",
+  "queries",
+  "requêtes",
+]
+
+[[commands]]
+name = "pause"
+title = "Pause Ad Blocking"
+description = "Lets ads through for a while: 30s, 5m, 1h or forever (5 minutes by default)"
+icon = "bs-pause"
+mode = "no-view"
+keywords = ["pihole", "adguard", "disable blocking", "désactiver", "pause", "suspendre"]
+[[commands.arguments]]
+name = "duration"
+placeholder = "5m"
+required = false
+
+[[commands]]
+name = "resume"
+title = "Resume Ad Blocking"
+description = "Turns blocking back on"
+icon = "bs-play"
+mode = "no-view"
+keywords = ["pihole", "adguard", "enable blocking", "activer", "reprendre", "resume"]
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open its web interface: http://pi.hole, http://192.168.1.2 or http://adguard.lan:3000"
+required = true
+
+[[preferences]]
+name = "password"
+title = "Password"
+description = "Pi-hole: an app password (Settings → Web interface / API → Configure app password). AdGuard Home: your password"
+type = "secret"
+
+[[preferences]]
+name = "username"
+title = "User name (AdGuard Home)"
+description = "The AdGuard Home user; Pi-hole has none"
+
+[[preferences]]
+name = "kind"
+title = "Server kind"
+description = "Leave empty to detect, or pihole / adguard"

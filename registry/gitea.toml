@@ -1,0 +1,13 @@
+id = "gitea"
+title = "Gitea & Forgejo"
+description = "Pull requests to review, issues, repositories and notifications of your Gitea or Forgejo server, self-hosted or Codeberg-like"
+author = "Backslash"
+icon = "bs-repo"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/gitea"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:e376fb7103e37455891de1609613e5ee744be2737d8b10aef572d8222439d204"
+permissions = ["Access any website", "Access codeberg.org", "Access gitea.com", "Access secure.gravatar.com", "Access seccdn.libravatar.org"]
+commands = ["My Gitea Pull Requests", "My Gitea Issues", "Search Gitea Repositories", "Gitea Notifications"]
+

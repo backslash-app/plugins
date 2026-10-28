@@ -1,0 +1,48 @@
+[extension]
+id = "image-tools"
+title = "Image Tools"
+description = "Resize, convert, compress, rotate and clean the metadata of pictures copied in your file manager"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-image"
+license = "MIT"
+
+# ImageMagick (magick, or convert and identify for version 6) does the work;
+# exiftool reads EXIF and strips metadata without re-encoding; cwebp and
+# avifenc are used when ImageMagick can't write WebP or AVIF. Files copied in
+# the file manager are read with wl-paste (Wayland) or xclip (X11) as
+# text/uri-list. The results are written next to the originals by those tools,
+# never over a file.
+[permissions]
+run = ["magick", "convert", "identify", "exiftool", "cwebp", "avifenc", "wl-paste", "xclip"]
+# Copied pictures can be anywhere in the home folder or on a mounted drive:
+# read to show their size, dimensions and preview, and to never overwrite a file.
+read = ["~", "/media", "/run/media", "/mnt", "/etc/os-release"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "image-tools"
+title = "Image Tools"
+description = "Copied pictures and your recent ones: resize, convert, compress, rotate, strip metadata"
+icon = "bs-image"
+keywords = [
+  "image",
+  "picture",
+  "photo",
+  "resize",
+  "redimensionner",
+  "convert",
+  "convertir",
+  "compress",
+  "compresser",
+  "webp",
+  "avif",
+  "jpg",
+  "png",
+  "exif",
+  "métadonnées",
+  "metadata",
+  "rotate",
+  "pivoter",
+]

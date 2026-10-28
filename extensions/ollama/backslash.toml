@@ -1,0 +1,34 @@
+[extension]
+id = "ollama"
+title = "Ollama Models"
+description = "See the local Ollama models and the ones loaded in memory, pull new ones with live progress and delete them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-sparkle"
+license = "MIT"
+
+[permissions]
+# The local Ollama server (its default address).
+net = ["127.0.0.1:11434"]
+# ollama --version tells "not installed" from "not running"; systemd-run starts
+# `ollama serve` in the background when asked.
+run = ["ollama", "systemd-run"]
+read = ["/etc/os-release"]
+
+[[commands]]
+name = "models"
+title = "Ollama Models"
+description = "Installed and running models: size, family, parameters, quantization, memory"
+icon = "bs-sparkle"
+keywords = ["ollama", "llm", "ai", "model", "local", "llama", "qwen", "gemma", "mistral", "modèle", "ia"]
+
+[[commands]]
+name = "pull"
+title = "Pull Ollama Model"
+description = "Download a model from the Ollama library with live progress"
+icon = "bs-download"
+keywords = ["ollama", "pull", "download", "model", "llm", "install", "télécharger", "modèle"]
+
+[[commands.arguments]]
+name = "model"
+placeholder = "llama3.2, qwen3:8b…"

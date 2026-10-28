@@ -1,0 +1,56 @@
+[extension]
+id = "notifications"
+title = "Notifications"
+description = "Do Not Disturb and the notification history for mako, Dunst, SwayNotificationCenter, GNOME, Plasma, Xfce and Cinnamon"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bell"
+license = "MIT"
+
+# gdbus asks which daemon shows notifications; each daemon's own tool switches Do Not Disturb and
+# reads its history; uptime -s dates Dunst's history; the settings apps open on request.
+[permissions]
+env = ["XDG_CURRENT_DESKTOP"]
+run = [
+  "gdbus",
+  "makoctl",
+  "dunstctl",
+  "swaync-client",
+  "gsettings",
+  "xfconf-query",
+  "uptime",
+  "gnome-control-center",
+  "systemsettings",
+  "kcmshell6",
+  "kcmshell5",
+  "xfce4-notifyd-config",
+  "cinnamon-settings",
+]
+
+[[commands]]
+name = "notifications"
+title = "Notifications"
+description = "Do Not Disturb, and the notifications you missed"
+icon = "bs-bell"
+keywords = [
+  "notifications",
+  "notification",
+  "do not disturb",
+  "dnd",
+  "ne pas déranger",
+  "history",
+  "historique",
+  "mako",
+  "dunst",
+  "swaync",
+  "alerts",
+  "alertes",
+]
+
+[[commands]]
+name = "toggle-do-not-disturb"
+title = "Toggle Do Not Disturb"
+description = "Silence notifications, or bring them back"
+icon = "bs-bell-off"
+mode = "no-view"
+keywords = ["dnd", "do not disturb", "ne pas déranger", "silence", "focus", "mute", "notifications"]

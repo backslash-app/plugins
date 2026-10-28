@@ -1,0 +1,14 @@
+# registry/network-tools.toml
+id = "network-tools"
+title = "Network Tools"
+description = "Public IP and location, local interfaces, DNS lookup, whois, ping and a speed test"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/network-tools"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:748082cefa09338dea6f62b9b21cb9add26b690c0c3f154403da881b5de44002"
+permissions = ["Access api.ipify.org", "Access api6.ipify.org", "Access ipinfo.io", "Access cloudflare-dns.com", "Access speed.cloudflare.com", "Run ip", "Run ping", "Run whois", "Run dig", "Read /etc/os-release"]
+commands = ["Network Tools", "Public IP Address", "Copy Public IP", "Network Interfaces", "DNS Lookup", "Ping", "Whois", "Internet Speed Test"]
+

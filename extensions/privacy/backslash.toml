@@ -1,0 +1,51 @@
+[extension]
+id = "privacy"
+title = "Privacy"
+description = "See which apps use your camera, microphone, screen and location, and stop them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-shield"
+license = "MIT"
+
+# pw-dump (PipeWire) shows camera, screen-sharing and microphone streams;
+# pactl (pipewire-pulse or PulseAudio) lists recording streams and mutes them;
+# find and fuser tell who holds /dev/video*; ps names the processes; kill quits
+# them; busctl asks GeoClue which apps follow your location. The settings apps
+# are only started to open the matching settings page.
+[permissions]
+run = [
+  "pw-dump",
+  "pactl",
+  "find",
+  "fuser",
+  "ps",
+  "kill",
+  "busctl",
+  "gnome-control-center",
+  "systemsettings",
+  "pavucontrol",
+]
+env = ["XDG_CURRENT_DESKTOP"]
+
+[[commands]]
+name = "privacy"
+title = "Privacy"
+description = "Apps using the camera, microphone, screen sharing or location right now"
+icon = "bs-shield"
+keywords = [
+  "privacy",
+  "confidentialité",
+  "vie privée",
+  "camera",
+  "caméra",
+  "webcam",
+  "microphone",
+  "micro",
+  "mic",
+  "screen sharing",
+  "partage d'écran",
+  "location",
+  "localisation",
+  "who is listening",
+  "spy",
+]

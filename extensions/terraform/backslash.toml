@@ -1,0 +1,79 @@
+[extension]
+id = "terraform"
+title = "Terraform"
+description = "Terraform and OpenTofu projects with their workspaces, state resources and outputs; init, plan, apply, fmt and validate in your terminal"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+
+[permissions]
+env = ["HOME"]
+# To suggest how to install Terraform or OpenTofu when neither is there.
+read = ["/etc/os-release"]
+# find scans the folders set in the preferences for *.tf files (a fixed read
+# list couldn't cover them); terraform or tofu read the projects it finds.
+# Then the terminals plan and apply run in.
+run = [
+  "terraform",
+  "tofu",
+  "find",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "projects"
+title = "Terraform Projects"
+description = "Folders with *.tf files: workspaces, state resources and outputs; plan and apply in the terminal"
+icon = "bs-layers"
+keywords = [
+  "terraform",
+  "tofu",
+  "opentofu",
+  "iac",
+  "infrastructure",
+  "state",
+  "plan",
+  "apply",
+  "workspace",
+  "outputs",
+  "hcl",
+  "infrastructure as code",
+  "infrastructure en tant que code",
+  "projet",
+  "sorties",
+]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where to look for *.tf files, separated by commas"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace, ~/infra, ~/terraform"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folders deep to look below each folder (1 to 8)"
+type = "number"
+default = 4
+
+[[preferences]]
+name = "program"
+title = "Program"
+description = "terraform or tofu. Leave empty to use whichever is installed (terraform first)"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For init, plan and apply. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

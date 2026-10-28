@@ -1,0 +1,64 @@
+[extension]
+id = "dev-utils"
+title = "Dev Utils"
+description = "Encode, decode, hash, convert and generate developer values right from the search bar"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-braces"
+license = "MIT"
+
+# No permission: everything runs locally, offline.
+
+[[commands]]
+name = "dev-utils"
+title = "Dev Utils"
+description = "Paste a value: base64, URL, hashes, JWT, timestamps, JSON, number bases, case, counts"
+icon = "bs-braces"
+keywords = [
+  "base64",
+  "url",
+  "encode",
+  "decode",
+  "hash",
+  "md5",
+  "sha256",
+  "jwt",
+  "timestamp",
+  "epoch",
+  "json",
+  "hex",
+  "binary",
+  "case",
+  "camel",
+  "snake",
+  "count",
+  "uuid",
+  "password",
+  "lorem",
+  "encoder",
+  "décoder",
+  "convertir",
+  "mot de passe",
+]
+
+[[commands]]
+name = "copy-uuid"
+title = "Copy New UUID"
+description = "Copy a random UUID v4 to the clipboard"
+icon = "bs-tag"
+mode = "no-view"
+keywords = ["uuid", "guid", "generate", "générer", "identifiant"]
+
+[[commands]]
+name = "copy-password"
+title = "Copy New Password"
+description = "Copy a strong random password to the clipboard"
+icon = "bs-lock"
+mode = "no-view"
+keywords = ["password", "generate", "random", "mot de passe", "générer"]
+[[commands.arguments]]
+name = "length"
+placeholder = "Length (20)"
+type = "number"
+min = 8
+max = 256

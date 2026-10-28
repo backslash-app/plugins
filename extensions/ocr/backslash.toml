@@ -1,0 +1,49 @@
+[extension]
+id = "ocr"
+title = "Text from Screen"
+description = "Select any part of the screen and copy the text in it, recognized offline with Tesseract"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-scan"
+license = "MIT"
+
+# The selection runs in the background (systemd-run) once the launcher is
+# hidden: grim + slurp (Sway, Hyprland, wlroots), gnome-screenshot (GNOME),
+# spectacle (KDE), maim, scrot or ImageMagick's import (X11), then tesseract.
+# The grabbers are only started here to check that they are installed.
+# Recognized texts are kept in ~/.cache/backslash/ocr (the last 30).
+[permissions]
+run = ["systemd-run", "tesseract", "grim", "slurp", "gnome-screenshot", "spectacle", "maim", "scrot", "import"]
+read = ["~/.cache/backslash/ocr", "/etc/os-release"]
+write = ["~/.cache/backslash/ocr"]
+env = [
+  "HOME",
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "XAUTHORITY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+]
+
+[[commands]]
+name = "ocr"
+title = "Copy Text from Screen"
+description = "Select an area: its text goes to the clipboard"
+icon = "bs-scan"
+mode = "no-view"
+keywords = ["ocr", "text", "texte", "écran", "screen", "copy", "copier", "tesseract", "recognize", "reconnaissance", "extract"]
+
+[[commands]]
+name = "screen-text"
+title = "Text from Screen"
+description = "Read text, find what you read, and the installed languages"
+icon = "bs-text"
+keywords = ["ocr", "text", "texte", "langues", "languages", "tesseract", "history", "historique"]
+
+[[preferences]]
+name = "languages"
+title = "Languages"
+description = "Tesseract codes joined by +, e.g. eng+fra (see the installed ones in Text from Screen)"
+default = "eng"

@@ -1,0 +1,59 @@
+{
+  "items": [
+    {
+      "tags": ["git", "version-control", "git-commit", "undo"],
+      "owner": {
+        "account_id": 6371,
+        "reputation": 79855,
+        "user_id": 89904,
+        "user_type": "registered",
+        "accept_rate": 81,
+        "profile_image": "https://www.gravatar.com/avatar/f9b6b8f1c8a3c4e9b2b4bce1a3a1e0a8?s=256&d=identicon&r=PG",
+        "display_name": "Hamza Yerlikaya",
+        "link": "https://stackoverflow.com/users/89904/hamza-yerlikaya"
+      },
+      "is_answered": true,
+      "view_count": 14462305,
+      "protected_date": 1381225408,
+      "accepted_answer_id": 927386,
+      "answer_count": 106,
+      "community_owned_date": 1426019340,
+      "score": 26741,
+      "last_activity_date": 1760000000,
+      "creation_date": 1243620554,
+      "last_edit_date": 1716000000,
+      "question_id": 927358,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git",
+      "title": "How do I undo the most recent local commits in Git?",
+      "body": "<p>I accidentally <strong>committed the wrong files</strong> to <a href=\"https://en.wikipedia.org/wiki/Git\" rel=\"noreferrer\">Git</a>, but didn&#39;t push the commit to the server yet.</p>\n<p>How do I undo those commits from the <em>local</em> repository?</p>\n"
+    },
+    {
+      "tags": ["git"],
+      "owner": {
+        "account_id": 1,
+        "reputation": 12,
+        "user_id": 2,
+        "user_type": "registered",
+        "display_name": "new_user&amp;co",
+        "link": "https://stackoverflow.com/users/2/new-user"
+      },
+      "is_answered": false,
+      "view_count": 31,
+      "answer_count": 0,
+      "score": -2,
+      "last_activity_date": 1761000000,
+      "creation_date": 1761000000,
+      "question_id": 79800001,
+      "content_license": "CC BY-SA 4.0",
+      "link": "https://stackoverflow.com/questions/79800001/git-undo-doesn-t-work",
+      "title": "git &quot;undo&quot; doesn&#39;t work",
+      "closed_date": 1761003600,
+      "closed_reason": "Duplicate",
+      "body": "<p>Same as <a href=\"/questions/927358\">this</a> but with <code>git reset</code>.</p>"
+    }
+  ],
+  "has_more": true,
+  "quota_max": 300,
+  "quota_remaining": 287
+}

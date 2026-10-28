@@ -1,0 +1,84 @@
+[extension]
+id = "projects"
+title = "Code Projects"
+description = "Recent projects of VS Code, VSCodium, Cursor, Zed and JetBrains IDEs, plus your git folders"
+version = "1.1.0"
+author = "Backslash"
+icon = "bs-code"
+license = "MIT"
+
+[permissions]
+env = ["HOME"]
+read = [
+  "~/.config/Code",
+  "~/.config/Code - OSS",
+  "~/.config/VSCodium",
+  "~/.config/Cursor",
+  "~/.config/Windsurf",
+  "~/.var/app/com.visualstudio.code/config/Code",
+  "~/.var/app/com.vscodium.codium/config/VSCodium",
+  "~/.config/JetBrains",
+  "~/.local/share/zed",
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "/tmp/backslash-projects",
+]
+# Editor databases are copied there to be read while the editor runs.
+write = ["/tmp/backslash-projects"]
+run = [
+  "git",
+  "code",
+  "code-oss",
+  "codium",
+  "cursor",
+  "windsurf",
+  "zed",
+  "zeditor",
+  "idea",
+  "pycharm",
+  "webstorm",
+  "goland",
+  "clion",
+  "rustrover",
+  "phpstorm",
+  "rider",
+  "rubymine",
+  "datagrip",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "projects"
+title = "Search Projects"
+description = "Open a project in its editor or a terminal"
+keywords = ["code", "vscode", "cursor", "zed", "jetbrains", "idea", "git", "repo", "projet"]
+
+[[preferences]]
+name = "editor"
+title = "Editor for git folders"
+description = "Command opening folders found in ~/Projects, ~/code…: code, codium, cursor, zed, idea…"
+default = "code"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

@@ -1,0 +1,13 @@
+id = "status-pages"
+title = "Status Pages"
+description = "Is GitHub down? Live health of the developer services you depend on, with their components and incident updates"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/status-pages"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:9a29418076c18ea6c9ca96550c7e84879571d57559dbd4dff15b456ae9580dac"
+permissions = ["Access www.githubstatus.com", "Access www.cloudflarestatus.com", "Access www.vercel-status.com", "Access www.netlifystatus.com", "Access status.npmjs.org", "Access discordstatus.com", "Access jira-software.status.atlassian.com", "Access confluence.status.atlassian.com", "Access bitbucket.status.atlassian.com", "Access status.anthropic.com", "Access status.claude.com", "Access status.digitalocean.com", "Access status.sentry.io", "Access status.twilio.com", "Access www.redditstatus.com", "Access status.dropbox.com", "Access status.zoom.us", "Access status.figma.com", "Access status.circleci.com", "Access status.supabase.com", "Access status.flyio.net", "Access *.statuspage.io"]
+commands = ["Service Status"]
+

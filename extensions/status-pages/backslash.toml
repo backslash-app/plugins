@@ -1,0 +1,65 @@
+[extension]
+id = "status-pages"
+title = "Status Pages"
+description = "Is GitHub down? Live health of the developer services you depend on, with their components and incident updates"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+
+# The public Atlassian Statuspage feeds (/api/v2/summary.json) of the built-in
+# services. status.anthropic.com redirects to status.claude.com. Every
+# Statuspage page is also served at <page id>.statuspage.io, which is how
+# custom pages are reached without asking for every host on the internet.
+[permissions]
+net = [
+  "www.githubstatus.com",
+  "www.cloudflarestatus.com",
+  "www.vercel-status.com",
+  "www.netlifystatus.com",
+  "status.npmjs.org",
+  "discordstatus.com",
+  "jira-software.status.atlassian.com",
+  "confluence.status.atlassian.com",
+  "bitbucket.status.atlassian.com",
+  "status.anthropic.com",
+  "status.claude.com",
+  "status.digitalocean.com",
+  "status.sentry.io",
+  "status.twilio.com",
+  "www.redditstatus.com",
+  "status.dropbox.com",
+  "status.zoom.us",
+  "status.figma.com",
+  "status.circleci.com",
+  "status.supabase.com",
+  "status.flyio.net",
+  "*.statuspage.io",
+]
+
+[[commands]]
+name = "status"
+title = "Service Status"
+description = "Outages first, with affected components and the latest incident updates"
+icon = "bs-activity"
+keywords = [
+  "status",
+  "outage",
+  "down",
+  "incident",
+  "uptime",
+  "health",
+  "github",
+  "cloudflare",
+  "vercel",
+  "npm",
+  "statuspage",
+  "panne",
+  "état",
+  "disponibilité",
+]
+
+[[preferences]]
+name = "custom"
+title = "Custom status pages"
+description = "Other Atlassian Statuspage pages, comma-separated as Name=page id, e.g. Acme=abc123xyz. The page id is page.id in the page's /api/v2/summary.json; the page is then read from <id>.statuspage.io"

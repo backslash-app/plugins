@@ -1,0 +1,14 @@
+# registry/stocks.toml
+id = "stocks"
+title = "Stocks"
+description = "A stock watchlist with live quotes, day ranges, company profiles and news, from Finnhub's free API"
+author = "Backslash"
+icon = "bs-chart-up"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/stocks"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:04b2a27255296b46af1eef10953133447af11c87d99e6ce60cb0fab15eac6cfb"
+permissions = ["Access finnhub.io", "Access static2.finnhub.io"]
+commands = ["Stock Watchlist"]
+

@@ -1,0 +1,14 @@
+# registry/wikipedia.toml
+id = "wikipedia"
+title = "Wikipedia"
+description = "Search Wikipedia in your language, read summaries and whole articles, and discover random pages"
+author = "Backslash"
+icon = "bs-book"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/wikipedia"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:56bbc681bf34277b050cc3495eba11cd299e775dcc0423812b1f103e1bbc9050"
+permissions = ["Access en.wikipedia.org", "Access fr.wikipedia.org", "Access de.wikipedia.org", "Access es.wikipedia.org", "Access it.wikipedia.org", "Access pt.wikipedia.org", "Access nl.wikipedia.org", "Access pl.wikipedia.org", "Access ja.wikipedia.org", "Access zh.wikipedia.org", "Access ru.wikipedia.org", "Access sv.wikipedia.org", "Access uk.wikipedia.org", "Access ar.wikipedia.org", "Access ca.wikipedia.org", "Access cs.wikipedia.org", "Access fi.wikipedia.org", "Access ko.wikipedia.org", "Access no.wikipedia.org", "Access tr.wikipedia.org", "Access vi.wikipedia.org", "Access he.wikipedia.org", "Access id.wikipedia.org", "Access fa.wikipedia.org", "Access simple.wikipedia.org", "Access *.wikipedia.org", "Access upload.wikimedia.org", "Read the environment variable LANG", "Read the environment variable LC_ALL", "Read the environment variable LC_MESSAGES"]
+commands = ["Search Wikipedia", "Random Wikipedia Article", "On This Day"]
+

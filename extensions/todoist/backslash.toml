@@ -1,0 +1,41 @@
+[extension]
+id = "todoist"
+title = "Todoist"
+description = "Today's tasks, search and quick add in natural language"
+version = "1.1.0"
+author = "Backslash"
+icon = "bs-circle-check"
+license = "MIT"
+
+[permissions]
+net = ["api.todoist.com"]
+
+[[commands]]
+name = "today"
+title = "Todoist Today"
+description = "Overdue and today's tasks; complete them with Enter"
+keywords = ["todoist", "tasks", "todo", "today", "tâches", "aujourd'hui"]
+
+[[commands]]
+name = "tasks"
+title = "Search Todoist Tasks"
+description = "All your tasks, by project"
+keywords = ["todoist", "tasks", "todo", "find", "tâches"]
+
+[[commands]]
+name = "add"
+title = "Add Todoist Task"
+description = "Natural language: “Call Bob tomorrow 5pm #Work p1”"
+mode = "no-view"
+keywords = ["todoist", "add", "new", "task", "todo", "ajouter", "tâche"]
+[[commands.arguments]]
+name = "task"
+placeholder = "Call Bob tomorrow 5pm #Work p1"
+required = true
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "Todoist → Settings → Integrations → Developer → API token"
+type = "secret"
+required = true

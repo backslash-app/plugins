@@ -1,0 +1,52 @@
+[extension]
+id = "home-assistant"
+title = "Home Assistant"
+description = "Lights, switches, covers, climate, media players, scenes, scripts and sensors of your Home Assistant: toggle, dim, set the temperature, run scenes"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-home"
+license = "MIT"
+
+# Home Assistant runs on your own server, and hosts must be declared ahead:
+# the local network (mDNS names and private IPv4 ranges, which Deno's
+# --allow-net accepts as CIDR), Tailscale, and the usual remote access
+# (Nabu Casa, DuckDNS). A custom domain outside these is not reachable.
+# Same list as HOSTS in api.ts.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "homeassistant",
+  "homeassistant.local",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ui.nabu.casa",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "entities"
+title = "Home Assistant"
+description = "Controls, sensors or all entities, by domain"
+icon = "bs-home"
+keywords = ["home assistant", "hass", "smart home", "lights", "switch", "thermostat", "scene", "sensor", "domotique", "maison"]
+
+[[preferences]]
+name = "url"
+title = "Home Assistant address"
+description = "As you open it in the browser: http://homeassistant.local:8123, http://192.168.1.20:8123 or https://xxxx.ui.nabu.casa"
+default = "http://homeassistant.local:8123"
+required = true
+
+[[preferences]]
+name = "token"
+title = "Long-lived access token"
+description = "Home Assistant → your profile → Security → Long-lived access tokens → Create token"
+type = "secret"
+required = true

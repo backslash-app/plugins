@@ -1,0 +1,46 @@
+[extension]
+id = "quick-notes"
+title = "Quick Notes"
+description = "Jot, find, pin and paste notes kept as plain markdown files, ready for Obsidian, your editor or sync"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-note"
+license = "MIT"
+
+# Notes are .md files in a folder you choose, inside ~/Documents (default ~/Documents/Notes).
+[permissions]
+read = ["~/Documents"]
+write = ["~/Documents"]
+env = ["HOME"]
+
+[[commands]]
+name = "notes"
+title = "Search Quick Notes"
+description = "Your notes, pinned first; edit, copy, paste, pin"
+icon = "bs-note"
+keywords = ["notes", "note", "memo", "markdown", "jot", "scratchpad", "bloc-notes", "mémo", "pense-bête"]
+
+[[commands]]
+name = "new"
+title = "New Quick Note"
+description = "Write a note with a title and markdown text"
+icon = "bs-plus"
+keywords = ["note", "new", "create", "write", "nouvelle note", "créer", "écrire"]
+
+[[commands]]
+name = "capture"
+title = "Capture Quick Note"
+description = "Save a one-line note without leaving the search bar"
+icon = "bs-bolt"
+mode = "no-view"
+keywords = ["note", "capture", "jot", "quick", "noter", "rapide"]
+[[commands.arguments]]
+name = "text"
+placeholder = "Call the bank about the card"
+required = true
+
+[[preferences]]
+name = "folder"
+title = "Notes folder"
+description = "Inside ~/Documents. Created when you save your first note"
+default = "~/Documents/Notes"

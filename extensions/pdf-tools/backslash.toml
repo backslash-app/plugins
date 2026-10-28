@@ -1,0 +1,71 @@
+[extension]
+id = "pdf-tools"
+title = "PDF Tools"
+description = "Merge, split, compress, rotate and unlock PDFs copied in your file manager, and turn pictures into PDFs"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-file"
+license = "MIT"
+
+# Each operation uses the first installed tool that can do it: qpdf, pdftk,
+# poppler (pdfinfo, pdftoppm, pdfunite, pdfseparate) or Ghostscript (gs, the
+# only one that compresses); img2pdf or ImageMagick (magick, convert) turn
+# pictures into a PDF. Files copied in the file manager are read with wl-paste
+# (Wayland) or xclip (X11) as text/uri-list. Results are written next to the
+# originals by those tools, never over a file. First-page previews are cached
+# in ~/.cache/backslash/pdf-tools.
+[permissions]
+run = [
+  "qpdf",
+  "gs",
+  "pdftk",
+  "pdfinfo",
+  "pdftoppm",
+  "pdfunite",
+  "pdfseparate",
+  "img2pdf",
+  "magick",
+  "convert",
+  "wl-paste",
+  "xclip",
+]
+# Copied PDFs can be anywhere in the home folder or on a mounted drive: read to
+# show their size and to never overwrite a file.
+read = ["~", "/media", "/run/media", "/mnt", "/etc/os-release"]
+# Folders for split pages and pictures are created next to the original; the
+# cache holds previews and temporary pages.
+write = ["~", "/media", "/run/media", "/mnt"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "pdf-tools"
+title = "PDF Tools"
+description = "Copied and recent PDFs: merge, extract pages, compress, rotate, remove a password, export pictures"
+icon = "bs-file"
+keywords = [
+  "pdf",
+  "merge",
+  "fusionner",
+  "split",
+  "diviser",
+  "découper",
+  "compress",
+  "compresser",
+  "rotate",
+  "pivoter",
+  "password",
+  "mot de passe",
+  "unlock",
+  "déverrouiller",
+  "pages",
+  "qpdf",
+  "ghostscript",
+]
+
+[[commands]]
+name = "merge"
+title = "PDF Merge List"
+description = "The PDFs to merge, in order: reorder them, then merge"
+icon = "bs-layers"
+keywords = ["pdf", "merge", "fusionner", "combine", "combiner", "join", "assembler"]

@@ -1,0 +1,13 @@
+id = "licenses"
+title = "Licenses"
+description = "Open source licenses with their permissions, conditions and limitations; copy the text or add it to a project"
+author = "Backslash"
+icon = "bs-shield"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/licenses"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:1472398e07a81e399818e953414f142360b3a91d89cc2eb51537bbf350025462"
+permissions = ["Access raw.githubusercontent.com", "Run git", "Read ~", "Write ~", "Read the environment variable HOME", "Read the environment variable USER"]
+commands = ["Licenses"]
+

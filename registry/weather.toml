@@ -1,0 +1,14 @@
+# registry/weather.toml
+id = "weather"
+title = "Weather"
+description = "Current conditions, the next 24 hours and the week ahead for any city, from Open-Meteo"
+author = "Backslash"
+icon = "bs-cloud-sun"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/weather"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:3d140cafc2f16f97884f9bb614288abfcd23f536ffcc3f8fa9fe0198fcf04d2a"
+permissions = ["Access geocoding-api.open-meteo.com", "Access api.open-meteo.com"]
+commands = ["Weather"]
+

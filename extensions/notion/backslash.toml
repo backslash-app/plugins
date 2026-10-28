@@ -1,0 +1,39 @@
+[extension]
+id = "notion"
+title = "Notion"
+description = "Search the pages and databases shared with your integration, read them, add text to a page, create pages in a database"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-note"
+license = "MIT"
+
+[permissions]
+net = ["api.notion.com"]
+
+[[commands]]
+name = "search"
+title = "Search Notion"
+description = "Pages and databases, recently edited first"
+icon = "bs-search"
+keywords = ["notion", "pages", "docs", "wiki", "notes", "database", "find"]
+
+[[commands]]
+name = "add-to-page"
+title = "Add to Notion Page"
+description = "Append text, a to-do or a list to a page"
+icon = "bs-plus"
+keywords = ["notion", "append", "add", "note", "todo", "journal", "capture"]
+
+[[commands]]
+name = "create-page"
+title = "Create Notion Page"
+description = "A new page in one of your databases, with its properties"
+icon = "bs-file"
+keywords = ["notion", "new", "page", "database", "create", "entry", "row"]
+
+[[preferences]]
+name = "token"
+title = "Internal integration secret"
+description = "notion.so/profile/integrations → New integration → Internal Integration Secret. Share pages with it: ••• → Connections"
+type = "secret"
+required = true

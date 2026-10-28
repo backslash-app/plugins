@@ -1,0 +1,17 @@
+[extension]
+id = "systemd"
+title = "Services"
+description = "Start, stop and inspect systemd services"
+version = "1.1.0"
+author = "Backslash"
+icon = "bs-server"
+license = "MIT"
+
+[permissions]
+run = ["systemctl", "journalctl"]
+
+[[commands]]
+name = "services"
+title = "Services"
+description = "Your user services and the system's"
+keywords = ["systemd", "systemctl", "daemon", "unit", "restart"]

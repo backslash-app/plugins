@@ -1,0 +1,38 @@
+{
+  "camera": [
+    "photography",
+    "lens",
+    "focus",
+    "capture",
+    "shot",
+    "visual",
+    "image",
+    "device",
+    "equipment",
+    "photo",
+    "webcam",
+    "video"
+  ],
+  "camera-off": [
+    "photo",
+    "webcam",
+    "video"
+  ],
+  "arrow-down-0-1": [
+    "filter",
+    "sort",
+    "ascending",
+    "descending",
+    "increasing",
+    "decreasing",
+    "rising",
+    "falling",
+    "numerical"
+  ],
+  "switch-camera": [
+    "photo",
+    "selfie",
+    "front",
+    "back"
+  ]
+}

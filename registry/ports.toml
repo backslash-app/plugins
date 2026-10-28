@@ -1,0 +1,14 @@
+# registry/ports.toml
+id = "ports"
+title = "Ports"
+description = "What listens on :3000? Dev servers and services by port, with their process and project"
+author = "Backslash"
+icon = "bs-plug"
+version = "1.1.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/ports"
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:1ae873601bac3850d55d1d59a3778dd150c9d3229d983a8a2342f01c36fec256"
+permissions = ["Run ss", "Run ps", "Run readlink", "Run kill", "Read the environment variable HOME"]
+commands = ["Listening Ports"]
+

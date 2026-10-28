@@ -1,0 +1,14 @@
+# registry/packages.toml
+id = "packages"
+title = "Packages"
+description = "Search your distribution's packages and Flathub"
+author = "Backslash"
+icon = "bs-package"
+version = "1.1.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/packages"
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:6a40605ea44b58a1ad25bed1fe842435184725b3d7c3b75043988a7dc8745914"
+permissions = ["Run apt-cache", "Run dnf", "Run pacman", "Run zypper", "Run flatpak"]
+commands = ["Search Packages"]
+

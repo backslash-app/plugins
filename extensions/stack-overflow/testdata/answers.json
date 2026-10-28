@@ -1,0 +1,41 @@
+{
+  "items": [
+    {
+      "owner": {
+        "account_id": 2,
+        "reputation": 1502,
+        "user_id": 3,
+        "user_type": "registered",
+        "display_name": "Top Voter"
+      },
+      "is_accepted": false,
+      "score": 30000,
+      "last_activity_date": 1700000000,
+      "creation_date": 1243620700,
+      "answer_id": 927400,
+      "question_id": 927358,
+      "content_license": "CC BY-SA 4.0",
+      "body": "<p>Use <code>git restore</code>.</p>"
+    },
+    {
+      "owner": {
+        "account_id": 1,
+        "reputation": 2000000,
+        "user_id": 1,
+        "user_type": "registered",
+        "display_name": "Esko Luontola"
+      },
+      "is_accepted": true,
+      "score": 28900,
+      "last_activity_date": 1755000000,
+      "creation_date": 1243620600,
+      "answer_id": 927386,
+      "question_id": 927358,
+      "content_license": "CC BY-SA 4.0",
+      "body": "<h1>Undo a commit &amp; redo</h1>\n<pre class=\"lang-bash s-code-block\"><code class=\"hljs language-bash\">$ git commit -m <span class=\"hljs-string\">&quot;Something terribly misguided&quot;</span> <span class=\"hljs-comment\"># (0: Your Accident)</span>\n$ git reset HEAD~                              <span class=\"hljs-comment\"># (1)</span>\n</code></pre>\n<ol>\n<li><code>git reset</code> is the command responsible for the <strong>undo</strong>. It will undo your last commit while <em>leaving your working tree untouched</em>.</li>\n<li>Make corrections to <code>working_tree</code> files.\n<ul><li>add with <code>git add</code></li></ul></li>\n</ol>\n<blockquote>\n<p><strong>Note:</strong> see <a href=\"/a/6866485\">this answer</a>.</p>\n</blockquote>\n<p>Alternatively:</p>\n<pre><code>git commit --amend\n</code></pre>\n"
+    }
+  ],
+  "has_more": false,
+  "quota_max": 300,
+  "quota_remaining": 286
+}

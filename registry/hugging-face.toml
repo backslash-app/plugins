@@ -1,0 +1,13 @@
+id = "hugging-face"
+title = "Hugging Face"
+description = "Search Hugging Face models, datasets and Spaces with downloads, likes, licenses and model cards"
+author = "Backslash"
+icon = "bs-sparkle"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/hugging-face"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:e6df6ca224605fd93b5dcc3f460ae41c1b32214454736b1075002350b121619c"
+permissions = ["Access huggingface.co"]
+commands = ["Search Hugging Face"]
+

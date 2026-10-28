@@ -1,0 +1,13 @@
+id = "pagerduty"
+title = "PagerDuty"
+description = "Open PagerDuty incidents with their urgency, service and assignees; acknowledge, resolve, reassign, add notes, and see who is on call"
+author = "Backslash"
+icon = "bs-bell"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/pagerduty"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:7a31f21449e81a3a6088f65815f0ac6ea43d5199f12320d9dafcc7a578421b4c"
+permissions = ["Access api.pagerduty.com", "Access api.eu.pagerduty.com", "Access secure.gravatar.com"]
+commands = ["PagerDuty Incidents", "Who's On Call"]
+

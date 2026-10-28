@@ -1,0 +1,13 @@
+id = "text-diff"
+title = "Text Diff"
+description = "Compare two texts line by line and word by word: clipboard, selection or clipboard history, with a unified patch to copy"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/text-diff"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:14393e09bdefbd3829cab84315c07e7b014950657d8ee99f48ed5edc08505586"
+permissions = ["Run wl-paste", "Run xclip", "Run xsel", "Read ~/.local/state/backslash/clipboard.json", "Read the environment variable HOME", "Read the clipboard"]
+commands = ["Compare Clipboard with Selection", "Compare Texts", "Compare Clipboard History"]
+
