@@ -18,6 +18,7 @@ jobs:
       - run: deno fmt --check extensions scripts
       - run: deno lint extensions scripts
       - run: deno check extensions/*/commands/*.ts
-      - run: deno test extensions
+      # Tests may use files, the environment and programs (fake CLIs, `sh -n`), never the network.
+      - run: deno test --allow-read --allow-write --allow-env --allow-run extensions
       - name: Verify registry entries (clones each extension at its commit)
         run: deno run -A scripts/validate.ts

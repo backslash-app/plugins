@@ -126,6 +126,6 @@ SDK), which look the same on every desktop.
 ```sh
 git clone https://github.com/backslash-app/backslash .backslash   # for the SDK types
 deno check extensions/*/commands/*.ts
-deno test extensions                # parsers of each extension (lib_test.ts)
+deno test --allow-read --allow-write --allow-env --allow-run extensions   # what CI runs
 backslash dev extensions/github     # live reload in the launcher
 ```
