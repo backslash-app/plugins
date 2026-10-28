@@ -1,0 +1,41 @@
+[extension]
+id = "power"
+title = "Power"
+description = "Switch power profiles and check your battery's charge, health, cycles and time left"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-battery"
+license = "MIT"
+
+# Profiles: powerprofilesctl (power-profiles-daemon, tuned-ppd) or tuned-adm.
+# Batteries: the kernel's /sys/class/power_supply values, read through
+# udevadm (Deno doesn't allow reading /sys), else upower.
+[permissions]
+run = ["powerprofilesctl", "tuned-adm", "udevadm", "upower"]
+
+[[commands]]
+name = "power"
+title = "Power"
+description = "Power profile and battery"
+icon = "bs-battery"
+keywords = ["power", "battery", "batterie", "énergie", "profile", "profil", "performance", "économie d'énergie", "charge", "autonomie"]
+
+[[commands]]
+name = "set-profile"
+title = "Set Power Profile"
+description = "power-saver, balanced or performance"
+icon = "bs-bolt"
+mode = "no-view"
+keywords = ["power", "profile", "profil", "performance", "balanced", "power saver", "économie"]
+[[commands.arguments]]
+name = "profile"
+placeholder = "power-saver, balanced, performance"
+required = true
+
+[[commands]]
+name = "next-profile"
+title = "Next Power Profile"
+description = "Power Saver → Balanced → Performance"
+icon = "bs-bolt"
+mode = "no-view"
+keywords = ["power", "profile", "profil", "cycle", "switch", "changer"]

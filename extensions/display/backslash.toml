@@ -1,0 +1,105 @@
+[extension]
+id = "display"
+title = "Display"
+description = "Screen brightness with presets, night light, and your monitors' resolution, refresh rate and scale"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-monitor"
+license = "MIT"
+
+# Brightness: brightnessctl, or the kernel's backlight read through udevadm
+# and written through systemd-logind (busctl, no root needed); ddcutil for
+# external monitors when enabled. Night light: GNOME (gsettings), KDE Plasma
+# (busctl, kwriteconfig6/5), or hyprsunset, wlsunset, gammastep or Redshift
+# run as a systemd user unit (systemd-run, systemctl). Monitors: hyprctl,
+# swaymsg, kscreen-doctor, GNOME's Mutter (gdbus), wlr-randr or xrandr.
+[permissions]
+run = [
+  "brightnessctl",
+  "udevadm",
+  "busctl",
+  "ddcutil",
+  "gsettings",
+  "kwriteconfig6",
+  "kwriteconfig5",
+  "hyprsunset",
+  "wlsunset",
+  "gammastep",
+  "redshift",
+  "systemd-run",
+  "systemctl",
+  "hyprctl",
+  "swaymsg",
+  "kscreen-doctor",
+  "gdbus",
+  "wlr-randr",
+  "xrandr",
+]
+read = ["/etc/os-release"]
+env = [
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "XAUTHORITY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+]
+
+[[commands]]
+name = "display"
+title = "Display"
+description = "Brightness, night light and monitors"
+icon = "bs-monitor"
+keywords = ["display", "screen", "écran", "brightness", "luminosité", "monitor", "moniteur", "night light", "résolution", "resolution"]
+
+[[commands]]
+name = "set-brightness"
+title = "Set Brightness"
+description = "e.g. 50 for half"
+icon = "bs-sun"
+mode = "no-view"
+keywords = ["brightness", "luminosité", "backlight", "screen", "écran"]
+[[commands.arguments]]
+name = "level"
+placeholder = "0–100"
+type = "number"
+min = 0
+max = 100
+required = true
+
+[[commands]]
+name = "brightness-up"
+title = "Increase Brightness"
+icon = "bs-sun"
+mode = "no-view"
+keywords = ["brightness", "brighter", "luminosité", "plus lumineux", "augmenter"]
+
+[[commands]]
+name = "brightness-down"
+title = "Decrease Brightness"
+icon = "bs-sun"
+mode = "no-view"
+keywords = ["brightness", "dimmer", "dim", "luminosité", "baisser", "diminuer"]
+
+[[commands]]
+name = "night-light"
+title = "Toggle Night Light"
+description = "Warmer colors in the evening"
+icon = "bs-moon"
+mode = "no-view"
+keywords = ["night light", "lumière nocturne", "veilleuse", "blue light", "lumière bleue", "redshift", "gammastep"]
+
+[[preferences]]
+name = "ddc"
+title = "External monitors (DDC/CI)"
+description = "Adjust desktop monitors with ddcutil (needs access to /dev/i2c-*)"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "temperature"
+title = "Night light temperature (K)"
+description = "For hyprsunset, wlsunset, gammastep and Redshift; GNOME and KDE use their own setting"
+type = "number"
+default = 4000

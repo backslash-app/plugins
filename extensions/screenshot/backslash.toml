@@ -1,0 +1,116 @@
+[extension]
+id = "screenshot"
+title = "Screenshot & Recording"
+description = "Capture an area, a window or the whole screen, record the screen, and find your recent captures"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-camera"
+license = "MIT"
+
+# Captures run in the background (systemd-run) once the launcher is hidden,
+# with the first tool installed: grim + slurp (Sway, Hyprland, wlroots),
+# gnome-screenshot (GNOME), spectacle (KDE), maim, scrot or ImageMagick's
+# import (X11); wf-recorder or wl-screenrec (Wayland) and ffmpeg (X11) record.
+# The other programs are only started to check that they are installed.
+# hyprctl and swaymsg list the windows to pick from; gdbus shows a file in
+# the file manager; wl-copy and xclip copy pictures.
+[permissions]
+run = [
+  "systemd-run",
+  "systemctl",
+  "grim",
+  "slurp",
+  "gnome-screenshot",
+  "spectacle",
+  "maim",
+  "scrot",
+  "import",
+  "wf-recorder",
+  "wl-screenrec",
+  "ffmpeg",
+  "slop",
+  "hyprctl",
+  "swaymsg",
+  "wl-copy",
+  "xclip",
+  "gdbus",
+]
+read = ["~/Pictures", "~/Images", "~/Videos", "~/Vidéos", "~/.config/user-dirs.dirs", "/etc/os-release"]
+write = ["~/Pictures", "~/Images", "~/Videos", "~/Vidéos"]
+env = [
+  "HOME",
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "XAUTHORITY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+]
+
+[[commands]]
+name = "screenshots"
+title = "Screenshots & Recordings"
+description = "Capture, record, and browse your recent captures"
+icon = "bs-camera"
+keywords = ["screenshot", "capture", "écran", "capture d'écran", "recording", "enregistrement", "screencast", "print"]
+
+[[commands]]
+name = "capture-area"
+title = "Capture Area"
+description = "Select part of the screen: saved and copied"
+icon = "bs-scan"
+mode = "no-view"
+keywords = ["screenshot", "capture", "region", "zone", "sélection", "écran", "snip"]
+
+[[commands]]
+name = "capture-window"
+title = "Capture Window"
+description = "Click a window: saved and copied"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["screenshot", "capture", "window", "fenêtre", "écran"]
+
+[[commands]]
+name = "capture-screen"
+title = "Capture Full Screen"
+description = "The whole screen: saved and copied"
+icon = "bs-monitor"
+mode = "no-view"
+keywords = ["screenshot", "capture", "full screen", "plein écran", "écran", "print screen"]
+
+[[commands]]
+name = "record"
+title = "Toggle Screen Recording"
+description = "Start recording the screen, or stop and save"
+icon = "bs-video"
+mode = "no-view"
+keywords = ["record", "recording", "screencast", "enregistrer", "vidéo", "écran", "video"]
+
+[[commands]]
+name = "record-area"
+title = "Toggle Area Recording"
+description = "Record part of the screen, or stop and save"
+icon = "bs-video"
+mode = "no-view"
+keywords = ["record", "recording", "region", "enregistrer", "vidéo", "zone", "gif"]
+
+[[preferences]]
+name = "delay"
+title = "Delay before capturing (seconds)"
+description = "Time to open a menu or hover something first"
+type = "number"
+default = 0
+
+[[preferences]]
+name = "copy"
+title = "Copy screenshots to the clipboard"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "audio"
+title = "Record audio"
+description = "Records the default audio input with the screen"
+type = "boolean"
+default = false
