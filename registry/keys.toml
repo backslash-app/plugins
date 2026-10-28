@@ -6,8 +6,9 @@ icon = "bs-key"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/keys"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:2aec1d28edd0a1795ea8a7d8b70e31cb4bd5bd83073b0036454bfeb8a7c7e945"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:bc528565cf7920637b6605f6d1438d0a426de821c233be83ecbda2f886145966"
 permissions = ["Run ssh-keygen", "Run ssh-add", "Run gpg", "Run mkdir", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.ssh", "Read /etc/hostname", "Read the environment variable HOME", "Read the environment variable USER"]
 commands = ["SSH & GPG Keys", "Generate SSH Key"]
+categories = ["system"]
 

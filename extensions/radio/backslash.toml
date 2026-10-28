@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-radio"
 license = "MIT"
+categories = ["media"]
 
 # The radio-browser.info community API: its mirrors, tried in this order
 # (all.api is the round-robin name). Station logos live on each station's own

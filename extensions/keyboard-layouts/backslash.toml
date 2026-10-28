@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-keyboard"
 license = "MIT"
+categories = ["system"]
 
 # The desktop's own tools, the first that answers: gsettings (GNOME, plus gdbus to
 # GNOME Shell), gdbus to org.kde.keyboard (KDE Plasma), hyprctl (Hyprland),

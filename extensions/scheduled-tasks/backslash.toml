@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-calendar"
 license = "MIT"
+categories = ["system"]
 
 # crontab reads (-l) and rewrites (- from stdin, to comment a line out or back
 # in) your own crontab; systemctl lists, starts, enables and disables timers;

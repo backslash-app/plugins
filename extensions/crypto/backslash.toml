@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-coin"
 license = "MIT"
+categories = ["everyday"]
 
 # The CoinGecko public API, and the hosts its coin logos are served from
 # (coin-images is the current CDN, assets the older one still in some answers).

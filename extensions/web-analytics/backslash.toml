@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-chart-up"
 license = "MIT"
+categories = ["developer"]
 
 # Plausible, Umami and PostHog are all commonly self-hosted, on your own
 # domain, which can't be listed in advance: net = ["*"] is unavoidable.

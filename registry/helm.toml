@@ -6,8 +6,9 @@ icon = "bs-package"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/helm"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:054f258efb5595f9adf3ed2949108ddce4f9da9b8daedc4a15a5b2c1fc01307f"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:601f8b5236dc1c93911870b1ed36e2e8df116b1e9ea8821b5c36996479198875"
 permissions = ["Run helm", "Run kubectl", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release"]
 commands = ["Helm Releases"]
+categories = ["developer"]
 

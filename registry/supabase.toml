@@ -6,8 +6,9 @@ icon = "bs-database"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/supabase"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:2e492470dc72e004a5e690b19498e1c03624fe73d64213d115c658c83a595cbd"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:4a9ff4aedff04411901397257e0a9e1b8d8c779faa232f4756c4969c1e555361"
 permissions = ["Access api.supabase.com"]
 commands = ["Supabase Projects"]
+categories = ["developer"]
 

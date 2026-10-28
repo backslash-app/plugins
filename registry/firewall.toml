@@ -6,8 +6,9 @@ icon = "bs-shield"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/firewall"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:8fa6879f75bcef47966b6a0adbd6012248bf4fc6a4700af57c1a551922772bbc"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:d69ced73dae22d3cbfaa1105cd01157eb0ed466648c01dab15fcf78c3a62c28c"
 permissions = ["Run firewall-cmd", "Run pkexec", "Read /etc/ufw/ufw.conf", "Read /etc/default/ufw", "Read /etc/os-release"]
 commands = ["Firewall"]
+categories = ["network"]
 

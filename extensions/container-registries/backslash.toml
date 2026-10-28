@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-box"
 license = "MIT"
+categories = ["developer"]
 
 [permissions]
 # Docker Hub's API; GHCR's and Quay's registry API with anonymous pull tokens

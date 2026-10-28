@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-rss"
 license = "MIT"
+categories = ["everyday"]
 
 # RSS feeds live on hosts the user chooses, so the extension may reach any
 # website ("*" is the only way to allow hosts not known in advance). Hacker News

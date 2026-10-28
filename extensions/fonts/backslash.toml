@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-font"
 license = "MIT"
+categories = ["system"]
 
 # fc-list and fc-cache (fontconfig) list fonts and refresh the cache after an install.
 # pango-view (Pango) or ImageMagick's convert, when installed, render previews

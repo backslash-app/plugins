@@ -6,8 +6,9 @@ icon = "bs-apps"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/gnome-extensions"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:301848ab65f9be7756bffa1627a41bdab2987aa8d0877ceba0d665737ff12ea3"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:ad5670b0fb6335d7bef5263500992eeece7284192313761831d0e4344b348986"
 permissions = ["Access extensions.gnome.org", "Run gnome-extensions", "Run gnome-shell", "Run gsettings", "Run gdbus", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP"]
 commands = ["GNOME Extensions", "Install GNOME Extension"]
+categories = ["system"]
 

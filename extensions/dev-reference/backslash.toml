@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-book"
 license = "MIT"
+categories = ["developer"]
 
 # No permission: the tables ship with the extension.
 

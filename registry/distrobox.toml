@@ -1,4 +1,3 @@
-# registry/distrobox.toml
 id = "distrobox"
 title = "Containers & VMs"
 description = "Enter distrobox and toolbx containers, and start, stop or open your libvirt virtual machines"
@@ -7,8 +6,9 @@ icon = "bs-layers"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/distrobox"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:d8199b52e3f0e1386e2576fb019eb45ea4d45f7298eb66463a4a2fd5af7d3155"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:1dbc0d957b7bd51b0fe7872532403251064573f98596a982adb434305f0f3296"
 permissions = ["Run distrobox", "Run toolbox", "Run podman", "Run virsh", "Run virt-manager", "Run virt-viewer", "Run gnome-boxes", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm"]
 commands = ["Containers & VMs"]
+categories = ["developer"]
 

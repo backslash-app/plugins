@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-film"
 license = "MIT"
+categories = ["media"]
 
 # Media servers run on your own machine, and hosts must be declared ahead
 # (the approach of the Home Assistant extension): the local network (mDNS

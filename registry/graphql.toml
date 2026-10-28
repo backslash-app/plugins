@@ -6,8 +6,9 @@ icon = "bs-braces"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/graphql"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:0a2ddb9e12a9089056ca8e99d37e943099ca5951791b826a3078739ee5bdb1cf"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:9e80b303eae10af277f512386dbe2cc6c1cedff4cad57d594ed271307891f561"
 permissions = ["Access any website"]
 commands = ["GraphQL Explorer", "Run GraphQL Query"]
+categories = ["developer"]
 

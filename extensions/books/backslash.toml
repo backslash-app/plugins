@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-book"
 license = "MIT"
+categories = ["media"]
 
 # The Open Library API, and covers.openlibrary.org where it serves covers.
 [permissions]

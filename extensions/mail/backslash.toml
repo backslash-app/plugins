@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-mail"
 license = "MIT"
+categories = ["productivity"]
 
 # IMAP over TLS (Deno.connectTls) to the provider's server. The presets use
 # imap.gmail.com, imap.fastmail.com, imap.mail.me.com, imap.mail.yahoo.com and

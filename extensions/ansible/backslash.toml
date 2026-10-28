@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-server"
 license = "MIT"
+categories = ["developer"]
 
 # find scans the folders set in the preferences for ansible.cfg, inventories and
 # playbooks (a fixed read list couldn't cover them); ansible-inventory and

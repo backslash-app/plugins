@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-globe"
 license = "MIT"
+categories = ["network"]
 
 # /etc/hosts is read as a user. Changes need root: pkexec (polkit) asks for the password,
 # then copies the current file to /etc/hosts.backslash.bak and writes the new one with

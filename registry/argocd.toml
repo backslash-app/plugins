@@ -6,8 +6,9 @@ icon = "bs-rocket"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/argocd"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:efe6f0aa8a40e1df8cc2a8c2019a0127cda30d9c3d2af158a853807c3edf681a"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:94e8e29c173d196385563233dc1f5874b5020e60c15d2aee21875b496241c307"
 permissions = ["Access any website"]
 commands = ["Argo CD Applications"]
+categories = ["developer"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-gamepad"
 license = "MIT"
+categories = ["media"]
 
 # Libraries are read from disk: Steam (native, Debian package, Flatpak) and its
 # picture cache, Lutris art, Heroic's library files. Steam libraries on other

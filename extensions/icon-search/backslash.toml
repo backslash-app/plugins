@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-image"
 license = "MIT"
+categories = ["developer"]
 
 # Indexes and SVG files come from the icon sets' npm packages on jsDelivr.
 # They are cached in ~/.cache/backslash/icon-search (indexes for a week), with

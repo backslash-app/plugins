@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-braces"
 license = "MIT"
+categories = ["developer"]
 
 [permissions]
 # The JSON to explore comes from the clipboard. Nothing leaves your computer.

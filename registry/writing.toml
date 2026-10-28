@@ -6,8 +6,9 @@ icon = "bs-globe"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/writing"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:cbbc1f07a7998a6c99435da0c4385e8c2e5103667be211d13f795c122c2fe467"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:a7d28de76ad6aaead6000b273e830f1be3112bf43b9af09232a8b6df715665f8"
 permissions = ["Access api-free.deepl.com", "Access api.deepl.com", "Access api.languagetool.org", "Access api.languagetoolplus.com", "Access localhost", "Access 127.0.0.1", "Run wl-paste", "Run xclip", "Run xsel", "Read the clipboard"]
 commands = ["Translate", "Translate Selected Text", "Translate Clipboard", "Check Grammar and Spelling"]
+categories = ["productivity"]
 

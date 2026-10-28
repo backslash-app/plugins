@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-mic"
 license = "MIT"
+categories = ["media"]
 
 # Podcast feeds and their cover art live on hosts chosen by each show (any
 # website or podcast host), so "*" is the only way to reach them; the search

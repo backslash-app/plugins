@@ -6,8 +6,9 @@ icon = "bs-film"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/jellyfin"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:e24f4e204578712bfbc6032d97f93c43c48e0a23fc319a172483459a8d75662e"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:5bf624bc6d1e9d771a44ff1f29258050c34e9e6e9165dbe85c4a2a323307a9c0"
 permissions = ["Access localhost", "Access 127.0.0.1", "Access jellyfin", "Access jellyfin.local", "Access plex", "Access plex.local", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.plex.direct", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run systemd-run", "Run mpv", "Run vlc", "Read ~/.cache/backslash/jellyfin", "Read /etc/os-release", "Write ~/.cache/backslash/jellyfin", "Read the environment variable HOME", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable XDG_RUNTIME_DIR"]
 commands = ["Jellyfin & Plex"]
+categories = ["media"]
 

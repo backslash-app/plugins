@@ -6,8 +6,9 @@ icon = "bs-activity"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/uptime-kuma"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:bbcf1a17d5f61bfba939a8e1f804f9f6f49e7ed36a50167209c2ff1dce2ce010"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:b735018ec3121833b4628483318c19d4d8fc73b32ebb874ffdc194a4ec9dc04d"
 permissions = ["Access uptime.betterstack.com", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
 commands = ["Uptime Monitors"]
+categories = ["developer"]
 

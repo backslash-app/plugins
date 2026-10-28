@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-activity"
 license = "MIT"
+categories = ["system"]
 
 # Deno opens /proc and /sys only with --allow-all, so their files are read in one batch by
 # `grep -sH` (fixed paths under /proc and /sys only). ps names the owner and command of the top

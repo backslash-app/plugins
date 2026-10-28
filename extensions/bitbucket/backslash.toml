@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-repo"
 license = "MIT"
+categories = ["developer"]
 
 # The REST API, and where Bitbucket serves avatars from (Gravatar, falling back to
 # Atlassian's initials pictures).

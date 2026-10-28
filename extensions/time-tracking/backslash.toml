@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-timer"
 license = "MIT"
+categories = ["productivity"]
 
 # The Toggl Track (v9) and Clockify (v1) APIs; a Kimai on Kimai Cloud, this
 # computer, the local network or Tailscale (same list as KIMAI_HOSTS in lib.ts,

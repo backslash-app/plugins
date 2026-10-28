@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-key"
 license = "MIT"
+categories = ["developer"]
 
 # .env files are looked for in the usual code folders below your home (the
 # folders preference can only point inside them). Writing there only ever

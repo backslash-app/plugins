@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-cycle"
 license = "MIT"
+categories = ["developer"]
 
 # CircleCI and Buildkite are fixed hosts. Woodpecker and Jenkins run on your own
 # servers, at any address chosen in the preferences and usually on a company domain

@@ -1,4 +1,3 @@
-# registry/todo-txt.toml
 id = "todo-txt"
 title = "Todo.txt"
 description = "Your todo.txt tasks by due date, with priorities, +projects, @contexts, recurrence and quick add"
@@ -7,8 +6,9 @@ icon = "bs-square-check"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/todo-txt"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:11d43842a8fe302c2e968eefd9063df3c54f271aaf91da6628c0dcf6355cec50"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:b186738fd3e7c3df35944e545f028cc3dab08bd23256154623c256c2cea7ed8f"
 permissions = ["Read ~/todo.txt", "Read ~/done.txt", "Read ~/Documents/todo.txt", "Read ~/Documents/done.txt", "Read ~/Dropbox/todo", "Read ~/.todo", "Write ~/todo.txt", "Write ~/done.txt", "Write ~/Documents/todo.txt", "Write ~/Documents/done.txt", "Write ~/Dropbox/todo", "Write ~/.todo", "Read the environment variable HOME"]
 commands = ["Todo.txt Tasks", "Add Todo.txt Task"]
+categories = ["productivity"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-calendar"
 license = "MIT"
+categories = ["everyday"]
 
 # Nager.Date gives public holidays for 100+ countries without a key; the
 # Éducation nationale open data portal gives the French school calendar.

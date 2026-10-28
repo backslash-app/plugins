@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-drive"
 license = "MIT"
+categories = ["system"]
 
 # du, find and df measure (the files are never opened); journalctl, docker and
 # podman report their own usage; gio empties the trash and moves files to it;

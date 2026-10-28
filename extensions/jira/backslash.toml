@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-ticket"
 license = "MIT"
+categories = ["productivity"]
 
 # Jira Cloud sites are `<your-site>.atlassian.net`: a subdomain wildcard
 # (Deno's --allow-net matches subdomains). Avatars come from Gravatar or

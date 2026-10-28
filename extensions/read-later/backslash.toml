@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-book"
 license = "MIT"
+categories = ["productivity"]
 
 # wallabag.it (hosted Wallabag) and Instapaper's Simple API; a self-hosted Wallabag or
 # Readeck on this computer, the local network or Tailscale (same list as HOSTS in lib.ts,

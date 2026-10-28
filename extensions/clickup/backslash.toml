@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-circle-half"
 license = "MIT"
+categories = ["productivity"]
 
 # The API, and people's pictures (attachments.clickup.com).
 [permissions]

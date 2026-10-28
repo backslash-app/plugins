@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-apps"
 license = "MIT"
+categories = ["system"]
 
 # gnome-extensions lists, enables, disables, configures and uninstalls extensions;
 # gsettings turns all user extensions off or on; gnome-shell --version picks the

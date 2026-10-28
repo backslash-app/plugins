@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-printer"
 license = "MIT"
+categories = ["system"]
 
 # CUPS client tools: lpstat lists printers and jobs, lpq names the queued
 # files, lp prints, cancel removes jobs, lpoptions sets your default printer,

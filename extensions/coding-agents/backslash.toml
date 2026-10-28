@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-sparkle"
 license = "MIT"
+categories = ["developer"]
 
 # Only the session logs are read: Claude Code's (~/.claude/projects) and
 # Codex's (~/.codex/sessions), and Aider's .aider.chat.history.md files in the

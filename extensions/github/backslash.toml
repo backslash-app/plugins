@@ -6,6 +6,7 @@ version = "1.1.0"
 author = "Backslash"
 icon = "bs-repo"
 license = "MIT"
+categories = ["developer"]
 
 [permissions]
 net = ["api.github.com", "avatars.githubusercontent.com"]

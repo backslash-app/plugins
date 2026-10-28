@@ -6,8 +6,9 @@ icon = "bs-key"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/dotenv"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:b666e5eba8ee1b8a9347db0cd4b7c36c8d853fa5a19374d64590d7ffc9f824fa"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:d7f2485b42e2e7dbff1eaac4d296b5cbcb60ab5a9c22c5f3cf703181a3cccdf1"
 permissions = ["Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Write ~/Projects", "Write ~/projects", "Write ~/Code", "Write ~/code", "Write ~/dev", "Write ~/Developer", "Write ~/src", "Write ~/git", "Write ~/repos", "Write ~/workspace", "Write ~/work", "Write ~/Work", "Read the environment variable HOME"]
 commands = ["Env Files"]
+categories = ["developer"]
 

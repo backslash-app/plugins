@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-shield"
 license = "MIT"
+categories = ["system"]
 
 # pw-dump (PipeWire) shows camera, screen-sharing and microphone streams;
 # pactl (pipewire-pulse or PulseAudio) lists recording streams and mutes them;

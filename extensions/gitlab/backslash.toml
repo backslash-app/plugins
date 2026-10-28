@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-pr-merged"
 license = "MIT"
+categories = ["developer"]
 
 # gitlab.com for the API and uploaded avatars, Gravatar for the other avatars.
 # Hosts are static: a self-hosted GitLab would need its own host here.

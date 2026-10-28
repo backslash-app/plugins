@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-battery"
 license = "MIT"
+categories = ["system"]
 
 # Profiles: powerprofilesctl (power-profiles-daemon, tuned-ppd) or tuned-adm.
 # Batteries: the kernel's /sys/class/power_supply values, read through

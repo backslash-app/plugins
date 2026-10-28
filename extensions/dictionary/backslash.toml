@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-book"
 license = "MIT"
+categories = ["everyday"]
 
 # English: Wiktionary's REST API, with pronunciation and synonyms from dictionaryapi.dev.
 # French: the French Wiktionary (MediaWiki API). Translations: MyMemory (free, no key).

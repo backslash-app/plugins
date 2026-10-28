@@ -1,4 +1,3 @@
-# registry/books.toml
 id = "books"
 title = "Books"
 description = "Search Open Library for books with covers, authors, editions and subjects, copy ISBNs and citations, and keep a reading list"
@@ -7,8 +6,9 @@ icon = "bs-book"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/books"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:3b5963a3c3e51f15d1dbf7f3d983441db4264b78cf5a7bcaead81f303112df83"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:8cd92e2ec5dca9b16ce78eded448bc2af279f4533467410cc1c5a728504ee5d6"
 permissions = ["Access openlibrary.org", "Access covers.openlibrary.org"]
 commands = ["Search Books", "Reading List"]
+categories = ["media"]
 

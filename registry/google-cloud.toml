@@ -1,4 +1,3 @@
-# registry/google-cloud.toml
 id = "google-cloud"
 title = "Google Cloud"
 description = "Switch gcloud projects, SSH into Compute Engine VMs and follow Cloud Run services, their URLs and logs"
@@ -7,8 +6,9 @@ icon = "bs-cloud"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/google-cloud"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:21995ffebc40effb2917276196aee6bf799bd83c786a9c91ba46f22c8db24394"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:c41cc14b0b0bd25293680732223e260471c360340f89fc30a95190c97706abc4"
 permissions = ["Run gcloud", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release"]
 commands = ["Google Cloud Projects", "Compute Engine Instances", "Cloud Run Services"]
+categories = ["developer"]
 

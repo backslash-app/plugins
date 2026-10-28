@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-code"
 license = "MIT"
+categories = ["developer"]
 
 # The REST API, avatars, and raw files for contents over 1 MB (which the API truncates).
 # gh gives its sign-in when no token is set; the clipboard is read to create a gist from it.

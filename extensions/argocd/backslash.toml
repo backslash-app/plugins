@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-rocket"
 license = "MIT"
+categories = ["developer"]
 
 # The Argo CD server is yours: any address, chosen in the preferences, so its host
 # can't be listed ahead. It usually lives on a company domain (argocd.example.com)

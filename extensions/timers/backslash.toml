@@ -6,6 +6,7 @@ version = "1.1.0"
 author = "Backslash"
 icon = "bs-timer"
 license = "MIT"
+categories = ["productivity"]
 
 # Timers are transient systemd user units: they survive the launcher and
 # ring with a desktop notification (notify-send) and a sound when possible.

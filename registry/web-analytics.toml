@@ -6,8 +6,9 @@ icon = "bs-chart-up"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/web-analytics"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:32f76690d286e58be72106003e00d400998acd900a21dbb82350b186463f916d"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:50102547cf244c3dc8ee031e012591dec61d39d5c873b92d86703b9ccc74c1ec"
 permissions = ["Access any website"]
 commands = ["Web Analytics"]
+categories = ["developer"]
 

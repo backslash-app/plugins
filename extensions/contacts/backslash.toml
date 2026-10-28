@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-user"
 license = "MIT"
+categories = ["productivity"]
 
 # CardDAV providers: Google, iCloud (contacts.icloud.com hands out pNN-contacts.icloud.com
 # address books), Fastmail, mailbox.org and Posteo; a Nextcloud, Radicale or Baïkal on this

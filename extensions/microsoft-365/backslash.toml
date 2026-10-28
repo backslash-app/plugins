@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-mail"
 license = "MIT"
+categories = ["productivity"]
 
 # Microsoft Graph, and the sign-in (token endpoint) of the Microsoft identity platform.
 [permissions]

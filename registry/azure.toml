@@ -6,8 +6,9 @@ icon = "bs-cloud"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/azure"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:c50a322c33b96f74806c75fe51b4a54815486a01766613313b7bda86d07ebbc3"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:5a0877c04cf35101959d936740377d6f70b46c54b5fa54d2306c55ae0bce7e06"
 permissions = ["Run az", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release"]
 commands = ["Azure Subscriptions", "Azure Virtual Machines", "Azure Web Apps"]
+categories = ["developer"]
 

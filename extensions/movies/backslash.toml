@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-film"
 license = "MIT"
+categories = ["media"]
 
 # The TMDB API, and image.tmdb.org where it serves posters.
 [permissions]

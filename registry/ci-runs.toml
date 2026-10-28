@@ -6,8 +6,9 @@ icon = "bs-cycle"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/ci-runs"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:177cce0301012cc55466b397aa8a7d88f1e35eb3767c2ba42fd3551ca548acb2"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:7ea61692a42b221f167bb641e3259262bf411299998f53ddef185a350a2d7922"
 permissions = ["Access any website", "Access circleci.com", "Access api.buildkite.com", "Access avatars.githubusercontent.com", "Access secure.gravatar.com", "Access www.gravatar.com"]
 commands = ["CI Pipelines"]
+categories = ["developer"]
 

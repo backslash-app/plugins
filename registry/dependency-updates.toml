@@ -6,8 +6,9 @@ icon = "bs-package"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/dependency-updates"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:df73fa54f3ba6b7324f4aed500873c46b29dc580e62aebb4f9932cfeb8c63e1b"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:0b1eebad89b682ef14a136a8bf8481a94c441da0c68c9f8a0aac457ec4842406"
 permissions = ["Access api.github.com", "Run gh"]
 commands = ["Dependency Updates"]
+categories = ["developer"]
 

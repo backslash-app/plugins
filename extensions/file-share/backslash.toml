@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-upload"
 license = "MIT"
+categories = ["productivity"]
 
 # 0x0.st hosts files publicly. PrivateBin stores pastes encrypted on this
 # computer: privatebin.net, bin.disroot.org, or a self-hosted instance on the

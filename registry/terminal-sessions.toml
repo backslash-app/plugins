@@ -1,4 +1,3 @@
-# registry/terminal-sessions.toml
 id = "terminal-sessions"
 title = "Terminal Sessions"
 description = "Attach to, create, rename and kill your tmux and zellij sessions"
@@ -7,8 +6,9 @@ icon = "bs-terminal"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/terminal-sessions"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:24e92e1053d376791573129a6c6f3b1662eaef4c620d58df8922b822ccd5aa4f"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:833cc1c5befb987d4ff4d8f87b81c79cb06dbf8b004b50ef8f351e31934f0290"
 permissions = ["Run tmux", "Run zellij", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read the environment variable HOME"]
 commands = ["Terminal Sessions"]
+categories = ["developer"]
 

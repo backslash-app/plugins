@@ -6,8 +6,9 @@ icon = "bs-shield"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/vulnerabilities"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:85c3fbf7569b60f1e260c1cde428dbf2550ed7fcf0e30f8f767a0f2f6328a57a"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:c716306f4018b4dcb29ddc978a2d3aa92e41c40b50591d4c2df914e1d2458ef2"
 permissions = ["Access api.osv.dev", "Read ~", "Read the environment variable HOME"]
 commands = ["Search Vulnerabilities", "Scan Project Dependencies"]
+categories = ["developer"]
 

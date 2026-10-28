@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-qr"
 license = "MIT"
+categories = ["system"]
 
 # QR codes are encoded by the extension itself (qr.ts, no program needed) and
 # cached as PNG in ~/.cache/backslash/qr; saved ones go to ~/Pictures/QR Codes.

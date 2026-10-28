@@ -6,8 +6,9 @@ icon = "bs-image"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/icon-search"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:8f9fe62063b687a499ed3c3a89590919df572408a335ad7ad05882881bf8b804"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:6b879f97a446a7bed6b8ecc03b8fb786c2f297464d0f19be90fe0e1c2c293888"
 permissions = ["Access cdn.jsdelivr.net", "Read ~/.cache/backslash/icon-search", "Write ~/.cache/backslash/icon-search", "Read the environment variable HOME"]
 commands = ["Search Icons"]
+categories = ["developer"]
 

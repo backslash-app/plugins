@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-activity"
 license = "MIT"
+categories = ["developer"]
 
 # The API host of each Datadog site (US1, US3, US5, EU1, AP1, US1-FED); only the
 # one of the site you pick is called. Same list as SITES in api.ts.

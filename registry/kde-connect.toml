@@ -6,8 +6,9 @@ icon = "bs-apps"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/kde-connect"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:407734379f7527c56c17853cfb26348780a90510d75080a955159f0494bcb4be"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:5a9c32716c729d693ac1dc2a1b9f8954169b835a2b44588dff68f35cf487cb22"
 permissions = ["Run kdeconnect-cli", "Run busctl", "Read /etc/os-release", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the clipboard"]
 commands = ["KDE Connect"]
+categories = ["network"]
 

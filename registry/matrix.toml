@@ -6,8 +6,9 @@ icon = "bs-comment"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/matrix"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:c9d62e2a18f59985da0fe8113b6b40fcf5feb51aa38ebeabeaa20e7a2b4e900a"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:94a5b67d502a1f28d8928f818b2829aec0685a649481c6efbb00002dced9b314"
 permissions = ["Access any website"]
 commands = ["Matrix Rooms", "Send Matrix Message"]
+categories = ["productivity"]
 

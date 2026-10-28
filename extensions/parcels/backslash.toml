@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-package"
 license = "MIT"
+categories = ["everyday"]
 
 # La Poste's tracking API (Suivi v2, X-Okapi-Key) for Colissimo, Chronopost and
 # letters; 17TRACK's API v2.2 for every other carrier. Same list as HOSTS in

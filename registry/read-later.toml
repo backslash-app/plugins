@@ -6,8 +6,9 @@ icon = "bs-book"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/read-later"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:5c2ed9fcc08970fd784e9ab845859524704b9f9280afe5ea6187593b9f959e2d"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:e90ead55f487c412977368e4a4dcd44dbe10846e7120c1654a1bad043982c426"
 permissions = ["Access app.wallabag.it", "Access www.instapaper.com", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read the clipboard"]
 commands = ["Saved Articles", "Save to Read Later"]
+categories = ["productivity"]
 

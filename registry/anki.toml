@@ -1,4 +1,3 @@
-# registry/anki.toml
 id = "anki"
 title = "Anki"
 description = "Your Anki decks with today's new, learning and review counts, quick card creation and sync, through AnkiConnect"
@@ -7,8 +6,9 @@ icon = "bs-layers"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/anki"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:aa23cc6c2e159a1f35b72e0c377193b79d6f2eafe96c93d0f0e5397a6af1aef4"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:843743644ed9fe6a67368384ff6c072cd07a7f767dd3a06d09e11d75ae72adea"
 permissions = ["Access 127.0.0.1:8765", "Run systemd-run", "Read /etc/os-release", "Read /usr/bin/anki", "Read /usr/local/bin/anki", "Read ~/.local/bin/anki", "Read /var/lib/flatpak/exports/bin/net.ankiweb.Anki", "Read ~/.local/share/flatpak/exports/bin/net.ankiweb.Anki", "Read /snap/bin/anki", "Read the environment variable HOME"]
 commands = ["Anki Decks", "Add Anki Card", "Quick Add Anki Card", "Sync Anki"]
+categories = ["productivity"]
 

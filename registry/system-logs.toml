@@ -1,4 +1,3 @@
-# registry/system-logs.toml
 id = "system-logs"
 title = "System Logs"
 description = "Errors and warnings of this boot from systemd's journal, grouped by service"
@@ -7,8 +6,9 @@ icon = "bs-activity"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/system-logs"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:3528a9909fe314a98cd0559e0ec6300cc1e5639c3f39fd3a990f1303c660ef23"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:aa3c674f710f5e8c7820743fc61ef870699d76682a51d6b47bff7c18d4c12dc8"
 permissions = ["Run journalctl", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm"]
 commands = ["System Logs"]
+categories = ["system"]
 

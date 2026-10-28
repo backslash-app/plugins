@@ -6,8 +6,9 @@ icon = "bs-mic"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/audio"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:4b54618c313f369cf4c0d753e42c424fa0a096eeebddb68c3b04f4268fc0d408"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:acf34158c0181620c38c465fb2b1fa3ee18490bbd07017c3e3000ed033681ac4"
 permissions = ["Run pactl", "Run wpctl", "Run easyeffects", "Run flatpak", "Run gsettings", "Read ~/.config/easyeffects", "Read ~/.local/share/easyeffects", "Read ~/.var/app/com.github.wwmm.easyeffects", "Read the environment variable HOME"]
 commands = ["Microphones", "Toggle Microphone", "Application Volume", "EasyEffects Presets"]
+categories = ["system"]
 

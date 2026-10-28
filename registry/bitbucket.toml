@@ -6,8 +6,9 @@ icon = "bs-repo"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/bitbucket"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:0952c7d5c70b913a81f779941eb9d2a431425dd398deb123883ead1dd1aec195"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:ae329d4278b67e2a88c68c19c7d853f772aff125c7020380c7c418247b3c53c4"
 permissions = ["Access api.bitbucket.org", "Access bitbucket.org", "Access secure.gravatar.com", "Access avatar-management--avatars.us-west-2.prod.public.atl-paas.net"]
 commands = ["My Bitbucket Pull Requests", "My Bitbucket Issues", "Search Bitbucket Repositories"]
+categories = ["developer"]
 

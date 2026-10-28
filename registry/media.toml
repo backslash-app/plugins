@@ -1,4 +1,3 @@
-# registry/media.toml
 id = "media"
 title = "Media Controls"
 description = "Control Spotify, browsers, VLC, mpv and any MPRIS player"
@@ -7,8 +6,9 @@ icon = "bs-music"
 version = "1.1.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/media"
-commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
-checksum = "sha256:2d061583b7ea53d0cfca3e540a631cb3cb9f8985ec77d00f29d76fd85adaac54"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:425d059657510699db26c8bfbe4fb1005a449b0c958f4344884d9ec1f904bd8e"
 permissions = ["Access i.scdn.co", "Run busctl", "Read /tmp/backslash-media", "Write /tmp/backslash-media"]
 commands = ["Now Playing", "Play / Pause", "Next Track", "Previous Track"]
+categories = ["media"]
 

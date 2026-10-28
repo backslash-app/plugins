@@ -6,8 +6,9 @@ icon = "bs-package"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/parcels"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:c787f954d0f9643dd27333a9af450df51bafaa42085bbf612fd14fbcd47ff8c6"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:b2810ced5fed4ad9bccd0cc53f7cf63f8c109896c46f72e383a36ceec5661cdf"
 permissions = ["Access api.laposte.fr", "Access api.17track.net", "Run notify-send", "Run “Refresh Parcels” in the background every hour"]
 commands = ["My Parcels", "Track Parcel", "Refresh Parcels"]
+categories = ["everyday"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-keyboard"
 license = "MIT"
+categories = ["system"]
 
 # The session's variables tell which desktop is running. GNOME's shortcuts come from
 # gsettings, Hyprland's from hyprctl and Sway's from swaymsg (its configuration file

@@ -1,4 +1,3 @@
-# registry/nerd-fonts.toml
 id = "nerd-fonts"
 title = "Nerd Font Icons"
 description = "Search every Nerd Font glyph by name or code point and copy the glyph, its class, code point or HTML entity"
@@ -7,8 +6,9 @@ icon = "bs-font"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/nerd-fonts"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:e4d2fde2777cec36f6468547dc77f0609ebc007e6d671b92d35276be490d9ba3"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:20cb0e7bd5b11fa626ea7141d29ec3a4f4acf5622104b562b77e48d7cdfaca31"
 permissions = ["Access raw.githubusercontent.com"]
 commands = ["Search Nerd Font Icons"]
+categories = ["developer"]
 

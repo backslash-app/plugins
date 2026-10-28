@@ -6,8 +6,9 @@ icon = "bs-image"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/wallpapers"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:c58374dd5d42fa56ff59acc6e98ca0576a17e8687731320500c0e95bebf76cd4"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:ed71c6c519c2f08055ea5bba2be622d75f22bd413c4926cc0b3f7ffa1dd7fc22"
 permissions = ["Access wallhaven.cc", "Access w.wallhaven.cc", "Access th.wallhaven.cc", "Access api.unsplash.com", "Access images.unsplash.com", "Run gsettings", "Run plasma-apply-wallpaperimage", "Run xfconf-query", "Run hyprctl", "Run swww", "Run swaymsg", "Run feh", "Run nitrogen", "Run magick", "Run convert", "Read ~/Pictures", "Read ~/Images", "Read ~/Wallpapers", "Read ~/.cache/backslash/wallpapers", "Read /usr/share/backgrounds", "Read /usr/share/wallpapers", "Read /etc/os-release", "Write ~/Pictures", "Write ~/Images", "Write ~/Wallpapers", "Write ~/.cache/backslash/wallpapers", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable DESKTOP_SESSION", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK"]
 commands = ["Wallpapers", "Search Wallpapers Online", "Random Wallpaper"]
+categories = ["system"]
 

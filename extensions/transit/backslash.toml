@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-clock"
 license = "MIT"
+categories = ["everyday"]
 
 # Navitia's public API: places, departures, disruptions and journeys. Same list
 # as HOSTS in api.ts.

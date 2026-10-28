@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-pipette"
 license = "MIT"
+categories = ["system"]
 
 # Picking runs in the background (systemd-run) once the launcher is hidden,
 # with the first picker installed: hyprpicker or grim + slurp (Hyprland, Sway,

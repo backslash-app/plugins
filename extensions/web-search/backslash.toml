@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-search"
 license = "MIT"
+categories = ["everyday"]
 
 # Suggestions only: searches open in your browser.
 [permissions]

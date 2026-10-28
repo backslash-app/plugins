@@ -6,8 +6,9 @@ icon = "bs-activity"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/datadog"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:e511ee2fbc61b694d995ba9d43792318520eae304e98f6f9169cc6726d90c240"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:a1a306271e954c04f547a75ced7bb1f8218bb29ec795f1fd7e174241308adccc"
 permissions = ["Access api.datadoghq.com", "Access api.us3.datadoghq.com", "Access api.us5.datadoghq.com", "Access api.datadoghq.eu", "Access api.ap1.datadoghq.com", "Access api.ddog-gov.com"]
 commands = ["Datadog Monitors", "Search Datadog Dashboards", "Datadog Incidents"]
+categories = ["developer"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-database"
 license = "MIT"
+categories = ["developer"]
 
 # The Management API only.
 [permissions]

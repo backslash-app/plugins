@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-activity"
 license = "MIT"
+categories = ["developer"]
 
 # The public Atlassian Statuspage feeds (/api/v2/summary.json) of the built-in
 # services. status.anthropic.com redirects to status.claude.com. Every

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-camera"
 license = "MIT"
+categories = ["system"]
 
 # Captures run in the background (systemd-run) once the launcher is hidden,
 # with the first tool installed: grim + slurp (Sway, Hyprland, wlroots),

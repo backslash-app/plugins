@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-globe"
 license = "MIT"
+categories = ["network"]
 
 # api.ipify.org / api6.ipify.org tell the public IPv4 / IPv6, ipinfo.io where
 # it is; DNS goes over HTTPS to Cloudflare (dig and the system resolver when

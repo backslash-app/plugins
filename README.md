@@ -65,6 +65,8 @@ version = "0.1.0"
 author = "you"
 icon = "bs-tag"                     # a Backslash glyph, a theme icon name or an emoji
 license = "MIT"
+categories = ["developer"]          # where the store lists it: developer, system, network,
+                                    # productivity, media or everyday
 
 # Everything not listed is denied, and the sandbox enforces it.
 # Users read these lines before the first run.
@@ -256,7 +258,7 @@ Everything below comes from `@backslash/api`. The
 ## What makes a good extension
 
 - **One job, done well.** A title users would type, a description that says what they get, `keywords` for the words they
-  might use instead (other languages too).
+  might use instead (other languages too), and the `categories` users would browse for it in the store.
 - **Fast first paint.** Pass `signal` to `fetch`, load in parallel, yield partial results from an async generator when a
   source is slow, and cache in `storage` when the data barely changes.
 - **Useful at a glance.** Put the state users came for in the row (status, counts, age) and the rest in the preview
@@ -287,6 +289,7 @@ commit = "a64f60074557298bf4cabf235c6e91e1f4e54082"
 checksum = "sha256:37f89a1e…"
 permissions = ["Access api.github.com", "Access avatars.githubusercontent.com", "Run gh"]
 commands = ["Search GitHub Repositories", "My Pull Requests", "My GitHub Issues"]
+categories = ["developer"]
 ```
 
 To publish:

@@ -6,8 +6,9 @@ icon = "bs-power"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/wake-on-lan"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:5834e96b959f544a1e6e9a08270b2846e5ecde4306e94512ad4141961f9b0e5d"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:0d7952da5174ea16f0f57c78467df326eabe15e33edd096147a326416f41b40c"
 permissions = ["Access 0.0.0.0", "Access 255.255.255.255", "Access localhost", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run ip", "Run ping", "Run wakeonlan", "Run wol", "Run etherwake", "Read /proc/net/arp"]
 commands = ["Wake on LAN"]
+categories = ["network"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-shield"
 license = "MIT"
+categories = ["developer"]
 
 # Rules and short texts are embedded (choosealicense.com data); the long texts
 # (GPL, Apache, MPL…) are downloaded once from choosealicense.com's repository

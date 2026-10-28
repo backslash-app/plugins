@@ -1,4 +1,3 @@
-# registry/linear.toml
 id = "linear"
 title = "Linear"
 description = "Your issues with their status, priority, labels and assignee; search, triage and quick issue creation"
@@ -7,8 +6,9 @@ icon = "bs-circle-half"
 version = "1.1.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/linear"
-commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
-checksum = "sha256:4b1265e61dd21f9b283b8b93e4b1481f25d7ed552f3c2c82b9a8368be974ba42"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:0578b34a3ddeaa6863f75a563b9b9e49d69f4aa333b91c58b2d65edcae95f044"
 permissions = ["Access api.linear.app", "Access public.linear.app"]
 commands = ["My Linear Issues", "Search Linear Issues", "Create Linear Issue"]
+categories = ["productivity"]
 

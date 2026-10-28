@@ -6,8 +6,9 @@ icon = "bs-repo"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/dotfiles"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:3d96f12ad0e1fa3937348732852f4aa34d1421bfef5c21a77347d7a3f57131a5"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:c349ba64776c5b48e3dcbecc9d5af206bf300595e6479ca6c8adfe2a995abc5a"
 permissions = ["Run chezmoi", "Run yadm", "Run git", "Run stow", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~", "Read the environment variable HOME"]
 commands = ["Dotfiles"]
+categories = ["system"]
 

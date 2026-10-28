@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-layers"
 license = "MIT"
+categories = ["developer"]
 
 [permissions]
 # The texts to compare: the clipboard, and the primary selection (the text

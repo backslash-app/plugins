@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-archive"
 license = "MIT"
+categories = ["system"]
 
 # restic and borg read the repositories set in the preferences (or RESTIC_REPOSITORY,
 # BORG_REPO…); the password goes in their environment, never on a command line.

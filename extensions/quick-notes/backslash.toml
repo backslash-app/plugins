@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-note"
 license = "MIT"
+categories = ["productivity"]
 
 # Notes are .md files in a folder you choose, inside ~/Documents (default ~/Documents/Notes).
 [permissions]

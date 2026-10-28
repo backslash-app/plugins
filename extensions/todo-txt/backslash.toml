@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-square-check"
 license = "MIT"
+categories = ["productivity"]
 
 # Extensions declare their files ahead of time, so todo.txt is read from the
 # usual places only: ~/todo.txt or ~/Documents/todo.txt (with done.txt next

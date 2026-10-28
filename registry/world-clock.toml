@@ -1,4 +1,3 @@
-# registry/world-clock.toml
 id = "world-clock"
 title = "World Clock"
 description = "The time in your cities, offsets, day and night, and time conversions like “3pm NY in Paris”"
@@ -7,8 +6,9 @@ icon = "bs-clock"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/world-clock"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:cc52af74d04d4606801e66c2c4bbb3cc2ffed3618dc12203312c67b14c717d14"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:32be6409ff37e42784553eac35d4d75f4ff7cf133644a367f4bf460c78b98368"
 permissions = []
 commands = ["World Clock", "Add World Clock City"]
+categories = ["everyday"]
 

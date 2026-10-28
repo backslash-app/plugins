@@ -6,6 +6,7 @@ version = "1.3.0"
 author = "Backslash"
 icon = "😀"
 license = "MIT"
+categories = ["system"]
 
 [[commands]]
 name = "search"

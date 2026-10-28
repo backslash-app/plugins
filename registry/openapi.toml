@@ -6,8 +6,9 @@ icon = "bs-braces"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/openapi"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:b7b68d2731b624c0bf0985c9964d7610219a76cc7fec4014492a9c70527ca6d7"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:e21f36cd45903b1548c8eb104d0b181c090e9a7a293fd7845aa94ab83b61f3a5"
 permissions = ["Access any website", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Read the environment variable HOME"]
 commands = ["OpenAPI Specs", "Search API Endpoints"]
+categories = ["developer"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-book"
 license = "MIT"
+categories = ["productivity"]
 
 # Vaults can live anywhere in your home folder, so reading it is needed to
 # search them; nothing is ever written: notes are created and appended to

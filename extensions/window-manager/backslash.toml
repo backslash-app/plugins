@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-window"
 license = "MIT"
+categories = ["system"]
 
 # One backend per desktop, the first that answers: hyprctl (Hyprland), swaymsg (Sway),
 # gdbus to KWin's global shortcuts (KDE Plasma) or to the "Window Calls" Shell

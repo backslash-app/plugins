@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-book"
 license = "MIT"
+categories = ["developer"]
 
 [permissions]
 net = ["devdocs.io", "documents.devdocs.io", "tldr.sh", "raw.githubusercontent.com", "wiki.archlinux.org"]
