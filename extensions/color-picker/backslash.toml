@@ -1,0 +1,58 @@
+[extension]
+id = "color-picker"
+title = "Color Picker"
+description = "Pick a color anywhere on the screen, keep a history, and convert colors between HEX, RGB, HSL and OKLCH"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-pipette"
+license = "MIT"
+
+# Picking runs in the background (systemd-run) once the launcher is hidden,
+# with the first picker installed: hyprpicker or grim + slurp (Hyprland, Sway,
+# wlroots), xdg-desktop-portal's PickColor through gdbus (GNOME, KDE), xcolor
+# or Gpick (X11). Here they are only started to check that they are installed.
+# Picked colors are appended to ~/.cache/backslash/color-picker/picks, then
+# moved to the extension's storage.
+[permissions]
+run = ["systemd-run", "hyprpicker", "grim", "slurp", "gpick", "xcolor", "gdbus"]
+read = ["~/.cache/backslash/color-picker", "/etc/os-release"]
+write = ["~/.cache/backslash/color-picker"]
+env = [
+  "HOME",
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "XAUTHORITY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+]
+
+[[commands]]
+name = "pick"
+title = "Pick Color"
+description = "Click anywhere on the screen: the color is copied"
+icon = "bs-pipette"
+mode = "no-view"
+keywords = ["color", "colour", "couleur", "pipette", "eyedropper", "picker", "pick", "hex", "screen", "écran"]
+
+[[commands]]
+name = "colors"
+title = "Color History"
+description = "Colors you picked, in every format"
+icon = "bs-palette"
+keywords = ["color", "colour", "couleur", "history", "historique", "palette", "hex", "rgb", "hsl"]
+
+[[commands]]
+name = "convert"
+title = "Convert Color"
+description = "Type any color to get its HEX, RGB, HSL, OKLCH and more"
+icon = "bs-palette"
+keywords = ["color", "couleur", "convert", "convertir", "hex", "rgb", "hsl", "oklch", "css", "contrast", "contraste"]
+
+[[preferences]]
+name = "uppercase"
+title = "Uppercase HEX"
+description = "#FF6347 instead of #ff6347"
+type = "boolean"
+default = false

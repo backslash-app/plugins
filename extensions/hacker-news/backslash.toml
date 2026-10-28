@@ -1,0 +1,47 @@
+[extension]
+id = "hacker-news"
+title = "Hacker News & RSS"
+description = "Top, new, best, Ask and Show HN stories with their comments, and your RSS and Atom feeds with unread tracking"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rss"
+license = "MIT"
+
+# RSS feeds live on hosts the user chooses, so the extension may reach any
+# website ("*" is the only way to allow hosts not known in advance). Hacker News
+# itself only uses hacker-news.firebaseio.com and hn.algolia.com.
+[permissions]
+net = ["*"]
+
+[[commands]]
+name = "hacker-news"
+title = "Hacker News"
+description = "Top, new, best, Ask HN and Show HN stories, with points, comments and the top comments"
+icon = "bs-arrow-up"
+keywords = ["hn", "hacker news", "ycombinator", "news", "tech", "actualités", "nouvelles", "informatique"]
+
+[[commands]]
+name = "rss"
+title = "RSS Feeds"
+description = "Articles of your feeds, unread first"
+icon = "bs-rss"
+keywords = ["rss", "atom", "feeds", "news", "reader", "blog", "flux", "actualités", "articles", "lecteur"]
+
+[[commands]]
+name = "add-feed"
+title = "Add RSS Feed"
+description = "Subscribe to an RSS or Atom feed, or a website advertising one"
+icon = "bs-plus"
+keywords = ["rss", "atom", "subscribe", "feed", "ajouter", "flux", "abonner"]
+
+[[preferences]]
+name = "feeds"
+title = "Feeds"
+description = "Feed URLs, separated by spaces or commas (feeds added from the launcher are kept separately)"
+
+[[preferences]]
+name = "stories"
+title = "Number of stories"
+description = "Stories loaded per Hacker News list (10 to 100)"
+type = "number"
+default = 40

@@ -1,0 +1,14 @@
+# registry/kubernetes.toml
+id = "kubernetes"
+title = "Kubernetes"
+description = "Browse pods with their status, logs and restarts, and switch kubectl contexts and namespaces"
+author = "Backslash"
+icon = "bs-cloud"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/kubernetes"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:bfc1d0e7de287372e4fca56e412a898457afa34aaa2c8da90014dfa9deabb9cc"
+permissions = ["Run kubectl", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm"]
+commands = ["Kubernetes Pods", "Switch Kubernetes Context", "Switch Kubernetes Namespace"]
+

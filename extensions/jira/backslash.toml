@@ -1,0 +1,52 @@
+[extension]
+id = "jira"
+title = "Jira"
+description = "Your Jira Cloud issues by status with priority, sprint and labels; change status, assign, search with text or JQL, create issues"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-ticket"
+license = "MIT"
+
+# Jira Cloud sites are `<your-site>.atlassian.net`: a subdomain wildcard
+# (Deno's --allow-net matches subdomains). Avatars come from Gravatar or
+# Atlassian's avatar CDN; pictures need exact hosts.
+[permissions]
+net = ["*.atlassian.net", "secure.gravatar.com", "avatar-management--avatars.us-west-2.prod.public.atl-paas.net"]
+
+[[commands]]
+name = "my-issues"
+title = "My Jira Issues"
+description = "Unresolved issues assigned to you, reported or watched, by status"
+icon = "bs-ticket"
+keywords = ["jira", "issues", "tickets", "tasks", "sprint", "atlassian", "todo"]
+
+[[commands]]
+name = "search-issues"
+title = "Search Jira Issues"
+description = "Text, issue key or JQL"
+icon = "bs-search"
+keywords = ["jira", "jql", "find", "issues", "tickets", "atlassian"]
+
+[[commands]]
+name = "create-issue"
+title = "Create Jira Issue"
+icon = "bs-plus"
+keywords = ["jira", "new", "issue", "ticket", "bug", "task", "story", "atlassian"]
+
+[[preferences]]
+name = "site"
+title = "Jira site"
+description = "Your Jira Cloud site, e.g. acme.atlassian.net"
+required = true
+
+[[preferences]]
+name = "email"
+title = "Atlassian account email"
+required = true
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "id.atlassian.com → Security → Create and manage API tokens"
+type = "secret"
+required = true

@@ -1,0 +1,14 @@
+# registry/sentry.toml
+id = "sentry"
+title = "Sentry"
+description = "Unresolved issues across your projects with events, users and assignee; resolve, ignore, assign; latest event with its stack trace (sentry.io, US and EU regions)"
+author = "Backslash"
+icon = "bs-bug"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/sentry"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:382828f4222336cd6108b43c2c1278da7c4690a8291a7bcb344da45785f0c615"
+permissions = ["Access sentry.io", "Access us.sentry.io", "Access de.sentry.io"]
+commands = ["Sentry Issues"]
+

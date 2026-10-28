@@ -1,0 +1,14 @@
+# registry/games.toml
+id = "games"
+title = "Games"
+description = "Launch your installed Steam, Lutris and Heroic (Epic, GOG, Amazon) games, with cover art, play time, size and ProtonDB ratings"
+author = "Backslash"
+icon = "bs-gamepad"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/games"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:8d7e4c6ffc3ff7a3cc7aabde2003a8dfcad3890607db3693d1cea60ffe9295f2"
+permissions = ["Access www.protondb.com", "Access shared.steamstatic.com", "Access cdn1.epicgames.com", "Access cdn2.unrealengine.com", "Access images.gog-statics.com", "Run lutris", "Read ~/.local/share/Steam", "Read ~/.steam", "Read ~/.var/app/com.valvesoftware.Steam/.local/share/Steam", "Read /mnt", "Read /media", "Read /run/media", "Read ~/.local/share/lutris", "Read ~/.cache/lutris", "Read ~/.local/share/icons/hicolor/128x128/apps", "Read ~/.config/heroic", "Read ~/.var/app/com.heroicgameslauncher.hgl/config/heroic", "Read the environment variable HOME"]
+commands = ["Search Games"]
+

@@ -1,0 +1,73 @@
+[extension]
+id = "obsidian"
+title = "Obsidian"
+description = "Search your Obsidian notes by title, tag and text, preview them, open today's daily note and capture ideas"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+
+# Vaults can live anywhere in your home folder, so reading it is needed to
+# search them; nothing is ever written: notes are created and appended to
+# through Obsidian itself (obsidian:// links).
+[permissions]
+read = ["~"]
+env = ["HOME"]
+
+[[commands]]
+name = "search"
+title = "Search Obsidian Notes"
+description = "Titles, aliases, #tags and full text of every vault"
+icon = "bs-search"
+keywords = ["obsidian", "notes", "vault", "markdown", "wiki", "zettelkasten", "notes", "chercher", "coffre"]
+
+[[commands]]
+name = "daily"
+title = "Open Obsidian Daily Note"
+description = "Today's note, created from your template if needed"
+icon = "bs-calendar"
+mode = "no-view"
+keywords = ["obsidian", "daily", "journal", "today", "note du jour", "journal", "aujourd'hui"]
+
+[[commands]]
+name = "capture"
+title = "Capture to Obsidian"
+description = "Append a line to today's daily note or to your inbox note"
+icon = "bs-bolt"
+mode = "no-view"
+keywords = ["obsidian", "capture", "inbox", "jot", "append", "noter", "ajouter", "idée"]
+[[commands.arguments]]
+name = "text"
+placeholder = "Idea, task, link…"
+required = true
+
+[[commands]]
+name = "vaults"
+title = "Open Obsidian Vault"
+description = "Your vaults with their note counts"
+icon = "bs-archive"
+keywords = ["obsidian", "vault", "coffre", "open"]
+
+[[preferences]]
+name = "vault"
+title = "Vault for daily notes and capture"
+description = "Vault name; empty: the one opened last"
+
+[[preferences]]
+name = "captureTo"
+title = "Capture into"
+description = "“daily” (today's daily note) or “inbox” (the note below)"
+default = "daily"
+
+[[preferences]]
+name = "inbox"
+title = "Inbox note"
+description = "Path in the vault, without .md, used when capturing into the inbox"
+default = "Inbox"
+
+[[preferences]]
+name = "timestamp"
+title = "Prefix captures with the time"
+description = "“- 14:05 your text”"
+type = "boolean"
+default = true

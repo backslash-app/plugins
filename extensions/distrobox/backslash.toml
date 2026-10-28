@@ -1,0 +1,57 @@
+[extension]
+id = "distrobox"
+title = "Containers & VMs"
+description = "Enter distrobox and toolbx containers, and start, stop or open your libvirt virtual machines"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+
+[permissions]
+run = [
+  "distrobox",
+  "toolbox",
+  "podman",
+  "virsh",
+  "virt-manager",
+  "virt-viewer",
+  "gnome-boxes",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "machines"
+title = "Containers & VMs"
+description = "distrobox and toolbx containers, libvirt virtual machines"
+icon = "bs-layers"
+keywords = [
+  "distrobox",
+  "toolbox",
+  "toolbx",
+  "container",
+  "vm",
+  "virtual machine",
+  "libvirt",
+  "qemu",
+  "kvm",
+  "virt-manager",
+  "boxes",
+  "conteneur",
+  "machine virtuelle",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

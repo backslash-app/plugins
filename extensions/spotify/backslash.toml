@@ -1,0 +1,54 @@
+[extension]
+id = "spotify"
+title = "Spotify"
+description = "Search Spotify, play on any of your devices, queue songs, browse your playlists and save what's playing to your library"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-music"
+license = "MIT"
+
+# The Web API, the sign-in (token endpoint), and cover art: i.scdn.co for
+# albums and artists, mosaic.scdn.co and the spotifycdn.com hosts for playlists.
+[permissions]
+net = [
+  "api.spotify.com",
+  "accounts.spotify.com",
+  "i.scdn.co",
+  "mosaic.scdn.co",
+  "image-cdn-ak.spotifycdn.com",
+  "image-cdn-fa.spotifycdn.com",
+]
+
+[[commands]]
+name = "search"
+title = "Search Spotify"
+description = "Songs, artists, albums and playlists: play, queue, save"
+icon = "bs-music"
+keywords = ["spotify", "music", "song", "track", "album", "artist", "play", "musique", "chanson", "titre", "écouter"]
+
+[[commands]]
+name = "playlists"
+title = "My Spotify Playlists"
+description = "Your playlists and Liked Songs"
+icon = "bs-music"
+keywords = ["spotify", "playlist", "liked songs", "library", "bibliothèque", "titres likés"]
+
+[[commands]]
+name = "now-playing"
+title = "Spotify Now Playing"
+description = "The current song with like / unlike, what's up next and your devices"
+icon = "bs-headphones"
+keywords = ["spotify", "now playing", "current", "song", "like", "queue", "devices", "en cours", "file d'attente", "appareils"]
+
+[[preferences]]
+name = "clientId"
+title = "Client ID"
+description = "Create an app on developer.spotify.com/dashboard (Web API), add the redirect URI http://127.0.0.1:43117/callback, then paste its Client ID here"
+required = true
+
+[[preferences]]
+name = "redirectPort"
+title = "Redirect port"
+description = "The port of the redirect URI registered in your app (default 43117). 0 picks a free port each time: register http://127.0.0.1/callback without a port then"
+type = "number"
+default = 43117

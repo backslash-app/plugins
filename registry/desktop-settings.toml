@@ -1,0 +1,14 @@
+# registry/desktop-settings.toml
+id = "desktop-settings"
+title = "Desktop Settings"
+description = "Search every settings panel of GNOME, KDE Plasma, Xfce or Cinnamon in English or French, and flip quick toggles"
+author = "Backslash"
+icon = "bs-settings"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/desktop-settings"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:28c2f11d713588d0c6ed545578af713fc690b96b50bbc5ba535bd3d1fe83c76a"
+permissions = ["Run gsettings", "Run kreadconfig6", "Run kreadconfig5", "Run plasma-apply-colorscheme", "Run gnome-control-center", "Run systemsettings", "Run systemsettings5", "Run kcmshell6", "Run kcmshell5", "Run cinnamon-settings", "Run xfce4-settings-manager", "Run xfce4-appearance-settings", "Run xfce4-display-settings", "Run xfce4-color-settings", "Run xfce4-keyboard-settings", "Run xfce4-mouse-settings", "Run xfce4-power-manager-settings", "Run xfce4-notifyd-config", "Run xfce4-mime-settings", "Run exo-preferred-applications", "Run xfce4-session-settings", "Run xfce4-screensaver-preferences", "Run light-locker-settings", "Run xfce4-accessibility-settings", "Run xfce4-about", "Run xfce4-settings-editor", "Run xfce4-panel", "Run xfdesktop-settings", "Run xfwm4-settings", "Run xfwm4-tweaks-settings", "Run xfwm4-workspace-settings", "Run thunar-volman-settings", "Run nm-connection-editor", "Run blueman-manager", "Run blueberry", "Run overskride", "Run pavucontrol", "Run pwvucontrol", "Run pavucontrol-qt", "Run nwg-displays", "Run wdisplays", "Run arandr", "Run nwg-look", "Run lxappearance", "Run qt6ct", "Run qt5ct", "Run system-config-printer", "Read /usr/bin", "Read /usr/local/bin", "Read /bin", "Read /usr/sbin", "Read /sbin", "Read /usr/games", "Read ~/.local/bin", "Read /run/current-system/sw/bin", "Read ~/.nix-profile/bin", "Read /snap/bin", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable PATH"]
+commands = ["Desktop Settings"]
+

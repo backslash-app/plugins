@@ -1,0 +1,55 @@
+[extension]
+id = "passwords"
+title = "Passwords"
+description = "Copy passwords, usernames and one-time codes from pass, Bitwarden, 1Password and KeePassXC"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-key"
+license = "MIT"
+
+# Only the managers' own command-line tools are run; secrets are read when you
+# copy them and never stored or shown. ~/.password-store is read to list pass
+# entries without decrypting anything.
+[permissions]
+run = ["pass", "bw", "op", "keepassxc-cli"]
+read = ["~/.password-store"]
+env = ["HOME", "PASSWORD_STORE_DIR", "BW_SESSION"]
+
+[[commands]]
+name = "search"
+title = "Search Passwords"
+description = "Enter copies the password, Ctrl+Shift+C the username, Ctrl+T the one-time code"
+icon = "bs-key"
+keywords = [
+  "password",
+  "passwords",
+  "login",
+  "otp",
+  "totp",
+  "2fa",
+  "pass",
+  "bitwarden",
+  "1password",
+  "keepass",
+  "keepassxc",
+  "mot de passe",
+  "mots de passe",
+  "identifiant",
+  "code",
+]
+
+[[preferences]]
+name = "bwSession"
+title = "Bitwarden session"
+description = "Optional: the output of `bw unlock --raw`, to stay unlocked. Without it you type your master password once per use"
+type = "secret"
+
+[[preferences]]
+name = "keepassDb"
+title = "KeePassXC database"
+description = "Path of your .kdbx file, e.g. ~/Passwords.kdbx. Its password is asked each time, never saved"
+
+[[preferences]]
+name = "keepassKeyFile"
+title = "KeePassXC key file"
+description = "Optional key file of the database"

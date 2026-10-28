@@ -1,0 +1,44 @@
+[extension]
+id = "world-clock"
+title = "World Clock"
+description = "The time in your cities, offsets, day and night, and time conversions like “3pm NY in Paris”"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-clock"
+license = "MIT"
+
+# Everything is computed locally with the system's time zone data: no permission.
+
+[[commands]]
+name = "clocks"
+title = "World Clock"
+description = "Your cities' time; type “15:00 paris to tokyo” to convert"
+icon = "bs-clock"
+keywords = [
+  "time",
+  "clock",
+  "timezone",
+  "time zone",
+  "convert",
+  "utc",
+  "heure",
+  "fuseau",
+  "fuseau horaire",
+  "horloge",
+  "décalage",
+  "convertir",
+]
+
+[[commands]]
+name = "add-city"
+title = "Add World Clock City"
+description = "Pick a city among 230 to keep its time at hand"
+icon = "bs-globe"
+keywords = ["city", "timezone", "add", "ville", "ajouter", "fuseau", "heure"]
+
+[[preferences]]
+name = "hour12"
+title = "12-hour clock"
+description = "Show 3:00 PM instead of 15:00"
+type = "boolean"
+default = false

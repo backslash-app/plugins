@@ -1,0 +1,14 @@
+# registry/dev-utils.toml
+id = "dev-utils"
+title = "Dev Utils"
+description = "Encode, decode, hash, convert and generate developer values right from the search bar"
+author = "Backslash"
+icon = "bs-braces"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/dev-utils"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:4cc1fc6f231d622afb76994d262ac583c79ccbf66e6bc1b444b6bb275aaf605a"
+permissions = []
+commands = ["Dev Utils", "Copy New UUID", "Copy New Password"]
+

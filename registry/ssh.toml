@@ -1,0 +1,14 @@
+# registry/ssh.toml
+id = "ssh"
+title = "SSH Hosts"
+description = "Connect to the hosts of your SSH config and known_hosts in a terminal or the file manager"
+author = "Backslash"
+icon = "bs-server"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/ssh"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:f12d10ea79f47b307fca16ce5e4e00137afac3dbc496f6321a775675af130dd4"
+permissions = ["Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.ssh", "Read the environment variable HOME"]
+commands = ["SSH Hosts"]
+

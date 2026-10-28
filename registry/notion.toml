@@ -1,0 +1,14 @@
+# registry/notion.toml
+id = "notion"
+title = "Notion"
+description = "Search the pages and databases shared with your integration, read them, add text to a page, create pages in a database"
+author = "Backslash"
+icon = "bs-note"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/notion"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:78030a7d7511b47df5599083e94cbf75595415be6cbf5e317dbf542ad02557f7"
+permissions = ["Access api.notion.com"]
+commands = ["Search Notion", "Add to Notion Page", "Create Notion Page"]
+

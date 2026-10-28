@@ -1,0 +1,78 @@
+[extension]
+id = "docs"
+title = "Docs"
+description = "Search developer documentation: DevDocs, tldr pages, the Arch Wiki and your man pages"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+
+[permissions]
+net = ["devdocs.io", "documents.devdocs.io", "tldr.sh", "raw.githubusercontent.com", "wiki.archlinux.org"]
+run = [
+  "man",
+  "apropos",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "devdocs"
+title = "Search DevDocs"
+description = "API documentation of your languages and frameworks, from devdocs.io"
+icon = "bs-book"
+keywords = ["devdocs", "docs", "documentation", "api", "reference", "mdn", "javascript", "python", "référence"]
+
+[[commands]]
+name = "choose-docs"
+title = "Choose DevDocs"
+description = "Enable the documentations Search DevDocs looks in"
+icon = "bs-settings"
+keywords = ["devdocs", "docs", "enable", "documentation", "choisir", "activer"]
+
+[[commands]]
+name = "tldr"
+title = "tldr Pages"
+description = "Practical examples of command-line tools"
+icon = "bs-terminal"
+keywords = ["tldr", "cheatsheet", "examples", "command", "cli", "help", "exemples", "aide", "commande"]
+
+[[commands]]
+name = "arch-wiki"
+title = "Search Arch Wiki"
+description = "Articles of wiki.archlinux.org, readable in the launcher"
+icon = "bs-globe"
+keywords = ["arch", "wiki", "archlinux", "linux", "howto", "guide", "tutoriel"]
+
+[[commands]]
+name = "man"
+title = "Man Pages"
+description = "Search and read the manual pages installed on this computer"
+icon = "bs-book"
+keywords = ["man", "manual", "apropos", "help", "page", "manuel", "aide"]
+
+[[preferences]]
+name = "docs"
+title = "DevDocs to search"
+description = "Comma-separated names or slugs (javascript, python, rust, python~3.12), on top of the ones picked with Choose DevDocs"
+
+[[preferences]]
+name = "language"
+title = "tldr language"
+description = "Two-letter code (fr, de, es…); pages not translated yet are shown in English"
+default = "en"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For man pages opened in a terminal. Leave empty to use the first one installed"
