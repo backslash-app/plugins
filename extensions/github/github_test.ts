@@ -14,7 +14,8 @@ const pr: PullRequest = {
   isDraft: false,
   state: "OPEN",
   createdAt: "2026-10-27T08:00:00Z",
-  updatedAt: "2026-10-27T10:00:00Z",
+  // Relative to now: the item shows how long ago the PR changed.
+  updatedAt: new Date().toISOString(),
   additions: 86,
   deletions: 12,
   changedFiles: 4,
