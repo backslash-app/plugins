@@ -1,0 +1,57 @@
+[extension]
+id = "todo-txt"
+title = "Todo.txt"
+description = "Your todo.txt tasks by due date, with priorities, +projects, @contexts, recurrence and quick add"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-square-check"
+license = "MIT"
+
+# Extensions declare their files ahead of time, so todo.txt is read from the
+# usual places only: ~/todo.txt or ~/Documents/todo.txt (with done.txt next
+# to it), or the folders that sync apps and todo.sh use, ~/Dropbox/todo
+# (Simpletask, Markor) and ~/.todo. Writing is needed to add, complete and
+# edit tasks; the file is watched to reload when another app changes it.
+[permissions]
+read = ["~/todo.txt", "~/done.txt", "~/Documents/todo.txt", "~/Documents/done.txt", "~/Dropbox/todo", "~/.todo"]
+write = ["~/todo.txt", "~/done.txt", "~/Documents/todo.txt", "~/Documents/done.txt", "~/Dropbox/todo", "~/.todo"]
+env = ["HOME"]
+
+[[commands]]
+name = "tasks"
+title = "Todo.txt Tasks"
+description = "Overdue, today's and upcoming tasks; complete, edit, prioritize"
+icon = "bs-square-check"
+keywords = ["todo", "todo.txt", "tasks", "gtd", "due", "today", "tâches", "à faire", "liste"]
+
+[[commands]]
+name = "add"
+title = "Add Todo.txt Task"
+description = "“(A) Call Bob +Work @phone due:fri rec:1w”, saved at once"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["todo", "add", "task", "new", "capture", "ajouter", "tâche", "nouvelle"]
+[[commands.arguments]]
+name = "task"
+placeholder = "(A) Call Bob +Work @phone due:fri"
+required = true
+
+[[preferences]]
+name = "file"
+title = "todo.txt file"
+description = "~/todo.txt, ~/Documents/todo.txt, or a file in ~/Dropbox/todo or ~/.todo. Empty: the first of these that exists"
+default = ""
+
+[[preferences]]
+name = "archive"
+title = "Move completed tasks to done.txt"
+description = "Off: completed tasks stay in todo.txt, marked “x”"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "createdDate"
+title = "Add the creation date to new tasks"
+description = "“2026-10-28 Call Bob”, as todo.sh -t does"
+type = "boolean"
+default = true

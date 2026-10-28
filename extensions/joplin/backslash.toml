@@ -1,0 +1,33 @@
+[extension]
+id = "joplin"
+title = "Joplin"
+description = "Search your Joplin notes by notebook, preview them with their tags, create notes and copy links"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-note"
+license = "MIT"
+
+# Joplin desktop serves its Data API on 127.0.0.1:41184 when the Web Clipper
+# service is enabled; nothing else is reached.
+[permissions]
+net = ["127.0.0.1:41184"]
+
+[[commands]]
+name = "search"
+title = "Search Joplin Notes"
+description = "Full-text search by notebook, with previews, tags and to-dos"
+icon = "bs-search"
+keywords = ["joplin", "notes", "notebook", "markdown", "search", "notes", "carnet", "chercher", "rechercher"]
+
+[[commands]]
+name = "new"
+title = "New Joplin Note"
+description = "Title, markdown, notebook, tags; the last notebook is remembered"
+icon = "bs-plus"
+keywords = ["joplin", "note", "new", "create", "write", "nouvelle note", "créer", "écrire"]
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "Joplin → Tools → Options → Web Clipper → Advanced options → Authorization token"
+type = "secret"

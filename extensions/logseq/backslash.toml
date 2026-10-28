@@ -1,0 +1,65 @@
+[extension]
+id = "logseq"
+title = "Logseq"
+description = "Search your Logseq pages and blocks, preview them with properties and backlinks, open today's journal and capture blocks"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+
+# Graphs can be any folder of your home, so reading it is needed to search
+# them (they are listed in ~/.logseq/graphs). Logseq has no link to add a
+# block, so captures append to today's journal file directly: writing is
+# allowed in the folders dedicated to Logseq only (~/Logseq, ~/logseq,
+# ~/Documents/Logseq, ~/Documents/logseq, and the graphs inside them). For a
+# graph elsewhere the block is copied and today's journal opened to paste it.
+[permissions]
+read = ["~"]
+write = ["~/Logseq", "~/logseq", "~/Documents/Logseq", "~/Documents/logseq"]
+env = ["HOME"]
+
+[[commands]]
+name = "search"
+title = "Search Logseq"
+description = "Pages, journals and blocks of your graphs, with previews and backlinks"
+icon = "bs-search"
+keywords = ["logseq", "notes", "outliner", "pages", "blocks", "graph", "pkm", "chercher", "notes", "graphe"]
+
+[[commands]]
+name = "journal"
+title = "Open Logseq Journal"
+description = "Today's journal page, created if needed"
+icon = "bs-calendar"
+mode = "no-view"
+keywords = ["logseq", "journal", "today", "daily", "aujourd'hui", "journal du jour"]
+
+[[commands]]
+name = "capture"
+title = "Capture to Logseq"
+description = "Append a block to today's journal"
+icon = "bs-bolt"
+mode = "no-view"
+keywords = ["logseq", "capture", "block", "jot", "append", "inbox", "noter", "ajouter", "bloc"]
+[[commands.arguments]]
+name = "text"
+placeholder = "Idea, TODO, link…"
+required = true
+
+[[commands]]
+name = "graphs"
+title = "Logseq Graphs"
+description = "Your graphs with their page and journal counts"
+icon = "bs-layers"
+keywords = ["logseq", "graph", "graphs", "graphe", "open"]
+
+[[preferences]]
+name = "graph"
+title = "Graph for the journal and captures"
+description = "A graph name, or its folder (~/Logseq/work). Empty: the one opened last in Logseq"
+
+[[preferences]]
+name = "timestamp"
+title = "Prefix captures with the time"
+description = "“- 14:05 your text”"
+type = "boolean"
+default = false

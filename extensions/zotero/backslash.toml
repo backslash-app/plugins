@@ -1,0 +1,26 @@
+[extension]
+id = "zotero"
+title = "Zotero"
+description = "Search your Zotero library by title, author or tag, copy APA citations and BibTeX, and open PDFs"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+
+# While Zotero 7 runs with its local API on, items come from 127.0.0.1:23119.
+# Otherwise ~/Zotero/zotero.sqlite (Zotero's default data directory) is
+# copied to ~/.cache/backslash-zotero, because Zotero locks the original, and
+# read with the sqlite3 program; nothing is ever written to the library.
+[permissions]
+net = ["127.0.0.1:23119"]
+run = ["sqlite3"]
+read = ["~/Zotero", "~/.cache/backslash-zotero", "/etc/os-release"]
+write = ["~/.cache/backslash-zotero"]
+env = ["HOME"]
+
+[[commands]]
+name = "search"
+title = "Search Zotero"
+description = "Your references with authors, year and attachments; cite, open the PDF"
+icon = "bs-book"
+keywords = ["zotero", "citation", "bibliography", "reference", "paper", "bibtex", "pdf", "research", "biblio", "référence", "citer", "article"]
