@@ -1,0 +1,13 @@
+id = "tailwind"
+title = "Tailwind CSS"
+description = "Search Tailwind CSS v4 utility classes with the CSS they generate, browse the color palette and open the docs"
+author = "Backslash"
+icon = "bs-palette"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/tailwind"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:8921e7be37fcb715b0691890c2d4e2579e37c2812b1338f56001588ee90150cf"
+permissions = []
+commands = ["Search Tailwind Classes", "Tailwind Colors", "Search Tailwind Docs"]
+

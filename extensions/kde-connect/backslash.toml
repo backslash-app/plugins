@@ -1,0 +1,45 @@
+[extension]
+id = "kde-connect"
+title = "KDE Connect"
+description = "Your phones through KDE Connect or GSConnect: battery, ring, send the clipboard, a file or an SMS, browse their files"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-apps"
+license = "MIT"
+
+# kdeconnect-cli lists and drives KDE Connect's devices; busctl reads their battery and
+# plugins on the session bus (org.kde.kdeconnect), and talks to GSConnect
+# (org.gnome.Shell.Extensions.GSConnect), which has no command line.
+# The clipboard is read only to send it as text when the device's clipboard plugin
+# can't push it itself.
+[permissions]
+run = ["kdeconnect-cli", "busctl"]
+read = ["/etc/os-release"]
+env = ["HOME", "XDG_CURRENT_DESKTOP"]
+clipboard-read = true
+
+[[commands]]
+name = "devices"
+title = "KDE Connect"
+description = "Paired phones and tablets with their battery; ring, send the clipboard, files and SMS"
+icon = "bs-apps"
+keywords = [
+  "kde connect",
+  "kdeconnect",
+  "gsconnect",
+  "phone",
+  "téléphone",
+  "smartphone",
+  "android",
+  "battery",
+  "batterie",
+  "ring",
+  "sonner",
+  "find my phone",
+  "trouver mon téléphone",
+  "sms",
+  "send file",
+  "envoyer un fichier",
+  "clipboard",
+  "presse-papiers",
+]

@@ -1,0 +1,76 @@
+{
+  "camera": {
+    "name": "camera",
+    "category": "Media",
+    "tags": [
+      "camera",
+      "photo",
+      "photography",
+      "picture",
+      "video",
+      "lens",
+      "image",
+      "snapshot"
+    ],
+    "styles": {
+      "outline": {
+        "version": "1.0",
+        "unicode": "ea54"
+      },
+      "filled": {
+        "version": "2.15",
+        "unicode": "fa37"
+      }
+    }
+  },
+  "brand-github": {
+    "name": "brand-github",
+    "category": "Brand",
+    "tags": [
+      "github",
+      "git",
+      "repository",
+      "code",
+      "hosting",
+      "version-control",
+      "octocat",
+      "microsoft",
+      "developer",
+      "logo",
+      "brand"
+    ],
+    "styles": {
+      "outline": {
+        "version": "1.18",
+        "unicode": "ec1c"
+      },
+      "filled": {
+        "version": "2.9",
+        "unicode": "f7e7"
+      }
+    }
+  },
+  "a-b-2": {
+    "name": "a-b-2",
+    "category": "Text",
+    "tags": [
+      "ab-test",
+      "split-test",
+      "experiment",
+      "variant",
+      "comparison",
+      "compare",
+      "swap",
+      "testing",
+      "versus",
+      "a",
+      "b"
+    ],
+    "styles": {
+      "outline": {
+        "version": "1.76",
+        "unicode": "f25f"
+      }
+    }
+  }
+}

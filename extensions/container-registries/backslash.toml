@@ -1,0 +1,36 @@
+[extension]
+id = "container-registries"
+title = "Container Registries"
+description = "Search Docker Hub and Quay.io images and browse tags on Docker Hub, GHCR and Quay with sizes, digests and platforms"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-box"
+license = "MIT"
+
+[permissions]
+# Docker Hub's API; GHCR's and Quay's registry API with anonymous pull tokens
+# (public images only); Quay's own API for search and tag dates. GHCR serves
+# image configs (build date, labels) from pkg-containers.githubusercontent.com.
+net = ["hub.docker.com", "ghcr.io", "quay.io", "pkg-containers.githubusercontent.com"]
+
+[[commands]]
+name = "search"
+title = "Search Container Images"
+description = "Docker Hub search, then tags with size, digest, platforms and pull commands; or type ghcr.io/owner/image"
+icon = "bs-box"
+keywords = [
+  "docker",
+  "container",
+  "image",
+  "tag",
+  "registry",
+  "docker hub",
+  "ghcr",
+  "quay",
+  "podman",
+  "pull",
+  "oci",
+  "conteneur",
+  "registre",
+  "étiquette",
+]

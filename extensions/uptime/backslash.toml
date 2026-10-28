@@ -1,0 +1,64 @@
+[extension]
+id = "uptime"
+title = "Uptime & SSL"
+description = "Watch your websites: HTTP status, response time and how long until their TLS certificate expires"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+
+# The sites are URLs you add yourself, on any host, so they can't be listed
+# in advance: net = ["*"] is unavoidable. Requests only ever go to the URLs in
+# your watchlist. openssl reads each certificate (Deno doesn't expose the
+# peer certificate of a TLS connection).
+[permissions]
+net = ["*"]
+run = ["openssl"]
+
+[[commands]]
+name = "uptime"
+title = "Uptime & SSL"
+description = "Your websites, checked now: up or down, response time, certificate expiry"
+icon = "bs-activity"
+keywords = [
+  "uptime",
+  "monitor",
+  "website",
+  "ssl",
+  "tls",
+  "certificate",
+  "https",
+  "ping",
+  "down",
+  "site",
+  "surveillance",
+  "certificat",
+  "disponibilité",
+  "en ligne",
+]
+
+[[commands]]
+name = "add"
+title = "Watch Website"
+description = "Add a URL to Uptime & SSL"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["uptime", "monitor", "ssl", "watch", "surveiller", "site"]
+[[commands.arguments]]
+name = "url"
+placeholder = "https://example.com"
+required = true
+
+[[preferences]]
+name = "warnDays"
+title = "Certificate warning (days)"
+description = "Warn when a certificate expires in fewer days than this"
+type = "number"
+default = 14
+
+[[preferences]]
+name = "slowMs"
+title = "Slow response (ms)"
+description = "Responses slower than this are shown in orange"
+type = "number"
+default = 1500

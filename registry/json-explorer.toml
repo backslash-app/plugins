@@ -1,0 +1,13 @@
+id = "json-explorer"
+title = "JSON Explorer"
+description = "Validate, browse and query the JSON in your clipboard, then copy values, paths or YAML, TOML and CSV"
+author = "Backslash"
+icon = "bs-braces"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/json-explorer"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:cfdd06db088df1a938c7b0ba2fddebee4e79f2124cd1b2cc9859d985ed47746b"
+permissions = ["Read the clipboard"]
+commands = ["Explore JSON", "Format JSON in Clipboard", "Minify JSON in Clipboard"]
+

@@ -1,0 +1,71 @@
+[extension]
+id = "commit-helper"
+title = "Commit Helper"
+description = "Write Conventional Commits messages with scopes learned from your history, gitmoji, and commit the staged changes"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-commit"
+license = "MIT"
+
+[permissions]
+env = ["HOME"]
+# To suggest how to install git when it is missing.
+read = ["/etc/os-release"]
+# find scans the folders set in the preferences for repositories (which a fixed
+# read list couldn't cover); git reads their history and staged changes, and
+# commits when you ask.
+run = ["git", "find"]
+
+[[commands]]
+name = "compose"
+title = "Compose Commit Message"
+description = "Type, scope, description, body and footers; then copy the message or commit the staged changes"
+icon = "bs-commit"
+keywords = [
+  "commit",
+  "conventional",
+  "conventional commits",
+  "git",
+  "message",
+  "feat",
+  "fix",
+  "changelog",
+  "semver",
+  "scope",
+  "message de commit",
+  "valider",
+  "commiter",
+]
+
+[[commands]]
+name = "gitmoji"
+title = "Search Gitmoji"
+description = "The full gitmoji table: copy or paste an emoji or its :code:"
+icon = "bs-smile"
+keywords = ["gitmoji", "emoji", "commit", "git", "emoticon", "émoji", "émoticône"]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where to look for repositories, separated by commas"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folders deep to look below each folder (1 to 8)"
+type = "number"
+default = 3
+
+[[preferences]]
+name = "gitmoji"
+title = "Always suggest a gitmoji"
+description = "Preselect the type's gitmoji even in repositories that don't use them"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "gitmojiStyle"
+title = "Gitmoji style"
+description = "emoji (✨) or code (:sparkles:); repositories writing codes get codes anyway"
+default = "emoji"

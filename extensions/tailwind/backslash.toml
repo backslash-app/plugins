@@ -1,0 +1,44 @@
+[extension]
+id = "tailwind"
+title = "Tailwind CSS"
+description = "Search Tailwind CSS v4 utility classes with the CSS they generate, browse the color palette and open the docs"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-palette"
+license = "MIT"
+
+# Works offline: utilities.json was generated with tailwindcss 4.3.3's own
+# design system (getClassList + candidatesToCss) and theme.css, so every class
+# and its CSS is exactly what Tailwind outputs. No permission needed.
+
+[[commands]]
+name = "classes"
+title = "Search Tailwind Classes"
+description = "Utility classes and the CSS they produce; search by class, property or value"
+icon = "bs-code"
+keywords = [
+  "tailwind",
+  "tailwindcss",
+  "css",
+  "class",
+  "classes",
+  "utility",
+  "utilities",
+  "classe",
+  "propriété",
+  "style",
+]
+
+[[commands]]
+name = "colors"
+title = "Tailwind Colors"
+description = "The default palette with OKLCH and hex values"
+icon = "bs-palette"
+keywords = ["tailwind", "colors", "colours", "palette", "couleurs", "oklch", "hex", "swatch", "nuancier"]
+
+[[commands]]
+name = "docs"
+title = "Search Tailwind Docs"
+description = "Every page of tailwindcss.com/docs"
+icon = "bs-book"
+keywords = ["tailwind", "docs", "documentation", "reference", "guide", "aide"]

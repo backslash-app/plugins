@@ -1,0 +1,13 @@
+id = "twitch"
+title = "Twitch"
+description = "Followed channels that are live with game, viewers and uptime, top categories and channel search; watch in the browser or with streamlink"
+author = "Backslash"
+icon = "bs-video"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/twitch"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:cb820b5a0864ec6e6ede3e19c4176f427ad654ab01ef6a189e46acd42b8f4003"
+permissions = ["Access api.twitch.tv", "Access id.twitch.tv", "Access static-cdn.jtvnw.net", "Run systemd-run", "Run systemctl", "Run streamlink", "Run mpv", "Run yt-dlp", "Read /etc/os-release", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable XDG_RUNTIME_DIR"]
+commands = ["Twitch"]
+

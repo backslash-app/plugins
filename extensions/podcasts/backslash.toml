@@ -1,0 +1,72 @@
+[extension]
+id = "podcasts"
+title = "Podcasts"
+description = "Search Apple Podcasts, subscribe, and play new episodes in the background with mpv: pause, seek, resume where you stopped"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-mic"
+license = "MIT"
+
+# Podcast feeds and their cover art live on hosts chosen by each show (any
+# website or podcast host), so "*" is the only way to reach them; the search
+# itself uses itunes.apple.com.
+# Episodes play in mpv inside a transient systemd user unit (systemd-run), so
+# they keep playing once the launcher is hidden; mpv is run once to check it is
+# installed. mpv's control socket and the position file of its small script
+# live in ~/.cache/backslash/podcasts (HOME locates it); /etc/os-release picks
+# the install command to suggest.
+[permissions]
+net = ["*"]
+run = ["systemd-run", "systemctl", "mpv"]
+read = ["~/.cache/backslash/podcasts", "/etc/os-release"]
+write = ["~/.cache/backslash/podcasts"]
+env = ["HOME"]
+
+[[commands]]
+name = "podcasts"
+title = "Podcasts"
+description = "New episodes of your subscriptions, those in progress and your shows; Enter plays"
+icon = "bs-mic"
+keywords = ["podcast", "podcasts", "episodes", "listen", "subscriptions", "audio", "épisodes", "écouter", "baladodiffusion", "abonnements"]
+
+[[commands]]
+name = "search"
+title = "Search Podcasts"
+description = "Find shows in the Apple Podcasts directory and subscribe"
+icon = "bs-search"
+keywords = ["podcast", "search", "find", "subscribe", "apple podcasts", "itunes", "chercher", "rechercher", "s'abonner"]
+
+[[commands]]
+name = "toggle"
+title = "Pause or Resume Podcast"
+description = "Pauses the episode playing in the background, or resumes it"
+icon = "bs-pause"
+mode = "no-view"
+keywords = ["podcast", "pause", "resume", "play", "reprendre", "lecture"]
+
+[[commands]]
+name = "stop"
+title = "Stop Podcast"
+description = "Stops the episode and remembers where you were"
+icon = "bs-stop"
+mode = "no-view"
+keywords = ["podcast", "stop", "arrêter", "couper"]
+
+[[preferences]]
+name = "speed"
+title = "Playback speed"
+description = "From 0.5 to 3 (1 is normal speed)"
+type = "number"
+default = 1
+
+[[preferences]]
+name = "days"
+title = "New episodes from the last"
+description = "Number of days shown in New Episodes (1 to 365)"
+type = "number"
+default = 30
+
+[[preferences]]
+name = "country"
+title = "Store country"
+description = "Two-letter code of the Apple Podcasts directory to search: US, FR, DE… (US by default)"

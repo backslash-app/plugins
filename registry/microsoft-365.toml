@@ -1,0 +1,13 @@
+id = "microsoft-365"
+title = "Microsoft 365"
+description = "Unread Outlook mail, Microsoft To Do tasks, OneDrive files and today's meetings through Microsoft Graph"
+author = "Backslash"
+icon = "bs-mail"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/microsoft-365"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:74bf1f3b077557edf14c9513cfdec55f4bbfec62e8144a3ab73e43f6664daf10"
+permissions = ["Access graph.microsoft.com", "Access login.microsoftonline.com"]
+commands = ["Outlook Unread Mail", "Microsoft To Do", "Add To Do Task", "Search OneDrive", "Today's Outlook Events"]
+

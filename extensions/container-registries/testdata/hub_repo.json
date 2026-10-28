@@ -1,0 +1,51 @@
+{
+  "user": "library",
+  "name": "nginx",
+  "namespace": "library",
+  "repository_type": "image",
+  "status": 1,
+  "status_description": "active",
+  "description": "Official build of Nginx.",
+  "is_private": false,
+  "is_automated": false,
+  "star_count": 21413,
+  "pull_count": 13522878169,
+  "last_updated": "2026-10-28T07:53:14.862135Z",
+  "last_modified": "2026-10-21T22:17:12.294204Z",
+  "date_registered": "2014-06-05T19:14:45Z",
+  "collaborator_count": 0,
+  "affiliation": null,
+  "hub_user": "stackbrew",
+  "has_starred": false,
+  "full_description": "# Quick reference\n\n-\t**Maintained by**:  \n\t[the NGINX Docker Maintainers](https://github.com/nginx/docker-nginx)\n\n-\t**Where to get help**:  \n\t[the Docker Community Slack](https://dockr.ly/comm-slack), [Server Fault](https://serverfault.com/help/on-topic), [Unix & Linux](https://unix.stackexchange.com/help/on-topic), or [Stack Overflow](https://stackoverflow.com/help/on-topic)\n\n# Supported tags and respective `Dockerfile` links\n\n-\t[`1.31.8`, `mainline`, `1`, `1.31`, `latest`, `1.31.8-trixie`, `mainline-trixie`, `1-trixie`, `1.31-trixie`, `trixie`](https://github.com/nginx/docker-nginx/blob/6fabb4c960a02a1e576d2789974c45f4cd2aa854/mainline/debian/Dockerfile)\n\n-\t[`1.31.8-perl`, `mainline-perl`, `1-perl`, `1.31-perl`, `perl`, `1.31.8-trixie-perl`, `mainline-trixie-perl`, `1-trixie-perl`, `1.31-trixie-perl`, `trixie-perl`](https://github.com/nginx/docker-nginx/blob/6fabb4c960a02a1e576d2789974c45f4cd2aa854/mainline/debian-perl/Dockerfile)\n\n-\t[`1.31.8-otel`, `mainline-otel`, `1-otel`, `1.31-otel`, `otel`, `1.31.8-trixie-otel`, `mainline-trixie-otel`, `1-trixie-otel`, `1.31-trixie-otel`, `trixie-otel`](https://github.com/nginx/docker-nginx/blob/6fabb4c960a02a1e576d2789974c45f4cd2aa854/mainline/debian-otel/Dockerfile)\n\n-\t[`1.31.8-alpine`, `mainline-alpine`, `1-alpine`, `1.31-alpine`, `alpine`, `1.31.8-alpine3.24`, `mainline-alpine3.24`, `1-alpine3.24`, `1.31-alpine3.24`, `alpine3.24`](https://github.com/nginx/docker-nginx/blob/6fabb4c960a02a1e576d2789974c45f4cd2aa854/mainline/alpine/D",
+  "permissions": {
+    "read": true,
+    "write": false,
+    "admin": false
+  },
+  "media_types": [
+    "application/octet-stream",
+    "application/vnd.docker.container.image.v1+json",
+    "application/vnd.docker.distribution.manifest.list.v2+json",
+    "application/vnd.docker.distribution.manifest.v1+prettyjws",
+    "application/vnd.oci.image.index.v1+json"
+  ],
+  "content_types": [
+    "unrecognized",
+    "image"
+  ],
+  "categories": [
+    {
+      "name": "Web servers",
+      "slug": "web-servers"
+    }
+  ],
+  "immutable_tags_settings": {
+    "enabled": false,
+    "rules": [
+      ".*"
+    ]
+  },
+  "storage_size": 258741118340,
+  "source": null
+}

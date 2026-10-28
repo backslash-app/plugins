@@ -1,0 +1,32 @@
+var t = /* @__PURE__ */ ((i) => (i.REGULAR = "regular", i.THIN = "thin", i.LIGHT = "light", i.BOLD = "bold", i.FILL = "fill", i.DUOTONE = "duotone", i))(t || {}), e = /* @__PURE__ */ ((i) => (i.ARROWS = "arrows", i.BRAND = "brands", i.COMMERCE = "commerce", i.COMMUNICATION = "communications", i.DESIGN = "design", i.DEVELOPMENT = "technology & development", i.EDITOR = "editor", i.FINANCE = "finances", i.GAMES = "games", i.HEALTH = "health & wellness", i.MAP = "maps & travel", i.MEDIA = "media", i.NATURE = "nature", i.OBJECTS = "objects", i.OFFICE = "office", i.PEOPLE = "people", i.SYSTEM = "system", i.WEATHER = "weather", i))(e || {}), a = /* @__PURE__ */ ((i) => (i.ARROWS = "arrows", i.BRAND = "brands", i.COMMERCE = "commerce", i.COMMUNICATION = "communication", i.DESIGN = "design", i.DEVELOPMENT = "technology & development", i.EDUCATION = "education", i.FINANCE = "math & finance", i.GAMES = "games", i.HEALTH = "health & wellness", i.MAP = "maps & travel", i.MEDIA = "media", i.OFFICE = "office & editing", i.PEOPLE = "people", i.SECURITY = "security & warnings", i.SYSTEM = "system & devices", i.TIME = "time", i.WEATHER = "weather & nature", i))(a || {});
+const n = [
+  {
+    name: "acorn",
+    pascal_name: "Acorn",
+    categories: [e.FINANCE, e.NATURE],
+    figma_category: a.WEATHER,
+    tags: [
+      "*new*",
+      "savings",
+      "nut",
+      "vegetable",
+      "veggies",
+      "food",
+      "groceries",
+      "market"
+    ],
+    codepoint: 60314,
+    published_in: 2.1,
+    updated_in: 2.1
+  },
+  {
+    name: "camera",
+    pascal_name: "Camera",
+    categories: [e.MEDIA, e.SYSTEM, e.OBJECTS],
+    figma_category: a.MEDIA,
+    tags: ["photography", "pictures", "lens"],
+    codepoint: 57614,
+    published_in: 1,
+    updated_in: 1
+  },
+];

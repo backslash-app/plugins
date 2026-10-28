@@ -1,0 +1,59 @@
+[extension]
+id = "github-actions"
+title = "GitHub Actions"
+description = "Workflow runs of your repositories, failing and running first, with jobs, steps and logs; re-run or cancel them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+
+# The REST API and the avatars it links to. Job logs are served from a signed
+# redirect to GitHub's log storage (Azure blobs, or the Actions results
+# service); their hosts vary per region, hence the two wildcards.
+# gh gives its sign-in when no token is set.
+[permissions]
+net = [
+  "api.github.com",
+  "avatars.githubusercontent.com",
+  "*.actions.githubusercontent.com",
+  "*.blob.core.windows.net",
+]
+run = ["gh"]
+
+[[commands]]
+name = "runs"
+title = "GitHub Actions Runs"
+description = "Failing, in progress and recent workflow runs: jobs, steps, logs, re-run and cancel"
+icon = "bs-activity"
+keywords = [
+  "github",
+  "actions",
+  "ci",
+  "workflow",
+  "runs",
+  "build",
+  "pipeline",
+  "checks",
+  "failing",
+  "intégration continue",
+  "exécutions",
+  "échec",
+]
+
+[[preferences]]
+name = "repositories"
+title = "Repositories"
+description = "Comma-separated owner/name, e.g. backslash-app/backslash, octocat/hello-world"
+
+[[preferences]]
+name = "recent"
+title = "Include repositories you pushed to recently"
+description = "Adds the repositories you pushed to in the last 30 days (up to 10)"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "token"
+title = "Personal access token"
+description = "Optional when the GitHub CLI is signed in (gh auth login). Needs the repo and workflow scopes to re-run or cancel"
+type = "secret"

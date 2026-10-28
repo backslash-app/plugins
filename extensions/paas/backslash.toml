@@ -1,0 +1,66 @@
+[extension]
+id = "paas"
+title = "Fly.io & Railway"
+description = "Fly.io apps and Railway services with their status, latest deploy and URL; open, logs, restart and deploy history"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+
+# Railway's GraphQL API (flyctl talks to Fly.io itself).
+[permissions]
+net = ["backboard.railway.com"]
+env = ["HOME"]
+# The Railway CLI's sign-in, used when no token is set; the distribution, for install hints.
+read = ["~/.railway/config.json", "/etc/os-release"]
+# flyctl (also installed as fly), then the terminals logs and sign-in open in.
+run = [
+  "flyctl",
+  "fly",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "apps"
+title = "Fly.io & Railway Apps"
+description = "Fly.io apps and Railway services: status, latest deploy, URL; logs, restart, deploy history"
+icon = "bs-rocket"
+keywords = [
+  "fly",
+  "flyctl",
+  "fly.io",
+  "railway",
+  "paas",
+  "hosting",
+  "deploy",
+  "deployments",
+  "machines",
+  "logs",
+  "restart",
+  "hébergement",
+  "déploiement",
+  "redémarrer",
+  "journaux",
+]
+
+[[preferences]]
+name = "railwayToken"
+title = "Railway token"
+description = "Optional. Railway → Account Settings → Tokens. Without it, the Railway CLI's sign-in (railway login) is used"
+type = "secret"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For logs and signing in. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

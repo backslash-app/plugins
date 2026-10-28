@@ -1,0 +1,13 @@
+id = "grafana"
+title = "Grafana"
+description = "Search Grafana dashboards and follow firing alerts; silence an alert for an hour or a day, expire silences"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/grafana"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:40fffb01aa98ca6fe65f34b6ee8f3a2dda1520f47118098705984e24bd320d41"
+permissions = ["Access *.grafana.net", "Access localhost", "Access 127.0.0.1", "Access grafana", "Access grafana.local", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Search Grafana Dashboards", "Grafana Alerts"]
+

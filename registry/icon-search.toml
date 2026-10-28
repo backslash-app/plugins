@@ -1,0 +1,13 @@
+id = "icon-search"
+title = "Icon Search"
+description = "Search Lucide, Material Symbols, Tabler, Heroicons, Phosphor and Simple Icons, and copy them as SVG, JSX or data URI"
+author = "Backslash"
+icon = "bs-image"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/icon-search"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:8f9fe62063b687a499ed3c3a89590919df572408a335ad7ad05882881bf8b804"
+permissions = ["Access cdn.jsdelivr.net", "Read ~/.cache/backslash/icon-search", "Write ~/.cache/backslash/icon-search", "Read the environment variable HOME"]
+commands = ["Search Icons"]
+

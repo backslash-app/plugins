@@ -1,0 +1,13 @@
+id = "pihole"
+title = "Pi-hole & AdGuard Home"
+description = "Queries, blocked share and top blocked domains of your Pi-hole v6 or AdGuard Home; pause blocking, allow or block a domain"
+author = "Backslash"
+icon = "bs-shield"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/pihole"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:52e6a401545030ca51ed98ac2105fed94ac33cca73db8fc179f78ad7d6cbb574"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access pi.hole", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Ad Blocking", "Pause Ad Blocking", "Resume Ad Blocking"]
+

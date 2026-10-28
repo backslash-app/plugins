@@ -1,0 +1,13 @@
+id = "authenticator"
+title = "Authenticator"
+description = "Two-factor (TOTP) codes for your accounts, with secrets kept in the system keyring"
+author = "Backslash"
+icon = "bs-shield"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/authenticator"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:a265b8d10fb37387f9cec25de2e49546c54f322288bd946c11df7ecbc3738a7d"
+permissions = ["Run secret-tool", "Run systemd-run", "Run zbarimg", "Run grim", "Run slurp", "Run gnome-screenshot", "Run spectacle", "Run maim", "Run scrot", "Run import", "Run wl-paste", "Run xclip", "Read ~/.cache/backslash/authenticator", "Read ~/Downloads", "Read ~/Documents", "Read /etc/os-release", "Write ~/.cache/backslash/authenticator", "Read the environment variable HOME", "Read the environment variable DBUS_SESSION_BUS_ADDRESS", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK", "Read the clipboard"]
+commands = ["Authenticator", "Add 2FA Account", "Scan 2FA QR Code on Screen"]
+

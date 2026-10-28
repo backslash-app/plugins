@@ -1,0 +1,57 @@
+[extension]
+id = "bitbucket"
+title = "Bitbucket"
+description = "Bitbucket Cloud pull requests to review or opened by you, with builds and approvals, your issues and repository search"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-repo"
+license = "MIT"
+
+# The REST API, and where Bitbucket serves avatars from (Gravatar, falling back to
+# Atlassian's initials pictures).
+[permissions]
+net = [
+  "api.bitbucket.org",
+  "bitbucket.org",
+  "secure.gravatar.com",
+  "avatar-management--avatars.us-west-2.prod.public.atl-paas.net",
+]
+
+[[commands]]
+name = "pull-requests"
+title = "My Bitbucket Pull Requests"
+description = "To review or opened by you: builds, approvals, branches"
+icon = "bs-pr-open"
+keywords = ["bitbucket", "pr", "pull request", "review", "atlassian", "builds", "pipelines", "relecture", "demande de fusion"]
+
+[[commands]]
+name = "issues"
+title = "My Bitbucket Issues"
+description = "Open issues assigned to you or reported by you, in repositories with an issue tracker"
+icon = "bs-issue-open"
+keywords = ["bitbucket", "issues", "bugs", "tickets", "tasks", "problème", "anomalie"]
+
+[[commands]]
+name = "repositories"
+title = "Search Bitbucket Repositories"
+description = "Recent repositories of your workspaces, or search them as you type"
+icon = "bs-repo"
+keywords = ["bitbucket", "repo", "git", "code", "clone", "dépôt"]
+
+[[preferences]]
+name = "email"
+title = "Atlassian account email"
+description = "The email you sign in to Bitbucket with. With a legacy app password, your Bitbucket username instead"
+required = true
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "id.atlassian.com → Security → Create API token with scopes → Bitbucket: read scopes for user, workspace, repository, pull request and issue"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "workspaces"
+title = "Workspaces"
+description = "Optional, comma-separated workspace slugs (bitbucket.org/<slug>). Empty: all the workspaces you belong to"

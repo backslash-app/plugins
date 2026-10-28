@@ -1,0 +1,57 @@
+[extension]
+id = "gitea"
+title = "Gitea & Forgejo"
+description = "Pull requests to review, issues, repositories and notifications of your Gitea or Forgejo server, self-hosted or Codeberg-like"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-repo"
+license = "MIT"
+
+# The server is yours: any address, chosen in the preferences, so its host can't be
+# listed ahead. Unlike Home Assistant, Gitea and Forgejo usually live on a public custom
+# domain (git.example.com), not only the local network, hence "*": the extension only
+# ever calls the address you set. The exact hosts after it let avatars of the public
+# instances and Gravatar/Libravatar show (pictures need an exact host).
+[permissions]
+net = ["*", "codeberg.org", "gitea.com", "secure.gravatar.com", "seccdn.libravatar.org"]
+
+[[commands]]
+name = "pull-requests"
+title = "My Gitea Pull Requests"
+description = "Review requested, created by you, assigned or mentioning you: with branches, diff and checks"
+icon = "bs-pr-open"
+keywords = ["gitea", "forgejo", "codeberg", "pr", "pull request", "review", "merge request", "relecture", "demande de fusion"]
+
+[[commands]]
+name = "issues"
+title = "My Gitea Issues"
+description = "Open issues assigned to you, created by you or mentioning you"
+icon = "bs-issue-open"
+keywords = ["gitea", "forgejo", "issues", "bugs", "tickets", "problème", "anomalie"]
+
+[[commands]]
+name = "repositories"
+title = "Search Gitea Repositories"
+description = "Your repositories, or search the whole server as you type"
+icon = "bs-repo"
+keywords = ["gitea", "forgejo", "repo", "git", "code", "dépôt", "projets"]
+
+[[commands]]
+name = "notifications"
+title = "Gitea Notifications"
+description = "Unread and pinned notifications; mark them read or pin them"
+icon = "bs-bell"
+keywords = ["gitea", "forgejo", "notifications", "inbox", "alerts", "alertes", "boîte de réception"]
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open it in the browser: https://git.example.com, https://codeberg.org, http://192.168.1.20:3000"
+required = true
+
+[[preferences]]
+name = "token"
+title = "Access token"
+description = "Your server → Settings → Applications → Generate new token: read access to issue, repository and user, read/write to notification"
+type = "secret"
+required = true

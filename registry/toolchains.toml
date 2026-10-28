@@ -1,0 +1,13 @@
+id = "toolchains"
+title = "Toolchains"
+description = "Language runtimes installed with mise, asdf, rustup, fnm, nvm, pyenv or SDKMAN!: what's in use, what's newer, install and switch in a terminal"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/toolchains"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:4df355b1981b0ac651c809343eb895e1b97f4038d6ffa18ecfb9a2c17257e55c"
+permissions = ["Run mise", "Run asdf", "Run rustup", "Run fnm", "Run pyenv", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release", "Read ~/.nvm", "Read ~/.sdkman/candidates", "Read the environment variable HOME", "Read the environment variable NVM_DIR", "Read the environment variable SDKMAN_DIR"]
+commands = ["Toolchains"]
+

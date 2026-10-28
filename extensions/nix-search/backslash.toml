@@ -1,0 +1,34 @@
+[extension]
+id = "nix-search"
+title = "NixOS Search"
+description = "Search nixpkgs packages and NixOS, Home Manager and nix-darwin options from search.nixos.org"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+
+# search.nixos.org's Elasticsearch backend, with the public read-only
+# credentials of the site itself; its index version and channels are read from
+# the site's script once a day.
+[permissions]
+net = ["search.nixos.org"]
+
+[[commands]]
+name = "packages"
+title = "Search Nix Packages"
+description = "nixpkgs packages with version, license, platforms and install commands"
+icon = "bs-package"
+keywords = ["nix", "nixos", "nixpkgs", "package", "paquet", "logiciel", "nix-shell", "nix run", "flake", "install"]
+
+[[commands]]
+name = "options"
+title = "Search NixOS Options"
+description = "NixOS, Home Manager and nix-darwin options with type, default and example"
+icon = "bs-settings"
+keywords = ["nix", "nixos", "option", "options", "configuration.nix", "home-manager", "nix-darwin", "réglage", "configuration"]
+
+[[preferences]]
+name = "channel"
+title = "Channel"
+description = "unstable (default) or a release like 26.05; packages can switch with Tab"
+default = "unstable"

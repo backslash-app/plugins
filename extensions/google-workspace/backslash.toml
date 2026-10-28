@@ -1,0 +1,67 @@
+[extension]
+id = "google-workspace"
+title = "Google Drive & Tasks"
+description = "Search Google Drive and manage Google Tasks with your own Google sign-in"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-drive"
+license = "MIT"
+
+# The Drive and Tasks APIs, the sign-in (token endpoint), and owners' profile
+# pictures (Drive's photoLink is served from lh3.googleusercontent.com).
+# Google Calendar is in the Calendar extension.
+[permissions]
+net = ["www.googleapis.com", "tasks.googleapis.com", "oauth2.googleapis.com", "lh3.googleusercontent.com"]
+
+[[commands]]
+name = "drive"
+title = "Search Google Drive"
+description = "Files by name or content; recent, starred and shared with you"
+icon = "bs-drive"
+keywords = [
+  "google drive",
+  "drive",
+  "docs",
+  "sheets",
+  "slides",
+  "files",
+  "documents",
+  "google",
+  "gdrive",
+  "fichiers",
+  "rechercher",
+  "partagés avec moi",
+  "suivis",
+]
+
+[[commands]]
+name = "tasks"
+title = "Google Tasks"
+description = "Tasks due today and coming up across your lists; Enter completes"
+icon = "bs-square-check"
+keywords = ["google tasks", "tasks", "todo", "to do", "google", "tâches", "à faire", "aujourd'hui"]
+
+[[commands]]
+name = "add-task"
+title = "Add Google Task"
+description = "“Send invoice friday #Work”: due date and list are understood"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["google tasks", "add", "new task", "quick add", "ajouter", "nouvelle tâche"]
+[[commands.arguments]]
+name = "task"
+placeholder = "Send invoice friday #Work"
+required = true
+
+[[preferences]]
+name = "clientId"
+title = "OAuth client ID"
+description = "console.cloud.google.com → APIs & Services: enable the Google Drive API and the Google Tasks API, then Credentials → Create credentials → OAuth client ID → Application type: Desktop app. Paste its Client ID (…apps.googleusercontent.com)"
+required = true
+
+[[preferences]]
+name = "clientSecret"
+title = "OAuth client secret"
+description = "The Client secret of the same Desktop app client (Google wants it even for desktop apps)"
+type = "secret"
+required = true
