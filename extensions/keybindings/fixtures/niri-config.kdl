@@ -1,0 +1,36 @@
+input {
+    keyboard {
+        xkb {
+            layout "us,fr"
+        }
+    }
+}
+
+/* Block comment { with braces } */
+binds {
+    // Keys consist of modifiers separated by + signs, followed by an XKB key name.
+    Mod+Shift+Slash { show-hotkey-overlay; }
+
+    Mod+T hotkey-overlay-title="Open a Terminal: alacritty" { spawn "alacritty"; }
+    Mod+D hotkey-overlay-title="Run an Application: fuzzel" { spawn "fuzzel"; }
+    Super+Alt+L hotkey-overlay-title="Lock the Screen: swaylock" { spawn "swaylock"; }
+
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "wpctl" "set-volume" "@DEFAULT_AUDIO_SINK@" "0.1+"; }
+    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
+
+    Mod+O repeat=false { toggle-overview; }
+    Mod+Q repeat=false { close-window; }
+
+    Mod+Left  { focus-column-left; }
+    Mod+Ctrl+Left  { move-column-left; }
+    /-Mod+H     { focus-column-left; }
+    Mod+WheelScrollDown cooldown-ms=150 { focus-workspace-down; }
+    Mod+1 { focus-workspace 1; }
+    Mod+Ctrl+1 { move-column-to-workspace 1; }
+    Mod+R { switch-preset-column-width; }
+    Mod+Minus { set-column-width "-10%"; }
+    Mod+Shift+F { fullscreen-window; }
+    Print { screenshot; }
+    Mod+Shift+E { quit; }
+    Mod+Shift+P { power-off-monitors; }
+}

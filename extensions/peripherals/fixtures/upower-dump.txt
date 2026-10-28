@@ -1,0 +1,115 @@
+Device: /org/freedesktop/UPower/devices/line_power_AC
+  native-path:          AC
+  power supply:         yes
+  updated:              Tue 28 Oct 2026 10:00:00 AM CET (300 seconds ago)
+  has history:          no
+  has statistics:       no
+  line-power
+    warning-level:       none
+    online:              yes
+    icon-name:          'ac-adapter-symbolic'
+
+Device: /org/freedesktop/UPower/devices/battery_BAT0
+  native-path:          BAT0
+  vendor:               SMP
+  model:                5B10W13930
+  serial:               1234
+  power supply:         yes
+  updated:              Tue 28 Oct 2026 10:04:00 AM CET (60 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  battery
+    present:             yes
+    rechargeable:        yes
+    state:               fully-charged
+    warning-level:       none
+    energy:              50.21 Wh
+    percentage:          100%
+    capacity:            87.4%
+    technology:          lithium-polymer
+    icon-name:          'battery-full-charged-symbolic'
+
+Device: /org/freedesktop/UPower/devices/mouse_hidpp_battery_0
+  native-path:          hidpp_battery_0
+  model:                MX Master 3
+  serial:               4082-ab-cd-ef
+  power supply:         no
+  updated:              Tue 28 Oct 2026 10:04:30 AM CET (30 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  mouse
+    present:             yes
+    rechargeable:        yes
+    state:               discharging
+    warning-level:       none
+    battery-level:       none
+    percentage:          12%
+    icon-name:          'battery-caution-symbolic'
+  History (charge):
+    1793178270	12.000	discharging
+
+Device: /org/freedesktop/UPower/devices/keyboard_hidpp_battery_1
+  native-path:          hidpp_battery_1
+  model:                K380 Multi-Device Keyboard
+  serial:               4b2e-11-22-33
+  power supply:         no
+  updated:              Tue 28 Oct 2026 10:00:00 AM CET (300 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  keyboard
+    present:             yes
+    rechargeable:        no
+    state:               discharging
+    warning-level:       none
+    battery-level:       normal
+    percentage:          55% (should be ignored)
+    icon-name:          'battery-good-symbolic'
+
+Device: /org/freedesktop/UPower/devices/headset_dev_AA_BB_CC_DD_EE_FF
+  native-path:          /org/bluez/hci0/dev_AA_BB_CC_DD_EE_FF
+  model:                WH-1000XM4
+  serial:               AA:BB:CC:DD:EE:FF
+  power supply:         no
+  updated:              Tue 28 Oct 2026 10:03:00 AM CET (120 seconds ago)
+  has history:          yes
+  has statistics:       no
+  headset
+    warning-level:       none
+    percentage:          70%
+    icon-name:          'battery-missing-symbolic'
+
+Device: /org/freedesktop/UPower/devices/gaming_input_ps_controller_battery_a0o5bo1co2do3eo4f
+  native-path:          ps-controller-battery-a0:5b:12:34:56:78
+  model:                Wireless Controller
+  serial:               a0:5b:12:34:56:78
+  power supply:         no
+  updated:              Tue 28 Oct 2026 10:04:50 AM CET (10 seconds ago)
+  has history:          yes
+  has statistics:       yes
+  gaming-input
+    present:             yes
+    rechargeable:        yes
+    state:               charging
+    warning-level:       none
+    percentage:          40%
+    icon-name:          'battery-good-charging-symbolic'
+
+Device: /org/freedesktop/UPower/devices/DisplayDevice
+  power supply:         yes
+  updated:              Tue 28 Oct 2026 10:04:00 AM CET (60 seconds ago)
+  has history:          no
+  has statistics:       no
+  battery
+    present:             yes
+    state:               fully-charged
+    warning-level:       none
+    energy:              50.21 Wh
+    percentage:          100%
+    icon-name:          'battery-full-charged-symbolic'
+
+Daemon:
+  daemon-version:  1.90.2
+  on-battery:      no
+  lid-is-closed:   no
+  lid-is-present:  yes
+  critical-action: HybridSleep

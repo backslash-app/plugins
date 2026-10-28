@@ -1,0 +1,69 @@
+Source #47
+	State: RUNNING
+	Name: alsa_input.pci-0000_00_1f.3.analog-stereo
+	Description: Built-in Audio Analog Stereo
+	Driver: PipeWire
+	Sample Specification: s32le 2ch 48000Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 45875 /  70% / -9.29 dB,   front-right: 45875 /  70% / -9.29 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor of Sink: n/a
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE HW_MUTE_CTRL HW_VOLUME_CTRL DECIBEL_VOLUME LATENCY 
+	Properties:
+		alsa.card = "0"
+		device.bus = "pci"
+		device.description = "Built-in Audio Analog Stereo"
+		device.form_factor = "internal"
+		media.class = "Audio/Source"
+	Ports:
+		analog-input-internal-mic: Internal Microphone (type: Mic, priority: 8900, availability group: Legacy 1, availability unknown)
+		analog-input-mic: Microphone (type: Mic, priority: 8700, availability group: Legacy 2, not available)
+	Active Port: analog-input-internal-mic
+	Formats:
+		pcm
+
+Source #50
+	State: SUSPENDED
+	Name: bluez_output.AA_BB_CC_DD_EE_FF.1.monitor
+	Description: Monitor of WH-1000XM4
+	Driver: PipeWire
+	Sample Specification: s16le 2ch 48000Hz
+	Channel Map: front-left,front-right
+	Owner Module: 4294967295
+	Mute: no
+	Volume: front-left: 65536 / 100% / 0.00 dB,   front-right: 65536 / 100% / 0.00 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor of Sink: bluez_output.AA_BB_CC_DD_EE_FF.1
+	Latency: 0 usec, configured 0 usec
+	Flags: DECIBEL_VOLUME LATENCY 
+	Properties:
+		device.class = "monitor"
+	Formats:
+		pcm
+
+Source #55
+	State: SUSPENDED
+	Name: bluez_input.AA:BB:CC:DD:EE:FF
+	Description: WH-1000XM4
+	Driver: PipeWire
+	Sample Specification: s16le 1ch 16000Hz
+	Channel Map: mono
+	Owner Module: 4294967295
+	Mute: yes
+	Volume: mono: 39322 /  60% / -13.31 dB
+	        balance 0.00
+	Base Volume: 65536 / 100% / 0.00 dB
+	Monitor of Sink: n/a
+	Latency: 0 usec, configured 0 usec
+	Flags: HARDWARE DECIBEL_VOLUME LATENCY 
+	Properties:
+		device.bus = "bluetooth"
+		device.description = "WH-1000XM4"
+		device.form_factor = "headset"
+	Formats:
+		pcm

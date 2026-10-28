@@ -1,0 +1,36 @@
+{
+  "name": "HeadsetControl",
+  "version": "3.0.0",
+  "api_version": "1.0",
+  "hidapi_version": "0.14.0",
+  "device_count": 2,
+  "devices": [
+    {
+      "status": "success",
+      "device": "SteelSeries Arctis Nova 7",
+      "vendor": "SteelSeries",
+      "product": "Arctis Nova 7",
+      "id_vendor": "0x1038",
+      "id_product": "0x2202",
+      "capabilities": ["sidetone", "battery", "inactive time", "chatmix", "equalizer preset"],
+      "capabilities_str": [
+        "CAP_SIDETONE",
+        "CAP_BATTERY_STATUS",
+        "CAP_INACTIVE_TIME",
+        "CAP_CHATMIX_STATUS",
+        "CAP_EQUALIZER_PRESET"
+      ],
+      "battery": { "status": "BATTERY_AVAILABLE", "level": 64 }
+    },
+    {
+      "status": "success",
+      "device": "Logitech G533",
+      "vendor": "Logitech",
+      "product": "G533 Gaming Headset",
+      "id_vendor": "0x046d",
+      "id_product": "0x0a66",
+      "capabilities": ["sidetone", "battery", "lights", "inactive time"],
+      "battery": { "status": "BATTERY_UNAVAILABLE", "level": -1 }
+    }
+  ]
+}

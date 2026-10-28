@@ -1,0 +1,3 @@
+org.gnome.settings-daemon.plugins.media-keys.custom-keybinding binding '<Primary><Alt>t'
+org.gnome.settings-daemon.plugins.media-keys.custom-keybinding command 'kgx --tab'
+org.gnome.settings-daemon.plugins.media-keys.custom-keybinding name 'Open Console'

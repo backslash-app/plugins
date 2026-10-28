@@ -1,0 +1,52 @@
+[extension]
+id = "peripherals"
+title = "Peripherals"
+description = "Battery level and state of your wireless mice, keyboards, headsets and gamepads, with headset sidetone and lights"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-mouse"
+license = "MIT"
+
+# UPower knows the batteries of Bluetooth and wireless devices; Solaar adds Logitech
+# devices it doesn't know, and HeadsetControl gaming headsets with their sidetone, lights
+# and idle timer. Each is optional.
+[permissions]
+run = ["upower", "solaar", "headsetcontrol"]
+
+[[commands]]
+name = "peripherals"
+title = "Peripherals"
+description = "Wireless devices by battery level, the lowest first"
+icon = "bs-mouse"
+keywords = [
+  "battery",
+  "batterie",
+  "mouse",
+  "souris",
+  "keyboard",
+  "clavier",
+  "headset",
+  "casque",
+  "headphones",
+  "écouteurs",
+  "gamepad",
+  "manette",
+  "controller",
+  "bluetooth",
+  "wireless",
+  "sans fil",
+  "périphériques",
+  "logitech",
+  "solaar",
+  "headsetcontrol",
+  "sidetone",
+]
+
+[[commands]]
+name = "battery-check"
+title = "Peripheral Batteries"
+description = "Shows the device lowest on battery under this command, checked every 30 minutes"
+icon = "bs-battery"
+mode = "no-view"
+interval = "30m"
+keywords = ["battery", "batterie", "low battery", "batterie faible", "mouse", "souris", "keyboard", "clavier", "casque"]
