@@ -30,9 +30,6 @@
     "dependencies": [
       "jsr:@std/assert@1",
       "jsr:@std/toml@1"
-    ],
-    "links": {
-      "jsr:@backslash/api@0.1.0": {}
-    }
+    ]
   }
 }

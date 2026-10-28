@@ -77,9 +77,14 @@ async function checksum(dir: string): Promise<string> {
 function requested(m: Manifest): string[] {
   const p = m.permissions ?? {};
   const lines: string[] = [];
-  if (m.runtime?.kind === "exec") lines.push("Run as a regular program, without sandbox");
-  for (const host of p.net ?? []) lines.push(host === "*" ? "Access any website" : `Access ${host}`);
-  for (const x of p.run ?? []) lines.push(`Run ${x}`);
+  // Bubblewrap (exec and python runtimes) confines files, not hosts or programs.
+  if (m.runtime?.kind && m.runtime.kind !== "deno") {
+    lines.push("Run its own program, in a sandbox that lets it start any installed program");
+    if ((p.net ?? []).length > 0) lines.push("Access any website");
+  } else {
+    for (const host of p.net ?? []) lines.push(host === "*" ? "Access any website" : `Access ${host}`);
+    for (const x of p.run ?? []) lines.push(`Run ${x}`);
+  }
   for (const x of p.read ?? []) lines.push(`Read ${x}`);
   for (const x of p.write ?? []) lines.push(`Write ${x}`);
   for (const x of p.env ?? []) lines.push(`Read the environment variable ${x}`);
