@@ -1,0 +1,14 @@
+# registry/trash.toml
+id = "trash"
+title = "Trash"
+description = "See what is in the trash, preview it, restore items or delete them for good"
+author = "Backslash"
+icon = "bs-trash"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/trash"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:f11eccadcaac3f839c75b7395c59af81f74eb27fac42f8082b2fc7df39ea47a7"
+permissions = ["Run gio", "Run du", "Run mv", "Run mkdir", "Read ~", "Write ~/.local/share/Trash", "Read the environment variable HOME", "Read the environment variable XDG_DATA_HOME"]
+commands = ["Trash"]
+

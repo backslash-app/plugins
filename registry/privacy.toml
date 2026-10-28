@@ -1,0 +1,14 @@
+# registry/privacy.toml
+id = "privacy"
+title = "Privacy"
+description = "See which apps use your camera, microphone, screen and location, and stop them"
+author = "Backslash"
+icon = "bs-shield"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/privacy"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:9fcd98af6aab77b9f454c6b85b247ef9c4f910b7ab918e3910e0066c32288179"
+permissions = ["Run pw-dump", "Run pactl", "Run find", "Run fuser", "Run ps", "Run kill", "Run busctl", "Run gnome-control-center", "Run systemsettings", "Run pavucontrol", "Read the environment variable XDG_CURRENT_DESKTOP"]
+commands = ["Privacy"]
+

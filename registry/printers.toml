@@ -1,0 +1,14 @@
+# registry/printers.toml
+id = "printers"
+title = "Printers"
+description = "See your printers and their queues, cancel jobs, pause printers and print files"
+author = "Backslash"
+icon = "bs-printer"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/printers"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:e1f4ae41261d97959897a786e246af81637d14cfd9fc8f281347426c2fb312d6"
+permissions = ["Run lpstat", "Run lpq", "Run lp", "Run cancel", "Run lpoptions", "Run cupsenable", "Run cupsdisable", "Run cupsaccept", "Run gnome-control-center", "Run systemsettings", "Run system-config-printer", "Read /etc/os-release", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP"]
+commands = ["Printers"]
+

@@ -1,0 +1,14 @@
+# registry/git-repos.toml
+id = "git-repos"
+title = "Git Repos"
+description = "Your local git repositories with branch, changes, ahead/behind and last commit, plus fetch, pull and stash"
+author = "Backslash"
+icon = "bs-branch"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/git-repos"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:bdc9ab2ef322c73791d966d0ae14cc4cfdbbffeca30af36ad7f128593ea0fad6"
+permissions = ["Run git", "Run find", "Run code", "Run codium", "Run cursor", "Run zed", "Run zeditor", "Run subl", "Run idea", "Run gnome-text-editor", "Run kate", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release", "Read the environment variable HOME"]
+commands = ["Git Repositories"]
+

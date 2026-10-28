@@ -1,0 +1,14 @@
+# registry/mpd.toml
+id = "mpd"
+title = "MPD Music"
+description = "Control the Music Player Daemon: now playing with covers, queue, library search and playlists"
+author = "Backslash"
+icon = "bs-music"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/mpd"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:95d05deef34dcbb4022a28f02c045eb8d8d2f9653ebb95af4172fba0465dd1c9"
+permissions = ["Access localhost:6600", "Access 127.0.0.1:6600", "Run systemctl", "Read ~/.cache/backslash/mpd", "Read /etc/os-release", "Write ~/.cache/backslash/mpd", "Read the environment variable HOME"]
+commands = ["MPD Music", "Search Music Library", "MPD Playlists", "MPD Play / Pause", "MPD Next Song", "MPD Previous Song"]
+

@@ -1,0 +1,14 @@
+# registry/countdowns.toml
+id = "countdowns"
+title = "Countdowns"
+description = "Count down to vacations, launches and birthdays, and pin the next one to the root search"
+author = "Backslash"
+icon = "bs-hourglass"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/countdowns"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:448efb728c224771d9a2c408f3f30787fb72e65373c27446815576f98fdd39b5"
+permissions = []
+commands = ["Countdowns", "Add Countdown"]
+

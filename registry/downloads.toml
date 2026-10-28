@@ -1,0 +1,14 @@
+# registry/downloads.toml
+id = "downloads"
+title = "Downloads"
+description = "Recent downloads with previews and where they came from; open, copy, move, rename or trash them"
+author = "Backslash"
+icon = "bs-download"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/downloads"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:a502fbb08ab487b4ae9eee7ddf4139c2e371a3ffebbc8bbf3d8bd33a10b5cea0"
+permissions = ["Run getfattr", "Run gio", "Run mv", "Run mkdir", "Run gdbus", "Run wl-copy", "Run xclip", "Read ~", "Read the environment variable HOME", "Read the environment variable WAYLAND_DISPLAY"]
+commands = ["Downloads"]
+

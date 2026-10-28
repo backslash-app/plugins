@@ -1,0 +1,14 @@
+# registry/window-manager.toml
+id = "window-manager"
+title = "Window Manager"
+description = "Snap, maximize, center, close and move the focused window between workspaces"
+author = "Backslash"
+icon = "bs-window"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/window-manager"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:17588de967e17d1a6be608b2d30623bdcfd274d83f45b77fcea6aad4f1bc21ac"
+permissions = ["Run systemd-run", "Run hyprctl", "Run swaymsg", "Run gdbus", "Run gsettings", "Run wmctrl", "Run xrandr", "Read /etc/os-release", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK", "Read the environment variable DBUS_SESSION_BUS_ADDRESS"]
+commands = ["Window Manager", "Left Half", "Right Half", "Top Half", "Bottom Half", "Top Left Quarter", "Top Right Quarter", "Bottom Left Quarter", "Bottom Right Quarter", "Maximize Window", "Center Window", "Toggle Fullscreen", "Toggle Floating", "Minimize Window", "Close Window", "Move Window to Workspace", "Switch to Workspace"]
+

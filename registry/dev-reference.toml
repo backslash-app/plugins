@@ -1,0 +1,14 @@
+# registry/dev-reference.toml
+id = "dev-reference"
+title = "Dev Reference"
+description = "HTTP status codes, MIME types, ports, ASCII, HTML entities, key codes, signals, exit codes and a chmod calculator"
+author = "Backslash"
+icon = "bs-book"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/dev-reference"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:33ec13a1e82c9d58c4d2722a475499f793dec1ee6310e87e4b1302089916758d"
+permissions = []
+commands = ["Dev Reference"]
+

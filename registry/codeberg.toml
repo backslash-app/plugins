@@ -1,0 +1,14 @@
+# registry/codeberg.toml
+id = "codeberg"
+title = "Codeberg"
+description = "Your Codeberg pull requests with checks, issues, repositories and notifications"
+author = "Backslash"
+icon = "bs-repo"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/codeberg"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:e20f4e996b386cdd2be4419d2eb66802093b8c4852f8b76b969ec113f40ea721"
+permissions = ["Access codeberg.org"]
+commands = ["My Codeberg Pull Requests", "My Codeberg Issues", "Search Codeberg Repositories", "Codeberg Notifications"]
+
