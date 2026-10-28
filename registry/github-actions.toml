@@ -1,0 +1,13 @@
+id = "github-actions"
+title = "GitHub Actions"
+description = "Workflow runs of your repositories, failing and running first, with jobs, steps and logs; re-run or cancel them"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/github-actions"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:911bebeabe810d042115c4cc0ad08d3060c23dba3d23020146feba4ed202f498"
+permissions = ["Access api.github.com", "Access avatars.githubusercontent.com", "Access *.actions.githubusercontent.com", "Access *.blob.core.windows.net", "Run gh"]
+commands = ["GitHub Actions Runs"]
+

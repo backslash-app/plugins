@@ -1,0 +1,13 @@
+id = "helm"
+title = "Helm"
+description = "Helm releases across namespaces with their chart, status and revision; values, history, rollback and uninstall, in the current kubectl context"
+author = "Backslash"
+icon = "bs-package"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/helm"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:054f258efb5595f9adf3ed2949108ddce4f9da9b8daedc4a15a5b2c1fc01307f"
+permissions = ["Run helm", "Run kubectl", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release"]
+commands = ["Helm Releases"]
+

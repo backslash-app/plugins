@@ -1,0 +1,13 @@
+id = "commit-helper"
+title = "Commit Helper"
+description = "Write Conventional Commits messages with scopes learned from your history, gitmoji, and commit the staged changes"
+author = "Backslash"
+icon = "bs-commit"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/commit-helper"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:ae71d47353b9057a4734c2ca02fc10ea518158adb1216dfbadd310db2971b7d3"
+permissions = ["Run git", "Run find", "Read /etc/os-release", "Read the environment variable HOME"]
+commands = ["Compose Commit Message", "Search Gitmoji"]
+

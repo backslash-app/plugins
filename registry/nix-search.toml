@@ -1,0 +1,13 @@
+id = "nix-search"
+title = "NixOS Search"
+description = "Search nixpkgs packages and NixOS, Home Manager and nix-darwin options from search.nixos.org"
+author = "Backslash"
+icon = "bs-package"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/nix-search"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:4351c92c8d692c3ad0a5015bfb4d2d9a6acf2de8fe56b7281d6ac9c2bcd91f48"
+permissions = ["Access search.nixos.org"]
+commands = ["Search Nix Packages", "Search NixOS Options"]
+

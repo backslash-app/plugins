@@ -1,0 +1,13 @@
+id = "paas"
+title = "Fly.io & Railway"
+description = "Fly.io apps and Railway services with their status, latest deploy and URL; open, logs, restart and deploy history"
+author = "Backslash"
+icon = "bs-rocket"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/paas"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:ab53e3e7b832dd83affb96ea318fc1a24b3b04e83a358d1fc016598237b0b613"
+permissions = ["Access backboard.railway.com", "Run flyctl", "Run fly", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.railway/config.json", "Read /etc/os-release", "Read the environment variable HOME"]
+commands = ["Fly.io & Railway Apps"]
+

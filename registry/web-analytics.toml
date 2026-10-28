@@ -1,0 +1,13 @@
+id = "web-analytics"
+title = "Web Analytics"
+description = "Visitors, pageviews, bounce rate, top pages and sources of your sites from Plausible, Umami and PostHog"
+author = "Backslash"
+icon = "bs-chart-up"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/web-analytics"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:32f76690d286e58be72106003e00d400998acd900a21dbb82350b186463f916d"
+permissions = ["Access any website"]
+commands = ["Web Analytics"]
+

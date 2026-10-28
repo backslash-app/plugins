@@ -1,0 +1,13 @@
+id = "google-workspace"
+title = "Google Drive & Tasks"
+description = "Search Google Drive and manage Google Tasks with your own Google sign-in"
+author = "Backslash"
+icon = "bs-drive"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/google-workspace"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:47bc7e5e3c9d6cedc43ec701cb7e20372345efbb7538d6fbf12232dcfdfd9099"
+permissions = ["Access www.googleapis.com", "Access tasks.googleapis.com", "Access oauth2.googleapis.com", "Access lh3.googleusercontent.com"]
+commands = ["Search Google Drive", "Google Tasks", "Add Google Task"]
+

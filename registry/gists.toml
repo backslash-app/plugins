@@ -1,0 +1,13 @@
+id = "gists"
+title = "Gists"
+description = "Your GitHub gists with their code in the preview: copy, paste, create from the clipboard, delete"
+author = "Backslash"
+icon = "bs-code"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/gists"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:161cee03557ebccef984b8c052094592f10f5e5bfd2efb022bb41b60651ab233"
+permissions = ["Access api.github.com", "Access avatars.githubusercontent.com", "Access gist.githubusercontent.com", "Run gh", "Read the clipboard"]
+commands = ["Search Gists", "Create Gist from Clipboard"]
+

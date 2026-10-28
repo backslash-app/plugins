@@ -1,0 +1,13 @@
+id = "uptime"
+title = "Uptime & SSL"
+description = "Watch your websites: HTTP status, response time and how long until their TLS certificate expires"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/uptime"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:bf9b5eb8871e13c298677703ae90d069cbaa668402f75d39b2899ccffb92b0de"
+permissions = ["Access any website", "Run openssl"]
+commands = ["Uptime & SSL", "Watch Website"]
+

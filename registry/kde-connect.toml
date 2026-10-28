@@ -1,0 +1,13 @@
+id = "kde-connect"
+title = "KDE Connect"
+description = "Your phones through KDE Connect or GSConnect: battery, ring, send the clipboard, a file or an SMS, browse their files"
+author = "Backslash"
+icon = "bs-apps"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/kde-connect"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:407734379f7527c56c17853cfb26348780a90510d75080a955159f0494bcb4be"
+permissions = ["Run kdeconnect-cli", "Run busctl", "Read /etc/os-release", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the clipboard"]
+commands = ["KDE Connect"]
+

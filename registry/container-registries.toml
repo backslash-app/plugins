@@ -1,0 +1,13 @@
+id = "container-registries"
+title = "Container Registries"
+description = "Search Docker Hub and Quay.io images and browse tags on Docker Hub, GHCR and Quay with sizes, digests and platforms"
+author = "Backslash"
+icon = "bs-box"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/container-registries"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:90c0d28eb91b670cc859a560e3f075d608ec366b0d2d1e892dd79d80f690a2ad"
+permissions = ["Access hub.docker.com", "Access ghcr.io", "Access quay.io", "Access pkg-containers.githubusercontent.com"]
+commands = ["Search Container Images"]
+

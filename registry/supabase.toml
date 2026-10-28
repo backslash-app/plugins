@@ -1,0 +1,13 @@
+id = "supabase"
+title = "Supabase"
+description = "Your Supabase projects with their region, status and Postgres version; tables, edge functions, logs and API keys; open Studio, pause and restore"
+author = "Backslash"
+icon = "bs-database"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/supabase"
+commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
+checksum = "sha256:2e492470dc72e004a5e690b19498e1c03624fe73d64213d115c658c83a595cbd"
+permissions = ["Access api.supabase.com"]
+commands = ["Supabase Projects"]
+
