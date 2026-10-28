@@ -1,0 +1,69 @@
+[extension]
+id = "espanso"
+title = "Espanso"
+description = "Search your espanso matches with a preview of each expansion; paste them, fill in forms, add, edit and delete matches, start, toggle and restart espanso"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-keyboard"
+license = "MIT"
+
+# espanso tells where its files are (espanso path), runs and toggles (status, cmd,
+# start, restart). Its configuration folder holds the match files and installed
+# packages (match/packages, or ~/.local/share/espanso for older versions); new
+# matches are written in the match folder. HOME finds the default folder.
+[permissions]
+run = ["espanso"]
+read = ["~/.config/espanso", "~/.local/share/espanso"]
+write = ["~/.config/espanso/match"]
+env = ["HOME"]
+
+[[commands]]
+name = "matches"
+title = "Espanso Matches"
+description = "Every trigger with its expansion: paste or copy it, fill in a form, edit or delete it"
+icon = "bs-keyboard"
+keywords = [
+  "espanso",
+  "snippets",
+  "text expander",
+  "expansion",
+  "trigger",
+  "abbreviation",
+  "match",
+  "extraits",
+  "raccourcis",
+  "abréviations",
+  "expansion de texte",
+]
+
+[[commands]]
+name = "add"
+title = "Add Espanso Match"
+description = "A new trigger and its replacement, appended to your match file"
+icon = "bs-plus"
+keywords = ["espanso", "snippet", "new", "add", "trigger", "create", "nouveau", "ajouter", "créer", "abréviation"]
+[[commands.arguments]]
+name = "trigger"
+placeholder = ":trigger (optional)"
+
+[[commands]]
+name = "toggle"
+title = "Toggle Espanso"
+description = "Turn expansions off or back on (starts espanso when it isn't running)"
+icon = "bs-power"
+mode = "no-view"
+keywords = ["espanso", "toggle", "enable", "disable", "pause", "on", "off", "activer", "désactiver", "basculer"]
+
+[[commands]]
+name = "restart"
+title = "Restart Espanso"
+description = "Restart espanso's daemon, or start it"
+icon = "bs-refresh"
+mode = "no-view"
+keywords = ["espanso", "restart", "reload", "start", "redémarrer", "relancer", "démarrer"]
+
+[[preferences]]
+name = "file"
+title = "File for new matches"
+description = "In the match folder: backslash.yml (default) keeps them apart, base.yml puts them with espanso's own"
+default = "backslash.yml"

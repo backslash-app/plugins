@@ -1,0 +1,128 @@
+[extension]
+id = "time-tracking"
+title = "Time Tracking"
+description = "Start, stop and resume timers of Toggl Track, Clockify, Timewarrior or Kimai, with today's and this week's entries and totals"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-timer"
+license = "MIT"
+
+# The Toggl Track (v9) and Clockify (v1) APIs; a Kimai on Kimai Cloud, this
+# computer, the local network or Tailscale (same list as KIMAI_HOSTS in lib.ts,
+# checked by a test). timew is Timewarrior's command, for the local backend.
+[permissions]
+net = [
+  "api.track.toggl.com",
+  "api.clockify.me",
+  "*.kimai.cloud",
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+run = ["timew"]
+
+[[commands]]
+name = "start"
+title = "Start Time Tracking"
+description = "Start a timer with a description, on a project, or resume a recent entry"
+icon = "bs-play"
+keywords = [
+  "timer",
+  "time",
+  "track",
+  "tracking",
+  "start",
+  "toggl",
+  "clockify",
+  "timewarrior",
+  "timew",
+  "kimai",
+  "resume",
+  "continue",
+  "chrono",
+  "chronomètre",
+  "démarrer",
+  "lancer",
+  "suivi du temps",
+  "temps",
+  "reprendre",
+]
+[[commands.arguments]]
+name = "description"
+placeholder = "What are you working on?"
+
+[[commands]]
+name = "stop"
+title = "Stop Time Tracking"
+description = "Stop the running timer and flash how long it ran"
+icon = "bs-stop"
+mode = "no-view"
+keywords = ["timer", "time", "tracking", "stop", "toggl", "clockify", "timewarrior", "kimai", "arrêter", "stopper", "temps"]
+
+[[commands]]
+name = "entries"
+title = "Time Entries"
+description = "Today's or this week's entries by day with totals: continue, stop, delete, copy a summary"
+icon = "bs-clock"
+keywords = [
+  "time",
+  "entries",
+  "timesheet",
+  "tracking",
+  "today",
+  "week",
+  "report",
+  "toggl",
+  "clockify",
+  "timewarrior",
+  "kimai",
+  "feuille de temps",
+  "temps passé",
+  "aujourd'hui",
+  "semaine",
+  "saisies",
+]
+
+[[commands]]
+name = "menu"
+title = "Running Timer in Menu Bar"
+description = "The running timer in the system tray with its start time; stop it or continue a recent entry"
+icon = "bs-timer"
+mode = "menu-bar"
+interval = "5m"
+keywords = ["timer", "tray", "menu bar", "time", "tracking", "toggl", "clockify", "timewarrior", "kimai", "barre", "chrono"]
+
+[[preferences]]
+name = "backend"
+title = "Backend"
+description = "toggl, clockify, timewarrior or kimai; empty: the one you gave credentials for, else Timewarrior if installed"
+
+[[preferences]]
+name = "togglToken"
+title = "Toggl API token"
+description = "Toggl Track → Profile settings → API Token (at the bottom)"
+type = "secret"
+
+[[preferences]]
+name = "clockifyKey"
+title = "Clockify API key"
+description = "Clockify → Profile settings → Advanced → API key → Generate"
+type = "secret"
+
+[[preferences]]
+name = "kimaiUrl"
+title = "Kimai address"
+description = "https://you.kimai.cloud, or a server of your network: https://kimai.home.lan"
+
+[[preferences]]
+name = "kimaiToken"
+title = "Kimai API token"
+description = "Kimai 2 → your profile → API Access → Create"
+type = "secret"

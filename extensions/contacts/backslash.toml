@@ -1,0 +1,81 @@
+[extension]
+id = "contacts"
+title = "Contacts"
+description = "Your CardDAV or vCard contacts with emails, phones, addresses and upcoming birthdays: write, call, copy"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-user"
+license = "MIT"
+
+# CardDAV providers: Google, iCloud (contacts.icloud.com hands out pNN-contacts.icloud.com
+# address books), Fastmail, mailbox.org and Posteo; a Nextcloud, Radicale or Baïkal on this
+# computer, the local network or Tailscale. Same list as HOSTS in lib.ts (checked by a test).
+# The folders a vCard folder may be in (exports, vdirsyncer); pictures embedded in cards are
+# written to a cache folder so rows can show them; HOME expands ~.
+[permissions]
+net = [
+  "www.googleapis.com",
+  "*.icloud.com",
+  "carddav.fastmail.com",
+  "dav.mailbox.org",
+  "posteo.de",
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+read = ["~/Contacts", "~/.contacts", "~/.local/share/contacts", "~/.local/share/vdirsyncer", "~/.cache/backslash/contacts"]
+write = ["~/.cache/backslash/contacts"]
+env = ["HOME"]
+
+[[commands]]
+name = "contacts"
+title = "Search Contacts"
+description = "Name, company and email of everyone in your address books, upcoming birthdays first"
+icon = "bs-user"
+keywords = [
+  "contacts",
+  "address book",
+  "carddav",
+  "vcard",
+  "people",
+  "email",
+  "phone",
+  "birthday",
+  "nextcloud",
+  "icloud",
+  "fastmail",
+  "carnet d'adresses",
+  "annuaire",
+  "personnes",
+  "téléphone",
+  "anniversaire",
+  "anniversaires",
+]
+
+[[preferences]]
+name = "server"
+title = "CardDAV server"
+description = "https://contacts.icloud.com, https://carddav.fastmail.com, https://cloud.home.lan/remote.php/dav…"
+
+[[preferences]]
+name = "username"
+title = "User name"
+description = "Usually your email address"
+
+[[preferences]]
+name = "password"
+title = "App password"
+description = "An app password from your provider's security settings (the normal one is refused with 2FA)"
+type = "secret"
+
+[[preferences]]
+name = "folder"
+title = "vCard folder"
+description = "Optional: .vcf files in ~/Contacts, ~/.contacts, ~/.local/share/contacts or ~/.local/share/vdirsyncer"

@@ -1,0 +1,63 @@
+[extension]
+id = "matrix"
+title = "Matrix"
+description = "Your Matrix rooms and direct chats with unread counts and the last message; reply, send, mark as read, open in Element"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-comment"
+license = "MIT"
+
+# Any host: Matrix is federated, and your homeserver can be any domain (matrix.org,
+# mozilla.org, a company's or your own server), found through its .well-known file.
+# The extension only talks to the homeserver of the preferences, with your token.
+[permissions]
+net = ["*"]
+
+[[commands]]
+name = "rooms"
+title = "Matrix Rooms"
+description = "Joined rooms and people, unread and mentions first, with the last message; invitations too"
+icon = "bs-comment"
+keywords = [
+  "matrix",
+  "element",
+  "chat",
+  "rooms",
+  "messages",
+  "unread",
+  "dm",
+  "direct",
+  "salons",
+  "discussion",
+  "messagerie",
+  "non lus",
+]
+
+[[commands]]
+name = "send"
+title = "Send Matrix Message"
+description = "Pick a room or a person and send a message (not in end-to-end encrypted rooms)"
+icon = "bs-arrow-right"
+keywords = ["matrix", "element", "send", "message", "write", "chat", "envoyer", "écrire", "message"]
+[[commands.arguments]]
+name = "message"
+placeholder = "Message (optional)"
+
+[[preferences]]
+name = "homeserver"
+title = "Homeserver"
+description = "matrix.org, or your server: the part after : in your user id works (.well-known is followed)"
+default = "matrix.org"
+
+[[preferences]]
+name = "token"
+title = "Access token"
+description = "Element → Settings → Help & About → Advanced → Access Token (click to reveal, then copy)"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "webClient"
+title = "Web client"
+description = "Where Open in Web Client goes: https://app.element.io, or your own Element"
+default = "https://app.element.io"
