@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-cloud"
 license = "MIT"
+categories = ["productivity"]
 
 # Unlike servers that stay on the local network, a Nextcloud is made to be
 # reached from anywhere: most live on their own public domain or at a hosting

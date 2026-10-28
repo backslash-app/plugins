@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-cloud"
 license = "MIT"
+categories = ["developer"]
 
 # The az CLI signs in and calls Azure itself; Backslash only runs it (and a terminal
 # for SSH, log streaming and az login). The distribution is read for install hints.

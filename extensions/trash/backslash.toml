@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-trash"
 license = "MIT"
+categories = ["system"]
 
 # The trash is read from its .trashinfo files (original path, deletion date).
 # Restoring moves an item back with mv (mkdir recreates a missing folder), so

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-sparkle"
 license = "MIT"
+categories = ["developer"]
 
 [permissions]
 # The local Ollama server (its default address).

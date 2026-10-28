@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-palette"
 license = "MIT"
+categories = ["developer"]
 
 # Works offline: utilities.json was generated with tailwindcss 4.3.3's own
 # design system (getClassList + candidatesToCss) and theme.css, so every class

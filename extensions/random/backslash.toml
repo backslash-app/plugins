@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-dice"
 license = "MIT"
+categories = ["everyday"]
 
 # Everything runs locally with crypto.getRandomValues. The locale variables
 # pick English or French answers when the language preference is "auto".

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-home"
 license = "MIT"
+categories = ["everyday"]
 
 # Home Assistant runs on your own server, and hosts must be declared ahead:
 # the local network (mDNS names and private IPv4 ranges, which Deno's

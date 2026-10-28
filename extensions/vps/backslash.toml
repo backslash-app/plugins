@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-server"
 license = "MIT"
+categories = ["developer"]
 
 # The four providers' APIs, each called only when its token is set (same list as
 # HOSTS in api.ts). Terminals open SSH sessions: ssh itself runs inside them.

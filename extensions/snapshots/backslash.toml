@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-history"
 license = "MIT"
+categories = ["system"]
 
 # Timeshift's configuration is read from /etc/timeshift (no root); its snapshots are
 # listed and changed as root, through pkexec (polkit), once per change.

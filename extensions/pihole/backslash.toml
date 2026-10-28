@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-shield"
 license = "MIT"
+categories = ["network"]
 
 # Pi-hole and AdGuard Home run on your own network, and hosts must be declared ahead:
 # pi.hole, local names, private IPv4 ranges (Deno's --allow-net accepts CIDR) and

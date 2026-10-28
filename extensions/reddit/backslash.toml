@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-comment"
 license = "MIT"
+categories = ["everyday"]
 
 # Reddit's public JSON endpoints on www.reddit.com, and the hosts of post
 # pictures: i.redd.it (uploads), preview.redd.it and external-preview.redd.it

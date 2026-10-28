@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-mouse"
 license = "MIT"
+categories = ["system"]
 
 # UPower knows the batteries of Bluetooth and wireless devices; Solaar adds Logitech
 # devices it doesn't know, and HeadsetControl gaming headsets with their sidetone, lights

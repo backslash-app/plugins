@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-package"
 license = "MIT"
+categories = ["developer"]
 
 # helm does the work; kubectl shows and switches the kubeconfig context; the
 # distribution is read for install hints; then the terminals helm status opens in.

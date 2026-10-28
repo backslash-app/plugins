@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-cloud"
 license = "MIT"
+categories = ["developer"]
 
 # The aws CLI does the signing and reads its own credentials; the extension
 # only reads the profile list (never the secret keys it shows masked).

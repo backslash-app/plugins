@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-package"
 license = "MIT"
+categories = ["developer"]
 
 # The GitHub API; gh only to reuse the GitHub CLI's sign-in when no token is set.
 [permissions]

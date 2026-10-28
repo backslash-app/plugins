@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-terminal"
 license = "MIT"
+categories = ["developer"]
 
 # Projects come from editors' recent lists (VS Code, Cursor, Zed, JetBrains) and the usual
 # code folders; only those folders can be read for package.json, Makefile, justfile…

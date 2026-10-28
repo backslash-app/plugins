@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-mic"
 license = "MIT"
+categories = ["system"]
 
 # pactl (PipeWire's pipewire-pulse or PulseAudio) lists and changes microphones and the
 # applications' streams; wpctl (WirePlumber) does it when pactl is missing. EasyEffects

@@ -6,6 +6,7 @@ version = "1.1.0"
 author = "Backslash"
 icon = "bs-package"
 license = "MIT"
+categories = ["system"]
 
 [permissions]
 run = ["apt-cache", "dnf", "pacman", "zypper", "flatpak"]

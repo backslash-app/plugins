@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-image"
 license = "MIT"
+categories = ["media"]
 
 # Immich runs on your own server, and hosts must be declared ahead (as the
 # Home Assistant and Jellyfin extensions do): this computer, local and

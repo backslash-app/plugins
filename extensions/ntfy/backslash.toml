@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-bell"
 license = "MIT"
+categories = ["productivity"]
 
 # ntfy.sh, or a self-hosted ntfy or Gotify on this computer, the local network
 # or Tailscale, as the server preferences allow (same list as HOSTS in api.ts).

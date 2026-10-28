@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-layers"
 license = "MIT"
+categories = ["developer"]
 
 # The managers list their versions (mise, asdf, rustup, fnm, pyenv are programs; nvm and
 # SDKMAN! are shell functions, so their folders are read instead). Installing, switching

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-activity"
 license = "MIT"
+categories = ["system"]
 
 # journalctl reads the system journal (when your account may: systemd-journal
 # or adm group) and your own. The terminals only follow a unit's logs live.

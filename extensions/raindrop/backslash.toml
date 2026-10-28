@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-bookmark"
 license = "MIT"
+categories = ["productivity"]
 
 # The REST API, and rdl.ink: Raindrop's own image proxy, which serves every
 # cover (whatever site it comes from) from one host.

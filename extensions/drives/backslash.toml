@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-drive"
 license = "MIT"
+categories = ["system"]
 
 # lsblk (util-linux) lists drives; udisksctl (udisks2, used by every file manager) mounts,
 # unlocks and powers them off as your user, asking through polkit when needed.

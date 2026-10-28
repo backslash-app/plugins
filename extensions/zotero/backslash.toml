@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-book"
 license = "MIT"
+categories = ["productivity"]
 
 # While Zotero 7 runs with its local API on, items come from 127.0.0.1:23119.
 # Otherwise ~/Zotero/zotero.sqlite (Zotero's default data directory) is

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-shield"
 license = "MIT"
+categories = ["network"]
 
 # ufw's state and default policies are read from its configuration files (no root);
 # its rules and every change need root, asked once per change through pkexec (polkit).

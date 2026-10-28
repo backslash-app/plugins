@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-braces"
 license = "MIT"
+categories = ["developer"]
 
 # No permission: patterns run locally on text you type or save.
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-apps"
 license = "MIT"
+categories = ["system"]
 
 # AppImages are looked for in ~/Applications, ~/AppImages, ~/.local/bin, ~/Downloads, /opt
 # and the folders of the preferences (anywhere in the home folder, hence "~"); only their

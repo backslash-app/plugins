@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-server"
 license = "MIT"
+categories = ["network"]
 
 [permissions]
 env = ["HOME"]

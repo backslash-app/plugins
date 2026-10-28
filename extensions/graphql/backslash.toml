@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-braces"
 license = "MIT"
+categories = ["developer"]
 
 [permissions]
 # Any host: the endpoints are whatever GraphQL APIs you add (public APIs, your

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-square-check"
 license = "MIT"
+categories = ["productivity"]
 
 # The Open API, and the sign-in (token endpoint) on ticktick.com.
 [permissions]

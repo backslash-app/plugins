@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-download"
 license = "MIT"
+categories = ["media"]
 
 # The torrent client's web interface runs on this computer, a NAS or a home
 # server, and hosts must be declared ahead: this computer, local names,

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-music"
 license = "MIT"
+categories = ["media"]
 
 # The Web API, the sign-in (token endpoint), and cover art: i.scdn.co for
 # albums and artists, mosaic.scdn.co and the spotifycdn.com hosts for playlists.

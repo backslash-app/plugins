@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-server"
 license = "MIT"
+categories = ["network"]
 
 # Proxmox runs on your own servers, and hosts must be declared ahead: local names,
 # private IPv4 ranges (Deno's --allow-net accepts CIDR) and Tailscale. A public

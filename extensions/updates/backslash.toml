@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-download"
 license = "MIT"
+categories = ["system"]
 
 # The package managers only list updates here (no root needed); installing them runs in a
 # terminal you can watch, where sudo asks for your password. rpm gives the installed versions

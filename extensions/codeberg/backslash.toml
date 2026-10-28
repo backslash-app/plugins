@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-repo"
 license = "MIT"
+categories = ["developer"]
 
 [permissions]
 # codeberg.org only: the API and the avatars it serves. A self-hosted Forgejo or

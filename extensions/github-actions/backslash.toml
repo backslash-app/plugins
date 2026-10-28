@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-activity"
 license = "MIT"
+categories = ["developer"]
 
 # The REST API and the avatars it links to. Job logs are served from a signed
 # redirect to GitHub's log storage (Azure blobs, or the Actions results

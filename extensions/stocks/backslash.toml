@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-chart-up"
 license = "MIT"
+categories = ["everyday"]
 
 # The Finnhub API, and static2.finnhub.io where it serves company logos.
 [permissions]

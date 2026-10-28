@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-layers"
 license = "MIT"
+categories = ["productivity"]
 
 # Graphs can be any folder of your home, so reading it is needed to search
 # them (they are listed in ~/.logseq/graphs). Logseq has no link to add a

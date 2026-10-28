@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-video"
 license = "MIT"
+categories = ["media"]
 
 # The YouTube Data API v3 (www.googleapis.com) with the user's own API key,
 # and i.ytimg.com where thumbnails are served.

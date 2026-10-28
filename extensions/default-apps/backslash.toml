@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-apps"
 license = "MIT"
+categories = ["system"]
 
 # xdg-mime and xdg-settings (xdg-utils) read and change the defaults, the way
 # every desktop does. The applications folders are read to find the apps that

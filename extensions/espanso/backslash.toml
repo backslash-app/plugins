@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-keyboard"
 license = "MIT"
+categories = ["productivity"]
 
 # espanso tells where its files are (espanso path), runs and toggles (status, cmd,
 # start, restart). Its configuration folder holds the match files and installed

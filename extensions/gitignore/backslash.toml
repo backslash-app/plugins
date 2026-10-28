@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-file"
 license = "MIT"
+categories = ["developer"]
 
 # The template list comes from the GitHub API (github/gitignore's file tree) and
 # the templates from raw.githubusercontent.com; both are cached for a week.

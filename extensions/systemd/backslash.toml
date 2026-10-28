@@ -6,6 +6,7 @@ version = "1.1.0"
 author = "Backslash"
 icon = "bs-server"
 license = "MIT"
+categories = ["system"]
 
 [permissions]
 run = ["systemctl", "journalctl"]

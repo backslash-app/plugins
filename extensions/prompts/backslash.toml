@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-sparkle"
 license = "MIT"
+categories = ["developer"]
 
 # Prompts live in the extension's private storage. Reading the clipboard fills
 # the {{clipboard}} placeholder (only for prompts that contain it) and imports

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-cpu"
 license = "MIT"
+categories = ["developer"]
 
 # adb talks to the devices. scrcpy mirrors the screen in a transient systemd
 # user unit (systemd-run; systemctl stops the previous window) so it stays

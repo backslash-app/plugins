@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-package"
 license = "MIT"
+categories = ["system"]
 
 # search.nixos.org's Elasticsearch backend, with the public read-only
 # credentials of the site itself; its index version and channels are read from

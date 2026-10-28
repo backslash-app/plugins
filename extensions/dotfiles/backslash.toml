@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-repo"
 license = "MIT"
+categories = ["system"]
 
 # chezmoi, yadm and git list the managed files and their state, show diffs and stage or
 # apply changes; stow links packages. Dotfiles live all over the home folder, so it is

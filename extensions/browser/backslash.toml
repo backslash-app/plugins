@@ -6,6 +6,7 @@ version = "1.1.0"
 author = "Backslash"
 icon = "bs-globe"
 license = "MIT"
+categories = ["productivity"]
 
 # Browsers lock their databases: they are copied to /tmp/backslash-browser to be read.
 [permissions]

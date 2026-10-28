@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-globe"
 license = "MIT"
+categories = ["network"]
 
 # Tunnels are transient systemd user services (systemd-run), so they keep
 # running after the launcher closes; journalctl reads their public URL and

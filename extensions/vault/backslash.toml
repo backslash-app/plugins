@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-lock"
 license = "MIT"
+categories = ["developer"]
 
 # The vault or bao CLI talks to the server with the user's own sign-in (VAULT_TOKEN or
 # ~/.vault-token), so no token is stored by Backslash. The environment variables tell

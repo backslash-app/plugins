@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-music"
 license = "MIT"
+categories = ["media"]
 
 # The MPD protocol over TCP on localhost:6600, no program needed. Album
 # covers (MPD's albumart / readpicture) are cached in ~/.cache/backslash/mpd.

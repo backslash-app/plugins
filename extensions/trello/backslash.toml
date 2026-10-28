@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-kanban"
 license = "MIT"
+categories = ["productivity"]
 
 # The REST API, members' avatars and the scaled board backgrounds.
 [permissions]
