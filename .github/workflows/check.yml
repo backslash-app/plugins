@@ -15,10 +15,10 @@ jobs:
       - uses: denoland/setup-deno@v2
         with:
           deno-version: v2.x
-      - run: deno fmt --check extensions scripts
-      - run: deno lint extensions scripts
-      - run: deno check extensions/*/commands/*.ts
+      - run: deno fmt --check extensions examples scripts
+      - run: deno lint extensions examples scripts
+      - run: deno check extensions/*/commands/*.ts examples/*/commands/*.ts
       # Tests may use files, the environment and programs (fake CLIs, `sh -n`), never the network.
-      - run: deno test --allow-read --allow-write --allow-env --allow-run extensions
+      - run: deno test --allow-read --allow-write --allow-env --allow-run extensions examples
       - name: Verify registry entries (clones each extension at its commit)
         run: deno run -A scripts/validate.ts

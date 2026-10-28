@@ -1,15 +1,275 @@
-# Backslash extensions
+<p align="center"><img src="https://raw.githubusercontent.com/backslash-app/backslash/main/docs/media/logo.svg" width="96" alt="Backslash logo"/></p>
 
-The registry of [Backslash](https://github.com/backslash-app/backslash) extensions, and the first-party extensions
-themselves.
+<h1 align="center">Backslash extensions</h1>
+
+<p align="center">The extensions of <a href="https://github.com/backslash-app/backslash">Backslash</a>, the launcher for Linux,<br/>
+and everything you need to write your own: an afternoon is plenty.</p>
+
+<p align="center">
+  <a href="#build-your-first-extension"><b>Build an extension</b></a> ·
+  <a href="#cheat-sheet">Cheat sheet</a> ·
+  <a href="#publish-it">Publish</a> ·
+  <a href="#first-party-extensions">All extensions</a> ·
+  <a href="https://github.com/backslash-app/backslash/blob/main/docs/EXTENSIONS.md">Full guide</a>
+</p>
+
+---
+
+## Use them
+
+Open **Browse Extensions** in Backslash, or from a terminal:
 
 ```sh
-backslash search            # browse the registry (or "Browse Extensions" in the launcher)
+backslash search            # browse the registry
 backslash install github    # install, after showing what it is allowed to do
 backslash update            # update everything installed
 ```
 
-## How the registry works
+## Build your first extension
+
+An extension is a folder: a `backslash.toml` manifest and one TypeScript file per command. No build step, no
+`node_modules`, no bundler. The launcher draws the interface (search, keyboard navigation, preview panel, action panel,
+loading and errors), so your code only says **what** to show.
+
+We'll build **Release Radar**: the latest release of the GitHub repositories you follow, with the release notes in the
+preview panel. It covers what most extensions need: a web API, a list with details and actions, preferences, a secret,
+permissions and tests. The finished code is in [`examples/release-radar`](examples/release-radar).
+
+### 1. Create it
+
+You need [Backslash](https://github.com/backslash-app/backslash#install) and [Deno](https://deno.com)
+(`backslash install-runtime` downloads it if you don't have it).
+
+```sh
+backslash new release-radar     # a working extension with one command
+cd release-radar
+backslash dev                   # opens the launcher with it loaded, logs in this terminal, reloads on save
+```
+
+```
+release-radar/
+├── backslash.toml        what it is and what it may do
+├── commands/
+│   └── hello.ts          one file per command
+└── deno.json             editor support only (types for @backslash/api)
+```
+
+### 2. Describe it: `backslash.toml`
+
+```toml
+[extension]
+id = "release-radar"                # [a-z0-9-]+, unique in the registry
+title = "Release Radar"
+description = "The latest release of the GitHub repositories you follow"
+version = "0.1.0"
+author = "you"
+icon = "bs-tag"                     # a Backslash glyph, a theme icon name or an emoji
+license = "MIT"
+
+# Everything not listed is denied, and the sandbox enforces it.
+# Users read these lines before the first run.
+[permissions]
+net = ["api.github.com", "avatars.githubusercontent.com"]
+
+[[commands]]
+name = "releases"                   # → commands/releases.ts
+title = "Latest Releases"           # what users type to find it
+description = "The newest release of each repository you follow"
+icon = "bs-tag"
+keywords = ["github", "release", "version", "changelog"]
+
+[[preferences]]                     # Settings → Extensions → Configure
+name = "repos"
+title = "Repositories"
+description = "owner/name, separated by commas: denoland/deno, rust-lang/rust"
+required = true                     # asked before the first run
+
+[[preferences]]
+name = "token"
+title = "GitHub token"
+description = "Optional: raises the rate limit from 60 to 5,000 requests an hour"
+type = "secret"                     # stored in the system keyring, never in a file
+```
+
+Rename `commands/hello.ts` to `commands/releases.ts`.
+
+### 3. Keep the logic in `lib.ts`
+
+Put what you can in plain functions, away from the launcher: they are easy to read, review and test.
+
+```ts
+// lib.ts
+export interface Release {
+  tag_name: string;
+  name: string | null;
+  html_url: string;
+  published_at: string;
+  body: string | null;
+  author: { login: string; avatar_url: string };
+}
+
+/** "denoland/deno, rust-lang/rust" → ["denoland/deno", "rust-lang/rust"], ignoring anything else. */
+export function parseRepos(text: string): string[] {
+  const repos = text.split(/[\s,]+/).filter((r) => /^[\w.-]+\/[\w.-]+$/.test(r));
+  return [...new Set(repos)];
+}
+
+/** A short age for the list: "today", "3d", "2mo", "1y". */
+export function age(date: string, now = Date.now()): string {
+  const days = Math.floor((now - Date.parse(date)) / 86_400_000);
+  if (days < 1) return "today";
+  if (days < 30) return `${days}d`;
+  if (days < 365) return `${Math.floor(days / 30)}mo`;
+  return `${Math.floor(days / 365)}y`;
+}
+```
+
+### 4. Write the command
+
+A command default-exports a view. Here, a `list` whose items are loaded once; the launcher filters them as you type.
+
+```ts
+// commands/releases.ts
+import { copy, Icons, list, meta, open } from "@backslash/api";
+import { age, parseRepos, type Release } from "../lib.ts";
+
+export default list({
+  placeholder: "Filter releases…",
+  empty: { title: "No releases yet", description: "Add repositories in Settings → Extensions", icon: Icons.tag },
+  status: (items) => `${items.length} repositories`, // the footer line
+  async items({ preferences, signal }) {
+    const headers: Record<string, string> = { Accept: "application/vnd.github+json" };
+    if (preferences.token) headers.Authorization = `Bearer ${preferences.token}`;
+
+    const found = await Promise.all(
+      parseRepos(String(preferences.repos)).map(async (repo) => {
+        // `signal` is aborted when the user leaves: slow requests are cancelled for free.
+        const res = await fetch(`https://api.github.com/repos/${repo}/releases/latest`, { headers, signal });
+        return res.ok ? { repo, release: (await res.json()) as Release } : null;
+      }),
+    );
+
+    return found
+      .filter((f) => f !== null)
+      .sort((a, b) => b.release.published_at.localeCompare(a.release.published_at))
+      .map(({ repo, release }) => ({
+        id: repo, // keeps the selection when the list refreshes
+        title: repo,
+        subtitle: release.name ?? release.tag_name,
+        icon: { source: Icons.tag, tint: "purple" },
+        tags: [release.tag_name],
+        accessories: [{ text: age(release.published_at) }],
+        detail: {
+          // the preview panel on the right
+          markdown: release.body ?? "_No release notes._",
+          metadata: [
+            meta.text("Version", release.tag_name, { icon: Icons.tag }),
+            meta.text("Published", new Date(release.published_at).toLocaleDateString()),
+            meta.person("Author", release.author.login, release.author.avatar_url),
+          ],
+        },
+        actions: [
+          // first = Enter, second = Ctrl+Enter, all of them in Ctrl+K
+          open(release.html_url, "Open Release"),
+          copy(release.tag_name, "Copy Version"),
+          open(`https://github.com/${repo}`, "Open Repository", { shortcut: "<Ctrl>o" }),
+        ],
+      }));
+  },
+});
+```
+
+That's the whole command. Throwing an error anywhere shows it in the launcher.
+
+### 5. Try it
+
+```sh
+backslash dev                                   # in the launcher, with logs; save a file to reload
+backslash run release-radar/releases --json     # or straight from a terminal, to see exactly what you return
+```
+
+`console.log` goes to the `backslash dev` output. Set your preferences in **Settings → Extensions → Release Radar** (the
+form also opens by itself the first time, because `repos` is required).
+
+### 6. Test it
+
+```ts
+// lib_test.ts
+import { assertEquals } from "jsr:@std/assert@1";
+import { age, parseRepos } from "./lib.ts";
+
+Deno.test("repositories: commas, spaces, duplicates and junk", () => {
+  assertEquals(parseRepos("denoland/deno, rust-lang/rust\nnot a repo, denoland/deno"), [
+    "denoland/deno",
+    "rust-lang/rust",
+  ]);
+});
+
+Deno.test("age of a release", () => {
+  const now = Date.parse("2026-10-28T12:00:00Z");
+  assertEquals(age("2026-10-25T12:00:00Z", now), "3d");
+  assertEquals(age("2024-10-01T12:00:00Z", now), "2y");
+});
+```
+
+```sh
+deno test          # and deno check commands/*.ts, deno fmt, deno lint
+```
+
+### 7. Share it
+
+Push the folder to a public git repository. Anyone can install it right away with
+`backslash install https://github.com/you/release-radar` (they are told it isn't reviewed), and you can
+[list it in the registry](#publish-it) so it shows up in **Browse Extensions**.
+
+## Cheat sheet
+
+Everything below comes from `@backslash/api`. The
+[full guide](https://github.com/backslash-app/backslash/blob/main/docs/EXTENSIONS.md) has the details.
+
+| I want to…                             | Use                                                                                                                                       |
+| -------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- |
+| Show a list filtered by the launcher   | `list({ items })`: an array, an async function, or an async generator that yields as results arrive                                       |
+| Search as the user types (web APIs)    | `list({ search(query, { signal }) })`: debounced, the previous call is aborted                                                            |
+| Show tiles (emoji, images, colors)     | `list({ layout: "grid", columns: 8, items })`                                                                                             |
+| Offer views of the same data           | `filter: { options: ["Assigned", "Created"] }`, read `ctx.filter`; Tab cycles them                                                        |
+| Show a page of text                    | `detail({ markdown, metadata })`; `markdown` can be an async generator to stream an answer                                                |
+| Ask for input                          | `form({ fields: [field.text(…), field.dropdown(…)], submit(values) })`                                                                    |
+| Run something without a window         | `mode = "no-view"` in the manifest and `run(async (ctx) => "Done")`                                                                       |
+| Take an argument (`Add Task buy milk`) | `[[commands.arguments]]` in the manifest, read `ctx.args`                                                                                 |
+| Open, copy or paste                    | `open(url)`, `copy(text)`, `paste(text)` actions                                                                                          |
+| Run your own code on Enter             | `action("Archive", async () => refresh())`; return a view to navigate, or `close()`, `pop()`, `refresh()`, `replace(view)`                |
+| Group actions or nest them             | `{ section: "Copy" }` on an action, `submenu("Move to", [...])`                                                                           |
+| Guard a dangerous action               | `{ destructive: true, confirm: "Delete the branch?" }`                                                                                    |
+| Settings and API keys                  | `[[preferences]]`, `type = "secret"` for tokens, read `ctx.preferences`                                                                   |
+| Sign in with OAuth                     | `oauth.token(provider)`: PKCE, browser, refresh and keyring are handled                                                                   |
+| Remember something                     | `storage.get(key)` / `storage.set(key, value)`: private JSON store, no permission needed                                                  |
+| Run a program                          | `exec("git", ["status"])`, with the program in `[permissions] run`                                                                        |
+| Tell the user                          | `toast("Saved", { style: "success" })`                                                                                                    |
+| Show a live count in the root search   | `updateCommandMetadata({ subtitle: "3 in progress" })`                                                                                    |
+| Rich rows                              | `subtitle`, `tags`, `accessories` (text, pills, avatars), `section`, `keywords`                                                           |
+| Rich previews                          | `detail.stats`, `detail.markdown`, `detail.metadata` with `meta.text/tags/person/link/progress`                                           |
+| Crisp icons                            | `Icons.pullRequest`, `Icons.inProgress`…, optionally `{ source, tint: "green" }`                                                          |
+| Use a library                          | `import { format } from "npm:date-fns@4"` or `jsr:` imports, or map them in `deno.json`                                                   |
+| Write it in another language           | `[runtime] kind = "exec"` and speak the [protocol](https://github.com/backslash-app/backslash/blob/main/docs/PROTOCOL.md) (not sandboxed) |
+
+## What makes a good extension
+
+- **One job, done well.** A title users would type, a description that says what they get, `keywords` for the words they
+  might use instead (other languages too).
+- **Fast first paint.** Pass `signal` to `fetch`, load in parallel, yield partial results from an async generator when a
+  source is slow, and cache in `storage` when the data barely changes.
+- **Useful at a glance.** Put the state users came for in the row (status, counts, age) and the rest in the preview
+  panel. Prefer `Icons` glyphs to emoji and theme icons: they look the same on every desktop.
+- **Good empty and error states.** An `empty` message that says what to do next; errors thrown with a sentence a user
+  understands ("GitHub refused the token: check it in Settings").
+- **The narrowest permissions.** Specific hosts and programs, never `["*"]` when a list will do. Tokens are
+  `type = "secret"` preferences, never in code or `storage`.
+- **Keyboard first.** The action users want most is first (Enter), the second one is Ctrl+Enter, and frequent ones get a
+  `shortcut`.
+- **Tested.** Parsing and formatting live in `lib.ts` with a `lib_test.ts` next to it.
+
+## Publish it
 
 `registry/<id>.toml` is a small file per extension. It points to the extension's code **wherever it lives** (your own
 repository), pinned to a commit, with a checksum of its files and the list of what it is allowed to do:
@@ -29,29 +289,23 @@ permissions = ["Access api.github.com", "Access avatars.githubusercontent.com", 
 commands = ["Search GitHub Repositories", "My Pull Requests", "My GitHub Issues"]
 ```
 
-Backslash installs exactly that commit and refuses anything whose files, version or permissions differ from the entry.
-So:
+To publish:
+
+1. Commit and push your extension to a public git repository (it can be one of several in the same repository).
+2. Run `backslash publish path/to/extension`. It prints the registry entry for your last commit.
+3. Open a pull request here adding that file as `registry/<id>.toml`.
+4. For a new version: bump `version` in `backslash.toml`, commit, push, run `backslash publish` again and open a pull
+   request updating the file.
+
+CI checks every entry: it clones your repository at the commit, recomputes the checksum and compares the manifest and
+permissions (`deno run -A scripts/validate.ts`). Backslash then installs exactly that commit and refuses anything whose
+files, version or permissions differ. So:
 
 - **You keep your code** in your repository; publishing a version is a one-file pull request.
 - **Reviews are small and meaningful**: reviewers read the code at one commit and see the permissions it gets. Nothing
   can change after the review.
 - **Users see the permissions before installing**, and are asked again when an update wants more. The sandbox (Deno)
   enforces them.
-
-## Publishing an extension
-
-1. Write it (see the [extension guide](https://github.com/backslash-app/backslash/blob/main/docs/EXTENSIONS.md)), commit
-   and push it to a public git repository.
-2. Run `backslash publish path/to/extension`. It prints the registry entry for your last commit.
-3. Open a pull request adding that file as `registry/<id>.toml`.
-4. To release a new version: bump `version` in `backslash.toml`, commit, push, run `backslash publish` again, and open a
-   pull request updating the file.
-
-CI checks every entry: it clones your repository at the commit, recomputes the checksum and compares the manifest and
-permissions (`deno run -A scripts/validate.ts`).
-
-Anyone can also install straight from a repository, without the registry:
-`backslash install https://github.com/you/your-extension` (users are told it is not reviewed).
 
 ### Review guidelines
 
@@ -61,9 +315,30 @@ Anyone can also install straight from a repository, without the registry:
 - Secrets are `type = "secret"` preferences, never hardcoded.
 - Destructive actions are marked `destructive` and ask for confirmation.
 
+## Contributing to this repository
+
+The first-party extensions live in [`extensions/`](extensions); each is a good example to start from. They follow the
+same layout as the tutorial: `backslash.toml`, `commands/`, the logic in `lib.ts` (and `api.ts` for a web API) with
+`lib_test.ts` next to it.
+
+```sh
+git clone https://github.com/backslash-app/plugins && cd plugins
+git clone https://github.com/backslash-app/backslash .backslash   # the SDK types for @backslash/api
+deno check extensions/*/commands/*.ts
+deno test --allow-read --allow-write --allow-env --allow-run extensions examples   # what CI runs
+deno fmt && deno lint
+backslash dev extensions/github     # live reload in the launcher
+```
+
+Their registry entries are regenerated with `scripts/update-entries.sh` after a change is merged. Extension icons can be
+emoji, theme icon names, or Backslash's own glyphs (`bs-repo`, `bs-sparkle`…, see `Icons` in the SDK), which look the
+same on every desktop.
+
+Ideas for new extensions and bug reports are welcome in the [issues](https://github.com/backslash-app/plugins/issues).
+
 ## First-party extensions
 
-98 extensions, plus npm and System bundled with the launcher.
+Every extension we maintain, plus npm and System that come with the launcher. More are added all the time.
 
 | Extension                                           | What it does                                                                                                                                                      | Permissions                                                                                                                                           |
 | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -165,17 +440,3 @@ Anyone can also install straight from a repository, without the registry:
 | [World Clock](extensions/world-clock)               | The time in your cities, offsets, day and night, and time conversions like “3pm NY in Paris”                                                                      | none                                                                                                                                                  |
 | [YouTube](extensions/youtube)                       | Search YouTube with thumbnails, views and durations, open videos in the browser or play them in mpv in the background, and browse channels                        | `www.googleapis.com`, `i.ytimg.com`; runs `systemd-run`, `systemctl`, `mpv`…; reads /etc/os-release                                                   |
 | [Zotero](extensions/zotero)                         | Search your Zotero library by title, author or tag, copy APA citations and BibTeX, and open PDFs                                                                  | `127.0.0.1:23119`; runs `sqlite3`; reads ~/Zotero, ~/.cache/backslash-zotero…                                                                         |
-
-Their registry entries are regenerated with `scripts/update-entries.sh` after a change is merged.
-
-Extension icons can be emoji, theme icon names, or Backslash's own glyphs (`bs-repo`, `bs-sparkle`…, see `Icons` in the
-SDK), which look the same on every desktop.
-
-## Developing here
-
-```sh
-git clone https://github.com/backslash-app/backslash .backslash   # for the SDK types
-deno check extensions/*/commands/*.ts
-deno test --allow-read --allow-write --allow-env --allow-run extensions   # what CI runs
-backslash dev extensions/github     # live reload in the launcher
-```
