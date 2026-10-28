@@ -1,0 +1,90 @@
+[extension]
+id = "file-share"
+title = "File Share"
+description = "Share copied files or text as a public 0x0.st link, an end-to-end encrypted PrivateBin paste, or a direct croc transfer, and keep track of what you shared"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-upload"
+license = "MIT"
+
+# 0x0.st hosts files publicly. PrivateBin stores pastes encrypted on this
+# computer: privatebin.net, bin.disroot.org, or a self-hosted instance on the
+# local network or Tailscale (same list as PRIVATEBIN_HOSTS in lib.ts).
+[permissions]
+net = [
+  "0x0.st",
+  "privatebin.net",
+  "bin.disroot.org",
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+# Files copied in the file manager are read with wl-paste (Wayland) or xclip
+# (X11) as text/uri-list. croc sends files directly; it runs as a transient
+# systemd user unit (systemd-run) so the transfer survives the launcher, and
+# systemctl tells whether it is still waiting and stops it.
+run = ["wl-paste", "xclip", "croc", "systemd-run", "systemctl"]
+# Copied files can be anywhere in the home folder or on a mounted drive.
+read = ["~", "/media", "/run/media", "/mnt"]
+# croc's output (its code phrase and progress) goes to a log in this cache.
+write = ["~/.cache/backslash/file-share"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "share"
+title = "Share Files"
+description = "Share the files copied in your file manager, or the copied text: 0x0.st (public link), PrivateBin (encrypted) or croc"
+icon = "bs-upload"
+keywords = [
+  "share",
+  "upload",
+  "send",
+  "file",
+  "link",
+  "partager",
+  "envoyer",
+  "téléverser",
+  "fichier",
+  "lien",
+  "transfert",
+  "paste",
+  "pastebin",
+  "privatebin",
+  "0x0",
+  "croc",
+  "wetransfer",
+]
+
+[[commands]]
+name = "history"
+title = "Shared Files"
+description = "What you shared, with its expiry: copy the link again, delete it from 0x0.st or PrivateBin, follow croc transfers"
+icon = "bs-history"
+keywords = ["shared", "uploads", "links", "partagés", "historique", "history", "liens", "delete", "supprimer", "0x0", "privatebin", "croc"]
+
+[[preferences]]
+name = "expiry"
+title = "Default expiry"
+description = "How long links last when you press Enter: 1hour, 1day, 1week or 1month (other choices are in Ctrl+K)"
+default = "1day"
+
+[[preferences]]
+name = "privatebin"
+title = "PrivateBin instance"
+description = "https://privatebin.net, https://bin.disroot.org, or your own on the local network or Tailscale"
+default = "https://privatebin.net"
+
+[[preferences]]
+name = "secretUrls"
+title = "Hard-to-guess 0x0.st links"
+description = "Ask 0x0.st for long random links (they are still public to anyone who has them)"
+type = "boolean"
+default = true
