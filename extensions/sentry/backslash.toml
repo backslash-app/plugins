@@ -1,0 +1,38 @@
+[extension]
+id = "sentry"
+title = "Sentry"
+description = "Unresolved issues across your projects with events, users and assignee; resolve, ignore, assign; latest event with its stack trace (sentry.io, US and EU regions)"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bug"
+license = "MIT"
+
+# sentry.io and its data regions; self-hosted Sentry is not supported.
+[permissions]
+net = ["sentry.io", "us.sentry.io", "de.sentry.io"]
+
+[[commands]]
+name = "issues"
+title = "Sentry Issues"
+description = "Unresolved, for review or assigned to you, by project"
+icon = "bs-bug"
+keywords = ["sentry", "errors", "issues", "exceptions", "crash", "bugs", "monitoring"]
+
+[[preferences]]
+name = "organization"
+title = "Organization slug"
+description = "The slug in your Sentry URLs: acme in acme.sentry.io"
+required = true
+
+[[preferences]]
+name = "token"
+title = "User auth token"
+description = "Sentry → User settings → Personal Tokens, scopes event:read, event:write, project:read, org:read, member:read"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "region"
+title = "Region"
+description = "sentry.io (US) or de.sentry.io (EU data region)"
+default = "sentry.io"

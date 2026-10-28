@@ -1,0 +1,47 @@
+[extension]
+id = "gitlab"
+title = "GitLab"
+description = "Merge requests with pipelines and approvals, your issues, projects and pipelines on gitlab.com (self-hosted instances are not supported)"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-pr-merged"
+license = "MIT"
+
+# gitlab.com for the API and uploaded avatars, Gravatar for the other avatars.
+# Hosts are static: a self-hosted GitLab would need its own host here.
+[permissions]
+net = ["gitlab.com", "secure.gravatar.com"]
+
+[[commands]]
+name = "merge-requests"
+title = "My Merge Requests"
+description = "To review, opened by you, assigned: with pipeline status and approvals"
+icon = "bs-pr-open"
+keywords = ["gitlab", "mr", "merge request", "review", "pull request", "pipeline", "ci"]
+
+[[commands]]
+name = "issues"
+title = "My GitLab Issues"
+description = "Assigned to you or created by you"
+icon = "bs-issue-open"
+keywords = ["gitlab", "issues", "bugs", "tickets", "tasks"]
+
+[[commands]]
+name = "projects"
+title = "Search GitLab Projects"
+icon = "bs-repo"
+keywords = ["gitlab", "project", "repo", "repository", "git", "code"]
+
+[[commands]]
+name = "pipelines"
+title = "GitLab Pipelines"
+description = "Pipelines of your projects: status, duration, stages; retry or cancel"
+icon = "bs-activity"
+keywords = ["gitlab", "pipeline", "ci", "cd", "build", "jobs"]
+
+[[preferences]]
+name = "token"
+title = "Personal access token"
+description = "gitlab.com → Preferences → Access tokens, scope read_api (api to approve, close issues and retry pipelines)"
+type = "secret"
+required = true
