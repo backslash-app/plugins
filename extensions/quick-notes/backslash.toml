@@ -42,5 +42,5 @@ required = true
 [[preferences]]
 name = "folder"
 title = "Notes folder"
-description = "Inside ~/Documents. Created when you save your first note."
+description = "Inside ~/Documents. Created when you save your first note"
 default = "~/Documents/Notes"

@@ -1,7 +1,7 @@
 [extension]
 id = "distrobox"
 title = "Containers & VMs"
-description = "Enter distrobox and toolbx containers, and start, stop or open your libvirt virtual machines."
+description = "Enter distrobox and toolbx containers, and start, stop or open your libvirt virtual machines"
 version = "1.0.0"
 author = "Backslash"
 icon = "bs-layers"

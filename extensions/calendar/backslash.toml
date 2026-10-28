@@ -51,7 +51,7 @@ keywords = [
 [[preferences]]
 name = "urls"
 title = "Calendar addresses"
-description = "Private iCal (.ics) addresses, one per line. Google: Settings → your calendar → Integrate calendar → Secret address in iCal format."
+description = "Private iCal (.ics) addresses, one per line. Google: Settings → your calendar → Integrate calendar → Secret address in iCal format"
 type = "secret"
 
 [[preferences]]

@@ -1,7 +1,7 @@
 [extension]
 id = "terminal-sessions"
 title = "Terminal Sessions"
-description = "Attach to, create, rename and kill your tmux and zellij sessions."
+description = "Attach to, create, rename and kill your tmux and zellij sessions"
 version = "1.0.0"
 author = "Backslash"
 icon = "bs-terminal"

@@ -1,7 +1,7 @@
 [extension]
 id = "ssh"
 title = "SSH Hosts"
-description = "Connect to the hosts of your SSH config and known_hosts in a terminal or the file manager."
+description = "Connect to the hosts of your SSH config and known_hosts in a terminal or the file manager"
 version = "1.0.0"
 author = "Backslash"
 icon = "bs-server"

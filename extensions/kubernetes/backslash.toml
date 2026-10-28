@@ -1,7 +1,7 @@
 [extension]
 id = "kubernetes"
 title = "Kubernetes"
-description = "Browse pods with their status, logs and restarts, and switch kubectl contexts and namespaces."
+description = "Browse pods with their status, logs and restarts, and switch kubectl contexts and namespaces"
 version = "1.0.0"
 author = "Backslash"
 icon = "bs-cloud"

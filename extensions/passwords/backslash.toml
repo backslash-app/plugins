@@ -41,13 +41,13 @@ keywords = [
 [[preferences]]
 name = "bwSession"
 title = "Bitwarden session"
-description = "Optional: the output of `bw unlock --raw`, to stay unlocked. Without it you type your master password once per use."
+description = "Optional: the output of `bw unlock --raw`, to stay unlocked. Without it you type your master password once per use"
 type = "secret"
 
 [[preferences]]
 name = "keepassDb"
 title = "KeePassXC database"
-description = "Path of your .kdbx file, e.g. ~/Passwords.kdbx. Its password is asked each time, never saved."
+description = "Path of your .kdbx file, e.g. ~/Passwords.kdbx. Its password is asked each time, never saved"
 
 [[preferences]]
 name = "keepassKeyFile"

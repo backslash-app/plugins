@@ -1,7 +1,7 @@
 [extension]
 id = "dev-utils"
 title = "Dev Utils"
-description = "Encode, decode, hash, convert and generate developer values right from the search bar."
+description = "Encode, decode, hash, convert and generate developer values right from the search bar"
 version = "1.0.0"
 author = "Backslash"
 icon = "bs-braces"
