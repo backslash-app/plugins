@@ -1,0 +1,61 @@
+[extension]
+id = "tailscale"
+title = "Tailscale"
+description = "Your tailnet's devices with their IPs and state: copy, SSH, ping, exit nodes, Taildrop, connect and disconnect"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-vpn"
+license = "MIT"
+
+# The tailscale CLI talks to the local tailscaled. Terminals open SSH
+# sessions (tailscale ssh or ssh runs inside them). The distribution is read
+# for install hints; HOME expands ~ in Taildrop paths.
+[permissions]
+read = ["/etc/os-release"]
+env = ["HOME"]
+run = [
+  "tailscale",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "devices"
+title = "Tailscale Devices"
+description = "Online first, with IPs, OS and last seen; SSH, exit node, Taildrop"
+icon = "bs-vpn"
+keywords = [
+  "tailscale",
+  "tailnet",
+  "vpn",
+  "wireguard",
+  "devices",
+  "machines",
+  "exit node",
+  "taildrop",
+  "magicdns",
+  "ssh",
+  "appareils",
+  "réseau",
+  "nœud de sortie",
+]
+
+[[preferences]]
+name = "sshUser"
+title = "SSH user"
+description = "User to log in as on other devices; leave empty for the default"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

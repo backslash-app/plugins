@@ -1,0 +1,55 @@
+[extension]
+id = "helm"
+title = "Helm"
+description = "Helm releases across namespaces with their chart, status and revision; values, history, rollback and uninstall, in the current kubectl context"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+
+# helm does the work; kubectl shows and switches the kubeconfig context; the
+# distribution is read for install hints; then the terminals helm status opens in.
+[permissions]
+read = ["/etc/os-release"]
+run = [
+  "helm",
+  "kubectl",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "releases"
+title = "Helm Releases"
+description = "Releases in every namespace, failed and pending first: values, history, rollback, uninstall"
+icon = "bs-package"
+keywords = [
+  "helm",
+  "chart",
+  "release",
+  "kubernetes",
+  "k8s",
+  "rollback",
+  "values",
+  "uninstall",
+  "deploy",
+  "versions",
+  "déploiement",
+  "revenir",
+  "valeurs",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For helm status. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

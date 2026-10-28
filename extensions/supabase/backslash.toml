@@ -1,0 +1,39 @@
+[extension]
+id = "supabase"
+title = "Supabase"
+description = "Your Supabase projects with their region, status and Postgres version; tables, edge functions, logs and API keys; open Studio, pause and restore"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-database"
+license = "MIT"
+
+# The Management API only.
+[permissions]
+net = ["api.supabase.com"]
+
+[[commands]]
+name = "projects"
+title = "Supabase Projects"
+description = "Projects by organization: tables, edge functions, logs, API URL and keys; open Studio, pause, restore"
+icon = "bs-database"
+keywords = [
+  "supabase",
+  "postgres",
+  "database",
+  "edge functions",
+  "tables",
+  "api key",
+  "anon key",
+  "studio",
+  "backend",
+  "base de données",
+  "fonctions",
+  "projet",
+]
+
+[[preferences]]
+name = "token"
+title = "Personal access token"
+description = "Supabase → Account → Access Tokens (supabase.com/dashboard/account/tokens)"
+type = "secret"
+required = true

@@ -1,0 +1,63 @@
+[extension]
+id = "syncthing"
+title = "Syncthing"
+description = "Folders and devices of Syncthing with sync progress, conflicts and last scan; rescan, pause and resume"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+
+# Syncthing's GUI listens on this computer (127.0.0.1:8384); the other hosts cover a
+# Syncthing on a NAS or server of the local network or Tailscale, as the address
+# preference allows. Same list as HOSTS in api.ts.
+# config.xml holds the API key (XDG state since Syncthing 1.27, XDG config before).
+# find looks for conflict copies in the synced folders, which can be anywhere;
+# systemctl starts the user service when Syncthing isn't running.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+read = ["~/.local/state/syncthing/config.xml", "~/.config/syncthing/config.xml", "/etc/os-release"]
+run = ["find", "systemctl"]
+env = ["HOME"]
+
+[[commands]]
+name = "syncthing"
+title = "Syncthing"
+description = "Folders with their sync state, devices, conflict copies"
+icon = "bs-cloud"
+keywords = [
+  "syncthing",
+  "sync",
+  "synchronisation",
+  "synchronization",
+  "synchroniser",
+  "folders",
+  "dossiers",
+  "devices",
+  "appareils",
+  "conflicts",
+  "conflits",
+  "rescan",
+  "backup",
+]
+
+[[preferences]]
+name = "url"
+title = "Web UI address"
+description = "Leave empty for the Syncthing of this computer (read from its config.xml, usually http://127.0.0.1:8384)"
+
+[[preferences]]
+name = "apiKey"
+title = "API key"
+description = "Leave empty to read it from this computer's config.xml; else Web UI → Actions → Settings → GUI → API Key"
+type = "secret"

@@ -1,0 +1,40 @@
+[extension]
+id = "icon-search"
+title = "Icon Search"
+description = "Search Lucide, Material Symbols, Tabler, Heroicons, Phosphor and Simple Icons, and copy them as SVG, JSX or data URI"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-image"
+license = "MIT"
+
+# Indexes and SVG files come from the icon sets' npm packages on jsDelivr.
+# They are cached in ~/.cache/backslash/icon-search (indexes for a week), with
+# a recolored copy of each SVG that the launcher can show on any theme.
+[permissions]
+net = ["cdn.jsdelivr.net"]
+read = ["~/.cache/backslash/icon-search"]
+write = ["~/.cache/backslash/icon-search"]
+env = ["HOME"]
+
+[[commands]]
+name = "icons"
+title = "Search Icons"
+description = "Lucide, Material Symbols, Tabler, Heroicons, Phosphor and Simple Icons in one grid"
+icon = "bs-image"
+keywords = [
+  "icon",
+  "icons",
+  "icône",
+  "icônes",
+  "svg",
+  "lucide",
+  "material",
+  "symbols",
+  "tabler",
+  "heroicons",
+  "phosphor",
+  "simple icons",
+  "brand",
+  "logo",
+  "pictogramme",
+]

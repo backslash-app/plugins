@@ -1,0 +1,28 @@
+type MaterialSymbols = [
+  "123",
+  "360",
+  "10k",
+  "10mp",
+  "11mp",
+  "12mp",
+  "13mp",
+  "14mp",
+  "15mp",
+  "16mp",
+  "17mp",
+  "18_up_rating",
+  "18mp",
+  "19mp",
+  "1k",
+  "1k_plus",
+  "1x_mobiledata",
+  "1x_mobiledata_badge",
+  "20mp",
+  "21mp",
+  "22mp",
+  "23mp",
+  "24fps_select",
+  "24mp
+  "photo_camera",
+  "zoom_out_map"
+];

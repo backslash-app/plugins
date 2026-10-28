@@ -1,0 +1,101 @@
+[extension]
+id = "microsoft-365"
+title = "Microsoft 365"
+description = "Unread Outlook mail, Microsoft To Do tasks, OneDrive files and today's meetings through Microsoft Graph"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-mail"
+license = "MIT"
+
+# Microsoft Graph, and the sign-in (token endpoint) of the Microsoft identity platform.
+[permissions]
+net = ["graph.microsoft.com", "login.microsoftonline.com"]
+
+[[commands]]
+name = "mail"
+title = "Outlook Unread Mail"
+description = "Unread messages in your inbox, Focused first; read, archive, flag or delete"
+icon = "bs-mail"
+keywords = [
+  "outlook",
+  "mail",
+  "email",
+  "inbox",
+  "unread",
+  "microsoft",
+  "office",
+  "courrier",
+  "courriel",
+  "e-mail",
+  "boîte de réception",
+  "non lus",
+]
+
+[[commands]]
+name = "todo"
+title = "Microsoft To Do"
+description = "Tasks due today and coming up across your lists; Enter completes"
+icon = "bs-square-check"
+keywords = [
+  "to do",
+  "todo",
+  "tasks",
+  "microsoft",
+  "outlook tasks",
+  "reminders",
+  "tâches",
+  "à faire",
+  "aujourd'hui",
+  "rappels",
+]
+
+[[commands]]
+name = "add-task"
+title = "Add To Do Task"
+description = "“Call Bob tomorrow !high #Work”: due date, importance and list are understood"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["to do", "todo", "add", "new task", "quick add", "microsoft", "ajouter", "nouvelle tâche"]
+[[commands.arguments]]
+name = "task"
+placeholder = "Call Bob tomorrow !high #Work"
+required = true
+
+[[commands]]
+name = "onedrive"
+title = "Search OneDrive"
+description = "Find files by name or content, with size, path and last change; recent files first"
+icon = "bs-cloud"
+keywords = ["onedrive", "files", "documents", "search", "microsoft", "sharepoint", "fichiers", "rechercher", "documents récents"]
+
+[[commands]]
+name = "calendar"
+title = "Today's Outlook Events"
+description = "Today's meetings from your Outlook calendar; Enter joins the Teams call"
+icon = "bs-calendar"
+keywords = [
+  "outlook",
+  "calendar",
+  "events",
+  "meetings",
+  "teams",
+  "today",
+  "agenda",
+  "microsoft",
+  "calendrier",
+  "réunions",
+  "rendez-vous",
+  "aujourd'hui",
+]
+
+[[preferences]]
+name = "clientId"
+title = "Application (client) ID"
+description = "Register an app at entra.microsoft.com → App registrations → New registration (any organizational directory and personal Microsoft accounts). Authentication → Add a platform → Mobile and desktop applications, custom redirect URI http://127.0.0.1/callback, and Allow public client flows: Yes. Paste its Application (client) ID here"
+required = true
+
+[[preferences]]
+name = "tenant"
+title = "Tenant"
+description = "common (work, school and personal accounts), organizations, consumers, or your directory's tenant ID or domain"
+default = "common"

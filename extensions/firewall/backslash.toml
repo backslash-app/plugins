@@ -1,0 +1,43 @@
+[extension]
+id = "firewall"
+title = "Firewall"
+description = "State, default policies and rules of ufw or firewalld; allow or block a port, delete a rule, turn the firewall on or off"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-shield"
+license = "MIT"
+
+# ufw's state and default policies are read from its configuration files (no root);
+# its rules and every change need root, asked once per change through pkexec (polkit).
+# firewall-cmd lists firewalld's zones as a user; changes run through pkexec too, as
+# one script so that runtime and permanent configuration change with one prompt.
+[permissions]
+read = ["/etc/ufw/ufw.conf", "/etc/default/ufw", "/etc/os-release"]
+run = ["firewall-cmd", "pkexec"]
+
+[[commands]]
+name = "firewall"
+title = "Firewall"
+description = "ufw or firewalld: state, default policies, rules and zones"
+icon = "bs-shield"
+keywords = [
+  "firewall",
+  "pare-feu",
+  "parefeu",
+  "ufw",
+  "firewalld",
+  "gufw",
+  "port",
+  "ports",
+  "ouvrir un port",
+  "open port",
+  "allow",
+  "autoriser",
+  "block",
+  "bloquer",
+  "rules",
+  "règles",
+  "zone",
+  "security",
+  "sécurité",
+]

@@ -1,0 +1,272 @@
+{
+  "took": 2,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 3,
+      "relation": "eq"
+    },
+    "max_score": 1.0,
+    "hits": [
+      {
+        "_id": "4MnTgKEBjFGxZWo2xnek",
+        "_score": 1.0,
+        "_source": {
+          "type": "package",
+          "package_attr_name": "vscode",
+          "package_attr_set": "No package set",
+          "package_pname": "vscode",
+          "package_pversion": "1.142.0",
+          "package_platforms": [
+            "aarch64-linux",
+            "x86_64-linux",
+            "armv7l-linux",
+            "aarch64-darwin"
+          ],
+          "package_outputs": [
+            "out"
+          ],
+          "package_default_output": "out",
+          "package_programs": [],
+          "package_mainProgram": "code",
+          "package_license": [
+            {
+              "url": null,
+              "fullName": "Unfree",
+              "shortName": "unfree",
+              "spdxId": null
+            }
+          ],
+          "package_license_set": [
+            "unfree"
+          ],
+          "package_license_expression": null,
+          "package_maintainers": [
+            {
+              "name": "Edmund Wu",
+              "github": "eadwu",
+              "email": "edmund.wu@protonmail.com"
+            },
+            {
+              "name": "Bobby Rong",
+              "github": "bobby285271",
+              "email": "rjl931189261@126.com"
+            },
+            {
+              "name": "Masum Reza",
+              "github": "johnrtitor",
+              "email": "masumrezarock100@gmail.com"
+            },
+            {
+              "name": "Jean-François Labonté",
+              "github": "JeffLabonte",
+              "email": "jean-francois.labonte@brightonlabs.ai"
+            },
+            {
+              "name": "Peterson 'Prize' Adami Candido",
+              "github": "wetrustinprize",
+              "email": "git@wetrustinprize.com"
+            },
+            {
+              "name": "Adam Newton-Blows",
+              "github": "oenu",
+              "email": null
+            },
+            {
+              "name": "Yuannan (Brandon) Lin",
+              "github": "yuannan",
+              "email": "brandon@emergence.ltd"
+            }
+          ],
+          "package_maintainers_set": [
+            "Edmund Wu",
+            "Bobby Rong",
+            "Masum Reza",
+            "Jean-François Labonté",
+            "Peterson 'Prize' Adami Candido",
+            "Adam Newton-Blows",
+            "Yuannan (Brandon) Lin"
+          ],
+          "package_teams": [],
+          "package_teams_set": [],
+          "package_description": "Code editor developed by Microsoft",
+          "package_longDescription": "<rendered-html><p>Code editor developed by Microsoft. It includes support for\ndebugging, embedded Git control, syntax highlighting, intelligent code\ncompletion, snippets, and code refactoring. It is also customizable, so\nusers can change the editor’s theme, keyboard shortcuts, and\npreferences</p>\n</rendered-html>",
+          "package_hydra": null,
+          "package_system": "x86_64-linux",
+          "package_homepage": [
+            "https://code.visualstudio.com/"
+          ],
+          "package_position": "pkgs/applications/editors/vscode/vscode.nix:104",
+          "package_modular_services": [],
+          "package_desktop_entries": [],
+          "package_desktop_icons": {},
+          "package_categories_set": [],
+          "package_mime_types_set": [],
+          "package_component_ids": [],
+          "package_screenshots": [],
+          "package_repology_repos": 38
+        }
+      },
+      {
+        "_id": "hMnTgKEBjFGxZWo2z46B",
+        "_score": 1.0,
+        "_source": {
+          "type": "package",
+          "package_attr_name": "python313Packages.requests",
+          "package_attr_set": "python313Packages",
+          "package_pname": "requests",
+          "package_pversion": "2.34.2",
+          "package_platforms": [
+            "aarch64-freebsd",
+            "x86_64-freebsd",
+            "riscv32-linux",
+            "i686-windows",
+            "powerpc64-linux",
+            "s390-linux"
+          ],
+          "package_outputs": [
+            "dist",
+            "out"
+          ],
+          "package_default_output": "out",
+          "package_programs": [],
+          "package_mainProgram": null,
+          "package_license": [
+            {
+              "url": "https://spdx.org/licenses/Apache-2.0.html",
+              "fullName": "Apache License 2.0",
+              "shortName": "asl20",
+              "spdxId": "Apache-2.0"
+            }
+          ],
+          "package_license_set": [
+            "Apache-2.0"
+          ],
+          "package_license_expression": null,
+          "package_maintainers": [
+            {
+              "name": "Fabian Affolter",
+              "github": "fabaff",
+              "email": "mail@fabian-affolter.ch"
+            }
+          ],
+          "package_maintainers_set": [
+            "Fabian Affolter"
+          ],
+          "package_teams": [],
+          "package_teams_set": [],
+          "package_description": "HTTP library for Python",
+          "package_longDescription": null,
+          "package_hydra": null,
+          "package_system": "x86_64-linux",
+          "package_homepage": [
+            "http://docs.python-requests.org/"
+          ],
+          "package_position": "pkgs/development/python-modules/requests/default.nix:83",
+          "package_modular_services": [],
+          "package_desktop_entries": [],
+          "package_desktop_icons": {},
+          "package_categories_set": [],
+          "package_mime_types_set": [],
+          "package_component_ids": [],
+          "package_screenshots": [],
+          "package_dep_count": 1206,
+          "package_repology_repos": 121
+        }
+      },
+      {
+        "_id": "SMrUgKEBjFGxZWo2frUa",
+        "_score": 1.0,
+        "_source": {
+          "type": "package",
+          "package_attr_name": "ripgrep",
+          "package_attr_set": "No package set",
+          "package_pname": "ripgrep",
+          "package_pversion": "15.2.0",
+          "package_platforms": [
+            "riscv64-linux",
+            "riscv32-none",
+            "x86_64-solaris",
+            "x86_64-windows",
+            "armv7l-netbsd",
+            "aarch64-linux"
+          ],
+          "package_outputs": [
+            "out"
+          ],
+          "package_default_output": "out",
+          "package_programs": [
+            "rg"
+          ],
+          "package_mainProgram": "rg",
+          "package_license": [
+            {
+              "url": "https://spdx.org/licenses/Unlicense.html",
+              "fullName": "The Unlicense",
+              "shortName": "unlicense",
+              "spdxId": "Unlicense"
+            },
+            {
+              "url": "https://spdx.org/licenses/MIT.html",
+              "fullName": "MIT License",
+              "shortName": "mit",
+              "spdxId": "MIT"
+            }
+          ],
+          "package_license_set": [
+            "Unlicense",
+            "MIT"
+          ],
+          "package_license_expression": null,
+          "package_maintainers": [
+            {
+              "name": "Robin Gloster",
+              "github": "globin",
+              "email": "mail@glob.in"
+            },
+            {
+              "name": "Maximilian Bosch",
+              "github": "Ma27",
+              "email": "maximilian@mbosch.me"
+            },
+            {
+              "name": "zowoq",
+              "github": "zowoq",
+              "email": null
+            }
+          ],
+          "package_maintainers_set": [
+            "Robin Gloster",
+            "Maximilian Bosch",
+            "zowoq"
+          ],
+          "package_teams": [],
+          "package_teams_set": [],
+          "package_description": "Utility that combines the usability of The Silver Searcher with the raw speed of grep",
+          "package_longDescription": null,
+          "package_hydra": null,
+          "package_system": "x86_64-linux",
+          "package_homepage": [
+            "https://github.com/BurntSushi/ripgrep"
+          ],
+          "package_position": "pkgs/by-name/ri/ripgrep/package.nix:66",
+          "package_modular_services": [],
+          "package_desktop_entries": [],
+          "package_desktop_icons": {},
+          "package_categories_set": [],
+          "package_mime_types_set": [],
+          "package_component_ids": [],
+          "package_screenshots": [],
+          "package_dep_count": 59,
+          "package_repology_repos": 119
+        }
+      }
+    ]
+  }
+}

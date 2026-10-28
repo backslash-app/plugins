@@ -1,0 +1,101 @@
+[extension]
+id = "mail"
+title = "Mail"
+description = "Unread mail of up to three IMAP accounts (Gmail, Fastmail, iCloud, Yahoo, Proton Mail Bridge or any server): preview, mark read, archive, delete"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-mail"
+license = "MIT"
+
+# IMAP over TLS (Deno.connectTls) to the provider's server. The presets use
+# imap.gmail.com, imap.fastmail.com, imap.mail.me.com, imap.mail.yahoo.com and
+# 127.0.0.1 (Proton Mail Bridge), but a custom account may live on any host
+# (a company or hosting provider's server), so "*" is the only way to allow it.
+# Proton Mail Bridge signs its local connection with its own certificate: it is
+# read from the Bridge's config folder (HOME locates it).
+[permissions]
+net = ["*"]
+read = ["~/.config/protonmail/bridge-v3/cert.pem", "~/.config/protonmail/bridge/cert.pem"]
+env = ["HOME"]
+
+[[commands]]
+name = "unread"
+title = "Unread Mail"
+description = "The newest unread messages of your inboxes; mark read, archive, reply, delete"
+icon = "bs-mail"
+keywords = [
+  "mail",
+  "email",
+  "inbox",
+  "unread",
+  "imap",
+  "gmail",
+  "fastmail",
+  "icloud",
+  "proton",
+  "yahoo",
+  "courriel",
+  "courrier",
+  "messagerie",
+  "boîte de réception",
+  "non lus",
+]
+
+[[preferences]]
+name = "provider1"
+title = "Account 1: provider"
+description = "gmail, fastmail, icloud, yahoo, proton (Proton Mail Bridge) or custom; guessed from the address when empty. Outlook isn't supported (no IMAP passwords)"
+
+[[preferences]]
+name = "email1"
+title = "Account 1: address"
+description = "you@gmail.com: also the IMAP user name"
+
+[[preferences]]
+name = "password1"
+title = "Account 1: app password"
+description = "An app password (Gmail, iCloud, Yahoo, Fastmail), the Bridge password (Proton) or your password"
+type = "secret"
+
+[[preferences]]
+name = "server1"
+title = "Account 1: IMAP server"
+description = "custom only: imap.example.com (TLS, port 993) or mail.example.com:143 (STARTTLS)"
+
+[[preferences]]
+name = "provider2"
+title = "Account 2: provider"
+description = "gmail, fastmail, icloud, yahoo, proton or custom"
+
+[[preferences]]
+name = "email2"
+title = "Account 2: address"
+
+[[preferences]]
+name = "password2"
+title = "Account 2: app password"
+type = "secret"
+
+[[preferences]]
+name = "server2"
+title = "Account 2: IMAP server"
+description = "custom only: imap.example.com or host:port"
+
+[[preferences]]
+name = "provider3"
+title = "Account 3: provider"
+description = "gmail, fastmail, icloud, yahoo, proton or custom"
+
+[[preferences]]
+name = "email3"
+title = "Account 3: address"
+
+[[preferences]]
+name = "password3"
+title = "Account 3: app password"
+type = "secret"
+
+[[preferences]]
+name = "server3"
+title = "Account 3: IMAP server"
+description = "custom only: imap.example.com or host:port"

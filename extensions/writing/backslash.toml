@@ -1,0 +1,130 @@
+[extension]
+id = "writing"
+title = "DeepL & LanguageTool"
+description = "Translate text with DeepL and fix grammar and spelling with LanguageTool, from what you type, select or copy"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+
+# DeepL's Free and Pro APIs; LanguageTool's free API, its Premium API, and a
+# LanguageTool server running on this computer (localhost, any port).
+# wl-paste, xclip and xsel read the text selected with the mouse.
+[permissions]
+net = ["api-free.deepl.com", "api.deepl.com", "api.languagetool.org", "api.languagetoolplus.com", "localhost", "127.0.0.1"]
+run = ["wl-paste", "xclip", "xsel"]
+clipboard-read = true
+
+[[commands]]
+name = "translate"
+title = "Translate"
+description = "Type to translate with DeepL; “de: text” or “>ja text” picks the language"
+icon = "bs-globe"
+keywords = [
+  "translate",
+  "translation",
+  "deepl",
+  "language",
+  "traduire",
+  "traduction",
+  "traducteur",
+  "langue",
+  "übersetzen",
+  "traducir",
+]
+
+[[commands]]
+name = "translate-selection"
+title = "Translate Selected Text"
+description = "Translates the text selected with the mouse; paste replaces it"
+icon = "bs-globe"
+keywords = ["translate", "selection", "deepl", "traduire", "sélection", "traduire la sélection", "traduction"]
+
+[[commands]]
+name = "translate-clipboard"
+title = "Translate Clipboard"
+description = "Translates the copied text"
+icon = "bs-paste"
+keywords = ["translate", "clipboard", "deepl", "traduire", "presse-papiers", "traduction"]
+
+[[commands]]
+name = "check"
+title = "Check Grammar and Spelling"
+description = "LanguageTool on the typed, selected or copied text: apply fixes one by one or all at once"
+icon = "bs-check"
+keywords = [
+  "grammar",
+  "spelling",
+  "spell check",
+  "proofread",
+  "languagetool",
+  "correct",
+  "typo",
+  "corriger",
+  "correcteur",
+  "correction",
+  "orthographe",
+  "grammaire",
+  "fautes",
+  "relire",
+]
+
+[[preferences]]
+name = "deeplKey"
+title = "DeepL API key"
+description = "deepl.com → Account → API Keys (a free DeepL API plan gives 500,000 characters a month; Free keys end with :fx)"
+type = "secret"
+
+[[preferences]]
+name = "targetLang"
+title = "Translate to"
+description = "A DeepL language code: EN-US, EN-GB, FR, DE, ES, IT, PT-BR, PT-PT, NL, PL, JA, ZH-HANS, KO, UK, RU, SV…"
+default = "EN-US"
+
+[[preferences]]
+name = "secondLang"
+title = "Second language"
+description = "Used when the text is already in the first one (e.g. FR: French text goes to English, English text to French). Empty to turn off"
+default = "FR"
+
+[[preferences]]
+name = "formality"
+title = "Formality"
+description = "default, more or less: formal or informal “you” where DeepL supports it (DE, FR, IT, ES, NL, PL, PT, JA, RU)"
+default = "default"
+
+[[preferences]]
+name = "ltServer"
+title = "LanguageTool server"
+description = "https://api.languagetool.org (free: 20 checks a minute, 20 KB a check), https://api.languagetoolplus.com (Premium, with your username and API key), or a server on this computer like http://localhost:8081"
+default = "https://api.languagetool.org"
+
+[[preferences]]
+name = "ltUser"
+title = "LanguageTool Premium username"
+description = "Premium only: the e-mail address of your LanguageTool account"
+
+[[preferences]]
+name = "ltKey"
+title = "LanguageTool Premium API key"
+description = "Premium only: languagetool.org → Account → Access tokens / API key"
+type = "secret"
+
+[[preferences]]
+name = "ltLanguage"
+title = "Check language"
+description = "auto (detected), or a code like en-US, en-GB, fr, de-DE, es, pt-PT, nl"
+default = "auto"
+
+[[preferences]]
+name = "ltVariants"
+title = "Preferred variants"
+description = "With auto: the variants to use, comma separated, e.g. en-GB,de-CH,pt-BR"
+default = ""
+
+[[preferences]]
+name = "ltPicky"
+title = "Picky mode"
+description = "Also report style and typography issues"
+type = "boolean"
+default = false

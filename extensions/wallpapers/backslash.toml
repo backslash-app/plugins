@@ -1,0 +1,132 @@
+[extension]
+id = "wallpapers"
+title = "Wallpapers"
+description = "Browse your wallpapers, find new ones on Wallhaven and Unsplash, and set them on any desktop"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-image"
+license = "MIT"
+
+# The wallpaper is set with the desktop's own tool, picked from
+# XDG_CURRENT_DESKTOP: gsettings (GNOME, Cinnamon, MATE, Budgie),
+# plasma-apply-wallpaperimage (KDE), xfconf-query (Xfce), swww or hyprpaper
+# through hyprctl (Hyprland), swaymsg (Sway), feh or nitrogen (other X11).
+# ImageMagick (magick, or convert for version 6) makes the grid's thumbnails in
+# ~/.cache/backslash/wallpapers. Wallhaven needs no key; Unsplash needs your
+# own free access key. Their picture hosts are listed so previews show.
+[permissions]
+net = ["wallhaven.cc", "w.wallhaven.cc", "th.wallhaven.cc", "api.unsplash.com", "images.unsplash.com"]
+run = [
+  "gsettings",
+  "plasma-apply-wallpaperimage",
+  "xfconf-query",
+  "hyprctl",
+  "swww",
+  "swaymsg",
+  "feh",
+  "nitrogen",
+  "magick",
+  "convert",
+]
+# Wallpaper folders must be in one of these; the system's wallpapers are read too.
+read = [
+  "~/Pictures",
+  "~/Images",
+  "~/Wallpapers",
+  "~/.cache/backslash/wallpapers",
+  "/usr/share/backgrounds",
+  "/usr/share/wallpapers",
+  "/etc/os-release",
+]
+write = ["~/Pictures", "~/Images", "~/Wallpapers", "~/.cache/backslash/wallpapers"]
+env = [
+  "HOME",
+  "XDG_CURRENT_DESKTOP",
+  "XDG_SESSION_TYPE",
+  "DESKTOP_SESSION",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+]
+
+[[commands]]
+name = "wallpapers"
+title = "Wallpapers"
+description = "Your wallpapers as a grid: Enter sets the one you pick"
+icon = "bs-image"
+keywords = [
+  "wallpaper",
+  "wallpapers",
+  "background",
+  "desktop background",
+  "fond d'écran",
+  "fonds d'écran",
+  "arrière-plan",
+  "papier peint",
+  "image de fond",
+]
+
+[[commands]]
+name = "online"
+title = "Search Wallpapers Online"
+description = "Find wallpapers on Wallhaven and Unsplash, download and set them"
+icon = "bs-search"
+keywords = [
+  "wallpaper",
+  "wallhaven",
+  "unsplash",
+  "download",
+  "télécharger",
+  "fond d'écran",
+  "papier peint",
+  "photo",
+  "search",
+  "rechercher",
+]
+
+[[commands]]
+name = "random"
+title = "Random Wallpaper"
+description = "Sets a random wallpaper from your folders"
+icon = "bs-shuffle"
+mode = "no-view"
+keywords = ["wallpaper", "random", "shuffle", "aléatoire", "hasard", "fond d'écran", "change", "changer"]
+
+[[preferences]]
+name = "folders"
+title = "Wallpaper folders"
+description = "Comma-separated, inside ~/Pictures, ~/Images or ~/Wallpapers. Downloads go to the first one"
+default = "~/Pictures/Wallpapers"
+
+[[preferences]]
+name = "system"
+title = "Show the system's wallpapers"
+description = "Also lists /usr/share/backgrounds and /usr/share/wallpapers"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "backend"
+title = "Wallpaper tool"
+description = "auto (default), or one of gnome, cinnamon, mate, kde, xfce, hyprpaper, swww, sway, feh, nitrogen"
+default = "auto"
+
+[[preferences]]
+name = "unsplashKey"
+title = "Unsplash access key"
+description = "Optional, to search Unsplash: create a free app at unsplash.com/oauth/applications"
+type = "secret"
+
+[[preferences]]
+name = "minResolution"
+title = "Minimum resolution on Wallhaven"
+description = "e.g. 1920x1080 or 3840x2160; empty for any size"
+default = "1920x1080"
+
+[[preferences]]
+name = "sketchy"
+title = "Include “sketchy” Wallhaven results"
+description = "Off: safe-for-work wallpapers only. NSFW results are never shown"
+type = "boolean"
+default = false

@@ -1,0 +1,48 @@
+[extension]
+id = "licenses"
+title = "Licenses"
+description = "Open source licenses with their permissions, conditions and limitations; copy the text or add it to a project"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-shield"
+license = "MIT"
+
+# Rules and short texts are embedded (choosealicense.com data); the long texts
+# (GPL, Apache, MPL…) are downloaded once from choosealicense.com's repository
+# on GitHub, because they carry the [year] / [fullname] placeholders.
+# git gives your name (user.name) when the preference is empty. Projects can be
+# anywhere in your home folder, so writing a LICENSE file needs read and write
+# access to ~ (the extension only checks the folder and writes that one file).
+[permissions]
+net = ["raw.githubusercontent.com"]
+run = ["git"]
+read = ["~"]
+write = ["~"]
+env = ["HOME", "USER"]
+
+[[commands]]
+name = "licenses"
+title = "Licenses"
+description = "MIT, Apache, GPL, MPL, BSD… with what they allow and require"
+icon = "bs-shield"
+keywords = [
+  "license",
+  "licence",
+  "licenses",
+  "spdx",
+  "open source",
+  "mit",
+  "apache",
+  "gpl",
+  "copyleft",
+  "copyright",
+  "choosealicense",
+  "droits",
+  "droit d'auteur",
+  "libre",
+]
+
+[[preferences]]
+name = "fullName"
+title = "Your name"
+description = "The copyright holder written into the texts; leave empty to use git's user.name"

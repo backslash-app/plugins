@@ -1,0 +1,94 @@
+[extension]
+id = "web-analytics"
+title = "Web Analytics"
+description = "Visitors, pageviews, bounce rate, top pages and sources of your sites from Plausible, Umami and PostHog"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-chart-up"
+license = "MIT"
+
+# Plausible, Umami and PostHog are all commonly self-hosted, on your own
+# domain, which can't be listed in advance: net = ["*"] is unavoidable.
+# Requests only go to plausible.io, api.umami.is, us/eu.posthog.com, or the
+# instance URLs you set in the preferences.
+[permissions]
+net = ["*"]
+
+[[commands]]
+name = "analytics"
+title = "Web Analytics"
+description = "Visitors today, this week or this month, per site, with top pages and sources"
+icon = "bs-chart-up"
+keywords = [
+  "analytics",
+  "visitors",
+  "pageviews",
+  "traffic",
+  "plausible",
+  "umami",
+  "posthog",
+  "stats",
+  "audience",
+  "statistiques",
+  "visiteurs",
+  "trafic",
+  "fréquentation",
+]
+
+[[preferences]]
+name = "plausibleKey"
+title = "Plausible API key"
+description = "Account settings → API Keys → New API Key (Stats API)"
+type = "secret"
+
+[[preferences]]
+name = "plausibleSites"
+title = "Plausible sites"
+description = "Site domains as in Plausible, comma-separated: example.com, blog.example.com"
+
+[[preferences]]
+name = "plausibleHost"
+title = "Plausible host"
+description = "Leave empty for plausible.io; your instance's URL for self-hosted Plausible CE"
+
+[[preferences]]
+name = "umamiApiKey"
+title = "Umami Cloud API key"
+description = "Umami Cloud → Settings → API keys. Leave empty for a self-hosted instance"
+type = "secret"
+
+[[preferences]]
+name = "umamiUrl"
+title = "Umami URL (self-hosted)"
+description = "Your instance, e.g. https://umami.example.com. Leave empty for Umami Cloud"
+
+[[preferences]]
+name = "umamiUsername"
+title = "Umami username (self-hosted)"
+
+[[preferences]]
+name = "umamiPassword"
+title = "Umami password (self-hosted)"
+type = "secret"
+
+[[preferences]]
+name = "umamiSites"
+title = "Umami websites"
+description = "Optional: website IDs or domains to show, comma-separated. Empty shows them all"
+
+[[preferences]]
+name = "posthogKey"
+title = "PostHog personal API key"
+description = "Settings → Personal API keys, scopes Project: Read and Query: Read (phx_…)"
+type = "secret"
+
+[[preferences]]
+name = "posthogProjects"
+title = "PostHog projects"
+description = "Project IDs, comma-separated. Empty shows every project of your organization"
+
+[[preferences]]
+name = "posthogHost"
+title = "PostHog host"
+description = "us (default), eu, or your self-hosted instance's URL"
+default = "us"

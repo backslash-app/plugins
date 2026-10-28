@@ -1,0 +1,80 @@
+[extension]
+id = "proxmox"
+title = "Proxmox"
+description = "Nodes, virtual machines and containers of Proxmox VE with CPU, memory and uptime; start, shut down, reboot, consoles and snapshots"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-server"
+license = "MIT"
+
+# Proxmox runs on your own servers, and hosts must be declared ahead: local names,
+# private IPv4 ranges (Deno's --allow-net accepts CIDR) and Tailscale. A public
+# domain is out of reach. Same list as HOSTS in api.ts.
+# ~/.config/proxmox holds the cluster's CA certificate (pve-root-ca.pem): Deno can't
+# skip certificate checks, so Backslash trusts that CA with Deno.createHttpClient.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+read = ["~/.config/proxmox"]
+env = ["HOME"]
+
+[[commands]]
+name = "proxmox"
+title = "Proxmox"
+description = "Running, stopped or all VMs and containers, by node"
+icon = "bs-server"
+keywords = [
+  "proxmox",
+  "pve",
+  "vm",
+  "virtual machine",
+  "machine virtuelle",
+  "lxc",
+  "container",
+  "conteneur",
+  "hypervisor",
+  "hyperviseur",
+  "homelab",
+  "qemu",
+  "kvm",
+  "console",
+  "snapshot",
+  "instantané",
+]
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "A node's web UI, e.g. https://pve.local:8006 or https://192.168.1.10:8006"
+required = true
+
+[[preferences]]
+name = "tokenId"
+title = "API token ID"
+description = "Datacenter → Permissions → API Tokens → Add, e.g. root@pam!backslash (role PVEAuditor + PVEVMUser on /)"
+required = true
+
+[[preferences]]
+name = "tokenSecret"
+title = "API token secret"
+description = "Shown once when the token is created"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "caFile"
+title = "CA certificate"
+description = "For Proxmox's own certificates: copy /etc/pve/pve-root-ca.pem to ~/.config/proxmox/ (the default path), or paste its content here"
+default = "~/.config/proxmox/pve-root-ca.pem"

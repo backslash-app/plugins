@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom"
+  xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  <channel>
+    <atom:link href="https://feeds.example.fm/changelog" rel="self" type="application/rss+xml"/>
+    <title>The Changelog: Software Development, Open Source</title>
+    <link>https://changelog.com/podcast</link>
+    <language>en-us</language>
+    <itunes:author>Changelog Media</itunes:author>
+    <description>Software&#39;s best weekly news brief, deep technical interviews &amp; talk show.</description>
+    <itunes:image href="https://cdn.changelog.com/uploads/covers/the-changelog-original.png?v=63725770357"/>
+    <itunes:category text="Technology"/>
+    <itunes:category text="News"><itunes:category text="Tech News"/></itunes:category>
+    <itunes:explicit>false</itunes:explicit>
+    <item>
+      <title>Kaizen! Pipely is LIVE</title>
+      <guid isPermaLink="false">changelog.com/1/2961</guid>
+      <link>https://changelog.com/podcast/612</link>
+      <pubDate>Tue, 27 Oct 2026 19:30:00 +0000</pubDate>
+      <enclosure url="https://op3.dev/e/https://cdn.changelog.com/uploads/podcast/612/the-changelog-612.mp3" length="91853241" type="audio/mpeg"/>
+      <itunes:duration>1:35:41</itunes:duration>
+      <itunes:episode>612</itunes:episode>
+      <itunes:episodeType>full</itunes:episodeType>
+      <itunes:image href="https://cdn.changelog.com/uploads/covers/612.png"/>
+      <description>Gerhard is back for Kaizen 19!</description>
+      <content:encoded><![CDATA[<p>Gerhard is back for <strong>Kaizen 19</strong>! Pipely, our home-grown CDN, is <a href="https://github.com/thechangelog/pipely">now live</a>.</p><ul><li>Varnish</li><li>Fly.io</li></ul><p>Sponsors &amp; links below.</p>]]></content:encoded>
+    </item>
+    <item>
+      <title>Bonus: &quot;Behind the scenes&quot;</title>
+      <guid>changelog.com/1/2960</guid>
+      <pubDate>Fri, 23 Oct 2026 12:00:00 GMT</pubDate>
+      <enclosure url="https://cdn.changelog.com/uploads/podcast/bonus-14.mp3" length="20000000" type="audio/mpeg"/>
+      <itunes:duration>2710</itunes:duration>
+      <itunes:season>3</itunes:season>
+      <itunes:episodeType>bonus</itunes:episodeType>
+      <itunes:explicit>yes</itunes:explicit>
+      <itunes:summary>A short one.</itunes:summary>
+    </item>
+    <item>
+      <title>Trailer</title>
+      <pubDate>Mon, 01 Jan 2024 08:00:00 +0000</pubDate>
+      <enclosure url="/uploads/trailer.mp3" type="audio/mpeg"/>
+      <itunes:duration>02:10</itunes:duration>
+      <itunes:episodeType>trailer</itunes:episodeType>
+    </item>
+    <item>
+      <title>A post without audio</title>
+      <pubDate>Mon, 26 Oct 2026 08:00:00 +0000</pubDate>
+    </item>
+  </channel>
+</rss>

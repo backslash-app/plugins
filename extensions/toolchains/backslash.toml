@@ -1,0 +1,65 @@
+[extension]
+id = "toolchains"
+title = "Toolchains"
+description = "Language runtimes installed with mise, asdf, rustup, fnm, nvm, pyenv or SDKMAN!: what's in use, what's newer, install and switch in a terminal"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+
+# The managers list their versions (mise, asdf, rustup, fnm, pyenv are programs; nvm and
+# SDKMAN! are shell functions, so their folders are read instead). Installing, switching
+# and uninstalling run in a terminal you can watch.
+[permissions]
+env = ["HOME", "NVM_DIR", "SDKMAN_DIR"]
+read = ["/etc/os-release", "~/.nvm", "~/.sdkman/candidates"]
+run = [
+  "mise",
+  "asdf",
+  "rustup",
+  "fnm",
+  "pyenv",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "toolchains"
+title = "Toolchains"
+description = "Installed runtimes and versions by manager: in use, updates, install, use globally, uninstall"
+icon = "bs-layers"
+keywords = [
+  "toolchains",
+  "runtimes",
+  "versions",
+  "mise",
+  "asdf",
+  "rustup",
+  "nvm",
+  "fnm",
+  "pyenv",
+  "sdkman",
+  "node",
+  "python",
+  "rust",
+  "java",
+  "go",
+  "ruby",
+  "langages",
+  "environnements",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

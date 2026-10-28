@@ -1,0 +1,103 @@
+{
+  "took": 8,
+  "timed_out": false,
+  "_shards": {
+    "total": 1,
+    "successful": 1,
+    "skipped": 0,
+    "failed": 0
+  },
+  "hits": {
+    "total": {
+      "value": 63,
+      "relation": "eq"
+    },
+    "max_score": 595.6248,
+    "hits": [
+      {
+        "_id": "ucv1gKEBjFGxZWo2Q62r",
+        "_score": 595.6248,
+        "_source": {
+          "type": "option",
+          "option_source": "nixos/modules/services/networking/ssh/sshd.nix",
+          "option_name": "services.openssh.enable",
+          "option_description": "<rendered-html><p>Whether to enable the OpenSSH secure shell daemon, which allows\nsecure remote logins.</p>\n</rendered-html>",
+          "option_type": "boolean",
+          "option_default": "false",
+          "option_example": null,
+          "option_flake": null
+        }
+      },
+      {
+        "_id": "yMv1gKEBjFGxZWo2Q62r",
+        "_score": 9.762565,
+        "_source": {
+          "type": "option",
+          "option_source": "nixos/modules/services/networking/ssh/sshd.nix",
+          "option_name": "services.openssh.package",
+          "option_description": "<rendered-html><p>OpenSSH package to use for sshd.</p>\n</rendered-html>",
+          "option_type": "package",
+          "option_default": "programs.ssh.package",
+          "option_example": null,
+          "option_flake": null
+        }
+      },
+      {
+        "_id": "YcvggKEBjFGxZWo2AXoq",
+        "_score": 9.292349,
+        "_source": {
+          "type": "option",
+          "option_source": "nixos/modules/programs/ssh.nix",
+          "option_name": "programs.ssh.package",
+          "option_description": "<rendered-html><p>The openssh package to use.</p>\n</rendered-html>",
+          "option_type": "package",
+          "option_default": "pkgs.openssh",
+          "option_example": null,
+          "option_flake": null
+        }
+      },
+      {
+        "_id": "CMsBgaEBjFGxZWo2z9Zo",
+        "_score": 7.7253246,
+        "_source": {
+          "type": "option",
+          "option_source": "nixos/modules/virtualisation/libvirtd.nix",
+          "option_name": "virtualisation.libvirtd.sshProxy",
+          "option_description": "<rendered-html><p>Whether to configure OpenSSH to use the <a\nhref=\"https://libvirt.org/ssh-proxy.html\">SSH Proxy</a>.</p>\n</rendered-html>",
+          "option_type": "boolean",
+          "option_default": "true",
+          "option_example": null,
+          "option_flake": null
+        }
+      },
+      {
+        "_id": "CssBgaEBjFGxZWo2z91p",
+        "_score": 594.57434,
+        "_source": {
+          "type": "home-manager-option",
+          "option_source": "modules/programs/git.nix",
+          "option_name": "programs.git.enable",
+          "option_description": "<rendered-html><p>Whether to enable Git.</p>\n</rendered-html>",
+          "option_type": "boolean",
+          "option_default": "false",
+          "option_example": "true",
+          "option_flake": null
+        }
+      },
+      {
+        "_id": "lssKgaEBjFGxZWo2q_Ao",
+        "_score": 8.200289,
+        "_source": {
+          "type": "darwin-option",
+          "option_source": "modules/system/defaults/dock.nix",
+          "option_name": "system.defaults.dock.persistent-apps.*.app",
+          "option_description": "<rendered-html><p>An application to be added to the dock.</p>\n</rendered-html>",
+          "option_type": "string",
+          "option_default": null,
+          "option_example": null,
+          "option_flake": null
+        }
+      }
+    ]
+  }
+}

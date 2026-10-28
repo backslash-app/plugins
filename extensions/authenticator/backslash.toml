@@ -1,0 +1,99 @@
+[extension]
+id = "authenticator"
+title = "Authenticator"
+description = "Two-factor (TOTP) codes for your accounts, with secrets kept in the system keyring"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-shield"
+license = "MIT"
+
+# Secrets never go to the extension's storage in clear:
+# - secret-tool stores each one in the system keyring (libsecret: GNOME
+#   Keyring, KWallet, KeePassXC), under application=backslash-authenticator;
+# - without a keyring, they are encrypted (AES-256-GCM, key derived from the
+#   "Vault passphrase" preference) before being stored.
+# Scanning a QR code on screen runs in the background (systemd-run) once the
+# launcher is hidden, with the first area capture tool installed (grim + slurp,
+# gnome-screenshot, spectacle, maim, scrot or ImageMagick's import), then
+# zbarimg; the scanned link goes straight into the keyring. Here those programs
+# are only started to check that they are installed. wl-paste and xclip read a
+# copied picture of a QR code. Exports of Aegis and 2FAS are imported from
+# ~/Downloads or ~/Documents.
+[permissions]
+run = [
+  "secret-tool",
+  "systemd-run",
+  "zbarimg",
+  "grim",
+  "slurp",
+  "gnome-screenshot",
+  "spectacle",
+  "maim",
+  "scrot",
+  "import",
+  "wl-paste",
+  "xclip",
+]
+read = ["~/.cache/backslash/authenticator", "~/Downloads", "~/Documents", "/etc/os-release"]
+write = ["~/.cache/backslash/authenticator"]
+env = [
+  "HOME",
+  "DBUS_SESSION_BUS_ADDRESS",
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "XAUTHORITY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+]
+clipboard-read = true
+
+[[commands]]
+name = "codes"
+title = "Authenticator"
+description = "Your two-factor codes: Enter copies, the code refreshes live"
+icon = "bs-shield"
+keywords = [
+  "2fa",
+  "totp",
+  "otp",
+  "mfa",
+  "authenticator",
+  "one-time code",
+  "code",
+  "verification",
+  "double authentification",
+  "code de vérification",
+  "authentification",
+  "google authenticator",
+  "aegis",
+]
+
+[[commands]]
+name = "add"
+title = "Add 2FA Account"
+description = "Paste an otpauth:// link or enter the secret key shown by the website"
+icon = "bs-plus"
+keywords = ["2fa", "totp", "otp", "add", "ajouter", "new account", "nouveau compte", "secret", "otpauth"]
+
+[[commands]]
+name = "scan-screen"
+title = "Scan 2FA QR Code on Screen"
+description = "Select the QR code a website shows: the account is added to Authenticator"
+icon = "bs-scan"
+mode = "no-view"
+keywords = ["2fa", "totp", "qr", "scan", "scanner", "screen", "écran", "add", "ajouter", "authenticator"]
+
+[[preferences]]
+name = "passphrase"
+title = "Vault passphrase"
+description = "Only used when no system keyring is available: secrets are then encrypted with this passphrase in the extension's storage"
+type = "secret"
+
+[[preferences]]
+name = "showNext"
+title = "Show the next code"
+description = "Shows the upcoming code in the list, handy near the end of a period"
+type = "boolean"
+default = true

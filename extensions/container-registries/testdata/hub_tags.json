@@ -1,0 +1,149 @@
+{
+  "count": 1381,
+  "next": "https://hub.docker.com/v2/repositories/library/nginx/tags?ordering=last_updated&page=2&page_size=2",
+  "previous": null,
+  "results": [
+    {
+      "creator": 1156886,
+      "id": 987274600,
+      "images": [
+        {
+          "architecture": "amd64",
+          "features": "",
+          "variant": null,
+          "digest": "sha256:283e2845eb33ca01dfb66d05a0d53b6992cf1c54c1f87a615ff8058793b4a7ab",
+          "os": "linux",
+          "os_features": "",
+          "os_version": null,
+          "size": 76070953,
+          "status": "active",
+          "last_pulled": "2026-10-28T12:28:56.199858808Z",
+          "last_pushed": "2026-10-28T07:50:29.382912972Z"
+        },
+        {
+          "architecture": "ppc64le",
+          "features": "",
+          "variant": null,
+          "digest": "sha256:4c739ffe00cc87f115a1fd143619a48e3b9e1dca088d186116473d4cea26da79",
+          "os": "linux",
+          "os_features": "",
+          "os_version": null,
+          "size": 81120296,
+          "status": "active",
+          "last_pulled": "2026-10-28T12:30:40.333526713Z",
+          "last_pushed": "2026-10-22T13:50:30.110996894Z"
+        },
+        {
+          "architecture": "386",
+          "features": "",
+          "variant": null,
+          "digest": "sha256:dad7787e8885a86a4996446924ed58aa79f1650ed61038ef68a8ede28ea867a8",
+          "os": "linux",
+          "os_features": "",
+          "os_version": null,
+          "size": 76629716,
+          "status": "active",
+          "last_pulled": "2026-10-28T12:24:29.981325347Z",
+          "last_pushed": "2026-10-28T07:50:30.132538455Z"
+        },
+        {
+          "architecture": "unknown",
+          "features": "",
+          "variant": null,
+          "digest": "sha256:129d553d7e6a03cf2dc11520781a14ea9f6bf1ea5b63ca8537c0ac9e9badfc88",
+          "os": "unknown",
+          "os_features": "",
+          "os_version": null,
+          "size": 4283579,
+          "status": "active",
+          "last_pulled": "2026-10-28T12:30:40.512079316Z",
+          "last_pushed": "2026-10-28T04:50:58.365831794Z"
+        }
+      ],
+      "last_updated": "2026-10-28T07:53:12.670797Z",
+      "last_updater": 1156886,
+      "last_updater_username": "doijanky",
+      "name": "trixie-perl",
+      "repository": 21171,
+      "full_size": 76070953,
+      "v2": true,
+      "tag_status": "active",
+      "tag_last_pulled": "2026-10-28T12:30:40.745151613Z",
+      "tag_last_pushed": "2026-10-28T07:53:12.670797Z",
+      "media_type": "application/vnd.oci.image.index.v1+json",
+      "content_type": "image",
+      "digest": "sha256:bbe0395f57ca4975ec253875174df25b342e51a2d5a64f23f8aedefad76bfe5a"
+    },
+    {
+      "creator": 1156886,
+      "id": 987274577,
+      "images": [
+        {
+          "architecture": "amd64",
+          "features": "",
+          "variant": null,
+          "digest": "sha256:1e90addcf987500831a3ae6d397bae1f80cb03499784c47603c59fe61f94fdd7",
+          "os": "linux",
+          "os_features": "",
+          "os_version": null,
+          "size": 67709392,
+          "status": "active",
+          "last_pulled": "2026-10-28T12:20:08.746334439Z",
+          "last_pushed": "2026-10-28T07:50:21.299520643Z"
+        },
+        {
+          "architecture": "arm64",
+          "features": "",
+          "variant": "v8",
+          "digest": "sha256:a9334748a640a94931c8379c003a796d0a30121f2247de8a28ad980cb97471d8",
+          "os": "linux",
+          "os_features": "",
+          "os_version": null,
+          "size": 65827482,
+          "status": "active",
+          "last_pulled": "2026-10-28T12:23:41.637470593Z",
+          "last_pushed": "2026-10-28T04:50:45.613178108Z"
+        },
+        {
+          "architecture": "unknown",
+          "features": "",
+          "variant": null,
+          "digest": "sha256:ef6cd50621efa52669303f49856ab842841e9dff49bbf40b589a3aface332bb4",
+          "os": "unknown",
+          "os_features": "",
+          "os_version": null,
+          "size": 2865866,
+          "status": "active",
+          "last_pulled": "2026-10-28T12:23:42.203739065Z",
+          "last_pushed": "2026-10-28T04:50:46.048919101Z"
+        },
+        {
+          "architecture": "unknown",
+          "features": "",
+          "variant": null,
+          "digest": "sha256:ef6cd50621efa52669303f49856ab842841e9dff49bbf40b589a3aface332bb4",
+          "os": "unknown",
+          "os_features": "",
+          "os_version": null,
+          "size": 2865866,
+          "status": "active",
+          "last_pulled": "2026-10-28T12:23:42.203739065Z",
+          "last_pushed": "2026-10-28T04:50:46.048919101Z"
+        }
+      ],
+      "last_updated": "2026-10-28T07:53:09.818488Z",
+      "last_updater": 1156886,
+      "last_updater_username": "doijanky",
+      "name": "trixie-otel",
+      "repository": 21171,
+      "full_size": 67709392,
+      "v2": true,
+      "tag_status": "active",
+      "tag_last_pulled": "2026-10-28T12:25:02.368798169Z",
+      "tag_last_pushed": "2026-10-28T07:53:09.818488Z",
+      "media_type": "application/vnd.oci.image.index.v1+json",
+      "content_type": "image",
+      "digest": "sha256:167dacee35422d64f20d88082b812de054a2afb63ca298db44278e489a6c33ac"
+    }
+  ]
+}

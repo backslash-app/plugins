@@ -1,0 +1,41 @@
+[extension]
+id = "hugging-face"
+title = "Hugging Face"
+description = "Search Hugging Face models, datasets and Spaces with downloads, likes, licenses and model cards"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-sparkle"
+license = "MIT"
+
+[permissions]
+# The Hub API and the repositories' README files.
+net = ["huggingface.co"]
+
+[[commands]]
+name = "search"
+title = "Search Hugging Face"
+description = "Models, datasets and Spaces: downloads, likes, task, license, model card; copy download and ollama commands"
+icon = "bs-sparkle"
+keywords = [
+  "hugging face",
+  "huggingface",
+  "hf",
+  "model",
+  "dataset",
+  "space",
+  "llm",
+  "gguf",
+  "ollama",
+  "transformers",
+  "ai",
+  "ml",
+  "modèle",
+  "jeu de données",
+  "intelligence artificielle",
+]
+
+[[preferences]]
+name = "token"
+title = "Access token"
+description = "Optional: a read token from huggingface.co/settings/tokens, for your private and gated repositories"
+type = "secret"

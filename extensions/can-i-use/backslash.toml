@@ -1,0 +1,38 @@
+[extension]
+id = "can-i-use"
+title = "Can I Use"
+description = "Browser support for web platform features from caniuse.com, with versions, partial support and notes"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+
+[permissions]
+# caniuse's full data file, downloaded once a week from its GitHub repository.
+net = ["raw.githubusercontent.com"]
+# The trimmed copy is cached there.
+read = ["~/.cache/backslash/can-i-use"]
+write = ["~/.cache/backslash/can-i-use"]
+env = ["HOME"]
+
+[[commands]]
+name = "search"
+title = "Can I Use"
+description = "Global support, first supporting version per browser, prefixes, flags and notes"
+icon = "bs-globe"
+keywords = [
+  "caniuse",
+  "can i use",
+  "browser",
+  "support",
+  "compatibility",
+  "css",
+  "html",
+  "javascript",
+  "web",
+  "feature",
+  "mdn",
+  "navigateur",
+  "compatibilité",
+  "prise en charge",
+]

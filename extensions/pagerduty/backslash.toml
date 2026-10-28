@@ -1,0 +1,58 @@
+[extension]
+id = "pagerduty"
+title = "PagerDuty"
+description = "Open PagerDuty incidents with their urgency, service and assignees; acknowledge, resolve, reassign, add notes, and see who is on call"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bell"
+license = "MIT"
+
+# The REST API (US and EU service regions), and Gravatar for the avatars
+# PagerDuty gives its users.
+[permissions]
+net = ["api.pagerduty.com", "api.eu.pagerduty.com", "secure.gravatar.com"]
+
+[[commands]]
+name = "incidents"
+title = "PagerDuty Incidents"
+description = "Triggered and acknowledged incidents, yours or all: acknowledge, resolve, reassign, add a note"
+icon = "bs-alert"
+keywords = [
+  "pagerduty",
+  "incident",
+  "incidents",
+  "alert",
+  "page",
+  "on-call",
+  "acknowledge",
+  "resolve",
+  "ack",
+  "astreinte",
+  "acquitter",
+  "résoudre",
+]
+
+[[commands]]
+name = "oncall"
+title = "Who's On Call"
+description = "Who is on call right now, by schedule and escalation level"
+icon = "bs-user"
+keywords = ["pagerduty", "on-call", "oncall", "schedule", "rotation", "escalation", "who", "astreinte", "planning", "garde"]
+
+[[preferences]]
+name = "token"
+title = "API key"
+description = "PagerDuty → My Profile → User Settings → Create API User Token (or an account API key from Integrations → API Access Keys)"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "email"
+title = "Your PagerDuty email"
+description = "Needed to acknowledge, resolve, reassign and add notes (PagerDuty records who did it), and for Mine with an account API key"
+
+[[preferences]]
+name = "region"
+title = "Service region"
+description = "us (app.pagerduty.com) or eu (app.eu.pagerduty.com)"
+default = "us"

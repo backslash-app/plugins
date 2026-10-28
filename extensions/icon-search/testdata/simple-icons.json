@@ -1,0 +1,38 @@
+[
+  {
+    "title": ".NET",
+    "slug": "dotnet",
+    "hex": "512BD4",
+    "source": "https://github.com/dotnet/brand/blob/c7d0f51b8ec59531332d05fb27a5b758a7a3d689/logo/dotnet-logo.svg",
+    "guidelines": "https://github.com/dotnet/brand/blob/c7d0f51b8ec59531332d05fb27a5b758a7a3d689/dotnet-styleGuide-2024.pdf",
+    "license": {
+      "type": "CC0-1.0"
+    }
+  },
+  {
+    "title": "GitHub",
+    "slug": "github",
+    "hex": "181717",
+    "source": "https://github.com/logos",
+    "guidelines": "https://github.com/logos"
+  },
+  {
+    "title": "Next.js",
+    "slug": "nextdotjs",
+    "hex": "000000",
+    "source": "https://vercel.com/design/brands#next-js",
+    "guidelines": "https://vercel.com/design/brands#next-js"
+  },
+  {
+    "title": "AFDIAN",
+    "slug": "afdian",
+    "hex": "946CE6",
+    "source": "https://afdian.com/album/248b4bb2c9b111e9a9bb52540025c377/c3d32ae4b5f311eab4a952540025c377",
+    "guidelines": "https://afdian.com/album/248b4bb2c9b111e9a9bb52540025c377/c3d32ae4b5f311eab4a952540025c377",
+    "aliases": {
+      "loc": {
+        "zh-CN": "爱发电"
+      }
+    }
+  }
+]
