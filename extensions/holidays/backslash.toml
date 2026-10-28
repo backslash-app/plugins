@@ -1,0 +1,100 @@
+[extension]
+id = "holidays"
+title = "Public Holidays"
+description = "Upcoming public holidays of your country with countdowns, French school holidays by zone, and the bridge days worth taking off"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calendar"
+license = "MIT"
+
+# Nager.Date gives public holidays for 100+ countries without a key; the
+# Éducation nationale open data portal gives the French school calendar.
+# Both are cached per year in the extension's storage.
+[permissions]
+net = ["date.nager.at", "data.education.gouv.fr"]
+
+[[commands]]
+name = "holidays"
+title = "Public Holidays"
+description = "This year's and next year's public holidays, the next one first, with a countdown"
+icon = "bs-calendar"
+keywords = [
+  "holiday",
+  "holidays",
+  "public holiday",
+  "bank holiday",
+  "jour férié",
+  "jours fériés",
+  "férié",
+  "ferie",
+  "fête",
+  "countdown",
+  "calendar",
+  "calendrier",
+  "nager",
+]
+[[commands.arguments]]
+name = "country"
+placeholder = "Country code (FR, DE, US…)"
+
+[[commands]]
+name = "school"
+title = "School Holidays"
+description = "French school holidays of your zone (A, B, C, Corsica, overseas) for this school year and the next"
+icon = "bs-book"
+keywords = [
+  "school",
+  "school holidays",
+  "vacances",
+  "vacances scolaires",
+  "congés scolaires",
+  "zone a",
+  "zone b",
+  "zone c",
+  "corse",
+  "toussaint",
+  "noël",
+  "février",
+  "printemps",
+  "été",
+  "rentrée",
+  "éducation nationale",
+]
+
+[[commands]]
+name = "bridges"
+title = "Bridge Days"
+description = "Days to take off that turn public holidays into long weekends (ponts, viaducts) and how many days off each gives"
+icon = "bs-sun"
+keywords = [
+  "bridge",
+  "bridge day",
+  "pont",
+  "ponts",
+  "faire le pont",
+  "viaduc",
+  "long weekend",
+  "week-end prolongé",
+  "jour de congé",
+  "rtt",
+  "day off",
+  "vacation",
+  "congés",
+]
+
+[[preferences]]
+name = "country"
+title = "Country"
+description = "ISO 3166 country code of the public holidays: FR, BE, CH, DE, GB, US…"
+default = "FR"
+
+[[preferences]]
+name = "region"
+title = "Region"
+description = "Optional subdivision for regional holidays, as Nager.Date names them: DE-BY, CH-GE, ES-CT, GB-SCT…"
+
+[[preferences]]
+name = "zone"
+title = "School zone"
+description = "French school zone: A, B, C, Corse, or an overseas académie (Guadeloupe, Martinique, Guyane, La Réunion, Mayotte…)"
+default = "C"

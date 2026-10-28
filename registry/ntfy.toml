@@ -1,0 +1,13 @@
+id = "ntfy"
+title = "ntfy"
+description = "Send push notifications to your phone with ntfy or Gotify, push the clipboard, and read the recent messages of your topics"
+author = "Backslash"
+icon = "bs-bell"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/ntfy"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:5f23cdf6cae341758e7345ae1484aaac919bd2b41812be4ea959f02fa37b36a5"
+permissions = ["Access ntfy.sh", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read the clipboard"]
+commands = ["Send Push Notification", "Compose Push Notification", "Push Clipboard to Phone", "Notification Topics"]
+

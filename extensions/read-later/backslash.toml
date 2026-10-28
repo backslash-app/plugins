@@ -1,0 +1,98 @@
+[extension]
+id = "read-later"
+title = "Read Later"
+description = "Your Wallabag or Readeck reading list with reading times and tags, articles readable in the launcher; save links there or to Instapaper"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+
+# wallabag.it (hosted Wallabag) and Instapaper's Simple API; a self-hosted Wallabag or
+# Readeck on this computer, the local network or Tailscale (same list as HOSTS in lib.ts,
+# checked by a test). The clipboard is read only by Save to Read Later, when it is run
+# without a link, to save the one you copied.
+[permissions]
+net = [
+  "app.wallabag.it",
+  "www.instapaper.com",
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+clipboard-read = true
+
+[[commands]]
+name = "articles"
+title = "Saved Articles"
+description = "Unread, favorite or archived articles; read one in the launcher, archive, favorite, delete"
+icon = "bs-book"
+keywords = [
+  "read later",
+  "reading list",
+  "wallabag",
+  "readeck",
+  "articles",
+  "pocket",
+  "saved",
+  "read",
+  "lire plus tard",
+  "à lire",
+  "liste de lecture",
+  "lecture",
+]
+
+[[commands]]
+name = "save"
+title = "Save to Read Later"
+description = "Saves a link, or the one on the clipboard, to Wallabag, Readeck or Instapaper"
+icon = "bs-bookmark"
+mode = "no-view"
+keywords = ["read later", "save", "add", "link", "article", "wallabag", "readeck", "instapaper", "enregistrer", "ajouter", "lire plus tard"]
+[[commands.arguments]]
+name = "url"
+placeholder = "https://… (or the clipboard)"
+
+[[preferences]]
+name = "backend"
+title = "Service"
+description = "wallabag, readeck or instapaper; empty: the one you gave credentials for"
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "Wallabag or Readeck: https://app.wallabag.it (default for Wallabag) or https://read.home.lan"
+
+[[preferences]]
+name = "clientId"
+title = "Wallabag client ID"
+description = "Wallabag → API clients management → Create a new client"
+
+[[preferences]]
+name = "clientSecret"
+title = "Wallabag client secret"
+description = "Shown next to the client ID"
+type = "secret"
+
+[[preferences]]
+name = "username"
+title = "User name"
+description = "Wallabag user name, or Instapaper email"
+
+[[preferences]]
+name = "password"
+title = "Password"
+description = "Wallabag or Instapaper password"
+type = "secret"
+
+[[preferences]]
+name = "token"
+title = "Readeck API token"
+description = "Readeck → Profile → API Tokens → Create a new token"
+type = "secret"

@@ -1,0 +1,101 @@
+[extension]
+id = "ntfy"
+title = "ntfy"
+description = "Send push notifications to your phone with ntfy or Gotify, push the clipboard, and read the recent messages of your topics"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bell"
+license = "MIT"
+
+# ntfy.sh, or a self-hosted ntfy or Gotify on this computer, the local network
+# or Tailscale, as the server preferences allow (same list as HOSTS in api.ts).
+# The clipboard is read only by Push Clipboard to Phone.
+[permissions]
+net = [
+  "ntfy.sh",
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+clipboard-read = true
+
+[[commands]]
+name = "send"
+title = "Send Push Notification"
+description = "Sends the text you type to your default ntfy topic (or Gotify)"
+icon = "bs-upload"
+mode = "no-view"
+keywords = ["ntfy", "gotify", "push", "notify", "notification", "phone", "send", "envoyer", "téléphone", "message"]
+[[commands.arguments]]
+name = "message"
+placeholder = "Message"
+required = true
+
+[[commands]]
+name = "compose"
+title = "Compose Push Notification"
+description = "A notification with a title, priority, tags and a link, to any topic or Gotify"
+icon = "bs-bell"
+keywords = ["ntfy", "gotify", "push", "notification", "priority", "title", "rédiger", "envoyer", "téléphone"]
+
+[[commands]]
+name = "clipboard"
+title = "Push Clipboard to Phone"
+description = "Sends the clipboard's text to your default topic; a link opens when you tap it"
+icon = "bs-paste"
+mode = "no-view"
+keywords = ["ntfy", "gotify", "clipboard", "phone", "share", "link", "presse-papiers", "téléphone", "partager", "envoyer"]
+
+[[commands]]
+name = "topics"
+title = "Notification Topics"
+description = "Recent messages of your ntfy topics and Gotify, with their priority, tags and links"
+icon = "bs-inbox"
+keywords = ["ntfy", "gotify", "topics", "subscribe", "messages", "alerts", "inbox", "sujets", "abonnements", "alertes"]
+
+[[preferences]]
+name = "server"
+title = "ntfy server"
+description = "https://ntfy.sh, or your own ntfy on your network or Tailscale"
+default = "https://ntfy.sh"
+
+[[preferences]]
+name = "topic"
+title = "Default topic"
+description = "Where Send Push Notification and Push Clipboard go: a hard-to-guess name, subscribed in the ntfy phone app"
+
+[[preferences]]
+name = "token"
+title = "ntfy access token"
+description = "Only for protected topics: tk_… from ntfy's Account page, or user:password"
+type = "secret"
+
+[[preferences]]
+name = "since"
+title = "Messages from the last"
+description = "How far back Notification Topics looks: 30m, 12h, 2d or all"
+default = "24h"
+
+[[preferences]]
+name = "gotifyUrl"
+title = "Gotify server"
+description = "Optional: the address of your Gotify, like http://gotify.lan"
+
+[[preferences]]
+name = "gotifyClientToken"
+title = "Gotify client token"
+description = "To read messages: Gotify → Clients → Create Client"
+type = "secret"
+
+[[preferences]]
+name = "gotifyAppToken"
+title = "Gotify app token"
+description = "To send messages: Gotify → Apps → Create Application"
+type = "secret"

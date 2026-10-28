@@ -1,0 +1,13 @@
+id = "paperless"
+title = "Paperless-ngx"
+description = "Search your Paperless-ngx documents by their text with correspondents, types, tags and thumbnails; download, share, tag, and upload copied files"
+author = "Backslash"
+icon = "bs-archive"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/paperless"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:f9a3df26f913522f78c05e003a00ac9c4b62ecb135ec4fa415fd76a9f71ccda2"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access paperless", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run wl-paste", "Run xclip", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Write ~/Downloads", "Write ~/.cache/backslash/paperless", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Search Paperless", "Upload to Paperless"]
+

@@ -1,0 +1,102 @@
+[extension]
+id = "coding-agents"
+title = "Coding Agent Sessions"
+description = "Your recent Claude Code, Codex and Aider sessions with their project, prompts and last answer, resumed in a terminal in one keystroke"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-sparkle"
+license = "MIT"
+
+# Only the session logs are read: Claude Code's (~/.claude/projects) and
+# Codex's (~/.codex/sessions), and Aider's .aider.chat.history.md files in the
+# usual code folders (the folders preference can only point inside them).
+# Sessions resume in your terminal, through your shell ($SHELL) so the agents
+# installed with npm, pipx or nvm are found. HOME locates the logs.
+[permissions]
+env = ["HOME", "SHELL"]
+read = [
+  "~/.claude/projects",
+  "~/.codex/sessions",
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+]
+run = [
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "sessions"
+title = "Coding Agent Sessions"
+description = "Recent sessions by project and age; resume one in a terminal, open its folder or copy its id"
+icon = "bs-sparkle"
+keywords = [
+  "claude",
+  "claude code",
+  "codex",
+  "openai codex",
+  "aider",
+  "agent",
+  "ai",
+  "session",
+  "resume",
+  "conversation",
+  "history",
+  "chat",
+  "llm",
+  "reprendre",
+  "historique",
+  "agent de code",
+  "ia",
+]
+
+[[preferences]]
+name = "agents"
+title = "Agents"
+description = "Which logs to read, separated by commas: claude, codex, aider"
+default = "claude, codex, aider"
+
+[[preferences]]
+name = "max"
+title = "Sessions per agent"
+description = "How many of the most recent sessions of each agent to list"
+type = "number"
+default = 60
+
+[[preferences]]
+name = "folders"
+title = "Aider folders"
+description = "Where to look for .aider.chat.history.md files, separated by commas; inside ~/Projects, ~/code, ~/Code, ~/src, ~/dev, ~/Developer, ~/git, ~/repos, ~/workspace or ~/work"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace, ~/work"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folders deep to look for Aider histories below each folder (1 to 8)"
+type = "number"
+default = 3
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed: kitty, alacritty, wezterm, foot, ghostty, ptyxis, kgx, gnome-terminal, konsole, xfce4-terminal, tilix, xterm"

@@ -1,0 +1,13 @@
+id = "file-share"
+title = "File Share"
+description = "Share copied files or text as a public 0x0.st link, an end-to-end encrypted PrivateBin paste, or a direct croc transfer, and keep track of what you shared"
+author = "Backslash"
+icon = "bs-upload"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/file-share"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:e0940f354b4fe43c59e98cf44a895220f625e0d7a9f69e2b947f8a5e3e6002ae"
+permissions = ["Access 0x0.st", "Access privatebin.net", "Access bin.disroot.org", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run wl-paste", "Run xclip", "Run croc", "Run systemd-run", "Run systemctl", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Write ~/.cache/backslash/file-share", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Share Files", "Shared Files"]
+

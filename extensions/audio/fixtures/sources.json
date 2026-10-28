@@ -1,0 +1,106 @@
+[{
+  "index": 46,
+  "state": "SUSPENDED",
+  "name": "alsa_output.pci-0000_00_1f.3.analog-stereo.monitor",
+  "description": "Monitor of Built-in Audio Analog Stereo",
+  "driver": "PipeWire",
+  "sample_specification": "s32le 2ch 48000Hz",
+  "channel_map": "front-left,front-right",
+  "owner_module": 4294967295,
+  "mute": false,
+  "volume": {
+    "front-left": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" },
+    "front-right": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" }
+  },
+  "balance": 0.000000,
+  "base_volume": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" },
+  "monitor_of_sink": "alsa_output.pci-0000_00_1f.3.analog-stereo",
+  "latency": { "actual": 0.000000, "configured": 0.000000 },
+  "flags": ["HARDWARE", "DECIBEL_VOLUME", "LATENCY"],
+  "properties": { "device.description": "Monitor of Built-in Audio Analog Stereo", "device.class": "monitor" },
+  "ports": [],
+  "active_port": null,
+  "formats": ["pcm"]
+}, {
+  "index": 47,
+  "state": "RUNNING",
+  "name": "alsa_input.pci-0000_00_1f.3.analog-stereo",
+  "description": "Built-in Audio Analog Stereo",
+  "driver": "PipeWire",
+  "sample_specification": "s32le 2ch 48000Hz",
+  "channel_map": "front-left,front-right",
+  "owner_module": 4294967295,
+  "mute": false,
+  "volume": {
+    "front-left": { "value": 45875, "value_percent": "70%", "db": "-9.29 dB" },
+    "front-right": { "value": 45875, "value_percent": "70%", "db": "-9.29 dB" }
+  },
+  "balance": 0.000000,
+  "base_volume": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" },
+  "monitor_of_sink": null,
+  "latency": { "actual": 0.000000, "configured": 0.000000 },
+  "flags": ["HARDWARE", "HW_MUTE_CTRL", "HW_VOLUME_CTRL", "DECIBEL_VOLUME", "LATENCY"],
+  "properties": {
+    "alsa.card": "0",
+    "device.bus": "pci",
+    "device.description": "Built-in Audio Analog Stereo",
+    "device.form_factor": "internal",
+    "media.class": "Audio/Source"
+  },
+  "ports": [
+    {
+      "name": "analog-input-internal-mic",
+      "description": "Internal Microphone",
+      "type": "Mic",
+      "priority": 8900,
+      "availability_group": "Legacy 1",
+      "availability": "availability unknown"
+    },
+    {
+      "name": "analog-input-mic",
+      "description": "Microphone",
+      "type": "Mic",
+      "priority": 8700,
+      "availability_group": "Legacy 2",
+      "availability": "not available"
+    }
+  ],
+  "active_port": "analog-input-internal-mic",
+  "formats": ["pcm"]
+}, {
+  "index": 61,
+  "state": "SUSPENDED",
+  "name": "alsa_input.usb-046d_HD_Pro_Webcam_C920-02.analog-stereo",
+  "description": "HD Pro Webcam C920 Analog Stereo",
+  "driver": "PipeWire",
+  "sample_specification": "s16le 2ch 32000Hz",
+  "channel_map": "front-left,front-right",
+  "owner_module": 4294967295,
+  "mute": true,
+  "volume": {
+    "front-left": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" },
+    "front-right": { "value": 58982, "value_percent": "90%", "db": "-2.75 dB" }
+  },
+  "balance": 0.000000,
+  "base_volume": { "value": 65536, "value_percent": "100%", "db": "0.00 dB" },
+  "monitor_of_sink": null,
+  "latency": { "actual": 0.000000, "configured": 0.000000 },
+  "flags": ["HARDWARE"],
+  "properties": {
+    "device.bus": "usb",
+    "device.form_factor": "webcam",
+    "device.description": "HD Pro Webcam C920 Analog Stereo"
+  },
+  "ports": [
+    {
+      "name": "analog-input-mic",
+      "description": "Microphone",
+      "type": "Mic",
+      "priority": 8700,
+      "availability_group": "",
+      "availability": "availability unknown"
+    }
+  ],
+  "active_port": "analog-input-mic",
+  "formats": ["pcm"]
+}]

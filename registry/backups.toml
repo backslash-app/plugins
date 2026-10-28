@@ -1,0 +1,13 @@
+id = "backups"
+title = "Backups"
+description = "restic, Borg and Déjà Dup backups at a glance: how old the last one is, snapshots with hosts and paths, back up now or browse files"
+author = "Backslash"
+icon = "bs-archive"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/backups"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:5ff3e40f610199fbf5882e2b88bdef74f53f2c45ff7d946951113d7b030f6842"
+permissions = ["Run restic", "Run borg", "Run systemd-run", "Run systemctl", "Run fusermount3", "Run fusermount", "Run gsettings", "Run deja-dup", "Run flatpak", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.cache/backslash-backups", "Read /proc/mounts", "Write ~/.cache/backslash-backups", "Read the environment variable HOME", "Read the environment variable RESTIC_REPOSITORY", "Read the environment variable RESTIC_PASSWORD", "Read the environment variable RESTIC_PASSWORD_FILE", "Read the environment variable BORG_REPO", "Read the environment variable BORG_PASSPHRASE"]
+commands = ["Backups", "Back Up Now"]
+

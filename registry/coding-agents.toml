@@ -1,0 +1,13 @@
+id = "coding-agents"
+title = "Coding Agent Sessions"
+description = "Your recent Claude Code, Codex and Aider sessions with their project, prompts and last answer, resumed in a terminal in one keystroke"
+author = "Backslash"
+icon = "bs-sparkle"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/coding-agents"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:ee1484b0ba7ed63b9336daaffe073787f6bd47e07e1ebb819ec56b71316c85b5"
+permissions = ["Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.claude/projects", "Read ~/.codex/sessions", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Read the environment variable HOME", "Read the environment variable SHELL"]
+commands = ["Coding Agent Sessions"]
+

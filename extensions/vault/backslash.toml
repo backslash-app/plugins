@@ -1,0 +1,97 @@
+[extension]
+id = "vault"
+title = "Vault Secrets"
+description = "HashiCorp Vault and OpenBao KV secrets with your own token: browse, copy values kept out of clipboard history, versions, token TTL and policies"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-lock"
+license = "MIT"
+
+# The vault or bao CLI talks to the server with the user's own sign-in (VAULT_TOKEN or
+# ~/.vault-token), so no token is stored by Backslash. The environment variables tell
+# which server and token the CLI uses, for the UI links and the status view.
+# The terminals are for `vault login` when the token is missing or expired.
+[permissions]
+env = ["VAULT_ADDR", "VAULT_TOKEN", "BAO_ADDR", "BAO_TOKEN"]
+run = [
+  "vault",
+  "bao",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "secrets"
+title = "Vault Secrets"
+description = "KV v1 and v2 mounts, folders and secrets; copy a value, reveal, versions"
+icon = "bs-lock"
+keywords = [
+  "vault",
+  "hashicorp",
+  "openbao",
+  "bao",
+  "secret",
+  "secrets",
+  "kv",
+  "password",
+  "credentials",
+  "api key",
+  "mot de passe",
+  "identifiants",
+  "coffre",
+  "coffre-fort",
+]
+
+[[commands]]
+name = "status"
+title = "Vault Status"
+description = "Seal state and version of the server, your token's time left and its policies"
+icon = "bs-shield"
+keywords = [
+  "vault",
+  "openbao",
+  "bao",
+  "token",
+  "ttl",
+  "policy",
+  "policies",
+  "seal",
+  "sealed",
+  "renew",
+  "login",
+  "jeton",
+  "politiques",
+  "scellé",
+  "renouveler",
+  "connexion",
+]
+
+[[preferences]]
+name = "address"
+title = "Address"
+description = "Optional. The server, e.g. https://vault.example.com:8200. Leave empty to use VAULT_ADDR (BAO_ADDR for bao)"
+
+[[preferences]]
+name = "namespace"
+title = "Namespace"
+description = "Optional. For Vault Enterprise and HCP Vault, e.g. admin"
+
+[[preferences]]
+name = "program"
+title = "CLI"
+description = "vault or bao. Leave empty to use whichever is installed (vault first)"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For vault login. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

@@ -1,0 +1,13 @@
+id = "torrents"
+title = "Torrents"
+description = "Torrents of Transmission, qBittorrent or Deluge with progress, speeds, ETA and ratio; pause, resume, remove, add magnet links and toggle the speed limits"
+author = "Backslash"
+icon = "bs-download"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/torrents"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:dd4ea1db0145e02f940743d42c3b570b0a5ba39c4ce64773c803c701bba023f8"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read the clipboard"]
+commands = ["Torrents", "Add Torrent", "Toggle Torrent Speed Limits"]
+

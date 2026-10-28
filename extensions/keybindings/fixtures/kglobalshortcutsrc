@@ -1,0 +1,52 @@
+[ActivityManager]
+_k_friendly_name=Activity Manager
+switch-to-activity-0c1b0b3c=none,none,Switch to activity "Default"
+
+[kmix]
+_k_friendly_name=Audio Volume
+decrease_volume=Volume Down,Volume Down,Decrease Volume
+increase_volume=Volume Up,Volume Up,Increase Volume
+mic_mute=Microphone Mute\tMeta+Volume Mute,Microphone Mute\tMeta+Volume Mute,Mute Microphone
+mute=Volume Mute,Volume Mute,Mute
+
+[ksmserver]
+Lock Session=Meta+L\tScreensaver,Meta+L\tScreensaver,Lock Session
+Log Out=Ctrl+Alt+Del,none,Show Logout Prompt
+_k_friendly_name=Session Management
+
+[kwin]
+Expose=Ctrl+F9,Ctrl+F9,Toggle Present Windows (Current desktop)
+Overview=Meta+W,Meta+W,Toggle Overview
+Switch One Desktop to the Left=Meta+Ctrl+Left,Meta+Ctrl+Left,Switch One Desktop to the Left
+Switch to Desktop 1=Ctrl+F1,Ctrl+F1,Switch to Desktop 1
+Walk Through Windows=Alt+Tab\tMeta+Tab,Alt+Tab\tMeta+Tab,Walk Through Windows
+Window Close=Alt+F4,Alt+F4,Close Window
+Window Maximize=Meta+PgUp,Meta+PgUp,Maximize Window
+Window Quick Tile Left=Meta+Left,Meta+Left,Quick Tile Window to the Left
+Window to Next Screen=Meta+Shift+Right,Meta+Shift+Right,Move Window to Next Screen
+Zoom In=Meta++\tMeta+=,Meta++\tMeta+=,Zoom In
+_k_friendly_name=KWin
+
+[org.kde.konsole.desktop]
+NewTab=none,none,Open a New Tab
+_k_friendly_name=Konsole
+_launch=Ctrl+Alt+T,none,Konsole
+
+[org.kde.spectacle.desktop]
+RectangularRegionScreenShot=Meta+Shift+Print,Meta+Shift+Print,Capture Rectangular Region
+_k_friendly_name=Spectacle
+_launch=Print,Print,Spectacle
+
+[plasmashell]
+_k_friendly_name=plasmashell
+activate application launcher=Meta\tAlt+F1,Meta\tAlt+F1,Activate Application Launcher
+show-on-mouse-pos=Meta+V,Meta+V,Show Clipboard Items at Mouse Position
+
+[services][org.kde.dolphin.desktop]
+_launch=Meta+E
+
+[services][org.kde.konsole.desktop]
+_launch=Meta+Return
+
+[services][org.kde.spectacle.desktop]
+_launch=none

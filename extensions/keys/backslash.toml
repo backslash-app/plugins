@@ -1,0 +1,70 @@
+[extension]
+id = "keys"
+title = "SSH & GPG Keys"
+description = "Your SSH and GPG keys with their type, fingerprint, agent status and expiry; copy, load in the agent, add to GitHub or GitLab, generate new ones"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-key"
+license = "MIT"
+
+# ~/.ssh is read for its .pub files and to see which private keys exist: the
+# private key files themselves are never opened. ssh-keygen shows fingerprints
+# and creates new keys (mkdir makes ~/.ssh when it doesn't exist yet); ssh-add
+# lists, adds and removes the agent's keys; gpg lists and exports keys.
+# Terminals ask for a passphrase when no askpass dialog is available.
+# /etc/hostname gives the default comment of a new key.
+[permissions]
+read = ["~/.ssh", "/etc/hostname"]
+env = ["HOME", "USER"]
+run = [
+  "ssh-keygen",
+  "ssh-add",
+  "gpg",
+  "mkdir",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "keys"
+title = "SSH & GPG Keys"
+description = "SSH keys of ~/.ssh and the agent, GPG keys: copy the public key or fingerprint, add to GitHub"
+icon = "bs-key"
+keywords = [
+  "ssh",
+  "gpg",
+  "pgp",
+  "gnupg",
+  "key",
+  "keys",
+  "public key",
+  "fingerprint",
+  "ssh-agent",
+  "ed25519",
+  "clés",
+  "clé publique",
+  "empreinte",
+  "signature",
+]
+
+[[commands]]
+name = "generate"
+title = "Generate SSH Key"
+description = "A new Ed25519 key pair in ~/.ssh, with a passphrase, ready to add to GitHub"
+icon = "bs-plus"
+keywords = ["ssh", "keygen", "ssh-keygen", "new key", "ed25519", "create", "générer", "nouvelle clé", "créer"]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Used to type a passphrase when there is no askpass dialog. Leave empty for the first one installed"

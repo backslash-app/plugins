@@ -1,0 +1,106 @@
+[extension]
+id = "torrents"
+title = "Torrents"
+description = "Torrents of Transmission, qBittorrent or Deluge with progress, speeds, ETA and ratio; pause, resume, remove, add magnet links and toggle the speed limits"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-download"
+license = "MIT"
+
+# The torrent client's web interface runs on this computer, a NAS or a home
+# server, and hosts must be declared ahead: this computer, local names,
+# private IPv4 ranges (Deno's --allow-net accepts CIDR) and Tailscale. A
+# seedbox on a public domain is out of reach. Same list as HOSTS in lib.ts.
+# The clipboard is read by Add Torrent when no link is typed, for a copied
+# magnet link.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+clipboard-read = true
+
+[[commands]]
+name = "torrents"
+title = "Torrents"
+description = "Downloading, seeding or paused torrents with speeds and ETA; pause, resume, remove"
+icon = "bs-download"
+keywords = [
+  "torrent",
+  "torrents",
+  "bittorrent",
+  "transmission",
+  "qbittorrent",
+  "qbit",
+  "deluge",
+  "download",
+  "téléchargement",
+  "télécharger",
+  "seed",
+  "partage",
+  "magnet",
+  "ratio",
+]
+
+[[commands]]
+name = "add"
+title = "Add Torrent"
+description = "Add a magnet link or a .torrent URL, typed or copied, to your torrent client"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["torrent", "magnet", "add", "ajouter", "download", "télécharger", "transmission", "qbittorrent", "deluge"]
+[[commands.arguments]]
+name = "link"
+placeholder = "Magnet link or .torrent URL (empty: clipboard)"
+
+[[commands]]
+name = "alt-speed"
+title = "Toggle Torrent Speed Limits"
+description = "Turn the alternative (turtle) speed limits of Transmission or qBittorrent on or off"
+icon = "bs-timer"
+mode = "no-view"
+keywords = [
+  "torrent",
+  "speed",
+  "limit",
+  "turtle",
+  "alternative",
+  "vitesse",
+  "limite",
+  "tortue",
+  "bande passante",
+  "bandwidth",
+  "throttle",
+]
+
+[[preferences]]
+name = "client"
+title = "Client"
+description = "transmission, qbittorrent, deluge, or auto to detect the one running"
+default = "auto"
+
+[[preferences]]
+name = "url"
+title = "Web UI address"
+description = "Empty for this computer's default port, or e.g. http://nas.local:9091, http://192.168.1.20:8080"
+
+[[preferences]]
+name = "username"
+title = "User name"
+description = "Transmission and qBittorrent web UI user (Deluge has none)"
+
+[[preferences]]
+name = "password"
+title = "Password"
+description = "The web UI password (Deluge's default is deluge)"
+type = "secret"

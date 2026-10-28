@@ -1,0 +1,107 @@
+[extension]
+id = "sports"
+title = "Sports Scores"
+description = "Football scores live and today, standings and your teams' next matches (football-data.org), Formula 1 weekends, results and standings, and NBA scores"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-flag"
+license = "MIT"
+
+# football-data.org for football (token) and its crest images; Jolpica's
+# Ergast-compatible API for Formula 1 (no key); balldontlie for the NBA
+# (optional key). Same list as HOSTS in api.ts.
+[permissions]
+net = ["api.football-data.org", "crests.football-data.org", "api.jolpi.ca", "api.balldontlie.io"]
+
+[[commands]]
+name = "football"
+title = "Football Matches"
+description = "Live matches first, today's and the week's in your competitions, and your teams' next matches"
+icon = "bs-flag"
+keywords = [
+  "football",
+  "soccer",
+  "foot",
+  "matches",
+  "scores",
+  "live",
+  "résultats",
+  "score",
+  "match",
+  "matchs",
+  "en direct",
+  "ligue 1",
+  "premier league",
+  "champions league",
+  "ligue des champions",
+  "liga",
+  "bundesliga",
+  "serie a",
+]
+
+[[commands]]
+name = "standings"
+title = "Football Standings"
+description = "League tables with points, goal difference and form; add teams to your favourites"
+icon = "bs-chart-up"
+keywords = [
+  "standings",
+  "table",
+  "league table",
+  "classement",
+  "ranking",
+  "football",
+  "foot",
+  "ligue 1",
+  "premier league",
+  "points",
+]
+
+[[commands]]
+name = "f1"
+title = "Formula 1"
+description = "The next Grand Prix weekend in your time zone, last race results, driver and constructor standings, calendar"
+icon = "bs-flag"
+keywords = [
+  "f1",
+  "formula 1",
+  "formule 1",
+  "formula one",
+  "grand prix",
+  "gp",
+  "race",
+  "course",
+  "qualifying",
+  "qualifications",
+  "sprint",
+  "drivers",
+  "pilotes",
+  "classement",
+  "standings",
+  "calendrier",
+]
+
+[[commands]]
+name = "nba"
+title = "NBA Scores"
+description = "Live, upcoming and final NBA games of yesterday, today and tomorrow (free balldontlie key)"
+icon = "bs-gamepad"
+keywords = ["nba", "basketball", "basket", "scores", "résultats", "games", "matchs", "lakers", "celtics"]
+
+[[preferences]]
+name = "footballToken"
+title = "football-data.org token"
+description = "Free token from football-data.org/client/register, for football matches and standings"
+type = "secret"
+
+[[preferences]]
+name = "competitions"
+title = "Competitions"
+description = "football-data.org codes, separated by commas: FL1 (Ligue 1), PL, CL, PD (LaLiga), BL1, SA, DED, PPL, ELC, BSA, EC, WC"
+default = "FL1, PL, CL, PD, BL1, SA"
+
+[[preferences]]
+name = "nbaKey"
+title = "balldontlie API key"
+description = "Optional, for NBA scores: free key from app.balldontlie.io"
+type = "secret"

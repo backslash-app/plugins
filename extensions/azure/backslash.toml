@@ -1,0 +1,96 @@
+[extension]
+id = "azure"
+title = "Azure"
+description = "Switch Azure subscriptions, start, stop and SSH into virtual machines, and restart or tail the logs of App Service web apps with the az CLI"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+
+# The az CLI signs in and calls Azure itself; Backslash only runs it (and a terminal
+# for SSH, log streaming and az login). The distribution is read for install hints.
+[permissions]
+read = ["/etc/os-release"]
+run = [
+  "az",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "subscriptions"
+title = "Azure Subscriptions"
+description = "Your subscriptions and tenants, the current one first: switch with az account set"
+icon = "bs-key"
+keywords = [
+  "azure",
+  "az",
+  "microsoft",
+  "subscription",
+  "tenant",
+  "account",
+  "switch",
+  "abonnement",
+  "locataire",
+  "compte",
+  "changer",
+]
+
+[[commands]]
+name = "vms"
+title = "Azure Virtual Machines"
+description = "VMs of the current subscription with their power state and IPs: SSH, start, deallocate, restart, portal"
+icon = "bs-server"
+keywords = [
+  "azure",
+  "az",
+  "vm",
+  "virtual machine",
+  "compute",
+  "ssh",
+  "server",
+  "deallocate",
+  "machine virtuelle",
+  "serveur",
+  "démarrer",
+  "arrêter",
+]
+
+[[commands]]
+name = "webapps"
+title = "Azure Web Apps"
+description = "App Service web apps with their state and hostname: open, restart, start, stop, stream logs"
+icon = "bs-globe"
+keywords = [
+  "azure",
+  "az",
+  "app service",
+  "webapp",
+  "web app",
+  "site",
+  "logs",
+  "restart",
+  "application web",
+  "journaux",
+  "redémarrer",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For SSH, log streaming and az login. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"
+
+[[preferences]]
+name = "sshUser"
+title = "SSH user"
+description = "User for SSH into VMs. Leave empty to use each VM's admin user"

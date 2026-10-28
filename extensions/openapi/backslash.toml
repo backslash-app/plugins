@@ -1,0 +1,88 @@
+[extension]
+id = "openapi"
+title = "OpenAPI"
+description = "Browse the endpoints of the OpenAPI and Swagger specs in your projects or at saved URLs, and copy curl commands and example bodies"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-braces"
+license = "MIT"
+
+# Spec files (openapi.yaml, swagger.json…) are looked for in the usual code
+# folders below your home; the folders preference can only point inside them.
+# Spec URLs are addresses you add yourself, on any host, so they can't be
+# listed in advance: net = ["*"] is needed, and requests only ever go to the
+# URLs you saved (and the files their $refs point to). Nothing about your
+# local specs is sent anywhere. HOME locates the folders.
+[permissions]
+env = ["HOME"]
+net = ["*"]
+read = [
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+]
+
+[[commands]]
+name = "specs"
+title = "OpenAPI Specs"
+description = "Spec files found in your projects and the spec URLs you saved; browse their endpoints"
+icon = "bs-braces"
+keywords = [
+  "openapi",
+  "swagger",
+  "api",
+  "spec",
+  "specification",
+  "rest",
+  "oas",
+  "yaml",
+  "json",
+  "documentation",
+  "spécification",
+  "documentation api",
+]
+
+[[commands]]
+name = "endpoints"
+title = "Search API Endpoints"
+description = "Every endpoint of every spec: parameters, request body, responses; copy curl, path or example body"
+icon = "bs-link"
+keywords = [
+  "openapi",
+  "swagger",
+  "endpoint",
+  "endpoints",
+  "route",
+  "routes",
+  "path",
+  "curl",
+  "request",
+  "rest",
+  "http",
+  "api",
+  "requête",
+  "point de terminaison",
+  "chemin",
+]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where to look for spec files, separated by commas; inside ~/Projects, ~/code, ~/Code, ~/src, ~/dev, ~/Developer, ~/git, ~/repos, ~/workspace or ~/work"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace, ~/work"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folders deep to look below each folder (1 to 8)"
+type = "number"
+default = 4

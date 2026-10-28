@@ -1,0 +1,87 @@
+[extension]
+id = "parcels"
+title = "Parcel Tracking"
+description = "Track Colissimo, Chronopost and La Poste letters with La Poste's API, and UPS, DHL, FedEx, Amazon and 2,000 more carriers with 17TRACK, with a timeline and change alerts"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+
+# La Poste's tracking API (Suivi v2, X-Okapi-Key) for Colissimo, Chronopost and
+# letters; 17TRACK's API v2.2 for every other carrier. Same list as HOSTS in
+# api.ts. notify-send shows a desktop notification when the hourly check finds
+# news while the launcher is closed.
+[permissions]
+net = ["api.laposte.fr", "api.17track.net"]
+run = ["notify-send"]
+
+[[commands]]
+name = "parcels"
+title = "My Parcels"
+description = "Tracked parcels with their latest status, carrier and timeline"
+icon = "bs-package"
+keywords = [
+  "parcel",
+  "package",
+  "tracking",
+  "track",
+  "colis",
+  "suivi",
+  "suivi de colis",
+  "livraison",
+  "delivery",
+  "colissimo",
+  "chronopost",
+  "la poste",
+  "ups",
+  "dhl",
+  "fedex",
+  "amazon",
+  "dpd",
+  "gls",
+  "mondial relay",
+  "17track",
+]
+
+[[commands]]
+name = "track"
+title = "Track Parcel"
+description = "Add a tracking number, e.g. 6A12345678901 or 1Z999AA10123456784"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["track", "parcel", "suivre", "colis", "ajouter", "add", "tracking number", "numéro de suivi"]
+[[commands.arguments]]
+name = "number"
+placeholder = "Tracking number"
+required = true
+[[commands.arguments]]
+name = "label"
+placeholder = "Label (optional)"
+
+[[commands]]
+name = "refresh"
+title = "Refresh Parcels"
+description = "Checks the parcels on the way every hour and tells you when their status changes"
+icon = "bs-refresh"
+mode = "no-view"
+interval = "1h"
+keywords = ["parcel", "colis", "refresh", "actualiser", "check", "vérifier", "tracking", "suivi"]
+
+[[preferences]]
+name = "laposteKey"
+title = "La Poste API key"
+description = "X-Okapi-Key of an app subscribed to the Suivi API on developer.laposte.fr (Colissimo, Chronopost, letters)"
+type = "secret"
+
+[[preferences]]
+name = "track17Key"
+title = "17TRACK API key"
+description = "Access key from api.17track.net (free tier: 100 numbers), for UPS, DHL, FedEx, Amazon and other carriers"
+type = "secret"
+
+[[preferences]]
+name = "notify"
+title = "Desktop notifications"
+description = "Notify when the hourly check finds news about a parcel"
+type = "boolean"
+default = true

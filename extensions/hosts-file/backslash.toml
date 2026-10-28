@@ -1,0 +1,57 @@
+[extension]
+id = "hosts-file"
+title = "Hosts File"
+description = "Browse /etc/hosts, add, edit, enable, disable or remove entries and block domains, keeping its comments and layout"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+
+# /etc/hosts is read as a user. Changes need root: pkexec (polkit) asks for the password,
+# then copies the current file to /etc/hosts.backslash.bak and writes the new one with
+# tee, the content coming on stdin (only cp and tee run as root, from a fixed script).
+[permissions]
+read = ["/etc/hosts", "/etc/hosts.backslash.bak"]
+run = ["pkexec"]
+
+[[commands]]
+name = "hosts"
+title = "Hosts File"
+description = "Every entry of /etc/hosts, enabled or commented out"
+icon = "bs-globe"
+keywords = [
+  "hosts",
+  "/etc/hosts",
+  "etc hosts",
+  "fichier hosts",
+  "dns",
+  "domain",
+  "domaine",
+  "hostname",
+  "nom d'hôte",
+  "local domain",
+  "block",
+  "bloquer",
+  "redirect",
+  "rediriger",
+  "localhost",
+]
+
+[[commands]]
+name = "add-entry"
+title = "Add Hosts Entry"
+description = "Point a host name at an address in /etc/hosts"
+icon = "bs-plus"
+keywords = ["hosts", "add", "ajouter", "entry", "entrée", "domain", "domaine", "ip", "local", "/etc/hosts"]
+
+[[commands]]
+name = "block-domain"
+title = "Block Domain in Hosts File"
+description = "Point a domain and its www. at 0.0.0.0 in /etc/hosts"
+icon = "bs-shield"
+mode = "no-view"
+keywords = ["block", "bloquer", "domain", "domaine", "site", "website", "ads", "pubs", "0.0.0.0", "hosts", "blacklist"]
+[[commands.arguments]]
+name = "domain"
+placeholder = "example.com"
+required = true

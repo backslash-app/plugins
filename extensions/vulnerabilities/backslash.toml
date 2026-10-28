@@ -1,0 +1,86 @@
+[extension]
+id = "vulnerabilities"
+title = "Vulnerabilities"
+description = "Look up known vulnerabilities of a package version or an advisory id on OSV.dev, and scan your projects' lockfiles"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-shield"
+license = "MIT"
+
+# api.osv.dev answers the searches and scans (no key; only package names and
+# versions are sent). Projects can be anywhere in your home folder, so the scan
+# reads ~ (it only lists the configured folders and reads lockfiles there:
+# package-lock.json, Cargo.lock, poetry.lock, go.mod, Gemfile.lock…).
+[permissions]
+net = ["api.osv.dev"]
+read = ["~"]
+env = ["HOME"]
+
+[[commands]]
+name = "search"
+title = "Search Vulnerabilities"
+description = "Type lodash@4.17.20, pypi:requests 2.19, crates:time or a CVE/GHSA id: severity, affected versions and fixes"
+icon = "bs-shield"
+keywords = [
+  "vulnerability",
+  "vulnerabilities",
+  "cve",
+  "ghsa",
+  "osv",
+  "advisory",
+  "security",
+  "cvss",
+  "npm audit",
+  "rustsec",
+  "pysec",
+  "vulnérabilité",
+  "faille",
+  "sécurité",
+  "avis de sécurité",
+]
+
+[[commands]]
+name = "scan"
+title = "Scan Project Dependencies"
+description = "Check a recent project's lockfiles against OSV.dev: vulnerable packages first, with the version to upgrade to"
+icon = "bs-scan"
+keywords = [
+  "audit",
+  "npm audit",
+  "cargo audit",
+  "pip-audit",
+  "osv-scanner",
+  "dependencies",
+  "lockfile",
+  "package-lock",
+  "cargo.lock",
+  "poetry.lock",
+  "go.sum",
+  "gemfile.lock",
+  "vulnerabilities",
+  "security",
+  "dépendances",
+  "analyser",
+  "sécurité",
+  "failles",
+]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where your projects are, separated by commas"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folder levels below those to look for lockfiles (1–5)"
+type = "number"
+default = 2
+
+[[preferences]]
+name = "dev"
+title = "Development dependencies"
+description = "Also check devDependencies and dev groups"
+type = "boolean"
+default = true

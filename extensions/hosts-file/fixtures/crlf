@@ -1,0 +1,11 @@
+127.0.0.1 localhost
+
+# --- Home lab ---
+192.168.1.10	nas nas.lan   # Synology
+  192.168.1.20    printer.lan
+#192.168.1.30 pi.lan
+
+# Work
+10.0.0.5 gitlab.corp.example.com
+## old
+#  10.0.0.6   jenkins.corp.example.com # retired

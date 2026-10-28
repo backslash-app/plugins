@@ -1,0 +1,13 @@
+id = "code-search"
+title = "Code Search"
+description = "Search public code on GitHub with grep.app or Sourcegraph: matching lines with context, filters by language, repository and path"
+author = "Backslash"
+icon = "bs-code"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/code-search"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:4f113c18ffe80a0302483c4ddb7bf556e9cadaa215fed0f801d19efde2d2ab12"
+permissions = ["Access grep.app", "Access sourcegraph.com"]
+commands = ["Search Public Code"]
+

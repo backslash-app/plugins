@@ -1,0 +1,96 @@
+[extension]
+id = "audio"
+title = "Audio"
+description = "Microphones, the volume of each application playing or recording, and EasyEffects presets on PipeWire or PulseAudio"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-mic"
+license = "MIT"
+
+# pactl (PipeWire's pipewire-pulse or PulseAudio) lists and changes microphones and the
+# applications' streams; wpctl (WirePlumber) does it when pactl is missing. EasyEffects
+# presets are read from its folders (native and Flatpak) and loaded with its command line
+# (easyeffects, or flatpak run); gsettings tells the preset EasyEffects 7 loaded last.
+[permissions]
+env = ["HOME"]
+run = ["pactl", "wpctl", "easyeffects", "flatpak", "gsettings"]
+read = [
+  "~/.config/easyeffects",
+  "~/.local/share/easyeffects",
+  "~/.var/app/com.github.wwmm.easyeffects",
+]
+
+[[commands]]
+name = "microphones"
+title = "Microphones"
+description = "Pick the default microphone, mute it, set its volume"
+icon = "bs-mic"
+keywords = [
+  "microphone",
+  "mic",
+  "micro",
+  "microphones",
+  "input",
+  "entrée",
+  "entrée audio",
+  "source",
+  "recording",
+  "enregistrement",
+  "webcam",
+  "headset",
+  "casque",
+  "volume",
+  "pipewire",
+  "pulseaudio",
+]
+
+[[commands]]
+name = "toggle-mic"
+title = "Toggle Microphone"
+description = "Mute or unmute the default microphone"
+icon = "bs-mic"
+mode = "no-view"
+keywords = ["mute", "unmute", "microphone", "mic", "micro", "couper le micro", "activer le micro", "sourdine", "muet"]
+
+[[commands]]
+name = "app-volume"
+title = "Application Volume"
+description = "The volume of each application playing or recording; mute it or move it to another output"
+icon = "bs-speaker"
+keywords = [
+  "volume",
+  "mixer",
+  "mixeur",
+  "mélangeur",
+  "apps",
+  "applications",
+  "streams",
+  "flux",
+  "son",
+  "sound",
+  "per-app volume",
+  "volume par application",
+  "sink input",
+  "pavucontrol",
+]
+
+[[commands]]
+name = "effects"
+title = "EasyEffects Presets"
+description = "Load an EasyEffects preset for your speakers or microphone, or bypass the effects"
+icon = "bs-sparkle"
+keywords = [
+  "easyeffects",
+  "pulseeffects",
+  "effects",
+  "effets",
+  "equalizer",
+  "égaliseur",
+  "eq",
+  "preset",
+  "préréglage",
+  "noise reduction",
+  "réduction de bruit",
+  "bass",
+  "basses",
+]

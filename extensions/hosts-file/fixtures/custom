@@ -1,0 +1,8 @@
+127.0.0.1 localhost
+# Ad servers
+0.0.0.0 ads.example.com
+0.0.0.0 tracker.example.net www.tracker.example.net
+not-an-ip something
+192.168.1.1
+:: blocked6.example.com
+0.0.0.0 last.example.org

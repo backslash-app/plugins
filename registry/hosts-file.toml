@@ -1,0 +1,13 @@
+id = "hosts-file"
+title = "Hosts File"
+description = "Browse /etc/hosts, add, edit, enable, disable or remove entries and block domains, keeping its comments and layout"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/hosts-file"
+commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
+checksum = "sha256:923a2f6a40f8781ab7bbbdc4f832d861791029e6d163eeb59b5da3523ba404ab"
+permissions = ["Run pkexec", "Read /etc/hosts", "Read /etc/hosts.backslash.bak"]
+commands = ["Hosts File", "Add Hosts Entry", "Block Domain in Hosts File"]
+
