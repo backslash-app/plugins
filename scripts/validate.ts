@@ -29,7 +29,7 @@ interface Manifest {
     env?: string[];
     "clipboard-read"?: boolean;
   };
-  commands?: { title: string }[];
+  commands?: { title: string; mode?: string; interval?: string }[];
 }
 
 async function git(args: string[], cwd?: string): Promise<string> {
@@ -73,17 +73,42 @@ async function checksum(dir: string): Promise<string> {
   return "sha256:" + [...digest].map((b) => b.toString(16).padStart(2, "0")).join("");
 }
 
+/** "every 10 minutes", as `CommandDef::interval_text`. */
+function intervalText(interval: string | undefined): string | undefined {
+  const match = /^(\d+)\s*([smhd])$/.exec(interval?.trim() ?? "");
+  if (!match) return undefined;
+  const secs = Number(match[1]) * { s: 1, m: 60, h: 3600, d: 86400 }[match[2] as "s" | "m" | "h" | "d"];
+  const [size, unit] = ([[86400, "day"], [3600, "hour"], [60, "minute"], [1, "second"]] as const)
+    .find(([size]) => secs % size === 0)!;
+  const n = secs / size;
+  return n === 1 ? `every ${unit}` : `every ${n} ${unit}s`;
+}
+
 /** Same lines as `backslash_core::approvals::requested`. */
 function requested(m: Manifest): string[] {
   const p = m.permissions ?? {};
   const lines: string[] = [];
-  if (m.runtime?.kind === "exec") lines.push("Run as a regular program, without sandbox");
-  for (const host of p.net ?? []) lines.push(host === "*" ? "Access any website" : `Access ${host}`);
-  for (const x of p.run ?? []) lines.push(`Run ${x}`);
+  // Bubblewrap (exec and python runtimes) confines files, not hosts or programs.
+  if (m.runtime?.kind && m.runtime.kind !== "deno") {
+    lines.push("Run its own program, in a sandbox that lets it start any installed program");
+    if ((p.net ?? []).length > 0) lines.push("Access any website");
+  } else {
+    for (const host of p.net ?? []) lines.push(host === "*" ? "Access any website" : `Access ${host}`);
+    for (const x of p.run ?? []) lines.push(`Run ${x}`);
+  }
   for (const x of p.read ?? []) lines.push(`Read ${x}`);
   for (const x of p.write ?? []) lines.push(`Write ${x}`);
   for (const x of p.env ?? []) lines.push(`Read the environment variable ${x}`);
   if (p["clipboard-read"]) lines.push("Read the clipboard");
+  // Running without being asked is something to agree to as well.
+  for (const c of m.commands ?? []) {
+    const every = intervalText(c.interval);
+    if (c.mode === "menu-bar") {
+      lines.push(`Show “${c.title}” in the system tray${every ? `, updated ${every}` : ""}`);
+    } else if (every) {
+      lines.push(`Run “${c.title}” in the background ${every}`);
+    }
+  }
   return lines;
 }
 
