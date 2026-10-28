@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-key"
 license = "MIT"
+categories = ["system"]
 
 # ~/.ssh is read for its .pub files and to see which private keys exist: the
 # private key files themselves are never opened. ssh-keygen shows fingerprints

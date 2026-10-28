@@ -6,8 +6,9 @@ icon = "bs-cpu"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/android"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:40c8c6de22d8b68a0fa503b69bb2cde6c8b0f0f678c2f4a91cdad6bd5c7015f4"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:2989dce5ae4c9f7128f60a0b762f28841a973f825c69ae9ac296c74615c83b12"
 permissions = ["Run adb", "Run scrcpy", "Run systemd-run", "Run systemctl", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/Downloads", "Read ~/Pictures", "Read /etc/os-release", "Write ~/Pictures", "Read the environment variable HOME"]
 commands = ["Android Devices", "Android Apps"]
+categories = ["developer"]
 

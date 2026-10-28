@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-rocket"
 license = "MIT"
+categories = ["developer"]
 
 # Coolify and Dokploy are self-hosted at addresses only the user knows, usually
 # public domains (and app.coolify.io for Coolify Cloud), so no fixed host list

@@ -6,8 +6,9 @@ icon = "bs-palette"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/tailwind"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:8921e7be37fcb715b0691890c2d4e2579e37c2812b1338f56001588ee90150cf"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:4247c277cb1d87bf0dbfcf266cf08d6cacd2829ac6d464c91fe40cb4958ca9da"
 permissions = []
 commands = ["Search Tailwind Classes", "Tailwind Colors", "Search Tailwind Docs"]
+categories = ["developer"]
 

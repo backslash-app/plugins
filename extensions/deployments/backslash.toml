@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-rocket"
 license = "MIT"
+categories = ["developer"]
 
 # The two APIs, and vercel.com for the avatars of who deployed.
 [permissions]

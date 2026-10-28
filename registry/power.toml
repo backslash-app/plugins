@@ -1,4 +1,3 @@
-# registry/power.toml
 id = "power"
 title = "Power"
 description = "Switch power profiles and check your battery's charge, health, cycles and time left"
@@ -7,8 +6,9 @@ icon = "bs-battery"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/power"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:9c9a3e2359562d34eaceeadd456e999abddf9fa31f3cde1df71e212d57d7069e"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:2491d35ce8d05d1f9a7ec3a67ed5fd41494cde67e680ce592ffbe4308d52118a"
 permissions = ["Run powerprofilesctl", "Run tuned-adm", "Run udevadm", "Run upower"]
 commands = ["Power", "Set Power Profile", "Next Power Profile"]
+categories = ["system"]
 

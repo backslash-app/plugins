@@ -1,4 +1,3 @@
-# registry/crypto.toml
 id = "crypto"
 title = "Crypto"
 description = "Cryptocurrency prices, 24 h and 7 day changes, market caps and a watchlist from CoinGecko, and the value of your holdings"
@@ -7,8 +6,9 @@ icon = "bs-coin"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/crypto"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:ebbb89566c88a7c1f84ea69d91d322c312d707bd3e1562230b989b2e90e55ded"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:46bac7e6f97956a281759f711c037b787e58077ff835a2ff67608e83fcb7e5b4"
 permissions = ["Access api.coingecko.com", "Access coin-images.coingecko.com", "Access assets.coingecko.com"]
 commands = ["Crypto Prices", "Crypto Portfolio"]
+categories = ["everyday"]
 

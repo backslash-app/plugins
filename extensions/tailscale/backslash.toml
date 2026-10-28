@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-vpn"
 license = "MIT"
+categories = ["network"]
 
 # The tailscale CLI talks to the local tailscaled. Terminals open SSH
 # sessions (tailscale ssh or ssh runs inside them). The distribution is read

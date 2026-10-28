@@ -6,8 +6,9 @@ icon = "bs-shield"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/licenses"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:1472398e07a81e399818e953414f142360b3a91d89cc2eb51537bbf350025462"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:56fede4925d1864bf6a0440361c3cbd4c53446a3e2d986a2f22852034b8deb61"
 permissions = ["Access raw.githubusercontent.com", "Run git", "Read ~", "Write ~", "Read the environment variable HOME", "Read the environment variable USER"]
 commands = ["Licenses"]
+categories = ["developer"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-speaker"
 license = "MIT"
+categories = ["productivity"]
 
 # Speech runs in a systemd user unit (systemd-run), so it goes on once the
 # launcher is hidden and "Stop Speaking" stops the unit. The text is written

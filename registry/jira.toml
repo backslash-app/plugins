@@ -1,4 +1,3 @@
-# registry/jira.toml
 id = "jira"
 title = "Jira"
 description = "Your Jira Cloud issues by status with priority, sprint and labels; change status, assign, search with text or JQL, create issues"
@@ -7,8 +6,9 @@ icon = "bs-ticket"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/jira"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:dc5ba322175a2b09182e77daa7f0be0628148a733436370e6cdc5826d43df768"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:d1ffee74532d3a3c060f98fdf523ceedbed9e8daccc1eb61df3d1112c6616d40"
 permissions = ["Access *.atlassian.net", "Access secure.gravatar.com", "Access avatar-management--avatars.us-west-2.prod.public.atl-paas.net"]
 commands = ["My Jira Issues", "Search Jira Issues", "Create Jira Issue"]
+categories = ["productivity"]
 

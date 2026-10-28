@@ -6,8 +6,9 @@ icon = "bs-sparkle"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/hugging-face"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:e6df6ca224605fd93b5dcc3f460ae41c1b32214454736b1075002350b121619c"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:75664c37933157298c9127d0171428ad2a7c65eb2b41c9dc331c63013340a001"
 permissions = ["Access huggingface.co"]
 commands = ["Search Hugging Face"]
+categories = ["developer"]
 

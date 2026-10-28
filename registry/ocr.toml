@@ -1,4 +1,3 @@
-# registry/ocr.toml
 id = "ocr"
 title = "Text from Screen"
 description = "Select any part of the screen and copy the text in it, recognized offline with Tesseract"
@@ -7,8 +6,9 @@ icon = "bs-scan"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/ocr"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:b13950d989df9dde50a3437f6af8fcdf9287310e81a1733ec17805df70a896a1"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:2b25c01acde73def6a3f188707b854c9825d24d21992b7f436e2224bbc641939"
 permissions = ["Run systemd-run", "Run tesseract", "Run grim", "Run slurp", "Run gnome-screenshot", "Run spectacle", "Run maim", "Run scrot", "Run import", "Read ~/.cache/backslash/ocr", "Read /etc/os-release", "Write ~/.cache/backslash/ocr", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK"]
 commands = ["Copy Text from Screen", "Text from Screen"]
+categories = ["system"]
 

@@ -1,4 +1,3 @@
-# registry/drives.toml
 id = "drives"
 title = "Drives"
 description = "Mount, open, unmount and safely eject USB sticks, SD cards and internal drives"
@@ -7,8 +6,9 @@ icon = "bs-drive"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/drives"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:1852ab872e82d685036988a4468c8e278d981f537bb512063f827da8d21f037e"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:8d507663032b4f7a663e6ab38e33e8b4d777a023c532fede0521917dba72f3aa"
 permissions = ["Run lsblk", "Run udisksctl"]
 commands = ["Drives"]
+categories = ["system"]
 

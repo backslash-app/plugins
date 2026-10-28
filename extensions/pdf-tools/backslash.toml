@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-file"
 license = "MIT"
+categories = ["system"]
 
 # Each operation uses the first installed tool that can do it: qpdf, pdftk,
 # poppler (pdfinfo, pdftoppm, pdfunite, pdfseparate) or Ghostscript (gs, the

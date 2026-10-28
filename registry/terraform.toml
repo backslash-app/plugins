@@ -6,8 +6,9 @@ icon = "bs-layers"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/terraform"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:5eb012baa558e35f8f8f8b45a7cee395b86bcd616a58edadc990e9d8810d95cb"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:06614756b5f66ceb9df31efaa7c5213461e4b0c47b292ee095188f12ad5743e6"
 permissions = ["Run terraform", "Run tofu", "Run find", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release", "Read the environment variable HOME"]
 commands = ["Terraform Projects"]
+categories = ["developer"]
 

@@ -6,6 +6,7 @@ version = "1.1.0"
 author = "Backslash"
 icon = "bs-music"
 license = "MIT"
+categories = ["media"]
 
 # Players are driven over D-Bus (MPRIS) with busctl, part of systemd.
 # Spotify's covers are downloaded to /tmp/backslash-media to be shown.

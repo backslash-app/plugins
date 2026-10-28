@@ -6,8 +6,9 @@ icon = "bs-comment"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/stack-overflow"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:abb701ddd72bc3f75efa30e38059e6873763606e2f92c16bcf980b4b7c1d7962"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:e3f2c1ff572bfae5dfc9455b8d25206edc70cf4066f2eca5e4b79db11f6dffb2"
 permissions = ["Access api.stackexchange.com"]
 commands = ["Search Stack Overflow"]
+categories = ["developer"]
 

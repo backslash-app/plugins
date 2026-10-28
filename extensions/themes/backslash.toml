@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-palette"
 license = "MIT"
+categories = ["system"]
 
 # Themes are found by reading the folders they are installed in (their index.theme gives
 # their names; Plasma's look-and-feel packages their metadata). XDG_CURRENT_DESKTOP tells

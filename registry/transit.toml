@@ -6,8 +6,9 @@ icon = "bs-clock"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/transit"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:8f3e2106b4a1b5783af7ad75d93b49f256a201af6c06785408876b18d8e34e86"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:1cb5e6ebf5b8087db4c11b62885f136c0279c3b97a7ca35804dc3e8033cb4737"
 permissions = ["Access api.navitia.io"]
 commands = ["Next Departures", "Plan a Journey"]
+categories = ["everyday"]
 

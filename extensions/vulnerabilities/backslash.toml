@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-shield"
 license = "MIT"
+categories = ["developer"]
 
 # api.osv.dev answers the searches and scans (no key; only package names and
 # versions are sent). Projects can be anywhere in your home folder, so the scan

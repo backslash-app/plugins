@@ -6,8 +6,9 @@ icon = "bs-keyboard"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/keybindings"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:d4cb7ad7287e0ccfee84fbe40ef352c039717bb0d3f86745c80a78c714b83412"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:0695173cdabc6a9217e54ea0909e9d11f43b88ac594102a7de4d5ffa178b6c7f"
 permissions = ["Run gsettings", "Run hyprctl", "Run swaymsg", "Run gnome-control-center", "Run systemsettings", "Read ~/.config/kglobalshortcutsrc", "Read ~/.config/sway/config", "Read ~/.config/niri/config.kdl", "Read ~/.config/i3/config", "Read ~/.i3/config", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK", "Read the environment variable NIRI_SOCKET", "Read the environment variable I3SOCK"]
 commands = ["Keyboard Shortcuts"]
+categories = ["system"]
 

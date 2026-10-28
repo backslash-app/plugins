@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-activity"
 license = "MIT"
+categories = ["developer"]
 
 # Grafana Cloud stacks, and self-hosted Grafana where it usually lives: this
 # computer, the local network (mDNS names and private IPv4 ranges, which Deno

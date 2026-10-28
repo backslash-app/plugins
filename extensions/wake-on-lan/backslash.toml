@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-power"
 license = "MIT"
+categories = ["network"]
 
 # The magic packet is a UDP broadcast: 0.0.0.0 opens the socket, and it goes
 # to 255.255.255.255 or your network's broadcast address. The local networks

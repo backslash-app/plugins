@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-repo"
 license = "MIT"
+categories = ["developer"]
 
 # The server is yours: any address, chosen in the preferences, so its host can't be
 # listed ahead. Unlike Home Assistant, Gitea and Forgejo usually live on a public custom

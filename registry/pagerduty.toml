@@ -6,8 +6,9 @@ icon = "bs-bell"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/pagerduty"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:7a31f21449e81a3a6088f65815f0ac6ea43d5199f12320d9dafcc7a578421b4c"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:9707846846c811a7434ca84baa5ef99a90a676b716a814c493c41d2c13359763"
 permissions = ["Access api.pagerduty.com", "Access api.eu.pagerduty.com", "Access secure.gravatar.com"]
 commands = ["PagerDuty Incidents", "Who's On Call"]
+categories = ["developer"]
 

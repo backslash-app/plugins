@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-comment"
 license = "MIT"
+categories = ["productivity"]
 
 # Any host: Matrix is federated, and your homeserver can be any domain (matrix.org,
 # mozilla.org, a company's or your own server), found through its .well-known file.

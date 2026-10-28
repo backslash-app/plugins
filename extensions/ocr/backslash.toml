@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-scan"
 license = "MIT"
+categories = ["system"]
 
 # The selection runs in the background (systemd-run) once the launcher is
 # hidden: grim + slurp (Sway, Hyprland, wlroots), gnome-screenshot (GNOME),

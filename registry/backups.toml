@@ -6,8 +6,9 @@ icon = "bs-archive"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/backups"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:5ff3e40f610199fbf5882e2b88bdef74f53f2c45ff7d946951113d7b030f6842"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:8e31f7d0dbf031f8fa0be01bb3e26933523e77acb3cd5e0f051286cdaf71d580"
 permissions = ["Run restic", "Run borg", "Run systemd-run", "Run systemctl", "Run fusermount3", "Run fusermount", "Run gsettings", "Run deja-dup", "Run flatpak", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.cache/backslash-backups", "Read /proc/mounts", "Write ~/.cache/backslash-backups", "Read the environment variable HOME", "Read the environment variable RESTIC_REPOSITORY", "Read the environment variable RESTIC_PASSWORD", "Read the environment variable RESTIC_PASSWORD_FILE", "Read the environment variable BORG_REPO", "Read the environment variable BORG_PASSPHRASE"]
 commands = ["Backups", "Back Up Now"]
+categories = ["system"]
 

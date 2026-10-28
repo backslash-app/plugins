@@ -1,4 +1,3 @@
-# registry/zotero.toml
 id = "zotero"
 title = "Zotero"
 description = "Search your Zotero library by title, author or tag, copy APA citations and BibTeX, and open PDFs"
@@ -7,8 +6,9 @@ icon = "bs-book"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/zotero"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:2db5e58ae75db33f8590dcd04493f157f5f1c680f1a7fe62141fa53cd771fb9c"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:3cae8abcf27b1177168666802ed917c44c57eb8796a644b3e1d60149c9bb719d"
 permissions = ["Access 127.0.0.1:23119", "Run sqlite3", "Read ~/Zotero", "Read ~/.cache/backslash-zotero", "Read /etc/os-release", "Write ~/.cache/backslash-zotero", "Read the environment variable HOME"]
 commands = ["Search Zotero"]
+categories = ["productivity"]
 

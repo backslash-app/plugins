@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-comment"
 license = "MIT"
+categories = ["developer"]
 
 # The Stack Exchange API. Searches and answers are cached for a few hours in
 # the extension's storage: without a key the API allows 300 requests a day.

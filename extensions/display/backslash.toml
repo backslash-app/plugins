@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-monitor"
 license = "MIT"
+categories = ["system"]
 
 # Brightness: brightnessctl, or the kernel's backlight read through udevadm
 # and written through systemd-logind (busctl, no root needed); ddcutil for

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-circle-check"
 license = "MIT"
+categories = ["productivity"]
 
 [permissions]
 net = ["app.asana.com"]

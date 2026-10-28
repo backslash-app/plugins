@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-book"
 license = "MIT"
+categories = ["everyday"]
 
 # The MediaWiki and REST APIs of each language edition. The main languages
 # are listed exactly, because pictures are only shown from exact hosts;

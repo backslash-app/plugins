@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-download"
 license = "MIT"
+categories = ["system"]
 
 # getfattr reads where a file was downloaded from (user.xdg.origin.url, set by
 # browsers). mv and mkdir move and rename without overwriting, gio moves to the

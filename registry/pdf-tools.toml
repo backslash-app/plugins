@@ -6,8 +6,9 @@ icon = "bs-file"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/pdf-tools"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:33143cc724cb79ababcf2a4e3600449a40c0a21b2e205dc59f3901f9b05a055f"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:56e6554dc224de5a3e10ba8e5a0fe1ea98bbbb2246b4cb4c4185634d5ba86354"
 permissions = ["Run qpdf", "Run gs", "Run pdftk", "Run pdfinfo", "Run pdftoppm", "Run pdfunite", "Run pdfseparate", "Run img2pdf", "Run magick", "Run convert", "Run wl-paste", "Run xclip", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Read /etc/os-release", "Write ~", "Write /media", "Write /run/media", "Write /mnt", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
 commands = ["PDF Tools", "PDF Merge List"]
+categories = ["system"]
 

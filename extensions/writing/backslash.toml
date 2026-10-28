@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-globe"
 license = "MIT"
+categories = ["productivity"]
 
 # DeepL's Free and Pro APIs; LanguageTool's free API, its Premium API, and a
 # LanguageTool server running on this computer (localhost, any port).

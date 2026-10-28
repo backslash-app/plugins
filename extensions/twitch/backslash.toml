@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-video"
 license = "MIT"
+categories = ["media"]
 
 # The Helix API (api.twitch.tv), the sign-in's token endpoint (id.twitch.tv),
 # and static-cdn.jtvnw.net where stream previews, box art and profile

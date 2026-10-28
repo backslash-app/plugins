@@ -6,8 +6,9 @@ icon = "bs-film"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/arr"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:ab8a98942f358542514e26ecb1a3b5ef659d05d006bb0da04dfc102bdfed38da"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:daca8810ca428254954873357bcc7349aae169aac152c066793ec1260ac57f07"
 permissions = ["Access localhost", "Access 127.0.0.1", "Access sonarr", "Access radarr", "Access lidarr", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Access artworks.thetvdb.com", "Access image.tmdb.org", "Read ~/.cache/backslash/arr", "Write ~/.cache/backslash/arr", "Read the environment variable HOME"]
 commands = ["Upcoming Episodes & Movies", "Download Queue", "Add Series or Movie"]
+categories = ["media"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-tag"
 license = "MIT"
+categories = ["developer"]
 
 # No permission: everything is computed locally.
 

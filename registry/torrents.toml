@@ -6,8 +6,9 @@ icon = "bs-download"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/torrents"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:dd4ea1db0145e02f940743d42c3b570b0a5ba39c4ce64773c803c701bba023f8"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:01a5d9f4b7ce061f465e0b650ecaed369050d31bb456bb6be7f2b51e979cc942"
 permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read the clipboard"]
 commands = ["Torrents", "Add Torrent", "Toggle Torrent Speed Limits"]
+categories = ["media"]
 

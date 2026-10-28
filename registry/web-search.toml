@@ -1,4 +1,3 @@
-# registry/web-search.toml
 id = "web-search"
 title = "Web Search"
 description = "Search the web with live suggestions, 50 !bangs and your recent searches, on the engine you prefer"
@@ -7,8 +6,9 @@ icon = "bs-search"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/web-search"
-commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
-checksum = "sha256:365dc3e43a9d19e1d773c7a1b4308c1dc9585cb432c003fe1cd7466875b59c9e"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:4f023a372de657d86d3650e9a08a98594f12a5798c6f6401c3780d1364428358"
 permissions = ["Access duckduckgo.com", "Access suggestqueries.google.com"]
 commands = ["Search the Web"]
+categories = ["everyday"]
 

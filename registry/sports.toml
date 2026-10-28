@@ -6,8 +6,9 @@ icon = "bs-flag"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/sports"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:2dd8489af7e99ddd3a5f55fdb4f6ec1f1ace7be97ef185470b3dd5c6b2314d6c"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:29df5fa022c67bb26fda85449e4c319021a04ad8abd57a716b789687170179b6"
 permissions = ["Access api.football-data.org", "Access crests.football-data.org", "Access api.jolpi.ca", "Access api.balldontlie.io"]
 commands = ["Football Matches", "Football Standings", "Formula 1", "NBA Scores"]
+categories = ["everyday"]
 

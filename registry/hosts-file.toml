@@ -6,8 +6,9 @@ icon = "bs-globe"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/hosts-file"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:923a2f6a40f8781ab7bbbdc4f832d861791029e6d163eeb59b5da3523ba404ab"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:324cc93987f82224caaa13a44c42ff24ab7afb050ebb6eb5a1ee1ecf79e9fa30"
 permissions = ["Run pkexec", "Read /etc/hosts", "Read /etc/hosts.backslash.bak"]
 commands = ["Hosts File", "Add Hosts Entry", "Block Domain in Hosts File"]
+categories = ["network"]
 

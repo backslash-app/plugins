@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-shield"
 license = "MIT"
+categories = ["productivity"]
 
 # Secrets never go to the extension's storage in clear:
 # - secret-tool stores each one in the system keyring (libsecret: GNOME

@@ -6,8 +6,9 @@ icon = "bs-globe"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/can-i-use"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:ecfb74ffe8649ac35f9b0bf9eb47aae4ca1e0bd18652264ffb774e5178e15d70"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:2fd57a4c9fa4a5b0da11b6ffb467bede85acd2548f1e883210dbe22d3096f34f"
 permissions = ["Access raw.githubusercontent.com", "Read ~/.cache/backslash/can-i-use", "Write ~/.cache/backslash/can-i-use", "Read the environment variable HOME"]
 commands = ["Can I Use"]
+categories = ["developer"]
 

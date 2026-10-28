@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-drive"
 license = "MIT"
+categories = ["productivity"]
 
 # The Drive and Tasks APIs, the sign-in (token endpoint), and owners' profile
 # pictures (Drive's photoLink is served from lh3.googleusercontent.com).

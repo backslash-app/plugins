@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-note"
 license = "MIT"
+categories = ["productivity"]
 
 # Joplin desktop serves its Data API on 127.0.0.1:41184 when the Web Clipper
 # service is enabled; nothing else is reached.

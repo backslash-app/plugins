@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-cloud"
 license = "MIT"
+categories = ["network"]
 
 # Syncthing's GUI listens on this computer (127.0.0.1:8384); the other hosts cover a
 # Syncthing on a NAS or server of the local network or Tailscale, as the address

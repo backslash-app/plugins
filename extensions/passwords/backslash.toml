@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-key"
 license = "MIT"
+categories = ["productivity"]
 
 # Only the managers' own command-line tools are run; secrets are read when you
 # copy them and never stored or shown. ~/.password-store is read to list pass

@@ -1,4 +1,3 @@
-# registry/startup-apps.toml
 id = "startup-apps"
 title = "Startup Apps"
 description = "See and change what starts when you log in: autostart apps, systemd user services and Hyprland"
@@ -7,8 +6,9 @@ icon = "bs-rocket"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/startup-apps"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:052c2702b1fb39f0ef06ea7247e0feb378aa4828a2653f340cb72b13fda61ecb"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:2cf26b5e107117b7374aff3eea96d702b746949301710b31dbe313584ca4848e"
 permissions = ["Run systemctl", "Read ~/.config/autostart", "Read /etc/xdg/autostart", "Read ~/.config/hypr", "Write ~/.config/autostart", "Read the environment variable HOME", "Read the environment variable XDG_CURRENT_DESKTOP"]
 commands = ["Startup Apps"]
+categories = ["system"]
 

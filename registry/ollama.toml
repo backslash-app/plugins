@@ -1,4 +1,3 @@
-# registry/ollama.toml
 id = "ollama"
 title = "Ollama Models"
 description = "See the local Ollama models and the ones loaded in memory, pull new ones with live progress and delete them"
@@ -7,8 +6,9 @@ icon = "bs-sparkle"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/ollama"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:5f121efed2641f377a9b66ecb4497ae8111f0d61c88af89c9e4202c5697927c5"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:3fe33428a802f8af44b8cb5158199844daf97c9d26f654d534a04de88b2e0c74"
 permissions = ["Access 127.0.0.1:11434", "Run ollama", "Run systemd-run", "Read /etc/os-release"]
 commands = ["Ollama Models", "Pull Ollama Model"]
+categories = ["developer"]
 

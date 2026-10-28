@@ -6,8 +6,9 @@ icon = "bs-server"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/vps"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:b14ec3b11e59ef524210fcba6c569c7e37de62dffd6b6f5da16821cf0d909c8f"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:0f99a8f24d4895ba46c59d70d1cf43049c325df61db7263025034bfe560e53bb"
 permissions = ["Access api.hetzner.cloud", "Access api.digitalocean.com", "Access api.linode.com", "Access api.scaleway.com", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm"]
 commands = ["Cloud Servers"]
+categories = ["developer"]
 

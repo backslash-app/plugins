@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-activity"
 license = "MIT"
+categories = ["developer"]
 
 # The sites are URLs you add yourself, on any host, so they can't be listed
 # in advance: net = ["*"] is unavoidable. Requests only ever go to the URLs in

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-coin"
 license = "MIT"
+categories = ["developer"]
 
 # The Stripe API only. Dashboard links open in your browser.
 [permissions]

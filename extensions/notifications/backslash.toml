@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-bell"
 license = "MIT"
+categories = ["system"]
 
 # gdbus asks which daemon shows notifications; each daemon's own tool switches Do Not Disturb and
 # reads its history; uptime -s dates Dunst's history; the settings apps open on request.

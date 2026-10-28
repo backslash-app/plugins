@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-code"
 license = "MIT"
+categories = ["developer"]
 
 # grep.app's search API (no key) and sourcegraph.com's streaming search API
 # (optionally with your access token). Results open on GitHub in the browser.

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-hash"
 license = "MIT"
+categories = ["productivity"]
 
 # The Web API, and the people's pictures in direct messages: Slack hosts them
 # on avatars.slack-edge.com, or Gravatar with a default on a.slack-edge.com.

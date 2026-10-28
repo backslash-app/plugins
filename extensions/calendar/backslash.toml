@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-calendar"
 license = "MIT"
+categories = ["productivity"]
 
 # Calendars are read from their private iCal (.ics) addresses. Only these
 # services can be reached; *.icloud.com covers iCloud's p01…p180-caldav hosts.

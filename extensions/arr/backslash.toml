@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-film"
 license = "MIT"
+categories = ["media"]
 
 # Sonarr, Radarr and Lidarr run on your own server, and hosts must be
 # declared ahead: this computer, local and container names, private IPv4

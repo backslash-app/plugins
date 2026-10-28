@@ -6,8 +6,9 @@ icon = "bs-vpn"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/tailscale"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:3adbcea288b1a599e91a90139e7404bc17faaaeff14c0d416ab24a659cc1d0ae"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:a7ce714f4e567ce85440109b2ea474e7d8519689dd8139a5836f75e56635956a"
 permissions = ["Run tailscale", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release", "Read the environment variable HOME"]
 commands = ["Tailscale Devices"]
+categories = ["network"]
 

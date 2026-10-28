@@ -6,8 +6,9 @@ icon = "bs-activity"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/uptime"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:bf9b5eb8871e13c298677703ae90d069cbaa668402f75d39b2899ccffb92b0de"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:153296b59c299eb1120e6eac848273fb2f2831ebe9d15f015bb6a26c33c006c0"
 permissions = ["Access any website", "Run openssl"]
 commands = ["Uptime & SSL", "Watch Website"]
+categories = ["developer"]
 

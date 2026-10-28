@@ -6,8 +6,9 @@ icon = "bs-activity"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/github-actions"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:911bebeabe810d042115c4cc0ad08d3060c23dba3d23020146feba4ed202f498"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:208e93f38f8ad3107704ff99c3b7e427ece50d1db957dfb2ca2ea637cf35b2cd"
 permissions = ["Access api.github.com", "Access avatars.githubusercontent.com", "Access *.actions.githubusercontent.com", "Access *.blob.core.windows.net", "Run gh"]
 commands = ["GitHub Actions Runs"]
+categories = ["developer"]
 

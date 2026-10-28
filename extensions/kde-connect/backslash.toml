@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-apps"
 license = "MIT"
+categories = ["network"]
 
 # kdeconnect-cli lists and drives KDE Connect's devices; busctl reads their battery and
 # plugins on the session bus (org.kde.kdeconnect), and talks to GSConnect

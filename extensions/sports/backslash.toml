@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-flag"
 license = "MIT"
+categories = ["everyday"]
 
 # football-data.org for football (token) and its crest images; Jolpica's
 # Ergast-compatible API for Formula 1 (no key); balldontlie for the NBA

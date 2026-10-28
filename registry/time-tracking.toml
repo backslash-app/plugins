@@ -6,8 +6,9 @@ icon = "bs-timer"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/time-tracking"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:dc7a783a60253291181002cce92a1155d77742ba71245e8eb08b736404fff815"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:3779b5b8ce13498448ceb0ab298e0c835c16dceaa9fd0a1fa4c1723315bab395"
 permissions = ["Access api.track.toggl.com", "Access api.clockify.me", "Access *.kimai.cloud", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run timew", "Show “Running Timer in Menu Bar” in the system tray, updated every 5 minutes"]
 commands = ["Start Time Tracking", "Stop Time Tracking", "Time Entries", "Running Timer in Menu Bar"]
+categories = ["productivity"]
 

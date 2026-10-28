@@ -6,8 +6,9 @@ icon = "bs-tag"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/semver"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:49bf455a8938c441baac9e9c14ea209b802bc1abd7cdcbde64f41e4f8b5cdeb5"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:77a8c78d5b4703dc63525f2ac328d907a7f708f9e3e9b9a9ad4a56ef5fa6d414"
 permissions = []
 commands = ["Semver Calculator"]
+categories = ["developer"]
 

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-note"
 license = "MIT"
+categories = ["productivity"]
 
 [permissions]
 net = ["api.notion.com"]

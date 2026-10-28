@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-bell"
 license = "MIT"
+categories = ["developer"]
 
 # The REST API (US and EU service regions), and Gravatar for the avatars
 # PagerDuty gives its users.

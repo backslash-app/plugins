@@ -16,10 +16,11 @@ interface Entry {
   checksum: string;
   permissions?: string[];
   commands?: string[];
+  categories?: string[];
 }
 
 interface Manifest {
-  extension: { id: string; title: string; version?: string };
+  extension: { id: string; title: string; version?: string; categories?: string[] };
   runtime?: { kind: string };
   permissions?: {
     net?: string[];
@@ -37,6 +38,9 @@ async function git(args: string[], cwd?: string): Promise<string> {
   if (!out.success) throw new Error(`git ${args[0]}: ${new TextDecoder().decode(out.stderr).trim()}`);
   return new TextDecoder().decode(out.stdout).trim();
 }
+
+/** Same list as `backslash_core::catalog::CATEGORIES`. */
+const CATEGORIES = ["developer", "system", "network", "productivity", "media", "everyday"];
 
 /** Same algorithm as `backslash_core::catalog::checksum`. */
 async function checksum(dir: string): Promise<string> {
@@ -142,6 +146,13 @@ async function validate(file: string): Promise<string[]> {
     const listed = [...(entry.permissions ?? [])].sort();
     if (JSON.stringify(asked) !== JSON.stringify(listed)) {
       errors.push(`permissions differ: the extension asks for ${JSON.stringify(asked)}`);
+    }
+    const categories = manifest.extension.categories ?? [];
+    for (const c of categories) {
+      if (!CATEGORIES.includes(c)) errors.push(`unknown category "${c}": use one of ${CATEGORIES.join(", ")}`);
+    }
+    if (JSON.stringify(categories) !== JSON.stringify(entry.categories ?? [])) {
+      errors.push(`categories differ: the manifest says ${JSON.stringify(categories)}`);
     }
     const sum = await checksum(dir);
     if (sum !== entry.checksum) errors.push(`checksum is ${sum}`);

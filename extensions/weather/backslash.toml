@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-cloud-sun"
 license = "MIT"
+categories = ["everyday"]
 
 # Open-Meteo is free and needs no API key: one host to find cities, one for forecasts.
 [permissions]

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-settings"
 license = "MIT"
+categories = ["system"]
 
 # XDG_CURRENT_DESKTOP tells the desktop; PATH and the bin folders tell which settings apps are
 # installed. The programs below open settings panels; gsettings, kreadconfig and

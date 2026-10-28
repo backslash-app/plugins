@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-bug"
 license = "MIT"
+categories = ["developer"]
 
 # sentry.io and its data regions; self-hosted Sentry is not supported.
 [permissions]

@@ -6,6 +6,7 @@ version = "1.2.0"
 author = "Backslash"
 icon = "bs-sparkle"
 license = "MIT"
+categories = ["developer"]
 
 # The text commands work on what you copied last.
 [permissions]

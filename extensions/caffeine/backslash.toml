@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-coffee"
 license = "MIT"
+categories = ["system"]
 
 # A transient systemd user unit (systemd-run) holds a systemd-inhibit lock on
 # idle and sleep, plus GNOME's or KDE's own inhibitor when available, so it

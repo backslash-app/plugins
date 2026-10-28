@@ -6,8 +6,9 @@ icon = "bs-commit"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/commit-helper"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:ae71d47353b9057a4734c2ca02fc10ea518158adb1216dfbadd310db2971b7d3"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:0aa1332b48cae8dac99c6887828bc01517cc44449d7d66534f6e48b6a6bcf06b"
 permissions = ["Run git", "Run find", "Read /etc/os-release", "Read the environment variable HOME"]
 commands = ["Compose Commit Message", "Search Gitmoji"]
+categories = ["developer"]
 

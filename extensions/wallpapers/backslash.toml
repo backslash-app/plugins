@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-image"
 license = "MIT"
+categories = ["system"]
 
 # The wallpaper is set with the desktop's own tool, picked from
 # XDG_CURRENT_DESKTOP: gsettings (GNOME, Cinnamon, MATE, Budgie),

@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-inbox"
 license = "MIT"
+categories = ["developer"]
 
 # Brokers run on your own machines, and hosts must be declared ahead: local names,
 # private IPv4 ranges (Deno's --allow-net accepts CIDR) and Tailscale, for the

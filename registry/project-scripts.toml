@@ -6,8 +6,9 @@ icon = "bs-terminal"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/project-scripts"
-commit = "4f28fcead796075b07cbd4505bbc002aa987a095"
-checksum = "sha256:9677e4616d85e14355bcdbc79fe1c126255c3beeee21d33fedf19c74cc2f60f1"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:091b9be9eef7337c4009729464135600e95ae4e698a866a3faadb4de5c2938e5"
 permissions = ["Run just", "Run task", "Run go-task", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /etc/os-release", "Read ~/.config/Code", "Read ~/.config/Code - OSS", "Read ~/.config/VSCodium", "Read ~/.config/Cursor", "Read ~/.config/Windsurf", "Read ~/.var/app/com.visualstudio.code/config/Code", "Read ~/.var/app/com.vscodium.codium/config/VSCodium", "Read ~/.config/JetBrains", "Read ~/.local/share/zed", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Read /tmp/backslash-project-scripts", "Write /tmp/backslash-project-scripts", "Read the environment variable HOME", "Read the environment variable SHELL"]
 commands = ["Project Scripts"]
+categories = ["developer"]
 

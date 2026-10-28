@@ -6,8 +6,9 @@ icon = "bs-code"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/code-search"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:4f113c18ffe80a0302483c4ddb7bf556e9cadaa215fed0f801d19efde2d2ab12"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:f7e70962b49ad7c2f29cc8b3e0c064eba5d2a55f789fc0770a278b7e8eb41fc3"
 permissions = ["Access grep.app", "Access sourcegraph.com"]
 commands = ["Search Public Code"]
+categories = ["developer"]
 

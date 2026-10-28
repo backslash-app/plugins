@@ -6,8 +6,9 @@ icon = "bs-rocket"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/coolify"
-commit = "629c1df2b2815a279bf9b82ab1040b6dce16cdfc"
-checksum = "sha256:06da1dc21d6b1c58de2e43c2000f5d8af5ec047d6e9404b83a4082a056120d8f"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:f50ecfa8be6adf8bd16a434bc628be27b46a96d8dc12b608db9abe7cfeb157e8"
 permissions = ["Access any website"]
 commands = ["Coolify & Dokploy Apps"]
+categories = ["developer"]
 

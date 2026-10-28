@@ -1,4 +1,3 @@
-# registry/raindrop.toml
 id = "raindrop"
 title = "Raindrop.io"
 description = "Search your Raindrop.io bookmarks with their covers, tags and collection; save links, favorite, move and delete"
@@ -7,8 +6,9 @@ icon = "bs-bookmark"
 version = "1.0.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/raindrop"
-commit = "53fce9a6663b82f70a0372e627974240c926ba85"
-checksum = "sha256:4fe381049933f97442ce2c3581cf4349c7e064d206785878129303139bdccdc6"
+commit = "15e6e757c480a9f2eeef6bc0e0fa5645218ccc42"
+checksum = "sha256:439ed7ba2eda6acf759baf6facefbf5fd199ffd00e228e9ba96014caaf2869b7"
 permissions = ["Access api.raindrop.io", "Access rdl.ink"]
 commands = ["Search Raindrop Bookmarks", "Save Link to Raindrop"]
+categories = ["productivity"]
 

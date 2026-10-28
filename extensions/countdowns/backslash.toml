@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-hourglass"
 license = "MIT"
+categories = ["productivity"]
 
 # Countdowns live in the extension's own storage: no permission needed.
 

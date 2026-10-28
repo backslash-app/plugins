@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-image"
 license = "MIT"
+categories = ["system"]
 
 # ImageMagick (magick, or convert and identify for version 6) does the work;
 # exiftool reads EXIF and strips metadata without re-encoding; cwebp and

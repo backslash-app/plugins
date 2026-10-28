@@ -6,6 +6,7 @@ version = "1.1.0"
 author = "Backslash"
 icon = "bs-plug"
 license = "MIT"
+categories = ["developer"]
 
 # ss (iproute2) lists sockets, ps and readlink describe their processes.
 # Processes of other users show without details.

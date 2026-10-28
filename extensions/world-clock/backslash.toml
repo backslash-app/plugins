@@ -6,6 +6,7 @@ version = "1.0.0"
 author = "Backslash"
 icon = "bs-clock"
 license = "MIT"
+categories = ["everyday"]
 
 # Everything is computed locally with the system's time zone data: no permission.
 
