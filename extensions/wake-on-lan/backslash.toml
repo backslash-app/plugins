@@ -1,0 +1,53 @@
+[extension]
+id = "wake-on-lan"
+title = "Wake on LAN"
+description = "Wake the computers of your network with a magic packet and see when they come online"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-power"
+license = "MIT"
+
+# The magic packet is a UDP broadcast: 0.0.0.0 opens the socket, and it goes
+# to 255.255.255.255 or your network's broadcast address. The local networks
+# and Tailscale ranges are where the machines are checked (a TCP connection
+# to SSH, RDP, SMB, HTTP or VNC, then ping). Same list as HOSTS in net.ts.
+# ip reads the neighbor table to pick a MAC address (/proc/net/arp without
+# ip); wakeonlan, wol or etherwake send the packet if Deno can't.
+[permissions]
+net = [
+  "0.0.0.0",
+  "255.255.255.255",
+  "localhost",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+run = ["ip", "ping", "wakeonlan", "wol", "etherwake"]
+read = ["/proc/net/arp"]
+
+[[commands]]
+name = "machines"
+title = "Wake on LAN"
+description = "Your saved machines, online or not: wake one, add one from the devices on your network"
+icon = "bs-power"
+keywords = [
+  "wol",
+  "wake",
+  "wakeonlan",
+  "magic packet",
+  "power on",
+  "boot",
+  "nas",
+  "desktop",
+  "réveiller",
+  "réveil",
+  "allumer",
+  "démarrer",
+  "réseau",
+  "paquet magique",
+]

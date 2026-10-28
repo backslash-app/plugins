@@ -1,0 +1,71 @@
+[extension]
+id = "uptime-kuma"
+title = "Uptime Kuma"
+description = "Your Uptime Kuma and Better Stack monitors, down first, with response time, certificate expiry and uptime history"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+
+# Better Stack's Uptime API, and an Uptime Kuma on this computer, the local
+# network or Tailscale, as the address preference allows (same list as HOSTS
+# in api.ts).
+[permissions]
+net = [
+  "uptime.betterstack.com",
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "monitors"
+title = "Uptime Monitors"
+description = "Uptime Kuma and Better Stack monitors: status, response time, certificate days, 24 h uptime"
+icon = "bs-activity"
+keywords = [
+  "uptime kuma",
+  "kuma",
+  "better stack",
+  "betterstack",
+  "better uptime",
+  "monitor",
+  "monitoring",
+  "status",
+  "down",
+  "outage",
+  "heartbeat",
+  "surveillance",
+  "panne",
+  "disponibilité",
+  "supervision",
+]
+
+[[preferences]]
+name = "url"
+title = "Uptime Kuma address"
+description = "Like http://kuma.lan:3001 (this computer, your network or Tailscale)"
+
+[[preferences]]
+name = "apiKey"
+title = "Uptime Kuma API key"
+description = "Kuma → Settings → API Keys: reads every monitor from /metrics"
+type = "secret"
+
+[[preferences]]
+name = "slugs"
+title = "Status pages"
+description = "Optional: slugs of Kuma status pages (/status/<slug>), separated by commas, for uptime and heartbeats"
+
+[[preferences]]
+name = "betterstackToken"
+title = "Better Stack API token"
+description = "Better Stack → Integrations → API → Uptime API token"
+type = "secret"
