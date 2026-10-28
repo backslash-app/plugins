@@ -1,0 +1,39 @@
+[extension]
+id = "semver"
+title = "Semver"
+description = "Check whether a version satisfies an npm, Cargo, RubyGems or Python range, explain ranges in words, compare, sort and bump versions"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-tag"
+license = "MIT"
+
+# No permission: everything is computed locally.
+
+[[commands]]
+name = "semver"
+title = "Semver Calculator"
+description = "Type ^1.2.3 1.4.0, ~> 2.1, ~=1.4.5, bump 1.2.3 or 1.2.3 vs 1.10.0"
+icon = "bs-tag"
+keywords = [
+  "semver",
+  "semantic versioning",
+  "version",
+  "range",
+  "caret",
+  "tilde",
+  "satisfies",
+  "npm",
+  "cargo",
+  "gem",
+  "bundler",
+  "pep 440",
+  "pip",
+  "requirement",
+  "bump",
+  "compare versions",
+  "sort versions",
+  "plage de versions",
+  "comparer des versions",
+  "incrémenter",
+  "numéro de version",
+]

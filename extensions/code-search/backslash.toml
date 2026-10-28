@@ -1,0 +1,41 @@
+[extension]
+id = "code-search"
+title = "Code Search"
+description = "Search public code on GitHub with grep.app or Sourcegraph: matching lines with context, filters by language, repository and path"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-code"
+license = "MIT"
+
+# grep.app's search API (no key) and sourcegraph.com's streaming search API
+# (optionally with your access token). Results open on GitHub in the browser.
+[permissions]
+net = ["grep.app", "sourcegraph.com"]
+
+[[commands]]
+name = "search"
+title = "Search Public Code"
+description = "Type code or /regex/ with lang:, repo:, path: and case:yes; Tab switches between grep.app and Sourcegraph"
+icon = "bs-code"
+keywords = [
+  "code search",
+  "grep",
+  "grep.app",
+  "sourcegraph",
+  "github",
+  "source code",
+  "regex",
+  "usage",
+  "example",
+  "snippet",
+  "recherche de code",
+  "code source",
+  "exemple",
+  "chercher du code",
+]
+
+[[preferences]]
+name = "sourcegraphToken"
+title = "Sourcegraph token"
+description = "Optional: an access token from sourcegraph.com → Settings → Access tokens, if Sourcegraph asks for one"
+type = "secret"
