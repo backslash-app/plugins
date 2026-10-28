@@ -1,0 +1,44 @@
+[extension]
+id = "games"
+title = "Games"
+description = "Launch your installed Steam, Lutris and Heroic (Epic, GOG, Amazon) games, with cover art, play time, size and ProtonDB ratings"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-gamepad"
+license = "MIT"
+
+# Libraries are read from disk: Steam (native, Debian package, Flatpak) and its
+# picture cache, Lutris art, Heroic's library files. Steam libraries on other
+# drives are usually mounted under /mnt, /media or /run/media.
+# `lutris` lists Lutris games as JSON. The network is only used for ProtonDB
+# ratings and for covers missing from the local caches.
+[permissions]
+read = [
+  "~/.local/share/Steam",
+  "~/.steam",
+  "~/.var/app/com.valvesoftware.Steam/.local/share/Steam",
+  "/mnt",
+  "/media",
+  "/run/media",
+  "~/.local/share/lutris",
+  "~/.cache/lutris",
+  "~/.local/share/icons/hicolor/128x128/apps",
+  "~/.config/heroic",
+  "~/.var/app/com.heroicgameslauncher.hgl/config/heroic",
+]
+run = ["lutris"]
+env = ["HOME"]
+net = [
+  "www.protondb.com",
+  "shared.steamstatic.com",
+  "cdn1.epicgames.com",
+  "cdn2.unrealengine.com",
+  "images.gog-statics.com",
+]
+
+[[commands]]
+name = "games"
+title = "Search Games"
+description = "Installed games of Steam, Lutris and Heroic; Enter to play"
+icon = "bs-gamepad"
+keywords = ["games", "steam", "lutris", "heroic", "epic", "gog", "play", "proton", "jeux", "jeu", "jouer", "ludothèque"]
