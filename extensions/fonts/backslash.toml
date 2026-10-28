@@ -1,0 +1,44 @@
+[extension]
+id = "fonts"
+title = "Fonts"
+description = "Browse installed font families with previews, copy their CSS and install new ones"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-font"
+license = "MIT"
+
+# fc-list and fc-cache (fontconfig) list fonts and refresh the cache after an install.
+# pango-view (Pango) or ImageMagick's convert, when installed, render previews
+# into ~/.cache/backslash/fonts. cp copies a font file from wherever you typed,
+# so the extension needs no read access to your folders.
+[permissions]
+run = ["fc-list", "fc-cache", "pango-view", "convert", "cp"]
+read = ["~/.cache/backslash/fonts", "~/.local/share/fonts"]
+write = ["~/.cache/backslash/fonts", "~/.local/share/fonts"]
+env = ["HOME"]
+
+[[commands]]
+name = "fonts"
+title = "Fonts"
+description = "Installed font families, with a preview, their styles and files"
+icon = "bs-font"
+keywords = [
+  "font",
+  "fonts",
+  "police",
+  "polices",
+  "typeface",
+  "typographie",
+  "typography",
+  "monospace",
+  "css",
+  "font-family",
+  "fontconfig",
+]
+
+[[commands]]
+name = "install-font"
+title = "Install Font"
+description = "Copy a .ttf or .otf file into your fonts folder"
+icon = "bs-download"
+keywords = ["font", "police", "install", "installer", "ttf", "otf", "ajouter"]

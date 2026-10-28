@@ -1,0 +1,40 @@
+[extension]
+id = "raindrop"
+title = "Raindrop.io"
+description = "Search your Raindrop.io bookmarks with their covers, tags and collection; save links, favorite, move and delete"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bookmark"
+license = "MIT"
+
+# The REST API, and rdl.ink: Raindrop's own image proxy, which serves every
+# cover (whatever site it comes from) from one host.
+# No clipboard-read: paste a link in the search field instead (Ctrl+V), so the
+# extension never reads what else is on the clipboard.
+[permissions]
+net = ["api.raindrop.io", "rdl.ink"]
+
+[[commands]]
+name = "search"
+title = "Search Raindrop Bookmarks"
+description = "Across collections, with Raindrop's operators (#tag, type:article); paste a link to save it"
+icon = "bs-bookmark"
+keywords = ["raindrop", "bookmarks", "links", "read later", "favoris", "marque-pages", "signets", "liens"]
+
+[[commands]]
+name = "save"
+title = "Save Link to Raindrop"
+description = "Saves a link to Unsorted; Raindrop fills in the title and cover"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["raindrop", "save", "add", "bookmark", "link", "enregistrer", "ajouter", "favori"]
+[[commands.arguments]]
+name = "url"
+placeholder = "https://…"
+required = true
+
+[[preferences]]
+name = "token"
+title = "Test token"
+description = "app.raindrop.io/settings/integrations → Create new app → Create test token"
+type = "secret"

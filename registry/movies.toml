@@ -1,0 +1,14 @@
+# registry/movies.toml
+id = "movies"
+title = "Movies & TV"
+description = "Search movies and TV shows on TMDB with posters, ratings, cast, trailers and where to stream them, and keep a watchlist"
+author = "Backslash"
+icon = "bs-film"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/movies"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:cb06cbd582be8624fc2a680e667302f3835b0faa4bf2118f1d7e52e61f8a1b96"
+permissions = ["Access api.themoviedb.org", "Access image.tmdb.org"]
+commands = ["Search Movies & TV"]
+

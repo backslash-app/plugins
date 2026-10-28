@@ -1,0 +1,48 @@
+[extension]
+id = "printers"
+title = "Printers"
+description = "See your printers and their queues, cancel jobs, pause printers and print files"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-printer"
+license = "MIT"
+
+# CUPS client tools: lpstat lists printers and jobs, lpq names the queued
+# files, lp prints, cancel removes jobs, lpoptions sets your default printer,
+# cupsenable / cupsdisable / cupsaccept pause and resume (printer admin rights
+# needed). The settings apps are only started to open the printer settings.
+[permissions]
+run = [
+  "lpstat",
+  "lpq",
+  "lp",
+  "cancel",
+  "lpoptions",
+  "cupsenable",
+  "cupsdisable",
+  "cupsaccept",
+  "gnome-control-center",
+  "systemsettings",
+  "system-config-printer",
+]
+read = ["/etc/os-release"]
+env = ["HOME", "XDG_CURRENT_DESKTOP"]
+
+[[commands]]
+name = "printers"
+title = "Printers"
+description = "Printers and print queues; type a file path to print it"
+icon = "bs-printer"
+keywords = [
+  "printer",
+  "printers",
+  "print",
+  "imprimante",
+  "imprimantes",
+  "imprimer",
+  "impression",
+  "queue",
+  "file d'attente",
+  "cups",
+  "lp",
+]

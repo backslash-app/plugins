@@ -1,0 +1,38 @@
+[extension]
+id = "trash"
+title = "Trash"
+description = "See what is in the trash, preview it, restore items or delete them for good"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-trash"
+license = "MIT"
+
+# The trash is read from its .trashinfo files (original path, deletion date).
+# Restoring moves an item back with mv (mkdir recreates a missing folder), so
+# the extension itself never writes outside the trash. du sizes folders, gio
+# empties the trash on every drive.
+[permissions]
+run = ["gio", "du", "mv", "mkdir"]
+# The home folder is read to check whether the original location still exists.
+read = ["~"]
+write = ["~/.local/share/Trash"]
+env = ["HOME", "XDG_DATA_HOME"]
+
+[[commands]]
+name = "trash"
+title = "Trash"
+description = "Items in the trash by deletion day: preview, restore, delete for good"
+icon = "bs-trash"
+keywords = [
+  "trash",
+  "corbeille",
+  "bin",
+  "recycle",
+  "poubelle",
+  "deleted",
+  "supprimé",
+  "restore",
+  "restaurer",
+  "empty trash",
+  "vider la corbeille",
+]

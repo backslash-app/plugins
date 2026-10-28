@@ -1,0 +1,14 @@
+# registry/logseq.toml
+id = "logseq"
+title = "Logseq"
+description = "Search your Logseq pages and blocks, preview them with properties and backlinks, open today's journal and capture blocks"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/logseq"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:6e3bfed2308bd71d85438ca8cff029cf78a5825541ac9d67d9c385755120a85a"
+permissions = ["Read ~", "Write ~/Logseq", "Write ~/logseq", "Write ~/Documents/Logseq", "Write ~/Documents/logseq", "Read the environment variable HOME"]
+commands = ["Search Logseq", "Open Logseq Journal", "Capture to Logseq", "Logseq Graphs"]
+

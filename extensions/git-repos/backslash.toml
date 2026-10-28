@@ -1,0 +1,85 @@
+[extension]
+id = "git-repos"
+title = "Git Repos"
+description = "Your local git repositories with branch, changes, ahead/behind and last commit, plus fetch, pull and stash"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-branch"
+license = "MIT"
+
+[permissions]
+env = ["HOME"]
+# To suggest how to install git when it is missing.
+read = ["/etc/os-release"]
+# find scans the folders set in the preferences (which a fixed read list
+# couldn't cover); git reads the repositories it finds. Then the editors and
+# terminals the repositories open in.
+run = [
+  "git",
+  "find",
+  "code",
+  "codium",
+  "cursor",
+  "zed",
+  "zeditor",
+  "subl",
+  "idea",
+  "gnome-text-editor",
+  "kate",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "repos"
+title = "Git Repositories"
+description = "Repositories in your code folders: changes, ahead/behind, last commit; fetch, pull, stash, switch branch"
+icon = "bs-branch"
+keywords = [
+  "git",
+  "repo",
+  "repository",
+  "branch",
+  "status",
+  "fetch",
+  "pull",
+  "stash",
+  "commit",
+  "dépôt",
+  "branche",
+  "projet",
+]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where to look for repositories, separated by commas"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folders deep to look below each folder (1 to 8)"
+type = "number"
+default = 3
+
+[[preferences]]
+name = "editor"
+title = "Editor"
+description = "Command opening a repository: code, codium, cursor, zed, subl, idea, kate, gnome-text-editor, or nvim, hx, vim, nano, micro (in the terminal)"
+default = "code"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed: kitty, alacritty, wezterm, foot, ghostty, ptyxis, kgx, gnome-terminal, konsole, xfce4-terminal, tilix, xterm"

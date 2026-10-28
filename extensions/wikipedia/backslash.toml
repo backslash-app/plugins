@@ -1,0 +1,78 @@
+[extension]
+id = "wikipedia"
+title = "Wikipedia"
+description = "Search Wikipedia in your language, read summaries and whole articles, and discover random pages"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+
+# The MediaWiki and REST APIs of each language edition. The main languages
+# are listed exactly, because pictures are only shown from exact hosts;
+# *.wikipedia.org lets the other languages (typed as "eo: …") work too, without
+# pictures. Thumbnails come from upload.wikimedia.org.
+[permissions]
+net = [
+  "en.wikipedia.org",
+  "fr.wikipedia.org",
+  "de.wikipedia.org",
+  "es.wikipedia.org",
+  "it.wikipedia.org",
+  "pt.wikipedia.org",
+  "nl.wikipedia.org",
+  "pl.wikipedia.org",
+  "ja.wikipedia.org",
+  "zh.wikipedia.org",
+  "ru.wikipedia.org",
+  "sv.wikipedia.org",
+  "uk.wikipedia.org",
+  "ar.wikipedia.org",
+  "ca.wikipedia.org",
+  "cs.wikipedia.org",
+  "fi.wikipedia.org",
+  "ko.wikipedia.org",
+  "no.wikipedia.org",
+  "tr.wikipedia.org",
+  "vi.wikipedia.org",
+  "he.wikipedia.org",
+  "id.wikipedia.org",
+  "fa.wikipedia.org",
+  "simple.wikipedia.org",
+  "*.wikipedia.org",
+  "upload.wikimedia.org",
+]
+env = ["LANG", "LC_ALL", "LC_MESSAGES"]
+
+[[commands]]
+name = "search"
+title = "Search Wikipedia"
+description = "Articles with their summary and picture; type “fr: …” for another language"
+icon = "bs-book"
+keywords = ["wikipedia", "wiki", "encyclopedia", "encyclopédie", "article", "search", "chercher", "définition"]
+
+[[commands]]
+name = "random"
+title = "Random Wikipedia Article"
+description = "Something new to read"
+icon = "bs-shuffle"
+keywords = ["wikipedia", "random", "aléatoire", "hasard", "article", "discover", "découvrir"]
+
+[[commands]]
+name = "on-this-day"
+title = "On This Day"
+description = "Events, births and deaths of today in history, from Wikipedia"
+icon = "bs-calendar"
+keywords = ["wikipedia", "history", "histoire", "today", "aujourd'hui", "éphéméride", "anniversary", "births", "deaths"]
+
+[[preferences]]
+name = "language"
+title = "Language"
+description = "A Wikipedia language code: en, fr, de, es, it, pt, ja… Empty: your system's language"
+default = ""
+
+[[preferences]]
+name = "readHere"
+title = "Read articles in the launcher"
+description = "Enter opens the article in Backslash instead of the browser (Ctrl+Enter does the other)"
+type = "boolean"
+default = false

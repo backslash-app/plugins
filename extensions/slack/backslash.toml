@@ -1,0 +1,61 @@
+[extension]
+id = "slack"
+title = "Slack"
+description = "Set your Slack status from presets, pause notifications, jump to channels and search messages"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-hash"
+license = "MIT"
+
+# The Web API, and the people's pictures in direct messages: Slack hosts them
+# on avatars.slack-edge.com, or Gravatar with a default on a.slack-edge.com.
+[permissions]
+net = ["slack.com", "avatars.slack-edge.com", "secure.gravatar.com", "a.slack-edge.com"]
+
+[[commands]]
+name = "status"
+title = "Set Slack Status"
+description = "Presets (meeting, commuting, lunch, focus), custom status with expiry, Do Not Disturb"
+icon = "bs-smile"
+keywords = ["slack", "status", "meeting", "lunch", "focus", "away", "dnd", "do not disturb", "statut", "réunion", "déjeuner", "concentration", "ne pas déranger"]
+
+[[commands]]
+name = "clear-status"
+title = "Clear Slack Status"
+description = "Removes your status text and emoji"
+icon = "bs-x"
+mode = "no-view"
+keywords = ["slack", "status", "clear", "reset", "effacer", "statut"]
+
+[[commands]]
+name = "pause-notifications"
+title = "Pause Slack Notifications"
+description = "Do Not Disturb for 30 minutes, 1 or 2 hours, or until tomorrow morning"
+icon = "bs-bell-off"
+mode = "no-view"
+keywords = ["slack", "dnd", "do not disturb", "snooze", "mute", "notifications", "ne pas déranger", "pause", "silence"]
+[[commands.arguments]]
+name = "duration"
+type = "choice"
+options = ["30 minutes", "1 hour", "2 hours", "until tomorrow"]
+required = true
+
+[[commands]]
+name = "channels"
+title = "Slack Channels"
+description = "Channels and direct messages you are in; open them in the Slack app"
+icon = "bs-hash"
+keywords = ["slack", "channels", "dm", "direct messages", "conversations", "chat", "canaux", "messages privés"]
+
+[[commands]]
+name = "search"
+title = "Search Slack Messages"
+description = "Messages from every channel you can see; supports in:#channel and from:@someone"
+icon = "bs-search"
+keywords = ["slack", "search", "messages", "find", "chercher", "rechercher"]
+
+[[preferences]]
+name = "token"
+title = "User token"
+description = "A user token (xoxp-…) of your own Slack app, with the user scopes users.profile:read, users.profile:write, dnd:read, dnd:write, channels:read, groups:read, im:read, mpim:read, users:read and search:read"
+type = "secret"

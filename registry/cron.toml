@@ -1,0 +1,14 @@
+# registry/cron.toml
+id = "cron"
+title = "Cron Helper"
+description = "Explain cron and systemd calendar expressions, see their next runs and convert between them"
+author = "Backslash"
+icon = "bs-clock"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/cron"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:d86c10c32556ef500ddc2958d418ad8dd331f642419943412d79e7cc7e5338c3"
+permissions = []
+commands = ["Cron Helper"]
+

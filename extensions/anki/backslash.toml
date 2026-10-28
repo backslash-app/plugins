@@ -1,0 +1,66 @@
+[extension]
+id = "anki"
+title = "Anki"
+description = "Your Anki decks with today's new, learning and review counts, quick card creation and sync, through AnkiConnect"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+
+# AnkiConnect listens on 127.0.0.1:8765 while Anki runs. When Anki is
+# closed, "Open Anki" starts it in the background with systemd-run; the read
+# paths are only checked to find where Anki is installed (package, official
+# installer, pipx, Flatpak system or user, Snap).
+[permissions]
+net = ["127.0.0.1:8765"]
+run = ["systemd-run"]
+read = [
+  "/etc/os-release",
+  "/usr/bin/anki",
+  "/usr/local/bin/anki",
+  "~/.local/bin/anki",
+  "/var/lib/flatpak/exports/bin/net.ankiweb.Anki",
+  "~/.local/share/flatpak/exports/bin/net.ankiweb.Anki",
+  "/snap/bin/anki",
+]
+env = ["HOME"]
+
+[[commands]]
+name = "decks"
+title = "Anki Decks"
+description = "New, learning and due cards per deck; study, add cards, sync"
+icon = "bs-layers"
+keywords = ["anki", "flashcards", "decks", "review", "study", "srs", "cartes", "réviser", "paquets", "mémoriser"]
+
+[[commands]]
+name = "add"
+title = "Add Anki Card"
+description = "Deck, note type (Basic, reversed, Cloze), front, back and tags"
+icon = "bs-plus"
+keywords = ["anki", "card", "add", "new", "flashcard", "cloze", "carte", "ajouter", "nouvelle"]
+
+[[commands]]
+name = "quick-add"
+title = "Quick Add Anki Card"
+description = "“front :: back #tag” into the last deck used; a {{c1::cloze}} makes a Cloze card"
+icon = "bs-bolt"
+mode = "no-view"
+keywords = ["anki", "quick", "add", "card", "capture", "carte", "rapide", "ajouter"]
+[[commands.arguments]]
+name = "card"
+placeholder = "bonjour :: hello #french"
+required = true
+
+[[commands]]
+name = "sync"
+title = "Sync Anki"
+description = "Sync your collection with AnkiWeb"
+icon = "bs-refresh"
+mode = "no-view"
+keywords = ["anki", "sync", "ankiweb", "synchroniser"]
+
+[[preferences]]
+name = "apiKey"
+title = "AnkiConnect API key"
+description = "Only if you set “apiKey” in AnkiConnect's config (Tools → Add-ons → AnkiConnect → Config)"
+type = "secret"

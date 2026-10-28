@@ -1,0 +1,72 @@
+[extension]
+id = "random"
+title = "Random"
+description = "Flip a coin, roll dice, draw a number, pick or shuffle from a list, get a color or ask the Magic 8-Ball"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-dice"
+license = "MIT"
+
+# Everything runs locally with crypto.getRandomValues. The locale variables
+# pick English or French answers when the language preference is "auto".
+[permissions]
+env = ["LANG", "LC_ALL", "LC_MESSAGES"]
+
+[[commands]]
+name = "random"
+title = "Random"
+description = "Type 2d6+3, 1-100, pick a, b, c, shuffle…, coin, color or a question"
+icon = "bs-dice"
+keywords = [
+  "random",
+  "dice",
+  "roll",
+  "coin",
+  "flip",
+  "number",
+  "pick",
+  "choose",
+  "shuffle",
+  "color",
+  "8ball",
+  "magic 8 ball",
+  "yes no",
+  "aléatoire",
+  "hasard",
+  "dé",
+  "dés",
+  "pile ou face",
+  "nombre",
+  "tirage",
+  "tirer au sort",
+  "choisir",
+  "mélanger",
+  "couleur",
+  "oui non",
+  "boule magique",
+]
+
+[[commands]]
+name = "flip-coin"
+title = "Flip a Coin"
+description = "Heads or tails, copied"
+icon = "bs-coin"
+mode = "no-view"
+keywords = ["coin", "flip", "heads", "tails", "pile ou face", "pièce", "random", "hasard"]
+
+[[commands]]
+name = "roll-dice"
+title = "Roll Dice"
+description = "e.g. 2d6+3, d20, 4d6kh3; the total is copied"
+icon = "bs-dice"
+mode = "no-view"
+keywords = ["dice", "roll", "d20", "d6", "dé", "dés", "lancer", "random"]
+[[commands.arguments]]
+name = "dice"
+placeholder = "1d6"
+
+[[preferences]]
+name = "language"
+title = "Language of the answers"
+description = "auto (from your locale and what you type), en or fr"
+default = "auto"

@@ -1,0 +1,183 @@
+[extension]
+id = "window-manager"
+title = "Window Manager"
+description = "Snap, maximize, center, close and move the focused window between workspaces"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-window"
+license = "MIT"
+
+# One backend per desktop, the first that answers: hyprctl (Hyprland), swaymsg (Sway),
+# gdbus to KWin's global shortcuts (KDE Plasma) or to the "Window Calls" Shell
+# extension (GNOME on Wayland), wmctrl + xdotool + xrandr (X11). gsettings reads
+# GNOME's workspace count. Extensions aren't told which window had the focus,
+# so actions run from a short systemd-run --user job once the launcher has hidden.
+[permissions]
+run = ["systemd-run", "hyprctl", "swaymsg", "gdbus", "gsettings", "wmctrl", "xrandr"]
+read = ["/etc/os-release"]
+env = [
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "XAUTHORITY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+  "DBUS_SESSION_BUS_ADDRESS",
+]
+
+[[commands]]
+name = "windows"
+title = "Window Manager"
+description = "Every window action and your workspaces in one list"
+icon = "bs-window"
+keywords = ["window", "fenêtre", "tile", "tiling", "snap", "workspace", "espace de travail", "bureau virtuel", "layout", "disposition"]
+
+[[commands]]
+name = "left-half"
+title = "Left Half"
+description = "Snap the window to the left half of the screen"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["window", "fenêtre", "tile left", "snap left", "moitié gauche", "gauche", "fenêtre gauche"]
+
+[[commands]]
+name = "right-half"
+title = "Right Half"
+description = "Snap the window to the right half of the screen"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["window", "fenêtre", "tile right", "snap right", "moitié droite", "droite", "fenêtre droite"]
+
+[[commands]]
+name = "top-half"
+title = "Top Half"
+description = "Snap the window to the top half of the screen"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["window", "fenêtre", "tile top", "snap top", "moitié haut", "haut"]
+
+[[commands]]
+name = "bottom-half"
+title = "Bottom Half"
+description = "Snap the window to the bottom half of the screen"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["window", "fenêtre", "tile bottom", "snap bottom", "moitié bas", "bas"]
+
+[[commands]]
+name = "top-left"
+title = "Top Left Quarter"
+description = "Snap the window to the top left quarter"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["window", "fenêtre", "quarter", "corner", "coin", "quart", "haut gauche"]
+
+[[commands]]
+name = "top-right"
+title = "Top Right Quarter"
+description = "Snap the window to the top right quarter"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["window", "fenêtre", "quarter", "corner", "coin", "quart", "haut droite"]
+
+[[commands]]
+name = "bottom-left"
+title = "Bottom Left Quarter"
+description = "Snap the window to the bottom left quarter"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["window", "fenêtre", "quarter", "corner", "coin", "quart", "bas gauche"]
+
+[[commands]]
+name = "bottom-right"
+title = "Bottom Right Quarter"
+description = "Snap the window to the bottom right quarter"
+icon = "bs-window"
+mode = "no-view"
+keywords = ["window", "fenêtre", "quarter", "corner", "coin", "quart", "bas droite"]
+
+[[commands]]
+name = "maximize"
+title = "Maximize Window"
+description = "Fill the screen with the window"
+icon = "bs-monitor"
+mode = "no-view"
+keywords = ["window", "fenêtre", "maximise", "agrandir", "plein", "fill", "zoom"]
+
+[[commands]]
+name = "center"
+title = "Center Window"
+description = "Move the window to the middle of the screen"
+icon = "bs-dot"
+mode = "no-view"
+keywords = ["window", "fenêtre", "centrer", "middle", "milieu"]
+
+[[commands]]
+name = "fullscreen"
+title = "Toggle Fullscreen"
+description = "Make the window fullscreen, or leave fullscreen"
+icon = "bs-monitor"
+mode = "no-view"
+keywords = ["window", "fenêtre", "plein écran", "full screen", "f11"]
+
+[[commands]]
+name = "toggle-floating"
+title = "Toggle Floating"
+description = "Float the window or put it back in the tiling layout (Hyprland, Sway)"
+icon = "bs-layers"
+mode = "no-view"
+keywords = ["window", "fenêtre", "float", "flottant", "tiling"]
+
+[[commands]]
+name = "minimize"
+title = "Minimize Window"
+description = "Hide the window to the taskbar"
+icon = "bs-minus"
+mode = "no-view"
+keywords = ["window", "fenêtre", "minimise", "réduire", "hide", "cacher"]
+
+[[commands]]
+name = "close-window"
+title = "Close Window"
+description = "Close the window you were in"
+icon = "bs-x"
+mode = "no-view"
+keywords = ["window", "fenêtre", "fermer", "kill", "quit", "quitter fenêtre"]
+
+[[commands]]
+name = "move-to-workspace"
+title = "Move Window to Workspace"
+description = "Send the window to workspace N and follow it"
+icon = "bs-arrow-right"
+mode = "no-view"
+keywords = ["window", "fenêtre", "workspace", "espace de travail", "bureau", "déplacer", "move", "send"]
+[[commands.arguments]]
+name = "workspace"
+placeholder = "Workspace"
+type = "number"
+min = 1
+max = 99
+required = true
+
+[[commands]]
+name = "switch-workspace"
+title = "Switch to Workspace"
+description = "Show workspace N"
+icon = "bs-layers"
+mode = "no-view"
+keywords = ["workspace", "espace de travail", "bureau", "changer", "switch", "go to", "aller"]
+[[commands.arguments]]
+name = "workspace"
+placeholder = "Workspace"
+type = "number"
+min = 1
+max = 99
+required = true
+
+[[preferences]]
+name = "delay"
+title = "Delay before acting (milliseconds)"
+description = "Time for the launcher to hide and the focus to return to your window; raise it if actions hit the wrong window"
+type = "number"
+default = 250

@@ -1,0 +1,53 @@
+[extension]
+id = "movies"
+title = "Movies & TV"
+description = "Search movies and TV shows on TMDB with posters, ratings, cast, trailers and where to stream them, and keep a watchlist"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-film"
+license = "MIT"
+
+# The TMDB API, and image.tmdb.org where it serves posters.
+[permissions]
+net = ["api.themoviedb.org", "image.tmdb.org"]
+
+[[commands]]
+name = "search"
+title = "Search Movies & TV"
+description = "Trending this week, or type to search; posters, cast, trailers and streaming services"
+icon = "bs-film"
+keywords = [
+  "movie",
+  "movies",
+  "film",
+  "tv",
+  "show",
+  "series",
+  "tmdb",
+  "imdb",
+  "trailer",
+  "watchlist",
+  "cinéma",
+  "série",
+  "séries",
+  "bande-annonce",
+  "à voir",
+]
+
+[[preferences]]
+name = "token"
+title = "TMDB API Read Access Token"
+description = "themoviedb.org → Settings → API: the API Read Access Token (or the shorter API key)"
+type = "secret"
+
+[[preferences]]
+name = "region"
+title = "Region"
+description = "Two-letter country code for streaming services and release dates: US, GB, FR, DE, CA…"
+default = "US"
+
+[[preferences]]
+name = "language"
+title = "Language"
+description = "Language of titles and overviews: en-US, fr-FR, de-DE, es-ES…"
+default = "en-US"

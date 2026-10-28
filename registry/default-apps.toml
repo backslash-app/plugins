@@ -1,0 +1,14 @@
+# registry/default-apps.toml
+id = "default-apps"
+title = "Default Apps"
+description = "See and change your default browser, mail app, file manager, viewers, players, editor and terminal"
+author = "Backslash"
+icon = "bs-apps"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/default-apps"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:ebd59076e1ba923be59e4ceca6c8b9fc8d383bd1349210257b4d6045b1661298"
+permissions = ["Run xdg-mime", "Run xdg-settings", "Read ~/.local/share/applications", "Read ~/.local/share/flatpak/exports/share/applications", "Read /usr/share/applications", "Read /usr/local/share/applications", "Read /var/lib/flatpak/exports/share/applications", "Read /var/lib/snapd/desktop/applications", "Read ~/.nix-profile/share/applications", "Read /run/current-system/sw/share/applications", "Read ~/.config/xdg-terminals.list", "Read /etc/os-release", "Write ~/.config/xdg-terminals.list", "Read the environment variable HOME", "Read the environment variable XDG_DATA_HOME", "Read the environment variable XDG_DATA_DIRS", "Read the environment variable TERMINAL"]
+commands = ["Default Apps"]
+

@@ -1,0 +1,14 @@
+# registry/aws.toml
+id = "aws"
+title = "AWS"
+description = "Switch AWS profiles, start and stop EC2 instances, open SSM sessions, browse S3 buckets and tail CloudWatch logs with the aws CLI"
+author = "Backslash"
+icon = "bs-cloud"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/aws"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:2e890cf20e27924d87646c31e1249472d957fdcef6bde23ec01f6255a1bd4624"
+permissions = ["Run aws", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.aws/config", "Read ~/.aws/credentials", "Read /etc/os-release", "Read the environment variable HOME", "Read the environment variable AWS_PROFILE", "Read the environment variable AWS_REGION", "Read the environment variable AWS_DEFAULT_REGION"]
+commands = ["AWS Profiles", "EC2 Instances", "S3 Buckets", "CloudWatch Log Groups"]
+

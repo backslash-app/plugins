@@ -1,0 +1,35 @@
+[extension]
+id = "dev-reference"
+title = "Dev Reference"
+description = "HTTP status codes, MIME types, ports, ASCII, HTML entities, key codes, signals, exit codes and a chmod calculator"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+
+# No permission: the tables ship with the extension.
+
+[[commands]]
+name = "dev-reference"
+title = "Dev Reference"
+description = "Search the tables developers look up: 404, .webp, 5432, SIGTERM, &nbsp;, KeyA, 137, chmod 755"
+icon = "bs-book"
+keywords = [
+  "http",
+  "status",
+  "mime",
+  "content-type",
+  "port",
+  "ascii",
+  "html entity",
+  "keycode",
+  "signal",
+  "exit code",
+  "chmod",
+  "permissions",
+  "reference",
+  "référence",
+  "code de statut",
+  "droits",
+  "touche",
+]

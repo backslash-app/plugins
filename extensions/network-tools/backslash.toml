@@ -1,0 +1,99 @@
+[extension]
+id = "network-tools"
+title = "Network Tools"
+description = "Public IP and location, local interfaces, DNS lookup, whois, ping and a speed test"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+
+# api.ipify.org / api6.ipify.org tell the public IPv4 / IPv6, ipinfo.io where
+# it is; DNS goes over HTTPS to Cloudflare (dig and the system resolver when
+# chosen, or when Cloudflare can't be reached); speed.cloudflare.com serves
+# the speed test. ip lists interfaces, ping and whois do what they say.
+[permissions]
+net = ["api.ipify.org", "api6.ipify.org", "ipinfo.io", "cloudflare-dns.com", "speed.cloudflare.com"]
+run = ["ip", "ping", "whois", "dig"]
+read = ["/etc/os-release"]
+
+[[commands]]
+name = "network-tools"
+title = "Network Tools"
+description = "Type dns example.com, ping 1.1.1.1, whois x.org, speed or ip"
+icon = "bs-globe"
+keywords = ["network", "réseau", "ip", "dns", "ping", "whois", "speed test", "outils réseau", "lookup", "internet"]
+
+[[commands]]
+name = "public-ip"
+title = "Public IP Address"
+description = "Your public IPv4 and IPv6, with their location and provider"
+icon = "bs-globe"
+keywords = ["ip", "public ip", "my ip", "adresse ip", "ip publique", "wan", "geolocation", "géolocalisation"]
+
+[[commands]]
+name = "copy-ip"
+title = "Copy Public IP"
+description = "Copies your public IP address"
+icon = "bs-copy"
+mode = "no-view"
+keywords = ["ip", "copy", "copier", "public ip", "ip publique", "my ip"]
+
+[[commands]]
+name = "interfaces"
+title = "Network Interfaces"
+description = "Local addresses, gateway, MAC and traffic of each interface"
+icon = "bs-plug"
+keywords = ["interfaces", "ifconfig", "ip addr", "local ip", "ip locale", "lan", "mac", "carte réseau", "ethernet"]
+
+[[commands]]
+name = "dns"
+title = "DNS Lookup"
+description = "A, AAAA, MX, TXT, NS, CNAME… records of a domain"
+icon = "bs-search"
+keywords = ["dns", "dig", "nslookup", "lookup", "mx", "txt", "records", "enregistrements", "domaine", "résolution"]
+
+[[commands]]
+name = "ping"
+title = "Ping"
+description = "Latency and packet loss to a host"
+icon = "bs-activity"
+keywords = ["ping", "latency", "latence", "packet loss", "perte de paquets", "icmp"]
+[[commands.arguments]]
+name = "host"
+placeholder = "1.1.1.1"
+
+[[commands]]
+name = "whois"
+title = "Whois"
+description = "Registrar, dates and name servers of a domain, or who owns an IP"
+icon = "bs-shield"
+keywords = ["whois", "domain", "domaine", "registrar", "expiry", "expiration", "owner", "propriétaire"]
+[[commands.arguments]]
+name = "domain"
+placeholder = "example.com"
+required = true
+
+[[commands]]
+name = "speed-test"
+title = "Internet Speed Test"
+description = "Download, upload, latency and jitter (speed.cloudflare.com)"
+icon = "bs-rocket"
+keywords = ["speed", "speedtest", "test de débit", "débit", "bandwidth", "bande passante", "download", "upload", "vitesse"]
+
+[[preferences]]
+name = "resolver"
+title = "DNS resolver"
+description = "cloudflare (DNS over HTTPS, default) or system (dig, your network's resolver)"
+default = "cloudflare"
+
+[[preferences]]
+name = "pingCount"
+title = "Pings per run"
+type = "number"
+default = 4
+
+[[preferences]]
+name = "ipinfoToken"
+title = "ipinfo.io token"
+description = "Optional: lifts the free limit of 50 000 lookups a month (ipinfo.io/signup)"
+type = "secret"

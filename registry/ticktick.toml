@@ -1,0 +1,14 @@
+# registry/ticktick.toml
+id = "ticktick"
+title = "TickTick"
+description = "Today's and upcoming TickTick tasks by project; complete, reschedule and quick-add tasks in plain language"
+author = "Backslash"
+icon = "bs-square-check"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/ticktick"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:bc7ddd58b5c0a837bc7f159934fbf062e27926ae98eafd621d6ddb34837c48cf"
+permissions = ["Access api.ticktick.com", "Access ticktick.com"]
+commands = ["TickTick Tasks", "Add TickTick Task"]
+

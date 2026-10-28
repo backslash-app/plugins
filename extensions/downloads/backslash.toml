@@ -1,0 +1,37 @@
+[extension]
+id = "downloads"
+title = "Downloads"
+description = "Recent downloads with previews and where they came from; open, copy, move, rename or trash them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-download"
+license = "MIT"
+
+# getfattr reads where a file was downloaded from (user.xdg.origin.url, set by
+# browsers). mv and mkdir move and rename without overwriting, gio moves to the
+# trash, gdbus shows a file in the file manager, wl-copy and xclip copy a file
+# as a file.
+[permissions]
+run = ["getfattr", "gio", "mv", "mkdir", "gdbus", "wl-copy", "xclip"]
+# The download folder and the other XDG folders (to move files into them) can be
+# anywhere in the home folder, under localized names (Téléchargements, Descargas…).
+read = ["~"]
+env = ["HOME", "WAYLAND_DISPLAY"]
+
+[[commands]]
+name = "downloads"
+title = "Downloads"
+description = "Your recent downloads by day, with picture previews"
+icon = "bs-download"
+keywords = [
+  "downloads",
+  "download",
+  "téléchargements",
+  "téléchargement",
+  "fichiers récents",
+  "recent files",
+  "files",
+  "fichiers",
+  "installer",
+  "archive",
+]

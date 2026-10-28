@@ -1,0 +1,95 @@
+[extension]
+id = "text-to-speech"
+title = "Text to Speech"
+description = "Read the clipboard, the selection or any text aloud with Piper, eSpeak NG, Speech Dispatcher or Festival"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-speaker"
+license = "MIT"
+
+# Speech runs in a systemd user unit (systemd-run), so it goes on once the
+# launcher is hidden and "Stop Speaking" stops the unit. The text is written
+# to ~/.cache/backslash/tts first. Piper voices are read from
+# ~/.local/share/piper; aplay, paplay or pw-play play Piper's audio inside the
+# unit. wl-paste, xclip and xsel read the selected text.
+[permissions]
+run = ["systemd-run", "systemctl", "piper", "espeak-ng", "spd-say", "festival", "wl-paste", "xclip", "xsel"]
+read = ["~/.cache/backslash/tts", "~/.local/share/piper", "/etc/os-release"]
+write = ["~/.cache/backslash/tts"]
+env = ["HOME", "XDG_RUNTIME_DIR", "DBUS_SESSION_BUS_ADDRESS", "PULSE_SERVER", "PIPEWIRE_REMOTE"]
+clipboard-read = true
+
+[[commands]]
+name = "speak"
+title = "Text to Speech"
+description = "Type or pick a text to read aloud: clipboard, selection, the last one"
+icon = "bs-speaker"
+keywords = ["speak", "say", "read aloud", "tts", "voice", "lire", "lire à voix haute", "synthèse vocale", "parler", "voix"]
+
+[[commands]]
+name = "speak-clipboard"
+title = "Speak Clipboard"
+description = "Reads the copied text aloud"
+icon = "bs-paste"
+mode = "no-view"
+keywords = ["speak", "clipboard", "read aloud", "tts", "presse-papiers", "lire", "voix"]
+
+[[commands]]
+name = "speak-selection"
+title = "Speak Selected Text"
+description = "Reads the text selected with the mouse"
+icon = "bs-text"
+mode = "no-view"
+keywords = ["speak", "selection", "sélection", "read aloud", "tts", "lire", "voix"]
+
+[[commands]]
+name = "speak-text"
+title = "Speak Text"
+description = "Reads what you type after the command"
+icon = "bs-speaker"
+mode = "no-view"
+keywords = ["say", "speak", "tts", "dire", "parler"]
+[[commands.arguments]]
+name = "text"
+placeholder = "Text to read"
+required = true
+
+[[commands]]
+name = "stop-speaking"
+title = "Stop Speaking"
+description = "Stops reading aloud"
+icon = "bs-stop"
+mode = "no-view"
+keywords = ["stop", "silence", "tais-toi", "arrêter", "tts", "speech"]
+
+[[commands]]
+name = "voices"
+title = "Text to Speech Voices"
+description = "Pick and preview the voice of each engine"
+icon = "bs-settings"
+keywords = ["voices", "voix", "tts", "piper", "espeak", "language", "langue"]
+
+[[preferences]]
+name = "engine"
+title = "Engine"
+description = "auto (Piper with a voice, else eSpeak NG, Speech Dispatcher, Festival), piper, espeak-ng, spd-say or festival"
+default = "auto"
+
+[[preferences]]
+name = "speed"
+title = "Speed (%)"
+description = "100 is normal; 150 reads half as fast again"
+type = "number"
+default = 100
+
+[[preferences]]
+name = "voice"
+title = "Voice"
+description = "Optional: an espeak voice (fr, en-us), a Speech Dispatcher voice or a Piper model path. Empty: the voice chosen in Voices, else one for the text's language"
+default = ""
+
+[[preferences]]
+name = "piperModels"
+title = "Piper voices folder"
+description = "Where the .onnx voices are; it must be inside ~/.local/share/piper"
+default = "~/.local/share/piper"

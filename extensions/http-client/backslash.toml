@@ -1,0 +1,41 @@
+[extension]
+id = "http-client"
+title = "HTTP Client"
+description = "Send HTTP requests from the launcher and read the status, timing, headers and formatted body"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+
+[permissions]
+# Any host: the whole point is to call the URL the user types (APIs, local
+# servers, staging hosts), which can't be known in advance.
+net = ["*"]
+
+[[commands]]
+name = "request"
+title = "Send HTTP Request"
+description = "Type GET https://…, a URL or a curl command; saved requests and history included"
+icon = "bs-globe"
+keywords = [
+  "http",
+  "https",
+  "request",
+  "api",
+  "rest",
+  "curl",
+  "get",
+  "post",
+  "fetch",
+  "postman",
+  "insomnia",
+  "requête",
+  "envoyer",
+]
+
+[[commands]]
+name = "saved"
+title = "Saved HTTP Requests"
+description = "Your saved requests with their method, URL, headers and body, and the recent history"
+icon = "bs-bookmark"
+keywords = ["http", "request", "saved", "history", "api", "postman", "requêtes enregistrées", "historique"]

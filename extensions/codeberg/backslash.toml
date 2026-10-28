@@ -1,0 +1,47 @@
+[extension]
+id = "codeberg"
+title = "Codeberg"
+description = "Your Codeberg pull requests with checks, issues, repositories and notifications"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-repo"
+license = "MIT"
+
+[permissions]
+# codeberg.org only: the API and the avatars it serves. A self-hosted Forgejo or
+# Gitea would need its own host here, which a preference can't add.
+net = ["codeberg.org"]
+
+[[commands]]
+name = "pull-requests"
+title = "My Codeberg Pull Requests"
+description = "Review requested, created by you, assigned or mentioning you: with branches, diff and checks"
+icon = "bs-pr-open"
+keywords = ["codeberg", "forgejo", "gitea", "pr", "pull request", "review", "merge request", "relecture"]
+
+[[commands]]
+name = "issues"
+title = "My Codeberg Issues"
+description = "Open issues assigned to you, created by you or mentioning you"
+icon = "bs-issue-open"
+keywords = ["codeberg", "forgejo", "gitea", "issues", "bugs", "tickets", "problème"]
+
+[[commands]]
+name = "repositories"
+title = "Search Codeberg Repositories"
+description = "Your repositories, or search all of Codeberg as you type"
+icon = "bs-repo"
+keywords = ["codeberg", "forgejo", "gitea", "repo", "git", "code", "dépôt"]
+
+[[commands]]
+name = "notifications"
+title = "Codeberg Notifications"
+description = "Unread and pinned notifications; mark them read or pin them"
+icon = "bs-bell"
+keywords = ["codeberg", "forgejo", "gitea", "notifications", "inbox", "alerts"]
+
+[[preferences]]
+name = "token"
+title = "Access token"
+description = "Create one in Codeberg → Settings → Applications with read access to issues, repositories and user, and read/write to notifications"
+type = "secret"

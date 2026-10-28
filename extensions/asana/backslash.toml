@@ -1,0 +1,43 @@
+[extension]
+id = "asana"
+title = "Asana"
+description = "Your Asana tasks by due date and your projects; complete, reschedule and create tasks"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-circle-check"
+license = "MIT"
+
+[permissions]
+net = ["app.asana.com"]
+
+[[commands]]
+name = "my-tasks"
+title = "My Asana Tasks"
+description = "Overdue, today, upcoming and later; complete or reschedule them"
+icon = "bs-circle-check"
+keywords = ["asana", "tasks", "my tasks", "todo", "due", "today", "mes tâches", "tâches", "aujourd'hui", "échéance"]
+
+[[commands]]
+name = "projects"
+title = "Asana Projects"
+description = "Favorites first, with their status; Enter shows the tasks"
+icon = "bs-project"
+keywords = ["asana", "projects", "portfolio", "status", "projets"]
+
+[[commands]]
+name = "create-task"
+title = "Create Asana Task"
+description = "Title, notes, project and due date"
+icon = "bs-plus"
+keywords = ["asana", "new", "task", "add", "create", "nouvelle tâche", "ajouter", "créer"]
+
+[[preferences]]
+name = "token"
+title = "Personal access token"
+description = "Asana → Settings → Apps → Developer apps → Create new token (app.asana.com/0/my-apps)"
+type = "secret"
+
+[[preferences]]
+name = "workspace"
+title = "Workspace"
+description = "The name of the workspace or organization to use; empty for your first one"

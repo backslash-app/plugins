@@ -1,0 +1,28 @@
+[extension]
+id = "regex"
+title = "Regex Tester"
+description = "Test JavaScript regular expressions with groups, replacements, explanations and a library of common patterns"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-braces"
+license = "MIT"
+
+# No permission: patterns run locally on text you type or save.
+
+[[commands]]
+name = "regex"
+title = "Regex Tester"
+description = "Type /pattern/flags and a text: matches, numbered and named groups, replace preview, token by token"
+icon = "bs-braces"
+keywords = [
+  "regex",
+  "regexp",
+  "regular expression",
+  "pattern",
+  "match",
+  "replace",
+  "test",
+  "expression régulière",
+  "motif",
+  "remplacer",
+]

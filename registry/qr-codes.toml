@@ -1,0 +1,14 @@
+# registry/qr-codes.toml
+id = "qr-codes"
+title = "QR Codes"
+description = "Turn text, links and Wi-Fi networks into QR codes, and scan the ones on your screen"
+author = "Backslash"
+icon = "bs-qr"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/qr-codes"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:4fa12085667c123b5aeda606a802b5761ee11e447f1831e726d63bbfca75ade0"
+permissions = ["Run systemd-run", "Run zbarimg", "Run grim", "Run slurp", "Run gnome-screenshot", "Run spectacle", "Run maim", "Run scrot", "Run import", "Run wl-copy", "Run wl-paste", "Run xclip", "Read ~/.cache/backslash/qr", "Read ~/Pictures", "Read ~/Images", "Read ~/.config/user-dirs.dirs", "Read /etc/os-release", "Write ~/.cache/backslash/qr", "Write ~/Pictures", "Write ~/Images", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK", "Read the clipboard"]
+commands = ["QR Codes", "QR Code from Clipboard", "Scan QR Code on Screen", "Scan QR Code in Clipboard Image"]
+

@@ -1,0 +1,24 @@
+[extension]
+id = "countdowns"
+title = "Countdowns"
+description = "Count down to vacations, launches and birthdays, and pin the next one to the root search"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-hourglass"
+license = "MIT"
+
+# Countdowns live in the extension's own storage: no permission needed.
+
+[[commands]]
+name = "countdowns"
+title = "Countdowns"
+description = "Days left to your events, soonest first; pin one to see it here"
+icon = "bs-hourglass"
+keywords = ["countdown", "days until", "event", "birthday", "anniversary", "vacation", "compte à rebours", "jours", "anniversaire", "vacances"]
+
+[[commands]]
+name = "add"
+title = "Add Countdown"
+description = "A date to count down to, once or every year"
+icon = "bs-plus"
+keywords = ["countdown", "new", "add", "event", "birthday", "date", "compte à rebours", "ajouter", "anniversaire", "événement"]

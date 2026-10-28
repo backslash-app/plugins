@@ -1,0 +1,52 @@
+[extension]
+id = "crypto"
+title = "Crypto"
+description = "Cryptocurrency prices, 24 h and 7 day changes, market caps and a watchlist from CoinGecko, and the value of your holdings"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coin"
+license = "MIT"
+
+# The CoinGecko public API, and the hosts its coin logos are served from
+# (coin-images is the current CDN, assets the older one still in some answers).
+[permissions]
+net = ["api.coingecko.com", "coin-images.coingecko.com", "assets.coingecko.com"]
+
+[[commands]]
+name = "coins"
+title = "Crypto Prices"
+description = "Top coins by market cap and your watchlist; type to search any coin"
+icon = "bs-coin"
+keywords = [
+  "crypto",
+  "bitcoin",
+  "btc",
+  "ethereum",
+  "coin",
+  "price",
+  "coingecko",
+  "market",
+  "cryptomonnaie",
+  "cours",
+  "prix",
+  "marché",
+]
+
+[[commands]]
+name = "portfolio"
+title = "Crypto Portfolio"
+description = "What your coins are worth, with each holding's share and 24 h change"
+icon = "bs-chart-up"
+keywords = ["crypto", "portfolio", "holdings", "wallet", "balance", "portefeuille", "avoirs", "solde"]
+
+[[preferences]]
+name = "currency"
+title = "Currency"
+description = "Prices are shown in: usd, eur, gbp, jpy, chf, cad, aud, cny, inr, krw, brl, btc or eth"
+default = "usd"
+
+[[preferences]]
+name = "apiKey"
+title = "Demo API key (optional)"
+description = "A free CoinGecko Demo key raises the rate limit: coingecko.com/en/developers/dashboard"
+type = "secret"

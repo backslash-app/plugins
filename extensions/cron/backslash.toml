@@ -1,0 +1,31 @@
+[extension]
+id = "cron"
+title = "Cron Helper"
+description = "Explain cron and systemd calendar expressions, see their next runs and convert between them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-clock"
+license = "MIT"
+
+# No permission: everything is computed locally.
+
+[[commands]]
+name = "cron"
+title = "Cron Helper"
+description = "Type a cron expression or an OnCalendar value: English, next 10 runs, systemd and cron equivalents"
+icon = "bs-clock"
+keywords = [
+  "cron",
+  "crontab",
+  "schedule",
+  "systemd",
+  "timer",
+  "oncalendar",
+  "quartz",
+  "next run",
+  "expression",
+  "planifier",
+  "planification",
+  "tâche planifiée",
+  "minuteur",
+]

@@ -1,0 +1,14 @@
+# registry/asana.toml
+id = "asana"
+title = "Asana"
+description = "Your Asana tasks by due date and your projects; complete, reschedule and create tasks"
+author = "Backslash"
+icon = "bs-circle-check"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/asana"
+commit = "53fce9a6663b82f70a0372e627974240c926ba85"
+checksum = "sha256:3f32bb44cb4d8abfdf2c945c7d3ff382e2f97479b0143fc886f9c5183e0dfd57"
+permissions = ["Access app.asana.com"]
+commands = ["My Asana Tasks", "Asana Projects", "Create Asana Task"]
+

@@ -1,0 +1,74 @@
+[extension]
+id = "mpd"
+title = "MPD Music"
+description = "Control the Music Player Daemon: now playing with covers, queue, library search and playlists"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-music"
+license = "MIT"
+
+# The MPD protocol over TCP on localhost:6600, no program needed. Album
+# covers (MPD's albumart / readpicture) are cached in ~/.cache/backslash/mpd.
+# systemctl starts mpd.service when it isn't running.
+[permissions]
+net = ["localhost:6600", "127.0.0.1:6600"]
+run = ["systemctl"]
+read = ["~/.cache/backslash/mpd", "/etc/os-release"]
+write = ["~/.cache/backslash/mpd"]
+env = ["HOME"]
+
+[[commands]]
+name = "mpd"
+title = "MPD Music"
+description = "Now playing, controls and the queue"
+icon = "bs-music"
+keywords = ["mpd", "music", "musique", "now playing", "queue", "file d'attente", "player", "lecteur", "song", "chanson"]
+
+[[commands]]
+name = "search"
+title = "Search Music Library"
+description = "Songs, albums and artists in MPD's library: play now, next or later"
+icon = "bs-search"
+keywords = ["mpd", "music", "musique", "search", "chercher", "library", "bibliothèque", "album", "artist", "artiste"]
+
+[[commands]]
+name = "playlists"
+title = "MPD Playlists"
+description = "Play, queue or delete saved playlists"
+icon = "bs-layers"
+keywords = ["mpd", "playlist", "playlists", "listes de lecture", "music", "musique"]
+
+[[commands]]
+name = "play-pause"
+title = "MPD Play / Pause"
+description = "Toggles playback"
+icon = "bs-play"
+mode = "no-view"
+keywords = ["mpd", "play", "pause", "lecture", "music"]
+
+[[commands]]
+name = "next"
+title = "MPD Next Song"
+icon = "bs-next"
+mode = "no-view"
+keywords = ["mpd", "next", "skip", "suivant", "music"]
+
+[[commands]]
+name = "previous"
+title = "MPD Previous Song"
+icon = "bs-previous"
+mode = "no-view"
+keywords = ["mpd", "previous", "back", "précédent", "music"]
+
+[[preferences]]
+name = "password"
+title = "Password"
+description = "Only if MPD's configuration sets a password"
+type = "secret"
+
+[[preferences]]
+name = "covers"
+title = "Show album covers"
+description = "Reads covers from MPD (cover files in album folders, or embedded pictures)"
+type = "boolean"
+default = true

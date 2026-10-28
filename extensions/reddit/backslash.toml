@@ -1,0 +1,41 @@
+[extension]
+id = "reddit"
+title = "Reddit"
+description = "Hot, new and top posts from your subreddits with scores, comments, flairs, pictures and the top comments, without an account"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-comment"
+license = "MIT"
+
+# Reddit's public JSON endpoints on www.reddit.com, and the hosts of post
+# pictures: i.redd.it (uploads), preview.redd.it and external-preview.redd.it
+# (previews of uploads and links).
+[permissions]
+net = ["www.reddit.com", "i.redd.it", "preview.redd.it", "external-preview.redd.it"]
+
+[[commands]]
+name = "reddit"
+title = "Reddit"
+description = "Posts from your subreddits: Hot, New or Top today"
+icon = "bs-comment"
+keywords = ["reddit", "subreddit", "posts", "news", "front page", "forum", "actualités", "fil", "communauté"]
+
+[[commands]]
+name = "subreddits"
+title = "Reddit Subreddits"
+description = "Browse one of your subreddits, add or remove subreddits"
+icon = "bs-hash"
+keywords = ["reddit", "subreddit", "subreddits", "communities", "add subreddit", "communautés", "abonnements"]
+
+[[preferences]]
+name = "subreddits"
+title = "Subreddits"
+description = "Subreddits to follow, separated by commas or spaces (more can be added from the launcher)"
+default = "linux, programming, technology"
+
+[[preferences]]
+name = "nsfw"
+title = "Show NSFW posts"
+description = "Posts marked NSFW are hidden unless this is on"
+type = "boolean"
+default = false

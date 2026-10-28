@@ -1,0 +1,53 @@
+[extension]
+id = "google-cloud"
+title = "Google Cloud"
+description = "Switch gcloud projects, SSH into Compute Engine VMs and follow Cloud Run services, their URLs and logs"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+
+# gcloud does the authentication; the distribution is read for install hints.
+[permissions]
+read = ["/etc/os-release"]
+run = [
+  "gcloud",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "projects"
+title = "Google Cloud Projects"
+description = "Your projects, the current one first: switch with gcloud config set project"
+icon = "bs-project"
+keywords = ["gcloud", "gcp", "google cloud", "project", "switch", "projet", "changer"]
+
+[[commands]]
+name = "instances"
+title = "Compute Engine Instances"
+description = "VMs of the current project: SSH, logs, serial console, start and stop"
+icon = "bs-server"
+keywords = ["gcloud", "gcp", "compute", "gce", "vm", "instance", "ssh", "serveur", "machine virtuelle"]
+
+[[commands]]
+name = "run"
+title = "Cloud Run Services"
+description = "Services with their status, URL and revision: open, copy, logs"
+icon = "bs-rocket"
+keywords = ["gcloud", "gcp", "cloud run", "serverless", "service", "container", "deploy", "conteneur", "déploiement"]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For SSH, logs and sign-in. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

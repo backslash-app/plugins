@@ -1,0 +1,32 @@
+[extension]
+id = "clickup"
+title = "ClickUp"
+description = "Your ClickUp tasks across workspaces with their status, priority and due date; change status and create tasks"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-circle-half"
+license = "MIT"
+
+# The API, and people's pictures (attachments.clickup.com).
+[permissions]
+net = ["api.clickup.com", "attachments.clickup.com"]
+
+[[commands]]
+name = "my-tasks"
+title = "My ClickUp Tasks"
+description = "Assigned to you in every workspace, by status; filter to do, in progress or done"
+icon = "bs-circle-half"
+keywords = ["clickup", "tasks", "my tasks", "todo", "status", "mes tâches", "tâches", "statut"]
+
+[[commands]]
+name = "create-task"
+title = "Create ClickUp Task"
+description = "Name, list, priority and due date"
+icon = "bs-plus"
+keywords = ["clickup", "new", "task", "add", "create", "nouvelle tâche", "ajouter", "créer"]
+
+[[preferences]]
+name = "token"
+title = "Personal API token"
+description = "ClickUp → avatar → Settings → Apps → API Token (pk_…)"
+type = "secret"

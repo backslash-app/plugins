@@ -1,0 +1,51 @@
+[extension]
+id = "package-registries"
+title = "Package Registries"
+description = "Search crates.io, PyPI, Go modules, RubyGems, Packagist, Maven Central, Hex, pub.dev and NuGet"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+
+[permissions]
+# Each registry's public JSON API. Packagist versions and licenses come from
+# repo.packagist.org; Go modules from the module proxy (pkg.go.dev has no API).
+net = [
+  "crates.io",
+  "pypi.org",
+  "proxy.golang.org",
+  "rubygems.org",
+  "packagist.org",
+  "repo.packagist.org",
+  "search.maven.org",
+  "hex.pm",
+  "pub.dev",
+  "azuresearch-usnc.nuget.org",
+]
+
+[[commands]]
+name = "search"
+title = "Search Package Registries"
+description = "Version, downloads, license and install commands; pick the registry with Tab or type cargo, pip, go…"
+icon = "bs-package"
+keywords = [
+  "package",
+  "library",
+  "crate",
+  "cargo",
+  "pypi",
+  "pip",
+  "go",
+  "gem",
+  "composer",
+  "maven",
+  "gradle",
+  "hex",
+  "pub",
+  "flutter",
+  "nuget",
+  "dependency",
+  "paquet",
+  "bibliothèque",
+  "dépendance",
+]

@@ -1,0 +1,45 @@
+[extension]
+id = "flatpak"
+title = "Flatpak Apps"
+description = "Browse installed Flatpak apps and runtimes, see their size and permissions, run or uninstall them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+
+# flatpak lists, runs, uninstalls and resets overrides (system uninstalls ask
+# through polkit). The exported icon folders give each app its own icon, and
+# ~/.var/app tells whether an app keeps data.
+[permissions]
+run = ["flatpak"]
+read = [
+  "/var/lib/flatpak/exports/share/icons/hicolor",
+  "~/.local/share/flatpak/exports/share/icons/hicolor",
+  "~/.var/app",
+  "/etc/os-release",
+]
+env = ["HOME"]
+
+[[commands]]
+name = "flatpak"
+title = "Flatpak Apps"
+description = "Installed apps and runtimes with their size, origin and permissions"
+icon = "bs-package"
+keywords = [
+  "flatpak",
+  "flathub",
+  "app",
+  "apps",
+  "applications",
+  "logiciels",
+  "runtime",
+  "uninstall",
+  "désinstaller",
+  "supprimer",
+  "permissions",
+  "sandbox",
+  "bac à sable",
+  "flatseal",
+  "unused",
+  "inutilisé",
+]
