@@ -1,0 +1,60 @@
+[extension]
+id = "radio"
+title = "Internet Radio"
+description = "Search 50,000 internet radio stations by name, genre or country and play them in the background with mpv, ffplay or VLC"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-radio"
+license = "MIT"
+
+# The radio-browser.info community API: its mirrors, tried in this order
+# (all.api is the round-robin name). Station logos live on each station's own
+# website, so they are not shown: that would need access to any host.
+# Stations play in a transient systemd user unit (systemd-run) so they keep
+# playing once the launcher is hidden; mpv, ffplay and cvlc are run once to
+# find which is installed. A small mpv script in ~/.cache/backslash/radio writes
+# the song title (ICY metadata) there for the launcher to read; HOME locates it.
+[permissions]
+net = ["de1.api.radio-browser.info", "de2.api.radio-browser.info", "fi1.api.radio-browser.info", "all.api.radio-browser.info"]
+run = ["systemd-run", "systemctl", "mpv", "ffplay", "cvlc"]
+read = ["~/.cache/backslash/radio", "/etc/os-release"]
+write = ["~/.cache/backslash/radio"]
+env = ["HOME"]
+
+[[commands]]
+name = "stations"
+title = "Internet Radio"
+description = "Top stations, your favorites and what's playing; type to search by name or genre"
+icon = "bs-radio"
+keywords = [
+  "radio",
+  "stations",
+  "internet radio",
+  "stream",
+  "music",
+  "fm",
+  "listen",
+  "webradio",
+  "station",
+  "musique",
+  "écouter",
+]
+
+[[commands]]
+name = "stop"
+title = "Stop Radio"
+description = "Stops the station playing in the background"
+icon = "bs-stop"
+mode = "no-view"
+keywords = ["radio", "stop", "silence", "arrêter", "couper"]
+
+[[preferences]]
+name = "player"
+title = "Player"
+description = "auto (mpv, then ffplay, then VLC), mpv, ffplay or vlc"
+default = "auto"
+
+[[preferences]]
+name = "country"
+title = "Your country"
+description = "Two-letter code for the Country view when nothing is typed: FR, US, DE…"

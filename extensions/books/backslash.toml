@@ -1,0 +1,39 @@
+[extension]
+id = "books"
+title = "Books"
+description = "Search Open Library for books with covers, authors, editions and subjects, copy ISBNs and citations, and keep a reading list"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+
+# The Open Library API, and covers.openlibrary.org where it serves covers.
+[permissions]
+net = ["openlibrary.org", "covers.openlibrary.org"]
+
+[[commands]]
+name = "search"
+title = "Search Books"
+description = "Find a book by title, author or ISBN"
+icon = "bs-book"
+keywords = [
+  "book",
+  "books",
+  "open library",
+  "isbn",
+  "author",
+  "novel",
+  "citation",
+  "livre",
+  "livres",
+  "auteur",
+  "roman",
+  "bibliothèque",
+]
+
+[[commands]]
+name = "reading-list"
+title = "Reading List"
+description = "Books you want to read, are reading and have read"
+icon = "bs-bookmark"
+keywords = ["reading list", "books", "to read", "goodreads", "liste de lecture", "à lire", "lectures", "livres"]
