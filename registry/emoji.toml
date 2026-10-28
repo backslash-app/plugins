@@ -1,13 +1,14 @@
+# registry/emoji.toml
 id = "emoji"
 title = "Emoji & Symbols"
 description = "Search emoji and symbols by name and copy them"
 author = "Backslash"
 icon = "😀"
-version = "1.2.0"
+version = "1.3.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/emoji"
-commit = "4355eb15974003b4d0f61febb95dd5dca5c4d614"
-checksum = "sha256:3d6c8065bb45587d5e68b3226ab7ab0ed73cc0772f7daf494f53b6b0575b543f"
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:b8122aa64c7e0f9d8b7c4244a7ecd00eb246977925ea5ebfb14adbfb9a93b542"
 permissions = []
 commands = ["Search Emoji & Symbols"]
 

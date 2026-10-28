@@ -1,8 +1,8 @@
-import { type Action, action, clipboard, close, type Context, detail, replace } from "@backslash/api";
+import { type Action, action, clipboard, close, type Context, detail, Icons, meta, replace } from "@backslash/api";
 import { chat } from "./chat.ts";
-import { languageRule, type Prefs } from "./lib.ts";
+import { languageRule, type Prefs, provider } from "./lib.ts";
 import { canPaste, pasteText } from "./paste.ts";
-import { answer, modelName } from "./llm.ts";
+import { answer } from "./llm.ts";
 
 /** The streamed result of an instruction applied to `text`; Enter copies it. */
 export function toolView(
@@ -16,7 +16,13 @@ export function toolView(
   let result = "";
   return detail({
     title,
-    metadata: { Text: text.length > 400 ? `${text.slice(0, 400)}…` : text, Model: modelName(prefs) },
+    metadata: [
+      meta.text("Model", provider(prefs).model, { icon: Icons.sparkle, color: "purple" }),
+      meta.text("Words", text.split(/\s+/).filter(Boolean).length, { icon: Icons.text }),
+      meta.separator(),
+      meta.text("Text", text.length > 400 ? `${text.slice(0, 400)}…` : text),
+    ],
+    status: provider(prefs).name,
     async *markdown({ signal }) {
       for await (const t of answer(prefs, system, [{ role: "user", content: text }], signal, "low")) {
         result = t;
@@ -24,11 +30,11 @@ export function toolView(
       }
     },
     actions: [
-      ...(canPaste ? [action("Paste Result", () => pasteText(result), { icon: "edit-paste" })] : []),
+      ...(canPaste ? [action("Paste Result", () => pasteText(result), { icon: Icons.paste })] : []),
       action("Copy Result", async () => {
         await clipboard.write(result);
         return close("Copied");
-      }, { icon: "edit-copy" }),
+      }, { icon: Icons.copy }),
       ...more,
       action("Continue in Chat", () =>
         replace(chat(prefs, {
@@ -36,7 +42,7 @@ export function toolView(
           title: `${title}: ${text.slice(0, 60)}`,
           messages: [{ role: "user", content: `${title}:\n\n${text}` }, { role: "assistant", content: result }],
           updated: Date.now(),
-        })), { icon: "mail-reply-sender", shortcut: "<Ctrl>r" }),
+        })), { icon: Icons.comment, shortcut: "<Ctrl>r", section: "Chat" }),
     ],
   });
 }

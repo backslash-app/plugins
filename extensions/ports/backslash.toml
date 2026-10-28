@@ -2,9 +2,9 @@
 id = "ports"
 title = "Ports"
 description = "What listens on :3000? Dev servers and services by port, with their process and project"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
-icon = "network-server"
+icon = "bs-plug"
 license = "MIT"
 
 # ss (iproute2) lists sockets, ps and readlink describe their processes.

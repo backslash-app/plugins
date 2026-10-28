@@ -1,4 +1,4 @@
-import { action, close, copy, exec, type Item, list, open } from "@backslash/api";
+import { action, close, type Color, copy, exec, Icons, type Item, list, meta, open, submenu } from "@backslash/api";
 import { gitStatus, type Recent, remotePage } from "../lib.ts";
 import { HOME, projects } from "../sources.ts";
 
@@ -72,51 +72,113 @@ async function git(dir: string): Promise<Git | undefined> {
   }
 }
 
+/** What a project is written in, from the files at its root. */
+const MARKERS: [string, string, Color][] = [
+  ["Cargo.toml", "Rust", "orange"],
+  ["go.mod", "Go", "teal"],
+  ["deno.json", "Deno", "gray"],
+  ["tsconfig.json", "TypeScript", "blue"],
+  ["package.json", "JavaScript", "yellow"],
+  ["pyproject.toml", "Python", "blue"],
+  ["requirements.txt", "Python", "blue"],
+  ["pom.xml", "Java", "orange"],
+  ["build.gradle", "Java", "orange"],
+  ["build.gradle.kts", "Kotlin", "purple"],
+  ["Gemfile", "Ruby", "red"],
+  ["composer.json", "PHP", "purple"],
+  ["mix.exs", "Elixir", "purple"],
+  ["pubspec.yaml", "Dart", "teal"],
+  ["CMakeLists.txt", "C++", "pink"],
+  ["meson.build", "C", "gray"],
+  ["flake.nix", "Nix", "blue"],
+];
+
+function language(dir: string): [string, Color] | undefined {
+  for (const [file, name, color] of MARKERS) {
+    try {
+      Deno.statSync(`${dir}/${file}`);
+      return [name, color];
+    } catch { /* next */ }
+  }
+  return undefined;
+}
+
+const date = (ms: number) => new Date(ms).toLocaleDateString("en", { day: "numeric", month: "short", year: "numeric" });
+
 function item(r: Recent, prefs: Prefs, g?: Git): Item {
   const name = r.path.split("/").pop()!.replace(/\.code-workspace$/, "");
+  const lang = language(r.path);
   const accessories = [];
   if (g) {
-    accessories.push({ text: g.branch });
+    accessories.push({ icon: Icons.branch, text: g.branch });
     if (g.changes) accessories.push({ tag: `${g.changes} changed`, color: "orange" as const });
-    if (g.ahead) accessories.push({ tag: `↑${g.ahead}`, color: "blue" as const });
+    if (g.ahead) accessories.push({ tag: `↑${g.ahead}`, color: "blue" as const, tooltip: "Commits not pushed" });
   }
-  accessories.push({ tag: r.editor });
+  accessories.push({ text: r.editor });
+  const openIn = (title: string, command: string) =>
+    action(title, () => {
+      launch(command, [r.path]);
+      return close();
+    }, { icon: Icons.code });
+  const others = Object.entries(EDITORS).filter(([cmd]) =>
+    cmd !== r.command && cmd !== "zeditor" && cmd !== "code-oss"
+  );
   return {
     id: r.path,
     title: name,
     subtitle: tilde(r.path),
-    icon: "folder",
-    keywords: [r.path, r.editor, g?.branch ?? ""],
+    icon: { source: Icons.folder, tint: lang?.[1] ?? "gray" },
+    keywords: [r.path, r.editor, g?.branch ?? "", lang?.[0] ?? ""],
     accessories,
+    detail: {
+      metadata: [
+        meta.text("Folder", tilde(r.path), { icon: Icons.folder }),
+        ...(lang ? [meta.text("Language", lang[0], { icon: Icons.dot, color: lang[1] })] : []),
+        meta.text("Editor", r.editor, { icon: Icons.code }),
+        ...(r.opened ? [meta.text("Opened", date(r.opened), { icon: Icons.clock })] : []),
+        ...(g
+          ? [
+            meta.separator(),
+            meta.text("Branch", g.branch, { icon: Icons.branch }),
+            meta.text("Changes", g.changes ? `${g.changes} file${g.changes > 1 ? "s" : ""} changed` : "Clean", {
+              icon: g.changes ? Icons.dot : Icons.check,
+              color: g.changes ? "orange" : "green",
+            }),
+            ...(g.ahead
+              ? [meta.text("Not pushed", `${g.ahead} commit${g.ahead > 1 ? "s" : ""}`, { color: "blue" })]
+              : []),
+            ...(g.page ? [meta.link("Remote", g.page.replace(/^https:\/\//, ""), g.page)] : []),
+          ]
+          : []),
+      ],
+    },
     actions: [
-      action(`Open in ${r.editor}`, () => {
-        launch(r.command, [r.path]);
-        return close();
-      }, { icon: "document-open" }),
+      openIn(`Open in ${r.editor}`, r.command),
       action("Open in Terminal", () => {
         openTerminal(r.path, prefs.terminal || undefined);
         return close();
-      }, { icon: "utilities-terminal", shortcut: "<Ctrl>t" }),
-      open(r.path, "Open Folder", { icon: "folder-open" }),
+      }, { icon: Icons.terminal, shortcut: "<Ctrl>t" }),
+      open(r.path, "Open Folder", { icon: Icons.folder }),
       ...(g?.page ? [open(g.page, "Open Repository Page", { shortcut: "<Ctrl>o" })] : []),
-      ...(r.command !== prefs.editor
-        ? [action(`Open in ${editorName(prefs.editor)}`, () => {
-          launch(prefs.editor, [r.path]);
-          return close();
-        })]
-        : []),
-      copy(r.path, "Copy Path"),
+      submenu("Open With", [
+        ...(r.command !== prefs.editor ? [openIn(editorName(prefs.editor), prefs.editor)] : []),
+        ...others.map(([cmd, title]) => openIn(title, cmd)),
+      ], { icon: Icons.apps, section: "Open" }),
+      copy(r.path, "Copy Path", { shortcut: "<Ctrl><Shift>c", section: "Copy" }),
+      ...(g?.branch ? [copy(g.branch, "Copy Branch Name", { icon: Icons.branch, section: "Copy" })] : []),
     ],
   };
 }
 
 export default list({
-  placeholder: "Search projects…",
+  placeholder: "Search projects by name, path, branch, language…",
   empty: {
     title: "No projects found",
     description:
       "Open folders in VS Code, Cursor, Zed or a JetBrains IDE, or keep git repositories in ~/Projects or ~/code",
+    icon: "bs-folder",
   },
+  status: (items) => `${items.length} project${items.length === 1 ? "" : "s"}`,
   async *items({ preferences }) {
     const prefs = preferences as unknown as Prefs;
     const found = projects(prefs.editor || "code");

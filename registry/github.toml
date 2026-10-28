@@ -1,13 +1,14 @@
+# registry/github.toml
 id = "github"
 title = "GitHub"
-description = "Search repositories and follow your pull requests"
+description = "Pull requests with their checks and reviews, your issues, and repository search"
 author = "Backslash"
-icon = "folder-remote"
-version = "1.0.0"
+icon = "bs-repo"
+version = "1.1.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/github"
-commit = "a64f60074557298bf4cabf235c6e91e1f4e54082"
-checksum = "sha256:37f89a1ec235d4369ac134883ce1a6e9288ffa7e5f3e903ecaca127ee881b346"
-permissions = ["Access api.github.com"]
-commands = ["Search GitHub Repositories", "My Pull Requests"]
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:c6a3a5e86ab451078b776ee4bd69c2353745de3d60cc1fc8e9b464f874f5da38"
+permissions = ["Access api.github.com", "Access avatars.githubusercontent.com", "Run gh"]
+commands = ["Search GitHub Repositories", "My Pull Requests", "My GitHub Issues"]
 

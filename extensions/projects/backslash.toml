@@ -2,9 +2,9 @@
 id = "projects"
 title = "Code Projects"
 description = "Recent projects of VS Code, VSCodium, Cursor, Zed and JetBrains IDEs, plus your git folders"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
-icon = "applications-development"
+icon = "bs-code"
 license = "MIT"
 
 [permissions]

@@ -2,9 +2,9 @@
 id = "docker"
 title = "Containers"
 description = "Docker and Podman containers: start, stop, logs"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
-icon = "utilities-terminal"
+icon = "bs-box"
 license = "MIT"
 
 [permissions]

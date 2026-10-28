@@ -2,9 +2,9 @@
 id = "systemd"
 title = "Services"
 description = "Start, stop and inspect systemd services"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
-icon = "preferences-system"
+icon = "bs-server"
 license = "MIT"
 
 [permissions]

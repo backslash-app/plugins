@@ -2,9 +2,9 @@
 id = "packages"
 title = "Packages"
 description = "Search your distribution's packages and Flathub"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
-icon = "system-software-install"
+icon = "bs-package"
 license = "MIT"
 
 [permissions]

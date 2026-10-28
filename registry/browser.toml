@@ -1,13 +1,14 @@
+# registry/browser.toml
 id = "browser"
 title = "Browser"
 description = "History, bookmarks and open tabs of Firefox, Chrome, Brave, Chromium, Edge and Vivaldi"
 author = "Backslash"
-icon = "web-browser"
-version = "1.0.0"
+icon = "bs-globe"
+version = "1.1.0"
 repository = "https://github.com/backslash-app/plugins"
 path = "extensions/browser"
-commit = "e2762ad04c6bc8eddadcd95bc2640611cdd763fc"
-checksum = "sha256:d55daf0f700dcc194b092741cf66ddac4f413022c26f73aec28f6c5d52974396"
+commit = "4aaa0dadfad431b389d39e2d13062528764afeb0"
+checksum = "sha256:e8f4a7d46edafd1c6418df983b6ac628e6dbf60c7da77a0f25ddc298f840a27f"
 permissions = ["Read ~/.mozilla/firefox", "Read ~/snap/firefox/common/.mozilla/firefox", "Read ~/.var/app/org.mozilla.firefox/.mozilla/firefox", "Read ~/.librewolf", "Read ~/.config/google-chrome", "Read ~/.config/chromium", "Read ~/.config/BraveSoftware/Brave-Browser", "Read ~/.config/microsoft-edge", "Read ~/.config/vivaldi", "Read ~/.var/app/com.google.Chrome/config/google-chrome", "Read ~/.var/app/org.chromium.Chromium/config/chromium", "Read ~/.var/app/com.brave.Browser/config/BraveSoftware/Brave-Browser", "Read /tmp/backslash-browser", "Write /tmp/backslash-browser", "Read the environment variable HOME"]
 commands = ["Search Browser History", "Search Firefox Tabs"]
 

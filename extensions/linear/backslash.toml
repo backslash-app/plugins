@@ -1,19 +1,19 @@
 [extension]
 id = "linear"
 title = "Linear"
-description = "Your issues, search and quick issue creation for Linear"
-version = "1.0.0"
+description = "Your issues with their status, priority, labels and assignee; search, triage and quick issue creation"
+version = "1.1.0"
 author = "Backslash"
-icon = "📐"
+icon = "bs-circle-half"
 license = "MIT"
 
 [permissions]
-net = ["api.linear.app"]
+net = ["api.linear.app", "public.linear.app"]
 
 [[commands]]
 name = "my-issues"
 title = "My Linear Issues"
-description = "Issues assigned to you, by status"
+description = "Assigned, created or subscribed issues, by status"
 keywords = ["linear", "issues", "tickets", "tasks", "todo"]
 
 [[commands]]

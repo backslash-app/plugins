@@ -2,9 +2,9 @@
 id = "browser"
 title = "Browser"
 description = "History, bookmarks and open tabs of Firefox, Chrome, Brave, Chromium, Edge and Vivaldi"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
-icon = "web-browser"
+icon = "bs-globe"
 license = "MIT"
 
 # Browsers lock their databases: they are copied to /tmp/backslash-browser to be read.

@@ -1,50 +1,40 @@
-import { copy, type Item, list, open } from "@backslash/api";
-import { ago, github } from "./api.ts";
+import { type Context, list, updateCommandMetadata } from "@backslash/api";
+import { graphql, needToken } from "../api.ts";
+import { PR_FIELDS, prItem, type PullRequest } from "../prs.ts";
 
-interface Issue {
-  number: number;
-  title: string;
-  html_url: string;
-  updated_at: string;
-  draft?: boolean;
-  repository_url: string;
-  user: { login: string };
-}
+const QUERIES: Record<string, string> = {
+  review: "is:pr is:open archived:false review-requested:@me",
+  mine: "is:pr is:open archived:false author:@me",
+  assigned: "is:pr is:open archived:false assignee:@me",
+  merged: "is:pr is:merged author:@me",
+};
 
-function item(pr: Issue, section: string): Item {
-  const repo = pr.repository_url.replace("https://api.github.com/repos/", "");
-  return {
-    id: pr.html_url,
-    title: pr.title,
-    subtitle: `${repo} #${pr.number} · ${ago(pr.updated_at)}`,
-    icon: "mail-forward",
-    section,
-    keywords: [repo, pr.user.login, String(pr.number)],
-    accessories: pr.draft ? [{ tag: "Draft", color: "gray" }] : [],
-    actions: [open(pr.html_url, "Open in Browser"), copy(pr.html_url, "Copy URL")],
-  };
-}
-
-export default list({
-  placeholder: "Filter pull requests…",
-  empty: {
-    title: "No open pull requests",
-    description: "Nothing waits for you. (A token is needed: Settings → Extensions → GitHub.)",
-  },
-  async items({ preferences, signal }) {
-    const token = preferences.token as string | undefined;
-    if (!token) {
-      throw new Error("Add a GitHub token in Settings → Extensions → GitHub to see your pull requests");
-    }
-    const search = (q: string) =>
-      github<{ items: Issue[] }>(`/search/issues?q=${encodeURIComponent(q)}&per_page=50`, token, signal);
-    const [review, mine] = await Promise.all([
-      search("is:pr is:open review-requested:@me archived:false"),
-      search("is:pr is:open author:@me archived:false"),
-    ]);
-    return [
-      ...review.items.map((pr) => item(pr, "Waiting for your review")),
-      ...mine.items.map((pr) => item(pr, "Opened by you")),
-    ];
-  },
-});
+export default (ctx: Context) =>
+  list({
+    placeholder: "Filter pull requests by title, repository, author, branch…",
+    filter: {
+      options: [
+        { value: "review", title: "To review" },
+        { value: "mine", title: "Opened by me" },
+        { value: "assigned", title: "Assigned" },
+        { value: "merged", title: "Recently merged" },
+      ],
+    },
+    empty: { title: "Nothing here", description: "No pull request matches.", icon: "bs-pr-open" },
+    status: (items) => `${items.length} pull request${items.length === 1 ? "" : "s"}`,
+    async items({ preferences, signal, filter }) {
+      const key = filter ?? "review";
+      const t = await needToken(preferences);
+      const data = await graphql<{ search: { nodes: PullRequest[] } }>(
+        t,
+        `query($q: String!) { search(query: $q, type: ISSUE, first: 40) { nodes { ${PR_FIELDS} } } }`,
+        { q: `${QUERIES[key] ?? QUERIES.review} sort:updated-desc` },
+        signal,
+      );
+      const prs = data.search.nodes.filter((n) => n && n.number);
+      if (key === "review") {
+        updateCommandMetadata({ subtitle: prs.length ? `${prs.length} to review` : null }).catch(() => {});
+      }
+      return prs.map((pr) => prItem(pr, ctx, pr.repository.nameWithOwner));
+    },
+  });
