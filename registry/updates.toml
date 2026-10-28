@@ -1,0 +1,14 @@
+# registry/updates.toml
+id = "updates"
+title = "System Updates"
+description = "Available updates from APT, DNF, Pacman, Zypper, Flatpak, Snap and firmware, applied in a terminal"
+author = "Backslash"
+icon = "bs-download"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/updates"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:7307a33b2fb1ce2057778541a61705e2906bdcf28af6cb8d30f162f00fa12145"
+permissions = ["Run apt", "Run dnf", "Run rpm", "Run pacman", "Run checkupdates", "Run zypper", "Run flatpak", "Run snap", "Run fwupdmgr", "Run x-terminal-emulator", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run foot", "Run kitty", "Run alacritty", "Run wezterm", "Run ghostty", "Run xterm", "Read /etc/os-release", "Read the environment variable XDG_CURRENT_DESKTOP"]
+commands = ["System Updates"]
+

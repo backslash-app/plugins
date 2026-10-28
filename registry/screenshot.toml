@@ -1,0 +1,14 @@
+# registry/screenshot.toml
+id = "screenshot"
+title = "Screenshot & Recording"
+description = "Capture an area, a window or the whole screen, record the screen, and find your recent captures"
+author = "Backslash"
+icon = "bs-camera"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/screenshot"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:df741cd33f5a61ba5a2741d34149a9a6c1d152d9e75ba448db5585562b2b28d5"
+permissions = ["Run systemd-run", "Run systemctl", "Run grim", "Run slurp", "Run gnome-screenshot", "Run spectacle", "Run maim", "Run scrot", "Run import", "Run wf-recorder", "Run wl-screenrec", "Run ffmpeg", "Run slop", "Run hyprctl", "Run swaymsg", "Run wl-copy", "Run xclip", "Run gdbus", "Read ~/Pictures", "Read ~/Images", "Read ~/Videos", "Read ~/Vidéos", "Read ~/.config/user-dirs.dirs", "Read /etc/os-release", "Write ~/Pictures", "Write ~/Images", "Write ~/Videos", "Write ~/Vidéos", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK"]
+commands = ["Screenshots & Recordings", "Capture Area", "Capture Window", "Capture Full Screen", "Toggle Screen Recording", "Toggle Area Recording"]
+

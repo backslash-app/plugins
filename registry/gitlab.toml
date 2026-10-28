@@ -1,0 +1,14 @@
+# registry/gitlab.toml
+id = "gitlab"
+title = "GitLab"
+description = "Merge requests with pipelines and approvals, your issues, projects and pipelines on gitlab.com (self-hosted instances are not supported)"
+author = "Backslash"
+icon = "bs-pr-merged"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/gitlab"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:ec979e5e648ba23349c7958a8b2306684a4e3a10a8b13f568d2dc52331e5c0df"
+permissions = ["Access gitlab.com", "Access secure.gravatar.com"]
+commands = ["My Merge Requests", "My GitLab Issues", "Search GitLab Projects", "GitLab Pipelines"]
+

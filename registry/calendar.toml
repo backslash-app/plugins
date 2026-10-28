@@ -1,0 +1,14 @@
+# registry/calendar.toml
+id = "calendar"
+title = "Calendar"
+description = "Your upcoming events from Google, Outlook, iCloud, Fastmail or Proton calendars, with one-key meeting joins"
+author = "Backslash"
+icon = "bs-calendar"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/calendar"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:c1cc6fcdd087c9ccc93a95025a5eb0f106d30eab74ee47ea3504b170d57f18b1"
+permissions = ["Access calendar.google.com", "Access outlook.office365.com", "Access outlook.office.com", "Access outlook.live.com", "Access caldav.fastmail.com", "Access user.fm", "Access *.icloud.com", "Access calendar.proton.me", "Access calendar.zoho.com", "Access calendar.zoho.eu", "Access export.calendar.yahoo.com"]
+commands = ["Upcoming Events"]
+

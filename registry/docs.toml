@@ -1,0 +1,14 @@
+# registry/docs.toml
+id = "docs"
+title = "Docs"
+description = "Search developer documentation: DevDocs, tldr pages, the Arch Wiki and your man pages"
+author = "Backslash"
+icon = "bs-book"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/docs"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:3b9ccec4c6744ff8a86e14ee3e3c0bb7f6d6fdb16620cd65119eeeb6c56b4e76"
+permissions = ["Access devdocs.io", "Access documents.devdocs.io", "Access tldr.sh", "Access raw.githubusercontent.com", "Access wiki.archlinux.org", "Run man", "Run apropos", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm"]
+commands = ["Search DevDocs", "Choose DevDocs", "tldr Pages", "Search Arch Wiki", "Man Pages"]
+

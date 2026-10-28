@@ -1,0 +1,14 @@
+# registry/system-monitor.toml
+id = "system-monitor"
+title = "System Monitor"
+description = "Live CPU, memory, disk, network, GPU and battery usage, and the processes behind it"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/system-monitor"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:cc40d792bc1a78601031ad2849fb454d2bb1c3d367804c6153730e6319780721"
+permissions = ["Run grep", "Run ps", "Run df", "Run kill", "Run nvidia-smi", "Read /etc/os-release"]
+commands = ["System Monitor", "Top Processes"]
+

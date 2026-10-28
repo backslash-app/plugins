@@ -1,0 +1,14 @@
+# registry/deployments.toml
+id = "deployments"
+title = "Deployments"
+description = "Recent Vercel deployments and Netlify deploys with their status, commit, branch and build time; open, copy, redeploy, cancel, build logs"
+author = "Backslash"
+icon = "bs-rocket"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/deployments"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:844855ac02fc1b7a73168e952f734d92308ad6d472d06ee859bb7b30ffc172cf"
+permissions = ["Access api.vercel.com", "Access api.netlify.com", "Access vercel.com"]
+commands = ["Recent Deployments", "Deployment Projects"]
+

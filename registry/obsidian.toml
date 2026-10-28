@@ -1,0 +1,14 @@
+# registry/obsidian.toml
+id = "obsidian"
+title = "Obsidian"
+description = "Search your Obsidian notes by title, tag and text, preview them, open today's daily note and capture ideas"
+author = "Backslash"
+icon = "bs-book"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/obsidian"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:b1bab4678df0c99e346629871d787bfb5881928d4682f90fd0c064ead6043815"
+permissions = ["Read ~", "Read the environment variable HOME"]
+commands = ["Search Obsidian Notes", "Open Obsidian Daily Note", "Capture to Obsidian", "Open Obsidian Vault"]
+

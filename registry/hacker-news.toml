@@ -1,0 +1,14 @@
+# registry/hacker-news.toml
+id = "hacker-news"
+title = "Hacker News & RSS"
+description = "Top, new, best, Ask and Show HN stories with their comments, and your RSS and Atom feeds with unread tracking"
+author = "Backslash"
+icon = "bs-rss"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/hacker-news"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:59c02895ad837ba594db67c36a3ce6d5ffb48ec3cf896255b29767335e690539"
+permissions = ["Access any website"]
+commands = ["Hacker News", "RSS Feeds", "Add RSS Feed"]
+

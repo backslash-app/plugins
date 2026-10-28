@@ -1,0 +1,14 @@
+# registry/quick-notes.toml
+id = "quick-notes"
+title = "Quick Notes"
+description = "Jot, find, pin and paste notes kept as plain markdown files, ready for Obsidian, your editor or sync"
+author = "Backslash"
+icon = "bs-note"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/quick-notes"
+commit = "1013c00ada454c2eb0f6b03bcdb35dfec887562f"
+checksum = "sha256:88757e0cc572436bd98fd7bc8d23054956221f0e8fe7d9acd4cd42c39f175ef5"
+permissions = ["Read ~/Documents", "Write ~/Documents", "Read the environment variable HOME"]
+commands = ["Search Quick Notes", "New Quick Note", "Capture Quick Note"]
+
