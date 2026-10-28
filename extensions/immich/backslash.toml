@@ -1,0 +1,99 @@
+[extension]
+id = "immich"
+title = "Immich"
+description = "Search your Immich photos by what is in them, browse albums and today's memories; download originals and share links"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-image"
+license = "MIT"
+
+# Immich runs on your own server, and hosts must be declared ahead (as the
+# Home Assistant and Jellyfin extensions do): this computer, local and
+# container names, private IPv4 ranges (Deno's --allow-net accepts CIDR),
+# Tailscale and DuckDNS. A server behind a custom public domain is not
+# reachable; its local or Tailscale address is, and shared links still use
+# the public "External domain" set in Immich. Same list as HOSTS in lib.ts.
+# Pictures need the API key in a header, so their previews are downloaded
+# into ~/.cache/backslash/immich and shown from there; originals are saved
+# in ~/Pictures.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "immich",
+  "immich-server",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+read = ["~/.cache/backslash/immich", "~/Pictures"]
+write = ["~/.cache/backslash/immich", "~/Pictures"]
+env = ["HOME"]
+
+[[commands]]
+name = "search"
+title = "Search Photos"
+description = "Smart search of your Immich library by what is in the pictures, or by file name; recent photos when empty"
+icon = "bs-image"
+keywords = [
+  "immich",
+  "photos",
+  "photo",
+  "pictures",
+  "images",
+  "gallery",
+  "galerie",
+  "rechercher",
+  "smart search",
+  "clip",
+  "vidéos",
+  "videos",
+  "favorites",
+  "favoris",
+]
+
+[[commands]]
+name = "albums"
+title = "Immich Albums"
+description = "Your albums and those shared with you, with their counts and covers"
+icon = "bs-layers"
+keywords = ["immich", "albums", "album", "photos", "collections", "partagés", "shared", "galerie"]
+
+[[commands]]
+name = "memories"
+title = "Photos On This Day"
+description = "Immich memories: the photos taken on this day in past years"
+icon = "bs-history"
+keywords = [
+  "immich",
+  "memories",
+  "souvenirs",
+  "on this day",
+  "ce jour-là",
+  "il y a un an",
+  "years ago",
+  "anniversary",
+  "photos",
+  "flashback",
+]
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open it in the browser, e.g. http://immich.local:2283 or http://192.168.1.20:2283"
+required = true
+
+[[preferences]]
+name = "apiKey"
+title = "API key"
+description = "Immich → Account Settings → API Keys → New API Key"
+type = "secret"
+required = true

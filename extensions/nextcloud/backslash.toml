@@ -1,0 +1,112 @@
+[extension]
+id = "nextcloud"
+title = "Nextcloud"
+description = "Search everything in your Nextcloud, browse files and share them, read and write notes, and follow your Deck cards"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+
+# Unlike servers that stay on the local network, a Nextcloud is made to be
+# reached from anywhere: most live on their own public domain or at a hosting
+# provider (Hetzner Storage Share, IONOS, Nextcloud's partners…), so no list
+# of hosts can be written ahead and net = ["*"] is needed, as for Uptime.
+# Requests only ever go to the server address set in Settings.
+# Files are downloaded into ~/Downloads; previews of pictures and documents
+# need the app password, so they are cached in ~/.cache/backslash/nextcloud
+# and shown from there (HOME locates both).
+[permissions]
+net = ["*"]
+read = ["~/Downloads", "~/.cache/backslash/nextcloud"]
+write = ["~/Downloads", "~/.cache/backslash/nextcloud"]
+env = ["HOME"]
+
+[[commands]]
+name = "search"
+title = "Search Nextcloud"
+description = "Unified search across files, notes, Deck, Talk, calendar, contacts, mail and every other app"
+icon = "bs-cloud"
+keywords = [
+  "nextcloud",
+  "search",
+  "rechercher",
+  "unified search",
+  "recherche",
+  "files",
+  "fichiers",
+  "talk",
+  "calendar",
+  "agenda",
+  "contacts",
+  "deck",
+  "notes",
+  "cloud",
+]
+
+[[commands]]
+name = "files"
+title = "Nextcloud Files"
+description = "Browse your files with sizes and dates; open, download, copy a public link"
+icon = "bs-folder"
+keywords = [
+  "nextcloud",
+  "files",
+  "fichiers",
+  "dossiers",
+  "folders",
+  "webdav",
+  "share",
+  "partager",
+  "lien public",
+  "public link",
+  "download",
+  "télécharger",
+  "cloud",
+  "drive",
+]
+
+[[commands]]
+name = "notes"
+title = "Nextcloud Notes"
+description = "Your notes by category with a preview; create, edit, paste, favorite"
+icon = "bs-note"
+keywords = ["nextcloud", "notes", "note", "memo", "mémo", "bloc-notes", "markdown", "écrire", "write", "new note"]
+
+[[commands]]
+name = "deck"
+title = "Nextcloud Deck"
+description = "Cards assigned to you across Deck boards, by due date; move them between lists"
+icon = "bs-kanban"
+keywords = [
+  "nextcloud",
+  "deck",
+  "kanban",
+  "cards",
+  "cartes",
+  "boards",
+  "tableaux",
+  "tasks",
+  "tâches",
+  "due",
+  "échéance",
+  "todo",
+]
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open it in the browser, e.g. https://cloud.example.com"
+required = true
+
+[[preferences]]
+name = "user"
+title = "User name"
+description = "Your login name"
+required = true
+
+[[preferences]]
+name = "appPassword"
+title = "App password"
+description = "Personal settings → Security → Devices & sessions → Create new app password"
+type = "secret"
+required = true
