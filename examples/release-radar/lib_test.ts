@@ -1,4 +1,4 @@
-import { assertEquals } from "jsr:@std/assert@1";
+import { assertEquals } from "@std/assert";
 import { age, parseRepos } from "./lib.ts";
 
 Deno.test("repositories: commas, spaces, duplicates and junk", () => {
