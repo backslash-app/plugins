@@ -1,0 +1,71 @@
+[extension]
+id = "appimages"
+title = "AppImages"
+description = "The AppImages in your folders with their version and size; run them, add them to the app menu, move or trash them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-apps"
+license = "MIT"
+
+# AppImages are looked for in ~/Applications, ~/AppImages, ~/.local/bin, ~/Downloads, /opt
+# and the folders of the preferences (anywhere in the home folder, hence "~"); only their
+# first 16 bytes are read, to recognise them, they are never run to inspect them.
+# Menu entries are .desktop files in ~/.local/share/applications; ~/Applications is
+# created to move AppImages there. chmod makes them executable, mv moves them, gio trashes
+# them, systemd-run starts them so they outlive the launcher (a terminal shows their errors).
+[permissions]
+read = ["~", "/opt"]
+write = ["~/.local/share/applications", "~/Applications"]
+env = ["HOME"]
+run = [
+  "systemd-run",
+  "chmod",
+  "mv",
+  "gio",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "appimages"
+title = "AppImages"
+description = "AppImages in ~/Applications, ~/Downloads, ~/.local/bin and /opt, with menu integration"
+icon = "bs-apps"
+keywords = [
+  "appimage",
+  "appimages",
+  "app image",
+  "applications",
+  "apps",
+  "logiciels",
+  "portable",
+  "gear lever",
+  "appimagelauncher",
+  "menu",
+  "intégrer",
+  "integrate",
+  "raccourci",
+  "lanceur",
+  "exécutable",
+  "executable",
+]
+
+[[preferences]]
+name = "folders"
+title = "Other folders"
+description = "More folders to look in, comma-separated, e.g. ~/Apps, ~/Games"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For Run in Terminal. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

@@ -1,0 +1,59 @@
+[extension]
+id = "gnome-extensions"
+title = "GNOME Extensions"
+description = "Enable, disable, configure or uninstall your GNOME Shell extensions, and install new ones from extensions.gnome.org"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-apps"
+license = "MIT"
+
+# gnome-extensions lists, enables, disables, configures and uninstalls extensions;
+# gsettings turns all user extensions off or on; gnome-shell --version picks the
+# extensions.gnome.org versions that fit, and installing goes through GNOME Shell
+# itself (gdbus InstallRemoteExtension), which asks the user in its own dialog.
+# XDG_CURRENT_DESKTOP tells whether this is a GNOME session; HOME which extensions are yours.
+[permissions]
+net = ["extensions.gnome.org"]
+run = ["gnome-extensions", "gnome-shell", "gsettings", "gdbus"]
+env = ["HOME", "XDG_CURRENT_DESKTOP"]
+
+[[commands]]
+name = "extensions"
+title = "GNOME Extensions"
+description = "Installed Shell extensions: toggle with Enter, preferences, uninstall"
+icon = "bs-apps"
+keywords = [
+  "gnome",
+  "gnome shell",
+  "extension",
+  "extensions",
+  "shell extensions",
+  "extensions gnome",
+  "enable",
+  "disable",
+  "activer",
+  "désactiver",
+  "préférences",
+  "dash to dock",
+  "appindicator",
+  "gnome-extensions",
+]
+
+[[commands]]
+name = "install"
+title = "Install GNOME Extension"
+description = "Search extensions.gnome.org for your Shell version and install in one step"
+icon = "bs-download"
+keywords = [
+  "gnome",
+  "extension",
+  "extensions.gnome.org",
+  "ego",
+  "install",
+  "installer",
+  "search",
+  "chercher",
+  "rechercher",
+  "nouvelle extension",
+  "shell",
+]

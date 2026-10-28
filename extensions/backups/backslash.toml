@@ -1,0 +1,143 @@
+[extension]
+id = "backups"
+title = "Backups"
+description = "restic, Borg and Déjà Dup backups at a glance: how old the last one is, snapshots with hosts and paths, back up now or browse files"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-archive"
+license = "MIT"
+
+# restic and borg read the repositories set in the preferences (or RESTIC_REPOSITORY,
+# BORG_REPO…); the password goes in their environment, never on a command line.
+# Backups and mounts are systemd user units (systemd-run) so they outlive the launcher;
+# for those, the password is written to a private file under ~/.cache/backslash-backups
+# that the unit deletes as soon as it starts, and mounts live there too (/proc/mounts
+# tells which are mounted, fusermount unmounts them). gsettings reads Déjà Dup's state,
+# flatpak runs it when it is installed from Flathub. Backing up in a terminal shows progress.
+[permissions]
+run = [
+  "restic",
+  "borg",
+  "systemd-run",
+  "systemctl",
+  "fusermount3",
+  "fusermount",
+  "gsettings",
+  "deja-dup",
+  "flatpak",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+read = ["~/.cache/backslash-backups", "/proc/mounts"]
+write = ["~/.cache/backslash-backups"]
+env = ["HOME", "RESTIC_REPOSITORY", "RESTIC_PASSWORD", "RESTIC_PASSWORD_FILE", "BORG_REPO", "BORG_PASSPHRASE"]
+
+[[commands]]
+name = "backups"
+title = "Backups"
+description = "Last backup age, snapshots and archives of your restic, Borg and Déjà Dup backups"
+icon = "bs-archive"
+keywords = [
+  "backup",
+  "backups",
+  "sauvegarde",
+  "sauvegardes",
+  "restic",
+  "borg",
+  "borgbackup",
+  "vorta",
+  "deja dup",
+  "déjà dup",
+  "snapshot",
+  "archive",
+  "restore",
+  "restaurer",
+  "restauration",
+  "mount",
+  "monter",
+  "parcourir",
+]
+
+[[commands]]
+name = "backup-now"
+title = "Back Up Now"
+description = "Back up to every configured restic and Borg repository in the background, or start Déjà Dup"
+icon = "bs-upload"
+mode = "no-view"
+keywords = ["backup", "sauvegarder", "sauvegarde", "restic", "borg", "deja dup", "maintenant", "now"]
+
+[[preferences]]
+name = "resticRepository"
+title = "restic repository"
+description = "Path or URL: /run/media/me/Backup/restic, sftp:nas:/srv/restic, rest:https://host:8000/, s3:…"
+
+[[preferences]]
+name = "resticPassword"
+title = "restic password"
+type = "secret"
+
+[[preferences]]
+name = "resticPasswordFile"
+title = "restic password file"
+description = "Instead of the password: a file holding it, like ~/.config/restic/password (restic --password-file)"
+
+[[preferences]]
+name = "resticRepository2"
+title = "Second restic repository"
+description = "Another repository, e.g. an offsite copy"
+
+[[preferences]]
+name = "resticPassword2"
+title = "Second restic password"
+description = "Leave empty to use the password file above"
+type = "secret"
+
+[[preferences]]
+name = "borgRepository"
+title = "Borg repository"
+description = "Path or ssh:// URL, like BORG_REPO: ssh://me@nas/./borg"
+
+[[preferences]]
+name = "borgPassphrase"
+title = "Borg passphrase"
+type = "secret"
+
+[[preferences]]
+name = "backupPaths"
+title = "Folders to back up"
+description = "Comma-separated, for Back Up Now"
+default = "~"
+
+[[preferences]]
+name = "excludeFile"
+title = "Exclude file"
+description = "A file of patterns to skip, one per line (restic --exclude-file, borg --exclude-from)"
+
+[[preferences]]
+name = "maxAgeDays"
+title = "Warn after (days)"
+description = "The last backup turns red when it is older than this"
+type = "number"
+default = 7
+
+[[preferences]]
+name = "background"
+title = "Back up in the background"
+description = "Enter backs up silently with a notification at the end, instead of in a terminal"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

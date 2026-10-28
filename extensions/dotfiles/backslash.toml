@@ -1,0 +1,77 @@
+[extension]
+id = "dotfiles"
+title = "Dotfiles"
+description = "Your chezmoi, yadm, bare git or GNU Stow dotfiles: what changed, diffs, edit, apply or re-add, commit and push"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-repo"
+license = "MIT"
+
+# chezmoi, yadm and git list the managed files and their state, show diffs and stage or
+# apply changes; stow links packages. Dotfiles live all over the home folder, so it is
+# read to find the bare repository, walk Stow packages and check where their links point.
+# Editing, committing and pushing open a terminal (the editor and git may ask questions).
+[permissions]
+read = ["~"]
+env = ["HOME"]
+run = [
+  "chezmoi",
+  "yadm",
+  "git",
+  "stow",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "dotfiles"
+title = "Dotfiles"
+description = "Managed dotfiles, changed ones first, with diffs and chezmoi, yadm, git or Stow actions"
+icon = "bs-repo"
+keywords = [
+  "dotfiles",
+  "dot files",
+  "chezmoi",
+  "yadm",
+  "stow",
+  "gnu stow",
+  "bare repo",
+  "config",
+  "configuration",
+  "fichiers de configuration",
+  "fichiers cachés",
+  "bashrc",
+  "zshrc",
+  "diff",
+  "apply",
+  "appliquer",
+  "commit",
+  "synchroniser",
+]
+
+[[preferences]]
+name = "bareRepo"
+title = "Bare repository"
+description = "A bare git repository whose work tree is your home folder (git --git-dir … --work-tree ~)"
+default = "~/.dotfiles"
+
+[[preferences]]
+name = "stowDir"
+title = "Stow folder"
+description = "The folder of your GNU Stow packages; they link into its parent unless .stowrc says otherwise"
+default = "~/dotfiles"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"
