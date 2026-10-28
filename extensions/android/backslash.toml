@@ -1,0 +1,93 @@
+[extension]
+id = "android"
+title = "Android Devices"
+description = "Your Android phones over USB or Wi-Fi with model, version and battery: mirror the screen with scrcpy, take screenshots, install APKs and manage apps"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cpu"
+license = "MIT"
+
+# adb talks to the devices. scrcpy mirrors the screen in a transient systemd
+# user unit (systemd-run; systemctl stops the previous window) so it stays
+# open once the launcher is hidden. APKs to install are picked in ~/Downloads;
+# screenshots are saved in ~/Pictures (or ~/Pictures/Screenshots). The shell
+# and logs open in your terminal. /etc/os-release tells how to install adb or
+# scrcpy when they are missing; HOME locates the folders.
+[permissions]
+env = ["HOME"]
+read = ["~/Downloads", "~/Pictures", "/etc/os-release"]
+write = ["~/Pictures"]
+run = [
+  "adb",
+  "scrcpy",
+  "systemd-run",
+  "systemctl",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "devices"
+title = "Android Devices"
+description = "Connected phones and tablets: mirror, screenshot, install an APK, shell, logs, Wi-Fi debugging"
+icon = "bs-cpu"
+keywords = [
+  "android",
+  "adb",
+  "phone",
+  "tablet",
+  "scrcpy",
+  "mirror",
+  "screen",
+  "screenshot",
+  "apk",
+  "logcat",
+  "wireless debugging",
+  "usb debugging",
+  "téléphone",
+  "tablette",
+  "capture d'écran",
+  "écran",
+  "débogage",
+]
+
+[[commands]]
+name = "apps"
+title = "Android Apps"
+description = "The apps you installed on your phone: launch, show logs, clear data or uninstall"
+icon = "bs-apps"
+keywords = [
+  "android",
+  "apps",
+  "applications",
+  "packages",
+  "adb",
+  "uninstall",
+  "clear data",
+  "logcat",
+  "phone",
+  "désinstaller",
+  "applications android",
+  "téléphone",
+  "effacer les données",
+]
+
+[[preferences]]
+name = "scrcpyArgs"
+title = "scrcpy options"
+description = "Added to every mirroring, e.g. --turn-screen-off --stay-awake --max-size=1600"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For the shell and logs. Leave empty to use the first one installed: kitty, alacritty, wezterm, foot, ghostty, ptyxis, kgx, gnome-terminal, konsole, xfce4-terminal, tilix, xterm"

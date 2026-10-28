@@ -1,0 +1,55 @@
+[extension]
+id = "prompts"
+title = "Prompt Library"
+description = "Your own library of reusable AI prompts with {{variables}}, filled in a form and pasted into any app"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-sparkle"
+license = "MIT"
+
+# Prompts live in the extension's private storage. Reading the clipboard fills
+# the {{clipboard}} placeholder (only for prompts that contain it) and imports
+# a library you copied as JSON.
+[permissions]
+clipboard-read = true
+
+[[commands]]
+name = "search"
+title = "Search Prompts"
+description = "Fill a prompt's variables and paste it, or copy, edit, pin, duplicate and delete prompts"
+icon = "bs-sparkle"
+keywords = [
+  "prompt",
+  "prompts",
+  "library",
+  "template",
+  "ai",
+  "llm",
+  "chatgpt",
+  "claude",
+  "snippet",
+  "variables",
+  "bibliothèque",
+  "modèle",
+  "invite",
+  "requête",
+  "ia",
+]
+
+[[commands]]
+name = "add"
+title = "Add Prompt"
+description = "Save a new prompt; write {{name}} where a value should be asked when you use it"
+icon = "bs-plus"
+keywords = [
+  "prompt",
+  "new prompt",
+  "create",
+  "template",
+  "ai",
+  "nouveau prompt",
+  "ajouter",
+  "créer",
+  "modèle",
+  "ia",
+]
