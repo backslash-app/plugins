@@ -1,0 +1,86 @@
+[extension]
+id = "qr-codes"
+title = "QR Codes"
+description = "Turn text, links and Wi-Fi networks into QR codes, and scan the ones on your screen"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-qr"
+license = "MIT"
+
+# QR codes are encoded by the extension itself (qr.ts, no program needed) and
+# cached as PNG in ~/.cache/backslash/qr; saved ones go to ~/Pictures/QR Codes.
+# Scanning runs in the background (systemd-run) once the launcher is hidden:
+# the first area capture tool installed (grim + slurp, gnome-screenshot,
+# spectacle, maim, scrot or ImageMagick's import), then zbarimg (zbar). Here
+# they are only started to check that they are installed. wl-copy / wl-paste
+# and xclip copy and read pictures.
+[permissions]
+run = [
+  "systemd-run",
+  "zbarimg",
+  "grim",
+  "slurp",
+  "gnome-screenshot",
+  "spectacle",
+  "maim",
+  "scrot",
+  "import",
+  "wl-copy",
+  "wl-paste",
+  "xclip",
+]
+read = ["~/.cache/backslash/qr", "~/Pictures", "~/Images", "~/.config/user-dirs.dirs", "/etc/os-release"]
+write = ["~/.cache/backslash/qr", "~/Pictures", "~/Images"]
+env = [
+  "HOME",
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "XAUTHORITY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+]
+clipboard-read = true
+
+[[commands]]
+name = "qr-codes"
+title = "QR Codes"
+description = "Type a text or link to get its QR code; scan, Wi-Fi codes and history"
+icon = "bs-qr"
+keywords = ["qr", "qr code", "qrcode", "code qr", "generate", "générer", "barcode", "code-barres", "wifi", "partager"]
+
+[[commands]]
+name = "from-clipboard"
+title = "QR Code from Clipboard"
+description = "The copied text or link as a QR code, to open it on your phone"
+icon = "bs-qr"
+keywords = ["qr", "clipboard", "presse-papiers", "phone", "téléphone", "share", "partager", "link"]
+
+[[commands]]
+name = "scan-screen"
+title = "Scan QR Code on Screen"
+description = "Select a QR code anywhere on the screen: its content is copied"
+icon = "bs-scan"
+mode = "no-view"
+keywords = ["qr", "scan", "scanner", "read", "lire", "decode", "décoder", "screen", "écran"]
+
+[[commands]]
+name = "scan-clipboard"
+title = "Scan QR Code in Clipboard Image"
+description = "Reads the QR code of a copied picture or screenshot"
+icon = "bs-image"
+keywords = ["qr", "scan", "clipboard", "image", "picture", "lire", "décoder", "screenshot"]
+
+[[preferences]]
+name = "ecc"
+title = "Error correction"
+description = "L (7 %), M (15 %, default), Q (25 %) or H (30 %): higher survives damage, makes denser codes"
+default = "M"
+
+[[preferences]]
+name = "openLinks"
+title = "Open scanned links"
+description = "Opens http and https links in the browser right after scanning"
+type = "boolean"
+default = false
