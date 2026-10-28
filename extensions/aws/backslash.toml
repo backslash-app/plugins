@@ -1,0 +1,67 @@
+[extension]
+id = "aws"
+title = "AWS"
+description = "Switch AWS profiles, start and stop EC2 instances, open SSM sessions, browse S3 buckets and tail CloudWatch logs with the aws CLI"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+
+# The aws CLI does the signing and reads its own credentials; the extension
+# only reads the profile list (never the secret keys it shows masked).
+[permissions]
+env = ["HOME", "AWS_PROFILE", "AWS_REGION", "AWS_DEFAULT_REGION"]
+read = ["~/.aws/config", "~/.aws/credentials", "/etc/os-release"]
+run = [
+  "aws",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "profiles"
+title = "AWS Profiles"
+description = "Profiles of ~/.aws/config and credentials; pick the one Backslash uses, SSO login, who am I"
+icon = "bs-user"
+keywords = ["aws", "amazon", "profile", "sso", "credentials", "account", "switch", "profil", "compte", "identifiants"]
+
+[[commands]]
+name = "ec2"
+title = "EC2 Instances"
+description = "Instances with their state, type and IPs: SSM session, start, stop, reboot, console"
+icon = "bs-server"
+keywords = ["aws", "ec2", "instance", "vm", "server", "ssm", "amazon", "serveur", "machine virtuelle"]
+
+[[commands]]
+name = "s3"
+title = "S3 Buckets"
+description = "Buckets and their objects: open in the console, copy URIs and pre-signed URLs"
+icon = "bs-archive"
+keywords = ["aws", "s3", "bucket", "storage", "objects", "files", "amazon", "stockage", "fichiers"]
+
+[[commands]]
+name = "logs"
+title = "CloudWatch Log Groups"
+description = "Log groups with their size and retention: tail in a terminal or show the last hour"
+icon = "bs-text"
+keywords = ["aws", "cloudwatch", "logs", "lambda", "tail", "amazon", "journaux", "surveillance"]
+
+[[preferences]]
+name = "regions"
+title = "Regions"
+description = "Regions for EC2 and CloudWatch, comma-separated (eu-west-3, us-east-1). Empty: the profile's region"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For SSM sessions, logs and SSO login. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

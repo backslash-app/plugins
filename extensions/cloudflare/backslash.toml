@@ -1,0 +1,39 @@
+[extension]
+id = "cloudflare"
+title = "Cloudflare"
+description = "Manage Cloudflare zones and DNS records, purge the cache and follow Pages deployments"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+
+[permissions]
+net = ["api.cloudflare.com"]
+env = ["CLOUDFLARE_API_TOKEN"]
+
+[[commands]]
+name = "zones"
+title = "Cloudflare Zones"
+description = "Your domains with their plan and status: DNS, cache purge, dashboard"
+icon = "bs-globe"
+keywords = ["cloudflare", "zone", "domain", "cdn", "cache", "purge", "domaine", "vider le cache"]
+
+[[commands]]
+name = "dns"
+title = "Cloudflare DNS Records"
+description = "Records of all your zones: filter by type or proxy, copy, add, proxy, delete"
+icon = "bs-globe"
+keywords = ["cloudflare", "dns", "record", "a", "cname", "mx", "txt", "proxy", "enregistrement", "domaine"]
+
+[[commands]]
+name = "pages"
+title = "Cloudflare Pages"
+description = "Pages projects with their latest deployment: open, deployments, retry"
+icon = "bs-rocket"
+keywords = ["cloudflare", "pages", "deploy", "deployment", "site", "static", "build", "déploiement"]
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "dash.cloudflare.com → My Profile → API Tokens: Zone Read, DNS Edit, Cache Purge, Pages Read, Account Settings Read. Or set CLOUDFLARE_API_TOKEN"
+type = "secret"

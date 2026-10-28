@@ -1,0 +1,19 @@
+[extension]
+id = "nerd-fonts"
+title = "Nerd Font Icons"
+description = "Search every Nerd Font glyph by name or code point and copy the glyph, its class, code point or HTML entity"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-font"
+license = "MIT"
+
+# The official glyph list (glyphnames.json), downloaded once and cached.
+[permissions]
+net = ["raw.githubusercontent.com"]
+
+[[commands]]
+name = "search"
+title = "Search Nerd Font Icons"
+description = "11,000 glyphs of Material, Font Awesome, Devicons, Codicons, Octicons, Powerline…"
+icon = "bs-font"
+keywords = ["nerd font", "nerdfont", "glyph", "icon", "symbol", "powerline", "devicons", "font awesome", "icône", "glyphe", "police"]
