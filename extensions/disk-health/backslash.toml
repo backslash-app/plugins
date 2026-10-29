@@ -1,0 +1,50 @@
+[extension]
+id = "disk-health"
+title = "Disk Health"
+description = "SMART health, temperature, wear and errors of your drives, Btrfs scrubs and ZFS pools; start a self-test or a scrub"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+categories = ["system"]
+
+# lsblk (util-linux) lists the drives with their model and serial (it reads them from
+# /sys/block, which Deno doesn't allow reading). SMART data, Btrfs error counters and
+# scrub status are readable by root only: they are read in one script through pkexec
+# (polkit), once when you ask, and kept in the extension's storage to show them again
+# at the next opening. Self-tests and scrubs are started through pkexec too.
+# zpool lists ZFS pools as your user. /etc/os-release picks the install command to show.
+[permissions]
+run = ["lsblk", "zpool", "pkexec"]
+read = ["/etc/os-release"]
+
+[[commands]]
+name = "disk-health"
+title = "Disk Health"
+description = "SMART status of every drive, Btrfs filesystems and ZFS pools"
+icon = "bs-activity"
+keywords = [
+  "disk",
+  "disque",
+  "health",
+  "santé",
+  "smart",
+  "smartctl",
+  "smartmontools",
+  "ssd",
+  "nvme",
+  "hdd",
+  "disque dur",
+  "temperature",
+  "température",
+  "wear",
+  "usure",
+  "bad sectors",
+  "secteurs défectueux",
+  "btrfs",
+  "scrub",
+  "zfs",
+  "zpool",
+  "self-test",
+  "test",
+]

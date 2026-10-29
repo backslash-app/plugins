@@ -1,0 +1,77 @@
+[extension]
+id = "yubikey"
+title = "YubiKey"
+description = "Two-factor codes stored on your YubiKey, and its PIV, FIDO2 and OpenPGP status"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-key"
+license = "MIT"
+categories = ["system"]
+
+# ykman (YubiKey Manager) talks to the key: its details, OATH codes and accounts, PIV,
+# FIDO2 and OpenPGP status. Secrets of added accounts and the OATH password are passed
+# to ykman on its command line, the only way it takes them without a terminal.
+# gpg shows the OpenPGP card as GnuPG sees it; gpgconf stops gpg's scdaemon, which
+# otherwise keeps the key's smart card to itself. The clipboard is read when adding an
+# account, for a copied otpauth:// link. /etc/os-release picks the install command to show.
+[permissions]
+run = ["ykman", "gpg", "gpgconf"]
+read = ["/etc/os-release"]
+clipboard-read = true
+
+[[commands]]
+name = "codes"
+title = "YubiKey Codes"
+description = "OATH two-factor codes from your YubiKey: Enter copies, touch-protected ones ask for a touch"
+icon = "bs-shield"
+keywords = [
+  "yubikey",
+  "yubico",
+  "2fa",
+  "totp",
+  "otp",
+  "oath",
+  "mfa",
+  "code",
+  "authenticator",
+  "yubico authenticator",
+  "double authentification",
+  "code de vérification",
+  "clé de sécurité",
+]
+
+[[commands]]
+name = "add-account"
+title = "Add Account to YubiKey"
+description = "Store a two-factor account on the YubiKey from an otpauth:// link or its secret key"
+icon = "bs-plus"
+keywords = ["yubikey", "2fa", "totp", "oath", "add", "ajouter", "otpauth", "secret", "nouveau compte"]
+
+[[commands]]
+name = "yubikey"
+title = "YubiKey"
+description = "Your YubiKeys with their firmware and applications, PIV certificates, FIDO2 and OpenPGP"
+icon = "bs-key"
+keywords = [
+  "yubikey",
+  "yubico",
+  "ykman",
+  "security key",
+  "clé de sécurité",
+  "piv",
+  "smart card",
+  "carte à puce",
+  "fido2",
+  "passkey",
+  "webauthn",
+  "openpgp",
+  "gpg",
+  "firmware",
+  "serial",
+]
+
+[[preferences]]
+name = "oathPassword"
+title = "OATH password"
+description = "Only if you protected the YubiKey's OATH accounts with a password (Yubico Authenticator → Set password)"
+type = "secret"
