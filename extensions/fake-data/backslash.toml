@@ -1,0 +1,75 @@
+[extension]
+id = "fake-data"
+title = "Fake Data"
+description = "Realistic fake people, addresses, companies, IBANs, SIRET, test cards and more in English or French, as JSON, CSV or SQL, offline and seedable"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-dice"
+license = "MIT"
+categories = ["developer"]
+
+# Everything is generated locally, without network. The locale variables
+# pick English or French data when the locale preference is "auto".
+[permissions]
+env = ["LANG", "LC_ALL", "LC_MESSAGES"]
+
+[[commands]]
+name = "generate"
+title = "Generate Fake Data"
+description = "N rows of people, customers, companies, orders, cards… as JSON, CSV, SQL INSERT or Markdown; copy or paste"
+icon = "bs-database"
+keywords = [
+  "fake",
+  "faker",
+  "mock",
+  "dummy",
+  "test data",
+  "fixtures",
+  "seed",
+  "json",
+  "csv",
+  "sql",
+  "insert",
+  "generator",
+  "données de test",
+  "fausses données",
+  "jeu de données",
+  "générer",
+  "factice",
+]
+
+[[commands]]
+name = "values"
+title = "Fake Values"
+description = "One fake value of each kind: name, email, phone, address, IBAN, SIRET, test card, UUID, IP, lorem; copy or paste"
+icon = "bs-dice"
+keywords = [
+  "fake",
+  "faker",
+  "iban",
+  "siret",
+  "siren",
+  "tva",
+  "vat",
+  "nir",
+  "credit card",
+  "test card",
+  "luhn",
+  "uuid",
+  "email",
+  "phone",
+  "address",
+  "lorem",
+  "ipsum",
+  "carte bancaire",
+  "carte de test",
+  "adresse",
+  "téléphone",
+  "numéro de sécurité sociale",
+]
+
+[[preferences]]
+name = "locale"
+title = "Locale"
+description = "auto (from your system language), en (US names, addresses and phones; British IBANs) or fr (France)"
+default = "auto"

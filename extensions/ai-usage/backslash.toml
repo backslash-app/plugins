@@ -1,0 +1,82 @@
+[extension]
+id = "ai-usage"
+title = "AI Usage"
+description = "What Anthropic, OpenAI and OpenRouter cost you this month and today, by model, with a monthly budget and a tray warning"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coin"
+license = "MIT"
+categories = ["developer"]
+
+# The providers' usage and cost APIs only (read-only admin endpoints).
+# notify-send shows a desktop notification when the budget is nearly or fully spent.
+[permissions]
+net = ["api.anthropic.com", "api.openai.com", "openrouter.ai"]
+run = ["notify-send"]
+
+[[commands]]
+name = "usage"
+title = "AI Usage"
+description = "Month to date, today and forecast per provider, then each model's cost and tokens"
+icon = "bs-coin"
+keywords = [
+  "ai",
+  "usage",
+  "cost",
+  "spend",
+  "billing",
+  "tokens",
+  "anthropic",
+  "claude",
+  "openai",
+  "gpt",
+  "openrouter",
+  "budget",
+  "api",
+  "dépenses",
+  "coût",
+  "facturation",
+  "consommation",
+  "jetons",
+]
+
+[[commands]]
+name = "menu"
+title = "AI Spend in Menu Bar"
+description = "This month's AI spend in the system tray, refreshed every hour, with a notification near and past your budget"
+icon = "bs-chart-up"
+mode = "menu-bar"
+interval = "1h"
+keywords = ["ai", "spend", "budget", "tray", "menu bar", "cost", "barre", "budget mensuel", "alerte"]
+
+[[preferences]]
+name = "anthropicAdminKey"
+title = "Anthropic Admin key"
+description = "Claude Console → Settings → Admin keys (sk-ant-admin…); regular API keys can't read usage"
+type = "secret"
+
+[[preferences]]
+name = "openaiAdminKey"
+title = "OpenAI Admin key"
+description = "Organization settings → Admin keys (sk-admin-…), with read access to Usage"
+type = "secret"
+
+[[preferences]]
+name = "openrouterKey"
+title = "OpenRouter key"
+description = "Any key gives this month and today; a provisioning key also gives the spend per model"
+type = "secret"
+
+[[preferences]]
+name = "budget"
+title = "Monthly budget (USD)"
+description = "All providers together; 0 for none"
+type = "number"
+default = 0
+
+[[preferences]]
+name = "warnAt"
+title = "Warn at (%)"
+description = "Notify when this share of the budget is spent, then again past 100 %"
+type = "number"
+default = 80
