@@ -3,15 +3,18 @@ import {
   ago,
   arrange,
   cleanLog,
+  daySection,
   duration,
   failing,
   isActive,
+  isMine,
   type Job,
   jobItem,
   jobToShow,
   logMarkdown,
   logTail,
   parseRepositories,
+  progressOf,
   recentRepos,
   type Run,
   runDuration,
@@ -109,17 +112,35 @@ Deno.test("failing means the latest run of a workflow on a branch failed", () =>
 Deno.test("arranging runs by filter", () => {
   assertEquals(arrange(runs, "failing").map((r) => r.run.id), [4, 5]);
   assertEquals(arrange(runs, "running").map((r) => r.run.id), [8, 7]);
-  const all = arrange(runs, "all");
+  const all = arrange(runs, "all", { now });
   assertEquals(all.map((r) => `${r.section}:${r.run.id}`), [
     "Failing:4",
     "Failing:5",
     "In Progress:8",
     "In Progress:7",
-    "Recent:2",
-    "Recent:1",
-    "Recent:3",
-    "Recent:6",
+    // The rest by day, in local time.
+    ...[2, 1, 3, 6].map((id) => `${daySection(runs[id - 1].created_at, now)}:${id}`),
   ]);
+});
+
+Deno.test("my runs", () => {
+  const bob = { login: "bob" };
+  const mixed = [
+    run({ id: 1, actor: bob, triggering_actor: bob }),
+    run({ id: 2, actor: bob, triggering_actor: ada }),
+    run({ id: 3 }),
+  ];
+  assertEquals(isMine(mixed[1], "Ada"), true);
+  assertEquals(arrange(mixed, "mine", { now, me: "ada" }).map((r) => r.run.id), [2, 3]);
+  // Without a login, "mine" shows everything rather than nothing.
+  assertEquals(arrange(mixed, "mine", { now }).length, 3);
+});
+
+Deno.test("day sections", () => {
+  const noon = new Date(2026, 9, 28, 12);
+  assertEquals(daySection(new Date(2026, 9, 28, 0, 5).toISOString(), noon), "Today");
+  assertEquals(daySection(new Date(2026, 9, 27, 23, 55).toISOString(), noon), "Yesterday");
+  assertEquals(daySection(new Date(2026, 9, 26, 12).toISOString(), noon), "Earlier");
 });
 
 Deno.test("durations and dates", () => {
@@ -138,7 +159,7 @@ Deno.test("run item", () => {
   assertEquals(item.title, "Detect terminals before pasting");
   assertEquals(item.subtitle, "backslash · CI");
   assertEquals(item.icon, { source: "bs-circle-x", tint: "red" });
-  assertEquals(item.accessories?.map((a) => a.text ?? a.avatar), [
+  assertEquals(item.accessories?.map((a) => a.text ?? a.tag ?? a.avatar), [
     "fix/kitty",
     "4m 07s",
     "https://avatars.githubusercontent.com/u/1?v=4",
@@ -147,6 +168,10 @@ Deno.test("run item", () => {
   assertEquals(item.detail?.markdown, "**Detect terminals before pasting**\n\nKitty needs --single-instance.");
   const labels = item.detail?.metadata?.map((m) => m.label);
   assertEquals(labels?.slice(0, 6), ["Status", "Workflow", "Repository", "Branch", "Event", "Commit"]);
+  assertEquals(
+    item.detail?.metadata?.find((m) => m.label === "Commit")?.link,
+    "https://github.com/backslash-app/backslash/commit/8f3c2a1d9e7b6c5a4f3e2d1c0b9a8f7e6d5c4b3a",
+  );
   assertEquals(item.detail?.metadata?.find((m) => m.label === "Status")?.value, "Timed out");
   assertEquals(item.detail?.stats?.map((s) => s.value), ["4m 07s", "#812"]);
 });
@@ -198,13 +223,67 @@ Deno.test("job item with its steps", () => {
   const item = jobItem(jobs[1], [], now);
   assertEquals(item.subtitle, "Failed at “cargo test”");
   assertEquals(item.section, "Failed");
-  assertEquals(item.accessories?.map((a) => a.text), ["3/3 steps", "3m 30s"]);
+  assertEquals(item.accessories?.map((a) => a.text ?? a.tag), ["ubuntu-latest", "3/3 steps", "3m 30s"]);
   assertEquals(item.detail?.metadata?.slice(0, 3).map((m) => [m.label, m.value, m.color]), [
-    ["Set up job", "Succeeded · 2s", "green"],
-    ["cargo test", "Failed", "red"],
-    ["Upload coverage", "Skipped", "gray"],
+    ["1. Set up job", "Succeeded · 2s", "green"],
+    ["2. cargo test", "Failed", "red"],
+    ["3. Upload coverage", "Skipped", "gray"],
   ]);
   assertEquals(jobToShow(jobs)?.id, 12);
+});
+
+const building: Job = {
+  id: 13,
+  run_id: 7,
+  name: "build",
+  status: "in_progress",
+  conclusion: null,
+  html_url: "https://github.com/backslash-app/backslash/actions/runs/7/job/13",
+  started_at: "2026-10-28T11:58:00Z",
+  steps: [
+    { name: "Set up job", number: 1, status: "completed", conclusion: "success" },
+    { name: "Compile", number: 2, status: "in_progress", conclusion: null },
+    { name: "Package", number: 3, status: "queued", conclusion: null },
+  ],
+};
+
+Deno.test("where a run stands, from its jobs", () => {
+  assertEquals(progressOf(jobs), {
+    done: 2,
+    total: 2,
+    failedAt: "test (ubuntu-latest) › cargo test",
+    current: undefined,
+  });
+  assertEquals(progressOf([jobs[0], building]), { done: 1, total: 2, failedAt: undefined, current: "build › Compile" });
+
+  const failed = runItem(runs[3], "Failing", [], now, jobs);
+  assertEquals(failed.subtitle, "backslash · CI · failed at test (ubuntu-latest) › cargo test");
+  assertEquals(
+    failed.detail?.metadata?.find((m) => m.label === "Failed at")?.value,
+    "test (ubuntu-latest) › cargo test",
+  );
+  // The failed job comes first in the jobs block.
+  const jobLabels = failed.detail?.metadata?.map((m) => m.label) ?? [];
+  assertEquals(jobLabels.indexOf("test (ubuntu-latest)") < jobLabels.indexOf("lint"), true);
+
+  const running = runItem(runs[6], "In Progress", [], now, [jobs[0], building]);
+  assertEquals(running.subtitle, "backslash · CI · build › Compile");
+  assertEquals(running.accessories?.find((a) => a.tooltip === "Jobs done")?.text, "1/2");
+  assertEquals(running.detail?.metadata?.find((m) => m.label === "Jobs")?.progress, 0.5);
+  assertEquals(running.detail?.stats?.find((s) => s.label === "jobs done")?.value, "1/2");
+
+  const building2 = jobItem(building, [], now);
+  assertEquals(building2.subtitle, "Running “Compile”");
+  assertEquals(building2.detail?.metadata?.[0].progress, 1 / 3);
+});
+
+Deno.test("pills for the event and re-runs", () => {
+  const item = runItem(run({ event: "schedule", run_attempt: 2 }), "Today", [], now);
+  assertEquals(item.accessories?.slice(0, 2).map((a) => [a.tag, a.color]), [["Schedule", undefined], [
+    "attempt 2",
+    "orange",
+  ]]);
+  assertEquals(runItem(runs[1], "Today", [], now).accessories?.some((a) => a.tag), false);
 });
 
 const LOG = [
