@@ -158,10 +158,32 @@ export function failing(runs: Run[]): Run[] {
   return [...latest.values()].filter(isFailed).sort((a, b) => b.created_at.localeCompare(a.created_at));
 }
 
-export type Section = "Failing" | "In Progress" | "Recent";
+export type Section = "Failing" | "In Progress" | "Today" | "Yesterday" | "Earlier";
 
-/** The runs a filter shows, in order, with their section. */
-export function arrange(runs: Run[], filter: string, max = 60): { run: Run; section: Section }[] {
+const dayKey = (d: Date) => `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+
+/** "Today", "Yesterday" or "Earlier", in local time. */
+export function daySection(iso: string, now = new Date()): Section {
+  const day = dayKey(new Date(iso));
+  if (day === dayKey(now)) return "Today";
+  return day === dayKey(new Date(now.getTime() - 86_400_000)) ? "Yesterday" : "Earlier";
+}
+
+/** Started or re-run by `login`. */
+export const isMine = (r: Run, login: string) =>
+  [r.actor?.login, r.triggering_actor?.login].some((l) => l?.toLowerCase() === login.toLowerCase());
+
+/**
+ * The runs a filter shows, in order, with their section: failing, then in
+ * progress, then the rest by day. `"mine"` keeps the runs of `me`.
+ */
+export function arrange(
+  runs: Run[],
+  filter: string,
+  o: { now?: Date; me?: string; max?: number } = {},
+): { run: Run; section: Section }[] {
+  const { now = new Date(), me, max = 60 } = o;
+  if (filter === "mine" && me) runs = runs.filter((r) => isMine(r, me));
   const byDate = [...runs].sort((a, b) => b.created_at.localeCompare(a.created_at));
   const fail = failing(runs);
   const active = byDate.filter(isActive);
@@ -171,7 +193,10 @@ export function arrange(runs: Run[], filter: string, max = 60): { run: Run; sect
   return [
     ...fail.map((run) => ({ run, section: "Failing" as const })),
     ...active.map((run) => ({ run, section: "In Progress" as const })),
-    ...byDate.filter((r) => !shown.has(r.id)).slice(0, max).map((run) => ({ run, section: "Recent" as const })),
+    ...byDate.filter((r) => !shown.has(r.id)).slice(0, max).map((run) => ({
+      run,
+      section: daySection(run.created_at, now),
+    })),
   ];
 }
 
@@ -250,28 +275,74 @@ export function workflowUrl(r: Run): string | undefined {
 
 // --- Runs ---------------------------------------------------------------------------
 
-export function runStats(r: Run, now = new Date()): Stat[] {
+/** Where a run stands, from its jobs: how many are done, what runs now, what failed. */
+export interface Progress {
+  done: number;
+  total: number;
+  /** "test › cargo test": the first failed job and its failed step. */
+  failedAt?: string;
+  /** "build › Compile": the step running now. */
+  current?: string;
+}
+
+const where = (job: Job, step: Step | undefined) => step ? `${job.name} › ${step.name}` : job.name;
+
+export function progressOf(jobs: Job[]): Progress {
+  const bad = jobs.find(isFailed);
+  const running = jobs.find((j) => j.status === "in_progress");
+  return {
+    done: jobs.filter((j) => j.status === "completed").length,
+    total: jobs.length,
+    failedAt: bad ? where(bad, failedStep(bad)) : undefined,
+    current: running ? where(running, running.steps?.find((st) => st.status === "in_progress")) : undefined,
+  };
+}
+
+/** One line per job: its state and duration, failed and running first. */
+export function jobLines(jobs: Job[], now = new Date()): Metadata[] {
+  const rank = (j: Job) => (isFailed(j) ? 0 : isActive(j) ? 1 : 2);
+  return [...jobs].sort((a, b) => rank(a) - rank(b)).map((job) => {
+    const s = stateOf(job);
+    const d = jobDuration(job, now);
+    return meta.text(job.name, d ? `${s.text} · ${d}` : s.text, { icon: s.icon, color: s.tint });
+  });
+}
+
+/** Events worth a pill: anything a push or a pull request didn't start. */
+const PLAIN_EVENTS = new Set(["push", "pull_request"]);
+
+export function runStats(r: Run, now = new Date(), jobs?: Job[]): Stat[] {
   const d = runDuration(r, now);
+  const p = jobs?.length ? progressOf(jobs) : undefined;
   return [
     ...(d ? [{ label: isActive(r) ? "running for" : "duration", value: d }] : []),
+    ...(p && isActive(r) ? [{ label: "jobs done", value: `${p.done}/${p.total}` }] : []),
     { label: "run", value: `#${r.run_number}` },
     ...((r.run_attempt ?? 1) > 1 ? [{ label: "attempt", value: r.run_attempt!, color: "orange" as Color }] : []),
   ];
 }
 
-export function runMetadata(r: Run, now = new Date()): Metadata[] {
+export function runMetadata(r: Run, now = new Date(), jobs?: Job[]): Metadata[] {
   const s = stateOf(r);
-  const lines: Metadata[] = [
-    meta.text("Status", s.text, { icon: s.icon, color: s.tint }),
+  const repo = r.repository;
+  const lines: Metadata[] = [meta.text("Status", s.text, { icon: s.icon, color: s.tint })];
+  const p = jobs?.length ? progressOf(jobs) : undefined;
+  if (p && isActive(r)) {
+    lines.push(meta.progress("Jobs", p.done / p.total, `${p.done} of ${p.total} done`));
+    if (p.current) lines.push(meta.text("Now", p.current, { icon: Icons.inProgress, color: "yellow" }));
+  }
+  if (p?.failedAt) lines.push(meta.text("Failed at", p.failedAt, { icon: Icons.canceled, color: "red" }));
+  lines.push(
     meta.text("Workflow", workflowName(r), { icon: Icons.activity }),
-    meta.text("Repository", r.repository.full_name, { icon: Icons.repository }),
-  ];
+    meta.text("Repository", repo.full_name, { icon: Icons.repository }),
+  );
   if (r.head_branch) lines.push(meta.text("Branch", r.head_branch, { icon: Icons.branch }));
   lines.push(meta.text("Event", eventName(r.event), { icon: Icons.bolt }));
-  if (r.pull_requests?.length) {
-    lines.push(meta.tags("Pull requests", r.pull_requests.map((p) => `#${p.number}`)));
+  for (const pr of r.pull_requests ?? []) {
+    lines.push(meta.link("Pull request", `#${pr.number}`, `${repo.html_url}/pull/${pr.number}`));
   }
-  lines.push(meta.text("Commit", r.head_sha.slice(0, 7), { icon: Icons.commit }));
+  lines.push(meta.link("Commit", r.head_sha.slice(0, 7), `${repo.html_url}/commit/${r.head_sha}`));
+  if (jobs?.length) lines.push(meta.separator(), ...jobLines(jobs, now));
   lines.push(meta.separator());
   if (r.actor) lines.push(meta.person("Actor", r.actor.login, r.actor.avatar_url));
   if (r.triggering_actor && r.triggering_actor.login !== r.actor?.login) {
@@ -280,31 +351,42 @@ export function runMetadata(r: Run, now = new Date()): Metadata[] {
   lines.push(meta.text("Started", ago(r.run_started_at ?? r.created_at, now), { icon: Icons.clock }));
   const d = runDuration(r, now);
   if (d) lines.push(meta.text("Duration", d, { icon: Icons.timer }));
-  lines.push(meta.link("Run", `${r.repository.full_name.split("/")[1]} #${r.run_number}`, r.html_url));
+  lines.push(meta.link("Run", `${repo.full_name.split("/")[1]} #${r.run_number}`, r.html_url));
   return lines;
 }
 
-export function runItem(r: Run, section: string | undefined, actions: Action[], now = new Date()): Item {
+/** A run as a list row. `jobs`, when loaded, adds where it failed or how far it got. */
+export function runItem(r: Run, section: string | undefined, actions: Action[], now = new Date(), jobs?: Job[]): Item {
   const s = stateOf(r);
   const d = runDuration(r, now);
   const message = r.head_commit?.message?.trim();
+  const p = jobs?.length ? progressOf(jobs) : undefined;
+  const place = isFailed(r) && p?.failedAt
+    ? `failed at ${p.failedAt}`
+    : isActive(r) && p?.current
+    ? p.current
+    : undefined;
+  const attempt = r.run_attempt ?? 1;
   return {
     id: String(r.id),
     title: r.display_title || headline(message) || workflowName(r),
-    subtitle: `${r.repository.full_name.split("/")[1]} · ${workflowName(r)}`,
+    subtitle: [r.repository.full_name.split("/")[1], workflowName(r), place].filter(Boolean).join(" · "),
     icon: { source: s.icon, tint: s.tint },
     section,
     keywords: [r.repository.full_name, workflowName(r), r.head_branch ?? "", r.actor?.login ?? "", r.event, s.text],
     accessories: [
+      ...(PLAIN_EVENTS.has(r.event) ? [] : [{ tag: eventName(r.event), tooltip: "Event" }]),
+      ...(attempt > 1 ? [{ tag: `attempt ${attempt}`, color: "orange" as Color, tooltip: "Re-run" }] : []),
       ...(r.head_branch ? [{ icon: Icons.branch, text: r.head_branch, tooltip: "Branch" }] : []),
+      ...(p && isActive(r) ? [{ icon: Icons.layers, text: `${p.done}/${p.total}`, tooltip: "Jobs done" }] : []),
       ...(d ? [{ icon: Icons.timer, text: d, tooltip: isActive(r) ? "Running for" : "Duration" }] : []),
       ...(r.actor ? [{ avatar: r.actor.avatar_url ?? r.actor.login, tooltip: r.actor.login }] : []),
-      { text: ago(r.created_at, now), tooltip: s.text },
+      { text: ago(r.created_at, now), tooltip: `${s.text} · ${new Date(r.created_at).toLocaleString("en")}` },
     ],
     detail: {
-      stats: runStats(r, now),
+      stats: runStats(r, now, jobs),
       markdown: message ? `**${headline(message)}**${message.includes("\n") ? `\n\n${body(message)}` : ""}` : undefined,
-      metadata: runMetadata(r, now),
+      metadata: runMetadata(r, now, jobs),
     },
     actions,
   };
@@ -321,12 +403,40 @@ export function stepLines(job: Job, now = new Date()): Metadata[] {
   return (job.steps ?? []).map((step) => {
     const s = stateOf(step);
     const d = jobDuration(step, now);
-    return meta.text(step.name, d ? `${s.text} · ${d}` : s.text, { icon: s.icon, color: s.tint });
+    return meta.text(`${step.number}. ${step.name}`, d ? `${s.text} · ${d}` : s.text, { icon: s.icon, color: s.tint });
   });
 }
 
 export function failedStep(job: Job): Step | undefined {
   return job.steps?.find((s) => isFailed(s));
+}
+
+/** The status, duration and step count of a job, for a detail panel. */
+export function jobStats(job: Job, now = new Date()): Stat[] {
+  const s = stateOf(job);
+  const d = jobDuration(job, now);
+  const steps = job.steps ?? [];
+  const done = steps.filter((st) => st.status === "completed").length;
+  return [
+    { label: "status", value: s.text, color: s.tint },
+    ...(d ? [{ label: isActive(job) ? "running for" : "duration", value: d }] : []),
+    ...(steps.length ? [{ label: "steps", value: `${done}/${steps.length}` }] : []),
+  ];
+}
+
+/** The steps of a job, then where it ran. */
+export function jobMetadata(job: Job, now = new Date()): Metadata[] {
+  const steps = job.steps ?? [];
+  const done = steps.filter((st) => st.status === "completed").length;
+  return [
+    ...(isActive(job) && steps.length
+      ? [meta.progress("Steps", done / steps.length, `${done} of ${steps.length} done`), meta.separator()]
+      : []),
+    ...stepLines(job, now),
+    ...(job.runner_name || job.labels?.length ? [meta.separator()] : []),
+    ...(job.labels?.length ? [meta.tags("Runs on", job.labels)] : []),
+    ...(job.runner_name ? [meta.text("Runner", job.runner_name, { icon: Icons.server })] : []),
+  ];
 }
 
 export function jobItem(job: Job, actions: Action[], now = new Date()): Item {
@@ -335,30 +445,20 @@ export function jobItem(job: Job, actions: Action[], now = new Date()): Item {
   const steps = job.steps ?? [];
   const done = steps.filter((st) => st.status === "completed").length;
   const bad = failedStep(job);
+  const current = steps.find((st) => st.status === "in_progress");
   return {
     id: String(job.id),
     title: job.name,
-    subtitle: bad ? `Failed at “${bad.name}”` : undefined,
+    subtitle: bad ? `Failed at “${bad.name}”` : current ? `Running “${current.name}”` : undefined,
     icon: { source: s.icon, tint: s.tint },
     section: s.kind === "failure" ? "Failed" : s.kind === "running" || s.kind === "queued" ? "Running" : "Jobs",
     keywords: [s.text, ...steps.map((st) => st.name)],
     accessories: [
+      ...(job.labels?.length ? [{ tag: job.labels[0], tooltip: `Runs on ${job.labels.join(", ")}` }] : []),
       ...(steps.length ? [{ text: `${done}/${steps.length} steps` }] : []),
       ...(d ? [{ icon: Icons.timer, text: d }] : []),
     ],
-    detail: {
-      stats: [
-        { label: "status", value: s.text, color: s.tint },
-        ...(d ? [{ label: "duration", value: d }] : []),
-        ...(steps.length ? [{ label: "steps", value: `${done}/${steps.length}` }] : []),
-      ],
-      metadata: [
-        ...stepLines(job, now),
-        ...(job.runner_name || job.labels?.length ? [meta.separator()] : []),
-        ...(job.labels?.length ? [meta.tags("Runs on", job.labels)] : []),
-        ...(job.runner_name ? [meta.text("Runner", job.runner_name, { icon: Icons.server })] : []),
-      ],
-    },
+    detail: { stats: jobStats(job, now), metadata: jobMetadata(job, now) },
     actions,
   };
 }

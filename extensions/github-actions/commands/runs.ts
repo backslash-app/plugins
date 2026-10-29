@@ -22,6 +22,8 @@ import {
   isFailed,
   type Job,
   jobItem,
+  jobMetadata,
+  jobStats,
   jobToShow,
   logMarkdown,
   logTail,
@@ -43,6 +45,44 @@ interface Prefs {
 class SetupError extends Error {}
 
 let shown = { total: 0, line: "" };
+
+/** While something runs, the lists reload this often. */
+const POLL_MS = 15_000;
+/** Runs whose jobs are loaded for the list: the failing and running ones, up to this many. */
+const MAX_WITH_JOBS = 15;
+
+/** Waits `ms`, or less if `signal` aborts. */
+const sleep = (ms: number, signal: AbortSignal) =>
+  new Promise<void>((resolve) => {
+    const done = () => {
+      clearTimeout(timer);
+      signal.removeEventListener("abort", done);
+      resolve();
+    };
+    const timer = setTimeout(done, ms);
+    signal.addEventListener("abort", done);
+  });
+
+/**
+ * Yields `load()`, then reloads it every {@link POLL_MS} while `busy` says
+ * something still runs, until `signal` aborts. A failed reload keeps the
+ * last items and tries again.
+ */
+async function* live<T>(load: () => Promise<T>, busy: (value: T) => boolean, signal: AbortSignal) {
+  let value = await load();
+  yield value;
+  while (busy(value) && !signal.aborted) {
+    await sleep(POLL_MS, signal);
+    if (signal.aborted) return;
+    try {
+      value = await load();
+    } catch (e) {
+      if (signal.aborted || e instanceof AuthError) return;
+      continue;
+    }
+    yield value;
+  }
+}
 
 // --- Loading --------------------------------------------------------------------------
 
@@ -102,6 +142,30 @@ const jobsOf = (t: string, run: Run, signal?: AbortSignal) =>
   github<{ jobs: Job[] }>(t, `/repos/${run.repository.full_name}/actions/runs/${run.id}/jobs?per_page=100`, { signal })
     .then((r) => r?.jobs ?? []);
 
+// The jobs of a finished run don't change: keep them until the run does (a re-run).
+const finishedJobs = new Map<string, Job[]>();
+
+async function jobsFor(t: string, run: Run, signal: AbortSignal): Promise<Job[] | undefined> {
+  const key = `${run.id}/${run.run_attempt ?? 1}/${run.updated_at}`;
+  const kept = finishedJobs.get(key);
+  if (kept) return kept;
+  try {
+    const jobs = await jobsOf(t, run, signal);
+    if (!isActive(run)) finishedJobs.set(key, jobs);
+    return jobs;
+  } catch (e) {
+    if (e instanceof AuthError) throw e;
+    return undefined; // The row just shows less.
+  }
+}
+
+let login: string | undefined;
+
+async function me(t: string, signal: AbortSignal): Promise<string> {
+  login ??= (await github<{ login: string }>(t, "/user", { signal })).login;
+  return login;
+}
+
 // --- Views ----------------------------------------------------------------------------
 
 function logView(t: string, run: Run, job: Job) {
@@ -109,6 +173,8 @@ function logView(t: string, run: Run, job: Job) {
   return detail({
     title: job.name,
     markdown: async () => logMarkdown(job, await cachedLog(t, repo, job)),
+    stats: jobStats(job),
+    metadata: jobMetadata(job),
     status: `${repo} · ${run.display_title}`,
     actions: [
       open(job.html_url, "Open Job in Browser"),
@@ -136,25 +202,27 @@ function jobsView(t: string, run: Run): ListSpec {
     empty: { title: "No jobs yet", description: "The run hasn't started any job.", icon: Icons.layers },
     status: (items) => `${items.length} job${items.length === 1 ? "" : "s"} · ${repo}`,
     actions: [open(run.html_url, "Open Run in Browser")],
-    async items({ signal }) {
-      const jobs = await jobsOf(t, run, signal);
+    async *items({ signal }) {
       // Failed first, then running, then the rest, each in GitHub's order.
       const rank = (j: Job) => (isFailed(j) ? 0 : isActive(j) ? 1 : 2);
-      return [...jobs].sort((a, b) => rank(a) - rank(b)).map((job) =>
-        jobItem(job, [
-          ...(isFailed(job) ? [action("View Log", () => logView(t, run, job), { icon: Icons.text })] : []),
-          open(job.html_url, "Open Job in Browser"),
-          ...(isFailed(job) ? [] : [action("View Log", () => logView(t, run, job), { icon: Icons.text })]),
-          ...(job.status === "completed"
-            ? [action("Re-run Job", async () => {
-              await github(t, `/repos/${repo}/actions/jobs/${job.id}/rerun`, { method: "POST" });
-              await toast(`Re-running “${job.name}”`, { style: "success" });
-              return refresh();
-            }, { icon: Icons.refresh, shortcut: "<Ctrl>r", section: "Job" })]
-            : []),
-          copy(job.html_url, "Copy Job URL", { shortcut: "<Ctrl><Shift>c", section: "Copy" }),
-        ])
-      );
+      const jobs = live(() => jobsOf(t, run, signal), (found) => found.some(isActive), signal);
+      for await (const found of jobs) {
+        yield [...found].sort((a, b) => rank(a) - rank(b)).map((job) =>
+          jobItem(job, [
+            ...(isFailed(job) ? [action("View Log", () => logView(t, run, job), { icon: Icons.text })] : []),
+            open(job.html_url, "Open Job in Browser"),
+            ...(isFailed(job) ? [] : [action("View Log", () => logView(t, run, job), { icon: Icons.text })]),
+            ...(job.status === "completed"
+              ? [action("Re-run Job", async () => {
+                await github(t, `/repos/${repo}/actions/jobs/${job.id}/rerun`, { method: "POST" });
+                await toast(`Re-running “${job.name}”`, { style: "success" });
+                return refresh();
+              }, { icon: Icons.refresh, shortcut: "<Ctrl>r", section: "Job" })]
+              : []),
+            copy(job.html_url, "Copy Job URL", { shortcut: "<Ctrl><Shift>c", section: "Copy" }),
+          ])
+        );
+      }
     },
   });
 }
@@ -247,6 +315,7 @@ export default (_ctx: Context) =>
       options: [
         { value: "failing", title: "Failing" },
         { value: "running", title: "In progress" },
+        { value: "mine", title: "Mine" },
         { value: "all", title: "All" },
       ],
       default: "all",
@@ -254,22 +323,54 @@ export default (_ctx: Context) =>
     empty: { title: "Nothing here", description: "No workflow run matches this view.", icon: Icons.activity },
     status: (items) =>
       items[0]?.id === "setup" ? "Not set up" : [shown.line, `${shown.total} runs`].filter(Boolean).join(" · "),
-    async items({ preferences, signal, filter }) {
+    async *items({ preferences, signal, filter }) {
       const prefs = preferences as Prefs;
+      const view = filter ?? "all";
       try {
         const t = await token(preferences);
-        const { runs, problems } = await loadRuns(t, prefs, signal);
-        const line = summary(runs);
-        shown = { total: runs.length, line };
-        updateCommandMetadata({ subtitle: line || null }).catch(() => {});
-        const now = new Date();
-        return [
-          ...arrange(runs, filter ?? "all").map(({ run, section }) => runItem(run, section, runActions(t, run), now)),
-          ...problems.map(problemItem),
-        ];
+        const mine = view === "mine" ? await me(t, signal) : undefined;
+        const render = (loaded: Awaited<ReturnType<typeof loadRuns>>, jobs = new Map<number, Job[]>()) => {
+          const now = new Date();
+          return [
+            ...arrange(loaded.runs, view, { now, me: mine }).map(({ run, section }) =>
+              runItem(run, section, runActions(t, run), now, jobs.get(run.id))
+            ),
+            ...loaded.problems.map(problemItem),
+          ];
+        };
+        const load = async () => {
+          const loaded = await loadRuns(t, prefs, signal);
+          const line = summary(loaded.runs);
+          shown = { total: loaded.runs.length, line };
+          updateCommandMetadata({ subtitle: line || null }).catch(() => {});
+          return loaded;
+        };
+        // The jobs from the last load stay shown until the new ones arrive.
+        let jobs = new Map<number, Job[]>();
+        for await (const loaded of live(load, (l) => l.runs.some(isActive), signal)) {
+          yield render(loaded, jobs);
+          // Then where the failing runs broke and how far the running ones got.
+          const wanted = arrange(loaded.runs, view, { me: mine })
+            .filter(({ section }) => section === "Failing" || section === "In Progress")
+            .slice(0, MAX_WITH_JOBS);
+          if (!wanted.length) continue;
+          const fresh = new Map<number, Job[]>();
+          await Promise.all(wanted.map(async ({ run }) => {
+            const found = await jobsFor(t, run, signal);
+            if (found) fresh.set(run.id, found);
+          }));
+          jobs = fresh;
+          if (!signal.aborted) yield render(loaded, jobs);
+        }
       } catch (e) {
-        if (e instanceof AuthError) return setupItems(e);
-        if (e instanceof SetupError) return setupRow(e.message);
+        if (e instanceof AuthError) {
+          yield setupItems(e);
+          return;
+        }
+        if (e instanceof SetupError) {
+          yield setupRow(e.message);
+          return;
+        }
         throw e;
       }
     },

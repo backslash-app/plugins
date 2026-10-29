@@ -2,7 +2,7 @@
 id = "github-actions"
 title = "GitHub Actions"
 description = "Workflow runs of your repositories, failing and running first, with jobs, steps and logs; re-run or cancel them"
-version = "1.0.0"
+version = "1.1.0"
 author = "Backslash"
 icon = "bs-activity"
 license = "MIT"
