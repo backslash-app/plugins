@@ -1,0 +1,117 @@
+[extension]
+id = "wikis"
+title = "Wikis"
+description = "Search Outline, BookStack, Wiki.js and Confluence at once and read their pages in the launcher; copy links, open in the browser"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+categories = ["productivity"]
+
+# Outline's cloud (app.getoutline.com and team subdomains), Confluence Cloud
+# (*.atlassian.net), and self-hosted Outline, BookStack or Wiki.js: hosts must
+# be declared ahead (as the Immich and Paperless-ngx extensions do), so this
+# computer, local and container names, private IPv4 ranges (Deno's
+# --allow-net accepts CIDR), Tailscale and DuckDNS. A wiki on a custom public
+# domain is not reachable: use its local or Tailscale address.
+# Same list as HOSTS in lib.ts (a test checks it).
+[permissions]
+net = [
+  "app.getoutline.com",
+  "*.getoutline.com",
+  "*.atlassian.net",
+  "localhost",
+  "127.0.0.1",
+  "outline",
+  "bookstack",
+  "wikijs",
+  "wiki",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "search"
+title = "Search Wikis"
+description = "Pages of every wiki you set up, merged; recently updated when empty; read one in the launcher"
+icon = "bs-book"
+keywords = [
+  "wiki",
+  "wikis",
+  "outline",
+  "bookstack",
+  "wiki.js",
+  "wikijs",
+  "confluence",
+  "atlassian",
+  "docs",
+  "documentation",
+  "knowledge base",
+  "base de connaissances",
+  "pages",
+  "rechercher",
+  "doc",
+]
+
+[[preferences]]
+name = "outlineUrl"
+title = "Outline address"
+description = "Empty for Outline's cloud; or your own, e.g. http://outline.home.lan"
+
+[[preferences]]
+name = "outlineToken"
+title = "Outline API key"
+description = "Outline → Settings → API & Apps → New API key"
+type = "secret"
+
+[[preferences]]
+name = "bookstackUrl"
+title = "BookStack address"
+description = "As you open it in the browser, e.g. http://wiki.home.lan:6875"
+
+[[preferences]]
+name = "bookstackTokenId"
+title = "BookStack token ID"
+description = "BookStack → your profile → Access & Security → API Tokens → Create Token"
+
+[[preferences]]
+name = "bookstackTokenSecret"
+title = "BookStack token secret"
+description = "Shown once next to the token ID"
+type = "secret"
+
+[[preferences]]
+name = "wikijsUrl"
+title = "Wiki.js address"
+description = "As you open it in the browser, e.g. http://wikijs.lan:3000"
+
+[[preferences]]
+name = "wikijsToken"
+title = "Wiki.js API key"
+description = "Wiki.js → Administration → API Access → New API Key (read access)"
+type = "secret"
+
+[[preferences]]
+name = "confluenceUrl"
+title = "Confluence site"
+description = "Confluence Cloud: your-team.atlassian.net"
+
+[[preferences]]
+name = "confluenceEmail"
+title = "Confluence email"
+description = "The email of your Atlassian account"
+
+[[preferences]]
+name = "confluenceToken"
+title = "Confluence API token"
+description = "id.atlassian.com → Security → Create and manage API tokens"
+type = "secret"
