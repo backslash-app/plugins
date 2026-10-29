@@ -1,0 +1,86 @@
+[extension]
+id = "calibre"
+title = "Calibre"
+description = "Search your Calibre library by title, author, series or tag with covers and descriptions; open a book, copy a citation, add copied files, export"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+categories = ["media"]
+
+# The library's metadata.db is read directly, read-only, and covers shown from
+# its folders; the library can be anywhere in your home folder or on another
+# drive (/mnt, /media, /run/media). ~/.config/calibre/global.py.json says which
+# library Calibre opened last. calibredb adds, exports and removes books
+# (through the content server while the Calibre window has the library open).
+# ebook-viewer opens books in a transient systemd user unit (systemd-run), so
+# it outlives the launcher, with the display variables. The clipboard is read
+# to find the files you copied in your file manager. /etc/os-release picks
+# the install command to suggest.
+[permissions]
+run = ["calibredb", "ebook-viewer", "systemd-run"]
+read = ["~", "/mnt", "/media", "/run/media", "/etc/os-release"]
+env = ["HOME", "WAYLAND_DISPLAY", "DISPLAY", "XAUTHORITY", "XDG_RUNTIME_DIR"]
+clipboard-read = true
+
+[[commands]]
+name = "books"
+title = "Calibre Library"
+description = "Your books with covers, series and formats; type to search, Enter opens"
+icon = "bs-book"
+keywords = [
+  "calibre",
+  "ebook",
+  "ebooks",
+  "books",
+  "library",
+  "epub",
+  "kindle",
+  "reading",
+  "author",
+  "series",
+  "livres",
+  "bibliothèque",
+  "liseuse",
+  "lecture",
+]
+
+[[commands]]
+name = "add"
+title = "Add Copied Files to Calibre"
+description = "Adds the e-books you copied in your file manager to your Calibre library"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["calibre", "add", "import", "ebook", "epub", "ajouter", "importer", "livre"]
+
+[[preferences]]
+name = "library"
+title = "Library folder"
+description = "The folder with metadata.db (empty: the one Calibre opened last, else ~/Calibre Library)"
+
+[[preferences]]
+name = "formats"
+title = "Preferred formats"
+description = "What Enter opens first, separated by commas: EPUB, AZW3, PDF… (EPUB first by default)"
+
+[[preferences]]
+name = "exportDir"
+title = "Export folder"
+description = "Where Export to Folder copies books (~/Downloads by default)"
+default = "~/Downloads"
+
+[[preferences]]
+name = "serverUrl"
+title = "Content server address"
+description = "Optional: http://localhost:8080 when Calibre's content server runs, to open books in it and change the library while Calibre is open"
+
+[[preferences]]
+name = "serverUser"
+title = "Content server user name"
+description = "Only if the content server asks for a user name"
+
+[[preferences]]
+name = "serverPassword"
+title = "Content server password"
+description = "Only if the content server asks for one"
+type = "secret"

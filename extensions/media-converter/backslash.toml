@@ -1,0 +1,56 @@
+[extension]
+id = "media-converter"
+title = "Media Converter"
+description = "Convert, trim, compress to a size, resize and turn into GIFs the videos and songs copied in your file manager, with ffmpeg in the background"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-film"
+license = "MIT"
+categories = ["media"]
+
+# ffprobe reads the length, codecs, resolution and bitrate; ffmpeg converts.
+# Conversions run as transient systemd user units (systemd-run) so they go on
+# with the launcher closed, and systemctl tells whether one still runs and
+# stops it. Files copied in the file manager are read with wl-paste (Wayland)
+# or xclip (X11) as text/uri-list. Results are written next to the originals
+# by ffmpeg, never over a file.
+[permissions]
+run = ["ffmpeg", "ffprobe", "systemd-run", "systemctl", "wl-paste", "xclip"]
+# Copied files can be anywhere in the home folder or on a mounted drive: read to
+# show their size and to never overwrite a file.
+read = ["~", "/media", "/run/media", "/mnt", "/etc/os-release"]
+# Each job's progress, status and log are kept in ~/.cache/backslash/media-converter;
+# a stopped job's unfinished file is removed from where it was being written.
+write = ["~", "/media", "/run/media", "/mnt"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "media-converter"
+title = "Media Converter"
+description = "Copied and recent videos and songs: convert to MP4, WebM, MP3, Opus, FLAC, make GIFs, trim, compress to 8, 25 or 50 MB"
+icon = "bs-film"
+keywords = [
+  "video",
+  "vidéo",
+  "audio",
+  "ffmpeg",
+  "convert",
+  "convertir",
+  "mp4",
+  "webm",
+  "mp3",
+  "opus",
+  "flac",
+  "gif",
+  "trim",
+  "couper",
+  "découper",
+  "compress",
+  "compresser",
+  "discord",
+  "resize",
+  "redimensionner",
+  "extract audio",
+  "extraire le son",
+]

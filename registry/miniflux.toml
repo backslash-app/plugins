@@ -1,0 +1,14 @@
+id = "miniflux"
+title = "Miniflux & FreshRSS"
+description = "Unread articles of your Miniflux or FreshRSS feeds by feed or category with reading times, read in the launcher; mark read, star, open the original"
+author = "Backslash"
+icon = "bs-rss"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/miniflux"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:5c78317720550265ac49b7a120222c746bc8d7c3bdda01446b92b2ec0253ce3c"
+permissions = ["Access reader.miniflux.app", "Access localhost", "Access 127.0.0.1", "Access miniflux", "Access freshrss", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Unread Articles", "RSS Feeds"]
+categories = ["media"]
+

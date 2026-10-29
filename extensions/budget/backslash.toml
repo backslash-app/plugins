@@ -1,0 +1,173 @@
+[extension]
+id = "budget"
+title = "Budget"
+description = "Your Firefly III or Actual Budget at a glance: account balances, this month's spending against your budgets, recent transactions, and a quick expense form"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coin"
+license = "MIT"
+categories = ["productivity"]
+
+# Firefly III and Actual Budget run on your own server, and hosts must be
+# declared ahead (as the Immich and Paperless extensions do): this computer,
+# local and container names, private IPv4 ranges (Deno's --allow-net accepts
+# CIDR), Tailscale and DuckDNS, plus Firefly III's public demo. A server on a
+# custom public domain is not reachable: use its local or Tailscale address.
+# Actual Budget is read through actual-http-api, a small server you run next
+# to it (Actual itself has no web API). Same list as HOSTS in lib.ts.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "firefly",
+  "firefly-iii",
+  "actual",
+  "actual-http-api",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+  "demo.firefly-iii.org",
+]
+
+[[commands]]
+name = "accounts"
+title = "Account Balances"
+description = "Balances of your accounts and your net worth; Enter shows an account's latest transactions"
+icon = "bs-coin"
+keywords = [
+  "budget",
+  "accounts",
+  "balance",
+  "balances",
+  "net worth",
+  "money",
+  "bank",
+  "firefly",
+  "actual",
+  "comptes",
+  "solde",
+  "soldes",
+  "banque",
+  "patrimoine",
+  "argent",
+]
+
+[[commands]]
+name = "budgets"
+title = "Monthly Budgets"
+description = "This month's spending against each budget, what is left, and the month's income and expenses"
+icon = "bs-chart-down"
+keywords = [
+  "budget",
+  "budgets",
+  "spending",
+  "this month",
+  "left to spend",
+  "envelopes",
+  "categories",
+  "firefly",
+  "actual",
+  "dépenses",
+  "ce mois",
+  "reste à dépenser",
+  "enveloppes",
+]
+
+[[commands]]
+name = "transactions"
+title = "Recent Transactions"
+description = "The last 30 days of expenses, income and transfers, newest first"
+icon = "bs-history"
+keywords = [
+  "transactions",
+  "expenses",
+  "income",
+  "transfers",
+  "payments",
+  "history",
+  "firefly",
+  "actual",
+  "opérations",
+  "dépenses",
+  "revenus",
+  "virements",
+  "historique",
+]
+
+[[commands]]
+name = "add-expense"
+title = "Add Expense"
+description = "Record an expense: amount, description, category and account"
+icon = "bs-plus"
+keywords = [
+  "expense",
+  "add",
+  "spend",
+  "spent",
+  "purchase",
+  "new transaction",
+  "firefly",
+  "actual",
+  "dépense",
+  "ajouter",
+  "achat",
+  "nouvelle dépense",
+]
+[[commands.arguments]]
+name = "amount"
+placeholder = "Amount (optional)"
+[[commands.arguments]]
+name = "description"
+placeholder = "Description (optional)"
+
+[[preferences]]
+name = "fireflyUrl"
+title = "Firefly III address"
+description = "As you open it in the browser, e.g. http://firefly.local or http://192.168.1.20:8080"
+
+[[preferences]]
+name = "fireflyToken"
+title = "Firefly III access token"
+description = "Firefly III → Options → Profile → OAuth → Personal Access Tokens → Create new token"
+type = "secret"
+
+[[preferences]]
+name = "actualUrl"
+title = "actual-http-api address"
+description = "Your actual-http-api server (github.com/jhonderson/actual-http-api), e.g. http://192.168.1.20:5007"
+
+[[preferences]]
+name = "actualApiKey"
+title = "actual-http-api key"
+description = "The API_KEY you set when starting actual-http-api"
+type = "secret"
+
+[[preferences]]
+name = "actualBudget"
+title = "Actual budget sync ID"
+description = "Actual → Settings → Show advanced settings → Sync ID"
+
+[[preferences]]
+name = "actualPassword"
+title = "Actual budget encryption password"
+description = "Only if the budget uses end-to-end encryption"
+type = "secret"
+
+[[preferences]]
+name = "actualCurrency"
+title = "Actual currency"
+description = "Actual stores amounts without a currency: how to show them, e.g. EUR, USD, GBP"
+default = "EUR"
+
+[[preferences]]
+name = "actualWebUrl"
+title = "Actual web address"
+description = "Where Open in Actual goes, e.g. http://192.168.1.20:5006 (optional)"

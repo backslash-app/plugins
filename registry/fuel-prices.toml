@@ -1,0 +1,14 @@
+id = "fuel-prices"
+title = "Fuel Prices"
+description = "The cheapest fuel stations around you or any French town, from the government's live price data: price, distance, freshness, services and opening hours"
+author = "Backslash"
+icon = "bs-droplet"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/fuel-prices"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:6afb75299ea45c075ff7fdf80edf524d3c9ea40c0989dbeb42e08df4d88f41bb"
+permissions = ["Access data.economie.gouv.fr", "Access api-adresse.data.gouv.fr", "Access geo.api.gouv.fr"]
+commands = ["Fuel Prices"]
+categories = ["everyday"]
+

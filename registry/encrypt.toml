@@ -1,0 +1,14 @@
+id = "encrypt"
+title = "Encrypt"
+description = "Encrypt the files or text you copied with age or GPG for your recipients or a passphrase, and decrypt .age and .gpg files, keeping secrets out of clipboard history"
+author = "Backslash"
+icon = "bs-lock"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/encrypt"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:3c75945bcb50cc9a853f159db3d41eb6baa28971744ad48a0398a78647724bbd"
+permissions = ["Run age", "Run age-keygen", "Run gpg", "Run wl-paste", "Run xclip", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Write ~", "Write /media", "Write /run/media", "Write /mnt", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Encrypt"]
+categories = ["system"]
+

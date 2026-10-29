@@ -1,0 +1,73 @@
+[extension]
+id = "maps"
+title = "Maps"
+description = "Find places and addresses with OpenStreetMap: opening hours, phone and website, directions from home, and your saved places"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-pin"
+license = "MIT"
+categories = ["everyday"]
+
+# Nominatim, OpenStreetMap's search service, as its usage policy asks: no
+# search as you type (a request only when you press Enter on the search row),
+# one request per second at most, results kept a week.
+# Maps open in the browser (openstreetmap.org, Google Maps, Apple Maps) or your
+# maps app (geo: links).
+[permissions]
+net = ["nominatim.openstreetmap.org"]
+
+[[commands]]
+name = "maps"
+title = "Search Maps"
+description = "Places and addresses from OpenStreetMap (Enter to search); your saved places when the search is empty"
+icon = "bs-pin"
+keywords = [
+  "map",
+  "maps",
+  "place",
+  "address",
+  "where is",
+  "openstreetmap",
+  "osm",
+  "location",
+  "carte",
+  "plan",
+  "adresse",
+  "lieu",
+  "où est",
+  "itinéraire",
+]
+
+[[commands]]
+name = "directions"
+title = "Directions To"
+description = "Route from your home address to a place, on openstreetmap.org"
+icon = "bs-arrow-right"
+mode = "no-view"
+keywords = ["directions", "route", "itinerary", "navigate", "go to", "itinéraire", "aller à", "trajet", "navigation"]
+[[commands.arguments]]
+name = "to"
+placeholder = "Place or address"
+required = true
+
+[[preferences]]
+name = "home"
+title = "Home address"
+description = "Where directions start, e.g. \"10 rue de Rivoli, Paris\" or \"48.8566, 2.3522\""
+
+[[preferences]]
+name = "mode"
+title = "Directions by"
+description = "car, bike or foot"
+default = "car"
+
+[[preferences]]
+name = "countries"
+title = "Countries"
+description = "Optional: limit the search to some countries, as two-letter codes separated by commas (fr, be, ch)"
+
+[[preferences]]
+name = "language"
+title = "Language of results"
+description = "A language code such as en or fr; empty uses English"
+default = "en"

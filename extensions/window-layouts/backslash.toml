@@ -1,0 +1,90 @@
+[extension]
+id = "window-layouts"
+title = "Window Layouts"
+description = "Save the windows you have open as a named layout and bring it back: apps relaunched, moved to their workspace and place, plus your URLs and commands"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+categories = ["productivity"]
+
+# Windows are listed and moved with the compositor's own tool, the first that
+# answers: hyprctl (Hyprland), swaymsg (Sway), niri msg (niri), kdotool (KDE
+# Plasma) or wmctrl (X11). Missing apps are started through the compositor
+# (Hyprland, Sway, niri) or as a systemd-run --user unit, so they outlive the
+# launcher. The application folders are read to find each app's command in its
+# .desktop file.
+[permissions]
+run = ["hyprctl", "swaymsg", "niri", "kdotool", "wmctrl", "systemd-run"]
+read = [
+  "/usr/share/applications",
+  "/usr/local/share/applications",
+  "~/.local/share/applications",
+  "/var/lib/flatpak/exports/share/applications",
+  "~/.local/share/flatpak/exports/share/applications",
+  "/var/lib/snapd/desktop/applications",
+]
+env = [
+  "HOME",
+  "XDG_SESSION_TYPE",
+  "XDG_CURRENT_DESKTOP",
+  "WAYLAND_DISPLAY",
+  "DISPLAY",
+  "XAUTHORITY",
+  "HYPRLAND_INSTANCE_SIGNATURE",
+  "SWAYSOCK",
+  "NIRI_SOCKET",
+  "DBUS_SESSION_BUS_ADDRESS",
+]
+
+[[commands]]
+name = "layouts"
+title = "Window Layouts"
+description = "Your saved layouts; save the windows open now, restore, edit or delete one"
+icon = "bs-layers"
+keywords = [
+  "layout",
+  "layouts",
+  "windows",
+  "workspace",
+  "session",
+  "restore",
+  "save windows",
+  "disposition",
+  "fenêtres",
+  "espace de travail",
+  "restaurer",
+  "sauvegarder",
+  "bureau",
+]
+
+[[commands]]
+name = "save-layout"
+title = "Save Window Layout"
+description = "Save the windows open now under a name"
+icon = "bs-download"
+mode = "no-view"
+keywords = ["layout", "save", "windows", "snapshot", "sauvegarder", "enregistrer", "disposition", "fenêtres"]
+[[commands.arguments]]
+name = "name"
+placeholder = "Layout name"
+required = true
+
+[[commands]]
+name = "restore-layout"
+title = "Restore Window Layout"
+description = "Start the apps of a saved layout and put their windows back"
+icon = "bs-upload"
+mode = "no-view"
+keywords = ["layout", "restore", "windows", "open", "restaurer", "ouvrir", "disposition", "fenêtres"]
+[[commands.arguments]]
+name = "name"
+placeholder = "Layout name"
+required = true
+
+[[preferences]]
+name = "timeout"
+title = "Wait for apps (seconds)"
+description = "How long to wait for a started app to open its window before giving up on placing it"
+type = "number"
+default = 20

@@ -1,0 +1,60 @@
+[extension]
+id = "sourcehut"
+title = "SourceHut"
+description = "Your sr.ht repositories, recent builds with their tasks (resubmit, cancel), tickets assigned to you or in your trackers, and patchsets of your mailing lists"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-repo"
+license = "MIT"
+categories = ["developer"]
+
+# The GraphQL API of each SourceHut service the commands use (sr.ht, the hosted
+# instance); nothing else.
+[permissions]
+net = ["git.sr.ht", "builds.sr.ht", "todo.sr.ht", "lists.sr.ht"]
+
+[[commands]]
+name = "repositories"
+title = "SourceHut Repositories"
+description = "Your git.sr.ht repositories, recently updated first: open, browse the log, copy clone URLs"
+icon = "bs-repo"
+keywords = ["sourcehut", "srht", "sr.ht", "git", "repo", "repository", "clone", "dépôt"]
+
+[[commands]]
+name = "builds"
+title = "SourceHut Builds"
+description = "Recent builds.sr.ht jobs, failing and running first, with their tasks: resubmit, cancel"
+icon = "bs-cycle"
+keywords = [
+  "sourcehut",
+  "srht",
+  "builds",
+  "ci",
+  "job",
+  "pipeline",
+  "resubmit",
+  "intégration continue",
+  "compilation",
+  "relancer",
+]
+
+[[commands]]
+name = "tickets"
+title = "SourceHut Tickets"
+description = "Open todo.sr.ht tickets assigned to you or in your trackers: change their status"
+icon = "bs-issue-open"
+keywords = ["sourcehut", "srht", "todo", "tickets", "issues", "bugs", "tracker", "problème", "anomalie"]
+
+[[commands]]
+name = "patches"
+title = "SourceHut Patchsets"
+description = "Patchsets sent to your lists.sr.ht mailing lists, proposed first: set their status"
+icon = "bs-mail"
+keywords = ["sourcehut", "srht", "lists", "patch", "patchset", "mailing list", "review", "correctif", "liste de diffusion"]
+
+[[preferences]]
+name = "token"
+title = "Personal access token"
+description = "meta.sr.ht → OAuth 2.0 → Generate new token (all services, or git, builds, todo and lists; read and write)"
+type = "secret"
+required = true

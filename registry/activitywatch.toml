@@ -1,0 +1,14 @@
+id = "activitywatch"
+title = "ActivityWatch"
+description = "Where your time went today and this week, by app, website and category, from your local ActivityWatch, compared with yesterday"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/activitywatch"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:9bd1bd584baf5107f88d5672897088842e083c318aff0bbd7f39d3102f1ff99e"
+permissions = ["Access localhost:5600", "Access 127.0.0.1:5600"]
+commands = ["ActivityWatch", "Open ActivityWatch"]
+categories = ["productivity"]
+

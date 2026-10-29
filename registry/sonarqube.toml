@@ -1,0 +1,14 @@
+id = "sonarqube"
+title = "SonarQube"
+description = "SonarCloud or SonarQube projects with their quality gate, failing first, and bugs, vulnerabilities, code smells, coverage and duplication; new issues and security hotspots of a project"
+author = "Backslash"
+icon = "bs-shield"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/sonarqube"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:447f6a65de06fe504580d17f07666bd95f4846fb1cfd4ff46280c3e3d2ea4dcb"
+permissions = ["Access any website", "Access sonarcloud.io"]
+commands = ["SonarQube Projects"]
+categories = ["developer"]
+

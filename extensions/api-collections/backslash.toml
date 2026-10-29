@@ -1,0 +1,84 @@
+[extension]
+id = "api-collections"
+title = "API Collections"
+description = "Run the requests of your Bruno collections, .http/.rest files and Hurl files: environments, variables, formatted responses and curl"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+categories = ["developer"]
+
+# Request files are looked for in the usual code folders below your home; the
+# folders preference can only point inside them. Requests go to the URLs
+# written in your files (APIs, local servers, staging hosts), which can't be
+# known in advance: net = ["*"] is needed, and nothing is sent until you run a
+# request. HOME locates the folders.
+[permissions]
+env = ["HOME"]
+net = ["*"]
+read = [
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+]
+
+[[commands]]
+name = "requests"
+title = "API Requests"
+description = "Every request of your Bruno, .http and Hurl collections: preview, send, copy as curl"
+icon = "bs-arrow-right"
+keywords = [
+  "api",
+  "request",
+  "http",
+  "rest",
+  "bruno",
+  "hurl",
+  "rest client",
+  "jetbrains",
+  "curl",
+  "postman",
+  "insomnia",
+  "requête",
+  "envoyer",
+]
+
+[[commands]]
+name = "collections"
+title = "API Collections"
+description = "Bruno collections and request files found in your projects, with their environments"
+icon = "bs-layers"
+keywords = [
+  "api",
+  "collection",
+  "bruno",
+  "http file",
+  "rest",
+  "hurl",
+  "environment",
+  "requests",
+  "collection api",
+  "environnement",
+]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where to look for request files, separated by commas; inside ~/Projects, ~/code, ~/Code, ~/src, ~/dev, ~/Developer, ~/git, ~/repos, ~/workspace or ~/work"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace, ~/work"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folders deep to look below each folder (1 to 8)"
+type = "number"
+default = 4

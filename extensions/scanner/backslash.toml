@@ -1,0 +1,70 @@
+[extension]
+id = "scanner"
+title = "Scanner"
+description = "Scan documents and photos with SANE to PDF, PNG or JPEG, from the glass or the feeder, with optional text recognition"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-scan"
+license = "MIT"
+categories = ["system"]
+
+# scanimage (SANE) lists the scanners, reads their options and scans; the scanners found
+# and their options are kept in the extension's storage, as looking takes a few seconds.
+# Pages wait in ~/.cache/backslash/scanner; scans are saved in ~/Documents/Scans.
+# img2pdf (or ImageMagick's magick / convert) assembles PDFs; ocrmypdf makes them
+# searchable, tesseract recognizes text when it isn't there. gio moves scans to the trash.
+# /etc/os-release picks the install commands to show.
+[permissions]
+run = ["scanimage", "img2pdf", "magick", "convert", "ocrmypdf", "tesseract", "gio"]
+read = ["~/Documents/Scans", "~/.cache/backslash/scanner", "/etc/os-release"]
+write = ["~/Documents/Scans", "~/.cache/backslash/scanner"]
+env = ["HOME"]
+
+[[commands]]
+name = "scanner"
+title = "Scanner"
+description = "Your scanners and recent scans; scan with a preset"
+icon = "bs-scan"
+keywords = [
+  "scanner",
+  "scan",
+  "scanner un document",
+  "numériser",
+  "numérisation",
+  "sane",
+  "scanimage",
+  "document",
+  "photo",
+  "pdf",
+  "adf",
+  "feeder",
+  "chargeur",
+  "ocr",
+]
+
+[[commands]]
+name = "scan"
+title = "Scan Document"
+description = "Pick a scanner and a preset, then scan to ~/Documents/Scans"
+icon = "bs-scan"
+keywords = ["scan", "scanner", "numériser", "document", "pdf", "photo", "multi-page", "plusieurs pages", "ocr"]
+
+[[commands]]
+name = "recent-scans"
+title = "Recent Scans"
+description = "The scans in ~/Documents/Scans: open, copy their text, make them searchable"
+icon = "bs-file"
+keywords = ["scans", "numérisations", "recent", "récents", "documents", "pdf", "ocr", "texte"]
+
+[[preferences]]
+name = "ocr"
+title = "Recognize text by default"
+description = "Make PDFs searchable (ocrmypdf) and save the text of images (tesseract)"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "languages"
+title = "Text languages"
+description = "Tesseract language codes joined by +, e.g. eng+fra"
+default = "eng"

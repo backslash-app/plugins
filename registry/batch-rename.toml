@@ -1,0 +1,14 @@
+id = "batch-rename"
+title = "Batch Rename"
+description = "Rename the files copied in your file manager with find and replace, case, numbering, date taken, prefix and suffix: see every new name first, and undo"
+author = "Backslash"
+icon = "bs-text"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/batch-rename"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:d9ce7922debbca79ea5036dcf02ce369be2616948291140c3b725a86a8b4a1e1"
+permissions = ["Run wl-paste", "Run xclip", "Run exiftool", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Write ~", "Write /media", "Write /run/media", "Write /mnt", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Batch Rename", "Undo Last Rename"]
+categories = ["system"]
+

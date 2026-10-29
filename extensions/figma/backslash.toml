@@ -1,0 +1,111 @@
+[extension]
+id = "figma"
+title = "Figma & Penpot"
+description = "Your Figma and Penpot design files by name, recently modified first, with thumbnails; open them in the browser or the desktop app, copy links"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-palette"
+license = "MIT"
+categories = ["developer"]
+
+# Figma's REST API, and the hosts of its file thumbnails. Penpot's own
+# instance (design.penpot.app) and self-hosted Penpot, which must be declared
+# ahead (as the Immich and Paperless extensions do): this computer, local and
+# container names, private IPv4 ranges (Deno's --allow-net accepts CIDR),
+# Tailscale and DuckDNS. A Penpot on a custom public domain is not reachable:
+# use its local or Tailscale address. Same list as HOSTS in lib.ts.
+[permissions]
+net = [
+  "api.figma.com",
+  "s3-alpha.figma.com",
+  "s3-alpha-sig.figma.com",
+  "design.penpot.app",
+  "localhost",
+  "127.0.0.1",
+  "penpot",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "files"
+title = "Figma Files"
+description = "Every file of your Figma teams by name, recently modified first, with its thumbnail"
+icon = "bs-palette"
+keywords = [
+  "figma",
+  "design",
+  "files",
+  "mockups",
+  "figjam",
+  "ui",
+  "prototype",
+  "recent",
+  "fichiers",
+  "maquettes",
+  "conception",
+  "récents",
+]
+
+[[commands]]
+name = "projects"
+title = "Figma Projects"
+description = "Your teams' projects; Enter shows a project's files"
+icon = "bs-folder"
+keywords = ["figma", "projects", "teams", "design", "projets", "équipes", "dossiers"]
+
+[[commands]]
+name = "penpot"
+title = "Penpot Files"
+description = "Your Penpot projects and files, recently modified first, on design.penpot.app or your own server"
+icon = "bs-layers"
+keywords = [
+  "penpot",
+  "design",
+  "files",
+  "projects",
+  "open source",
+  "mockups",
+  "fichiers",
+  "projets",
+  "maquettes",
+  "conception",
+]
+
+[[preferences]]
+name = "figmaToken"
+title = "Figma personal access token"
+description = "Figma → Settings → Security → Personal access tokens → Generate (scopes: file content and projects, read-only)"
+type = "secret"
+
+[[preferences]]
+name = "figmaTeams"
+title = "Figma teams"
+description = "The team IDs or team page links, separated by commas: open a team in Figma, its link holds …/team/1234567890…"
+
+[[preferences]]
+name = "openIn"
+title = "Open Figma files in"
+description = "\"browser\" or \"desktop\" (the Figma desktop app, through figma:// links)"
+default = "browser"
+
+[[preferences]]
+name = "penpotUrl"
+title = "Penpot address"
+description = "https://design.penpot.app, or your own Penpot as you open it in the browser"
+default = "https://design.penpot.app"
+
+[[preferences]]
+name = "penpotToken"
+title = "Penpot access token"
+description = "Penpot → Your account → Access tokens → Generate new token"
+type = "secret"

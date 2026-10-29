@@ -1,0 +1,53 @@
+[extension]
+id = "activitywatch"
+title = "ActivityWatch"
+description = "Where your time went today and this week, by app, website and category, from your local ActivityWatch, compared with yesterday"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+categories = ["productivity"]
+
+# Only the ActivityWatch server running on this computer (aw-server or
+# aw-server-rust, port 5600): its buckets, categories and query API.
+[permissions]
+net = ["localhost:5600", "127.0.0.1:5600"]
+
+[[commands]]
+name = "activity"
+title = "ActivityWatch"
+description = "Active time today or this week by app, website and category, AFK left out"
+icon = "bs-activity"
+keywords = [
+  "activitywatch",
+  "time tracking",
+  "screen time",
+  "usage",
+  "apps",
+  "websites",
+  "productivity",
+  "temps d'écran",
+  "temps passé",
+  "suivi du temps",
+  "applications",
+  "sites",
+]
+
+[[commands]]
+name = "open-activitywatch"
+title = "Open ActivityWatch"
+description = "Today's activity in the ActivityWatch web UI"
+icon = "bs-external"
+mode = "no-view"
+keywords = ["activitywatch", "dashboard", "timeline", "web ui", "tableau de bord", "chronologie"]
+
+[[preferences]]
+name = "url"
+title = "Server URL"
+description = "http://localhost:5600 (the default) or http://127.0.0.1:5600"
+default = "http://localhost:5600"
+
+[[preferences]]
+name = "hostname"
+title = "Computer"
+description = "The hostname whose buckets to read; empty picks the most recently active one"

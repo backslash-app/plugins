@@ -1,0 +1,14 @@
+id = "arxiv"
+title = "arXiv"
+description = "Search arXiv papers by words, author or category, follow new submissions in your fields, read abstracts, open PDFs and copy BibTeX or citations"
+author = "Backslash"
+icon = "bs-file"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/arxiv"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:354f8dda9aa4a52b76706e5a07077ebb2a6a2e37e8533758f2afdaa09ddd391e"
+permissions = ["Access export.arxiv.org", "Access 127.0.0.1:23119"]
+commands = ["Search arXiv", "New on arXiv", "Saved arXiv Papers"]
+categories = ["productivity"]
+

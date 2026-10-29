@@ -1,0 +1,58 @@
+[extension]
+id = "arxiv"
+title = "arXiv"
+description = "Search arXiv papers by words, author or category, follow new submissions in your fields, read abstracts, open PDFs and copy BibTeX or citations"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-file"
+license = "MIT"
+categories = ["productivity"]
+
+# export.arxiv.org serves the search API (papers open in the browser).
+# 127.0.0.1:23119 is the connector Zotero runs while it is open, used only by
+# "Add to Zotero".
+[permissions]
+net = ["export.arxiv.org", "127.0.0.1:23119"]
+
+[[commands]]
+name = "search"
+title = "Search arXiv"
+description = "Papers by words, author (au:), title (ti:) or category (cat:), by relevance or date"
+icon = "bs-search"
+keywords = [
+  "arxiv",
+  "paper",
+  "papers",
+  "preprint",
+  "research",
+  "science",
+  "bibtex",
+  "citation",
+  "abstract",
+  "article",
+  "publication",
+  "recherche",
+  "articles",
+  "prépublication",
+  "scientifique",
+]
+
+[[commands]]
+name = "new"
+title = "New on arXiv"
+description = "The latest submissions in the categories you follow, by day"
+icon = "bs-inbox"
+keywords = ["arxiv", "new", "latest", "submissions", "papers", "listing", "daily", "nouveautés", "derniers", "articles"]
+
+[[commands]]
+name = "saved"
+title = "Saved arXiv Papers"
+description = "The papers you saved for later"
+icon = "bs-bookmark"
+keywords = ["arxiv", "saved", "reading list", "later", "bookmarks", "papers", "à lire", "favoris", "articles"]
+
+[[preferences]]
+name = "categories"
+title = "Followed categories"
+description = "For New on arXiv, separated by commas: cs.AI, cs.LG, stat.ML (see arxiv.org/category_taxonomy)"
+default = "cs.AI, cs.LG"

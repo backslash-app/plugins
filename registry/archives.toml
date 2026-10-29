@@ -1,0 +1,14 @@
+id = "archives"
+title = "Archives"
+description = "Look inside and extract ZIP, 7z, RAR and TAR archives copied in your file manager, and compress files and folders, with a password if you want"
+author = "Backslash"
+icon = "bs-archive"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/archives"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:66af17bc1f35ffd1162e24e75a91269ba9a8711885c56e8c7140c9c27317fbf6"
+permissions = ["Run bsdtar", "Run tar", "Run unzip", "Run zip", "Run 7z", "Run 7zz", "Run 7za", "Run gzip", "Run bzip2", "Run xz", "Run zstd", "Run lz4", "Run wl-paste", "Run xclip", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Read /etc/os-release", "Write ~", "Write /media", "Write /run/media", "Write /mnt", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Archives"]
+categories = ["system"]
+

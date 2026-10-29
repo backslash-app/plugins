@@ -1,0 +1,14 @@
+id = "social"
+title = "Mastodon & Bluesky"
+description = "Your Mastodon and Bluesky timelines and notifications in one list; boost, like and reply, and write a post once for one or both networks with live character counts"
+author = "Backslash"
+icon = "bs-comment"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/social"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:00a387988fd918ba12e4a9897f3c9dba0b6d5fdaad07d751a796df73d5ec8441"
+permissions = ["Access any website"]
+commands = ["Social Timeline", "Social Notifications", "Post to Mastodon & Bluesky"]
+categories = ["network"]
+

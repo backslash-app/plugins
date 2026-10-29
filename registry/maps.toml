@@ -1,0 +1,14 @@
+id = "maps"
+title = "Maps"
+description = "Find places and addresses with OpenStreetMap: opening hours, phone and website, directions from home, and your saved places"
+author = "Backslash"
+icon = "bs-pin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/maps"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:ca6e4995bc3bcd0c30793ea0b25c70ebd5b53a38260bbb731f01b651cd5f7f18"
+permissions = ["Access nominatim.openstreetmap.org"]
+commands = ["Search Maps", "Directions To"]
+categories = ["everyday"]
+

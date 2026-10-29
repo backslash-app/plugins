@@ -1,0 +1,100 @@
+[extension]
+id = "cloud-costs"
+title = "Cloud Costs"
+description = "Month-to-date spend and forecast of AWS, Google Cloud, Azure and Hetzner Cloud, by service and by day, with a budget warning in the background"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coin"
+license = "MIT"
+categories = ["developer"]
+
+# The aws, bq and az CLIs sign in and sign their requests themselves: AWS Cost
+# Explorer, the BigQuery billing export, Azure Cost Management (az rest). Each
+# runs only when its provider is turned on. Hetzner Cloud has no billing API:
+# its prices and resources come from its API, with your token. notify-send
+# shows the budget warning of the background check.
+[permissions]
+net = ["api.hetzner.cloud"]
+run = ["aws", "bq", "az", "notify-send"]
+
+[[commands]]
+name = "costs"
+title = "Cloud Costs"
+description = "This month's spend and forecast per provider, by service and by day, against your budget"
+icon = "bs-coin"
+keywords = [
+  "cost",
+  "costs",
+  "billing",
+  "spend",
+  "budget",
+  "forecast",
+  "aws",
+  "cost explorer",
+  "gcp",
+  "bigquery",
+  "azure",
+  "hetzner",
+  "finops",
+  "coûts",
+  "facture",
+  "facturation",
+  "dépenses",
+]
+
+[[commands]]
+name = "check"
+title = "Check Cloud Budget"
+description = "Updates this month's spend and warns when it nears or passes your budget"
+icon = "bs-bell"
+mode = "no-view"
+interval = "6h"
+keywords = ["cost", "budget", "alert", "billing", "cloud", "warning", "coûts", "alerte", "budget"]
+
+[[preferences]]
+name = "aws"
+title = "AWS"
+description = "Read Cost Explorer with the aws CLI (needs ce:GetCostAndUsage and ce:GetCostForecast; $0.01 per request, cached 6 hours)"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "awsProfile"
+title = "AWS profile"
+description = "Profile of ~/.aws/config to use; empty for the default (or AWS_PROFILE)"
+
+[[preferences]]
+name = "gcpTable"
+title = "Google Cloud billing export table"
+description = "The BigQuery table of your billing export: project.dataset.gcp_billing_export_v1_XXXXXX_XXXXXX_XXXXXX (read with bq)"
+
+[[preferences]]
+name = "azure"
+title = "Azure"
+description = "Read Cost Management with the az CLI (az login, Cost Management Reader role)"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "azureSubscription"
+title = "Azure subscription ID"
+description = "Empty for the az CLI's current subscription"
+
+[[preferences]]
+name = "hetznerToken"
+title = "Hetzner Cloud token"
+description = "Hetzner Console → your project → Security → API tokens (Read): spend is estimated from list prices"
+type = "secret"
+
+[[preferences]]
+name = "budget"
+title = "Monthly budget"
+description = "In the currency of your biggest bill (USD for AWS, EUR for Hetzner…); empty for no budget"
+type = "number"
+
+[[preferences]]
+name = "warnPercent"
+title = "Warn at (%)"
+description = "Warn when this share of the budget is spent"
+type = "number"
+default = 80

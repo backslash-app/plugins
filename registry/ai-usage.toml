@@ -1,0 +1,14 @@
+id = "ai-usage"
+title = "AI Usage"
+description = "What Anthropic, OpenAI and OpenRouter cost you this month and today, by model, with a monthly budget and a tray warning"
+author = "Backslash"
+icon = "bs-coin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/ai-usage"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:2f58e75b803ae33142914e2470e5f452fb919cab170af2f384a130c02dd05fe9"
+permissions = ["Access api.anthropic.com", "Access api.openai.com", "Access openrouter.ai", "Run notify-send", "Show “AI Spend in Menu Bar” in the system tray, updated every hour"]
+commands = ["AI Usage", "AI Spend in Menu Bar"]
+categories = ["developer"]
+

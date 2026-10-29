@@ -1,0 +1,75 @@
+[extension]
+id = "fuel-prices"
+title = "Fuel Prices"
+description = "The cheapest fuel stations around you or any French town, from the government's live price data: price, distance, freshness, services and opening hours"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-droplet"
+license = "MIT"
+categories = ["everyday"]
+
+# Open data, no account or key: the live fuel price feed of the French
+# government (Opendatasoft API of data.economie.gouv.fr), and the national
+# address and town databases to turn a city or postcode into coordinates.
+# Same list as HOSTS in lib.ts.
+[permissions]
+net = ["data.economie.gouv.fr", "api-adresse.data.gouv.fr", "geo.api.gouv.fr"]
+
+[[commands]]
+name = "fuel-prices"
+title = "Fuel Prices"
+description = "Cheapest stations first around your town, or type a city, a postcode or coordinates; Tab switches fuel"
+icon = "bs-droplet"
+keywords = [
+  "fuel",
+  "gas",
+  "petrol",
+  "diesel",
+  "gas station",
+  "essence",
+  "carburant",
+  "carburants",
+  "prix",
+  "prix essence",
+  "station",
+  "station-service",
+  "gazole",
+  "gasoil",
+  "sp95",
+  "e10",
+  "sp98",
+  "e85",
+  "gpl",
+  "moins cher",
+  "plein",
+]
+
+[[preferences]]
+name = "location"
+title = "Home location"
+description = "Where the search starts: a town (\"Lyon\"), a postcode (\"35000\"), an address, or \"latitude, longitude\""
+
+[[preferences]]
+name = "fuel"
+title = "Fuel"
+description = "Gazole, SP95-E10, SP98, SP95, E85 or GPLc: the chip selected when the command opens"
+default = "Gazole"
+
+[[preferences]]
+name = "radius"
+title = "Radius (km)"
+description = "How far around the location to look, from 1 to 50 km"
+type = "number"
+default = 10
+
+[[preferences]]
+name = "sort"
+title = "Order"
+description = "\"price\" (cheapest first) or \"distance\" (nearest first)"
+default = "price"
+
+[[preferences]]
+name = "maps"
+title = "Maps"
+description = "Where Open in Maps goes: \"openstreetmap\", \"google\", \"apple\" or \"geo\" (your desktop's maps app)"
+default = "openstreetmap"

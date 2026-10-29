@@ -1,0 +1,49 @@
+[extension]
+id = "webhook-inbox"
+title = "Webhook Inbox"
+description = "A temporary webhook URL from webhook.site: watch requests arrive live with their headers, query and body, and replay them to your local server"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-inbox"
+license = "MIT"
+categories = ["developer"]
+
+# webhook.site creates the URL and stores the requests sent to it. Replays only
+# go to your own computer (localhost and 127.0.0.1, any port).
+[permissions]
+net = ["webhook.site", "localhost", "127.0.0.1"]
+
+[[commands]]
+name = "inbox"
+title = "Webhook Inbox"
+description = "Your webhook URL and the requests sent to it, live; replay one to localhost"
+icon = "bs-inbox"
+keywords = [
+  "webhook",
+  "webhook.site",
+  "requestbin",
+  "inbox",
+  "callback",
+  "http",
+  "request",
+  "replay",
+  "stripe",
+  "github",
+  "test",
+  "boîte de réception",
+  "rejouer",
+]
+
+[[commands]]
+name = "new"
+title = "New Webhook URL"
+description = "Create a temporary webhook URL and copy it"
+icon = "bs-link"
+mode = "no-view"
+keywords = ["webhook", "url", "new", "create", "requestbin", "callback", "nouvelle url", "créer"]
+
+[[preferences]]
+name = "apiKey"
+title = "webhook.site API key"
+description = "Optional, for webhook.site accounts: Control Panel → API Keys. Free URLs work without one"
+type = "secret"

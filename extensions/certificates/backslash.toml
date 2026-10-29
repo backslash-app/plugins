@@ -1,0 +1,92 @@
+[extension]
+id = "certificates"
+title = "Certificates"
+description = "Inspect the TLS chain of a server or a certificate file, list local certificates by expiry with their names, issuer, key and fingerprints, and make new ones with mkcert"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-shield"
+license = "MIT"
+categories = ["developer"]
+
+# openssl reads servers' chains and certificate files itself (Deno can't show
+# a peer certificate), so a file you inspect can be anywhere without a read
+# permission. mkcert makes local certificates, in a folder mkdir creates.
+# The listed folders are searched for .pem, .crt and .cer files: the mkcert CA
+# folder and the usual project folders (same list as FOLDERS in lib.ts). Files
+# named like private keys are never opened. HOME finds them, CAROOT is
+# mkcert's own setting. The clipboard is read only by Inspect Certificate File
+# when it gets no path.
+[permissions]
+run = ["openssl", "mkcert", "mkdir"]
+read = [
+  "~/.local/share/mkcert",
+  "~/certs",
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/src",
+  "~/dev",
+  "~/Developer",
+  "~/work",
+  "~/git",
+  "~/repos",
+]
+env = ["HOME", "CAROOT"]
+clipboard-read = true
+
+[[commands]]
+name = "inspect"
+title = "Inspect TLS Certificate"
+description = "The chain a server sends on host:port: verification, names, issuer, key, expiry, fingerprints"
+icon = "bs-shield"
+keywords = [
+  "tls",
+  "ssl",
+  "certificate",
+  "cert",
+  "https",
+  "chain",
+  "openssl",
+  "s_client",
+  "x509",
+  "expiry",
+  "certificat",
+  "chaîne",
+  "expiration",
+]
+[[commands.arguments]]
+name = "host"
+placeholder = "example.com:443"
+required = true
+
+[[commands]]
+name = "file"
+title = "Inspect Certificate File"
+description = "A .pem, .crt or .cer file (bundles and DER too), or the PEM text in the clipboard"
+icon = "bs-file"
+keywords = ["certificate", "pem", "crt", "cer", "der", "x509", "bundle", "clipboard", "certificat", "fichier", "presse-papiers"]
+[[commands.arguments]]
+name = "path"
+placeholder = "~/certs/site.pem (empty: clipboard)"
+
+[[commands]]
+name = "local"
+title = "Local Certificates"
+description = "The mkcert CA and the certificates of your project folders, soonest expiry first"
+icon = "bs-lock"
+keywords = ["certificate", "mkcert", "local", "dev", "pem", "crt", "expiry", "caroot", "certificats", "locaux", "développement"]
+
+[[commands]]
+name = "generate"
+title = "Generate Local Certificate"
+description = "A certificate your browsers trust for localhost and your .test names, made with mkcert"
+icon = "bs-plus"
+keywords = ["mkcert", "certificate", "generate", "localhost", "https", "dev", "self-signed", "générer", "certificat", "créer"]
+
+[[preferences]]
+name = "warnDays"
+title = "Expiry warning (days)"
+description = "Certificates expiring in fewer days than this are shown in orange"
+type = "number"
+default = 30

@@ -1,0 +1,14 @@
+id = "calibre"
+title = "Calibre"
+description = "Search your Calibre library by title, author, series or tag with covers and descriptions; open a book, copy a citation, add copied files, export"
+author = "Backslash"
+icon = "bs-book"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/calibre"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:8f0896f3f6058f5c4fe0d108908f51485f1d7352e82f2798aa25a7002cf39810"
+permissions = ["Run calibredb", "Run ebook-viewer", "Run systemd-run", "Read ~", "Read /mnt", "Read /media", "Read /run/media", "Read /etc/os-release", "Read the environment variable HOME", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable XDG_RUNTIME_DIR", "Read the clipboard"]
+commands = ["Calibre Library", "Add Copied Files to Calibre"]
+categories = ["media"]
+

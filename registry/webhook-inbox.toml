@@ -1,0 +1,14 @@
+id = "webhook-inbox"
+title = "Webhook Inbox"
+description = "A temporary webhook URL from webhook.site: watch requests arrive live with their headers, query and body, and replay them to your local server"
+author = "Backslash"
+icon = "bs-inbox"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/webhook-inbox"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:75f3295b8460632a9bbdca09cdb53640e4d26e710dd8994c50df8d104ddfb804"
+permissions = ["Access webhook.site", "Access localhost", "Access 127.0.0.1"]
+commands = ["Webhook Inbox", "New Webhook URL"]
+categories = ["developer"]
+

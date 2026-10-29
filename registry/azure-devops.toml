@@ -1,0 +1,14 @@
+id = "azure-devops"
+title = "Azure DevOps"
+description = "Azure DevOps pull requests to review or created by you with votes and policies, your open work items with state changes, and pipeline runs failing first with rerun"
+author = "Backslash"
+icon = "bs-cloud"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/azure-devops"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:03242351ce502d954c3a508ccd0756d14fd17f2bd93b122326d495b22d00f0cc"
+permissions = ["Access dev.azure.com"]
+commands = ["Azure DevOps Pull Requests", "My Azure DevOps Work Items", "Azure DevOps Pipelines"]
+categories = ["developer"]
+

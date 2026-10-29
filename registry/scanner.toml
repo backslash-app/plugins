@@ -1,0 +1,14 @@
+id = "scanner"
+title = "Scanner"
+description = "Scan documents and photos with SANE to PDF, PNG or JPEG, from the glass or the feeder, with optional text recognition"
+author = "Backslash"
+icon = "bs-scan"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/scanner"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:b708c6c50a3b7fc85282af60750169efd7c52ce7cbc0c5574cccbbd7e58a4be0"
+permissions = ["Run scanimage", "Run img2pdf", "Run magick", "Run convert", "Run ocrmypdf", "Run tesseract", "Run gio", "Read ~/Documents/Scans", "Read ~/.cache/backslash/scanner", "Read /etc/os-release", "Write ~/Documents/Scans", "Write ~/.cache/backslash/scanner", "Read the environment variable HOME"]
+commands = ["Scanner", "Scan Document", "Recent Scans"]
+categories = ["system"]
+

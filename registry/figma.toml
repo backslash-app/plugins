@@ -1,0 +1,14 @@
+id = "figma"
+title = "Figma & Penpot"
+description = "Your Figma and Penpot design files by name, recently modified first, with thumbnails; open them in the browser or the desktop app, copy links"
+author = "Backslash"
+icon = "bs-palette"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/figma"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:558b6cfdf7dfbf337756492230150d9b40caa5066cc236fea09d7887a9526820"
+permissions = ["Access api.figma.com", "Access s3-alpha.figma.com", "Access s3-alpha-sig.figma.com", "Access design.penpot.app", "Access localhost", "Access 127.0.0.1", "Access penpot", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Figma Files", "Figma Projects", "Penpot Files"]
+categories = ["developer"]
+

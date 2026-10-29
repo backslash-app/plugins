@@ -1,0 +1,107 @@
+[extension]
+id = "prometheus"
+title = "Prometheus & Alertmanager"
+description = "Firing Alertmanager alerts by severity or group, silence them for an hour, a day or as long as you need; run PromQL, see down targets and rule states"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+categories = ["developer"]
+
+# Prometheus and Alertmanager usually live on this computer, the local network
+# (mDNS names, private IPv4 ranges, which Deno accepts as CIDR, and the plain
+# names `prometheus` and `alertmanager` of a Docker or Kubernetes network),
+# Tailscale, or Grafana Cloud. Hosts must be declared ahead, so a server on
+# another public domain is not reachable. Same list as HOSTS in lib.ts.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "prometheus",
+  "alertmanager",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "*.grafana.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "alerts"
+title = "Alertmanager Alerts"
+description = "Firing alerts by severity, or as Alertmanager groups them; silence for 1 hour, 4 hours, 1 day or a custom time, expire silences"
+icon = "bs-bell"
+keywords = [
+  "alertmanager",
+  "prometheus",
+  "alerts",
+  "alerting",
+  "firing",
+  "silence",
+  "amtool",
+  "on-call",
+  "incident",
+  "alertes",
+  "silencer",
+  "supervision",
+  "astreinte",
+]
+
+[[commands]]
+name = "query"
+title = "PromQL Query"
+description = "Run a PromQL instant query and see each series with its value"
+icon = "bs-chart-up"
+keywords = ["prometheus", "promql", "query", "metrics", "instant", "series", "requête", "métriques", "mesures"]
+
+[[commands]]
+name = "targets"
+title = "Prometheus Targets"
+description = "Scrape targets that are down first, with their last error; all of them by job"
+icon = "bs-server"
+keywords = ["prometheus", "targets", "scrape", "down", "up", "exporter", "job", "instance", "cibles", "en panne"]
+
+[[commands]]
+name = "rules"
+title = "Prometheus Rules"
+description = "Alerting rules firing, pending or broken, and recording rules, with their query"
+icon = "bs-layers"
+keywords = ["prometheus", "rules", "alerting rules", "recording rules", "firing", "pending", "règles", "alertes"]
+
+[[preferences]]
+name = "alertmanagerUrl"
+title = "Alertmanager URLs"
+description = "One or more, separated by commas: http://alertmanager.local:9093 (the members of an HA cluster can all be listed)"
+
+[[preferences]]
+name = "prometheusUrl"
+title = "Prometheus URL"
+description = "http://prometheus.local:9090, with its sub-path behind a reverse proxy"
+
+[[preferences]]
+name = "username"
+title = "User name"
+description = "Optional: for servers behind basic auth"
+
+[[preferences]]
+name = "password"
+title = "Password"
+description = "Optional: the basic auth password (or a Grafana Cloud access policy token)"
+type = "secret"
+
+[[preferences]]
+name = "token"
+title = "Bearer token"
+description = "Optional: for a proxy that takes a bearer token (used when no user name is set)"
+type = "secret"
+
+[[preferences]]
+name = "author"
+title = "Silence author"
+description = "The name new silences are created by"
+default = "Backslash"

@@ -1,0 +1,53 @@
+[extension]
+id = "batch-rename"
+title = "Batch Rename"
+description = "Rename the files copied in your file manager with find and replace, case, numbering, date taken, prefix and suffix: see every new name first, and undo"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-text"
+license = "MIT"
+categories = ["system"]
+
+# Files copied in the file manager are read with wl-paste (Wayland) or xclip
+# (X11) as text/uri-list; exiftool reads the date photos and videos were taken.
+[permissions]
+run = ["wl-paste", "xclip", "exiftool"]
+# Copied files can be anywhere in the home folder or on a mounted drive: read
+# to check that no new name is taken, write to rename them.
+read = ["~", "/media", "/run/media", "/mnt"]
+write = ["~", "/media", "/run/media", "/mnt"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "batch-rename"
+title = "Batch Rename"
+description = "Copied files: pick the rules, preview old → new, rename"
+icon = "bs-text"
+keywords = [
+  "rename",
+  "renommer",
+  "batch",
+  "lot",
+  "files",
+  "fichiers",
+  "find replace",
+  "rechercher remplacer",
+  "regex",
+  "numbering",
+  "numéroter",
+  "lowercase",
+  "minuscules",
+  "slug",
+  "exif",
+  "date",
+  "extension",
+]
+
+[[commands]]
+name = "undo"
+title = "Undo Last Rename"
+description = "Give the files of the last batch rename their old names back"
+icon = "bs-history"
+mode = "no-view"
+keywords = ["undo", "annuler", "rename", "renommer", "restore", "restaurer"]
