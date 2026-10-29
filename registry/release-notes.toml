@@ -1,0 +1,14 @@
+id = "release-notes"
+title = "Release Notes"
+description = "Changelogs from Conventional Commits since the last tag, the next semantic version, CHANGELOG.md, tags and GitHub or GitLab releases"
+author = "Backslash"
+icon = "bs-rocket"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/release-notes"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:8913b64d8858666ea4bcc6b720a27fa24195a273ae87f16261fadb8cb372dbe8"
+permissions = ["Run git", "Run find", "Run gh", "Run glab", "Read /etc/os-release", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Write ~/Projects", "Write ~/projects", "Write ~/Code", "Write ~/code", "Write ~/dev", "Write ~/Developer", "Write ~/src", "Write ~/git", "Write ~/repos", "Write ~/workspace", "Write ~/work", "Write ~/Work", "Read the environment variable HOME"]
+commands = ["Write Release Notes"]
+categories = ["developer"]
+

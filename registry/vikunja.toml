@@ -1,0 +1,14 @@
+id = "vikunja"
+title = "Vikunja"
+description = "Overdue, today's and upcoming Vikunja tasks by project; complete, reschedule, and quick add with Vikunja's *label +project !priority magic"
+author = "Backslash"
+icon = "bs-square-check"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/vikunja"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:dc9c3718685e58f39895b07706caf60865bacc3807f9fdb138e0ebc4fc403c1c"
+permissions = ["Access app.vikunja.cloud", "Access localhost", "Access 127.0.0.1", "Access vikunja", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Vikunja Tasks", "Add Vikunja Task"]
+categories = ["productivity"]
+

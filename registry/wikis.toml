@@ -1,0 +1,14 @@
+id = "wikis"
+title = "Wikis"
+description = "Search Outline, BookStack, Wiki.js and Confluence at once and read their pages in the launcher; copy links, open in the browser"
+author = "Backslash"
+icon = "bs-book"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/wikis"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:e8c43b1354da3eb01a8d0a3b52d42c56c866e9518e202175b35265a8bc08f749"
+permissions = ["Access app.getoutline.com", "Access *.getoutline.com", "Access *.atlassian.net", "Access localhost", "Access 127.0.0.1", "Access outline", "Access bookstack", "Access wikijs", "Access wiki", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Search Wikis"]
+categories = ["productivity"]
+

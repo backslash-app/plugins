@@ -1,0 +1,14 @@
+id = "checksums"
+title = "Checksums & Signatures"
+description = "SHA-256, SHA-512, SHA-1, MD5 and BLAKE2 of the files copied in your file manager, checked against SHA256SUMS files, a copied hash and GPG signatures"
+author = "Backslash"
+icon = "bs-hash"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/checksums"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:d0bf752353ee1611b64585198ad7a9543bba13c1523eecf16a85dc680be97058"
+permissions = ["Run sha256sum", "Run sha512sum", "Run sha1sum", "Run md5sum", "Run b2sum", "Run gpg", "Run wl-paste", "Run xclip", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Checksums & Signatures"]
+categories = ["system"]
+

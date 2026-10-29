@@ -1,0 +1,14 @@
+id = "mattermost"
+title = "Mattermost & Zulip"
+description = "Your Mattermost channels or Zulip streams and direct messages, unread first; read the last messages, reply, mark read, set your status"
+author = "Backslash"
+icon = "bs-comment"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/mattermost"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:8db28129012a70ee286e59ae0ab03440034144bdf144757e1278e2c88f04bd7e"
+permissions = ["Access any website"]
+commands = ["Chat Channels", "Set Chat Status"]
+categories = ["productivity"]
+

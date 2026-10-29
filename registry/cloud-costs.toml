@@ -1,0 +1,14 @@
+id = "cloud-costs"
+title = "Cloud Costs"
+description = "Month-to-date spend and forecast of AWS, Google Cloud, Azure and Hetzner Cloud, by service and by day, with a budget warning in the background"
+author = "Backslash"
+icon = "bs-coin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/cloud-costs"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:92ba06d574116ef99940f51cac67b0433b9b6cc9f9a961bcdf33a1fc5a982196"
+permissions = ["Access api.hetzner.cloud", "Run aws", "Run bq", "Run az", "Run notify-send", "Run “Check Cloud Budget” in the background every 6 hours"]
+commands = ["Cloud Costs", "Check Cloud Budget"]
+categories = ["developer"]
+

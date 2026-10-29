@@ -1,0 +1,14 @@
+id = "gpu-mode"
+title = "GPU Mode"
+description = "Switch hybrid graphics between integrated, hybrid and discrete, see what runs on the discrete GPU, and start apps on it"
+author = "Backslash"
+icon = "bs-cpu"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/gpu-mode"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:34795411728cd27dcd09baba96c0913dd9375e0efa5c8cc84ea4e92f8dc2ef59"
+permissions = ["Run lspci", "Run switcherooctl", "Run supergfxctl", "Run envycontrol", "Run prime-select", "Run system76-power", "Run pkexec", "Run nvidia-smi", "Run fuser", "Run kill", "Run uptime", "Run loginctl", "Run systemctl", "Run systemd-run", "Read /dev/dri", "Read ~/.local/share/applications", "Read ~/.local/share/flatpak/exports/share/applications", "Read /var/lib/flatpak/exports/share/applications", "Read /usr/local/share/applications", "Read /usr/share/applications", "Read /var/lib/snapd/desktop/applications", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_ID"]
+commands = ["GPU Mode", "Run on Discrete GPU"]
+categories = ["system"]
+

@@ -1,0 +1,14 @@
+id = "mcp-servers"
+title = "MCP Servers"
+description = "The MCP servers of Claude Code, Cursor, VS Code, Zed, Claude Desktop, Windsurf, Cline, Codex and Gemini CLI in one list: test, copy, turn on or off"
+author = "Backslash"
+icon = "bs-plug"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/mcp-servers"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:63c315d0c40ee1352b8a9a16baa23ca64c13b871d0f5178abb25494b64458b0e"
+permissions = ["Access localhost", "Access 127.0.0.1", "Run npx", "Run node", "Run uvx", "Run uv", "Run python3", "Run python", "Run docker", "Run deno", "Run bunx", "Run bun", "Run pnpm", "Read ~/.claude.json", "Read ~/.config/Claude/claude_desktop_config.json", "Read ~/.cursor/mcp.json", "Read ~/.codeium/windsurf/mcp_config.json", "Read ~/.gemini/settings.json", "Read ~/.config/zed/settings.json", "Read ~/.codex/config.toml", "Read ~/.config/Code/User/mcp.json", "Read ~/.config/Code/User/settings.json", "Read ~/.config/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json", "Read ~/.config/Code - Insiders/User/mcp.json", "Read ~/.config/Code - Insiders/User/settings.json", "Read ~/.config/Code - Insiders/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json", "Read ~/.config/VSCodium/User/mcp.json", "Read ~/.config/VSCodium/User/settings.json", "Read ~/.config/VSCodium/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Write ~/.claude.json", "Write ~/.config/zed/settings.json", "Write ~/.codeium/windsurf/mcp_config.json", "Write ~/.config/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json", "Write ~/.config/Code - Insiders/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json", "Write ~/.config/VSCodium/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json", "Read the environment variable HOME"]
+commands = ["MCP Servers"]
+categories = ["developer"]
+

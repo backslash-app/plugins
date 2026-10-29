@@ -1,0 +1,14 @@
+id = "budget"
+title = "Budget"
+description = "Your Firefly III or Actual Budget at a glance: account balances, this month's spending against your budgets, recent transactions, and a quick expense form"
+author = "Backslash"
+icon = "bs-coin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/budget"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:1229919362e4e42982e40d7e342e07c1db3b9cedba0d1b85ba7081633a053d80"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access firefly", "Access firefly-iii", "Access actual", "Access actual-http-api", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Access demo.firefly-iii.org"]
+commands = ["Account Balances", "Monthly Budgets", "Recent Transactions", "Add Expense"]
+categories = ["productivity"]
+

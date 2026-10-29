@@ -1,0 +1,14 @@
+id = "navidrome"
+title = "Navidrome & Audiobookshelf"
+description = "Your Navidrome or Subsonic music and Audiobookshelf audiobooks with covers: search, recent, starred, playlists and continue listening, played in the background with mpv"
+author = "Backslash"
+icon = "bs-headphones"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/navidrome"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:e9dbd87f6a8b9e0b6f0b6bc871ea6abe429a80eabba08e56fa314ab8f22e2b43"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access navidrome", "Access navidrome.local", "Access audiobookshelf", "Access audiobookshelf.local", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run systemd-run", "Run systemctl", "Run mpv", "Read ~/.cache/backslash/navidrome", "Read /etc/os-release", "Write ~/.cache/backslash/navidrome", "Read the environment variable HOME"]
+commands = ["Navidrome", "Audiobookshelf", "Pause or Resume Music", "Next Song", "Stop Music"]
+categories = ["media"]
+

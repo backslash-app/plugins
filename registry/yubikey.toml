@@ -1,0 +1,14 @@
+id = "yubikey"
+title = "YubiKey"
+description = "Two-factor codes stored on your YubiKey, and its PIV, FIDO2 and OpenPGP status"
+author = "Backslash"
+icon = "bs-key"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/yubikey"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:ec9f455186a6b591632a3b178c1cf5cab8a5173f0b1a04e57b068292c33fdd75"
+permissions = ["Run ykman", "Run gpg", "Run gpgconf", "Read /etc/os-release", "Read the clipboard"]
+commands = ["YubiKey Codes", "Add Account to YubiKey", "YubiKey"]
+categories = ["system"]
+

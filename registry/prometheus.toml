@@ -1,0 +1,14 @@
+id = "prometheus"
+title = "Prometheus & Alertmanager"
+description = "Firing Alertmanager alerts by severity or group, silence them for an hour, a day or as long as you need; run PromQL, see down targets and rule states"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/prometheus"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:e8a991bf727751241a20c9029a2747682076200fd2bf84a759f460926e2d0e48"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access prometheus", "Access alertmanager", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access *.grafana.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Alertmanager Alerts", "PromQL Query", "Prometheus Targets", "Prometheus Rules"]
+categories = ["developer"]
+

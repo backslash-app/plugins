@@ -1,0 +1,14 @@
+id = "bottles"
+title = "Bottles & Wine"
+description = "Run the Windows programs of your Bottles and Wine prefixes, open winecfg, winetricks and Wine's tools, or run an .exe"
+author = "Backslash"
+icon = "bs-box"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/bottles"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:2107707d0c482e68dc818a0eb91297cf071861987a79c57646fb8d1f0a92f313"
+permissions = ["Run systemd-run", "Run bottles-cli", "Run bottles", "Run flatpak", "Run wine", "Run winetricks", "Run wineserver", "Run gio", "Read ~/.local/share/bottles/bottles", "Read ~/.var/app/com.usebottles.bottles/data/bottles/bottles", "Read ~/.wine", "Read ~/.local/share/wineprefixes", "Read ~/.local/share/applications/wine", "Read the environment variable HOME", "Read the clipboard"]
+commands = ["Bottles & Wine", "Run Windows Program"]
+categories = ["system"]
+

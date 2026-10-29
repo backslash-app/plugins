@@ -1,0 +1,14 @@
+id = "linkding"
+title = "Linkding & Linkwarden"
+description = "Search your Linkding or Linkwarden bookmarks with their tags and descriptions; save the copied link, open, copy, archive and delete"
+author = "Backslash"
+icon = "bs-bookmark"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/linkding"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:64884142395903dbabf639fdbfde927aed78b636b429650170f7391dd644c6ee"
+permissions = ["Access cloud.linkwarden.app", "Access localhost", "Access 127.0.0.1", "Access linkding", "Access linkwarden", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read the clipboard"]
+commands = ["Search Bookmarks", "Save Bookmark"]
+categories = ["productivity"]
+

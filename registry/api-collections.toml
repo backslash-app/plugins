@@ -1,0 +1,14 @@
+id = "api-collections"
+title = "API Collections"
+description = "Run the requests of your Bruno collections, .http/.rest files and Hurl files: environments, variables, formatted responses and curl"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/api-collections"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:e4c62a7765ea4dbb1e2da13666e9ab1f4193b4c731aa7af656a3ae7298925266"
+permissions = ["Access any website", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Read the environment variable HOME"]
+commands = ["API Requests", "API Collections"]
+categories = ["developer"]
+

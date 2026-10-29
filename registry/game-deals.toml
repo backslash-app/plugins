@@ -1,0 +1,14 @@
+id = "game-deals"
+title = "Game Deals"
+description = "PC game deals from 30 stores with savings, Metacritic and Steam reviews, free games on Epic and GamerPower giveaways, and a wishlist that tells you when a price drops"
+author = "Backslash"
+icon = "bs-gamepad"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/game-deals"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:49f0e49a63d730f82314bb143ed2b9ecb0897310aece65c03fb5cefa6f9b03a1"
+permissions = ["Access www.cheapshark.com", "Access cdn.cloudflare.steamstatic.com", "Access shared.cloudflare.steamstatic.com", "Access shared.fastly.steamstatic.com", "Access shared.akamai.steamstatic.com", "Access cdn.akamai.steamstatic.com", "Access steamcdn-a.akamaihd.net", "Access images.gog-statics.com", "Access hb.imgix.net", "Access store-site-backend-static.ak.epicgames.com", "Access cdn1.epicgames.com", "Access cdn2.unrealengine.com", "Access www.gamerpower.com", "Run notify-send", "Run “Check Game Wishlist” in the background every 6 hours"]
+commands = ["Game Deals", "Free Games", "Game Wishlist", "Check Game Wishlist"]
+categories = ["media"]
+

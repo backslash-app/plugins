@@ -1,0 +1,14 @@
+id = "serverless-databases"
+title = "Serverless Databases"
+description = "Your Neon, Turso and PlanetScale databases in one list: branches, computes, groups and deploy requests; copy connection URIs and create tokens"
+author = "Backslash"
+icon = "bs-database"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/serverless-databases"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:b8118c47b9edca7a04520971a9163092973994e86a9517607e34cb0ef10614d0"
+permissions = ["Access console.neon.tech", "Access api.turso.tech", "Access api.planetscale.com"]
+commands = ["Serverless Databases"]
+categories = ["developer"]
+

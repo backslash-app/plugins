@@ -1,0 +1,14 @@
+id = "domains"
+title = "Domains"
+description = "Your Porkbun, Gandi, OVHcloud and Namecheap domains by expiry with their auto-renew, and their DNS records: add, edit and delete"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/domains"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:59816fca25aa2a282902b762e4f79ecb9d473f2de378686e1c0c9ac23f02c410"
+permissions = ["Access api.porkbun.com", "Access api.gandi.net", "Access eu.api.ovh.com", "Access ca.api.ovh.com", "Access api.us.ovhcloud.com", "Access api.namecheap.com"]
+commands = ["Domains", "Domain DNS Records"]
+categories = ["network"]
+

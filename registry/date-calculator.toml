@@ -1,0 +1,14 @@
+id = "date-calculator"
+title = "Date Calculator"
+description = "Days until a date, date plus or minus days, weeks and months, working days with French public holidays, ISO weeks, in English or French"
+author = "Backslash"
+icon = "bs-calendar"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/date-calculator"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:d7eb3797a7fd08a295794221e86451f56a8d1f18de3f857e6f171328eb5dba51"
+permissions = []
+commands = ["Date Calculator", "Copy Week Number"]
+categories = ["everyday"]
+

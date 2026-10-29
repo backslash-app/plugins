@@ -1,0 +1,14 @@
+id = "feature-flags"
+title = "Feature Flags"
+description = "LaunchDarkly, Unleash, Flagsmith and GrowthBook flags in one list with their state in each environment; toggle them, with a confirmation in production"
+author = "Backslash"
+icon = "bs-flag"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/feature-flags"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:e09e6af7239e13888cc2ba3d3e2f576b42e330d6dae58449f967520011748526"
+permissions = ["Access any website", "Access app.launchdarkly.com", "Access api.flagsmith.com", "Access api.growthbook.io"]
+commands = ["Feature Flags"]
+categories = ["developer"]
+
