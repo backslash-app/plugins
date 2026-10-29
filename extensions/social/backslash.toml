@@ -1,0 +1,114 @@
+[extension]
+id = "social"
+title = "Mastodon & Bluesky"
+description = "Your Mastodon and Bluesky timelines and notifications in one list; boost, like and reply, and write a post once for one or both networks with live character counts"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-comment"
+license = "MIT"
+categories = ["network"]
+
+# Any host: Mastodon is federated and your instance can be any domain
+# (mastodon.social, fosstodon.org, your own); Bluesky accounts live on a
+# personal data server (bsky.social's network or a self-hosted PDS) found
+# when signing in, and avatars and pictures come from each server's media
+# host. The extension only talks to your instance and your PDS, with your
+# token and app password.
+[permissions]
+net = ["*"]
+
+[[commands]]
+name = "timeline"
+title = "Social Timeline"
+description = "Your Mastodon home timeline and Bluesky following feed, newest first; boost, like, reply"
+icon = "bs-comment"
+keywords = [
+  "mastodon",
+  "bluesky",
+  "bsky",
+  "fediverse",
+  "timeline",
+  "feed",
+  "toots",
+  "posts",
+  "social",
+  "fil",
+  "fil d'actualité",
+  "réseaux sociaux",
+  "pouets",
+]
+
+[[commands]]
+name = "notifications"
+title = "Social Notifications"
+description = "Mentions, replies, boosts, likes and follows from Mastodon and Bluesky"
+icon = "bs-bell"
+keywords = [
+  "mastodon",
+  "bluesky",
+  "notifications",
+  "mentions",
+  "replies",
+  "likes",
+  "boosts",
+  "follows",
+  "réponses",
+  "abonnés",
+  "mentions",
+]
+
+[[commands]]
+name = "post"
+title = "Post to Mastodon & Bluesky"
+description = "Type your post: counters show it against Mastodon's 500 and Bluesky's 300 characters; post to one or both"
+icon = "bs-arrow-right"
+keywords = [
+  "mastodon",
+  "bluesky",
+  "post",
+  "toot",
+  "skeet",
+  "write",
+  "share",
+  "publish",
+  "compose",
+  "publier",
+  "poster",
+  "écrire",
+  "partager",
+  "pouet",
+]
+
+[[preferences]]
+name = "mastodonInstance"
+title = "Mastodon instance"
+description = "The server of your account, e.g. mastodon.social or fosstodon.org"
+
+[[preferences]]
+name = "mastodonToken"
+title = "Mastodon access token"
+description = "Preferences → Development → New application with the read, write:statuses and write:favourites scopes; copy “Your access token”"
+type = "secret"
+
+[[preferences]]
+name = "mastodonVisibility"
+title = "Default visibility"
+description = "For new Mastodon posts: public, unlisted, private (followers only) or direct"
+default = "public"
+
+[[preferences]]
+name = "blueskyHandle"
+title = "Bluesky handle"
+description = "e.g. ada.bsky.social, or your own domain"
+
+[[preferences]]
+name = "blueskyPassword"
+title = "Bluesky app password"
+description = "Bluesky → Settings → Privacy and security → App passwords → Add (not your account password)"
+type = "secret"
+
+[[preferences]]
+name = "blueskyService"
+title = "Bluesky server"
+description = "Where you sign in: https://bsky.social, or your own PDS"
+default = "https://bsky.social"
