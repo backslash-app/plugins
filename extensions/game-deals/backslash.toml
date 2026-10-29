@@ -1,0 +1,103 @@
+[extension]
+id = "game-deals"
+title = "Game Deals"
+description = "PC game deals from 30 stores with savings, Metacritic and Steam reviews, free games on Epic and GamerPower giveaways, and a wishlist that tells you when a price drops"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-gamepad"
+license = "MIT"
+categories = ["media"]
+
+# CheapShark (www.cheapshark.com) compares the prices of 30 stores, and serves
+# their icons. Pictures of the games come from Steam's CDN, GOG and Humble's
+# image hosts. Epic's free games come from its store backend, with pictures
+# on cdn1.epicgames.com and cdn2.unrealengine.com; giveaways from GamerPower.
+# notify-send shows a desktop notification when the wishlist check finds a
+# price at or below your target while the launcher is closed.
+[permissions]
+net = [
+  "www.cheapshark.com",
+  "cdn.cloudflare.steamstatic.com",
+  "shared.cloudflare.steamstatic.com",
+  "shared.fastly.steamstatic.com",
+  "shared.akamai.steamstatic.com",
+  "cdn.akamai.steamstatic.com",
+  "steamcdn-a.akamaihd.net",
+  "images.gog-statics.com",
+  "hb.imgix.net",
+  "store-site-backend-static.ak.epicgames.com",
+  "cdn1.epicgames.com",
+  "cdn2.unrealengine.com",
+  "www.gamerpower.com",
+]
+run = ["notify-send"]
+
+[[commands]]
+name = "deals"
+title = "Game Deals"
+description = "Today's best PC game deals; type a game to compare its price in every store"
+icon = "bs-gamepad"
+keywords = [
+  "game deals",
+  "deals",
+  "sales",
+  "discount",
+  "cheap games",
+  "steam sale",
+  "cheapshark",
+  "price",
+  "promo",
+  "soldes",
+  "jeux",
+  "réduction",
+  "bons plans",
+  "prix",
+]
+
+[[commands]]
+name = "free"
+title = "Free Games"
+description = "Games free to keep on the Epic Games Store this week and next, and current giveaways"
+icon = "bs-sparkle"
+keywords = ["free games", "epic", "epic games", "giveaway", "gamerpower", "free", "jeux gratuits", "gratuit", "cadeau"]
+
+[[commands]]
+name = "wishlist"
+title = "Game Wishlist"
+description = "The games you watch with their best price and your target"
+icon = "bs-heart"
+keywords = ["wishlist", "games", "price alert", "watch", "target price", "liste de souhaits", "alerte prix", "jeux"]
+
+[[commands]]
+name = "check"
+title = "Check Game Wishlist"
+description = "Checks your wishlist's prices every 6 hours and tells you when a game reaches your price"
+icon = "bs-bell"
+mode = "no-view"
+interval = "6h"
+keywords = ["wishlist", "price", "check", "alert", "notify", "vérifier", "alerte", "prix"]
+
+[[preferences]]
+name = "stores"
+title = "Stores"
+description = "Only deals from these stores, separated by commas: Steam, GOG, Humble Store, Fanatical… (empty: all)"
+
+[[preferences]]
+name = "maxPrice"
+title = "Maximum price (USD)"
+description = "Hide deals above this price (0: no limit)"
+type = "number"
+default = 0
+
+[[preferences]]
+name = "platform"
+title = "Giveaway platform"
+description = "pc (default), steam, epic-games-store, gog, itchio, ps5, xbox-series-xs, switch, android, ios or all"
+default = "pc"
+
+[[preferences]]
+name = "notify"
+title = "Desktop notifications"
+description = "Notify when a wishlist game reaches your price"
+type = "boolean"
+default = true

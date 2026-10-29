@@ -1,0 +1,56 @@
+[extension]
+id = "lyrics"
+title = "Lyrics"
+description = "Synced lyrics of the song playing in Spotify, your browser or any MPRIS player, the current line highlighted as it plays, from LRCLIB"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-music"
+license = "MIT"
+categories = ["media"]
+
+# LRCLIB (lrclib.net) is a free lyrics database, asked once per song; the
+# answers are kept in the extension's storage. playerctl reads the title,
+# artist and position of the MPRIS player playing, and drives it (pause, next,
+# jump to a line). /etc/os-release picks the install command to suggest.
+[permissions]
+net = ["lrclib.net"]
+run = ["playerctl"]
+read = ["/etc/os-release"]
+
+[[commands]]
+name = "lyrics"
+title = "Lyrics"
+description = "The lyrics of the song playing, following along line by line"
+icon = "bs-music"
+keywords = [
+  "lyrics",
+  "song",
+  "karaoke",
+  "words",
+  "synced lyrics",
+  "lrc",
+  "now playing",
+  "spotify",
+  "paroles",
+  "chanson",
+  "karaoké",
+]
+
+[[commands]]
+name = "search"
+title = "Search Lyrics"
+description = "Find the lyrics of any song by title and artist"
+icon = "bs-search"
+keywords = ["lyrics", "search", "song", "lrclib", "find lyrics", "paroles", "chercher", "rechercher", "chanson"]
+
+[[preferences]]
+name = "player"
+title = "Preferred player"
+description = "Follow this player first when several play: spotify, firefox, mpv, vlc… (empty: the one playing)"
+
+[[preferences]]
+name = "offset"
+title = "Lyrics offset (ms)"
+description = "Show lines earlier (positive) or later (negative), for players that report their position late"
+type = "number"
+default = 0
