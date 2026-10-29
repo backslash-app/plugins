@@ -1,0 +1,57 @@
+[extension]
+id = "trending"
+title = "Trending"
+description = "Trending GitHub repositories by language with today's stars, the hottest and newest Lobsters stories, and DEV's top articles, with descriptions and tags"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-chart-up"
+license = "MIT"
+categories = ["developer"]
+
+# github.com/trending (an HTML page, there is no API) and the avatars of the people
+# who built the repositories; lobste.rs's JSON pages; DEV's public API and the host of
+# its profile pictures.
+[permissions]
+net = ["github.com", "avatars.githubusercontent.com", "lobste.rs", "dev.to", "media2.dev.to"]
+
+[[commands]]
+name = "github"
+title = "GitHub Trending"
+description = "Repositories trending today, this week or this month, in your languages, with the stars they gained"
+icon = "bs-star"
+keywords = [
+  "github",
+  "trending",
+  "repositories",
+  "repos",
+  "stars",
+  "popular",
+  "open source",
+  "tendances",
+  "populaires",
+  "dépôts",
+]
+
+[[commands]]
+name = "lobsters"
+title = "Lobsters"
+description = "Hottest, newest and active stories from lobste.rs, with score, comments and tags"
+icon = "bs-arrow-up"
+keywords = ["lobsters", "lobste.rs", "news", "stories", "tech", "programming", "actualités", "informatique"]
+
+[[commands]]
+name = "dev-to"
+title = "DEV Top Articles"
+description = "Top dev.to articles of the week, month or year, with reactions, comments and reading time"
+icon = "bs-book"
+keywords = ["dev.to", "dev", "devto", "articles", "blog", "top", "tutorial", "programming", "tutoriel", "billets"]
+
+[[preferences]]
+name = "languages"
+title = "GitHub languages"
+description = "Optional, comma-separated (rust, typescript, c++, jupyter notebook). Empty: every language"
+
+[[preferences]]
+name = "devtoTag"
+title = "DEV tag"
+description = "Optional: only articles with this tag (javascript, rust, webdev…)"
