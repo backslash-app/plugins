@@ -1,0 +1,14 @@
+id = "certificates"
+title = "Certificates"
+description = "Inspect the TLS chain of a server or a certificate file, list local certificates by expiry with their names, issuer, key and fingerprints, and make new ones with mkcert"
+author = "Backslash"
+icon = "bs-shield"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/certificates"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:05e6d742b987478d979156f349dc6c6eb68f572720d85dbcccfca72d4795bbc4"
+permissions = ["Run openssl", "Run mkcert", "Run mkdir", "Read ~/.local/share/mkcert", "Read ~/certs", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/src", "Read ~/dev", "Read ~/Developer", "Read ~/work", "Read ~/git", "Read ~/repos", "Read the environment variable HOME", "Read the environment variable CAROOT", "Read the clipboard"]
+commands = ["Inspect TLS Certificate", "Inspect Certificate File", "Local Certificates", "Generate Local Certificate"]
+categories = ["developer"]
+

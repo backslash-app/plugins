@@ -1,0 +1,14 @@
+id = "mealie"
+title = "Mealie & Grocy"
+description = "Your Mealie recipes with ingredients and steps, this week's meal plan and shopping lists, and your Grocy stock: what expires, what is missing, consume and open"
+author = "Backslash"
+icon = "bs-coffee"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/mealie"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:02d4fd5f4f079eafb0d80bf6fc944fb908a5952ff937f59c120680ac49669332"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access mealie", "Access grocy", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Search Recipes", "Meal Plan", "Shopping List", "Grocy Stock"]
+categories = ["everyday"]
+

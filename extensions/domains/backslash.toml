@@ -1,0 +1,114 @@
+[extension]
+id = "domains"
+title = "Domains"
+description = "Your Porkbun, Gandi, OVHcloud and Namecheap domains by expiry with their auto-renew, and their DNS records: add, edit and delete"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+categories = ["network"]
+
+# The registrars' APIs, each called only when its keys are set: Porkbun,
+# Gandi (domains and LiveDNS), OVHcloud's Europe, Canada and US endpoints, and
+# Namecheap. Same list as HOSTS in api.ts.
+[permissions]
+net = [
+  "api.porkbun.com",
+  "api.gandi.net",
+  "eu.api.ovh.com",
+  "ca.api.ovh.com",
+  "api.us.ovhcloud.com",
+  "api.namecheap.com",
+]
+
+[[commands]]
+name = "domains"
+title = "Domains"
+description = "Every domain of your registrars, soonest expiry first, with auto-renew and lock: DNS records, open, copy"
+icon = "bs-globe"
+keywords = [
+  "domain",
+  "domains",
+  "registrar",
+  "expiry",
+  "renew",
+  "porkbun",
+  "gandi",
+  "ovh",
+  "namecheap",
+  "whois",
+  "domaine",
+  "nom de domaine",
+  "renouvellement",
+  "expiration",
+]
+
+[[commands]]
+name = "dns"
+title = "Domain DNS Records"
+description = "The records of all your domains on their registrar's DNS: add, edit, delete, copy as zone file lines"
+icon = "bs-layers"
+keywords = ["dns", "record", "a", "aaaa", "cname", "mx", "txt", "zone", "porkbun", "gandi", "livedns", "ovh", "namecheap", "enregistrement", "zone dns"]
+
+[[preferences]]
+name = "porkbunApiKey"
+title = "Porkbun API key"
+description = "porkbun.com → Account → API Access → Create API Key (pk1_…); turn on API Access for each domain"
+type = "secret"
+
+[[preferences]]
+name = "porkbunSecretKey"
+title = "Porkbun secret API key"
+description = "Shown with the API key (sk1_…)"
+type = "secret"
+
+[[preferences]]
+name = "gandiToken"
+title = "Gandi personal access token"
+description = "admin.gandi.net → Organizations → Personal Access Tokens: domains (read, renew) and technical configuration (LiveDNS)"
+type = "secret"
+
+[[preferences]]
+name = "ovhEndpoint"
+title = "OVHcloud endpoint"
+description = "eu (OVHcloud Europe), ca (Canada) or us (US)"
+default = "eu"
+
+[[preferences]]
+name = "ovhAppKey"
+title = "OVHcloud application key"
+description = "From eu.api.ovh.com/createToken with GET, POST, PUT and DELETE on /domain/*"
+type = "secret"
+
+[[preferences]]
+name = "ovhAppSecret"
+title = "OVHcloud application secret"
+type = "secret"
+
+[[preferences]]
+name = "ovhConsumerKey"
+title = "OVHcloud consumer key"
+type = "secret"
+
+[[preferences]]
+name = "namecheapUser"
+title = "Namecheap user name"
+description = "Your Namecheap account name"
+
+[[preferences]]
+name = "namecheapApiKey"
+title = "Namecheap API key"
+description = "Profile → Tools → API Access"
+type = "secret"
+
+[[preferences]]
+name = "namecheapClientIp"
+title = "Namecheap whitelisted IP"
+description = "Your public IPv4 address, whitelisted in API Access (Namecheap requires it with every call)"
+
+[[preferences]]
+name = "warnDays"
+title = "Expiry warning (days)"
+description = "Domains expiring in fewer days than this are shown first"
+type = "number"
+default = 30

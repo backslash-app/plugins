@@ -1,0 +1,100 @@
+[extension]
+id = "linkding"
+title = "Linkding & Linkwarden"
+description = "Search your Linkding or Linkwarden bookmarks with their tags and descriptions; save the copied link, open, copy, archive and delete"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bookmark"
+license = "MIT"
+categories = ["productivity"]
+
+# Bookmark managers run on your own server, and hosts must be declared ahead
+# (as the Immich and Paperless-ngx extensions do): cloud.linkwarden.app
+# (hosted Linkwarden), this computer, local and container names, private IPv4
+# ranges (Deno's --allow-net accepts CIDR), Tailscale and DuckDNS. A server on
+# a custom public domain is not reachable: use its local or Tailscale address.
+# Same list as HOSTS in lib.ts (a test checks it). The clipboard is read only
+# by Save Bookmark, when it is run without a link, to save the one you copied.
+[permissions]
+net = [
+  "cloud.linkwarden.app",
+  "localhost",
+  "127.0.0.1",
+  "linkding",
+  "linkwarden",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+clipboard-read = true
+
+[[commands]]
+name = "search"
+title = "Search Bookmarks"
+description = "Linkding or Linkwarden bookmarks by title, description, tag (#tag); paste a link to save it"
+icon = "bs-bookmark"
+keywords = [
+  "linkding",
+  "linkwarden",
+  "bookmarks",
+  "bookmark",
+  "links",
+  "tags",
+  "favoris",
+  "marque-pages",
+  "signets",
+  "liens",
+  "rechercher",
+  "archive",
+]
+
+[[commands]]
+name = "save"
+title = "Save Bookmark"
+description = "Saves a link, or the one on the clipboard, to Linkding or Linkwarden"
+icon = "bs-plus"
+mode = "no-view"
+keywords = [
+  "linkding",
+  "linkwarden",
+  "save",
+  "add",
+  "bookmark",
+  "link",
+  "clipboard",
+  "enregistrer",
+  "ajouter",
+  "favori",
+  "marque-page",
+]
+[[commands.arguments]]
+name = "url"
+placeholder = "https://… (or the clipboard)"
+[[commands.arguments]]
+name = "tags"
+placeholder = "Tags (optional)"
+
+[[preferences]]
+name = "backend"
+title = "Service"
+description = "linkding or linkwarden; empty: Linkding, or Linkwarden when the address says so"
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open it in the browser, e.g. http://links.home.lan:9090; empty for cloud.linkwarden.app"
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "Linkding → Settings → Integrations → REST API; Linkwarden → Settings → Access Tokens"
+type = "secret"
+required = true

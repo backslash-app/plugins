@@ -1,0 +1,93 @@
+[extension]
+id = "feature-flags"
+title = "Feature Flags"
+description = "LaunchDarkly, Unleash, Flagsmith and GrowthBook flags in one list with their state in each environment; toggle them, with a confirmation in production"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-flag"
+license = "MIT"
+categories = ["developer"]
+
+# LaunchDarkly, Flagsmith and GrowthBook clouds are fixed hosts. Unleash, and
+# self-hosted Flagsmith or GrowthBook, run on your own servers at any address chosen in
+# the preferences, so their host can't be listed ahead, hence "*": the extension only
+# calls the addresses you set.
+[permissions]
+net = ["*", "app.launchdarkly.com", "api.flagsmith.com", "api.growthbook.io"]
+
+[[commands]]
+name = "flags"
+title = "Feature Flags"
+description = "Flags of every provider you connected, with their state per environment: toggle, open, copy the key"
+icon = "bs-flag"
+keywords = [
+  "feature flags",
+  "feature toggle",
+  "flag",
+  "toggle",
+  "launchdarkly",
+  "unleash",
+  "flagsmith",
+  "growthbook",
+  "rollout",
+  "drapeau",
+  "fonctionnalité",
+  "bascule",
+  "activer",
+]
+
+[[preferences]]
+name = "launchdarklyToken"
+title = "LaunchDarkly access token"
+description = "Organization settings → Authorization → Create token (role Writer to toggle flags)"
+type = "secret"
+
+[[preferences]]
+name = "launchdarklyProject"
+title = "LaunchDarkly project key"
+description = "Project keys, comma-separated (Account settings → Projects)"
+default = "default"
+
+[[preferences]]
+name = "unleashUrl"
+title = "Unleash address"
+description = "Your Unleash server, e.g. https://unleash.example.com (without /api)"
+
+[[preferences]]
+name = "unleashToken"
+title = "Unleash token"
+description = "Profile → Personal API tokens (or an admin API token)"
+type = "secret"
+
+[[preferences]]
+name = "unleashProject"
+title = "Unleash projects"
+description = "Project IDs, comma-separated"
+default = "default"
+
+[[preferences]]
+name = "flagsmithKey"
+title = "Flagsmith organisation API key"
+description = "Organisation settings → API Keys → Create API Key"
+type = "secret"
+
+[[preferences]]
+name = "flagsmithProject"
+title = "Flagsmith project ID"
+description = "The number in your Flagsmith URLs: /project/<id>/…; comma-separated for several"
+
+[[preferences]]
+name = "flagsmithUrl"
+title = "Flagsmith API address"
+description = "Self-hosted only, e.g. https://flagsmith.example.com/api/v1 (default https://api.flagsmith.com/api/v1)"
+
+[[preferences]]
+name = "growthbookKey"
+title = "GrowthBook secret key"
+description = "Settings → API Keys → New secret key (role Engineer or Admin to toggle)"
+type = "secret"
+
+[[preferences]]
+name = "growthbookUrl"
+title = "GrowthBook API address"
+description = "Self-hosted only, e.g. https://growthbook-api.example.com (default https://api.growthbook.io)"

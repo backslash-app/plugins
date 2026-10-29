@@ -1,0 +1,48 @@
+[extension]
+id = "checksums"
+title = "Checksums & Signatures"
+description = "SHA-256, SHA-512, SHA-1, MD5 and BLAKE2 of the files copied in your file manager, checked against SHA256SUMS files, a copied hash and GPG signatures"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-hash"
+license = "MIT"
+categories = ["system"]
+
+# The coreutils hash programs compute the checksums (sha256sum, sha512sum,
+# sha1sum, md5sum, b2sum); gpg checks signatures and, when asked, fetches a
+# missing public key from keys.openpgp.org. Files copied in the file manager
+# are read with wl-paste (Wayland) or xclip (X11) as text/uri-list; reading the
+# clipboard also finds a hash copied from a download page.
+[permissions]
+run = ["sha256sum", "sha512sum", "sha1sum", "md5sum", "b2sum", "gpg", "wl-paste", "xclip"]
+# Copied files can be anywhere in the home folder or on a mounted drive: read to
+# find the SHA256SUMS and signature files next to them, and to list Downloads.
+read = ["~", "/media", "/run/media", "/mnt"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "checksums"
+title = "Checksums & Signatures"
+description = "Copied files: their hashes, checked against SHA256SUMS, a copied hash and .sig or .asc signatures"
+icon = "bs-hash"
+keywords = [
+  "checksum",
+  "somme de contrôle",
+  "hash",
+  "empreinte",
+  "sha256",
+  "sha512",
+  "sha1",
+  "md5",
+  "blake2",
+  "sha256sums",
+  "verify",
+  "vérifier",
+  "gpg",
+  "pgp",
+  "signature",
+  "iso",
+  "integrity",
+  "intégrité",
+]

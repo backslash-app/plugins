@@ -1,0 +1,98 @@
+[extension]
+id = "encrypt"
+title = "Encrypt"
+description = "Encrypt the files or text you copied with age or GPG for your recipients or a passphrase, and decrypt .age and .gpg files, keeping secrets out of clipboard history"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-lock"
+license = "MIT"
+categories = ["system"]
+
+# age and gpg encrypt and decrypt; age-keygen gives the public keys of your
+# own identity, to encrypt to yourself too. A passphrase is typed in a
+# terminal (age and gpg ask for it there, never Backslash). Files copied in the
+# file manager are read with wl-paste (Wayland) or xclip (X11) as
+# text/uri-list. Results are written next to the originals, never over a file.
+[permissions]
+run = [
+  "age",
+  "age-keygen",
+  "gpg",
+  "wl-paste",
+  "xclip",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+# Copied files can be anywhere in the home folder or on a mounted drive; SSH
+# public keys are read from ~/.ssh and the age identity from its file: read to
+# list them and to never overwrite a file, write to remove a partial output
+# when encrypting or decrypting fails.
+read = ["~", "/media", "/run/media", "/mnt"]
+write = ["~", "/media", "/run/media", "/mnt"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "encrypt"
+title = "Encrypt"
+description = "Copied files and text: encrypt with age or GPG, decrypt .age, .gpg and .asc files and messages"
+icon = "bs-lock"
+keywords = [
+  "encrypt",
+  "chiffrer",
+  "crypter",
+  "decrypt",
+  "déchiffrer",
+  "age",
+  "gpg",
+  "pgp",
+  "openpgp",
+  "gnupg",
+  "secret",
+  "passphrase",
+  "phrase de passe",
+  "ssh key",
+  "clé",
+]
+
+[[preferences]]
+name = "age_recipients"
+title = "age recipients"
+description = "age public keys (age1…) or SSH public keys to encrypt to, one per line or separated by commas; name them with # after the key: age1… # Alice"
+default = ""
+
+[[preferences]]
+name = "age_identity"
+title = "age identity"
+description = "Your age secret key file for decrypting. Leave empty to use ~/.config/age/keys.txt, then ~/.ssh/id_ed25519 and ~/.ssh/id_rsa"
+default = ""
+
+[[preferences]]
+name = "encrypt_to_self"
+title = "Encrypt to myself too"
+description = "Add your own age identity or GPG key as a recipient, so you can open what you encrypt"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "armor"
+title = "Armored files"
+description = "Write encrypted files as text (age -a, gpg --armor .asc) instead of binary"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For typing a passphrase. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"
+default = ""

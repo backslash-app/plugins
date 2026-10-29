@@ -1,0 +1,55 @@
+[extension]
+id = "bottles"
+title = "Bottles & Wine"
+description = "Run the Windows programs of your Bottles and Wine prefixes, open winecfg, winetricks and Wine's tools, or run an .exe"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-box"
+license = "MIT"
+categories = ["system"]
+
+# Bottles (native or Flatpak) are read from their bottle.yml files, plain Wine prefixes
+# from ~/.wine and winetricks' ~/.local/share/wineprefixes, and the programs Wine put in
+# the menu from ~/.local/share/applications/wine. Programs start through systemd-run so
+# they outlive the launcher: bottles-cli (or `flatpak run --command=bottles-cli`), wine,
+# winetricks, or gio for Wine's menu entries. wineserver stops a prefix's programs.
+# The clipboard is read for "Run .exe from Clipboard", when you pick it.
+[permissions]
+read = [
+  "~/.local/share/bottles/bottles",
+  "~/.var/app/com.usebottles.bottles/data/bottles/bottles",
+  "~/.wine",
+  "~/.local/share/wineprefixes",
+  "~/.local/share/applications/wine",
+]
+run = ["systemd-run", "bottles-cli", "bottles", "flatpak", "wine", "winetricks", "wineserver", "gio"]
+env = ["HOME"]
+clipboard-read = true
+
+[[commands]]
+name = "bottles"
+title = "Bottles & Wine"
+description = "Your bottles, their programs and your Wine prefixes"
+icon = "bs-box"
+keywords = [
+  "bottles",
+  "bouteilles",
+  "wine",
+  "windows",
+  "exe",
+  "winecfg",
+  "winetricks",
+  "wineprefix",
+  "proton",
+  "programme windows",
+  "logiciel windows",
+  "jeux windows",
+  "lutris",
+]
+
+[[commands]]
+name = "run-exe"
+title = "Run Windows Program"
+description = "Run an .exe or .msi in a bottle or a Wine prefix (the copied file by default)"
+icon = "bs-play"
+keywords = ["exe", "msi", "wine", "bottles", "windows", "run", "lancer", "exécuter", "installer", "setup", "programme windows"]

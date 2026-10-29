@@ -1,0 +1,63 @@
+[extension]
+id = "date-calculator"
+title = "Date Calculator"
+description = "Days until a date, date plus or minus days, weeks and months, working days with French public holidays, ISO weeks, in English or French"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calendar"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: everything is computed locally, French public holidays
+# included (Easter, Ascension and Whit Monday are computed from the year).
+
+[[commands]]
+name = "calculate"
+title = "Date Calculator"
+description = "Type “days until 2026-12-25”, “2026-03-01 + 45 days”, “working days in may”, “week 42” or “dans 3 semaines”"
+icon = "bs-calendar"
+keywords = [
+  "date",
+  "days until",
+  "days between",
+  "add days",
+  "working days",
+  "business days",
+  "week number",
+  "iso week",
+  "weekday",
+  "what day",
+  "countdown",
+  "calendar",
+  "holidays",
+  "calcul de date",
+  "jours ouvrés",
+  "jours ouvrables",
+  "jours entre",
+  "nombre de jours",
+  "numéro de semaine",
+  "semaine",
+  "quel jour",
+  "dans",
+  "jours fériés",
+]
+
+[[commands]]
+name = "week-number"
+title = "Copy Week Number"
+description = "Copy this week's ISO number and see its dates"
+icon = "bs-hash"
+mode = "no-view"
+keywords = ["week", "week number", "iso week", "semaine", "numéro de semaine", "n° de semaine"]
+
+[[preferences]]
+name = "holidays"
+title = "Public holidays"
+description = "Days off for working days: france (the 11 national holidays), alsace (plus Good Friday and 26 December, Alsace-Moselle) or none"
+default = "france"
+
+[[preferences]]
+name = "dateOrder"
+title = "Numeric dates"
+description = "How to read 03/04/2027: dmy (3 April, day first) or mdy (March 4, month first)"
+default = "dmy"

@@ -1,0 +1,85 @@
+[extension]
+id = "vikunja"
+title = "Vikunja"
+description = "Overdue, today's and upcoming Vikunja tasks by project; complete, reschedule, and quick add with Vikunja's *label +project !priority magic"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-square-check"
+license = "MIT"
+categories = ["productivity"]
+
+# Vikunja runs on your own server, and hosts must be declared ahead (as the
+# Immich and Paperless-ngx extensions do): app.vikunja.cloud (Vikunja Cloud),
+# this computer, local and container names, private IPv4 ranges (Deno's
+# --allow-net accepts CIDR), Tailscale and DuckDNS. A server on a custom
+# public domain is not reachable: use its local or Tailscale address.
+# Same list as HOSTS in lib.ts (a test checks it).
+[permissions]
+net = [
+  "app.vikunja.cloud",
+  "localhost",
+  "127.0.0.1",
+  "vikunja",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "tasks"
+title = "Vikunja Tasks"
+description = "Overdue and today's tasks, the next 7 days, or all by project; Enter completes"
+icon = "bs-square-check"
+keywords = [
+  "vikunja",
+  "tasks",
+  "todo",
+  "to-do",
+  "today",
+  "overdue",
+  "upcoming",
+  "projects",
+  "tâches",
+  "aujourd'hui",
+  "en retard",
+  "à faire",
+  "projets",
+]
+
+[[commands]]
+name = "add"
+title = "Add Vikunja Task"
+description = "Quick add magic: “Call Bob tomorrow at 15:00 *phone +Work !3”"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["vikunja", "add", "new", "task", "quick add", "todo", "ajouter", "nouvelle tâche", "créer"]
+[[commands.arguments]]
+name = "task"
+placeholder = "Call Bob tomorrow at 15:00 *phone +Work !3"
+required = true
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open Vikunja in the browser, e.g. https://app.vikunja.cloud or http://tasks.home.lan:3456"
+required = true
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "Vikunja → Settings → API Tokens, with the tasks, projects and labels permissions"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "project"
+title = "Default project"
+description = "Where tasks without +project go; empty: your default project in Vikunja"

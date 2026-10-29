@@ -1,0 +1,14 @@
+id = "sql-scratchpad"
+title = "SQL Scratchpad"
+description = "Saved SQL queries run on your PostgreSQL, MySQL and SQLite databases, read-only unless you confirm; results as a table, copied or saved as CSV, JSON or Markdown"
+author = "Backslash"
+icon = "bs-database"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/sql-scratchpad"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:bb61bd8404d898b53f83019c640cd1aeeb78808103f28c2b25481b4013008ab8"
+permissions = ["Run psql", "Run mysql", "Run mariadb", "Run sqlite3", "Read ~/.local/share/sql-scratchpad", "Write ~/.local/share/sql-scratchpad", "Write ~/Downloads", "Read the environment variable HOME"]
+commands = ["SQL Queries", "New SQL Query", "SQL Connections"]
+categories = ["developer"]
+

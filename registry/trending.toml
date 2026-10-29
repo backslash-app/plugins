@@ -1,0 +1,14 @@
+id = "trending"
+title = "Trending"
+description = "Trending GitHub repositories by language with today's stars, the hottest and newest Lobsters stories, and DEV's top articles, with descriptions and tags"
+author = "Backslash"
+icon = "bs-chart-up"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/trending"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:cc19e86a5398ada414c067a4098d276405eb63a5bcb1b61ed24b1ae51f27419f"
+permissions = ["Access github.com", "Access avatars.githubusercontent.com", "Access lobste.rs", "Access dev.to", "Access media2.dev.to"]
+commands = ["GitHub Trending", "Lobsters", "DEV Top Articles"]
+categories = ["developer"]
+

@@ -1,0 +1,91 @@
+[extension]
+id = "mcp-servers"
+title = "MCP Servers"
+description = "The MCP servers of Claude Code, Cursor, VS Code, Zed, Claude Desktop, Windsurf, Cline, Codex and Gemini CLI in one list: test, copy, turn on or off"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-plug"
+license = "MIT"
+categories = ["developer"]
+
+[permissions]
+env = ["HOME"]
+# Each client's MCP configuration, and the .mcp.json, .cursor/mcp.json and
+# .vscode/mcp.json of projects in the usual code folders.
+read = [
+  "~/.claude.json",
+  "~/.config/Claude/claude_desktop_config.json",
+  "~/.cursor/mcp.json",
+  "~/.codeium/windsurf/mcp_config.json",
+  "~/.gemini/settings.json",
+  "~/.config/zed/settings.json",
+  "~/.codex/config.toml",
+  "~/.config/Code/User/mcp.json",
+  "~/.config/Code/User/settings.json",
+  "~/.config/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json",
+  "~/.config/Code - Insiders/User/mcp.json",
+  "~/.config/Code - Insiders/User/settings.json",
+  "~/.config/Code - Insiders/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json",
+  "~/.config/VSCodium/User/mcp.json",
+  "~/.config/VSCodium/User/settings.json",
+  "~/.config/VSCodium/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json",
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+]
+# Only to turn a server on or off, when you ask: Claude Code's project
+# approvals, Zed's "enabled", Windsurf's and Cline's "disabled". The rest of
+# each file is kept as it is, comments included.
+write = [
+  "~/.claude.json",
+  "~/.config/zed/settings.json",
+  "~/.codeium/windsurf/mcp_config.json",
+  "~/.config/Code/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json",
+  "~/.config/Code - Insiders/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json",
+  "~/.config/VSCodium/User/globalStorage/saoudrizwan.claude-dev/settings/cline_mcp_settings.json",
+]
+# Test Start launches a stdio server with its own launcher for a few seconds
+# (initialize, list its tools, stop), and calls HTTP servers on this machine.
+run = ["npx", "node", "uvx", "uv", "python3", "python", "docker", "deno", "bunx", "bun", "pnpm"]
+net = ["localhost", "127.0.0.1"]
+
+[[commands]]
+name = "servers"
+title = "MCP Servers"
+description = "Every configured MCP server with its transport, command or URL, masked env and the clients using it"
+icon = "bs-plug"
+keywords = [
+  "mcp",
+  "model context protocol",
+  "mcp server",
+  "claude code",
+  "claude desktop",
+  "cursor",
+  "vscode",
+  "zed",
+  "windsurf",
+  "cline",
+  "codex",
+  "gemini",
+  "context servers",
+  "tools",
+  "claude mcp add",
+  "serveurs mcp",
+  "outils",
+  "agent",
+  "ia",
+]
+
+[[preferences]]
+name = "projects"
+title = "More projects"
+description = "Folders to check for .mcp.json, .cursor/mcp.json and .vscode/mcp.json besides Claude Code's projects, separated by commas (inside ~/Projects, ~/code, ~/src…)"

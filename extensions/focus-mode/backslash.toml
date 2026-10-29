@@ -1,0 +1,119 @@
+[extension]
+id = "focus-mode"
+title = "Focus Mode"
+description = "Focus sessions that silence notifications, block distracting sites and set your Slack status, then undo it all on time, even with Backslash closed"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-eye-off"
+license = "MIT"
+categories = ["productivity"]
+
+# Do Not Disturb goes through the notification daemon's own tool (makoctl,
+# dunstctl, swaync-client, gsettings for GNOME and Cinnamon, xfconf-query for
+# Xfce), found with gdbus. The end of the session is a systemd user timer
+# (systemd-run, systemctl): it turns Do Not Disturb back off and notifies you
+# with notify-send. Blocking sites writes a marked block in /etc/hosts as root
+# through pkexec, which also schedules a root timer removing it at the end
+# (fixed script; only lines "0.0.0.0 domain" get in). /etc/hosts is read to show
+# what is blocked. slack.com is only called when you set a Slack token.
+[permissions]
+run = [
+  "systemd-run",
+  "systemctl",
+  "pkexec",
+  "gdbus",
+  "makoctl",
+  "dunstctl",
+  "swaync-client",
+  "gsettings",
+  "xfconf-query",
+]
+read = ["/etc/hosts"]
+net = ["slack.com"]
+env = ["XDG_CURRENT_DESKTOP", "WAYLAND_DISPLAY", "DISPLAY", "DBUS_SESSION_BUS_ADDRESS", "SWAYSOCK"]
+
+[[commands]]
+name = "focus"
+title = "Focus Mode"
+description = "Start a focus session, see the time left, stop it early"
+icon = "bs-eye-off"
+keywords = [
+  "focus",
+  "concentration",
+  "deep work",
+  "pomodoro",
+  "do not disturb",
+  "dnd",
+  "block sites",
+  "distractions",
+  "mode concentration",
+  "ne pas déranger",
+  "bloquer des sites",
+  "travail",
+]
+
+[[commands]]
+name = "start-focus"
+title = "Start Focus Session"
+description = "Focus for a number of minutes (default from the settings)"
+icon = "bs-play"
+mode = "no-view"
+keywords = ["focus", "start", "begin", "concentration", "démarrer", "commencer", "session"]
+[[commands.arguments]]
+name = "minutes"
+type = "number"
+min = 1
+max = 480
+placeholder = "Minutes"
+
+[[commands]]
+name = "stop-focus"
+title = "Stop Focus Session"
+description = "End the session now and undo what it changed"
+icon = "bs-stop"
+mode = "no-view"
+keywords = ["focus", "stop", "end", "arrêter", "terminer", "session"]
+
+[[preferences]]
+name = "minutes"
+title = "Session length (minutes)"
+description = "Used when no length is given"
+type = "number"
+default = 25
+
+[[preferences]]
+name = "dnd"
+title = "Turn on Do Not Disturb"
+description = "Silence desktop notifications during the session (mako, Dunst, SwayNC, GNOME, Xfce, Cinnamon)"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "block"
+title = "Block distracting sites"
+description = "Point the sites below at 0.0.0.0 in /etc/hosts during the session (asks for your password)"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "sites"
+title = "Sites to block"
+description = "Domains separated by commas or spaces; www. is added for you"
+default = "youtube.com, reddit.com, x.com, twitter.com, facebook.com, instagram.com, tiktok.com, news.ycombinator.com"
+
+[[preferences]]
+name = "slackToken"
+title = "Slack user token"
+description = "Optional: a user token (xoxp-…) with users.profile:read, users.profile:write and dnd:write to set your status and pause Slack notifications"
+type = "secret"
+
+[[preferences]]
+name = "slackStatus"
+title = "Slack status"
+description = "Shown on Slack during the session, until it ends"
+default = "Focusing"
+
+[[preferences]]
+name = "slackEmoji"
+title = "Slack status emoji"
+default = ":headphones:"

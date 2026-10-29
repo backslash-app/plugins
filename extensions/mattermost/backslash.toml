@@ -1,0 +1,91 @@
+[extension]
+id = "mattermost"
+title = "Mattermost & Zulip"
+description = "Your Mattermost channels or Zulip streams and direct messages, unread first; read the last messages, reply, mark read, set your status"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-comment"
+license = "MIT"
+categories = ["productivity"]
+
+# Any host: a Mattermost or Zulip server is made to be reached by a whole team,
+# so it lives on the team's own domain (chat.example.com, team.zulipchat.com,
+# a company's server) and no list of hosts can be written ahead, as for
+# Matrix. Requests only ever go to the server address set in Settings, with
+# your token.
+[permissions]
+net = ["*"]
+
+[[commands]]
+name = "channels"
+title = "Chat Channels"
+description = "Mattermost channels or Zulip streams and direct messages, mentions and unread first; read, reply, mark read"
+icon = "bs-comment"
+keywords = [
+  "mattermost",
+  "zulip",
+  "chat",
+  "channels",
+  "streams",
+  "messages",
+  "unread",
+  "dm",
+  "direct messages",
+  "team chat",
+  "canaux",
+  "discussion",
+  "messagerie",
+  "non lus",
+]
+
+[[commands]]
+name = "status"
+title = "Set Chat Status"
+description = "Mattermost availability, Do Not Disturb and custom status presets, or your Zulip status"
+icon = "bs-bell"
+keywords = [
+  "mattermost",
+  "zulip",
+  "status",
+  "statut",
+  "away",
+  "absent",
+  "do not disturb",
+  "ne pas déranger",
+  "dnd",
+  "in a meeting",
+  "en réunion",
+  "lunch",
+  "vacation",
+  "vacances",
+]
+
+[[preferences]]
+name = "backend"
+title = "Service"
+description = "mattermost or zulip; empty: Zulip when an email is set or the address says so, else Mattermost"
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open it in the browser, e.g. https://chat.example.com or https://team.zulipchat.com"
+required = true
+
+[[preferences]]
+name = "token"
+title = "Access token or API key"
+description = "Mattermost: Profile → Security → Personal Access Tokens; Zulip: Personal settings → Account & privacy → API key"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "email"
+title = "Zulip email"
+description = "Zulip only: the email of the account the API key belongs to"
+
+[[preferences]]
+name = "markReadOnOpen"
+title = "Mark as read when opened"
+description = "Reading a conversation's messages in the launcher marks it as read"
+type = "boolean"
+default = true

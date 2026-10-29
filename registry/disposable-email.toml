@@ -1,0 +1,14 @@
+id = "disposable-email"
+title = "Disposable Email"
+description = "A throwaway email address from mail.tm: read incoming mail and copy the verification code or open the confirmation link in one keystroke"
+author = "Backslash"
+icon = "bs-mail"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/disposable-email"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:9bd7fdcbb3c87075da1b2191e69d23225e9c5c0f9efe3a59ab6a3a65bff47183"
+permissions = ["Access api.mail.tm"]
+commands = ["Disposable Inbox", "New Disposable Email"]
+categories = ["developer"]
+

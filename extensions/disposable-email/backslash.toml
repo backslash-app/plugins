@@ -1,0 +1,45 @@
+[extension]
+id = "disposable-email"
+title = "Disposable Email"
+description = "A throwaway email address from mail.tm: read incoming mail and copy the verification code or open the confirmation link in one keystroke"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-mail"
+license = "MIT"
+categories = ["developer"]
+
+# mail.tm's API creates the address and reads its mail. The address and the
+# password generated for it are kept in the extension's storage.
+[permissions]
+net = ["api.mail.tm"]
+
+[[commands]]
+name = "inbox"
+title = "Disposable Inbox"
+description = "Mail of your throwaway address, live, with verification codes and links ready to copy"
+icon = "bs-mail"
+keywords = [
+  "email",
+  "mail",
+  "temporary",
+  "disposable",
+  "throwaway",
+  "temp mail",
+  "burner",
+  "verification",
+  "code",
+  "otp",
+  "signup",
+  "mail.tm",
+  "e-mail jetable",
+  "adresse temporaire",
+  "code de vérification",
+]
+
+[[commands]]
+name = "new"
+title = "New Disposable Email"
+description = "Create a random throwaway address and copy it"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["email", "temporary", "disposable", "throwaway", "temp mail", "burner", "new", "e-mail jetable", "nouvelle adresse"]

@@ -1,0 +1,104 @@
+[extension]
+id = "release-notes"
+title = "Release Notes"
+description = "Changelogs from Conventional Commits since the last tag, the next semantic version, CHANGELOG.md, tags and GitHub or GitLab releases"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+categories = ["developer"]
+
+[permissions]
+env = ["HOME"]
+# CHANGELOG.md is read and written only in the usual code folders below your
+# home; /etc/os-release suggests how to install git, gh or glab when missing.
+read = [
+  "/etc/os-release",
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+]
+write = [
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+]
+# find scans the folders set in the preferences for repositories; git reads
+# their history, and creates and pushes a tag when you ask; gh (GitHub) and
+# glab (GitLab) publish a release when you ask.
+run = ["git", "find", "gh", "glab"]
+
+[[commands]]
+name = "release-notes"
+title = "Write Release Notes"
+description = "Pick a repository: features, fixes and breaking changes since the last tag, the next version, then copy, CHANGELOG.md, tag or release"
+icon = "bs-rocket"
+keywords = [
+  "release",
+  "release notes",
+  "changelog",
+  "conventional commits",
+  "semver",
+  "version",
+  "tag",
+  "github release",
+  "gitlab release",
+  "gh",
+  "glab",
+  "git",
+  "notes de version",
+  "journal des modifications",
+  "publier",
+  "version suivante",
+  "étiquette",
+]
+
+[[preferences]]
+name = "folders"
+title = "Folders"
+description = "Where to look for repositories, separated by commas"
+default = "~/Projects, ~/projects, ~/code, ~/Code, ~/src, ~/dev, ~/git, ~/repos, ~/workspace"
+
+[[preferences]]
+name = "depth"
+title = "Scan depth"
+description = "How many folders deep to look below each folder (1 to 8)"
+type = "number"
+default = 3
+
+[[preferences]]
+name = "hideMinor"
+title = "Leave out chores, tests, style, build and CI"
+description = "Only features, fixes, performance, refactoring, docs, reverts and other changes"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "links"
+title = "Link commits and pull requests"
+description = "Link hashes, #123 and the version heading to GitHub or GitLab"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "remote"
+title = "Remote"
+description = "The remote releases go to; empty: origin, else upstream, else the first one"

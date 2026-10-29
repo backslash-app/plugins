@@ -1,0 +1,88 @@
+[extension]
+id = "azure-devops"
+title = "Azure DevOps"
+description = "Azure DevOps pull requests to review or created by you with votes and policies, your open work items with state changes, and pipeline runs failing first with rerun"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+categories = ["developer"]
+
+# The Azure DevOps REST API of your organization (dev.azure.com/<organization>).
+[permissions]
+net = ["dev.azure.com"]
+
+[[commands]]
+name = "pull-requests"
+title = "Azure DevOps Pull Requests"
+description = "Active pull requests to review or created by you: reviewer votes, policies and builds; vote on them"
+icon = "bs-pr-open"
+keywords = [
+  "azure",
+  "devops",
+  "ado",
+  "vsts",
+  "pr",
+  "pull request",
+  "review",
+  "repos",
+  "relecture",
+  "demande de fusion",
+]
+
+[[commands]]
+name = "work-items"
+title = "My Azure DevOps Work Items"
+description = "Work items assigned to you and not closed, with state, type and priority: change their state"
+icon = "bs-kanban"
+keywords = [
+  "azure",
+  "devops",
+  "ado",
+  "boards",
+  "work item",
+  "bug",
+  "task",
+  "user story",
+  "wiql",
+  "tâche",
+  "ticket",
+  "élément de travail",
+]
+
+[[commands]]
+name = "pipelines"
+title = "Azure DevOps Pipelines"
+description = "Recent pipeline runs, failing and running first: rerun failed jobs, run again, cancel"
+icon = "bs-cycle"
+keywords = [
+  "azure",
+  "devops",
+  "ado",
+  "pipelines",
+  "build",
+  "ci",
+  "cd",
+  "rerun",
+  "intégration continue",
+  "compilation",
+  "relancer",
+]
+
+[[preferences]]
+name = "organization"
+title = "Organization"
+description = "The name in your URLs: acme in dev.azure.com/acme (or acme.visualstudio.com)"
+required = true
+
+[[preferences]]
+name = "token"
+title = "Personal access token"
+description = "User settings → Personal access tokens → New Token, scopes: Code (Read & write), Work Items (Read & write), Build (Read & execute), Project and Team (Read)"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "projects"
+title = "Projects"
+description = "Optional, comma-separated project names. Empty: every project of the organization (the first 30)"

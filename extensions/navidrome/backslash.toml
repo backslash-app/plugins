@@ -1,0 +1,141 @@
+[extension]
+id = "navidrome"
+title = "Navidrome & Audiobookshelf"
+description = "Your Navidrome or Subsonic music and Audiobookshelf audiobooks with covers: search, recent, starred, playlists and continue listening, played in the background with mpv"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-headphones"
+license = "MIT"
+categories = ["media"]
+
+# Media servers run on your own machine, and hosts must be declared ahead
+# (as in the Jellyfin & Plex extension): the local network (mDNS names,
+# private IPv4 ranges, which Deno's --allow-net accepts as CIDR), Tailscale
+# and DuckDNS. A custom domain outside these is not reachable. Same list as
+# HOSTS in lib.ts.
+# Covers need the credentials, so they are downloaded into
+# ~/.cache/backslash/navidrome and shown from there (HOME locates it).
+# Music and audiobooks play in mpv inside a transient systemd user unit
+# (systemd-run), so they keep playing once the launcher is hidden; mpv is run
+# once to check it is installed. mpv's control socket and the position file of
+# its small script live in the same folder. /etc/os-release picks the install
+# command to suggest.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "navidrome",
+  "navidrome.local",
+  "audiobookshelf",
+  "audiobookshelf.local",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+run = ["systemd-run", "systemctl", "mpv"]
+read = ["~/.cache/backslash/navidrome", "/etc/os-release"]
+write = ["~/.cache/backslash/navidrome"]
+env = ["HOME"]
+
+[[commands]]
+name = "music"
+title = "Navidrome"
+description = "Recently added, starred, playlists and random albums; type to search artists, albums and songs"
+icon = "bs-music"
+keywords = [
+  "navidrome",
+  "subsonic",
+  "gonic",
+  "airsonic",
+  "music",
+  "albums",
+  "songs",
+  "playlist",
+  "self-hosted",
+  "musique",
+  "écouter",
+  "chansons",
+]
+
+[[commands]]
+name = "audiobooks"
+title = "Audiobookshelf"
+description = "Continue listening and recently added audiobooks and podcasts; type to search your libraries"
+icon = "bs-headphones"
+keywords = [
+  "audiobookshelf",
+  "audiobook",
+  "audiobooks",
+  "books",
+  "podcasts",
+  "listen",
+  "abs",
+  "livres audio",
+  "livre audio",
+  "écouter",
+]
+
+[[commands]]
+name = "toggle"
+title = "Pause or Resume Music"
+description = "Pauses the music or audiobook playing in the background, or resumes it"
+icon = "bs-pause"
+mode = "no-view"
+keywords = ["navidrome", "audiobookshelf", "pause", "resume", "play", "reprendre", "lecture"]
+
+[[commands]]
+name = "next"
+title = "Next Song"
+description = "Skips to the next song, or the next chapter of the audiobook"
+icon = "bs-next"
+mode = "no-view"
+keywords = ["navidrome", "audiobookshelf", "next", "skip", "chapter", "suivant", "chapitre"]
+
+[[commands]]
+name = "stop"
+title = "Stop Music"
+description = "Stops the music or audiobook; the audiobook's progress is saved"
+icon = "bs-stop"
+mode = "no-view"
+keywords = ["navidrome", "audiobookshelf", "stop", "arrêter", "couper"]
+
+[[preferences]]
+name = "subsonicUrl"
+title = "Music server address"
+description = "Navidrome, Gonic, Airsonic or any Subsonic server, as you open it: http://192.168.1.10:4533"
+
+[[preferences]]
+name = "subsonicUser"
+title = "Music server user name"
+
+[[preferences]]
+name = "subsonicPassword"
+title = "Music server password"
+description = "Kept in the system keyring; only a salted token (md5) is sent"
+type = "secret"
+
+[[preferences]]
+name = "absUrl"
+title = "Audiobookshelf address"
+description = "As you open it in the browser: http://192.168.1.10:13378"
+
+[[preferences]]
+name = "absToken"
+title = "Audiobookshelf API token"
+description = "Audiobookshelf → Settings → API Keys, or Users → your user → API token"
+type = "secret"
+
+[[preferences]]
+name = "speed"
+title = "Audiobook speed"
+description = "From 0.5 to 3 (1 is normal speed)"
+type = "number"
+default = 1

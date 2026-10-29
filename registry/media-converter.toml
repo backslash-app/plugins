@@ -1,0 +1,14 @@
+id = "media-converter"
+title = "Media Converter"
+description = "Convert, trim, compress to a size, resize and turn into GIFs the videos and songs copied in your file manager, with ffmpeg in the background"
+author = "Backslash"
+icon = "bs-film"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/media-converter"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:a7e1c0ddd2f2655be2741e94150c861595f9fbd7cf7c899e5f3c9fc3bcb870cf"
+permissions = ["Run ffmpeg", "Run ffprobe", "Run systemd-run", "Run systemctl", "Run wl-paste", "Run xclip", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Read /etc/os-release", "Write ~", "Write /media", "Write /run/media", "Write /mnt", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Media Converter"]
+categories = ["media"]
+

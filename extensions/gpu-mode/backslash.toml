@@ -1,0 +1,99 @@
+[extension]
+id = "gpu-mode"
+title = "GPU Mode"
+description = "Switch hybrid graphics between integrated, hybrid and discrete, see what runs on the discrete GPU, and start apps on it"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cpu"
+license = "MIT"
+categories = ["system"]
+
+# lspci (pciutils) lists the GPUs and their drivers; switcherooctl (switcheroo-control)
+# says which one is the default and how apps reach the other.
+# Modes: supergfxctl switches as your user; envycontrol, prime-select and
+# system76-power need root and run through pkexec (polkit), once per switch.
+# uptime tells whether the computer restarted since a switch; loginctl logs out and
+# systemctl restarts, only when you ask to finish a switch.
+# What runs on the discrete GPU: fuser on its /dev/dri nodes (found through
+# /dev/dri/by-path) and /dev/nvidia0, plus nvidia-smi, which is never asked while the
+# GPU sleeps because it would wake it up. kill stops a process you pick.
+# Apps start on the discrete GPU through systemd-run with the PRIME offload variables
+# (what prime-run and switcherooctl launch set); their menu entries are read from the
+# application folders.
+[permissions]
+run = [
+  "lspci",
+  "switcherooctl",
+  "supergfxctl",
+  "envycontrol",
+  "prime-select",
+  "system76-power",
+  "pkexec",
+  "nvidia-smi",
+  "fuser",
+  "kill",
+  "uptime",
+  "loginctl",
+  "systemctl",
+  "systemd-run",
+]
+read = [
+  "/dev/dri",
+  "~/.local/share/applications",
+  "~/.local/share/flatpak/exports/share/applications",
+  "/var/lib/flatpak/exports/share/applications",
+  "/usr/local/share/applications",
+  "/usr/share/applications",
+  "/var/lib/snapd/desktop/applications",
+]
+env = ["HOME", "XDG_SESSION_ID"]
+
+[[commands]]
+name = "gpu-mode"
+title = "GPU Mode"
+description = "Integrated, hybrid or discrete graphics, your GPUs and what uses the discrete one"
+icon = "bs-cpu"
+keywords = [
+  "gpu",
+  "graphics",
+  "graphique",
+  "carte graphique",
+  "nvidia",
+  "optimus",
+  "prime",
+  "hybrid",
+  "hybride",
+  "integrated",
+  "intégré",
+  "discrete",
+  "dédiée",
+  "dgpu",
+  "supergfxctl",
+  "envycontrol",
+  "prime-select",
+  "system76-power",
+  "mux",
+  "battery",
+  "batterie",
+]
+
+[[commands]]
+name = "run-on-dgpu"
+title = "Run on Discrete GPU"
+description = "Start an app on the discrete GPU (PRIME render offload)"
+icon = "bs-rocket"
+keywords = [
+  "gpu",
+  "prime-run",
+  "dri_prime",
+  "nvidia",
+  "discrete",
+  "dédiée",
+  "offload",
+  "launch",
+  "lancer",
+  "game",
+  "jeu",
+  "carte graphique",
+  "performance",
+]

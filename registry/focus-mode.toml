@@ -1,0 +1,14 @@
+id = "focus-mode"
+title = "Focus Mode"
+description = "Focus sessions that silence notifications, block distracting sites and set your Slack status, then undo it all on time, even with Backslash closed"
+author = "Backslash"
+icon = "bs-eye-off"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/focus-mode"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:5ee8df505cea8ffb41517b03566051732bcc2bb92e1dee4d10a6deea1110ad13"
+permissions = ["Access slack.com", "Run systemd-run", "Run systemctl", "Run pkexec", "Run gdbus", "Run makoctl", "Run dunstctl", "Run swaync-client", "Run gsettings", "Run xfconf-query", "Read /etc/hosts", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable DBUS_SESSION_BUS_ADDRESS", "Read the environment variable SWAYSOCK"]
+commands = ["Focus Mode", "Start Focus Session", "Stop Focus Session"]
+categories = ["productivity"]
+

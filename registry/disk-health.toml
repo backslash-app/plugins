@@ -1,0 +1,14 @@
+id = "disk-health"
+title = "Disk Health"
+description = "SMART health, temperature, wear and errors of your drives, Btrfs scrubs and ZFS pools; start a self-test or a scrub"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/disk-health"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:eba1d50d81a84433ed55961d1a3bf65b7ac1190fc0b781a215448d64fce128b7"
+permissions = ["Run lsblk", "Run zpool", "Run pkexec", "Read /etc/os-release"]
+commands = ["Disk Health"]
+categories = ["system"]
+

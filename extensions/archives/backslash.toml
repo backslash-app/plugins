@@ -1,0 +1,66 @@
+[extension]
+id = "archives"
+title = "Archives"
+description = "Look inside and extract ZIP, 7z, RAR and TAR archives copied in your file manager, and compress files and folders, with a password if you want"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-archive"
+license = "MIT"
+categories = ["system"]
+
+# bsdtar (libarchive) and 7-Zip (7z, 7zz or 7za) read and write most formats;
+# unzip, zip and GNU tar with gzip, xz, zstd, bzip2 and lz4 are used when they
+# are there. Files copied in the file manager are read with wl-paste (Wayland)
+# or xclip (X11) as text/uri-list. Archives are made and extracted next to the
+# originals by those tools, never over a file.
+[permissions]
+run = [
+  "bsdtar",
+  "tar",
+  "unzip",
+  "zip",
+  "7z",
+  "7zz",
+  "7za",
+  "gzip",
+  "bzip2",
+  "xz",
+  "zstd",
+  "lz4",
+  "wl-paste",
+  "xclip",
+]
+# Copied files can be anywhere in the home folder or on a mounted drive: read to
+# list them, see if an archive is encrypted, and never overwrite a file.
+read = ["~", "/media", "/run/media", "/mnt", "/etc/os-release"]
+# The folder an archive is extracted to is created next to it; a single
+# compressed file (.gz, .xz, .zst) is decompressed into a new file next to it.
+write = ["~", "/media", "/run/media", "/mnt"]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "archives"
+title = "Archives"
+description = "Copied archives: see what they hold and extract them; copied files and folders: compress them"
+icon = "bs-archive"
+keywords = [
+  "archive",
+  "zip",
+  "unzip",
+  "7z",
+  "rar",
+  "tar",
+  "tar.gz",
+  "zst",
+  "extract",
+  "extraire",
+  "décompresser",
+  "decompress",
+  "compress",
+  "compresser",
+  "archiver",
+  "dézipper",
+  "password",
+  "mot de passe",
+]

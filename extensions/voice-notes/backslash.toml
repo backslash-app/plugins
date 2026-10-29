@@ -1,0 +1,85 @@
+[extension]
+id = "voice-notes"
+title = "Voice Notes"
+description = "Record voice notes from the microphone and transcribe them on your computer with whisper.cpp or Whisper, then copy, paste or save them as notes"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-mic"
+license = "MIT"
+categories = ["productivity"]
+
+# Recording and transcribing run in systemd user units (systemd-run, systemctl),
+# so they go on once the launcher is hidden: pw-record, ffmpeg or arecord record
+# 16 kHz WAV files into ~/.local/share/backslash/voice-notes, then whisper-cli /
+# whisper-cpp (whisper.cpp) or whisper (openai-whisper) writes the transcript
+# next to them and notify-send says when it is ready. The programs are only
+# started directly to check that they are installed. The whisper folders are
+# read to find a ggml model; notes are saved as markdown in a folder of
+# ~/Documents (the Quick Notes folder by default).
+[permissions]
+run = ["systemd-run", "systemctl", "pw-record", "ffmpeg", "arecord", "whisper-cli", "whisper-cpp", "whisper"]
+read = [
+  "~/.local/share/backslash/voice-notes",
+  "~/Documents",
+  "~/.local/share/whisper.cpp",
+  "~/.local/share/whisper",
+  "~/.cache/whisper.cpp",
+  "/usr/share/whisper.cpp",
+  "/usr/local/share/whisper.cpp",
+  "/etc/os-release",
+]
+write = ["~/.local/share/backslash/voice-notes", "~/Documents"]
+env = ["HOME", "XDG_RUNTIME_DIR", "DBUS_SESSION_BUS_ADDRESS", "PULSE_SERVER", "PIPEWIRE_REMOTE"]
+
+[[commands]]
+name = "voice-notes"
+title = "Voice Notes"
+description = "Record, and find your recordings with their transcript; copy, paste or save as a note"
+icon = "bs-mic"
+keywords = [
+  "voice",
+  "voice memo",
+  "dictation",
+  "dictate",
+  "record",
+  "transcribe",
+  "transcription",
+  "speech to text",
+  "whisper",
+  "mémo vocal",
+  "note vocale",
+  "dictée",
+  "enregistrer",
+  "transcrire",
+]
+
+[[commands]]
+name = "toggle-recording"
+title = "Record Voice Note"
+description = "Start recording from the microphone; run again to stop and transcribe"
+icon = "bs-mic"
+mode = "no-view"
+keywords = ["record", "voice", "dictate", "start", "stop", "enregistrer", "dictée", "micro", "microphone"]
+
+[[preferences]]
+name = "language"
+title = "Language"
+description = "auto (detect), en, fr, or another two-letter code Whisper knows"
+default = "auto"
+
+[[preferences]]
+name = "model"
+title = "Whisper model"
+description = "Path to a whisper.cpp ggml model (e.g. ~/.local/share/whisper.cpp/ggml-base.bin), or an openai-whisper model name (base, small, turbo). Empty: the first ggml model found, else base"
+
+[[preferences]]
+name = "autoTranscribe"
+title = "Transcribe when recording stops"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "notesFolder"
+title = "Notes folder"
+description = "Inside ~/Documents; the same as Quick Notes by default"
+default = "~/Documents/Notes"

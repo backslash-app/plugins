@@ -1,0 +1,36 @@
+[extension]
+id = "latex-symbols"
+title = "LaTeX Symbols"
+description = "Find a LaTeX math symbol by name, command or the character itself, and copy its command, character or code point"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calculator"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: the table of symbols ships with the extension and nothing
+# leaves your computer.
+
+[[commands]]
+name = "search"
+title = "Search LaTeX Symbols"
+description = "Greek letters, operators, relations, arrows, sets and logic, accents, delimiters, \\mathbb, \\mathcal and \\mathfrak letters"
+icon = "bs-calculator"
+keywords = [
+  "latex",
+  "tex",
+  "math",
+  "symbol",
+  "greek",
+  "unicode",
+  "amssymb",
+  "mathbb",
+  "katex",
+  "mathjax",
+  "detexify",
+  "maths",
+  "symbole",
+  "lettre grecque",
+  "mathématiques",
+  "formule",
+]

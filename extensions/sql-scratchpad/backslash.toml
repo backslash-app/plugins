@@ -1,0 +1,74 @@
+[extension]
+id = "sql-scratchpad"
+title = "SQL Scratchpad"
+description = "Saved SQL queries run on your PostgreSQL, MySQL and SQLite databases, read-only unless you confirm; results as a table, copied or saved as CSV, JSON or Markdown"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-database"
+license = "MIT"
+categories = ["developer"]
+
+# The database clients run the queries (passwords go in their environment,
+# never on the command line). Queries are .sql files in
+# ~/.local/share/sql-scratchpad, so your editor can open them; exports are
+# saved to ~/Downloads. HOME locates both.
+[permissions]
+env = ["HOME"]
+run = ["psql", "mysql", "mariadb", "sqlite3"]
+read = ["~/.local/share/sql-scratchpad"]
+write = ["~/.local/share/sql-scratchpad", "~/Downloads"]
+
+[[commands]]
+name = "queries"
+title = "SQL Queries"
+description = "Your saved queries by connection: run, edit, export results as CSV, JSON or Markdown"
+icon = "bs-database"
+keywords = [
+  "sql",
+  "query",
+  "queries",
+  "postgres",
+  "postgresql",
+  "psql",
+  "mysql",
+  "mariadb",
+  "sqlite",
+  "database",
+  "select",
+  "requête",
+  "requêtes",
+  "base de données",
+]
+
+[[commands]]
+name = "new"
+title = "New SQL Query"
+description = "Write a query, save it and run it"
+icon = "bs-plus"
+keywords = ["sql", "query", "new", "run", "select", "scratchpad", "nouvelle requête", "exécuter"]
+
+[[commands]]
+name = "connections"
+title = "SQL Connections"
+description = "Your database connections: browse their tables and preview rows"
+icon = "bs-server"
+keywords = ["sql", "database", "connection", "tables", "schema", "postgres", "mysql", "sqlite", "connexion", "tables"]
+
+[[preferences]]
+name = "connections"
+title = "Connections"
+description = "name=url pairs separated by ; e.g. prod=postgresql://user:pw@host:5432/db; local=mysql://root@localhost/app; notes=sqlite:///home/me/notes.db"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "defaultConnection"
+title = "Default connection"
+description = "Name of the connection for queries that don't name one (default: the first)"
+
+[[preferences]]
+name = "timeout"
+title = "Timeout"
+description = "Seconds before a query is stopped (5 to 600)"
+type = "number"
+default = 60

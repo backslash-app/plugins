@@ -1,0 +1,14 @@
+id = "lyrics"
+title = "Lyrics"
+description = "Synced lyrics of the song playing in Spotify, your browser or any MPRIS player, the current line highlighted as it plays, from LRCLIB"
+author = "Backslash"
+icon = "bs-music"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/lyrics"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:509ca7bd9c25c4c68444a4e34db7fe141f288213b7a5e5f2e5c7d3988a641914"
+permissions = ["Access lrclib.net", "Run playerctl", "Read /etc/os-release"]
+commands = ["Lyrics", "Search Lyrics"]
+categories = ["media"]
+

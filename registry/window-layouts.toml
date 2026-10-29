@@ -1,0 +1,14 @@
+id = "window-layouts"
+title = "Window Layouts"
+description = "Save the windows you have open as a named layout and bring it back: apps relaunched, moved to their workspace and place, plus your URLs and commands"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/window-layouts"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:305801dccb96510913a0f1545a28e760c7d3d74f333f86894850478f452a8dad"
+permissions = ["Run hyprctl", "Run swaymsg", "Run niri", "Run kdotool", "Run wmctrl", "Run systemd-run", "Read /usr/share/applications", "Read /usr/local/share/applications", "Read ~/.local/share/applications", "Read /var/lib/flatpak/exports/share/applications", "Read ~/.local/share/flatpak/exports/share/applications", "Read /var/lib/snapd/desktop/applications", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable XDG_CURRENT_DESKTOP", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable DISPLAY", "Read the environment variable XAUTHORITY", "Read the environment variable HYPRLAND_INSTANCE_SIGNATURE", "Read the environment variable SWAYSOCK", "Read the environment variable NIRI_SOCKET", "Read the environment variable DBUS_SESSION_BUS_ADDRESS"]
+commands = ["Window Layouts", "Save Window Layout", "Restore Window Layout"]
+categories = ["productivity"]
+

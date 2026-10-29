@@ -1,0 +1,112 @@
+[extension]
+id = "miniflux"
+title = "Miniflux & FreshRSS"
+description = "Unread articles of your Miniflux or FreshRSS feeds by feed or category with reading times, read in the launcher; mark read, star, open the original"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rss"
+license = "MIT"
+categories = ["media"]
+
+# Feed readers run on your own server, and hosts must be declared ahead (as the
+# Immich and Paperless-ngx extensions do): reader.miniflux.app (hosted
+# Miniflux), this computer, local and container names, private IPv4 ranges
+# (Deno's --allow-net accepts CIDR), Tailscale and DuckDNS. A server on a
+# custom public domain is not reachable: use its local or Tailscale address.
+# Same list as HOSTS in lib.ts (a test checks it). Articles are shown as text:
+# their pictures are links, so no other host is ever contacted.
+[permissions]
+net = [
+  "reader.miniflux.app",
+  "localhost",
+  "127.0.0.1",
+  "miniflux",
+  "freshrss",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "articles"
+title = "Unread Articles"
+description = "Unread articles by feed or category, or starred ones; read in the launcher, mark read, star"
+icon = "bs-rss"
+keywords = [
+  "miniflux",
+  "freshrss",
+  "rss",
+  "atom",
+  "feeds",
+  "news",
+  "unread",
+  "articles",
+  "reader",
+  "flux",
+  "actualités",
+  "non lus",
+  "lecteur rss",
+  "starred",
+  "favoris",
+]
+
+[[commands]]
+name = "feeds"
+title = "RSS Feeds"
+description = "Your subscriptions by category with unread counts and fetch errors; mark a whole feed as read"
+icon = "bs-layers"
+keywords = [
+  "miniflux",
+  "freshrss",
+  "rss",
+  "feeds",
+  "subscriptions",
+  "abonnements",
+  "flux",
+  "categories",
+  "catégories",
+  "mark all read",
+  "tout marquer lu",
+]
+
+[[preferences]]
+name = "backend"
+title = "Service"
+description = "miniflux or freshrss; empty: the one you gave credentials for"
+
+[[preferences]]
+name = "url"
+title = "Server address"
+description = "As you open it in the browser, e.g. http://rss.home.lan or http://192.168.1.20:8080; empty for reader.miniflux.app"
+
+[[preferences]]
+name = "token"
+title = "Miniflux API key"
+description = "Miniflux → Settings → API Keys → Create a new API key"
+type = "secret"
+
+[[preferences]]
+name = "username"
+title = "FreshRSS user name"
+description = "Your FreshRSS login"
+
+[[preferences]]
+name = "password"
+title = "FreshRSS API password"
+description = "FreshRSS → Settings → Profile → API management (allow the API in Authentication first)"
+type = "secret"
+
+[[preferences]]
+name = "markReadOnOpen"
+title = "Mark as read when opened"
+description = "Reading an article in the launcher or opening the original marks it as read"
+type = "boolean"
+default = true

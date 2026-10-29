@@ -1,0 +1,14 @@
+id = "fake-data"
+title = "Fake Data"
+description = "Realistic fake people, addresses, companies, IBANs, SIRET, test cards and more in English or French, as JSON, CSV or SQL, offline and seedable"
+author = "Backslash"
+icon = "bs-dice"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/fake-data"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:5781d1d2bec2f4f585e1d1466c284bed3eb96ef6ad005f4be424a649bcc3b248"
+permissions = ["Read the environment variable LANG", "Read the environment variable LC_ALL", "Read the environment variable LC_MESSAGES"]
+commands = ["Generate Fake Data", "Fake Values"]
+categories = ["developer"]
+

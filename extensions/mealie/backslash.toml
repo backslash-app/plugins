@@ -1,0 +1,147 @@
+[extension]
+id = "mealie"
+title = "Mealie & Grocy"
+description = "Your Mealie recipes with ingredients and steps, this week's meal plan and shopping lists, and your Grocy stock: what expires, what is missing, consume and open"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coffee"
+license = "MIT"
+categories = ["everyday"]
+
+# Mealie and Grocy run on your own server, and hosts must be declared ahead
+# (as the Immich and Paperless extensions do): this computer, local and
+# container names, private IPv4 ranges (Deno's --allow-net accepts CIDR),
+# Tailscale and DuckDNS. A server on a custom public domain is not reachable:
+# use its local or Tailscale address. Recipe pictures come from the same
+# server. Same list as HOSTS in lib.ts.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "mealie",
+  "grocy",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "recipes"
+title = "Search Recipes"
+description = "Your Mealie recipes by name, ingredient or tag, with pictures, ingredients and steps in the preview"
+icon = "bs-book"
+keywords = [
+  "mealie",
+  "recipes",
+  "recipe",
+  "cooking",
+  "cook",
+  "ingredients",
+  "dinner",
+  "recettes",
+  "recette",
+  "cuisine",
+  "ingrédients",
+  "dîner",
+]
+
+[[commands]]
+name = "meal-plan"
+title = "Meal Plan"
+description = "What's planned today and the rest of the week in Mealie"
+icon = "bs-calendar"
+keywords = [
+  "mealie",
+  "meal plan",
+  "menu",
+  "today",
+  "this week",
+  "dinner",
+  "lunch",
+  "planning repas",
+  "menu de la semaine",
+  "ce soir",
+  "repas",
+]
+
+[[commands]]
+name = "shopping"
+title = "Shopping List"
+description = "Your Mealie and Grocy shopping lists: type to add an item, Enter checks it off"
+icon = "bs-square-check"
+keywords = [
+  "shopping",
+  "groceries",
+  "shopping list",
+  "buy",
+  "mealie",
+  "grocy",
+  "liste de courses",
+  "courses",
+  "acheter",
+  "épicerie",
+]
+
+[[commands]]
+name = "stock"
+title = "Grocy Stock"
+description = "What expires soon, what has expired or is missing, and everything in stock; consume or open"
+icon = "bs-box"
+keywords = [
+  "grocy",
+  "stock",
+  "pantry",
+  "fridge",
+  "expiring",
+  "expired",
+  "best before",
+  "inventory",
+  "garde-manger",
+  "frigo",
+  "périmé",
+  "date limite",
+  "inventaire",
+  "provisions",
+]
+
+[[preferences]]
+name = "mealieUrl"
+title = "Mealie address"
+description = "As you open it in the browser, e.g. http://mealie.local:9925 or http://192.168.1.20:9000"
+
+[[preferences]]
+name = "mealieToken"
+title = "Mealie API token"
+description = "Mealie → your profile → Manage Your API Tokens → Generate"
+type = "secret"
+
+[[preferences]]
+name = "grocyUrl"
+title = "Grocy address"
+description = "As you open it in the browser, e.g. http://grocy.local or http://192.168.1.20:9283"
+
+[[preferences]]
+name = "grocyApiKey"
+title = "Grocy API key"
+description = "Grocy → Settings (wrench) → Manage API keys → Add"
+type = "secret"
+
+[[preferences]]
+name = "shoppingList"
+title = "Default shopping list"
+description = "The Mealie list new items go to (its name); the first one when empty"
+
+[[preferences]]
+name = "dueSoonDays"
+title = "Due soon (days)"
+description = "Grocy products whose best-before date is this close show as due soon"
+type = "number"
+default = 5

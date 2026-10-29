@@ -1,0 +1,14 @@
+id = "sourcehut"
+title = "SourceHut"
+description = "Your sr.ht repositories, recent builds with their tasks (resubmit, cancel), tickets assigned to you or in your trackers, and patchsets of your mailing lists"
+author = "Backslash"
+icon = "bs-repo"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/sourcehut"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:f2913baeb991c6629fe121998574676e32b6dd00ec856c4113f37bf33bb2a559"
+permissions = ["Access git.sr.ht", "Access builds.sr.ht", "Access todo.sr.ht", "Access lists.sr.ht"]
+commands = ["SourceHut Repositories", "SourceHut Builds", "SourceHut Tickets", "SourceHut Patchsets"]
+categories = ["developer"]
+

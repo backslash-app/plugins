@@ -1,0 +1,14 @@
+id = "voice-notes"
+title = "Voice Notes"
+description = "Record voice notes from the microphone and transcribe them on your computer with whisper.cpp or Whisper, then copy, paste or save them as notes"
+author = "Backslash"
+icon = "bs-mic"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/voice-notes"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:5c9bead6ba9d2aea1865fa0ed1042f26e9fa1561e283b089ea919c8f6f2fcaf9"
+permissions = ["Run systemd-run", "Run systemctl", "Run pw-record", "Run ffmpeg", "Run arecord", "Run whisper-cli", "Run whisper-cpp", "Run whisper", "Read ~/.local/share/backslash/voice-notes", "Read ~/Documents", "Read ~/.local/share/whisper.cpp", "Read ~/.local/share/whisper", "Read ~/.cache/whisper.cpp", "Read /usr/share/whisper.cpp", "Read /usr/local/share/whisper.cpp", "Read /etc/os-release", "Write ~/.local/share/backslash/voice-notes", "Write ~/Documents", "Read the environment variable HOME", "Read the environment variable XDG_RUNTIME_DIR", "Read the environment variable DBUS_SESSION_BUS_ADDRESS", "Read the environment variable PULSE_SERVER", "Read the environment variable PIPEWIRE_REMOTE"]
+commands = ["Voice Notes", "Record Voice Note"]
+categories = ["productivity"]
+

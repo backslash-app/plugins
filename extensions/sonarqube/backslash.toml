@@ -1,0 +1,54 @@
+[extension]
+id = "sonarqube"
+title = "SonarQube"
+description = "SonarCloud or SonarQube projects with their quality gate, failing first, and bugs, vulnerabilities, code smells, coverage and duplication; new issues and security hotspots of a project"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-shield"
+license = "MIT"
+categories = ["developer"]
+
+# SonarCloud is sonarcloud.io. A self-hosted SonarQube runs at any address chosen in
+# the preferences, usually on a company domain (sonar.example.com), so its host can't
+# be listed ahead, hence "*": the extension only calls the address you set.
+[permissions]
+net = ["*", "sonarcloud.io"]
+
+[[commands]]
+name = "projects"
+title = "SonarQube Projects"
+description = "Projects with a failing quality gate first, with their measures: new issues, security hotspots, open"
+icon = "bs-shield"
+keywords = [
+  "sonarqube",
+  "sonarcloud",
+  "sonar",
+  "quality gate",
+  "code quality",
+  "coverage",
+  "bugs",
+  "vulnerabilities",
+  "code smells",
+  "hotspots",
+  "qualité du code",
+  "couverture",
+  "vulnérabilités",
+]
+
+[[preferences]]
+name = "url"
+title = "Server"
+description = "https://sonarcloud.io, or the address of your SonarQube server (https://sonar.example.com)"
+default = "https://sonarcloud.io"
+
+[[preferences]]
+name = "token"
+title = "Token"
+description = "My Account → Security → Generate Tokens (a user token)"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "organization"
+title = "Organization"
+description = "SonarCloud only: your organization key (My Account → Organizations)"

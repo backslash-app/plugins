@@ -1,0 +1,14 @@
+id = "latex-symbols"
+title = "LaTeX Symbols"
+description = "Find a LaTeX math symbol by name, command or the character itself, and copy its command, character or code point"
+author = "Backslash"
+icon = "bs-calculator"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/latex-symbols"
+commit = "4d6437bb7eee0482f1f5edca034dc9faf2d54ada"
+checksum = "sha256:c3d811b694b87f2033e1b66f1e0333f9142d04c6606375a64aba8a9ab11cda37"
+permissions = []
+commands = ["Search LaTeX Symbols"]
+categories = ["everyday"]
+
