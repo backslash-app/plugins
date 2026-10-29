@@ -207,13 +207,11 @@ export function dayTitle(date: string, now = new Date()): string {
   if (date === isoDate(now)) return "Today";
   if (date === daysAgo(1, now)) return "Yesterday";
   const [y, m, d] = date.split("-").map(Number);
+  // Built from parts: ICU versions disagree on the comma after the weekday.
   const dt = new Date(y, m - 1, d);
-  return dt.toLocaleDateString("en-GB", {
-    weekday: "long",
-    day: "numeric",
-    month: "long",
-    ...(y !== now.getFullYear() ? { year: "numeric" } : {}),
-  });
+  const part = (o: Intl.DateTimeFormatOptions) => dt.toLocaleDateString("en-GB", o);
+  const day = `${part({ weekday: "long" })} ${d} ${part({ month: "long" })}`;
+  return y !== now.getFullYear() ? `${day} ${y}` : day;
 }
 
 /** How much of a budget is gone, and how it looks. */

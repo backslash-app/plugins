@@ -35,7 +35,7 @@ const TIMEOUT = 45_000;
 
 /** `p`, or `undefined` after `ms`, without leaving a timer behind. */
 function within<T>(p: Promise<T>, ms: number): Promise<T | undefined> {
-  let timer: number | undefined;
+  let timer: ReturnType<typeof setTimeout> | undefined;
   const late = new Promise<undefined>((resolve) => timer = setTimeout(() => resolve(undefined), ms));
   return Promise.race([p, late]).finally(() => clearTimeout(timer));
 }
