@@ -1,0 +1,65 @@
+[extension]
+id = "serverless-databases"
+title = "Serverless Databases"
+description = "Your Neon, Turso and PlanetScale databases in one list: branches, computes, groups and deploy requests; copy connection URIs and create tokens"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-database"
+license = "MIT"
+categories = ["developer"]
+
+# The three providers' APIs, each called only when its token is set (same list
+# as HOSTS in api.ts).
+[permissions]
+net = ["console.neon.tech", "api.turso.tech", "api.planetscale.com"]
+
+[[commands]]
+name = "databases"
+title = "Serverless Databases"
+description = "Neon projects, Turso databases and groups, PlanetScale databases; branches, connection URIs, tokens, deploy requests"
+icon = "bs-database"
+keywords = [
+  "neon",
+  "turso",
+  "planetscale",
+  "libsql",
+  "postgres",
+  "mysql",
+  "sqlite",
+  "serverless",
+  "database",
+  "branch",
+  "connection string",
+  "deploy request",
+  "base de données",
+  "branche",
+  "chaîne de connexion",
+]
+
+[[preferences]]
+name = "neonApiKey"
+title = "Neon API key"
+description = "Neon Console → Account settings → API keys (or an organization API key)"
+type = "secret"
+
+[[preferences]]
+name = "tursoToken"
+title = "Turso API token"
+description = "Turso dashboard → Account → API Tokens, or: turso auth api-tokens mint backslash"
+type = "secret"
+
+[[preferences]]
+name = "planetscaleTokenId"
+title = "PlanetScale service token ID"
+description = "Organization settings → Service tokens: the token's ID"
+
+[[preferences]]
+name = "planetscaleToken"
+title = "PlanetScale service token"
+description = "The service token itself (read_databases, read_branches, read_deploy_requests; deploy_deploy_requests to deploy)"
+type = "secret"
+
+[[preferences]]
+name = "planetscaleOrg"
+title = "PlanetScale organization"
+description = "Optional: the organization's name; by default every organization the token can see"
