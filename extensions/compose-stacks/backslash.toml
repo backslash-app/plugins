@@ -1,0 +1,68 @@
+[extension]
+id = "compose-stacks"
+title = "Compose Stacks"
+description = "Docker and Podman Compose projects with the state of each service: up, down, restart, pull, rebuild and logs in a terminal"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+categories = ["developer"]
+
+# docker (docker compose) or podman (podman compose) list the projects and their
+# containers, and run up, down, restart and logs. Pulls, rebuilds, followed logs
+# and shells open in your terminal, so you see their progress. Compose files are
+# opened with your default application, never read by the extension. HOME
+# shortens folder paths to ~/….
+[permissions]
+env = ["HOME"]
+run = [
+  "docker",
+  "podman",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "stacks"
+title = "Compose Stacks"
+description = "Your Compose projects, problems first: services, ports and health; up, down, pull, rebuild, logs"
+icon = "bs-layers"
+keywords = [
+  "docker compose",
+  "compose",
+  "podman compose",
+  "podman-compose",
+  "docker-compose",
+  "stack",
+  "stacks",
+  "services",
+  "containers",
+  "up",
+  "down",
+  "logs",
+  "conteneurs",
+  "pile",
+  "démarrer",
+  "arrêter",
+  "journaux",
+]
+
+[[preferences]]
+name = "engine"
+title = "Engine"
+description = "docker or podman. Leave empty to use Docker when it is installed, Podman otherwise"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For logs, pulls, rebuilds and shells. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

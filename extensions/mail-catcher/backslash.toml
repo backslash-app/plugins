@@ -1,0 +1,78 @@
+[extension]
+id = "mail-catcher"
+title = "Mail Catcher"
+description = "The mail your app sends in development, caught by Mailpit or MailHog: read it, copy the verification code or open the link in one keystroke"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-inbox"
+license = "MIT"
+categories = ["developer"]
+
+# Mailpit's or MailHog's web API, on this computer, a dev environment (DDEV,
+# Lando, *.test), the local network or Tailscale, as the address preference
+# allows (same list as HOSTS in api.ts). MailHog has no page for a message's
+# HTML, so it is written to /tmp/backslash-mail-catcher to open it in the browser.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.localhost",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.internal",
+  "*.test",
+  "*.ddev.site",
+  "*.lndo.site",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+write = ["/tmp/backslash-mail-catcher"]
+
+[[commands]]
+name = "inbox"
+title = "Caught Mail"
+description = "Messages caught by Mailpit or MailHog, live, with their verification codes and links ready to copy or open"
+icon = "bs-inbox"
+keywords = [
+  "mailpit",
+  "mailhog",
+  "mailcatcher",
+  "mail catcher",
+  "smtp",
+  "email",
+  "mail",
+  "inbox",
+  "dev mail",
+  "verification",
+  "code",
+  "otp",
+  "test email",
+  "courriel",
+  "boîte de réception",
+  "code de vérification",
+  "e-mail de test",
+]
+
+[[preferences]]
+name = "address"
+title = "Address"
+description = "The web interface, like http://localhost:8025 (the default) or http://myapp.ddev.site:8025"
+
+[[preferences]]
+name = "kind"
+title = "Mail catcher"
+description = "mailpit or mailhog. Leave empty to find out"
+
+[[preferences]]
+name = "username"
+title = "User"
+description = "If the web interface asks for one (Mailpit's --ui-auth-file)"
+
+[[preferences]]
+name = "password"
+title = "Password"
+type = "secret"

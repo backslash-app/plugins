@@ -1,0 +1,102 @@
+[extension]
+id = "elasticsearch"
+title = "Elasticsearch"
+description = "Elasticsearch and OpenSearch: cluster health, indices by size, aliases, mappings, and a quick query of any index"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-database"
+license = "MIT"
+categories = ["developer"]
+
+# The cluster's REST API: on this computer, the local network or Tailscale, or
+# Elastic Cloud, Amazon OpenSearch, Aiven and Bonsai, as the address preference
+# allows (same list as HOSTS in api.ts).
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+  "*.cloud.es.io",
+  "*.elastic-cloud.com",
+  "*.found.io",
+  "*.es.amazonaws.com",
+  "*.aivencloud.com",
+  "*.bonsaisearch.net",
+]
+
+[[commands]]
+name = "indices"
+title = "Elasticsearch Indices"
+description = "Cluster health and indices by size, with documents, shards and mapping; aliases; search or delete an index"
+icon = "bs-database"
+keywords = [
+  "elasticsearch",
+  "elastic",
+  "opensearch",
+  "es",
+  "indices",
+  "index",
+  "cluster",
+  "health",
+  "shards",
+  "aliases",
+  "mapping",
+  "data streams",
+  "kibana",
+  "indexes",
+  "grappe",
+  "santé",
+  "taille",
+]
+
+[[commands]]
+name = "search"
+title = "Search Elasticsearch"
+description = "Documents of an index or pattern, newest first, or matching a Lucene query as you type"
+icon = "bs-search"
+keywords = ["elasticsearch", "opensearch", "search", "query", "lucene", "documents", "logs", "recherche", "requête"]
+
+[[commands.arguments]]
+name = "index"
+placeholder = "Index or pattern (logs-*)"
+
+[[preferences]]
+name = "address"
+title = "Address"
+description = "Like http://localhost:9200, https://search.lan:9200 or an Elastic Cloud endpoint (default http://localhost:9200)"
+
+[[preferences]]
+name = "apiKey"
+title = "API key"
+description = "Elasticsearch: the Encoded value of an API key (or id:key)"
+type = "secret"
+
+[[preferences]]
+name = "username"
+title = "User"
+description = "Instead of an API key: user for basic authentication (OpenSearch, elastic…)"
+
+[[preferences]]
+name = "password"
+title = "Password"
+type = "secret"
+
+[[preferences]]
+name = "defaultIndex"
+title = "Default search target"
+description = "What Search Elasticsearch looks in when no index is given: an index, alias or pattern (default *)"
+
+[[preferences]]
+name = "showSystem"
+title = "Show system indices"
+description = "Also list hidden indices whose name starts with a dot (.kibana, .security…)"
+type = "boolean"
+default = false
