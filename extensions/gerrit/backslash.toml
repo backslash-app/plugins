@@ -1,0 +1,65 @@
+[extension]
+id = "gerrit"
+title = "Gerrit"
+description = "Gerrit changes waiting for your review, needing your attention or yours, with Code-Review and Verified votes; copy the Change-Id or the checkout command"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-pr-open"
+license = "MIT"
+categories = ["developer"]
+
+# The Gerrit server is yours, at any address chosen in the preferences, and
+# Gerrit almost always lives on a public custom domain (review.opendev.org,
+# gerrit.wikimedia.org, android-review.googlesource.com, review.example.com),
+# so its host can't be listed ahead, hence "*": the extension only ever calls
+# the address you set (its REST API), and reviewers' avatars from it.
+[permissions]
+net = ["*"]
+
+[[commands]]
+name = "changes"
+title = "Gerrit Changes"
+description = "To review, needing your attention, yours, CC'd or recently merged: votes, size, comments; copy checkout command"
+icon = "bs-pr-open"
+keywords = [
+  "gerrit",
+  "code review",
+  "review",
+  "changes",
+  "change-id",
+  "patch set",
+  "patchset",
+  "verified",
+  "opendev",
+  "googlesource",
+  "android",
+  "relecture",
+  "revue de code",
+  "modifications",
+  "correctif",
+]
+
+[[preferences]]
+name = "url"
+title = "Gerrit address"
+description = "As you open it in the browser: https://review.opendev.org, https://gerrit.example.com/r"
+required = true
+
+[[preferences]]
+name = "username"
+title = "User name"
+description = "Your Gerrit user name (Settings → Profile → Username)"
+required = true
+
+[[preferences]]
+name = "password"
+title = "HTTP password"
+description = "Gerrit → Settings → HTTP Credentials → Generate new password (not your sign-in password)"
+type = "secret"
+required = true
+
+[[preferences]]
+name = "scheme"
+title = "Checkout over"
+description = "Which download scheme the checkout command uses: http, ssh or anonymous http (empty: what the server offers first)"
+default = ""
