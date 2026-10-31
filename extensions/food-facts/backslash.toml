@@ -1,0 +1,62 @@
+[extension]
+id = "food-facts"
+title = "Food Facts"
+description = "Look up food products by name or barcode on Open Food Facts: Nutri-Score, NOVA, Eco-Score, allergens, additives and nutrition facts per 100 g"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-leaf"
+license = "MIT"
+categories = ["everyday"]
+
+# Open Food Facts, no account or key: the product API (world.), the search
+# API (search.) and the product photos (images.). Same list as HOSTS in
+# lib.ts. Reading the clipboard lets Look Up Barcode find a copied barcode.
+[permissions]
+net = ["world.openfoodfacts.org", "search.openfoodfacts.org", "images.openfoodfacts.org"]
+clipboard-read = true
+
+[[commands]]
+name = "search"
+title = "Search Food Products"
+description = "Products by name, brand or barcode with their scores, allergens and nutrition facts"
+icon = "bs-leaf"
+keywords = [
+  "open food facts",
+  "openfoodfacts",
+  "food",
+  "product",
+  "nutrition",
+  "nutri-score",
+  "nutriscore",
+  "nova",
+  "eco-score",
+  "green-score",
+  "allergens",
+  "additives",
+  "calories",
+  "barcode",
+  "aliment",
+  "produit",
+  "alimentaire",
+  "allergènes",
+  "additifs",
+  "valeurs nutritionnelles",
+  "code-barres",
+  "yuka",
+]
+
+[[commands]]
+name = "barcode"
+title = "Look Up Barcode"
+description = "A product by its barcode, given or copied: scores, allergens, additives and nutrition facts"
+icon = "bs-scan"
+keywords = ["barcode", "ean", "upc", "code-barres", "code barre", "scanner", "produit", "open food facts", "nutri-score"]
+[[commands.arguments]]
+name = "barcode"
+placeholder = "Barcode (empty: clipboard)"
+
+[[preferences]]
+name = "language"
+title = "Language"
+description = "Two-letter code for product names and ingredients when available: en, fr, de, es, it…"
+default = "en"
