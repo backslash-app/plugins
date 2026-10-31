@@ -1,0 +1,78 @@
+[extension]
+id = "cast"
+title = "Cast to TV"
+description = "Cast a copied link, a YouTube video or a file from your file manager to a Chromecast or a DLNA TV, and control what plays: pause, seek, volume, stop"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-monitor"
+license = "MIT"
+categories = ["media"]
+
+# catt finds Chromecasts and Google TVs (catt scan), casts to them and is their
+# remote (status, play_toggle, volume, ffwd, stop); go2tv lists DLNA TVs
+# (go2tv -l) and casts to them. Both do their own networking, outside of
+# Backslash. Files are served from this computer by catt or go2tv in a
+# transient systemd user unit (systemd-run, systemctl) for as long as they
+# play. Files copied in the file manager are read with wl-paste (Wayland) or
+# xclip (X11); their folder is read to find subtitles next to a video. gio
+# opens GNOME Network Displays for screen mirroring when it is installed.
+[permissions]
+run = ["catt", "go2tv", "systemd-run", "systemctl", "wl-paste", "xclip", "gio"]
+read = [
+  "~",
+  "/media",
+  "/run/media",
+  "/mnt",
+  "/usr/share/applications/org.gnome.NetworkDisplays.desktop",
+  "/var/lib/flatpak/exports/share/applications/org.gnome.NetworkDisplays.desktop",
+]
+env = ["HOME", "XDG_SESSION_TYPE", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "cast"
+title = "Cast to TV"
+description = "Your Chromecasts and DLNA TVs with what they play; Enter casts the copied link or file"
+icon = "bs-monitor"
+keywords = [
+  "cast",
+  "chromecast",
+  "google tv",
+  "dlna",
+  "upnp",
+  "tv",
+  "catt",
+  "go2tv",
+  "stream",
+  "youtube",
+  "mirror",
+  "caster",
+  "diffuser",
+  "télé",
+  "téléviseur",
+  "écran",
+]
+
+[[commands]]
+name = "cast-clipboard"
+title = "Cast Copied Link or File"
+description = "Casts what you copied to the TV used last"
+icon = "bs-monitor"
+mode = "no-view"
+keywords = ["cast", "chromecast", "copied", "clipboard", "tv", "caster", "presse-papiers", "télé"]
+
+[[commands]]
+name = "play-pause"
+title = "Play or Pause TV"
+description = "Pauses or resumes the Chromecast used last"
+icon = "bs-pause"
+mode = "no-view"
+keywords = ["cast", "chromecast", "pause", "play", "resume", "tv", "lecture", "télé"]
+
+[[commands]]
+name = "stop"
+title = "Stop Casting"
+description = "Stops what plays on the TV used last"
+icon = "bs-stop"
+mode = "no-view"
+keywords = ["cast", "chromecast", "stop", "tv", "arrêter", "télé"]
