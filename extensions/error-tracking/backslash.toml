@@ -1,0 +1,101 @@
+[extension]
+id = "error-tracking"
+title = "Error Tracking"
+description = "Unresolved errors from GlitchTip (hosted or on your network), Rollbar, Honeybadger and Bugsnag in one list, newest first: events, users, environment; resolve or ignore them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bug"
+license = "MIT"
+categories = ["developer"]
+
+# The services' APIs: GlitchTip's hosted app, or a GlitchTip on this computer, the local
+# network or Tailscale, as the address preference allows (same list as HOSTS in api.ts);
+# Rollbar, Honeybadger (US and EU) and Bugsnag.
+[permissions]
+net = [
+  "app.glitchtip.com",
+  "api.rollbar.com",
+  "app.honeybadger.io",
+  "eu-app.honeybadger.io",
+  "api.bugsnag.com",
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "errors"
+title = "Unresolved Errors"
+description = "GlitchTip, Rollbar, Honeybadger and Bugsnag errors by last seen: resolve, ignore, open"
+icon = "bs-bug"
+keywords = [
+  "errors",
+  "exceptions",
+  "crash",
+  "bugs",
+  "issues",
+  "glitchtip",
+  "rollbar",
+  "honeybadger",
+  "bugsnag",
+  "insight hub",
+  "error tracking",
+  "monitoring",
+  "erreurs",
+  "plantage",
+  "anomalies",
+  "suivi des erreurs",
+]
+
+[[preferences]]
+name = "glitchtipUrl"
+title = "GlitchTip address"
+description = "https://app.glitchtip.com, or yours on this computer, your network or Tailscale (like http://glitchtip.lan:8000)"
+default = "https://app.glitchtip.com"
+
+[[preferences]]
+name = "glitchtipOrg"
+title = "GlitchTip organization"
+description = "The slug in your GlitchTip URLs: acme in /acme/issues"
+
+[[preferences]]
+name = "glitchtipToken"
+title = "GlitchTip auth token"
+description = "GlitchTip → Profile → Auth Tokens, with project:read and event:write"
+type = "secret"
+
+[[preferences]]
+name = "rollbarToken"
+title = "Rollbar project access token"
+description = "Rollbar → Project → Settings → Project Access Tokens, with read (and write to resolve)"
+type = "secret"
+
+[[preferences]]
+name = "rollbarProject"
+title = "Rollbar account and project"
+description = "For links, as in your Rollbar URLs: acme/website"
+
+[[preferences]]
+name = "honeybadgerToken"
+title = "Honeybadger personal auth token"
+description = "Honeybadger → User settings → Authentication"
+type = "secret"
+
+[[preferences]]
+name = "honeybadgerRegion"
+title = "Honeybadger region"
+description = "us (app.honeybadger.io) or eu (eu-app.honeybadger.io)"
+default = "us"
+
+[[preferences]]
+name = "bugsnagToken"
+title = "Bugsnag personal auth token"
+description = "Bugsnag (Insight Hub) → Settings → My account → Personal auth tokens"
+type = "secret"
