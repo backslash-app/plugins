@@ -1,0 +1,87 @@
+[extension]
+id = "highlights"
+title = "Highlights"
+description = "Search your highlights from Readwise, Kindle's My Clippings.txt and Hypothes.is, and copy them with their source and citation"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bookmark"
+license = "MIT"
+categories = ["productivity"]
+
+# Readwise's export API and Hypothes.is' search API, with your tokens.
+# My Clippings.txt is read where a plugged-in Kindle shows up (/run/media on
+# Fedora and Arch, /media on Debian and Ubuntu: every removable drive is
+# there, and only <drive>/documents/My Clippings.txt is opened), or from a
+# copy in your home folder, Documents or Downloads. It is never written to.
+# Last time's highlights are kept, so a Kindle can be unplugged.
+[permissions]
+net = ["readwise.io", "api.hypothes.is"]
+read = [
+  "/run/media",
+  "/media",
+  "~/My Clippings.txt",
+  "~/Documents/My Clippings.txt",
+  "~/Downloads/My Clippings.txt",
+]
+env = ["HOME", "USER"]
+
+[[commands]]
+name = "search"
+title = "Search Highlights"
+description = "Every highlight and note, newest first; Enter copies it with its citation"
+icon = "bs-bookmark"
+keywords = [
+  "highlights",
+  "readwise",
+  "kindle",
+  "clippings",
+  "hypothesis",
+  "hypothes.is",
+  "quotes",
+  "annotations",
+  "notes",
+  "surlignements",
+  "citations",
+  "passages",
+  "liseuse",
+]
+
+[[commands]]
+name = "books"
+title = "Highlighted Books"
+description = "The books, articles and pages you highlighted, with how many; open one to read its highlights in order"
+icon = "bs-book"
+keywords = [
+  "highlights",
+  "books",
+  "articles",
+  "readwise",
+  "kindle",
+  "hypothesis",
+  "reading",
+  "livres",
+  "lectures",
+  "surlignements",
+]
+
+[[preferences]]
+name = "readwiseToken"
+title = "Readwise access token"
+description = "readwise.io/access_token"
+type = "secret"
+
+[[preferences]]
+name = "clippings"
+title = "My Clippings.txt"
+description = "Empty: found on a plugged-in Kindle, or ~/My Clippings.txt, ~/Documents or ~/Downloads"
+
+[[preferences]]
+name = "hypothesisUser"
+title = "Hypothes.is username"
+description = "Your public annotations; with a token, this is found for you"
+
+[[preferences]]
+name = "hypothesisToken"
+title = "Hypothes.is API token"
+description = "hypothes.is/account/developer: adds your private annotations"
+type = "secret"
