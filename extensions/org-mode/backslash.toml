@@ -1,0 +1,106 @@
+[extension]
+id = "org-mode"
+title = "Org Mode"
+description = "Your Org agenda: overdue, scheduled and deadline items with TODO keywords, priorities and tags; mark DONE, capture to an inbox, open in Emacs at the line"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calendar"
+license = "MIT"
+categories = ["productivity"]
+
+# Org files are read from the folders people keep them in (same list as
+# ALLOWED in org.ts); writing there is needed to mark items DONE, change their
+# state or priority, and append captures to the inbox file; a heading is
+# changed only if its line is still the one shown. emacsclient opens a heading at its line in your running Emacs, else emacs
+# is started.
+[permissions]
+read = [
+  "~/org",
+  "~/Org",
+  "~/Documents/org",
+  "~/Documents/Org",
+  "~/Dropbox/org",
+  "~/Nextcloud/org",
+  "~/Sync/org",
+  "~/notes",
+  "~/Notes",
+]
+write = [
+  "~/org",
+  "~/Org",
+  "~/Documents/org",
+  "~/Documents/Org",
+  "~/Dropbox/org",
+  "~/Nextcloud/org",
+  "~/Sync/org",
+  "~/notes",
+  "~/Notes",
+]
+run = ["emacsclient", "emacs"]
+env = ["HOME"]
+
+[[commands]]
+name = "agenda"
+title = "Org Agenda"
+description = "Overdue, today's and upcoming items; all TODOs by keyword and priority"
+icon = "bs-calendar"
+keywords = [
+  "org",
+  "org-mode",
+  "orgmode",
+  "emacs",
+  "agenda",
+  "todo",
+  "scheduled",
+  "deadline",
+  "today",
+  "gtd",
+  "agenda du jour",
+  "tâches",
+  "échéance",
+  "aujourd'hui",
+]
+
+[[commands]]
+name = "capture"
+title = "Capture to Org"
+description = "“Call Bob :phone:” appended to your inbox.org as a TODO"
+icon = "bs-inbox"
+mode = "no-view"
+keywords = ["org", "org-mode", "capture", "inbox", "todo", "emacs", "noter", "capturer", "ajouter", "boîte de réception"]
+[[commands.arguments]]
+name = "text"
+placeholder = "Call Bob :phone:"
+required = true
+
+[[preferences]]
+name = "files"
+title = "Org files and folders"
+description = "Separated by commas, like ~/org or ~/org/work.org, ~/notes (folders are searched 3 levels deep)"
+default = "~/org"
+
+[[preferences]]
+name = "inbox"
+title = "Inbox file"
+description = "Where Capture to Org appends entries"
+default = "~/org/inbox.org"
+
+[[preferences]]
+name = "keywords"
+title = "TODO keywords"
+description = "As in org-todo-keywords, done states after “|”. #+TODO: lines of a file are read too"
+default = "TODO NEXT WAITING | DONE CANCELLED"
+
+[[preferences]]
+name = "lookahead"
+title = "Days ahead"
+description = "Upcoming scheduled items and deadlines shown this many days in advance (a deadline's own -3d wins)"
+type = "number"
+default = 7
+
+[[preferences]]
+name = "closed"
+title = "Add CLOSED timestamps"
+description = "“CLOSED: [2026-10-31 Sat 14:05]” when marking an item done, as org-log-done does"
+type = "boolean"
+default = true

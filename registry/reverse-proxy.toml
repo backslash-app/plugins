@@ -1,0 +1,14 @@
+id = "reverse-proxy"
+title = "Reverse Proxy"
+description = "Routes and certificates of Traefik, Caddy and Nginx Proxy Manager, errors first, with upstreams and expiry; open a domain, renew or disable a host"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/reverse-proxy"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:1e32690a2cf60fbb7c371c80e923fe64a6f011d67346724a063100cb4e70f2c1"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Proxy Routes"]
+categories = ["network"]
+

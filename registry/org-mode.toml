@@ -1,0 +1,14 @@
+id = "org-mode"
+title = "Org Mode"
+description = "Your Org agenda: overdue, scheduled and deadline items with TODO keywords, priorities and tags; mark DONE, capture to an inbox, open in Emacs at the line"
+author = "Backslash"
+icon = "bs-calendar"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/org-mode"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:1b006fcb4f109872bb0403c4465f3cade2d5de045d5833ba2d9f03ef7419ce87"
+permissions = ["Run emacsclient", "Run emacs", "Read ~/org", "Read ~/Org", "Read ~/Documents/org", "Read ~/Documents/Org", "Read ~/Dropbox/org", "Read ~/Nextcloud/org", "Read ~/Sync/org", "Read ~/notes", "Read ~/Notes", "Write ~/org", "Write ~/Org", "Write ~/Documents/org", "Write ~/Documents/Org", "Write ~/Dropbox/org", "Write ~/Nextcloud/org", "Write ~/Sync/org", "Write ~/notes", "Write ~/Notes", "Read the environment variable HOME"]
+commands = ["Org Agenda", "Capture to Org"]
+categories = ["productivity"]
+

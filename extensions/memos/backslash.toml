@@ -1,0 +1,119 @@
+[extension]
+id = "memos"
+title = "Memos & Trilium"
+description = "Search your Memos and Trilium notes with a preview, capture a new memo in a keystroke, pin, and copy links"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-note"
+license = "MIT"
+categories = ["productivity"]
+
+# Memos and Trilium run on your own server, and hosts must be declared ahead
+# (as the Budget and Linkding extensions do): this computer (Trilium Desktop
+# serves ETAPI on localhost:37840), local and container names, private IPv4
+# ranges (Deno's --allow-net accepts CIDR), Tailscale and DuckDNS, plus the
+# Memos demo. A server on a custom public domain is not reachable: use its
+# local or Tailscale address. Same list as HOSTS in lib.ts (a test checks it).
+[permissions]
+net = [
+  "demo.usememos.com",
+  "localhost",
+  "127.0.0.1",
+  "memos",
+  "trilium",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "search"
+title = "Search Memos"
+description = "Your memos and Trilium notes, pinned first; type to search, Enter opens, or capture what you typed"
+icon = "bs-note"
+keywords = [
+  "memos",
+  "usememos",
+  "trilium",
+  "notes",
+  "search notes",
+  "journal",
+  "knowledge base",
+  "mémos",
+  "chercher",
+  "carnet",
+  "pense-bête",
+]
+
+[[commands]]
+name = "capture"
+title = "Capture Memo"
+description = "Saves what you type as a new memo (or Trilium note), #tags included"
+icon = "bs-plus"
+mode = "no-view"
+keywords = [
+  "memos",
+  "trilium",
+  "capture",
+  "quick note",
+  "new memo",
+  "jot",
+  "inbox",
+  "noter",
+  "nouvelle note",
+  "nouveau mémo",
+  "capturer",
+]
+[[commands.arguments]]
+name = "text"
+placeholder = "Call Ada about the demo #work"
+required = true
+
+[[preferences]]
+name = "memosUrl"
+title = "Memos address"
+description = "As you open it in the browser, e.g. http://memos.lan:5230 or http://192.168.1.20:5230"
+
+[[preferences]]
+name = "memosToken"
+title = "Memos access token"
+description = "Memos → Settings → My Account → Access Tokens → Create"
+type = "secret"
+
+[[preferences]]
+name = "memosVisibility"
+title = "New memos are public"
+description = "Off: new memos are private (only you see them)"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "triliumUrl"
+title = "Trilium address"
+description = "Your Trilium server, e.g. http://trilium.lan:8080, or http://localhost:37840 for Trilium Desktop"
+
+[[preferences]]
+name = "triliumToken"
+title = "Trilium ETAPI token"
+description = "Trilium → Options → ETAPI → Create new ETAPI token"
+type = "secret"
+
+[[preferences]]
+name = "triliumParent"
+title = "Where new Trilium notes go"
+description = "inbox (Trilium's inbox: the #inbox note or today's journal), today (today's journal), or a note ID"
+default = "inbox"
+
+[[preferences]]
+name = "captureTo"
+title = "Capture to"
+description = "memos or trilium, when both are set up (default: memos)"
+default = "memos"

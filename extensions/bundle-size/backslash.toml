@@ -1,0 +1,40 @@
+[extension]
+id = "bundle-size"
+title = "Bundle Size"
+description = "Minified and gzipped size of any npm package version, install size, download time on 3G and 4G, dependencies and lighter alternatives"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+categories = ["developer"]
+
+# bundlephobia.com builds the package and measures it (minified, gzipped,
+# dependencies, similar packages, size history); packagephobia.com measures
+# what `npm install` downloads; registry.npmjs.org suggests packages as you
+# type.
+[permissions]
+net = ["bundlephobia.com", "packagephobia.com", "registry.npmjs.org"]
+
+[[commands]]
+name = "search"
+title = "Bundle Size"
+description = "Type a package (react, lodash@4.17.21): min + gzip size, install size, download time, lighter alternatives"
+icon = "bs-package"
+keywords = [
+  "bundlephobia",
+  "packagephobia",
+  "npm",
+  "package size",
+  "bundle",
+  "gzip",
+  "minified",
+  "javascript",
+  "node",
+  "dependencies",
+  "install size",
+  "taille",
+  "poids",
+  "paquet",
+  "dépendances",
+  "taille du bundle",
+]

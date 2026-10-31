@@ -1,0 +1,104 @@
+[extension]
+id = "nomad-consul"
+title = "Nomad & Consul"
+description = "HashiCorp Nomad jobs, failing first, with their allocations and logs, and Consul services with their health checks"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-server"
+license = "MIT"
+categories = ["developer"]
+
+# Nomad's and Consul's HTTP APIs, on this computer, the local network or
+# Tailscale, as the address preferences allow (same list as HOSTS in api.ts).
+# The NOMAD_* and CONSUL_HTTP_* variables the CLIs use are the defaults when
+# the preferences are empty.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.internal",
+  "*.consul",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+env = ["NOMAD_ADDR", "NOMAD_TOKEN", "NOMAD_NAMESPACE", "CONSUL_HTTP_ADDR", "CONSUL_HTTP_TOKEN"]
+
+[[commands]]
+name = "jobs"
+title = "Nomad Jobs"
+description = "Jobs failing first, with running and wanted counts; allocations, task events and logs; stop, start, restart"
+icon = "bs-server"
+keywords = [
+  "nomad",
+  "hashicorp",
+  "jobs",
+  "allocations",
+  "alloc",
+  "tasks",
+  "logs",
+  "scheduler",
+  "orchestration",
+  "cluster",
+  "tâches",
+  "journaux",
+  "ordonnanceur",
+  "grappe",
+]
+
+[[commands]]
+name = "services"
+title = "Consul Services"
+description = "Services with their instances and health checks, failing first; check output and addresses"
+icon = "bs-globe"
+keywords = [
+  "consul",
+  "hashicorp",
+  "services",
+  "service discovery",
+  "health checks",
+  "checks",
+  "catalog",
+  "dns",
+  "mesh",
+  "santé",
+  "découverte de services",
+  "vérifications",
+]
+
+[[preferences]]
+name = "nomadAddress"
+title = "Nomad address"
+description = "Like http://nomad.lan:4646 (this computer, your network or Tailscale). Empty: NOMAD_ADDR, then http://127.0.0.1:4646"
+
+[[preferences]]
+name = "nomadToken"
+title = "Nomad token"
+description = "When ACLs are on: the Secret ID of a token that can read jobs and logs (empty: NOMAD_TOKEN)"
+type = "secret"
+
+[[preferences]]
+name = "nomadNamespace"
+title = "Nomad namespace"
+description = "Empty for every namespace (*), or one name"
+
+[[preferences]]
+name = "consulAddress"
+title = "Consul address"
+description = "Like http://consul.lan:8500. Empty: CONSUL_HTTP_ADDR, then http://127.0.0.1:8500"
+
+[[preferences]]
+name = "consulToken"
+title = "Consul token"
+description = "When ACLs are on: a token with service:read and node:read (empty: CONSUL_HTTP_TOKEN)"
+type = "secret"
+
+[[preferences]]
+name = "consulDatacenter"
+title = "Consul datacenter"
+description = "Empty for the agent's own"

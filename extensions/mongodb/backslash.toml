@@ -1,0 +1,101 @@
+[extension]
+id = "mongodb"
+title = "MongoDB"
+description = "MongoDB Atlas clusters and your own servers: databases, collections, document counts and the latest documents, connection strings to copy"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-database"
+license = "MIT"
+categories = ["developer"]
+
+# The Atlas Admin API (API key or service account). Your own servers are read
+# with mongosh, which receives the connection string in an environment
+# variable (not on its command line); "Open in mongosh" starts it in your
+# terminal.
+[permissions]
+net = ["cloud.mongodb.com"]
+run = [
+  "mongosh",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "databases"
+title = "MongoDB Databases"
+description = "Databases of your servers with their size, then collections with document counts, and the latest documents"
+icon = "bs-database"
+keywords = [
+  "mongodb",
+  "mongo",
+  "mongosh",
+  "database",
+  "db",
+  "collections",
+  "documents",
+  "nosql",
+  "query",
+  "base de données",
+  "bdd",
+  "requête",
+]
+
+[[commands]]
+name = "clusters"
+title = "MongoDB Atlas Clusters"
+description = "Clusters of your Atlas projects with their state, tier, version and region; copy the connection string, pause or resume"
+icon = "bs-cloud"
+keywords = ["mongodb", "atlas", "mongo", "cluster", "clusters", "cloud", "database", "connection string", "grappe", "nuage", "base de données"]
+
+[[preferences]]
+name = "connections"
+title = "Connection strings"
+description = "mongodb:// or mongodb+srv:// strings separated by spaces, optionally named: prod=mongodb+srv://user:pass@… (default mongodb://localhost:27017)"
+type = "secret"
+
+[[preferences]]
+name = "showSystem"
+title = "Show system databases"
+description = "Also list admin, config and local"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "atlasClientId"
+title = "Atlas service account client ID"
+description = "Organization → Access Manager → Service Accounts (or use an API key below)"
+
+[[preferences]]
+name = "atlasClientSecret"
+title = "Atlas service account secret"
+type = "secret"
+
+[[preferences]]
+name = "atlasPublicKey"
+title = "Atlas API public key"
+description = "Organization → Access Manager → API Keys"
+
+[[preferences]]
+name = "atlasPrivateKey"
+title = "Atlas API private key"
+type = "secret"
+
+[[preferences]]
+name = "atlasUser"
+title = "Atlas database user"
+description = "Optional: the user Open in mongosh signs in as (it asks for the password)"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For mongosh. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

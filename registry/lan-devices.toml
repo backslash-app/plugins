@@ -1,0 +1,14 @@
+id = "lan-devices"
+title = "LAN Devices"
+description = "The devices on your local network with their name, vendor, MAC and services; ping, SSH, open their web page, copy addresses"
+author = "Backslash"
+icon = "bs-wifi"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/lan-devices"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:c16d57d2daf572dc49886fa028aaebde7a430338bddfc0293d3575fef8ce8f58"
+permissions = ["Run ip", "Run avahi-browse", "Run getent", "Run nmap", "Run ping", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /proc/net/arp", "Read /usr/share/hwdata/oui.txt", "Read /usr/share/ieee-data/oui.txt", "Read /usr/share/misc/oui.txt", "Read /usr/share/nmap/nmap-mac-prefixes", "Read /usr/share/wireshark/manuf"]
+commands = ["LAN Devices"]
+categories = ["network"]
+

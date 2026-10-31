@@ -1,0 +1,14 @@
+id = "elasticsearch"
+title = "Elasticsearch"
+description = "Elasticsearch and OpenSearch: cluster health, indices by size, aliases, mappings, and a quick query of any index"
+author = "Backslash"
+icon = "bs-database"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/elasticsearch"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:fd75fdc4f2abfcf3e70646ac84b5a61bfe904514833ba79007e722e71d2c6eba"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Access *.cloud.es.io", "Access *.elastic-cloud.com", "Access *.found.io", "Access *.es.amazonaws.com", "Access *.aivencloud.com", "Access *.bonsaisearch.net"]
+commands = ["Elasticsearch Indices", "Search Elasticsearch"]
+categories = ["developer"]
+

@@ -1,0 +1,14 @@
+id = "bundle-size"
+title = "Bundle Size"
+description = "Minified and gzipped size of any npm package version, install size, download time on 3G and 4G, dependencies and lighter alternatives"
+author = "Backslash"
+icon = "bs-package"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/bundle-size"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:ccc37294b85bd12ae56f2b7eb7c4a6f530de74db5f86ae7ee26823bf0ca2bed4"
+permissions = ["Access bundlephobia.com", "Access packagephobia.com", "Access registry.npmjs.org"]
+commands = ["Bundle Size"]
+categories = ["developer"]
+

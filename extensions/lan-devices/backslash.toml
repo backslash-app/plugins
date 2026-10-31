@@ -1,0 +1,83 @@
+[extension]
+id = "lan-devices"
+title = "LAN Devices"
+description = "The devices on your local network with their name, vendor, MAC and services; ping, SSH, open their web page, copy addresses"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-wifi"
+license = "MIT"
+categories = ["network"]
+
+# ip reads the neighbor table (/proc/net/arp without it), your networks and the
+# router; avahi-browse lists what devices announce over mDNS (printers,
+# Chromecasts, NAS…); getent resolves their names. Scan Network wakes up every
+# address of your network (a /24 at most) with nmap -sn, or ping when nmap isn't
+# installed. Vendors come from a bundled table, or the IEEE list your system
+# installs (hwdata, ieee-data, nmap, Wireshark). The terminals are for SSH.
+[permissions]
+run = [
+  "ip",
+  "avahi-browse",
+  "getent",
+  "nmap",
+  "ping",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+read = [
+  "/proc/net/arp",
+  "/usr/share/hwdata/oui.txt",
+  "/usr/share/ieee-data/oui.txt",
+  "/usr/share/misc/oui.txt",
+  "/usr/share/nmap/nmap-mac-prefixes",
+  "/usr/share/wireshark/manuf",
+]
+
+[[commands]]
+name = "devices"
+title = "LAN Devices"
+description = "Who is on your network: names, vendors, services; Tab scans every address"
+icon = "bs-wifi"
+keywords = [
+  "lan",
+  "network",
+  "devices",
+  "local network",
+  "arp",
+  "neighbors",
+  "mdns",
+  "bonjour",
+  "avahi",
+  "zeroconf",
+  "nmap",
+  "scan",
+  "ip address",
+  "mac address",
+  "réseau",
+  "réseau local",
+  "appareils",
+  "périphériques réseau",
+  "adresse ip",
+  "adresse mac",
+  "scanner le réseau",
+]
+
+[[preferences]]
+name = "sshUser"
+title = "SSH user"
+description = "Optional: the user for SSH in Terminal. Leave empty to use your ~/.ssh/config or local user name"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For SSH. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

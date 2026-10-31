@@ -1,0 +1,109 @@
+[extension]
+id = "router"
+title = "Router"
+description = "Connected clients, internet throughput and reboot for OpenWrt, UniFi and Freebox routers, with Wi-Fi signal, IPs and traffic"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-wifi"
+license = "MIT"
+categories = ["network"]
+
+# Routers live on your own network, and hosts must be declared ahead: the
+# Freebox's own name (mafreebox.freebox.fr), the usual router names, local
+# names, private IPv4 ranges (Deno's --allow-net accepts CIDR) and Tailscale.
+# A public domain is out of reach. Same list as HOSTS in net.ts.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "mafreebox.freebox.fr",
+  "openwrt",
+  "unifi",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "clients"
+title = "Router Clients"
+description = "Who is connected, Wi-Fi signal and traffic; the router's throughput, uptime and reboot"
+icon = "bs-wifi"
+keywords = [
+  "router",
+  "openwrt",
+  "luci",
+  "unifi",
+  "ubiquiti",
+  "freebox",
+  "wifi",
+  "clients",
+  "devices",
+  "dhcp",
+  "bandwidth",
+  "throughput",
+  "reboot",
+  "routeur",
+  "box",
+  "appareils connectés",
+  "débit",
+  "redémarrer",
+]
+
+[[commands]]
+name = "pair-freebox"
+title = "Pair Freebox"
+description = "Asks the Freebox for an app token: accept on the box's screen, then paste it in Settings"
+icon = "bs-key"
+keywords = ["freebox", "pair", "app token", "associer", "jeton", "autoriser", "free"]
+
+[[preferences]]
+name = "url"
+title = "Router address"
+description = "As you open its web interface: http://192.168.1.1 (OpenWrt), https://192.168.1.1 (UniFi), http://mafreebox.freebox.fr"
+required = true
+
+[[preferences]]
+name = "kind"
+title = "Router kind"
+description = "openwrt, unifi or freebox; leave empty to guess from the address and the credentials set below"
+
+[[preferences]]
+name = "username"
+title = "OpenWrt user"
+description = "The LuCI user, root by default"
+
+[[preferences]]
+name = "password"
+title = "OpenWrt password"
+description = "The password you sign in to LuCI with"
+type = "secret"
+
+[[preferences]]
+name = "apiKey"
+title = "UniFi API key"
+description = "UniFi Network → Settings → Control Plane → Integrations → Create API Key"
+type = "secret"
+
+[[preferences]]
+name = "site"
+title = "UniFi site"
+description = "The site's short name in the address bar; default"
+
+[[preferences]]
+name = "appToken"
+title = "Freebox app token"
+description = "Given by the Pair Freebox command once you accept it on the box"
+type = "secret"
+
+[[preferences]]
+name = "certificate"
+title = "Certificate"
+description = "Optional: the router's self-signed HTTPS certificate (PEM, pasted) so Backslash trusts it; UniFi consoles need it"

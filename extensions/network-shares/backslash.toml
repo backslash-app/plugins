@@ -1,0 +1,75 @@
+[extension]
+id = "network-shares"
+title = "Network Shares"
+description = "Your SMB, NFS, SSH (SFTP or sshfs) and WebDAV shares: mount, open in the file manager and unmount them, and see what is mounted"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-server"
+license = "MIT"
+categories = ["network"]
+
+# gio (GVfs, what the file manager uses) mounts smb://, nfs://, sftp:// and
+# dav:// addresses and lists its mounts; a password you type is handed to it
+# once and never saved. sshfs mounts SSH folders into a directory (mkdir creates
+# it); mount and umount handle /etc/fstab lines with the user option, and
+# fusermount unmounts FUSE mounts. /proc/mounts and /etc/fstab are read to see
+# what is mounted and what fstab offers. The terminals mount interactively, for
+# a new SSH host key or a two-factor code.
+[permissions]
+run = [
+  "gio",
+  "sshfs",
+  "fusermount3",
+  "fusermount",
+  "mount",
+  "umount",
+  "mkdir",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+read = ["/proc/mounts", "/etc/fstab"]
+env = ["HOME"]
+
+[[commands]]
+name = "shares"
+title = "Network Shares"
+description = "Saved shares and what is mounted: Enter mounts and opens, Ctrl+U unmounts"
+icon = "bs-server"
+keywords = [
+  "network share",
+  "share",
+  "smb",
+  "samba",
+  "cifs",
+  "windows share",
+  "nfs",
+  "sftp",
+  "ssh",
+  "sshfs",
+  "webdav",
+  "nas",
+  "mount",
+  "unmount",
+  "gvfs",
+  "partage",
+  "partage réseau",
+  "dossier partagé",
+  "lecteur réseau",
+  "monter",
+  "démonter",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "For Mount in Terminal. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

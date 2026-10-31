@@ -1,0 +1,14 @@
+id = "duplicates"
+title = "Duplicate Files"
+description = "Find identical files in a folder, biggest waste first, and keep the newest or oldest copy, the others going to the trash"
+author = "Backslash"
+icon = "bs-copy"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/duplicates"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:e692b7a06b32877fb38dbeca5b22214a4734715b8998bf481f28844b517a6d94"
+permissions = ["Run b3sum", "Run sha256sum", "Run gio", "Run gdbus", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Read the environment variable HOME"]
+commands = ["Find Duplicate Files"]
+categories = ["system"]
+

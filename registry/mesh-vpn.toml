@@ -1,0 +1,14 @@
+id = "mesh-vpn"
+title = "NetBird & ZeroTier"
+description = "Your NetBird and ZeroTier mesh networks: connection, IPs and peers with latency; connect, disconnect, join and leave networks"
+author = "Backslash"
+icon = "bs-vpn"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/mesh-vpn"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:f21ad1d90656d0cd9d91599bce93901ed90f2afa6750dc52b18469301a1c1819"
+permissions = ["Run netbird", "Run zerotier-cli"]
+commands = ["Mesh VPN", "Join ZeroTier Network"]
+categories = ["network"]
+

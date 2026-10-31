@@ -1,0 +1,14 @@
+id = "keyring"
+title = "Keyring"
+description = "Browse the items of GNOME Keyring, KWallet or any Secret Service keyring with their attributes; copy a secret kept out of clipboard history, lock, unlock or delete"
+author = "Backslash"
+icon = "bs-key"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/keyring"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:73d6126a6294bd6588029fe5bc6ae9da02f4a4b0382e6664ab4226c17fa0ca3d"
+permissions = ["Run busctl", "Run gdbus", "Run secret-tool", "Run seahorse", "Run kwalletmanager5", "Run kwalletmanager"]
+commands = ["Keyring"]
+categories = ["system"]
+

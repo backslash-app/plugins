@@ -1,0 +1,95 @@
+[extension]
+id = "cameras"
+title = "Frigate"
+description = "Your Frigate NVR cameras with their latest snapshot and recent events by label; play clips, keep events, turn detection on or off"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-camera"
+license = "MIT"
+categories = ["network"]
+
+# Frigate runs on your own network, and hosts must be declared ahead:
+# its usual name, local names, private IPv4 ranges (Deno's --allow-net accepts
+# CIDR) and Tailscale. A public domain is out of reach. Same list as HOSTS in
+# net.ts. Snapshots may need a session cookie, so they are downloaded into
+# ~/.cache/backslash/cameras and shown from there.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "frigate",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+read = ["~/.cache/backslash/cameras"]
+write = ["~/.cache/backslash/cameras"]
+env = ["HOME"]
+
+[[commands]]
+name = "cameras"
+title = "Cameras"
+description = "Each Frigate camera with its latest snapshot, frame rate, detection state and last event"
+icon = "bs-camera"
+keywords = [
+  "frigate",
+  "nvr",
+  "cameras",
+  "cctv",
+  "security camera",
+  "snapshot",
+  "live",
+  "detection",
+  "caméras",
+  "vidéosurveillance",
+  "surveillance",
+  "détection",
+]
+
+[[commands]]
+name = "events"
+title = "Camera Events"
+description = "Recent Frigate detections with their snapshot, label, score and clip"
+icon = "bs-video"
+keywords = [
+  "frigate",
+  "events",
+  "detections",
+  "person",
+  "car",
+  "clips",
+  "motion",
+  "événements",
+  "détections",
+  "personne",
+  "voiture",
+  "mouvement",
+]
+
+[[preferences]]
+name = "url"
+title = "Frigate address"
+description = "http://frigate.lan:5000 (internal port, no sign-in) or https://frigate.lan:8971 with a user"
+required = true
+
+[[preferences]]
+name = "username"
+title = "Frigate user"
+description = "Only for port 8971 (authenticated)"
+
+[[preferences]]
+name = "password"
+title = "Frigate password"
+type = "secret"
+
+[[preferences]]
+name = "certificate"
+title = "Certificate"
+description = "Optional: Frigate's self-signed HTTPS certificate (PEM, pasted) for port 8971"

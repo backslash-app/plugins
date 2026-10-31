@@ -1,0 +1,52 @@
+[extension]
+id = "snaps"
+title = "Snaps"
+description = "Installed snaps with their channel, revisions and size: update, revert to an older revision, manage connections, free old revisions or remove them"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+categories = ["system"]
+
+# snap lists the snaps, their store details, pending updates and interface connections
+# as you, and starts their apps. Changes (refresh, revert, hold, connect, remove) run
+# `snap` as root through pkexec (polkit), once per change. The size of each revision is
+# that of its file in /var/lib/snapd/snaps.
+[permissions]
+run = ["snap", "pkexec"]
+read = ["/var/lib/snapd/snaps"]
+
+[[commands]]
+name = "snaps"
+title = "Snaps"
+description = "Installed snaps, updates first, with old revisions to revert to or free"
+icon = "bs-package"
+keywords = [
+  "snap",
+  "snaps",
+  "snapd",
+  "snapcraft",
+  "snap store",
+  "ubuntu",
+  "app",
+  "apps",
+  "applications",
+  "logiciels",
+  "revision",
+  "révision",
+  "revert",
+  "revenir",
+  "rollback",
+  "refresh",
+  "update",
+  "mise à jour",
+  "remove",
+  "supprimer",
+  "désinstaller",
+  "connections",
+  "connexions",
+  "interfaces",
+  "permissions",
+  "disabled",
+  "anciennes révisions",
+]

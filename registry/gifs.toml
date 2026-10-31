@@ -1,0 +1,14 @@
+id = "gifs"
+title = "GIFs"
+description = "Search Tenor and Giphy in a grid, trending when nothing is typed: copy the GIF link, or copy it as a file or an image to paste in any chat"
+author = "Backslash"
+icon = "bs-film"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/gifs"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:46f9057d7153742a82fdd320e99be17ecc49741de67fcdabe0a0536c0e49cd37"
+permissions = ["Access tenor.googleapis.com", "Access media.tenor.com", "Access media1.tenor.com", "Access c.tenor.com", "Access api.giphy.com", "Access i.giphy.com", "Access media.giphy.com", "Access media0.giphy.com", "Access media1.giphy.com", "Access media2.giphy.com", "Access media3.giphy.com", "Access media4.giphy.com", "Run wl-copy", "Run xclip", "Read ~/.cache/backslash/gifs", "Read ~/Downloads", "Read ~/Téléchargements", "Write ~/.cache/backslash/gifs", "Write ~/Downloads", "Write ~/Téléchargements", "Read the environment variable HOME", "Read the environment variable WAYLAND_DISPLAY"]
+commands = ["Search GIFs"]
+categories = ["media"]
+

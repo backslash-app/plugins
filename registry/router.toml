@@ -1,0 +1,14 @@
+id = "router"
+title = "Router"
+description = "Connected clients, internet throughput and reboot for OpenWrt, UniFi and Freebox routers, with Wi-Fi signal, IPs and traffic"
+author = "Backslash"
+icon = "bs-wifi"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/router"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:262a33c8e1918a926c80ab2be71da74ee11a5f3c2bdcc5ab47026726c79a1daf"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access mafreebox.freebox.fr", "Access openwrt", "Access unifi", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Router Clients", "Pair Freebox"]
+categories = ["network"]
+

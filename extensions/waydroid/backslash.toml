@@ -1,0 +1,65 @@
+[extension]
+id = "waydroid"
+title = "Waydroid"
+description = "Open your Waydroid Android apps, start or stop the session, show the full Android screen, and install an APK you copied in the file manager"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-apps"
+license = "MIT"
+categories = ["system"]
+
+# waydroid gives the session's status and apps, launches, installs and removes them.
+# The session and the full UI run in systemd user units (systemd-run, systemctl to stop
+# them) so they stay up once the launcher is hidden; the Wayland variables are passed
+# along. The launchers and icons Waydroid exports list the apps while the session is
+# stopped. APKs copied in the file manager are read with wl-paste (Wayland) or xclip
+# (X11), else from the clipboard's text. Restarting a stuck container runs
+# `waydroid container restart` as root through pkexec (polkit).
+[permissions]
+run = ["waydroid", "systemd-run", "systemctl", "pkexec", "wl-paste", "xclip"]
+read = ["~/.local/share/applications", "~/.local/share/waydroid/data/icons"]
+env = ["HOME", "WAYLAND_DISPLAY", "XDG_RUNTIME_DIR", "XDG_SESSION_TYPE"]
+clipboard-read = true
+
+[[commands]]
+name = "waydroid"
+title = "Waydroid"
+description = "The session's state and your Android apps: open one, start or stop Waydroid"
+icon = "bs-apps"
+keywords = [
+  "waydroid",
+  "android",
+  "apps",
+  "applications",
+  "applis",
+  "apk",
+  "lineageos",
+  "anbox",
+  "container",
+  "conteneur",
+  "session",
+  "start",
+  "démarrer",
+  "stop",
+  "arrêter",
+  "téléphone",
+  "phone",
+  "mobile",
+  "play store",
+]
+
+[[commands]]
+name = "install-apk"
+title = "Install APK in Waydroid"
+description = "Installs the .apk files you copied in the file manager"
+icon = "bs-download"
+mode = "no-view"
+keywords = ["apk", "install", "installer", "android", "waydroid", "sideload", "fichier apk", "application android"]
+
+[[commands]]
+name = "show-ui"
+title = "Show Waydroid"
+description = "The whole Android screen in a window, starting the session if needed"
+icon = "bs-monitor"
+mode = "no-view"
+keywords = ["waydroid", "android", "full ui", "plein écran", "écran android", "show", "afficher", "ouvrir"]

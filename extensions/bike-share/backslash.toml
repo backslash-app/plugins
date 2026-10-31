@@ -1,0 +1,81 @@
+[extension]
+id = "bike-share"
+title = "Bike Share"
+description = "Live bikes, e-bikes and free docks at your favorite and nearest bike-share stations: Vélib', Vélo'v, V'Lille, Naolib, Citi Bike, Bicing or any GBFS feed"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-pin"
+license = "MIT"
+categories = ["everyday"]
+
+# Public GBFS feeds, no account or key. The hosts of the systems shipped by
+# name (Vélib' on smovengo.cloud, the JCDecaux "cyclocity" systems such as
+# Vélo'v, Naolib, VélÔToulouse, Villo! and Dublinbikes, V'Lille on ilevia.fr,
+# Vélhop on nextbike, Vélomagg on fifteen, Bicing and Toronto on
+# publicbikesystem.net, Citi Bike whose feeds live on gbfs.lyft.com, BIXI),
+# plus the feed hosts of Fifteen, Ecovelo and Donkey Republic, which run many
+# smaller systems. A gbfs.json URL on another host is refused with a message:
+# allowing any host would need net = ["*"]. Same list as HOSTS in lib.ts.
+[permissions]
+net = [
+  "velib-metropole-opendata.smovengo.cloud",
+  "api.cyclocity.fr",
+  "media.ilevia.fr",
+  "gbfs.nextbike.net",
+  "gbfs.theta.fifteen.eu",
+  "gbfs.partners.fifteen.eu",
+  "*.publicbikesystem.net",
+  "gbfs.citibikenyc.com",
+  "gbfs.lyft.com",
+  "gbfs.velobixi.com",
+  "api.gbfs.v3.0.ecovelo.mobi",
+  "stables.donkey.bike",
+]
+
+[[commands]]
+name = "stations"
+title = "Bike Stations"
+description = "Favorite and nearest stations with bikes, e-bikes and free docks; Tab shows only those with bikes, e-bikes or docks"
+icon = "bs-pin"
+keywords = [
+  "bike",
+  "bike share",
+  "bicycle",
+  "e-bike",
+  "dock",
+  "station",
+  "gbfs",
+  "vélo",
+  "velo",
+  "vélos",
+  "vélo électrique",
+  "vls",
+  "vélo en libre-service",
+  "borne",
+  "bornettes",
+  "places libres",
+  "velib",
+  "vélib",
+  "velov",
+  "vélo'v",
+  "v'lille",
+  "vlille",
+  "bicloo",
+  "naolib",
+  "velotoulouse",
+  "velhop",
+  "citi bike",
+  "bicing",
+  "bixi",
+]
+
+[[preferences]]
+name = "system"
+title = "System"
+description = "velib, velov, vlille, bicloo, velotoulouse, velhop, velomagg, velostanlib, velam, velocite, velo2, villo, veloh, dublinbikes, sevici, valenbisi, bicing, citibike, bixi, toronto, or a gbfs.json URL"
+default = "velib"
+
+[[preferences]]
+name = "home"
+title = "Home"
+description = "Optional: \"latitude, longitude\" (e.g. 48.8566, 2.3522) to show the nearest stations first"

@@ -1,0 +1,14 @@
+id = "memos"
+title = "Memos & Trilium"
+description = "Search your Memos and Trilium notes with a preview, capture a new memo in a keystroke, pin, and copy links"
+author = "Backslash"
+icon = "bs-note"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/memos"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:d8dddaed1120b15d69b5391a730586ca778d95fee4370dad7a6db9011e266716"
+permissions = ["Access demo.usememos.com", "Access localhost", "Access 127.0.0.1", "Access memos", "Access trilium", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Search Memos", "Capture Memo"]
+categories = ["productivity"]
+

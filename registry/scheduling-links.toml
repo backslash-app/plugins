@@ -1,0 +1,14 @@
+id = "scheduling-links"
+title = "Scheduling Links"
+description = "Your upcoming Cal.com and Calendly bookings with attendees and one-key joins, your booking links to copy, and cancel with a confirmation"
+author = "Backslash"
+icon = "bs-calendar"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/scheduling-links"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:a52e2003b6e393ded827f3d5389fd67db36b26455459d7ccdb2a7ab75944fee1"
+permissions = ["Access api.cal.com", "Access api.calendly.com"]
+commands = ["Upcoming Bookings", "Scheduling Links"]
+categories = ["productivity"]
+

@@ -1,0 +1,14 @@
+id = "python-envs"
+title = "Python Environments"
+description = "The virtualenvs of your projects (venv, uv, virtualenv, Poetry, Pipenv) and conda environments: Python version, size, packages; open a terminal with one activated, delete the ones you don't need"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/python-envs"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:2633ce211047bd93d5a1eb51f3f52dd6fe0fa5ea95b006c1de299792347e4c66"
+permissions = ["Run conda", "Run mamba", "Run micromamba", "Run du", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Read ~/.cache/pypoetry/virtualenvs", "Read ~/.local/share/virtualenvs", "Read ~/.conda", "Read ~/miniconda3", "Read ~/anaconda3", "Read ~/miniforge3", "Read ~/mambaforge", "Read ~/micromamba", "Read ~/.local/share/mamba", "Read /opt/conda", "Read ~/.local/share/uv/python", "Read ~/.pyenv/versions", "Read /usr/bin", "Read /usr/local/bin", "Write ~/Projects", "Write ~/projects", "Write ~/Code", "Write ~/code", "Write ~/dev", "Write ~/Developer", "Write ~/src", "Write ~/git", "Write ~/repos", "Write ~/workspace", "Write ~/work", "Write ~/Work", "Write ~/.cache/pypoetry/virtualenvs", "Write ~/.local/share/virtualenvs", "Read the environment variable HOME", "Read the environment variable SHELL"]
+commands = ["Python Environments"]
+categories = ["developer"]
+

@@ -1,0 +1,14 @@
+id = "nomad-consul"
+title = "Nomad & Consul"
+description = "HashiCorp Nomad jobs, failing first, with their allocations and logs, and Consul services with their health checks"
+author = "Backslash"
+icon = "bs-server"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/nomad-consul"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:ff496ec71877981f1ab133be0a8e5a727784fa32f23064d39b0638bf5736a2a6"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.internal", "Access *.consul", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read the environment variable NOMAD_ADDR", "Read the environment variable NOMAD_TOKEN", "Read the environment variable NOMAD_NAMESPACE", "Read the environment variable CONSUL_HTTP_ADDR", "Read the environment variable CONSUL_HTTP_TOKEN"]
+commands = ["Nomad Jobs", "Consul Services"]
+categories = ["developer"]
+

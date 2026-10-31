@@ -1,0 +1,14 @@
+id = "mail-catcher"
+title = "Mail Catcher"
+description = "The mail your app sends in development, caught by Mailpit or MailHog: read it, copy the verification code or open the link in one keystroke"
+author = "Backslash"
+icon = "bs-inbox"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/mail-catcher"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:17e65b286ee902caa46cbd1ddf1ef45839f2fdffc28db4dfb0faed0dbd6852df"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access *.localhost", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.internal", "Access *.test", "Access *.ddev.site", "Access *.lndo.site", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Write /tmp/backslash-mail-catcher"]
+commands = ["Caught Mail"]
+categories = ["developer"]
+

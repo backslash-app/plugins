@@ -1,0 +1,55 @@
+[extension]
+id = "boot-entries"
+title = "Boot Entries"
+description = "Reboot into Windows or another boot entry just once, from systemd-boot, GRUB or the EFI boot menu, or straight into the firmware setup"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-power"
+license = "MIT"
+categories = ["system"]
+
+# bootctl lists systemd-boot's entries; when the EFI partition is root-only, busctl asks
+# logind which entries the loader reported (and whether the firmware setup is reachable).
+# GRUB's menu is read from grub.cfg, its grubenv and the BLS entries in /boot/loader/entries
+# (Fedora); efibootmgr lists the firmware's boot menu. systemctl reboots (into a systemd-boot
+# entry or the firmware setup, through logind). Picking the next GRUB or EFI entry runs
+# grub-reboot or efibootmgr --bootnext as root through pkexec (polkit), once per change.
+[permissions]
+read = [
+  "/boot/grub/grub.cfg",
+  "/boot/grub/grubenv",
+  "/boot/grub2/grub.cfg",
+  "/boot/grub2/grubenv",
+  "/boot/loader/entries",
+]
+run = ["bootctl", "busctl", "efibootmgr", "systemctl", "pkexec"]
+
+[[commands]]
+name = "reboot-into"
+title = "Reboot Into"
+description = "Boot entries of systemd-boot, GRUB and the firmware: reboot into one once, or into the UEFI setup"
+icon = "bs-power"
+keywords = [
+  "reboot",
+  "redémarrer",
+  "redémarrage",
+  "windows",
+  "dual boot",
+  "double démarrage",
+  "boot",
+  "démarrage",
+  "grub",
+  "systemd-boot",
+  "bootctl",
+  "efi",
+  "uefi",
+  "bios",
+  "firmware",
+  "efibootmgr",
+  "bootnext",
+  "grub-reboot",
+  "entrée de démarrage",
+  "boot menu",
+  "menu de démarrage",
+  "redémarrer sous windows",
+]

@@ -1,0 +1,14 @@
+id = "airtable"
+title = "Airtable, NocoDB & Baserow"
+description = "Search the records of your Airtable, NocoDB and Baserow tables with every field in the preview, and add a record with a form built from the table's fields"
+author = "Backslash"
+icon = "bs-database"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/airtable"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:e91f9bc2c2e7dd8933d2079fce21606426d2785f7823bf0e6628acf3280a6e7c"
+permissions = ["Access api.airtable.com", "Access app.nocodb.com", "Access api.baserow.io", "Access localhost", "Access 127.0.0.1", "Access nocodb", "Access baserow", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.duckdns.org", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Airtable Tables", "Add Airtable Record"]
+categories = ["productivity"]
+
