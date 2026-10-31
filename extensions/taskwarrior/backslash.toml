@@ -1,0 +1,54 @@
+[extension]
+id = "taskwarrior"
+title = "Taskwarrior"
+description = "Your Taskwarrior tasks by urgency with project, tags and due date; quick add, done, start and stop, annotate, modify and reports"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-square-check"
+license = "MIT"
+categories = ["productivity"]
+
+# Everything goes through the `task` command of this computer, with your own
+# ~/.taskrc, data and hooks (and sync server, if you use one): the extension
+# itself reads no file and reaches no network.
+[permissions]
+run = ["task"]
+
+[[commands]]
+name = "tasks"
+title = "Taskwarrior Tasks"
+description = "Pending tasks by urgency: done, start, annotate, modify, delete"
+icon = "bs-square-check"
+keywords = [
+  "taskwarrior",
+  "task",
+  "tasks",
+  "todo",
+  "next",
+  "urgency",
+  "due",
+  "gtd",
+  "tâches",
+  "à faire",
+  "échéance",
+  "urgence",
+]
+
+[[commands]]
+name = "add"
+title = "Add Taskwarrior Task"
+description = "“Call Bob project:Work due:fri +phone”, added at once"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["taskwarrior", "task add", "new task", "todo", "capture", "ajouter", "tâche", "nouvelle tâche"]
+[[commands.arguments]]
+name = "task"
+placeholder = "Call Bob project:Work due:fri +phone"
+required = true
+
+[[commands]]
+name = "reports"
+title = "Taskwarrior Reports"
+description = "next, active, overdue, completed, summary, burndown… as task prints them"
+icon = "bs-chart-up"
+keywords = ["taskwarrior", "report", "reports", "summary", "burndown", "history", "rapport", "statistiques"]
