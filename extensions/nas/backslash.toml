@@ -1,0 +1,90 @@
+[extension]
+id = "nas"
+title = "NAS"
+description = "Health and capacity of your TrueNAS, Synology or Unraid: pools and volumes, disks with temperature, alerts, datasets, shares and containers"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-database"
+license = "MIT"
+categories = ["network"]
+
+# A NAS lives on your own network, and hosts must be declared ahead: the
+# usual NAS names (truenas, tower for Unraid), local names, private IPv4
+# ranges (Deno's --allow-net accepts CIDR) and Tailscale. A public domain
+# (QuickConnect, DDNS) is out of reach. Same list as HOSTS in net.ts.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "truenas",
+  "tower",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "nas"
+title = "NAS Status"
+description = "Alerts first, then storage used, disks, datasets, shares and containers"
+icon = "bs-database"
+keywords = [
+  "nas",
+  "truenas",
+  "freenas",
+  "synology",
+  "dsm",
+  "unraid",
+  "zfs",
+  "pool",
+  "volume",
+  "disks",
+  "storage",
+  "shares",
+  "smb",
+  "capacity",
+  "stockage",
+  "disques",
+  "partages",
+  "espace libre",
+  "santé",
+]
+
+[[preferences]]
+name = "url"
+title = "NAS address"
+description = "As you open its web interface: https://truenas.local, http://192.168.1.20:5000 (Synology), http://tower.local"
+required = true
+
+[[preferences]]
+name = "kind"
+title = "NAS kind"
+description = "truenas, synology or unraid; leave empty to detect"
+
+[[preferences]]
+name = "apiKey"
+title = "API key (TrueNAS, Unraid)"
+description = "TrueNAS: user menu → My API Keys. Unraid: Settings → Management Access → API Keys"
+type = "secret"
+
+[[preferences]]
+name = "username"
+title = "Synology account"
+description = "An administrator account without 2-step verification"
+
+[[preferences]]
+name = "password"
+title = "Synology password"
+type = "secret"
+
+[[preferences]]
+name = "certificate"
+title = "Certificate"
+description = "Optional: the NAS's self-signed HTTPS certificate (PEM, pasted) so Backslash trusts it"

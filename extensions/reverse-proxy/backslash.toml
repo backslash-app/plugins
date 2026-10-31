@@ -1,0 +1,94 @@
+[extension]
+id = "reverse-proxy"
+title = "Reverse Proxy"
+description = "Routes and certificates of Traefik, Caddy and Nginx Proxy Manager, errors first, with upstreams and expiry; open a domain, renew or disable a host"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+categories = ["network"]
+
+# The proxies' APIs are fetched on this computer (Caddy's admin API listens on
+# localhost:2019), local names, private IPv4 ranges (Deno's --allow-net accepts
+# CIDR) and Tailscale. The public domains they serve are only opened in the
+# browser, never fetched. Same list as HOSTS in net.ts.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "routes"
+title = "Proxy Routes"
+description = "Traefik routers, Caddy routes and Nginx Proxy Manager hosts, errors first, with certificates"
+icon = "bs-globe"
+keywords = [
+  "traefik",
+  "caddy",
+  "nginx proxy manager",
+  "npm",
+  "reverse proxy",
+  "proxy",
+  "routers",
+  "routes",
+  "domains",
+  "certificates",
+  "ssl",
+  "tls",
+  "let's encrypt",
+  "proxy inverse",
+  "domaines",
+  "certificats",
+  "expiration",
+]
+
+[[preferences]]
+name = "traefikUrl"
+title = "Traefik API address"
+description = "Like http://192.168.1.5:8080 (api.insecure) or the dashboard's address"
+
+[[preferences]]
+name = "traefikUser"
+title = "Traefik user"
+description = "Optional: the basic auth user protecting the dashboard"
+
+[[preferences]]
+name = "traefikPassword"
+title = "Traefik password"
+type = "secret"
+
+[[preferences]]
+name = "caddyUrl"
+title = "Caddy admin API"
+description = "Usually http://localhost:2019"
+
+[[preferences]]
+name = "npmUrl"
+title = "Nginx Proxy Manager address"
+description = "The admin interface, like http://192.168.1.5:81"
+
+[[preferences]]
+name = "npmEmail"
+title = "Nginx Proxy Manager email"
+description = "The email you sign in with"
+
+[[preferences]]
+name = "npmPassword"
+title = "Nginx Proxy Manager password"
+type = "secret"
+
+[[preferences]]
+name = "certificate"
+title = "Certificate"
+description = "Optional: a self-signed HTTPS certificate (PEM, pasted) of an API above, so Backslash trusts it"
