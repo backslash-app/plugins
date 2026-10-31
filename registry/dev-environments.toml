@@ -1,0 +1,14 @@
+id = "dev-environments"
+title = "Dev Environments"
+description = "Your GitHub Codespaces, Coder workspaces and DevPod workspaces in one list with their state: start, stop, open in VS Code or over SSH"
+author = "Backslash"
+icon = "bs-cloud"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/dev-environments"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:117e2ce29cd8fac68523ef938b0e3cb4be77010b40c3c776435d969304e1a49e"
+permissions = ["Access api.github.com", "Run gh", "Run coder", "Run devpod", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.config/coderv2", "Read the environment variable HOME"]
+commands = ["Dev Environments"]
+categories = ["developer"]
+

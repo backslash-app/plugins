@@ -1,0 +1,70 @@
+[extension]
+id = "dev-environments"
+title = "Dev Environments"
+description = "Your GitHub Codespaces, Coder workspaces and DevPod workspaces in one list with their state: start, stop, open in VS Code or over SSH"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-cloud"
+license = "MIT"
+categories = ["developer"]
+
+# Codespaces through GitHub's REST API, with your token or the GitHub CLI's sign-in
+# (gh auth token). Coder and DevPod through their CLIs, which hold their own sign-in;
+# Coder's deployment address is read from its config folder for web links. Starting
+# and stopping run the CLIs in the background; SSH and slow starts open your terminal.
+[permissions]
+env = ["HOME"]
+net = ["api.github.com"]
+read = ["~/.config/coderv2"]
+run = [
+  "gh",
+  "coder",
+  "devpod",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "environments"
+title = "Dev Environments"
+description = "Codespaces, Coder and DevPod workspaces: state, machine, branch; start, stop, VS Code, SSH"
+icon = "bs-cloud"
+keywords = [
+  "codespaces",
+  "codespace",
+  "github codespaces",
+  "coder",
+  "devpod",
+  "devcontainer",
+  "dev container",
+  "workspace",
+  "workspaces",
+  "remote",
+  "cloud ide",
+  "vscode",
+  "ssh",
+  "environnement de développement",
+  "espace de travail",
+  "à distance",
+]
+
+[[preferences]]
+name = "githubToken"
+title = "GitHub token"
+description = "For Codespaces: a classic token with the codespace scope. Empty: the GitHub CLI's sign-in (gh auth refresh -s codespace)"
+type = "secret"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

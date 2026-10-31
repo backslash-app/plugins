@@ -1,0 +1,86 @@
+[extension]
+id = "splitwise"
+title = "Splitwise"
+description = "Who owes you and whom you owe on Splitwise, by friend and group, recent expenses, and a quick shared expense split equally"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coin"
+license = "MIT"
+categories = ["productivity"]
+
+# The Splitwise API v3.0, with your personal API key. Settling up opens
+# Splitwise in the browser, where payments are recorded.
+[permissions]
+net = ["secure.splitwise.com"]
+
+[[commands]]
+name = "balances"
+title = "Splitwise Balances"
+description = "Friends who owe you and those you owe, then your groups; Enter opens Splitwise to settle up"
+icon = "bs-coin"
+keywords = [
+  "splitwise",
+  "balances",
+  "owe",
+  "owes me",
+  "debts",
+  "settle up",
+  "friends",
+  "groups",
+  "iou",
+  "dettes",
+  "soldes",
+  "rembourser",
+  "qui me doit",
+  "comptes entre amis",
+]
+
+[[commands]]
+name = "expenses"
+title = "Recent Splitwise Expenses"
+description = "The latest expenses and payments, with what you lent or borrowed on each"
+icon = "bs-history"
+keywords = [
+  "splitwise",
+  "expenses",
+  "recent",
+  "activity",
+  "payments",
+  "history",
+  "dépenses",
+  "récentes",
+  "activité",
+  "remboursements",
+]
+
+[[commands]]
+name = "add-expense"
+title = "Add Splitwise Expense"
+description = "Split an expense equally with a friend or a group: you paid, everyone owes their share"
+icon = "bs-plus"
+keywords = [
+  "splitwise",
+  "add expense",
+  "split",
+  "share",
+  "shared expense",
+  "paid",
+  "ajouter",
+  "dépense",
+  "partager",
+  "diviser",
+  "dépense partagée",
+]
+[[commands.arguments]]
+name = "amount"
+placeholder = "Amount (optional)"
+[[commands.arguments]]
+name = "description"
+placeholder = "Description (optional)"
+
+[[preferences]]
+name = "apiKey"
+title = "Splitwise API key"
+description = "secure.splitwise.com/apps → Register your application → API key"
+type = "secret"
+required = true

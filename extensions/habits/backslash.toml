@@ -1,0 +1,68 @@
+[extension]
+id = "habits"
+title = "Habits"
+description = "Track daily and weekly habits: check in today, streaks and a heatmap of the last months, with optional Habitica sync"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-repeat"
+license = "MIT"
+categories = ["productivity"]
+
+# Habits and check-ins live in the extension's own storage (export them as
+# JSON from any habit). Habitica is only reached when you set your user ID
+# and API token: to list your dailies and habits, pull today's check-ins and
+# score linked tasks when you check in here.
+[permissions]
+net = ["habitica.com"]
+
+[[commands]]
+name = "habits"
+title = "Habits"
+description = "Today's habits with streaks and heatmaps: check in, undo, edit"
+icon = "bs-repeat"
+keywords = [
+  "habit",
+  "habits",
+  "tracker",
+  "streak",
+  "daily",
+  "routine",
+  "check in",
+  "heatmap",
+  "habitica",
+  "habitude",
+  "habitudes",
+  "routine",
+  "série",
+  "suivi",
+]
+
+[[commands]]
+name = "check-in"
+title = "Check In Habit"
+description = "“read” checks in today's Read 20 minutes; again to undo"
+icon = "bs-check"
+mode = "no-view"
+keywords = ["habit", "check in", "done", "streak", "habitica", "habitude", "fait", "cocher", "valider"]
+[[commands.arguments]]
+name = "habit"
+placeholder = "Habit name"
+required = true
+
+[[commands]]
+name = "add"
+title = "Add Habit"
+description = "A daily habit (every day, or some days) or a weekly goal"
+icon = "bs-plus"
+keywords = ["habit", "new", "add", "track", "routine", "habitude", "nouvelle", "ajouter", "suivre"]
+
+[[preferences]]
+name = "habiticaUser"
+title = "Habitica user ID"
+description = "Optional: Habitica → Settings → Site Data (or API) → User ID"
+
+[[preferences]]
+name = "habiticaToken"
+title = "Habitica API token"
+description = "Optional: Habitica → Settings → Site Data → API Token"
+type = "secret"

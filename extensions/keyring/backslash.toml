@@ -1,0 +1,50 @@
+[extension]
+id = "keyring"
+title = "Keyring"
+description = "Browse the items of GNOME Keyring, KWallet or any Secret Service keyring with their attributes; copy a secret kept out of clipboard history, lock, unlock or delete"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-key"
+license = "MIT"
+categories = ["system"]
+
+# The keyrings are read over D-Bus (org.freedesktop.secrets, the Secret Service
+# that GNOME Keyring, KWallet 6, KeePassXC and others provide) with busctl, or
+# gdbus where systemd's busctl isn't installed: labels, attributes and dates
+# only. Secrets are read with secret-tool (libsecret) only when you copy or
+# reveal one, and never stored. Seahorse or KWalletManager open when you ask.
+[permissions]
+run = ["busctl", "gdbus", "secret-tool", "seahorse", "kwalletmanager5", "kwalletmanager"]
+
+[[commands]]
+name = "keyring"
+title = "Keyring"
+description = "Secret Service items by keyring: Enter copies the secret, Ctrl+Shift+C the username"
+icon = "bs-key"
+keywords = [
+  "keyring",
+  "gnome keyring",
+  "kwallet",
+  "seahorse",
+  "secret service",
+  "libsecret",
+  "secret-tool",
+  "password",
+  "passwords",
+  "secret",
+  "credentials",
+  "token",
+  "trousseau",
+  "trousseau de clés",
+  "mot de passe",
+  "mots de passe",
+  "identifiants",
+  "portefeuille",
+]
+
+[[preferences]]
+name = "showAppSecrets"
+title = "Show application secrets"
+description = "Also list the keys apps keep for themselves (browser Safe Storage, GNOME Online Accounts, OAuth tokens…)"
+type = "boolean"
+default = false

@@ -1,0 +1,14 @@
+id = "compose-stacks"
+title = "Compose Stacks"
+description = "Docker and Podman Compose projects with the state of each service: up, down, restart, pull, rebuild and logs in a terminal"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/compose-stacks"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:0cf832ab1781f69514a9afdd0c8856c2689880456f8453d960cf820afeecc988"
+permissions = ["Run docker", "Run podman", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read the environment variable HOME"]
+commands = ["Compose Stacks"]
+categories = ["developer"]
+

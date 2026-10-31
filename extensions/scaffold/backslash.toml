@@ -1,0 +1,115 @@
+[extension]
+id = "scaffold"
+title = "Project Templates"
+description = "Start a new project from a Cookiecutter, Copier or plain git template: a form for the template's questions, then run it directly or in a terminal"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+categories = ["developer"]
+
+# Templates are the ones you list, the ones Cookiecutter keeps in ~/.cookiecutters,
+# and a few suggestions. Their questions are read from cookiecutter.json or copier.yml:
+# on disk for local templates, from the raw-file hosts of GitHub, GitLab and Codeberg
+# otherwise. cookiecutter and copier run as installed, or through uvx or pipx; git
+# copies plain templates. New projects are created in your code folders, the only
+# places this extension writes (it removes the copied template's .git there).
+[permissions]
+env = ["HOME", "SHELL"]
+net = ["raw.githubusercontent.com", "gitlab.com", "codeberg.org"]
+read = [
+  "~/.cookiecutters",
+  "~/templates",
+  "~/.templates",
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+]
+write = [
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+]
+run = [
+  "cookiecutter",
+  "copier",
+  "uvx",
+  "pipx",
+  "git",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "new-project"
+title = "New Project from Template"
+description = "Your Cookiecutter, Copier and git templates: fill in the questions, create the project"
+icon = "bs-rocket"
+keywords = [
+  "scaffold",
+  "template",
+  "templates",
+  "boilerplate",
+  "starter",
+  "new project",
+  "cookiecutter",
+  "copier",
+  "degit",
+  "generate",
+  "create",
+  "nouveau projet",
+  "modèle",
+  "gabarit",
+  "squelette",
+  "créer",
+]
+
+[[preferences]]
+name = "templates"
+title = "Templates"
+description = "Separated by commas: gh:owner/repo, owner/repo/sub/folder#branch, https://gitlab.com/…, ~/templates/x; prefix with cookiecutter:, copier: or degit: to force the kind"
+
+[[preferences]]
+name = "folder"
+title = "Create projects in"
+description = "One of ~/Projects, ~/projects, ~/Code, ~/code, ~/dev, ~/Developer, ~/src, ~/git, ~/repos, ~/workspace, ~/work (or a folder inside)"
+default = "~/Projects"
+
+[[preferences]]
+name = "suggestions"
+title = "Show suggested templates"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

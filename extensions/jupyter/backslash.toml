@@ -1,0 +1,48 @@
+[extension]
+id = "jupyter"
+title = "Jupyter"
+description = "Running Jupyter servers with their notebooks and kernels, and your recent notebooks: open with the token, interrupt, restart or shut down kernels"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+categories = ["developer"]
+
+# Servers come from `jupyter server list --json` and the files Jupyter writes in its
+# runtime folder (jpserver-*.json, nbserver-*.json), which also find servers started
+# from a virtualenv. Their REST API is reached on this computer only, with the token
+# the server wrote there. Recent notebooks come from JupyterLab's saved workspaces.
+[permissions]
+env = ["HOME"]
+read = ["~/.local/share/jupyter/runtime", "~/.jupyter/lab/workspaces"]
+net = ["localhost", "127.0.0.1"]
+run = ["jupyter"]
+
+[[commands]]
+name = "jupyter"
+title = "Jupyter Notebooks"
+description = "Running servers, open notebooks with their kernel state, other kernels, recent notebooks"
+icon = "bs-book"
+keywords = [
+  "jupyter",
+  "jupyterlab",
+  "lab",
+  "notebook",
+  "notebooks",
+  "ipynb",
+  "kernel",
+  "kernels",
+  "ipython",
+  "python",
+  "data science",
+  "carnet",
+  "carnets",
+  "noyau",
+  "serveur",
+]
+
+[[preferences]]
+name = "interface"
+title = "Open notebooks in"
+description = "lab (JupyterLab, the default) or notebook (Jupyter Notebook 7 and classic)"
+default = "lab"

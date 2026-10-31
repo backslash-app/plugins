@@ -1,0 +1,14 @@
+id = "boot-entries"
+title = "Boot Entries"
+description = "Reboot into Windows or another boot entry just once, from systemd-boot, GRUB or the EFI boot menu, or straight into the firmware setup"
+author = "Backslash"
+icon = "bs-power"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/boot-entries"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:e8a97b56c4e06f83c774c317f5e024c76cbd8788cebc5611e1f52fd5c0a5e873"
+permissions = ["Run bootctl", "Run busctl", "Run efibootmgr", "Run systemctl", "Run pkexec", "Read /boot/grub/grub.cfg", "Read /boot/grub/grubenv", "Read /boot/grub2/grub.cfg", "Read /boot/grub2/grubenv", "Read /boot/loader/entries"]
+commands = ["Reboot Into"]
+categories = ["system"]
+

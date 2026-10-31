@@ -1,0 +1,63 @@
+[extension]
+id = "pagespeed"
+title = "PageSpeed Insights"
+description = "Lighthouse scores and Core Web Vitals of your sites on mobile and desktop, from Google PageSpeed Insights, with their history"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-chart-up"
+license = "MIT"
+categories = ["developer"]
+
+# The PageSpeed Insights API v5: it runs Lighthouse on Google's servers and
+# adds the Chrome UX Report field data. The pages you test are fetched by
+# Google, never by this extension.
+[permissions]
+net = ["www.googleapis.com"]
+
+[[commands]]
+name = "sites"
+title = "PageSpeed Insights"
+description = "Your saved sites with their latest Lighthouse scores; type a URL to test it"
+icon = "bs-chart-up"
+keywords = [
+  "pagespeed",
+  "page speed",
+  "lighthouse",
+  "core web vitals",
+  "web vitals",
+  "lcp",
+  "inp",
+  "cls",
+  "performance",
+  "seo",
+  "accessibility",
+  "crux",
+  "vitesse",
+  "performances",
+  "accessibilité",
+  "référencement",
+  "site web",
+]
+
+[[commands]]
+name = "analyze"
+title = "Test Page Speed"
+description = "Runs Lighthouse on a URL, mobile and desktop, and saves it to your sites"
+icon = "bs-bolt"
+keywords = ["pagespeed", "lighthouse", "test", "audit", "web vitals", "tester", "vitesse", "performances"]
+[[commands.arguments]]
+name = "url"
+placeholder = "https://example.com"
+required = true
+
+[[preferences]]
+name = "apiKey"
+title = "API key"
+description = "Optional, free: Google Cloud console → APIs & Services → Credentials, with the PageSpeed Insights API enabled. Without one, Google's shared quota often runs out"
+type = "secret"
+
+[[preferences]]
+name = "locale"
+title = "Report language"
+description = "The language of the audit titles, like en or fr"
+default = "en"

@@ -1,0 +1,65 @@
+[extension]
+id = "electricity"
+title = "Electricity"
+description = "EDF Tempo color of today and tomorrow with the red and white days left, RTE EcoWatt grid alerts and France's day-ahead power prices by the hour"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-bolt"
+license = "MIT"
+categories = ["everyday"]
+
+# api-couleur-tempo.fr for the Tempo colors and season counts (no key);
+# RTE's data portal for EcoWatt (its OAuth token endpoint and the signals,
+# only with your own credentials); Energy-Charts (Fraunhofer ISE) for the
+# day-ahead prices of the FR bidding zone (no key). Same list as HOSTS in lib.ts.
+[permissions]
+net = ["www.api-couleur-tempo.fr", "digital.iservices.rte-france.com", "api.energy-charts.info"]
+
+[[commands]]
+name = "electricity"
+title = "Electricity Today"
+description = "Tempo color of today and tomorrow, days left this season, EcoWatt signal and spot prices by the hour"
+icon = "bs-bolt"
+keywords = [
+  "tempo",
+  "edf",
+  "ecowatt",
+  "rte",
+  "electricity",
+  "power",
+  "spot price",
+  "day-ahead",
+  "epex",
+  "électricité",
+  "couleur tempo",
+  "jour rouge",
+  "jour blanc",
+  "jour bleu",
+  "heures creuses",
+  "prix spot",
+  "prix de l'électricité",
+  "coupure",
+  "délestage",
+]
+
+[[commands]]
+name = "tempo-color"
+title = "Tempo Day Color"
+description = "Shows today's and tomorrow's Tempo color under this command in the search, updated every hour"
+icon = "bs-bolt"
+mode = "no-view"
+interval = "1h"
+keywords = ["tempo", "edf", "couleur", "jour", "demain", "rouge", "blanc", "bleu", "color", "tomorrow"]
+
+[[preferences]]
+name = "ecowatt"
+title = "EcoWatt credentials"
+description = "Optional: the base64 credentials (or client_id:client_secret) of an app subscribed to the Ecowatt API on data.rte-france.com"
+type = "secret"
+
+[[preferences]]
+name = "spot"
+title = "Day-ahead prices"
+description = "Show the hourly wholesale prices of France (Energy-Charts)"
+type = "boolean"
+default = true

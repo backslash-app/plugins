@@ -1,0 +1,14 @@
+id = "waydroid"
+title = "Waydroid"
+description = "Open your Waydroid Android apps, start or stop the session, show the full Android screen, and install an APK you copied in the file manager"
+author = "Backslash"
+icon = "bs-apps"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/waydroid"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:dc0e3471c9c898ba2197adbe688853a67dc44b37a24e30a7f675978daa61e878"
+permissions = ["Run waydroid", "Run systemd-run", "Run systemctl", "Run pkexec", "Run wl-paste", "Run xclip", "Read ~/.local/share/applications", "Read ~/.local/share/waydroid/data/icons", "Read the environment variable HOME", "Read the environment variable WAYLAND_DISPLAY", "Read the environment variable XDG_RUNTIME_DIR", "Read the environment variable XDG_SESSION_TYPE", "Read the clipboard"]
+commands = ["Waydroid", "Install APK in Waydroid", "Show Waydroid"]
+categories = ["system"]
+

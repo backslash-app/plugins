@@ -1,0 +1,14 @@
+id = "cameras"
+title = "Frigate"
+description = "Your Frigate NVR cameras with their latest snapshot and recent events by label; play clips, keep events, turn detection on or off"
+author = "Backslash"
+icon = "bs-camera"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/cameras"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:312220cd639149d1ef6730e85b7085b888ae794192d385f8a4d368179523c0d6"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access frigate", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Read ~/.cache/backslash/cameras", "Write ~/.cache/backslash/cameras", "Read the environment variable HOME"]
+commands = ["Cameras", "Camera Events"]
+categories = ["network"]
+

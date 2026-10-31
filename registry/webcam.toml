@@ -1,0 +1,14 @@
+id = "webcam"
+title = "Webcam"
+description = "Your webcams and their controls: brightness, exposure, focus, zoom, white balance; take a snapshot and preview it"
+author = "Backslash"
+icon = "bs-camera"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/webcam"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:cf4868a36cbbf7e4daeb8e2417ae78bc91ecfb613d864a6f74df383c9280b724"
+permissions = ["Run v4l2-ctl", "Run ffmpeg", "Run gio", "Read ~/Pictures", "Write ~/Pictures", "Read the environment variable HOME"]
+commands = ["Webcams", "Take Webcam Snapshot", "Webcam Snapshots"]
+categories = ["media"]
+

@@ -1,0 +1,94 @@
+[extension]
+id = "scrobbles"
+title = "Scrobbles"
+description = "Your Last.fm and ListenBrainz listening: what's playing now, recent scrobbles with covers, and your top artists, tracks and albums of the week"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-headphones"
+license = "MIT"
+categories = ["media"]
+
+# Last.fm's web service and its picture CDN; ListenBrainz's API, and the
+# Cover Art Archive for its covers (served from archive.org and its
+# *.archive.org mirrors). Same list as HOSTS in lib.ts.
+[permissions]
+net = [
+  "ws.audioscrobbler.com",
+  "lastfm.freetls.fastly.net",
+  "api.listenbrainz.org",
+  "coverartarchive.org",
+  "archive.org",
+  "*.archive.org",
+]
+
+[[commands]]
+name = "recent"
+title = "Recent Scrobbles"
+description = "What's playing now and your last listens by day, with covers; Tab switches between Last.fm and ListenBrainz"
+icon = "bs-headphones"
+keywords = [
+  "last.fm",
+  "lastfm",
+  "listenbrainz",
+  "scrobble",
+  "scrobbles",
+  "now playing",
+  "recent tracks",
+  "history",
+  "music",
+  "en cours",
+  "écoutes",
+  "historique",
+  "musique",
+  "morceaux récents",
+]
+
+[[commands]]
+name = "top"
+title = "Top Music"
+description = "Your most played artists, tracks and albums this week (or month, year, all time) with play counts"
+icon = "bs-chart-up"
+keywords = [
+  "last.fm",
+  "lastfm",
+  "listenbrainz",
+  "top artists",
+  "top tracks",
+  "top albums",
+  "weekly chart",
+  "stats",
+  "play count",
+  "classement",
+  "artistes",
+  "albums",
+  "statistiques",
+  "les plus écoutés",
+]
+
+[[preferences]]
+name = "lastfmUser"
+title = "Last.fm user name"
+description = "Your Last.fm profile name"
+
+[[preferences]]
+name = "lastfmKey"
+title = "Last.fm API key"
+description = "Free from last.fm/api/account/create (the API key, not the shared secret)"
+type = "secret"
+
+[[preferences]]
+name = "listenbrainzUser"
+title = "ListenBrainz user name"
+description = "Your ListenBrainz user name; listens and statistics are public, no token needed"
+
+[[preferences]]
+name = "period"
+title = "Top Music period"
+description = "week, month, year or all"
+default = "week"
+
+[[preferences]]
+name = "primary"
+title = "Main service"
+description = "\"lastfm\" or \"listenbrainz\": shown first, and used by Top Music when both are set"
+default = "lastfm"

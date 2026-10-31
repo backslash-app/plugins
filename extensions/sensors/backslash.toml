@@ -1,0 +1,88 @@
+[extension]
+id = "sensors"
+title = "Temperatures & Fans"
+description = "CPU, GPU, drive and motherboard temperatures and fan speeds, live, with hot and critical ones highlighted and a warning when something overheats"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-thermometer"
+license = "MIT"
+categories = ["system"]
+
+# sensors (lm-sensors) gives every chip's readings and limits as JSON. Without it, the
+# kernel's /sys/class/hwmon files are read instead: Deno opens /sys only with --allow-all,
+# so they are read in one batch by `grep -sH` (fixed paths under /sys/class/hwmon, plus
+# /proc/driver/nvidia/version to know whether NVIDIA's driver is loaded). nvidia-smi reads
+# NVIDIA GPUs with that driver. notify-send shows a desktop notification when the
+# background check finds a sensor getting hot.
+[permissions]
+run = ["sensors", "grep", "nvidia-smi", "notify-send"]
+
+[[commands]]
+name = "sensors"
+title = "Temperatures & Fans"
+description = "Every temperature and fan, refreshed every 2 seconds, the hot ones highlighted"
+icon = "bs-thermometer"
+keywords = [
+  "temperature",
+  "températures",
+  "température",
+  "sensors",
+  "capteurs",
+  "lm-sensors",
+  "hwmon",
+  "cpu",
+  "processeur",
+  "gpu",
+  "carte graphique",
+  "nvme",
+  "ssd",
+  "disque",
+  "fan",
+  "fans",
+  "ventilateur",
+  "ventilateurs",
+  "rpm",
+  "heat",
+  "chaleur",
+  "overheat",
+  "surchauffe",
+  "thermal",
+  "thermique",
+]
+
+[[commands]]
+name = "overheat-check"
+title = "Overheat Warning"
+description = "Checks the temperatures every 2 minutes, shows them under this command and notifies you when one gets hot"
+icon = "bs-alert"
+mode = "no-view"
+interval = "2m"
+keywords = ["overheat", "surchauffe", "temperature", "température", "alert", "alerte", "warning", "avertissement", "hot", "chaud"]
+
+[[preferences]]
+name = "notify"
+title = "Desktop notifications"
+description = "Notify when a sensor goes over its high or critical mark (checked every 2 minutes)"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "threshold"
+title = "Warn at (°C)"
+description = "One high mark for every temperature, in °C. 0 uses each sensor's own limits (or usual ones: 85 °C for a CPU, 70 °C for a drive)"
+type = "number"
+default = 0
+
+[[preferences]]
+name = "fahrenheit"
+title = "Fahrenheit"
+description = "Show temperatures in °F"
+type = "boolean"
+default = false
+
+[[preferences]]
+name = "nvidia"
+title = "Ask nvidia-smi"
+description = "Read NVIDIA GPUs that use NVIDIA's driver. Turn off on laptops with two GPUs: asking wakes the NVIDIA one up"
+type = "boolean"
+default = true

@@ -1,0 +1,14 @@
+id = "gerrit"
+title = "Gerrit"
+description = "Gerrit changes waiting for your review, needing your attention or yours, with Code-Review and Verified votes; copy the Change-Id or the checkout command"
+author = "Backslash"
+icon = "bs-pr-open"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/gerrit"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:1be58ca0814cde00cc535888d14a7e2eb4f242fbe759d1c58d3070127a5ea277"
+permissions = ["Access any website"]
+commands = ["Gerrit Changes"]
+categories = ["developer"]
+

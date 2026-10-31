@@ -1,0 +1,106 @@
+[extension]
+id = "airtable"
+title = "Airtable, NocoDB & Baserow"
+description = "Search the records of your Airtable, NocoDB and Baserow tables with every field in the preview, and add a record with a form built from the table's fields"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-database"
+license = "MIT"
+categories = ["productivity"]
+
+# Airtable's Web and Metadata API, the hosted NocoDB and Baserow, and
+# NocoDB or Baserow on your own server. Hosts must be declared ahead (as the
+# Budget and Linkding extensions do): this computer, local and container
+# names, private IPv4 ranges (Deno's --allow-net accepts CIDR), Tailscale
+# and DuckDNS. A server on a custom public domain is not reachable: use its
+# local or Tailscale address. Same list as HOSTS in lib.ts (a test checks it).
+[permissions]
+net = [
+  "api.airtable.com",
+  "app.nocodb.com",
+  "api.baserow.io",
+  "localhost",
+  "127.0.0.1",
+  "nocodb",
+  "baserow",
+  "*.local",
+  "*.lan",
+  "*.home",
+  "*.home.arpa",
+  "*.internal",
+  "*.duckdns.org",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+
+[[commands]]
+name = "tables"
+title = "Airtable Tables"
+description = "Your bases and tables; Enter searches a table's records, Ctrl+N adds one"
+icon = "bs-database"
+keywords = [
+  "airtable",
+  "nocodb",
+  "baserow",
+  "records",
+  "tables",
+  "bases",
+  "database",
+  "spreadsheet",
+  "search records",
+  "base de données",
+  "tableur",
+  "enregistrements",
+  "fiches",
+  "chercher",
+]
+
+[[commands]]
+name = "add-record"
+title = "Add Airtable Record"
+description = "Pick a table (the last used first) and fill in a form made of its fields"
+icon = "bs-plus"
+keywords = [
+  "airtable",
+  "nocodb",
+  "baserow",
+  "add record",
+  "new row",
+  "new record",
+  "create",
+  "ajouter",
+  "nouvelle ligne",
+  "nouvel enregistrement",
+  "créer",
+]
+
+[[preferences]]
+name = "airtableToken"
+title = "Airtable personal access token"
+description = "airtable.com/create/tokens: scopes data.records:read, data.records:write, schema.bases:read"
+type = "secret"
+
+[[preferences]]
+name = "nocodbUrl"
+title = "NocoDB address"
+description = "https://app.nocodb.com, or your server: http://nocodb.lan:8080, http://192.168.1.20:8080"
+
+[[preferences]]
+name = "nocodbToken"
+title = "NocoDB API token"
+description = "NocoDB → Account settings → Tokens → Add new token"
+type = "secret"
+
+[[preferences]]
+name = "baserowUrl"
+title = "Baserow address"
+description = "https://api.baserow.io for baserow.io, or your server: http://baserow.lan"
+
+[[preferences]]
+name = "baserowToken"
+title = "Baserow database token"
+description = "Baserow → My settings → Database tokens: read and create permissions"
+type = "secret"

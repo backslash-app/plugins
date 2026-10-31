@@ -1,0 +1,113 @@
+[extension]
+id = "standup"
+title = "Stand-up"
+description = "A daily stand-up drafted from your work since the last working day: git commits, merged and reviewed GitHub pull requests, closed Linear issues; copy as Markdown or for Slack"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-comment"
+license = "MIT"
+categories = ["productivity"]
+
+# git reads your commits in the repositories found in your code folders (the
+# same list as ALLOWED in sources.ts; a repository elsewhere can be named in
+# the preferences and git reads it). GitHub's search API finds your pull
+# requests and reviews, Linear's GraphQL API your issues, only when you give
+# them a token.
+[permissions]
+run = ["git"]
+read = [
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+  "~/Documents/GitHub",
+]
+net = ["api.github.com", "api.linear.app"]
+env = ["HOME"]
+
+[[commands]]
+name = "standup"
+title = "Stand-up"
+description = "Draft since the last working day (Friday on Mondays); leave items out, copy or paste"
+icon = "bs-comment"
+keywords = [
+  "standup",
+  "stand-up",
+  "daily",
+  "scrum",
+  "yesterday",
+  "status",
+  "update",
+  "commits",
+  "git log",
+  "réunion",
+  "point quotidien",
+  "mêlée",
+  "hier",
+  "compte rendu",
+]
+
+[[commands]]
+name = "copy"
+title = "Copy Stand-up"
+description = "Copy the draft right away, in the format set in the preferences"
+icon = "bs-copy"
+mode = "no-view"
+keywords = ["standup", "stand-up", "daily", "copy", "slack", "copier", "point quotidien"]
+
+[[preferences]]
+name = "folders"
+title = "Repository folders"
+description = "Repositories, or folders holding them, separated by commas, like ~/Code, ~/work/api. Empty: ~/Projects, ~/Code, ~/src, ~/work…"
+default = ""
+
+[[preferences]]
+name = "authors"
+title = "Your git names or emails"
+description = "Separated by commas. Empty: each repository's user.email"
+default = ""
+
+[[preferences]]
+name = "githubToken"
+title = "GitHub token"
+description = "Optional: a token that can read your pull requests (fine-grained, Pull requests: read)"
+type = "secret"
+
+[[preferences]]
+name = "linearKey"
+title = "Linear API key"
+description = "Optional: Linear → Settings → Security & access → Personal API keys"
+type = "secret"
+
+[[preferences]]
+name = "workdays"
+title = "Working days"
+description = "Like mon-fri (default) or sun-thu: Monday's stand-up covers Friday"
+default = "mon-fri"
+
+[[preferences]]
+name = "format"
+title = "Copy Stand-up format"
+description = "markdown or slack"
+default = "markdown"
+
+[[preferences]]
+name = "blockers"
+title = "Blockers line"
+description = "What the Blockers section says by default"
+default = "None"
+
+[[preferences]]
+name = "tidy"
+title = "Tidy commit subjects"
+description = "“feat(api): add search” becomes “Add search”"
+type = "boolean"
+default = true

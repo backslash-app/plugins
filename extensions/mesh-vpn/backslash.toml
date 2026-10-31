@@ -1,0 +1,50 @@
+[extension]
+id = "mesh-vpn"
+title = "NetBird & ZeroTier"
+description = "Your NetBird and ZeroTier mesh networks: connection, IPs and peers with latency; connect, disconnect, join and leave networks"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-vpn"
+license = "MIT"
+categories = ["network"]
+
+# Both CLIs talk to their local service: netbird (status, up, down) and
+# zerotier-cli (info, listnetworks, peers, join, leave). zerotier-cli reads
+# ~/.zeroTierOneAuthToken itself; the extension reads no file.
+[permissions]
+run = ["netbird", "zerotier-cli"]
+
+[[commands]]
+name = "mesh"
+title = "Mesh VPN"
+description = "NetBird and ZeroTier: this device, peers with latency, networks"
+icon = "bs-vpn"
+keywords = [
+  "netbird",
+  "zerotier",
+  "zerotier-cli",
+  "mesh",
+  "vpn",
+  "wireguard",
+  "peers",
+  "overlay network",
+  "connect",
+  "disconnect",
+  "pairs",
+  "réseau",
+  "réseau privé",
+  "se connecter",
+  "déconnecter",
+]
+
+[[commands]]
+name = "join"
+title = "Join ZeroTier Network"
+description = "Joins a ZeroTier network by its 16-digit ID"
+icon = "bs-plus"
+mode = "no-view"
+keywords = ["zerotier", "join", "network id", "rejoindre", "réseau"]
+[[commands.arguments]]
+name = "network"
+placeholder = "Network ID"
+required = true

@@ -1,0 +1,14 @@
+id = "pagespeed"
+title = "PageSpeed Insights"
+description = "Lighthouse scores and Core Web Vitals of your sites on mobile and desktop, from Google PageSpeed Insights, with their history"
+author = "Backslash"
+icon = "bs-chart-up"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/pagespeed"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:9b2ee8a75c3192c3e48c13fd52663f0f65fa3c3f6627750d3b62a954649f43f1"
+permissions = ["Access www.googleapis.com"]
+commands = ["PageSpeed Insights", "Test Page Speed"]
+categories = ["developer"]
+

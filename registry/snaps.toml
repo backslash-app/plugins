@@ -1,0 +1,14 @@
+id = "snaps"
+title = "Snaps"
+description = "Installed snaps with their channel, revisions and size: update, revert to an older revision, manage connections, free old revisions or remove them"
+author = "Backslash"
+icon = "bs-package"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/snaps"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:65c90a779dbaafecef85b0826cdb39d661242ddb0e9b16711a7f154d86d081b2"
+permissions = ["Run snap", "Run pkexec", "Read /var/lib/snapd/snaps"]
+commands = ["Snaps"]
+categories = ["system"]
+

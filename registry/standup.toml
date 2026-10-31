@@ -1,0 +1,14 @@
+id = "standup"
+title = "Stand-up"
+description = "A daily stand-up drafted from your work since the last working day: git commits, merged and reviewed GitHub pull requests, closed Linear issues; copy as Markdown or for Slack"
+author = "Backslash"
+icon = "bs-comment"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/standup"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:0cf183be73cbde5ae8e7f797162b2c2e253052b6a325f98ac5cd2e1bced29b5b"
+permissions = ["Access api.github.com", "Access api.linear.app", "Run git", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Read ~/Documents/GitHub", "Read the environment variable HOME"]
+commands = ["Stand-up", "Copy Stand-up"]
+categories = ["productivity"]
+

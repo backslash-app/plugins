@@ -1,0 +1,57 @@
+[extension]
+id = "model-catalog"
+title = "Model Catalog"
+description = "Browse and compare the LLMs on OpenRouter: price per million tokens in and out, context length, modalities and provider; copy the model id"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-sparkle"
+license = "MIT"
+categories = ["developer"]
+
+# OpenRouter's public model list (no key needed), kept for a few hours.
+[permissions]
+net = ["openrouter.ai"]
+
+[[commands]]
+name = "models"
+title = "Model Catalog"
+description = "Every model on OpenRouter: newest, cheapest, largest context, free, vision, by provider; compare a few side by side"
+icon = "bs-sparkle"
+keywords = [
+  "llm",
+  "models",
+  "openrouter",
+  "ai",
+  "pricing",
+  "price",
+  "tokens",
+  "context window",
+  "gpt",
+  "claude",
+  "gemini",
+  "llama",
+  "mistral",
+  "deepseek",
+  "qwen",
+  "compare",
+  "modèles",
+  "prix",
+  "tarifs",
+  "comparer",
+  "fenêtre de contexte",
+  "ia",
+]
+
+[[preferences]]
+name = "inputTokens"
+title = "Typical input tokens"
+description = "For the cost of a typical request shown in the preview"
+type = "number"
+default = 10000
+
+[[preferences]]
+name = "outputTokens"
+title = "Typical output tokens"
+description = "For the cost of a typical request shown in the preview"
+type = "number"
+default = 1000

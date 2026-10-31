@@ -1,0 +1,66 @@
+[extension]
+id = "scheduling-links"
+title = "Scheduling Links"
+description = "Your upcoming Cal.com and Calendly bookings with attendees and one-key joins, your booking links to copy, and cancel with a confirmation"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calendar"
+license = "MIT"
+categories = ["productivity"]
+
+# The Cal.com API v2 and the Calendly API v2, nothing else: bookings, event
+# types and cancellations all go through these two hosts.
+[permissions]
+net = ["api.cal.com", "api.calendly.com"]
+
+[[commands]]
+name = "bookings"
+title = "Upcoming Bookings"
+description = "Meetings people booked with you, next first, with attendees, answers and the join link"
+icon = "bs-calendar"
+keywords = [
+  "cal.com",
+  "cal",
+  "calendly",
+  "bookings",
+  "meetings",
+  "appointments",
+  "scheduled",
+  "join",
+  "upcoming",
+  "rendez-vous",
+  "réunions",
+  "réservations",
+  "prochains",
+]
+
+[[commands]]
+name = "links"
+title = "Scheduling Links"
+description = "Your Cal.com and Calendly event types: copy or paste a booking link, or a single-use Calendly link"
+icon = "bs-link"
+keywords = [
+  "cal.com",
+  "calendly",
+  "scheduling link",
+  "booking link",
+  "event types",
+  "book a meeting",
+  "availability",
+  "lien",
+  "lien de réservation",
+  "prendre rendez-vous",
+  "disponibilités",
+]
+
+[[preferences]]
+name = "calApiKey"
+title = "Cal.com API key"
+description = "Cal.com → Settings → Developer → API Keys (cal_live_…)"
+type = "secret"
+
+[[preferences]]
+name = "calendlyToken"
+title = "Calendly personal access token"
+description = "Calendly → Integrations → API & Webhooks → Personal access tokens"
+type = "secret"

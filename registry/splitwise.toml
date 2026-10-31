@@ -1,0 +1,14 @@
+id = "splitwise"
+title = "Splitwise"
+description = "Who owes you and whom you owe on Splitwise, by friend and group, recent expenses, and a quick shared expense split equally"
+author = "Backslash"
+icon = "bs-coin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/splitwise"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:5a0414f4ae4ebdcec0ad1f5c3cfb478278d5adb4e5dc5fe548b03eeb8c7166b3"
+permissions = ["Access secure.splitwise.com"]
+commands = ["Splitwise Balances", "Recent Splitwise Expenses", "Add Splitwise Expense"]
+categories = ["productivity"]
+

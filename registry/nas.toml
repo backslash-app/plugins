@@ -1,0 +1,14 @@
+id = "nas"
+title = "NAS"
+description = "Health and capacity of your TrueNAS, Synology or Unraid: pools and volumes, disks with temperature, alerts, datasets, shares and containers"
+author = "Backslash"
+icon = "bs-database"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/nas"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:2e17753ec5f4dbd7230140f92d73f5b123cb4466b0e8d66007117031add21249"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access truenas", "Access tower", "Access *.local", "Access *.lan", "Access *.home", "Access *.home.arpa", "Access *.internal", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["NAS Status"]
+categories = ["network"]
+

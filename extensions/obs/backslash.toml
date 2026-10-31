@@ -1,0 +1,110 @@
+[extension]
+id = "obs"
+title = "OBS Studio"
+description = "Start and stop recording and streaming, switch scenes with previews, mute audio sources and turn on the virtual camera in OBS Studio"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-video"
+license = "MIT"
+categories = ["media"]
+
+# OBS's own WebSocket server (obs-websocket 5, built into OBS 28 and newer, on
+# port 4455), on this computer, the local network or Tailscale, as the address
+# preference allows (same list as HOSTS in lib.ts). The password is a secret
+# preference, sent only as OBS's SHA-256 challenge answer.
+# gio opens OBS from its desktop file (package, Flatpak or Snap) when it isn't
+# running. Scene previews are small JPEGs OBS renders, kept in
+# ~/.cache/backslash/obs for the preview panel.
+[permissions]
+net = [
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+run = ["gio"]
+read = [
+  "~/.cache/backslash/obs",
+  "/usr/share/applications/com.obsproject.Studio.desktop",
+  "/usr/local/share/applications/com.obsproject.Studio.desktop",
+  "/var/lib/flatpak/exports/share/applications/com.obsproject.Studio.desktop",
+  "~/.local/share/flatpak/exports/share/applications/com.obsproject.Studio.desktop",
+  "/var/lib/snapd/desktop/applications/obs-studio_obs-studio.desktop",
+]
+write = ["~/.cache/backslash/obs"]
+env = ["HOME"]
+
+[[commands]]
+name = "obs"
+title = "OBS Studio"
+description = "Recording, streaming, virtual camera and replay buffer, scenes and audio sources, live"
+icon = "bs-video"
+keywords = [
+  "obs",
+  "obs studio",
+  "record",
+  "recording",
+  "stream",
+  "streaming",
+  "live",
+  "scene",
+  "mute",
+  "virtual camera",
+  "replay buffer",
+  "enregistrer",
+  "enregistrement",
+  "diffuser",
+  "direct",
+  "scène",
+  "muet",
+  "caméra virtuelle",
+]
+
+[[commands]]
+name = "scenes"
+title = "Switch OBS Scene"
+description = "OBS's scenes with a preview of each; Enter puts one on air"
+icon = "bs-window"
+keywords = ["obs", "scene", "scenes", "switch", "scène", "changer de scène"]
+
+[[commands]]
+name = "toggle-recording"
+title = "Toggle OBS Recording"
+description = "Starts recording in OBS, or stops and saves it"
+icon = "bs-circle-dot"
+mode = "no-view"
+keywords = ["obs", "record", "start recording", "stop recording", "enregistrer", "arrêter l'enregistrement"]
+
+[[commands]]
+name = "toggle-streaming"
+title = "Toggle OBS Streaming"
+description = "Goes live in OBS, or ends the stream"
+icon = "bs-radio"
+mode = "no-view"
+keywords = ["obs", "stream", "go live", "end stream", "diffuser", "direct", "live"]
+
+[[commands]]
+name = "toggle-mic"
+title = "Toggle OBS Microphone"
+description = "Mutes OBS's microphones, or unmutes them"
+icon = "bs-mic"
+mode = "no-view"
+keywords = ["obs", "mute", "unmute", "mic", "microphone", "micro", "couper le micro", "muet"]
+
+[[preferences]]
+name = "url"
+title = "OBS address"
+description = "ws://localhost:4455 for OBS on this computer, or ws://studio.lan:4455 on another one"
+default = "ws://localhost:4455"
+
+[[preferences]]
+name = "password"
+title = "WebSocket password"
+description = "OBS → Tools → WebSocket Server Settings → Show Connect Info. Empty when authentication is off"
+type = "secret"

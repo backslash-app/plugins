@@ -1,0 +1,111 @@
+[extension]
+id = "python-envs"
+title = "Python Environments"
+description = "The virtualenvs of your projects (venv, uv, virtualenv, Poetry, Pipenv) and conda environments: Python version, size, packages; open a terminal with one activated, delete the ones you don't need"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+categories = ["developer"]
+
+# Environments are found in the usual code folders (a pyvenv.cfg one or two levels
+# below a project), Poetry's and Pipenv's virtualenv folders, and conda's list
+# (~/.conda/environments.txt and `conda env list --json`); the conda folders are read
+# for Python versions and packages. The Python install folders are read to tell
+# whether a virtualenv's base Python still exists. du measures sizes. Deleting
+# removes an environment's folder (only folders that hold a pyvenv.cfg), or asks conda
+# to remove it. Terminals open with an environment activated, in your shell ($SHELL).
+[permissions]
+env = ["HOME", "SHELL"]
+read = [
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+  "~/.cache/pypoetry/virtualenvs",
+  "~/.local/share/virtualenvs",
+  "~/.conda",
+  "~/miniconda3",
+  "~/anaconda3",
+  "~/miniforge3",
+  "~/mambaforge",
+  "~/micromamba",
+  "~/.local/share/mamba",
+  "/opt/conda",
+  "~/.local/share/uv/python",
+  "~/.pyenv/versions",
+  "/usr/bin",
+  "/usr/local/bin",
+]
+write = [
+  "~/Projects",
+  "~/projects",
+  "~/Code",
+  "~/code",
+  "~/dev",
+  "~/Developer",
+  "~/src",
+  "~/git",
+  "~/repos",
+  "~/workspace",
+  "~/work",
+  "~/Work",
+  "~/.cache/pypoetry/virtualenvs",
+  "~/.local/share/virtualenvs",
+]
+run = [
+  "conda",
+  "mamba",
+  "micromamba",
+  "du",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "envs"
+title = "Python Environments"
+description = "Virtualenvs by project and conda environments: version, size, packages, activate in a terminal, delete"
+icon = "bs-layers"
+keywords = [
+  "python",
+  "venv",
+  "virtualenv",
+  ".venv",
+  "uv",
+  "poetry",
+  "pipenv",
+  "conda",
+  "mamba",
+  "micromamba",
+  "anaconda",
+  "miniconda",
+  "pip",
+  "activate",
+  "environnements",
+  "environnement virtuel",
+  "paquets",
+]
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

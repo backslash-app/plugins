@@ -1,0 +1,14 @@
+id = "anime"
+title = "Anime"
+description = "Your AniList or MyAnimeList watching list with new episodes and the next airing countdown, mark episodes watched, this week's airing schedule and anime / manga search"
+author = "Backslash"
+icon = "bs-film"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/anime"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:7c7323af27538699a32ea5a6ae1679a61c9b8189c3b2e8650bc7e426b17115ec"
+permissions = ["Access graphql.anilist.co", "Access s4.anilist.co", "Access api.myanimelist.net", "Access cdn.myanimelist.net"]
+commands = ["Currently Watching", "Anime Airing Schedule", "Search Anime"]
+categories = ["media"]
+

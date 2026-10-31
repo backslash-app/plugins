@@ -1,0 +1,63 @@
+[extension]
+id = "song-recognition"
+title = "Song Recognition"
+description = "Find out which song is playing, on your computer or around you, with SongRec (Shazam): title, artist, album, cover and lyrics, then open it in Spotify or YouTube"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-music"
+license = "MIT"
+categories = ["media"]
+
+# pw-record (PipeWire) or parecord (PulseAudio) record a few seconds of what
+# plays on the speakers (their monitor) or of the microphone, as a 16 kHz WAV
+# in ~/.cache/backslash/song-recognition, replaced each time. SongRec makes its
+# fingerprint and asks Shazam (it does its own networking, outside of
+# Backslash). Album covers come from Apple's image hosts.
+[permissions]
+net = ["is1-ssl.mzstatic.com", "is2-ssl.mzstatic.com", "is3-ssl.mzstatic.com", "is4-ssl.mzstatic.com", "is5-ssl.mzstatic.com"]
+run = ["songrec", "pw-record", "parecord"]
+read = ["~/.cache/backslash/song-recognition", "/etc/os-release"]
+write = ["~/.cache/backslash/song-recognition"]
+env = ["HOME"]
+
+[[commands]]
+name = "recognize"
+title = "Recognize Song"
+description = "Listens for a few seconds and finds the song; Tab switches between this computer and the microphone"
+icon = "bs-music"
+keywords = [
+  "shazam",
+  "songrec",
+  "song",
+  "music",
+  "what song",
+  "identify",
+  "recognize",
+  "lyrics",
+  "chanson",
+  "musique",
+  "quelle chanson",
+  "reconnaître",
+  "identifier",
+  "paroles",
+]
+
+[[commands]]
+name = "history"
+title = "Recognized Songs"
+description = "Every song found, by day, with links to Spotify and YouTube"
+icon = "bs-history"
+keywords = ["shazam", "songs", "history", "music", "historique", "chansons", "musique"]
+
+[[preferences]]
+name = "source"
+title = "Listen to"
+description = "output (what plays on this computer) or mic, when the command opens for the first time"
+default = "output"
+
+[[preferences]]
+name = "seconds"
+title = "Listening time"
+description = "Seconds of sound sent to Shazam, 5 to 20"
+type = "number"
+default = 10

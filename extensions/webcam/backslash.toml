@@ -1,0 +1,77 @@
+[extension]
+id = "webcam"
+title = "Webcam"
+description = "Your webcams and their controls: brightness, exposure, focus, zoom, white balance; take a snapshot and preview it"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-camera"
+license = "MIT"
+categories = ["media"]
+
+# v4l2-ctl (v4l-utils) lists the cameras and reads and sets their controls;
+# ffmpeg takes the snapshots, saved in ~/Pictures (read to list and preview
+# them, written to create the folder). gio moves a snapshot to the trash.
+[permissions]
+run = ["v4l2-ctl", "ffmpeg", "gio"]
+read = ["~/Pictures"]
+write = ["~/Pictures"]
+env = ["HOME"]
+
+[[commands]]
+name = "webcams"
+title = "Webcams"
+description = "Cameras with their controls: adjust brightness, exposure, focus or zoom, take a snapshot"
+icon = "bs-camera"
+keywords = [
+  "webcam",
+  "camera",
+  "v4l2",
+  "brightness",
+  "exposure",
+  "focus",
+  "autofocus",
+  "zoom",
+  "white balance",
+  "caméra",
+  "luminosité",
+  "exposition",
+  "mise au point",
+  "balance des blancs",
+]
+
+[[commands]]
+name = "take-snapshot"
+title = "Take Webcam Snapshot"
+description = "A picture from your webcam, saved in ~/Pictures/Webcam and shown right away"
+icon = "bs-camera"
+keywords = ["snapshot", "photo", "picture", "selfie", "webcam", "capture", "prendre une photo", "cliché", "caméra"]
+
+[[commands]]
+name = "snapshots"
+title = "Webcam Snapshots"
+description = "The pictures you took, newest first, with a preview"
+icon = "bs-image"
+keywords = ["snapshots", "photos", "pictures", "webcam", "selfies", "photos webcam", "images"]
+
+[[preferences]]
+name = "device"
+title = "Camera"
+description = "Optional: /dev/video2 or part of its name, for snapshots. Leave empty for the first camera"
+
+[[preferences]]
+name = "folder"
+title = "Snapshot folder"
+description = "Inside ~/Pictures"
+default = "~/Pictures/Webcam"
+
+[[preferences]]
+name = "resolution"
+title = "Resolution"
+description = "Optional, e.g. 1920x1080 or 720p. Leave empty for the camera's largest"
+
+[[preferences]]
+name = "skipFrames"
+title = "Frames to skip"
+description = "Frames dropped before the picture, while the exposure settles (10 is a third of a second)"
+type = "number"
+default = 10

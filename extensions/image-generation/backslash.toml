@@ -1,0 +1,144 @@
+[extension]
+id = "image-generation"
+title = "Image Generation"
+description = "Generate images from a prompt with OpenAI gpt-image-1, Replicate, fal.ai or your own ComfyUI, saved to ~/Pictures, with a history of every generation"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-image"
+license = "MIT"
+categories = ["developer", "media"]
+
+# The four services: OpenAI's Images API; Replicate's API and the
+# replicate.delivery hosts its images are downloaded from; fal.ai's
+# synchronous endpoint (fal.run) and its fal.media image hosts; and a ComfyUI
+# on this computer, the local network or Tailscale (same list as HOSTS in
+# api.ts, a test checks it). Images are saved in ~/Pictures (the folder
+# preference must be inside it); HOME locates it.
+[permissions]
+net = [
+  "api.openai.com",
+  "api.replicate.com",
+  "replicate.delivery",
+  "*.replicate.delivery",
+  "fal.run",
+  "fal.media",
+  "*.fal.media",
+  "localhost",
+  "127.0.0.1",
+  "*.local",
+  "*.lan",
+  "*.home.arpa",
+  "*.ts.net",
+  "10.0.0.0/8",
+  "172.16.0.0/12",
+  "192.168.0.0/16",
+  "100.64.0.0/10",
+]
+read = ["~/Pictures"]
+write = ["~/Pictures"]
+env = ["HOME"]
+
+[[commands]]
+name = "generate"
+title = "Generate Image"
+description = "Type a prompt, pick the service and the shape; the image is saved and shown"
+icon = "bs-sparkle"
+keywords = [
+  "image",
+  "generate",
+  "ai",
+  "art",
+  "picture",
+  "dall-e",
+  "gpt-image",
+  "openai",
+  "flux",
+  "stable diffusion",
+  "sdxl",
+  "replicate",
+  "fal",
+  "comfyui",
+  "text to image",
+  "générer",
+  "génération d'image",
+  "créer une image",
+  "illustration",
+  "dessin",
+]
+
+[[commands]]
+name = "history"
+title = "Generated Images"
+description = "Every image you generated, with its prompt: open, copy the path, generate again, delete"
+icon = "bs-image"
+keywords = [
+  "image",
+  "history",
+  "generated",
+  "gallery",
+  "ai",
+  "prompt",
+  "historique",
+  "images générées",
+  "galerie",
+]
+
+[[preferences]]
+name = "provider"
+title = "Default service"
+description = "openai, replicate, fal or comfyui"
+default = "openai"
+
+[[preferences]]
+name = "openaiKey"
+title = "OpenAI API key"
+description = "platform.openai.com → API keys (gpt-image-1 needs a verified organization)"
+type = "secret"
+
+[[preferences]]
+name = "replicateToken"
+title = "Replicate API token"
+description = "replicate.com → Account settings → API tokens"
+type = "secret"
+
+[[preferences]]
+name = "replicateModel"
+title = "Replicate model"
+description = "owner/name of an official text-to-image model"
+default = "black-forest-labs/flux-schnell"
+
+[[preferences]]
+name = "falKey"
+title = "fal.ai API key"
+description = "fal.ai → Dashboard → API Keys"
+type = "secret"
+
+[[preferences]]
+name = "falModel"
+title = "fal.ai model"
+description = "The endpoint id of a text-to-image model"
+default = "fal-ai/flux/schnell"
+
+[[preferences]]
+name = "comfyUrl"
+title = "ComfyUI address"
+description = "This computer, your network or Tailscale"
+default = "http://127.0.0.1:8188"
+
+[[preferences]]
+name = "comfyCheckpoint"
+title = "ComfyUI checkpoint"
+description = "A file name from models/checkpoints, like sd_xl_base_1.0.safetensors; empty: the first one"
+
+[[preferences]]
+name = "comfySteps"
+title = "ComfyUI steps"
+description = "Sampling steps of the built-in text-to-image workflow"
+type = "number"
+default = 25
+
+[[preferences]]
+name = "folder"
+title = "Save to"
+description = "A folder inside ~/Pictures"
+default = "~/Pictures/Generated"

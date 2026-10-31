@@ -1,0 +1,93 @@
+[extension]
+id = "aur"
+title = "AUR"
+description = "Search the AUR with votes, popularity and out-of-date flags, read PKGBUILDs, install with paru or yay, and see which AUR packages need updates"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-package"
+license = "MIT"
+categories = ["system"]
+
+# The AUR's RPC (search, info) and cgit (PKGBUILDs) on aur.archlinux.org.
+# pacman -Qm lists the packages you installed from outside the repositories.
+# paru or yay (whichever is installed, or your choice) builds and installs in a
+# terminal you can watch, where they ask for your password; without either, the
+# terminal clones the package and runs makepkg. paru/yay --version tell which is there.
+[permissions]
+net = ["aur.archlinux.org"]
+run = [
+  "pacman",
+  "paru",
+  "yay",
+  "kitty",
+  "alacritty",
+  "wezterm",
+  "foot",
+  "ghostty",
+  "ptyxis",
+  "kgx",
+  "gnome-terminal",
+  "konsole",
+  "xfce4-terminal",
+  "tilix",
+  "xterm",
+]
+
+[[commands]]
+name = "search"
+title = "Search AUR"
+description = "AUR packages by name or description, the most popular first"
+icon = "bs-package"
+keywords = [
+  "aur",
+  "arch",
+  "arch linux",
+  "archlinux",
+  "manjaro",
+  "endeavouros",
+  "cachyos",
+  "paru",
+  "yay",
+  "makepkg",
+  "pkgbuild",
+  "package",
+  "paquet",
+  "paquets",
+  "install",
+  "installer",
+  "logiciel",
+  "dépôt utilisateur",
+]
+
+[[commands]]
+name = "installed"
+title = "AUR Packages"
+description = "What you installed from the AUR, updates first, and packages it no longer has"
+icon = "bs-download"
+keywords = [
+  "aur",
+  "installed",
+  "installés",
+  "foreign",
+  "pacman -Qm",
+  "updates",
+  "update",
+  "mises à jour",
+  "mise à jour",
+  "paru",
+  "yay",
+  "orphan",
+  "orphelin",
+  "out of date",
+  "obsolète",
+]
+
+[[preferences]]
+name = "helper"
+title = "AUR helper"
+description = "paru or yay. Leave empty to use the one installed (paru first); without either, makepkg runs in the terminal"
+
+[[preferences]]
+name = "terminal"
+title = "Terminal"
+description = "Where packages are built. Leave empty to use the first one installed (kitty, alacritty, wezterm, foot, ghostty, GNOME Console, Konsole…)"

@@ -1,0 +1,66 @@
+[extension]
+id = "duplicates"
+title = "Duplicate Files"
+description = "Find identical files in a folder, biggest waste first, and keep the newest or oldest copy, the others going to the trash"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-copy"
+license = "MIT"
+categories = ["system"]
+
+# Files are compared by size, then by their first 64 KB (read here), then by a
+# whole-file hash from b3sum when installed, else sha256sum; the hashes are
+# cached in the extension's storage. Nothing is deleted: gio moves copies to the
+# trash, and gdbus shows a file in the file manager. The home folder and mounted
+# drives are where folders can be searched.
+[permissions]
+run = ["b3sum", "sha256sum", "gio", "gdbus"]
+read = ["~", "/media", "/run/media", "/mnt"]
+env = ["HOME"]
+
+[[commands]]
+name = "duplicates"
+title = "Find Duplicate Files"
+description = "Identical files in a folder by space wasted: keep the newest, the oldest, or pick one"
+icon = "bs-copy"
+keywords = [
+  "duplicate",
+  "duplicates",
+  "duplicate files",
+  "identical",
+  "same file",
+  "dedupe",
+  "deduplicate",
+  "fdupes",
+  "czkawka",
+  "clean up",
+  "free space",
+  "doublon",
+  "doublons",
+  "fichiers en double",
+  "fichiers identiques",
+  "dédoublonner",
+  "libérer de l'espace",
+]
+[[commands.arguments]]
+name = "folder"
+placeholder = "~/Pictures"
+
+[[preferences]]
+name = "folder"
+title = "Default folder"
+description = "Searched when you don't type one, e.g. ~/Pictures or /run/media/you/Backup"
+default = "~"
+
+[[preferences]]
+name = "minSize"
+title = "Minimum size"
+description = "Smaller files are ignored, e.g. 100 KB or 1 MB (0 for every file)"
+default = "1 MB"
+
+[[preferences]]
+name = "hidden"
+title = "Include hidden files"
+description = "Also search dot files and folders (tool caches, Git and node_modules folders are always skipped)"
+type = "boolean"
+default = false

@@ -1,0 +1,136 @@
+[extension]
+id = "plain-text-accounting"
+title = "Plain Text Accounting"
+description = "hledger, Ledger and Beancount journals: account balances, this month's expenses by category, recent transactions and a quick form to add one"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coin"
+license = "MIT"
+categories = ["productivity"]
+
+# Your journal is read by the tool you already use (hledger, ledger, or
+# bean-query from beanquery), so the extension never parses it itself. Reading
+# and writing are allowed where journals usually live (same list as ALLOWED in
+# engine.ts): to find the journal, and to append the transactions you add,
+# which the tool then checks (the journal is restored if it can't read it).
+# LEDGER_FILE is where hledger and Ledger users point to their journal.
+[permissions]
+run = ["hledger", "ledger", "bean-query"]
+read = [
+  "~/.hledger.journal",
+  "~/.ledger",
+  "~/finance",
+  "~/Finance",
+  "~/finances",
+  "~/ledger",
+  "~/Ledger",
+  "~/accounting",
+  "~/Accounting",
+  "~/beancount",
+  "~/Beancount",
+  "~/Documents/finance",
+  "~/Documents/Finance",
+  "~/Documents/ledger",
+  "~/Documents/accounting",
+  "~/Documents/beancount",
+]
+write = [
+  "~/.hledger.journal",
+  "~/.ledger",
+  "~/finance",
+  "~/Finance",
+  "~/finances",
+  "~/ledger",
+  "~/Ledger",
+  "~/accounting",
+  "~/Accounting",
+  "~/beancount",
+  "~/Beancount",
+  "~/Documents/finance",
+  "~/Documents/Finance",
+  "~/Documents/ledger",
+  "~/Documents/accounting",
+  "~/Documents/beancount",
+]
+env = ["HOME", "LEDGER_FILE"]
+
+[[commands]]
+name = "balances"
+title = "Account Balances"
+description = "Assets and liabilities with net worth, or every account, from your journal"
+icon = "bs-coin"
+keywords = [
+  "hledger",
+  "ledger",
+  "beancount",
+  "balance",
+  "accounts",
+  "net worth",
+  "money",
+  "finance",
+  "accounting",
+  "solde",
+  "comptes",
+  "comptabilité",
+  "patrimoine",
+  "argent",
+]
+
+[[commands]]
+name = "expenses"
+title = "Monthly Expenses"
+description = "This month's spending by category, compared with the same days last month"
+icon = "bs-chart-down"
+keywords = [
+  "hledger",
+  "ledger",
+  "beancount",
+  "expenses",
+  "spending",
+  "budget",
+  "month",
+  "categories",
+  "dépenses",
+  "budget",
+  "mois",
+  "catégories",
+]
+
+[[commands]]
+name = "transactions"
+title = "Recent Transactions"
+description = "The last 30 days of your journal, newest first: copy, add a similar one"
+icon = "bs-history"
+keywords = ["hledger", "ledger", "beancount", "transactions", "register", "journal", "opérations", "écritures", "transactions"]
+
+[[commands]]
+name = "add"
+title = "Add Transaction"
+description = "Date, payee, amount and accounts, appended to your journal"
+icon = "bs-plus"
+keywords = ["hledger", "ledger", "beancount", "add", "new", "transaction", "expense", "ajouter", "dépense", "écriture", "saisir"]
+
+[[preferences]]
+name = "journal"
+title = "Journal"
+description = "Your main file, like ~/finance/main.journal. Empty: LEDGER_FILE, else the first journal found in ~/finance, ~/ledger…"
+default = ""
+
+[[preferences]]
+name = "engine"
+title = "Tool"
+description = "auto, hledger, ledger or beancount. auto: Beancount for .beancount files, else hledger when installed, else Ledger"
+default = "auto"
+
+[[preferences]]
+name = "commodity"
+title = "Default commodity"
+description = "For amounts typed without one, like $ or EUR. Empty: the one your journal uses most"
+default = ""
+
+[[preferences]]
+name = "depth"
+title = "Category depth"
+description = "2 groups Expenses:Food:Groceries under Expenses:Food in Monthly Expenses"
+type = "number"
+default = 2

@@ -1,0 +1,14 @@
+id = "plain-text-accounting"
+title = "Plain Text Accounting"
+description = "hledger, Ledger and Beancount journals: account balances, this month's expenses by category, recent transactions and a quick form to add one"
+author = "Backslash"
+icon = "bs-coin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/plain-text-accounting"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:ea43354003b1b038610066aa214927fcc83d50827bb80126d55596dcf93ca16b"
+permissions = ["Run hledger", "Run ledger", "Run bean-query", "Read ~/.hledger.journal", "Read ~/.ledger", "Read ~/finance", "Read ~/Finance", "Read ~/finances", "Read ~/ledger", "Read ~/Ledger", "Read ~/accounting", "Read ~/Accounting", "Read ~/beancount", "Read ~/Beancount", "Read ~/Documents/finance", "Read ~/Documents/Finance", "Read ~/Documents/ledger", "Read ~/Documents/accounting", "Read ~/Documents/beancount", "Write ~/.hledger.journal", "Write ~/.ledger", "Write ~/finance", "Write ~/Finance", "Write ~/finances", "Write ~/ledger", "Write ~/Ledger", "Write ~/accounting", "Write ~/Accounting", "Write ~/beancount", "Write ~/Beancount", "Write ~/Documents/finance", "Write ~/Documents/Finance", "Write ~/Documents/ledger", "Write ~/Documents/accounting", "Write ~/Documents/beancount", "Read the environment variable HOME", "Read the environment variable LEDGER_FILE"]
+commands = ["Account Balances", "Monthly Expenses", "Recent Transactions", "Add Transaction"]
+categories = ["productivity"]
+

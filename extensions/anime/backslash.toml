@@ -1,0 +1,87 @@
+[extension]
+id = "anime"
+title = "Anime"
+description = "Your AniList or MyAnimeList watching list with new episodes and the next airing countdown, mark episodes watched, this week's airing schedule and anime / manga search"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-film"
+license = "MIT"
+categories = ["media"]
+
+# AniList's GraphQL API and its cover images (s4.anilist.co); MyAnimeList's
+# API v2 and its pictures, only used when you set a MyAnimeList user. Same
+# list as HOSTS in lib.ts.
+[permissions]
+net = ["graphql.anilist.co", "s4.anilist.co", "api.myanimelist.net", "cdn.myanimelist.net"]
+
+[[commands]]
+name = "watching"
+title = "Currently Watching"
+description = "Your list: episodes to catch up first, next episode countdown, mark an episode watched (AniList token)"
+icon = "bs-film"
+keywords = [
+  "anime",
+  "anilist",
+  "myanimelist",
+  "mal",
+  "watching",
+  "watchlist",
+  "episode",
+  "next episode",
+  "progress",
+  "en cours",
+  "épisode",
+  "prochain épisode",
+  "liste",
+  "animé",
+  "animés",
+]
+
+[[commands]]
+name = "schedule"
+title = "Anime Airing Schedule"
+description = "Episodes airing in the next 7 days by day and time, those on your list marked; Tab shows only your list"
+icon = "bs-calendar"
+keywords = ["anime", "airing", "schedule", "simulcast", "this week", "calendar", "anilist", "planning", "sorties", "diffusion", "calendrier", "cette semaine", "animé"]
+
+[[commands]]
+name = "search"
+title = "Search Anime"
+description = "Anime and manga on AniList with score, episodes, season, studio and synopsis; Tab switches to manga"
+icon = "bs-search"
+keywords = ["anime", "manga", "anilist", "search", "find", "chercher", "rechercher", "animé", "série", "webtoon", "manhwa"]
+
+[[preferences]]
+name = "anilistUser"
+title = "AniList user name"
+description = "Shows your public AniList list (no token needed to read it)"
+
+[[preferences]]
+name = "anilistToken"
+title = "AniList token"
+description = "Optional: lets you mark episodes watched and see a private list. Create a client on anilist.co/settings/developer (redirect https://anilist.co/api/v2/oauth/pin), then open anilist.co/api/v2/oauth/authorize?client_id=<id>&response_type=token"
+type = "secret"
+
+[[preferences]]
+name = "malUser"
+title = "MyAnimeList user name"
+description = "Used when no AniList account is set (read-only)"
+
+[[preferences]]
+name = "malClientId"
+title = "MyAnimeList Client ID"
+description = "Of an app created on myanimelist.net/apiconfig (type: other), needed to read a MyAnimeList list"
+type = "secret"
+
+[[preferences]]
+name = "titles"
+title = "Titles"
+description = "romaji, english or native"
+default = "romaji"
+
+[[preferences]]
+name = "adult"
+title = "Show adult titles"
+description = "Include 18+ titles in the schedule and search"
+type = "boolean"
+default = false

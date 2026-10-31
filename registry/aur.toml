@@ -1,0 +1,14 @@
+id = "aur"
+title = "AUR"
+description = "Search the AUR with votes, popularity and out-of-date flags, read PKGBUILDs, install with paru or yay, and see which AUR packages need updates"
+author = "Backslash"
+icon = "bs-package"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/aur"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:ab206d03ab71e70d5d5cfc6fa221656706d1ae8344d988b97e337f2f290eb702"
+permissions = ["Access aur.archlinux.org", "Run pacman", "Run paru", "Run yay", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm"]
+commands = ["Search AUR", "AUR Packages"]
+categories = ["system"]
+

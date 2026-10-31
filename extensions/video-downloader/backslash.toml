@@ -1,0 +1,88 @@
+[extension]
+id = "video-downloader"
+title = "Video Downloader"
+description = "Download the video or song of a copied link with yt-dlp: see its title, length and qualities first, pick 1080p, 720p, MP3 or M4A, and get notified when it's done"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-download"
+license = "MIT"
+categories = ["media"]
+
+# yt-dlp reads the link (-J: title, uploader, length, formats) and downloads;
+# ffmpeg is only run to check that it is installed (yt-dlp uses it to join
+# video and audio and to make MP3s). Downloads run as transient systemd user
+# units (systemd-run, systemctl), so they go on with the launcher closed and
+# notify-send says when each one is done. Each job's log, status and written
+# paths are kept in ~/.cache/backslash/video-downloader; the download folders
+# can be anywhere in the home folder or on a drive, read to show the files'
+# sizes. wl-copy (Wayland) or xclip (X11) copy a downloaded file. The hosts
+# below only serve the thumbnails shown in the preview: yt-dlp itself does the
+# downloading, outside of Backslash.
+[permissions]
+net = ["i.ytimg.com", "i.vimeocdn.com", "pbs.twimg.com", "i1.sndcdn.com", "static-cdn.jtvnw.net", "s1.dmcdn.net", "s2.dmcdn.net"]
+run = ["yt-dlp", "ffmpeg", "systemd-run", "systemctl", "wl-copy", "xclip"]
+read = ["~", "/media", "/run/media", "/mnt", "/etc/os-release"]
+write = ["~/.cache/backslash/video-downloader"]
+env = ["HOME", "WAYLAND_DISPLAY"]
+clipboard-read = true
+
+[[commands]]
+name = "video-downloader"
+title = "Download Video"
+description = "The copied link's qualities with their size, and your downloads with their progress"
+icon = "bs-download"
+keywords = [
+  "yt-dlp",
+  "youtube-dl",
+  "youtube",
+  "download",
+  "video",
+  "mp3",
+  "m4a",
+  "audio",
+  "music",
+  "vimeo",
+  "soundcloud",
+  "télécharger",
+  "vidéo",
+  "musique",
+  "téléchargement",
+]
+
+[[commands]]
+name = "download-clipboard"
+title = "Download Copied Video"
+description = "Starts downloading the copied link at once, in the quality set in Settings"
+icon = "bs-download"
+mode = "no-view"
+keywords = ["yt-dlp", "download", "copied", "clipboard", "video", "télécharger", "presse-papiers", "vidéo"]
+
+[[preferences]]
+name = "folder"
+title = "Video folder"
+description = "Where videos go"
+default = "~/Downloads"
+
+[[preferences]]
+name = "audioFolder"
+title = "Audio folder"
+description = "Where MP3 and M4A files go"
+default = "~/Music"
+
+[[preferences]]
+name = "quality"
+title = "Quality of Download Copied Video"
+description = "best, 2160, 1440, 1080, 720, 480, mp3 or m4a"
+default = "1080"
+
+[[preferences]]
+name = "compatible"
+title = "Prefer MP4 that plays everywhere"
+description = "H.264 and AAC over VP9, AV1 and Opus at the same resolution: bigger, but opens in every player and editor"
+type = "boolean"
+default = true
+
+[[preferences]]
+name = "cookiesFrom"
+title = "Use cookies from"
+description = "Optional: firefox, chrome, chromium, brave… for videos that need you to be signed in (age-restricted, members-only)"

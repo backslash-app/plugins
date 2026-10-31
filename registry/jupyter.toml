@@ -1,0 +1,14 @@
+id = "jupyter"
+title = "Jupyter"
+description = "Running Jupyter servers with their notebooks and kernels, and your recent notebooks: open with the token, interrupt, restart or shut down kernels"
+author = "Backslash"
+icon = "bs-book"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/jupyter"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:69d50a034f43b8346febc1b0f4f32a27eb3e8caa88cfc4b31b1f3a4b69dcdefb"
+permissions = ["Access localhost", "Access 127.0.0.1", "Run jupyter", "Read ~/.local/share/jupyter/runtime", "Read ~/.jupyter/lab/workspaces", "Read the environment variable HOME"]
+commands = ["Jupyter Notebooks"]
+categories = ["developer"]
+

@@ -1,0 +1,85 @@
+[extension]
+id = "gifs"
+title = "GIFs"
+description = "Search Tenor and Giphy in a grid, trending when nothing is typed: copy the GIF link, or copy it as a file or an image to paste in any chat"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-film"
+license = "MIT"
+categories = ["media"]
+
+# The Tenor v2 API (tenor.googleapis.com) and the Giphy API (api.giphy.com),
+# with your own keys, and the hosts their GIFs are served from (for the grid's
+# thumbnails and to download a GIF before copying it as a file or an image).
+# Downloaded GIFs are kept in ~/.cache/backslash/gifs; "Save" writes one to
+# your Downloads folder. wl-copy (Wayland) or xclip (X11) put a GIF on the
+# clipboard as a file or as an image; WAYLAND_DISPLAY picks which one.
+[permissions]
+net = [
+  "tenor.googleapis.com",
+  "media.tenor.com",
+  "media1.tenor.com",
+  "c.tenor.com",
+  "api.giphy.com",
+  "i.giphy.com",
+  "media.giphy.com",
+  "media0.giphy.com",
+  "media1.giphy.com",
+  "media2.giphy.com",
+  "media3.giphy.com",
+  "media4.giphy.com",
+]
+run = ["wl-copy", "xclip"]
+read = ["~/.cache/backslash/gifs", "~/Downloads", "~/Téléchargements"]
+write = ["~/.cache/backslash/gifs", "~/Downloads", "~/Téléchargements"]
+env = ["HOME", "WAYLAND_DISPLAY"]
+
+[[commands]]
+name = "gifs"
+title = "Search GIFs"
+description = "Trending GIFs, or type to search Tenor and Giphy; Enter copies the link, Ctrl+Enter copies the GIF itself"
+icon = "bs-film"
+keywords = [
+  "gif",
+  "gifs",
+  "tenor",
+  "giphy",
+  "meme",
+  "reaction",
+  "animated",
+  "sticker",
+  "réaction",
+  "animé",
+  "mème",
+  "image animée",
+]
+
+[[preferences]]
+name = "tenorKey"
+title = "Tenor API key"
+description = "Google Cloud console → enable the Tenor API → Credentials → Create API key"
+type = "secret"
+
+[[preferences]]
+name = "giphyKey"
+title = "Giphy API key"
+description = "developers.giphy.com → Create an App → API → the key"
+type = "secret"
+
+[[preferences]]
+name = "provider"
+title = "Search first with"
+description = "tenor or giphy, when both keys are set (Tab switches)"
+default = "tenor"
+
+[[preferences]]
+name = "rating"
+title = "Content rating"
+description = "g, pg, pg-13 or r: the most explicit GIFs shown"
+default = "pg-13"
+
+[[preferences]]
+name = "language"
+title = "Language"
+description = "Two-letter code of the words you search in: en, fr, de…"
+default = "en"

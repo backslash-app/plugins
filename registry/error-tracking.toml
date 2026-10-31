@@ -1,0 +1,14 @@
+id = "error-tracking"
+title = "Error Tracking"
+description = "Unresolved errors from GlitchTip (hosted or on your network), Rollbar, Honeybadger and Bugsnag in one list, newest first: events, users, environment; resolve or ignore them"
+author = "Backslash"
+icon = "bs-bug"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/error-tracking"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:adba2febd868424583333dd4848fff553e9b006fd4631b29dbb6173481f1feb9"
+permissions = ["Access app.glitchtip.com", "Access api.rollbar.com", "Access app.honeybadger.io", "Access eu-app.honeybadger.io", "Access api.bugsnag.com", "Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10"]
+commands = ["Unresolved Errors"]
+categories = ["developer"]
+

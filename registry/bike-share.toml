@@ -1,0 +1,14 @@
+id = "bike-share"
+title = "Bike Share"
+description = "Live bikes, e-bikes and free docks at your favorite and nearest bike-share stations: Vélib', Vélo'v, V'Lille, Naolib, Citi Bike, Bicing or any GBFS feed"
+author = "Backslash"
+icon = "bs-pin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/bike-share"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:a2208414c94fd8a6183774cfb812409be42c28b30879fe1d0df702e2527d6c4b"
+permissions = ["Access velib-metropole-opendata.smovengo.cloud", "Access api.cyclocity.fr", "Access media.ilevia.fr", "Access gbfs.nextbike.net", "Access gbfs.theta.fifteen.eu", "Access gbfs.partners.fifteen.eu", "Access *.publicbikesystem.net", "Access gbfs.citibikenyc.com", "Access gbfs.lyft.com", "Access gbfs.velobixi.com", "Access api.gbfs.v3.0.ecovelo.mobi", "Access stables.donkey.bike"]
+commands = ["Bike Stations"]
+categories = ["everyday"]
+
