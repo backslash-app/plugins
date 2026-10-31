@@ -1,0 +1,14 @@
+id = "video-downloader"
+title = "Video Downloader"
+description = "Download the video or song of a copied link with yt-dlp: see its title, length and qualities first, pick 1080p, 720p, MP3 or M4A, and get notified when it's done"
+author = "Backslash"
+icon = "bs-download"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/video-downloader"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:f673abee8fd8d5055a5ba0ff5413e969a380491db11b9455364830c67083cec0"
+permissions = ["Access i.ytimg.com", "Access i.vimeocdn.com", "Access pbs.twimg.com", "Access i1.sndcdn.com", "Access static-cdn.jtvnw.net", "Access s1.dmcdn.net", "Access s2.dmcdn.net", "Run yt-dlp", "Run ffmpeg", "Run systemd-run", "Run systemctl", "Run wl-copy", "Run xclip", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Read /etc/os-release", "Write ~/.cache/backslash/video-downloader", "Read the environment variable HOME", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Download Video", "Download Copied Video"]
+categories = ["media"]
+

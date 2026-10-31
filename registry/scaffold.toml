@@ -1,0 +1,14 @@
+id = "scaffold"
+title = "Project Templates"
+description = "Start a new project from a Cookiecutter, Copier or plain git template: a form for the template's questions, then run it directly or in a terminal"
+author = "Backslash"
+icon = "bs-rocket"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/scaffold"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:c434ccfea1b1195d06a2f94b1824712995764030e97d4c3ce09e346a8d37f17d"
+permissions = ["Access raw.githubusercontent.com", "Access gitlab.com", "Access codeberg.org", "Run cookiecutter", "Run copier", "Run uvx", "Run pipx", "Run git", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read ~/.cookiecutters", "Read ~/templates", "Read ~/.templates", "Read ~/Projects", "Read ~/projects", "Read ~/Code", "Read ~/code", "Read ~/dev", "Read ~/Developer", "Read ~/src", "Read ~/git", "Read ~/repos", "Read ~/workspace", "Read ~/work", "Read ~/Work", "Write ~/Projects", "Write ~/projects", "Write ~/Code", "Write ~/code", "Write ~/dev", "Write ~/Developer", "Write ~/src", "Write ~/git", "Write ~/repos", "Write ~/workspace", "Write ~/work", "Write ~/Work", "Read the environment variable HOME", "Read the environment variable SHELL"]
+commands = ["New Project from Template"]
+categories = ["developer"]
+

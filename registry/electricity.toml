@@ -1,0 +1,14 @@
+id = "electricity"
+title = "Electricity"
+description = "EDF Tempo color of today and tomorrow with the red and white days left, RTE EcoWatt grid alerts and France's day-ahead power prices by the hour"
+author = "Backslash"
+icon = "bs-bolt"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/electricity"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:f18a1a8430d988b7b1c8a9baecaa63660264b2d9198ca10486df7881679f25be"
+permissions = ["Access www.api-couleur-tempo.fr", "Access digital.iservices.rte-france.com", "Access api.energy-charts.info", "Run “Tempo Day Color” in the background every hour"]
+commands = ["Electricity Today", "Tempo Day Color"]
+categories = ["everyday"]
+

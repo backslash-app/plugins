@@ -1,0 +1,14 @@
+id = "network-shares"
+title = "Network Shares"
+description = "Your SMB, NFS, SSH (SFTP or sshfs) and WebDAV shares: mount, open in the file manager and unmount them, and see what is mounted"
+author = "Backslash"
+icon = "bs-server"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/network-shares"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:a2e6733411b85c231d1c96d6d9058aa6417e8e341bde8051512caaa8de31c51f"
+permissions = ["Run gio", "Run sshfs", "Run fusermount3", "Run fusermount", "Run mount", "Run umount", "Run mkdir", "Run kitty", "Run alacritty", "Run wezterm", "Run foot", "Run ghostty", "Run ptyxis", "Run kgx", "Run gnome-terminal", "Run konsole", "Run xfce4-terminal", "Run tilix", "Run xterm", "Read /proc/mounts", "Read /etc/fstab", "Read the environment variable HOME"]
+commands = ["Network Shares"]
+categories = ["network"]
+

@@ -1,0 +1,14 @@
+id = "model-catalog"
+title = "Model Catalog"
+description = "Browse and compare the LLMs on OpenRouter: price per million tokens in and out, context length, modalities and provider; copy the model id"
+author = "Backslash"
+icon = "bs-sparkle"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/model-catalog"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:b0c96ec5d1bdb9e79d0dd1d330cb49f5f0bd6d497fa863980b55f68b518dd284"
+permissions = ["Access openrouter.ai"]
+commands = ["Model Catalog"]
+categories = ["developer"]
+

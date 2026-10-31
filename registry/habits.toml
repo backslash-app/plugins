@@ -1,0 +1,14 @@
+id = "habits"
+title = "Habits"
+description = "Track daily and weekly habits: check in today, streaks and a heatmap of the last months, with optional Habitica sync"
+author = "Backslash"
+icon = "bs-repeat"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/habits"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:de4a2ae8509ab25ce03f4a9b15772aaa543c7b072d3ba9596c3cfa6d0ffecb23"
+permissions = ["Access habitica.com"]
+commands = ["Habits", "Check In Habit", "Add Habit"]
+categories = ["productivity"]
+

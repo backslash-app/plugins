@@ -1,0 +1,14 @@
+id = "song-recognition"
+title = "Song Recognition"
+description = "Find out which song is playing, on your computer or around you, with SongRec (Shazam): title, artist, album, cover and lyrics, then open it in Spotify or YouTube"
+author = "Backslash"
+icon = "bs-music"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/song-recognition"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:251f679d48c2c92387fefc89b5f026648f866f31cb930ce4bdfbc3a4cdbdef60"
+permissions = ["Access is1-ssl.mzstatic.com", "Access is2-ssl.mzstatic.com", "Access is3-ssl.mzstatic.com", "Access is4-ssl.mzstatic.com", "Access is5-ssl.mzstatic.com", "Run songrec", "Run pw-record", "Run parecord", "Read ~/.cache/backslash/song-recognition", "Read /etc/os-release", "Write ~/.cache/backslash/song-recognition", "Read the environment variable HOME"]
+commands = ["Recognize Song", "Recognized Songs"]
+categories = ["media"]
+

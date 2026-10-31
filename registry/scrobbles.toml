@@ -1,0 +1,14 @@
+id = "scrobbles"
+title = "Scrobbles"
+description = "Your Last.fm and ListenBrainz listening: what's playing now, recent scrobbles with covers, and your top artists, tracks and albums of the week"
+author = "Backslash"
+icon = "bs-headphones"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/scrobbles"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:1b590d2347228a791071e2acc1ad660b6753243f57f37f8d843ecfd877619149"
+permissions = ["Access ws.audioscrobbler.com", "Access lastfm.freetls.fastly.net", "Access api.listenbrainz.org", "Access coverartarchive.org", "Access archive.org", "Access *.archive.org"]
+commands = ["Recent Scrobbles", "Top Music"]
+categories = ["media"]
+

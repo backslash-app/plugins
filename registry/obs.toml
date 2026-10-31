@@ -1,0 +1,14 @@
+id = "obs"
+title = "OBS Studio"
+description = "Start and stop recording and streaming, switch scenes with previews, mute audio sources and turn on the virtual camera in OBS Studio"
+author = "Backslash"
+icon = "bs-video"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/obs"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:270963f6d734c4428c3440668c6867f4a6790597c493b3c81782ed70c2e9cc4b"
+permissions = ["Access localhost", "Access 127.0.0.1", "Access *.local", "Access *.lan", "Access *.home.arpa", "Access *.ts.net", "Access 10.0.0.0/8", "Access 172.16.0.0/12", "Access 192.168.0.0/16", "Access 100.64.0.0/10", "Run gio", "Read ~/.cache/backslash/obs", "Read /usr/share/applications/com.obsproject.Studio.desktop", "Read /usr/local/share/applications/com.obsproject.Studio.desktop", "Read /var/lib/flatpak/exports/share/applications/com.obsproject.Studio.desktop", "Read ~/.local/share/flatpak/exports/share/applications/com.obsproject.Studio.desktop", "Read /var/lib/snapd/desktop/applications/obs-studio_obs-studio.desktop", "Write ~/.cache/backslash/obs", "Read the environment variable HOME"]
+commands = ["OBS Studio", "Switch OBS Scene", "Toggle OBS Recording", "Toggle OBS Streaming", "Toggle OBS Microphone"]
+categories = ["media"]
+

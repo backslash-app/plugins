@@ -1,0 +1,14 @@
+id = "food-facts"
+title = "Food Facts"
+description = "Look up food products by name or barcode on Open Food Facts: Nutri-Score, NOVA, Eco-Score, allergens, additives and nutrition facts per 100 g"
+author = "Backslash"
+icon = "bs-leaf"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/food-facts"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:89579f7a9c456269b9667255bd378ebfa7ac76b2c6c6ed4b2456ea6ee0dc4b38"
+permissions = ["Access world.openfoodfacts.org", "Access search.openfoodfacts.org", "Access images.openfoodfacts.org", "Read the clipboard"]
+commands = ["Search Food Products", "Look Up Barcode"]
+categories = ["everyday"]
+

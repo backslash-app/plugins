@@ -1,0 +1,14 @@
+id = "taskwarrior"
+title = "Taskwarrior"
+description = "Your Taskwarrior tasks by urgency with project, tags and due date; quick add, done, start and stop, annotate, modify and reports"
+author = "Backslash"
+icon = "bs-square-check"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/taskwarrior"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:7581c8a99a365fe9fb0fa478003d93bdd9b33eba268d155c96ca014b2867e10c"
+permissions = ["Run task"]
+commands = ["Taskwarrior Tasks", "Add Taskwarrior Task", "Taskwarrior Reports"]
+categories = ["productivity"]
+

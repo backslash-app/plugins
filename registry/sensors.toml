@@ -1,0 +1,14 @@
+id = "sensors"
+title = "Temperatures & Fans"
+description = "CPU, GPU, drive and motherboard temperatures and fan speeds, live, with hot and critical ones highlighted and a warning when something overheats"
+author = "Backslash"
+icon = "bs-thermometer"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/sensors"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:940880be88c7123822caccc6abe3aef84a23fb1626eb4568c054a28759485076"
+permissions = ["Run sensors", "Run grep", "Run nvidia-smi", "Run notify-send", "Run “Overheat Warning” in the background every 2 minutes"]
+commands = ["Temperatures & Fans", "Overheat Warning"]
+categories = ["system"]
+

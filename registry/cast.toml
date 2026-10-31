@@ -1,0 +1,14 @@
+id = "cast"
+title = "Cast to TV"
+description = "Cast a copied link, a YouTube video or a file from your file manager to a Chromecast or a DLNA TV, and control what plays: pause, seek, volume, stop"
+author = "Backslash"
+icon = "bs-monitor"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/cast"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:baf9cbb49e73340756777ce5bfec9d5f67685e1693053149d2cfec3fb408a4ee"
+permissions = ["Run catt", "Run go2tv", "Run systemd-run", "Run systemctl", "Run wl-paste", "Run xclip", "Run gio", "Read ~", "Read /media", "Read /run/media", "Read /mnt", "Read /usr/share/applications/org.gnome.NetworkDisplays.desktop", "Read /var/lib/flatpak/exports/share/applications/org.gnome.NetworkDisplays.desktop", "Read the environment variable HOME", "Read the environment variable XDG_SESSION_TYPE", "Read the environment variable WAYLAND_DISPLAY", "Read the clipboard"]
+commands = ["Cast to TV", "Cast Copied Link or File", "Play or Pause TV", "Stop Casting"]
+categories = ["media"]
+

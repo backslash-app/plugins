@@ -1,0 +1,14 @@
+id = "highlights"
+title = "Highlights"
+description = "Search your highlights from Readwise, Kindle's My Clippings.txt and Hypothes.is, and copy them with their source and citation"
+author = "Backslash"
+icon = "bs-bookmark"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/highlights"
+commit = "e45738809dbcc6a614ed376035230e5a92a5a310"
+checksum = "sha256:f5829f8adaeb6cbc1fb20325824f4fe6a7abf2dd809bfd9d6b4682a83ec74896"
+permissions = ["Access readwise.io", "Access api.hypothes.is", "Read /run/media", "Read /media", "Read ~/My Clippings.txt", "Read ~/Documents/My Clippings.txt", "Read ~/Downloads/My Clippings.txt", "Read the environment variable HOME", "Read the environment variable USER"]
+commands = ["Search Highlights", "Highlighted Books"]
+categories = ["productivity"]
+
