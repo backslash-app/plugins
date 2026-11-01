@@ -1,0 +1,43 @@
+[extension]
+id = "aurora"
+title = "Aurora Forecast"
+description = "Can you see the northern lights tonight? Kp index now and for 3 days, solar wind, the OVATION aurora model at your place, darkness and clouds, from NOAA SWPC"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-sparkle"
+license = "MIT"
+categories = ["everyday"]
+
+# NOAA's space weather data needs no key; Open-Meteo finds places and gives the cloud cover.
+[permissions]
+net = ["services.swpc.noaa.gov", "geocoding-api.open-meteo.com", "api.open-meteo.com"]
+
+[[commands]]
+name = "aurora"
+title = "Aurora Forecast"
+description = "Your chances of seeing aurora tonight, the Kp index and solar wind; type a city to check another place"
+icon = "bs-sparkle"
+keywords = [
+  "aurora",
+  "northern lights",
+  "southern lights",
+  "aurora borealis",
+  "aurora australis",
+  "kp",
+  "kp index",
+  "geomagnetic storm",
+  "space weather",
+  "solar wind",
+  "aurore boréale",
+  "aurores boréales",
+  "aurore australe",
+  "indice kp",
+  "tempête géomagnétique",
+  "météo spatiale",
+  "vent solaire",
+]
+
+[[preferences]]
+name = "location"
+title = "Location"
+description = "Where you watch from: a city (\"Tromsø\", \"Québec, Canada\") or \"latitude, longitude\""

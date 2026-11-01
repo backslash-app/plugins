@@ -1,0 +1,57 @@
+[
+  {
+    "word": "crossroads",
+    "score": 73836,
+    "numSyllables": 2,
+    "tags": [
+      "n",
+      "results_type:primary_rel_multi",
+      "f:2.139440"
+    ],
+    "defs": [
+      "n\tA place where one road crosses another; an intersection of two or more roads. ",
+      "n\t(figuratively, by analogy) A decision point; a turning point or opportunity to change a direction, a course, or a goal. ",
+      "n\t(figuratively, by extension) A centrally located position. ",
+      "n\t(nonstandard) A fork in the road. "
+    ]
+  },
+  {
+    "word": "tonight she comes",
+    "score": 73835,
+    "numSyllables": 4,
+    "tags": [
+      "N",
+      "f:0.000000"
+    ],
+    "defs": [
+      "N\t\"Tonight She Comes\" is a 1985 song by American rock band the Cars from their Greatest Hits album.  "
+    ],
+    "defHeadword": "Tonight She Comes"
+  },
+  {
+    "word": "me and a gun",
+    "score": 73834,
+    "numSyllables": 4,
+    "tags": [
+      "N",
+      "f:0.000000"
+    ],
+    "defs": [
+      "N\t\"Me and a Gun\" is a song by American singer-songwriter and musician Tori Amos.  "
+    ],
+    "defHeadword": "Me and a Gun"
+  },
+  {
+    "word": "don't let me get me",
+    "score": 73833,
+    "numSyllables": 6,
+    "tags": [
+      "N",
+      "f:0.000000"
+    ],
+    "defs": [
+      "N\t\"Don't Let Me Get Me\" is a song by American singer Pink.  "
+    ],
+    "defHeadword": "Don't Let Me Get Me"
+  }
+]

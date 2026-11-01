@@ -1,0 +1,61 @@
+[extension]
+id = "iss-tracker"
+title = "ISS Tracker"
+description = "Where the International Space Station is now, over which country or ocean, and its next passes you can see from your place, computed from its orbit"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+categories = ["everyday"]
+
+# CelesTrak gives the station's orbital elements (refreshed every 6 hours);
+# Open-Meteo turns a city name into coordinates, once per city. Positions and
+# passes are computed on your computer.
+[permissions]
+net = ["celestrak.org", "geocoding-api.open-meteo.com"]
+
+[[commands]]
+name = "iss-now"
+title = "Where Is the ISS"
+description = "The station's position live, over which country or ocean, its altitude and speed, and where it is in your sky"
+icon = "bs-rocket"
+keywords = [
+  "iss",
+  "international space station",
+  "space station",
+  "where is the iss",
+  "position",
+  "orbit",
+  "station spatiale",
+  "station spatiale internationale",
+  "où est l'iss",
+]
+
+[[commands]]
+name = "iss-passes"
+title = "ISS Passes"
+description = "When you can see the ISS from your place over the next 10 days; type a city to look elsewhere"
+icon = "bs-star"
+keywords = [
+  "iss passes",
+  "iss sighting",
+  "see the iss",
+  "spot the station",
+  "satellite pass",
+  "visible pass",
+  "passages de l'iss",
+  "voir l'iss",
+  "observer la station",
+]
+
+[[preferences]]
+name = "location"
+title = "Your place"
+description = "A city (\"Paris\", \"Lyon, France\") or coordinates (\"48.85, 2.35\"), for the passes"
+
+[[preferences]]
+name = "hour12"
+title = "12-hour clock"
+description = "Show 9:30 PM instead of 21:30"
+type = "boolean"
+default = false

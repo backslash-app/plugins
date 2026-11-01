@@ -1,0 +1,267 @@
+{
+  "meta": {
+    "status": 200
+  },
+  "data": [
+    {
+      "slug": "猫",
+      "is_common": true,
+      "tags": [
+        "wanikani15"
+      ],
+      "jlpt": [
+        "jlpt-n5"
+      ],
+      "japanese": [
+        {
+          "word": "猫",
+          "reading": "ねこ"
+        },
+        {
+          "reading": "ネコ"
+        }
+      ],
+      "senses": [
+        {
+          "english_definitions": [
+            "cat (esp. the domestic cat, Felis catus)",
+            "feline"
+          ],
+          "parts_of_speech": [
+            "Noun"
+          ],
+          "links": [],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        },
+        {
+          "english_definitions": [
+            "shamisen"
+          ],
+          "parts_of_speech": [
+            "Noun"
+          ],
+          "links": [],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        },
+        {
+          "english_definitions": [
+            "geisha"
+          ],
+          "parts_of_speech": [
+            "Noun"
+          ],
+          "links": [],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        },
+        {
+          "english_definitions": [
+            "wheelbarrow"
+          ],
+          "parts_of_speech": [
+            "Noun"
+          ],
+          "links": [],
+          "tags": [
+            "Abbreviation"
+          ],
+          "restrictions": [],
+          "see_also": [
+            "猫車"
+          ],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        },
+        {
+          "english_definitions": [
+            "clay bed-warmer"
+          ],
+          "parts_of_speech": [
+            "Noun"
+          ],
+          "links": [],
+          "tags": [
+            "Abbreviation"
+          ],
+          "restrictions": [],
+          "see_also": [
+            "猫火鉢"
+          ],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        },
+        {
+          "english_definitions": [
+            "bottom (submissive partner of a homosexual relationship)"
+          ],
+          "parts_of_speech": [
+            "Noun"
+          ],
+          "links": [],
+          "tags": [
+            "Usually written using kana alone",
+            "Slang"
+          ],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [
+            "タチ"
+          ],
+          "source": [],
+          "info": []
+        },
+        {
+          "english_definitions": [
+            "Cat"
+          ],
+          "parts_of_speech": [
+            "Wikipedia definition"
+          ],
+          "links": [
+            {
+              "text": "Read “Cat” on English Wikipedia",
+              "url": "http://en.wikipedia.org/wiki/Cat?oldid=495476307"
+            },
+            {
+              "text": "Read “ネコ” on Japanese Wikipedia",
+              "url": "http://ja.wikipedia.org/wiki/ネコ?oldid=42719522"
+            }
+          ],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [],
+          "source": [],
+          "info": [],
+          "sentences": []
+        }
+      ],
+      "attribution": {
+        "jmdict": true,
+        "jmnedict": false,
+        "dbpedia": "http://dbpedia.org/resource/Cat"
+      }
+    },
+    {
+      "slug": "猫背",
+      "is_common": true,
+      "tags": [],
+      "jlpt": [],
+      "japanese": [
+        {
+          "word": "猫背",
+          "reading": "ねこぜ"
+        }
+      ],
+      "senses": [
+        {
+          "english_definitions": [
+            "bent back",
+            "hunchback",
+            "stoop"
+          ],
+          "parts_of_speech": [
+            "Noun",
+            "Noun which may take the genitive case particle 'no'",
+            "Na-adjective (keiyodoshi)"
+          ],
+          "links": [],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        },
+        {
+          "english_definitions": [
+            "Kyphosis"
+          ],
+          "parts_of_speech": [
+            "Wikipedia definition"
+          ],
+          "links": [
+            {
+              "text": "Read “Kyphosis” on English Wikipedia",
+              "url": "http://en.wikipedia.org/wiki/Kyphosis?oldid=493910831"
+            },
+            {
+              "text": "Read “猫背” on Japanese Wikipedia",
+              "url": "http://ja.wikipedia.org/wiki/猫背?oldid=42048286"
+            }
+          ],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [],
+          "source": [],
+          "info": [],
+          "sentences": []
+        }
+      ],
+      "attribution": {
+        "jmdict": true,
+        "jmnedict": false,
+        "dbpedia": "http://dbpedia.org/resource/Kyphosis"
+      }
+    },
+    {
+      "slug": "寝転ぶ",
+      "is_common": true,
+      "tags": [],
+      "jlpt": [],
+      "japanese": [
+        {
+          "word": "寝転ぶ",
+          "reading": "ねころぶ"
+        },
+        {
+          "word": "寝ころぶ",
+          "reading": "ねころぶ"
+        }
+      ],
+      "senses": [
+        {
+          "english_definitions": [
+            "to lie down",
+            "to throw oneself down"
+          ],
+          "parts_of_speech": [
+            "Godan verb with 'bu' ending",
+            "Intransitive verb"
+          ],
+          "links": [],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [
+            "寝転がる ねころがる"
+          ],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        }
+      ],
+      "attribution": {
+        "jmdict": true,
+        "jmnedict": false,
+        "dbpedia": false
+      }
+    }
+  ]
+}

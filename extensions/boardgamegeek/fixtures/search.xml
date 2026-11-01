@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items total="4" termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+  <item type="boardgame" id="13">
+    <name type="primary" value="CATAN" />
+    <yearpublished value="1995" />
+  </item>
+  <item type="boardgameexpansion" id="325">
+    <name type="primary" value="CATAN: Seafarers" />
+    <yearpublished value="1997" />
+  </item>
+  <item type="boardgame" id="278">
+    <name type="alternate" value="Catan Card Game" />
+    <yearpublished value="1996" />
+  </item>
+  <item type="boardgameexpansion" id="13">
+    <name type="primary" value="CATAN" />
+    <yearpublished value="1995" />
+  </item>
+</items>

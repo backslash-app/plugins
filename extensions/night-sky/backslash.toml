@@ -1,0 +1,95 @@
+[extension]
+id = "night-sky"
+title = "Night Sky"
+description = "The planets you can see tonight with where and when to look, the next meteor showers with the Moon's glare, and the eclipses up to 2030 as seen from your place"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-star"
+license = "MIT"
+categories = ["everyday"]
+
+# Everything is computed on your computer; Open-Meteo only turns a city name
+# into coordinates and a time zone, once per city.
+[permissions]
+net = ["geocoding-api.open-meteo.com"]
+
+[[commands]]
+name = "planets"
+title = "Planets Tonight"
+description = "Which planets you can see tonight, when and where; type a city or a day: Tokyo, tomorrow, 2026-12-21"
+icon = "bs-star"
+keywords = [
+  "planets",
+  "night sky",
+  "stargazing",
+  "astronomy",
+  "mercury",
+  "venus",
+  "mars",
+  "jupiter",
+  "saturn",
+  "uranus",
+  "neptune",
+  "visible",
+  "tonight",
+  "planètes",
+  "ciel",
+  "astronomie",
+  "observer",
+  "ce soir",
+  "mercure",
+  "vénus",
+  "saturne",
+]
+
+[[commands]]
+name = "meteor-showers"
+title = "Meteor Showers"
+description = "The next meteor showers, their peak night and how many meteors to expect from your place with the Moon"
+icon = "bs-sparkle"
+keywords = [
+  "meteor shower",
+  "shooting stars",
+  "perseids",
+  "geminids",
+  "leonids",
+  "quadrantids",
+  "orionids",
+  "lyrids",
+  "étoiles filantes",
+  "pluie de météores",
+  "perséides",
+  "géminides",
+  "léonides",
+]
+
+[[commands]]
+name = "eclipses"
+title = "Eclipses"
+description = "Solar and lunar eclipses up to 2030: where they are seen, and how they look from your place"
+icon = "bs-sun"
+keywords = [
+  "eclipse",
+  "solar eclipse",
+  "lunar eclipse",
+  "total eclipse",
+  "annular",
+  "blood moon",
+  "éclipse",
+  "éclipse solaire",
+  "éclipse lunaire",
+  "éclipse totale",
+  "lune de sang",
+]
+
+[[preferences]]
+name = "location"
+title = "Your place"
+description = "A city (\"Paris\", \"Lyon, France\") or coordinates (\"48.85, 2.35\")"
+
+[[preferences]]
+name = "hour12"
+title = "12-hour clock"
+description = "Show 9:30 PM instead of 21:30"
+type = "boolean"
+default = false

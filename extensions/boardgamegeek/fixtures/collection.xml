@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<items totalitems="3" termsofuse="https://boardgamegeek.com/xmlapi/termsofuse"
+  pubdate="Sun, 01 Nov 2026 17:00:00 +0000">
+  <item objecttype="thing" objectid="230802" subtype="boardgame" collid="90001">
+    <name sortindex="1">Azul</name>
+    <yearpublished>2017</yearpublished>
+    <image>https://cf.geekdo-images.com/azul.jpg</image>
+    <thumbnail>https://cf.geekdo-images.com/azul_thumb.jpg</thumbnail>
+    <stats minplayers="2" maxplayers="4" minplaytime="30" maxplaytime="45" playingtime="45" numowned="120000">
+      <rating value="9">
+        <usersrated value="110000" />
+        <average value="7.7" />
+        <bayesaverage value="7.6" />
+        <stddev value="1.2" />
+        <median value="0" />
+        <ranks>
+          <rank type="subtype" id="1" name="boardgame" friendlyname="Board Game Rank" value="77" bayesaverage="7.6" />
+          <rank type="family" id="5499" name="familygames" friendlyname="Family Game Rank" value="5"
+            bayesaverage="7.6" />
+        </ranks>
+      </rating>
+    </stats>
+    <status own="1" prevowned="0" fortrade="0" want="0" wanttoplay="0" wanttobuy="0" wishlist="0" preordered="0"
+      lastmodified="2024-03-02 10:11:12" />
+    <numplays>14</numplays>
+    <comment>Family favorite &amp; quick to teach</comment>
+  </item>
+  <item objecttype="thing" objectid="13" subtype="boardgame" collid="90002">
+    <name sortindex="1">CATAN</name>
+    <yearpublished>1995</yearpublished>
+    <stats minplayers="3" maxplayers="4" minplaytime="60" maxplaytime="120" playingtime="120" numowned="234512">
+      <rating value="N/A">
+        <usersrated value="125431" />
+        <average value="7.09451" />
+        <bayesaverage value="6.89" />
+        <ranks>
+          <rank type="subtype" id="1" name="boardgame" friendlyname="Board Game Rank" value="567" bayesaverage="6.89" />
+        </ranks>
+      </rating>
+    </stats>
+    <status own="1" prevowned="0" fortrade="1" want="0" wanttoplay="0" wanttobuy="0" wishlist="0" preordered="0"
+      lastmodified="2020-01-01 09:00:00" />
+    <numplays>0</numplays>
+  </item>
+  <item objecttype="thing" objectid="325" subtype="boardgameexpansion" collid="90003">
+    <name sortindex="1">CATAN: Seafarers</name>
+    <stats minplayers="3" maxplayers="4" minplaytime="90" maxplaytime="90" playingtime="90" numowned="40000">
+      <rating value="7.5">
+        <average value="7.25" />
+        <ranks>
+          <rank type="subtype" id="41" name="boardgameexpansion" friendlyname="Expansion Rank" value="Not Ranked" />
+        </ranks>
+      </rating>
+    </stats>
+    <status own="0" prevowned="0" fortrade="0" want="0" wanttoplay="1" wanttobuy="0" wishlist="1" wishlistpriority="2"
+      preordered="0" lastmodified="2025-06-01 12:00:00" />
+    <numplays>1</numplays>
+  </item>
+</items>

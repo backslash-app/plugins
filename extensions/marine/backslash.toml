@@ -1,0 +1,58 @@
+[extension]
+id = "marine"
+title = "Marine & Surf"
+description = "Waves, swell, wind, sea temperature and currents for your beaches and any coast, now and for 7 days, with a rough surf rating and the best hours, from Open-Meteo"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-droplet"
+license = "MIT"
+categories = ["everyday"]
+
+# Open-Meteo is free and needs no API key: places, the marine model, and wind from the forecast.
+[permissions]
+net = ["geocoding-api.open-meteo.com", "marine-api.open-meteo.com", "api.open-meteo.com"]
+
+[[commands]]
+name = "marine"
+title = "Marine & Surf"
+description = "Waves, swell and wind at your spots; type a beach, a town or coordinates to look one up"
+icon = "bs-droplet"
+keywords = [
+  "surf",
+  "surf forecast",
+  "waves",
+  "swell",
+  "marine",
+  "sea",
+  "ocean",
+  "sea temperature",
+  "water temperature",
+  "tide",
+  "sailing",
+  "kitesurf",
+  "houle",
+  "vagues",
+  "prévisions surf",
+  "mer",
+  "météo marine",
+  "température de l'eau",
+  "marée",
+  "voile",
+]
+
+[[preferences]]
+name = "spot"
+title = "Default spot"
+description = "Shown when you open the command: a beach or town (\"Hossegor\") or \"latitude, longitude\""
+
+[[preferences]]
+name = "units"
+title = "Units"
+description = "\"metric\" (m, °C) or \"imperial\" (ft, °F)"
+default = "metric"
+
+[[preferences]]
+name = "windUnit"
+title = "Wind speed"
+description = "\"kmh\", \"knots\", \"mph\" or \"ms\" (m/s)"
+default = "kmh"

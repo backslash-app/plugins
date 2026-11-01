@@ -1,0 +1,82 @@
+[
+  {
+    "word": "paradigm",
+    "score": 77057,
+    "numSyllables": 3,
+    "tags": [
+      "n",
+      "f:9.257384"
+    ]
+  },
+  {
+    "word": "sublime",
+    "score": 47048,
+    "numSyllables": 2,
+    "tags": [
+      "adj",
+      "n",
+      "v",
+      "f:3.927618"
+    ]
+  },
+  {
+    "word": "prime",
+    "score": 31061,
+    "numSyllables": 1,
+    "tags": [
+      "adj",
+      "n",
+      "v",
+      "prop",
+      "f:30.302422"
+    ]
+  },
+  {
+    "word": "chime",
+    "score": 20039,
+    "numSyllables": 1,
+    "tags": [
+      "n",
+      "v",
+      "f:0.431766"
+    ]
+  },
+  {
+    "word": "pantomime",
+    "score": 15035,
+    "numSyllables": 3,
+    "tags": [
+      "n",
+      "v",
+      "f:0.910815"
+    ]
+  },
+  {
+    "word": "maritime",
+    "score": 10041,
+    "numSyllables": 3,
+    "tags": [
+      "adj",
+      "f:6.208496"
+    ]
+  },
+  {
+    "word": "stime",
+    "score": 9012,
+    "numSyllables": 1,
+    "tags": [
+      "n",
+      "f:0.008665"
+    ]
+  },
+  {
+    "word": "slime",
+    "score": 7043,
+    "numSyllables": 1,
+    "tags": [
+      "n",
+      "v",
+      "f:1.013830"
+    ]
+  }
+]

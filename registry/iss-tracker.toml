@@ -1,0 +1,13 @@
+id = "iss-tracker"
+title = "ISS Tracker"
+description = "Where the International Space Station is now, over which country or ocean, and its next passes you can see from your place, computed from its orbit"
+author = "Backslash"
+icon = "bs-rocket"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/iss-tracker"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:b5c9a90422e0da3922e6c0d5b292dc1099d74bfb67a46141529dce7941c55049"
+permissions = ["Access celestrak.org", "Access geocoding-api.open-meteo.com"]
+commands = ["Where Is the ISS", "ISS Passes"]
+categories = ["everyday"]

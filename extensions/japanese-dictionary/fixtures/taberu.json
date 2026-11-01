@@ -1,0 +1,107 @@
+{
+  "meta": {
+    "status": 200
+  },
+  "data": [
+    {
+      "slug": "食べる",
+      "is_common": true,
+      "tags": [
+        "wanikani6"
+      ],
+      "jlpt": [
+        "jlpt-n5"
+      ],
+      "japanese": [
+        {
+          "word": "食べる",
+          "reading": "たべる"
+        }
+      ],
+      "senses": [
+        {
+          "english_definitions": [
+            "to eat"
+          ],
+          "parts_of_speech": [
+            "Ichidan verb",
+            "Transitive verb"
+          ],
+          "links": [],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        },
+        {
+          "english_definitions": [
+            "to live on (e.g. a salary)",
+            "to live off",
+            "to subsist on"
+          ],
+          "parts_of_speech": [
+            "Ichidan verb",
+            "Transitive verb"
+          ],
+          "links": [],
+          "tags": [],
+          "restrictions": [],
+          "see_also": [],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        }
+      ],
+      "attribution": {
+        "jmdict": true,
+        "jmnedict": false,
+        "dbpedia": false
+      }
+    },
+    {
+      "slug": "食べるラー油",
+      "is_common": false,
+      "tags": [],
+      "jlpt": [],
+      "japanese": [
+        {
+          "word": "食べるラー油",
+          "reading": "たべるラーゆ"
+        },
+        {
+          "word": "食べる辣油",
+          "reading": "たべるラーゆ"
+        }
+      ],
+      "senses": [
+        {
+          "english_definitions": [
+            "chili oil mixed with chopped garlic, onions, etc."
+          ],
+          "parts_of_speech": [
+            "Expressions (phrases, clauses, etc.)",
+            "Noun"
+          ],
+          "links": [],
+          "tags": [
+            "Food, cooking"
+          ],
+          "restrictions": [],
+          "see_also": [
+            "辣油"
+          ],
+          "antonyms": [],
+          "source": [],
+          "info": []
+        }
+      ],
+      "attribution": {
+        "jmdict": true,
+        "jmnedict": false,
+        "dbpedia": false
+      }
+    }
+  ]
+}
