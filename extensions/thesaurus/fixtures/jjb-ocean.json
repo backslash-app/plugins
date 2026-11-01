@@ -1,0 +1,46 @@
+[
+  {
+    "word": "open",
+    "score": 1001,
+    "numSyllables": 2,
+    "tags": [
+      "adj",
+      "v",
+      "n",
+      "f:155.987617"
+    ]
+  },
+  {
+    "word": "great",
+    "score": 1000,
+    "numSyllables": 1,
+    "tags": [
+      "adj",
+      "n",
+      "adv",
+      "f:348.157270"
+    ]
+  },
+  {
+    "word": "vast",
+    "score": 999,
+    "numSyllables": 1,
+    "tags": [
+      "adj",
+      "n",
+      "f:27.623749"
+    ]
+  },
+  {
+    "word": "deep",
+    "score": 998,
+    "numSyllables": 1,
+    "tags": [
+      "adj",
+      "adv",
+      "n",
+      "v",
+      "f:78.042093"
+    ]
+  }
+]

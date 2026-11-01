@@ -1,0 +1,86 @@
+[
+  {
+    "word": "sad",
+    "score": 32055,
+    "numSyllables": 1,
+    "tags": [
+      "adj",
+      "v",
+      "n",
+      "f:16.697201"
+    ],
+    "defs": [
+      "adj\tFeeling sorrow; sorrowful, mournful. ",
+      "adj\tAppearing sorrowful. ",
+      "adj\t(heading) Emotionally negative. ",
+      "adj\tCausing sorrow; lamentable. ",
+      "adj\tPoor in quality, bad; shameful, deplorable; later, regrettable, poor. ",
+      "adj\t(slang) Unfashionable; socially inadequate or undesirable. ",
+      "adj\tOf colours: dark, deep; later, sombre, dull. ",
+      "adj\t(obsolete) Heavy; weighty; ponderous; close; hard. ",
+      "adj\t(obsolete) Dignified, serious, grave. ",
+      "adj\t(obsolete) Naughty; troublesome; wicked. ",
+      "adj\t(obsolete) Sated, having had one's fill; satisfied, weary. ",
+      "adj\t(obsolete) Steadfast, valiant. ",
+      "v\t(transitive, archaic) To make melancholy; to sadden or grieve (someone). ",
+      "adj\t(dialect) Soggy (to refer to pastries). ",
+      "n\tAlternative form of saad (\u201cArabic letter\u201d). [The letter \u0635 in the Arabic script.] ",
+      "n\t(medicine) Initialism of seasonal affective disorder. [(psychology) A form of depression associated with the lack of natural light during the winter months.] ",
+      "n\t(psychology) Initialism of social anxiety disorder. [(clinical psychology, psychiatry) An anxiety disorder, characterized by intense fear in one or more social situations, causing considerable distress and impaired ability to function in at least some parts of daily life.] ",
+      "n\tInitialism of standard American diet. ",
+      "n\t(US) Initialism of Special Activities Division. ",
+      "n\t(Indian politics) Initialism of Shiromani Akali Dal (Indian political party) ",
+      "n\t(X-ray crystallography) Initialism of single-wavelength anomalous dispersion. "
+    ]
+  },
+  {
+    "word": "distressed",
+    "score": 29032,
+    "numSyllables": 2,
+    "tags": [
+      "adj",
+      "f:3.342835"
+    ],
+    "defs": [
+      "adj\tAnxious or uneasy. ",
+      "adj\t(of merchandise, etc.) Damaged. ",
+      "adj\t(finance, of securities) Experiencing financial or operational distress, default, or bankruptcy. ",
+      "adj\t(of furniture, etc.) Faded or abused in order to appear old, or antique. ",
+      "adj\t(of a property) Offered for sale after foreclosure. "
+    ]
+  },
+  {
+    "word": "unhappy",
+    "score": 12036,
+    "numSyllables": 3,
+    "tags": [
+      "adj",
+      "n",
+      "v",
+      "f:9.383148"
+    ],
+    "defs": [
+      "adj\tNot happy; sad. ",
+      "adj\tNot satisfied; unsatisfied. ",
+      "n\tA person who is not happy. ",
+      "adj\t(chiefly dated) Not lucky; unlucky. ",
+      "adj\t(chiefly dated) Not suitable; unsuitable. ",
+      "v\tTo make or become unhappy; to sadden. "
+    ]
+  },
+  {
+    "word": "dysphoric",
+    "score": 5018,
+    "numSyllables": 3,
+    "tags": [
+      "n",
+      "adj",
+      "f:0.166486"
+    ],
+    "defs": [
+      "adj\tPertaining to dysphoria, or of being in a state of dysphoria. ",
+      "adj\tCausing dysphoria. ",
+      "n\tA person who is experiencing dysphoria. "
+    ]
+  }
+]
