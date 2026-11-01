@@ -1,0 +1,93 @@
+[extension]
+id = "lichess"
+title = "Lichess"
+description = "Your Lichess ratings and their progress, recent games with openings and accuracy, games waiting for your move, any player's profile and the daily puzzle on a board"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-gamepad"
+license = "MIT"
+categories = ["media"]
+
+# Everything goes through the Lichess API. Profiles and the daily puzzle need
+# no token; Lichess only exports games (recent games, games waiting for your
+# move) to requests signed with a personal token.
+[permissions]
+net = ["lichess.org"]
+
+[[commands]]
+name = "games"
+title = "My Lichess Games"
+description = "Games waiting for your move, then your recent games with result, opponent, opening and accuracy"
+icon = "bs-gamepad"
+keywords = [
+  "lichess",
+  "chess",
+  "games",
+  "my turn",
+  "correspondence",
+  "opening",
+  "accuracy",
+  "pgn",
+  "échecs",
+  "parties",
+  "mes parties",
+  "à mon tour",
+  "ouverture",
+]
+
+[[commands]]
+name = "players"
+title = "Lichess Players"
+description = "Your ratings per time control with their progress, or any player's: type a username"
+icon = "bs-user"
+keywords = [
+  "lichess",
+  "chess",
+  "rating",
+  "elo",
+  "profile",
+  "player",
+  "bullet",
+  "blitz",
+  "rapid",
+  "classical",
+  "échecs",
+  "classement",
+  "joueur",
+  "profil",
+]
+
+[[commands]]
+name = "puzzle"
+title = "Lichess Daily Puzzle"
+description = "Today's puzzle on a board, its themes and rating, and the solution when you want it"
+icon = "bs-lightbulb"
+keywords = [
+  "lichess",
+  "chess",
+  "puzzle",
+  "tactic",
+  "daily",
+  "échecs",
+  "problème",
+  "puzzle du jour",
+  "tactique",
+]
+
+[[preferences]]
+name = "username"
+title = "Username"
+description = "Your Lichess username, for your games and ratings"
+
+[[preferences]]
+name = "token"
+title = "API token"
+description = "Needed for recent games and the games waiting for your move: create one with no scope at lichess.org/account/oauth/token/create"
+type = "secret"
+
+[[preferences]]
+name = "count"
+title = "Recent games"
+description = "How many recent games to show (up to 100)"
+type = "number"
+default = 20

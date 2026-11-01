@@ -1,0 +1,13 @@
+id = "periodic-table"
+title = "Periodic Table"
+description = "The 118 elements with their mass, electron configuration, electronegativity, melting and boiling points, and a molar mass calculator"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/periodic-table"
+commit = "edb93654b00eb6cf6d0aa174ae6be383be9e8345"
+checksum = "sha256:fcaa862210aa67b9093c32facd2c92654e95b6cb417d26cea018731b276203c3"
+permissions = []
+commands = ["Periodic Table", "Molar Mass Calculator"]
+categories = ["everyday"]

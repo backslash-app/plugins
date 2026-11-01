@@ -1,0 +1,63 @@
+[extension]
+id = "sun-moon"
+title = "Sun & Moon"
+description = "Sunrise, sunset, golden and blue hours, twilights and day length, the Sun's position, and the Moon's phase, rise and set times, for any place and date"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-sun"
+license = "MIT"
+categories = ["everyday"]
+
+# Everything is computed on your computer; Open-Meteo only turns a city name
+# into coordinates and a time zone, once per city.
+[permissions]
+net = ["geocoding-api.open-meteo.com"]
+
+[[commands]]
+name = "sun-moon"
+title = "Sun & Moon"
+description = "Today at your place; type a city, a date or both: Tokyo tomorrow, 2026-12-21, 48.85, 2.35"
+icon = "bs-sun"
+keywords = [
+  "sun",
+  "moon",
+  "sunrise",
+  "sunset",
+  "golden hour",
+  "blue hour",
+  "twilight",
+  "dawn",
+  "dusk",
+  "day length",
+  "daylight",
+  "moon phase",
+  "full moon",
+  "new moon",
+  "moonrise",
+  "moonset",
+  "solar noon",
+  "soleil",
+  "lune",
+  "lever du soleil",
+  "coucher du soleil",
+  "heure dorée",
+  "heure bleue",
+  "crépuscule",
+  "aube",
+  "durée du jour",
+  "phase de la lune",
+  "pleine lune",
+  "nouvelle lune",
+]
+
+[[preferences]]
+name = "location"
+title = "Your place"
+description = "A city (\"Paris\", \"Lyon, France\") or coordinates (\"48.85, 2.35\"), shown when you open the command"
+
+[[preferences]]
+name = "hour12"
+title = "12-hour clock"
+description = "Show 5:30 PM instead of 17:30"
+type = "boolean"
+default = false

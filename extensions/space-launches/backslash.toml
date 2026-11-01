@@ -1,0 +1,84 @@
+[extension]
+id = "space-launches"
+title = "Space Launches"
+description = "Upcoming and recent rocket launches with a T-minus countdown, status, rocket, mission, orbit, pad and webcasts, and spaceflight events like dockings and spacewalks, from Launch Library 2"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-rocket"
+license = "MIT"
+categories = ["everyday"]
+
+# The Space Devs' Launch Library 2: free, no key needed (about 15 requests an
+# hour, answers are cached 30 minutes). Same list as HOSTS in api.ts.
+[permissions]
+net = ["ll.thespacedevs.com"]
+
+[[commands]]
+name = "launches"
+title = "Space Launches"
+description = "Upcoming launches with their countdown and status, and recent ones with their outcome"
+icon = "bs-rocket"
+keywords = [
+  "launch",
+  "launches",
+  "rocket",
+  "space",
+  "spacex",
+  "falcon",
+  "starship",
+  "rocket lab",
+  "electron",
+  "ariane",
+  "arianespace",
+  "isro",
+  "cnsa",
+  "nasa",
+  "esa",
+  "ula",
+  "blue origin",
+  "countdown",
+  "webcast",
+  "lancement",
+  "lancements",
+  "fusée",
+  "fusées",
+  "espace",
+  "décollage",
+  "compte à rebours",
+]
+
+[[commands]]
+name = "events"
+title = "Spaceflight Events"
+description = "Upcoming dockings, spacewalks, landings, flybys and tests, with their webcasts"
+icon = "bs-sparkle"
+keywords = [
+  "spaceflight",
+  "events",
+  "docking",
+  "spacewalk",
+  "eva",
+  "iss",
+  "space station",
+  "landing",
+  "splashdown",
+  "flyby",
+  "événements spatiaux",
+  "amarrage",
+  "sortie extravéhiculaire",
+  "station spatiale",
+  "atterrissage",
+  "amerrissage",
+  "survol",
+]
+
+[[preferences]]
+name = "providers"
+title = "Launch providers"
+description = "Only show launches by these providers, separated by commas, e.g. \"SpaceX, Rocket Lab, ISRO, Arianespace, CNSA\". Empty: every provider"
+
+[[preferences]]
+name = "apiKey"
+title = "Launch Library API key"
+description = "Optional: a Patreon key from thespacedevs.com for a higher request limit"
+type = "secret"

@@ -1,0 +1,13 @@
+id = "sun-moon"
+title = "Sun & Moon"
+description = "Sunrise, sunset, golden and blue hours, twilights and day length, the Sun's position, and the Moon's phase, rise and set times, for any place and date"
+author = "Backslash"
+icon = "bs-sun"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/sun-moon"
+commit = "edb93654b00eb6cf6d0aa174ae6be383be9e8345"
+checksum = "sha256:849bd89d9391c40f4ad576dfd98bd88a70c1a7f073a9ad05186f3bc3d8cab47e"
+permissions = ["Access geocoding-api.open-meteo.com"]
+commands = ["Sun & Moon"]
+categories = ["everyday"]

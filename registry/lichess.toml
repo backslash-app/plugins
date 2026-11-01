@@ -1,0 +1,13 @@
+id = "lichess"
+title = "Lichess"
+description = "Your Lichess ratings and their progress, recent games with openings and accuracy, games waiting for your move, any player's profile and the daily puzzle on a board"
+author = "Backslash"
+icon = "bs-gamepad"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/lichess"
+commit = "edb93654b00eb6cf6d0aa174ae6be383be9e8345"
+checksum = "sha256:7823dd571f38b874b2c69310f633b6e7f05012c1f29539366cd7f612f0fe46d9"
+permissions = ["Access lichess.org"]
+commands = ["My Lichess Games", "Lichess Players", "Lichess Daily Puzzle"]
+categories = ["media"]

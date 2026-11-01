@@ -1,0 +1,151 @@
+{
+  "count": 26,
+  "next": "https://ll.thespacedevs.com/2.3.0/events/upcoming/?limit=3&offset=3",
+  "previous": null,
+  "results": [
+    {
+      "id": 1567,
+      "url": "https://ll.thespacedevs.com/2.3.0/events/1567/",
+      "name": "US EVA-101",
+      "info_urls": [
+        {
+          "priority": 10,
+          "source": "nasa.gov",
+          "title": "to Host News Conference Previewing US Spacewalks 100, 101",
+          "description": "NASA will preview two upcoming spacewalks to complete solar array installation and power augmentation of the International Space Station during a news",
+          "url": "https://www.nasa.gov/news-release/nasa-to-host-news-conference-previewing-us-spacewalks-100-101/",
+          "type": {
+            "id": 1,
+            "name": "Official Page"
+          },
+          "language": {
+            "id": 1,
+            "name": "English",
+            "code": "en"
+          }
+        }
+      ],
+      "vid_urls": [
+        {
+          "priority": 11,
+          "source": "plus.nasa.gov",
+          "publisher": "NASA",
+          "title": "U.S. Spacewalk 101",
+          "description": "Coverage of U.S. Spacewalk 101.",
+          "url": "https://plus.nasa.gov/scheduled-video/u-s-spacewalk-101/",
+          "type": {
+            "id": 1,
+            "name": "Official Webcast"
+          },
+          "language": {
+            "id": 1,
+            "name": "English",
+            "code": "en"
+          },
+          "start_time": "2026-11-05T11:45:00Z",
+          "end_time": "2026-11-06T02:00:00Z",
+          "live": false
+        }
+      ],
+      "date": "2026-11-05T12:00:00Z",
+      "slug": "us-eva-101",
+      "type": {
+        "id": 3,
+        "name": "EVA"
+      },
+      "description": "NASA astronaut Anil Menon and CSA astronaut Joshua Kutryk will install and deploy the eighth and final IROSA on the 3B channel of the space station, completing the power augmentation upgrades.\r\n\r\nThe final two roll-out solar arrays will complete the space station’s power system augmentation. Together, the eight roll-out arrays will increase available power by up to 30%, boosting the station’s electric power generation capacity from 160 kilowatts to approximately 215 kilowatts.",
+      "webcast_live": false,
+      "location": "International Space Station",
+      "date_precision": {
+        "id": 5,
+        "name": "Day",
+        "abbrev": "DAY",
+        "description": "The T-0 is expected on the given day."
+      },
+      "response_mode": "normal",
+      "duration": null,
+      "last_updated": "2026-10-21T18:57:10Z",
+      "spacestations": []
+    },
+    {
+      "id": 394,
+      "url": "https://ll.thespacedevs.com/2.3.0/events/394/",
+      "name": "BepiColombo Mercury Orbit Insertion",
+      "info_urls": [
+        {
+          "priority": 10,
+          "source": "sci.esa.int",
+          "title": "ESA Science & Technology - Fact Sheet",
+          "description": "Fact Sheet \n \n \n \n \n \n   \n \n \n \n \n \n \n \n \n \n \n \n  &nbsp;Fast Facts  \n \n \n  BepiColombo  \n \n \n \n \n \n \n \n \n \n \n \n   Launch date:   \n 20 October 2018, 01:45:28 UTC \n \n \n   Mission end:   \n...",
+          "url": "https://sci.esa.int/web/bepicolombo/-/47346-fact-sheet",
+          "type": null,
+          "language": {
+            "id": 1,
+            "name": "English",
+            "code": "en"
+          }
+        }
+      ],
+      "vid_urls": [],
+      "date": "2026-11-30T00:00:00Z",
+      "slug": "bepicolombo-mercury-orbit-insertion",
+      "type": {
+        "id": 16,
+        "name": "Orbital Insertion"
+      },
+      "description": "Orbital insertion around Mercury of the ESA-JAXA BepiColombo mission.",
+      "webcast_live": false,
+      "location": "Mercury",
+      "date_precision": {
+        "id": 7,
+        "name": "Month",
+        "abbrev": "M",
+        "description": "The T-0 is expected in the given month."
+      },
+      "response_mode": "normal",
+      "duration": null,
+      "last_updated": "2024-09-02T13:23:51Z",
+      "spacestations": []
+    },
+    {
+      "id": 384,
+      "url": "https://ll.thespacedevs.com/2.3.0/events/384/",
+      "name": "Solar Orbiter Venus Flyby",
+      "info_urls": [
+        {
+          "priority": 10,
+          "source": "www.esa.int",
+          "title": "Solar Orbiter: journey around the Sun",
+          "description": "Solar Orbiter: journey around the Sun",
+          "url": "https://www.esa.int/ESA_Multimedia/Images/2020/01/Solar_Orbiter_journey_around_the_Sun",
+          "type": null,
+          "language": {
+            "id": 1,
+            "name": "English",
+            "code": "en"
+          }
+        }
+      ],
+      "vid_urls": [],
+      "date": "2026-12-24T00:00:00Z",
+      "slug": "solar-orbiter-venus-flyby-5",
+      "type": {
+        "id": 23,
+        "name": "Flyby"
+      },
+      "description": "Solar Orbiter, a partnership between ESA and NASA, will perform a gravity assist maneuver with Venus on December 24, 2026. Throughout its mission it also makes repeated gravity assist flybys of Venus to get closer to the Sun, and to change its orbital inclination, boosting it out of the ecliptic plane, to get the best – and first – views of the Sun’s poles.",
+      "webcast_live": false,
+      "location": "Venus",
+      "date_precision": {
+        "id": 5,
+        "name": "Day",
+        "abbrev": "DAY",
+        "description": "The T-0 is expected on the given day."
+      },
+      "response_mode": "normal",
+      "duration": null,
+      "last_updated": "2025-09-10T15:01:43Z",
+      "spacestations": []
+    }
+  ]
+}

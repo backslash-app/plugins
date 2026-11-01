@@ -1,0 +1,21 @@
+{
+  "game": {
+    "id": "Qg5Kd8Xa",
+    "perf": { "key": "blitz", "name": "Blitz" },
+    "rated": true,
+    "players": [
+      { "name": "Alice", "id": "alice", "color": "white", "rating": 1712 },
+      { "name": "Bob", "id": "bob", "color": "black", "rating": 1690, "title": "FM" }
+    ],
+    "pgn": "e4 e5 Bc4 Nc6 Qh5 Nf6",
+    "clock": "3+0"
+  },
+  "puzzle": {
+    "id": "K69di",
+    "rating": 1050,
+    "plays": 123456,
+    "solution": ["h5f7"],
+    "themes": ["mateIn1", "opening", "short", "kingsideAttack"],
+    "initialPly": 5
+  }
+}
