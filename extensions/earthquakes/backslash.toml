@@ -1,0 +1,76 @@
+[extension]
+id = "earthquakes"
+title = "Earthquakes"
+description = "Recent earthquakes worldwide and near you from the USGS, with magnitude, depth, distance, tsunami flag, PAGER alert and felt reports"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-activity"
+license = "MIT"
+categories = ["everyday"]
+
+# The USGS feeds are free and need no key. Open-Meteo only turns your city into coordinates.
+[permissions]
+net = ["earthquake.usgs.gov", "geocoding-api.open-meteo.com"]
+
+[[commands]]
+name = "earthquakes"
+title = "Recent Earthquakes"
+description = "Significant, M4.5+ and M2.5+ earthquakes worldwide, newest first, with the distance from you"
+icon = "bs-activity"
+keywords = [
+  "earthquake",
+  "earthquakes",
+  "quake",
+  "seismic",
+  "usgs",
+  "magnitude",
+  "richter",
+  "tsunami",
+  "séisme",
+  "séismes",
+  "tremblement de terre",
+  "sismique",
+]
+
+[[commands]]
+name = "nearby"
+title = "Earthquakes Near Me"
+description = "Every earthquake around your location in the past day, week or month, newest first, with how far away it was"
+icon = "bs-pin"
+keywords = [
+  "earthquake near me",
+  "local earthquakes",
+  "quake",
+  "seismic",
+  "usgs",
+  "felt",
+  "séisme près de chez moi",
+  "séismes proches",
+  "tremblement de terre",
+  "secousse",
+]
+
+[[preferences]]
+name = "location"
+title = "Location"
+description = "Your city (e.g. \"Nice\" or \"San Francisco, US\") or \"latitude, longitude\" (e.g. 43.70, 7.27): shows distances and enables Earthquakes Near Me"
+
+[[preferences]]
+name = "radius"
+title = "Radius (km)"
+description = "How far from your location Earthquakes Near Me looks"
+type = "number"
+default = 300
+
+[[preferences]]
+name = "minMagnitude"
+title = "Minimum magnitude near you"
+description = "Smaller earthquakes are left out of Earthquakes Near Me, e.g. 1.5 or 2.5"
+type = "number"
+default = 1.5
+
+[[preferences]]
+name = "units"
+title = "Units"
+description = "\"metric\" (km) or \"imperial\" (miles)"
+default = "metric"
