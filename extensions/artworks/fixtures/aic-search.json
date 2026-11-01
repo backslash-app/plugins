@@ -1,0 +1,88 @@
+{
+  "preference": null,
+  "pagination": {
+    "total": 133169,
+    "limit": 3,
+    "offset": 0,
+    "total_pages": 44390,
+    "current_page": 1
+  },
+  "data": [
+    {
+      "_score": 57.85884,
+      "id": 18421,
+      "title": "State Birds and Flowers Quilt",
+      "thumbnail": {
+        "width": 4867,
+        "height": 6075,
+        "alt_text": "A work made of appliquéd and embroidered quilt; dyed and undyed cotton plain weave fabrics; cotton embroidery threads; graphite pencil pattern outlines."
+      },
+      "date_display": "c. 1950",
+      "artist_display": "Jeannette Dean Throckmorton (American, 1883–1963)\nDes Moines, Iowa, United States",
+      "place_of_origin": "Iowa",
+      "description": "<p>This quilt was first exhibited at the Art Institute in 1965, along with four other quilts made by Dr. Jeannette Throckmorton. Throckmorton graduated from medical school in 1907 and received the highest marks of the 140 doctors who took the medical board exam that year. She also diligently applied herself to needlework, meticulously working all of her quilts by hand, even after setbacks: she suffered significant hearing loss and had to discontinue practicing medicine in 1919, and she faced difficulties with her vision in later years.</p>\n",
+      "dimensions": "224.6 × 172.7 cm (88 3/8 × 68 in.)",
+      "medium_display": "Appliquéd and embroidered quilt; dyed and undyed cotton plain weave fabrics; cotton embroidery threads; graphite pencil pattern outlines",
+      "credit_line": "Gift of Dr. Jeannette Dean Throckmorton",
+      "artwork_type_title": "Textile",
+      "department_title": "Textiles",
+      "artist_title": "Dr. Jeannette Dean Throckmorton",
+      "style_title": "20th Century",
+      "classification_title": "textile",
+      "image_id": "21730fc7-2c3f-3bcd-e181-1a7753c0291d",
+      "is_public_domain": false
+    },
+    {
+      "_score": 50.734753,
+      "id": 35720,
+      "title": "Sunflowers",
+      "thumbnail": {
+        "width": 2314,
+        "height": 3000,
+        "alt_text": "A work made of watercolor, with pen and ink, on paper."
+      },
+      "date_display": "August 20, 1895",
+      "artist_display": "Georges Lemmen\nBelgian, 1865-1916",
+      "place_of_origin": "Belgium",
+      "dimensions": "61.5 × 47 cm (24 1/4 × 18 9/16 in.)",
+      "medium_display": "Watercolor, with pen and ink, on paper",
+      "credit_line": "Mary S. Adams Fund",
+      "is_public_domain": true,
+      "artwork_type_title": "Drawing and Watercolor",
+      "department_title": "Prints and Drawings",
+      "artist_title": "Georges Lemmen",
+      "classification_title": "watercolor",
+      "image_id": "461c0069-45a9-c67e-7210-bfb512c3ea58",
+      "style_title": null,
+      "description": null
+    },
+    {
+      "_score": 50.538853,
+      "id": 20029,
+      "title": "Sunflowers, Marché St Germain, Paris",
+      "thumbnail": {
+        "width": 2784,
+        "height": 2250,
+        "alt_text": "A work made of etching with foul biting in black ink on ivory japanese paper."
+      },
+      "date_display": "1888/93",
+      "artist_display": "James McNeill Whistler\nAmerican, 1834-1903",
+      "place_of_origin": "United States",
+      "dimensions": "Image, trimmed within platemark: 22 × 27.8 cm (8 11/16 × 11 in.); Sheet: 22.3 × 27.8 cm (8 13/16 × 11 in.)",
+      "medium_display": "Etching with foul biting in black ink on ivory Japanese paper",
+      "credit_line": "Bryan Lathrop Collection",
+      "is_public_domain": true,
+      "artwork_type_title": "Print",
+      "department_title": "Prints and Drawings",
+      "artist_title": "James McNeill Whistler",
+      "classification_title": "etching",
+      "image_id": "2e9476db-2d28-c197-25d8-9b525d63d5a0",
+      "style_title": null,
+      "description": null
+    }
+  ],
+  "config": {
+    "iiif_url": "https://www.artic.edu/iiif/2",
+    "website_url": "https://www.artic.edu"
+  }
+}
