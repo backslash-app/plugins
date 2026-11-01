@@ -1,0 +1,29 @@
+{
+  "Count": 1,
+  "Message": "Results returned successfully. NOTE: Any missing decoded values should be interpreted as NHTSA does not have data on the specific variable. Missing value should NOT be interpreted as an indication that a feature or technology is unavailable for a vehicle.",
+  "SearchCriteria": "VIN(s): WVWZZZ1KZBW123456",
+  "Results": [
+    {
+      "AdditionalErrorText": "The error positions are indicated by ! in Suggested VIN. In the Possible values section, each pair of parenthesis indicate information about each error position in VIN . The Numeric value before the : indicates the position in error and the values after the : indicate the possible values that are allowed in this position Unused position(s): 4,5,6,7,8. Invalid character(s): 9:Z.",
+      "ErrorCode": "1,5,14,400",
+      "ErrorText": "1 - Check Digit (9th position) does not calculate properly; 5 - VIN has errors in few positions; 14 - Unable to provide information for some of the characters in the VIN, based on the manufacturer submission.; 400 - Invalid Characters Present",
+      "Make": "VOLKSWAGEN",
+      "MakeID": "482",
+      "Manufacturer": "VOLKSWAGEN AG",
+      "ManufacturerId": "1148",
+      "ModelYear": "1981",
+      "PlantCity": "WOLFSBURG",
+      "PlantCountry": "GERMANY",
+      "PossibleValues": "(4:ABCDFG)(5:ABCDGH)(6:09)(8:23567)",
+      "SuggestedVIN": "WVW!!!1!!BW123456",
+      "VIN": "WVWZZZ1KZBW123456",
+      "VehicleDescriptor": "WVWZZZ1K*BW",
+      "VehicleType": "PASSENGER CAR",
+      "DriveType": "",
+      "EngineHP": "",
+      "Series": "",
+      "Trim": "",
+      "BodyClass": ""
+    }
+  ]
+}
