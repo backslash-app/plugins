@@ -1,0 +1,44 @@
+[extension]
+id = "text-statistics"
+title = "Text Statistics"
+description = "Words, characters, sentences, reading and speaking time, readability and frequent words of the text you type or copy, in English or French"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-text"
+license = "MIT"
+categories = ["productivity"]
+
+# Counts the copied text when nothing is typed; the text never leaves the computer.
+[permissions]
+clipboard-read = true
+
+[[commands]]
+name = "text-statistics"
+title = "Text Statistics"
+description = "Type or paste text, or open it with text in the clipboard"
+icon = "bs-text"
+keywords = [
+  "word count",
+  "count words",
+  "character count",
+  "characters",
+  "sentences",
+  "reading time",
+  "speaking time",
+  "readability",
+  "flesch",
+  "kincaid",
+  "word frequency",
+  "compter les mots",
+  "nombre de mots",
+  "nombre de caractères",
+  "temps de lecture",
+  "lisibilité",
+  "statistiques",
+]
+
+[[preferences]]
+name = "language"
+title = "Language"
+description = "\"auto\" to detect English or French, \"en\" or \"fr\" to choose one (readability formula, stop words, reading speed)"
+default = "auto"

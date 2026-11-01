@@ -1,0 +1,13 @@
+id = "text-statistics"
+title = "Text Statistics"
+description = "Words, characters, sentences, reading and speaking time, readability and frequent words of the text you type or copy, in English or French"
+author = "Backslash"
+icon = "bs-text"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/text-statistics"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:2a84cd4e4514b0433a82786d326d66470a967da8339f26e3f2a3b77faa566906"
+permissions = ["Read the clipboard"]
+commands = ["Text Statistics"]
+categories = ["productivity"]

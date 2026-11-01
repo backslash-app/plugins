@@ -1,0 +1,13 @@
+id = "plant-care"
+title = "Plant Care"
+description = "Your houseplants with their watering and fertilizing schedule, what needs water today, a tray reminder and a care guide for 44 common plants"
+author = "Backslash"
+icon = "bs-leaf"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/plant-care"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:c56c61948903d4f897c018fa889fca29ad419f205972dd458d3ff9297cb8b63f"
+permissions = ["Show “Plants to Water” in the system tray, updated every hour"]
+commands = ["Plant Care", "Add Plant", "Houseplant Care Guide", "Plants to Water"]
+categories = ["productivity"]

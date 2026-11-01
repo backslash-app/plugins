@@ -1,0 +1,72 @@
+[extension]
+id = "plant-care"
+title = "Plant Care"
+description = "Your houseplants with their watering and fertilizing schedule, what needs water today, a tray reminder and a care guide for 44 common plants"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-leaf"
+license = "MIT"
+categories = ["productivity"]
+
+# No permission: plants live in the extension's own storage. The tray icon
+# lists the plants that need water and is refreshed every hour.
+
+[[commands]]
+name = "plants"
+title = "Plant Care"
+description = "Your plants, the thirstiest first: water, fertilize, snooze, edit"
+icon = "bs-leaf"
+keywords = [
+  "plant",
+  "plants",
+  "houseplant",
+  "water",
+  "watering",
+  "fertilize",
+  "garden",
+  "reminder",
+  "plante",
+  "plantes",
+  "arroser",
+  "arrosage",
+  "engrais",
+  "jardin",
+  "rappel",
+]
+
+[[commands]]
+name = "add"
+title = "Add Plant"
+description = "A plant with its species, room and watering rhythm"
+icon = "bs-plus"
+keywords = ["plant", "new plant", "add", "houseplant", "ajouter", "nouvelle plante", "plante"]
+
+[[commands]]
+name = "guide"
+title = "Houseplant Care Guide"
+description = "Light, water, humidity and pet safety for 44 common houseplants and herbs"
+icon = "bs-book"
+keywords = [
+  "plant care",
+  "houseplant",
+  "light",
+  "humidity",
+  "toxic",
+  "pet safe",
+  "cats",
+  "dogs",
+  "entretien",
+  "plante d'intérieur",
+  "toxique",
+  "chat",
+  "chien",
+]
+
+[[commands]]
+name = "tray"
+title = "Plants to Water"
+description = "A tray icon with the plants that need water today"
+icon = "bs-droplet"
+mode = "menu-bar"
+interval = "1h"
+keywords = ["plant", "water", "tray", "menu bar", "reminder", "arroser", "barre", "rappel"]

@@ -1,0 +1,54 @@
+[extension]
+id = "thesaurus"
+title = "Thesaurus & Rhymes"
+description = "English synonyms, antonyms, rhymes and near rhymes, words that sound alike, adjectives for a noun and words for a phrase, with syllables and frequency, from Datamuse"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-book"
+license = "MIT"
+categories = ["everyday"]
+
+# Datamuse is free and needs no key. English only.
+[permissions]
+net = ["api.datamuse.com"]
+
+[[commands]]
+name = "thesaurus"
+title = "Thesaurus"
+description = "Synonyms, antonyms and rhymes of a word; prefixes: syn, ant, rhyme, near, sounds, like, adj, noun, assoc, spell"
+icon = "bs-book"
+keywords = [
+  "thesaurus",
+  "synonym",
+  "antonym",
+  "opposite",
+  "word",
+  "similar words",
+  "means like",
+  "datamuse",
+  "writing",
+  "dictionnaire des synonymes",
+  "synonyme",
+  "antonyme",
+  "contraire",
+]
+
+[[commands]]
+name = "rhymes"
+title = "Find Rhymes"
+description = "Rhymes by syllable count, near rhymes and words that sound alike"
+icon = "bs-music"
+keywords = [
+  "rhyme",
+  "rhymes",
+  "near rhyme",
+  "slant rhyme",
+  "poetry",
+  "lyrics",
+  "songwriting",
+  "syllables",
+  "rime",
+  "rimes",
+  "poésie",
+  "paroles",
+]

@@ -1,0 +1,13 @@
+id = "aspect-ratio"
+title = "Aspect Ratio"
+description = "Ratios and megapixels of a size, the missing width or height, crops and letterboxes, fit and fill, screen pixel density, and common resolutions"
+author = "Backslash"
+icon = "bs-monitor"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/aspect-ratio"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:5c3ce2d6c7b9eedd948dd4d40ec8c792064185dec6b0b5adac2f380e99765ce0"
+permissions = []
+commands = ["Aspect Ratio Calculator"]
+categories = ["everyday"]

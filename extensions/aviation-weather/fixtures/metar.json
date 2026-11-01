@@ -1,0 +1,152 @@
+[
+  {
+    "icaoId": "CYYZ",
+    "obsTime": 1793552400,
+    "rawOb": "METAR CYYZ 011700Z VRB04KT 15SM SCT100 BKN260 17/06 A3041 RMK AC4CI1 SLP303",
+    "name": "Toronto/Pearson Intl, ON, CA",
+    "lat": 43.679,
+    "lon": -79.629,
+    "elev": 171,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "EDDF",
+    "obsTime": 1793553600,
+    "rawOb": "METAR EDDF 011720Z AUTO 01008KT 9999 OVC046 09/02 Q1031 NOSIG",
+    "name": "Frankfurt/Main Arpt, HE, DE",
+    "lat": 50.045,
+    "lon": 8.598,
+    "elev": 113,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "EGLL",
+    "obsTime": 1793553600,
+    "rawOb": "METAR EGLL 011720Z AUTO 06005KT 9999 OVC021 10/07 Q1033",
+    "name": "London/Heathrow Intl, EN, GB",
+    "lat": 51.477,
+    "lon": -0.461,
+    "elev": 26,
+    "fltCat": "MVFR"
+  },
+  {
+    "icaoId": "EHAM",
+    "obsTime": 1793553900,
+    "rawOb": "METAR EHAM 011725Z VRB02KT 9999 BKN046 11/08 Q1032 NOSIG",
+    "name": "Amsterdam/Schiphol Arpt, NH, NL",
+    "lat": 52.315,
+    "lon": 4.79,
+    "elev": -2,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "KBOS",
+    "obsTime": 1793552040,
+    "rawOb": "METAR KBOS 011654Z 28006KT 10SM FEW040 FEW250 12/M01 A3047 RMK AO2 SLP317 T01221011 $",
+    "name": "Boston/Logan Intl, MA, US",
+    "lat": 42.3606,
+    "lon": -71.0097,
+    "elev": 4,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "KDEN",
+    "obsTime": 1793551980,
+    "rawOb": "METAR KDEN 011653Z 17009KT 10SM FEW015 SCT080 BKN140 BKN220 13/07 A2995 RMK AO2 SLP105 T01280067",
+    "name": "Denver Intl, CO, US",
+    "lat": 39.8466,
+    "lon": -104.6562,
+    "elev": 1656,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "KJFK",
+    "obsTime": 1793551860,
+    "rawOb": "METAR KJFK 011651Z 23003KT 10SM FEW200 BKN250 13/02 A3055 RMK SLP343 T01330017 $",
+    "name": "New York/JF Kennedy Intl, NY, US",
+    "lat": 40.6392,
+    "lon": -73.7639,
+    "elev": 3,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "KORD",
+    "obsTime": 1793551860,
+    "rawOb": "METAR KORD 011651Z 00000KT 10SM OVC075 15/11 A3034 RMK AO2 RAE49 SLP274 P0001 T01500111 $",
+    "name": "Chicago/O'Hare Intl, IL, US",
+    "lat": 41.9602,
+    "lon": -87.9316,
+    "elev": 202,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "KSEA",
+    "obsTime": 1793551980,
+    "rawOb": "METAR KSEA 011653Z 01003KT 10SM OVC014 08/05 A3007 RMK AO2 SLP191 T00780050 $",
+    "name": "Seattle-Tacoma Intl, WA, US",
+    "lat": 47.4447,
+    "lon": -122.3144,
+    "elev": 115,
+    "fltCat": "MVFR"
+  },
+  {
+    "icaoId": "KSFO",
+    "obsTime": 1793552160,
+    "rawOb": "METAR KSFO 011656Z 00000KT 10SM FEW032 14/08 A2992 RMK AO2 SLP131 T01390078 $",
+    "name": "San Francisco Intl, CA, US",
+    "lat": 37.6196,
+    "lon": -122.3656,
+    "elev": 2,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "LEMD",
+    "obsTime": 1793554200,
+    "rawOb": "METAR LEMD 011730Z 13003KT 100V160 CAVOK 17/04 Q1020 NOSIG",
+    "name": "Madrid/Barajas Arpt, M, ES",
+    "lat": 40.466,
+    "lon": -3.555,
+    "elev": 589,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "LFPG",
+    "obsTime": 1793554200,
+    "rawOb": "METAR LFPG 011730Z 03006KT 360V130 CAVOK 09/05 Q1030 NOSIG",
+    "name": "Paris/De Gaulle Arpt, ID, FR",
+    "lat": 49.015,
+    "lon": 2.534,
+    "elev": 107,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "RJTT",
+    "obsTime": 1793552400,
+    "rawOb": "METAR RJTT 011700Z 27004KT 240V330 CAVOK 16/12 Q1014 NOSIG",
+    "name": "Tokyo/Haneda Intl, 13, JP",
+    "lat": 35.553,
+    "lon": 139.781,
+    "elev": 5,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "WSSS",
+    "obsTime": 1793554200,
+    "rawOb": "METAR WSSS 011730Z 33003KT 9999 FEW018 BKN300 27/25 Q1012 NOSIG",
+    "name": "Singapore/Changi Intl, 4, SG",
+    "lat": 1.368,
+    "lon": 103.982,
+    "elev": 17,
+    "fltCat": "VFR"
+  },
+  {
+    "icaoId": "YSSY",
+    "obsTime": 1793554200,
+    "rawOb": "METAR YSSY 011730Z AUTO 07004KT 9999 // OVC049 19/15 Q1016",
+    "name": "Sydney Intl, NS, AU",
+    "lat": -33.946,
+    "lon": 151.173,
+    "elev": 3,
+    "fltCat": "VFR"
+  }
+]

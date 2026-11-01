@@ -1,0 +1,13 @@
+id = "morse-ciphers"
+title = "Morse & Ciphers"
+description = "Write and read Morse code, the NATO and French spelling alphabets, ROT13, Caesar, Vigenère, Atbash, A1Z26, binary, hex, braille and upside-down text"
+author = "Backslash"
+icon = "bs-radio"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/morse-ciphers"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:bdb80414ee552a452701bc610a1301e1891dd209f92d61e6dd9f189fc05326ed"
+permissions = []
+commands = ["Morse & Ciphers"]
+categories = ["everyday"]
