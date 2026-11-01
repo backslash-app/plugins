@@ -1,0 +1,13 @@
+id = "artworks"
+title = "Artworks"
+description = "Search the collections of The Met and the Art Institute of Chicago with pictures, artist, date, medium and rights, and a public-domain artwork of the day"
+author = "Backslash"
+icon = "bs-palette"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/artworks"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:6b63182594e9a01bd9ed78cd26813320aa1317000cb85559deb47fc64637e40d"
+permissions = ["Access collectionapi.metmuseum.org", "Access images.metmuseum.org", "Access api.artic.edu", "Access www.artic.edu"]
+commands = ["Search Artworks", "Artwork of the Day"]
+categories = ["media"]

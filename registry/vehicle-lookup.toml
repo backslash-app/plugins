@@ -1,0 +1,13 @@
+id = "vehicle-lookup"
+title = "Vehicle Lookup"
+description = "Decode a VIN into make, model, year, engine and plant, check its digit, and see a vehicle's safety recalls, from NHTSA (best for vehicles sold in the United States)"
+author = "Backslash"
+icon = "🚗"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/vehicle-lookup"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:9b00412fb1cf2f67c8709493bb3a4e646aa5a3835c687d7d0ef0d7c7855e2b6b"
+permissions = ["Access vpic.nhtsa.dot.gov", "Access api.nhtsa.gov"]
+commands = ["Vehicle Lookup"]
+categories = ["everyday"]

@@ -1,0 +1,57 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment%3A%20Music",
+      "question": "What%20are%20the%20first%20few%20words%20in%20the%20lyrics%20of%20A-Ha%27s%20%27Take%20On%20Me%27%3F",
+      "correct_answer": "We%27re%20talking%20away",
+      "incorrect_answers": [
+        "We%27re%20dreaming%20today",
+        "We%27re%20finding%20a%20way",
+        "We%27re%20blocking%20the%20way"
+      ]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment%3A%20Music",
+      "question": "Who%20is%20the%20frontman%20of%20Muse%3F",
+      "correct_answer": "Matt%20Bellamy",
+      "incorrect_answers": ["Dominic%20Howard", "Thom%20Yorke", "Jonny%20Greenwood"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment%3A%20Comics",
+      "question": "What%20is%20Homestuck%20character%20Gamzee%27s%20last%20name%3F",
+      "correct_answer": "Makara",
+      "incorrect_answers": ["Makera", "Makare", "Makrea"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "Entertainment%3A%20Video%20Games",
+      "question": "Which%20of%20these%20games%20takes%20place%20in%20the%20Irish%20town%20of%20Doolin%2C%20with%20the%20option%20to%20play%20as%20one%20of%20the%20characters%2C%20Ellen%20and%20Keats%3F",
+      "correct_answer": "Folklore",
+      "incorrect_answers": ["Shadow%20of%20the%20Colossus", "ICO", "Beyond%20Good%20%26%20Evil"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "History",
+      "question": "The%20Tiananmen%20Square%20protests%20of%201989%20were%20held%20in%20Hong%20Kong.",
+      "correct_answer": "False",
+      "incorrect_answers": ["True"]
+    },
+    {
+      "type": "multiple",
+      "difficulty": "medium",
+      "category": "History",
+      "question": "How%20did%20the%20Vikings%20call%20their%20short-lived%20colony%20in%20today%27s%20Canada%3F",
+      "correct_answer": "V%C3%ADnland",
+      "incorrect_answers": ["F%C3%B8royar", "H%C3%A5logaland", "Sk%C3%A5ne"]
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+[extension]
+id = "vehicle-lookup"
+title = "Vehicle Lookup"
+description = "Decode a VIN into make, model, year, engine and plant, check its digit, and see a vehicle's safety recalls, from NHTSA (best for vehicles sold in the United States)"
+version = "1.0.0"
+author = "Backslash"
+icon = "🚗"
+license = "MIT"
+categories = ["everyday"]
+
+# NHTSA's free services, no key: vPIC decodes VINs, the recalls API lists campaigns.
+# The check digit, maker prefix, country and model year are worked out locally.
+[permissions]
+net = ["vpic.nhtsa.dot.gov", "api.nhtsa.gov"]
+
+[[commands]]
+name = "vehicle-lookup"
+title = "Vehicle Lookup"
+description = "Paste a VIN, or type make model year (honda accord 2003) for recalls"
+icon = "🚗"
+keywords = [
+  "vin",
+  "vehicle identification number",
+  "car",
+  "vehicle",
+  "decode",
+  "decoder",
+  "recall",
+  "recalls",
+  "nhtsa",
+  "vpic",
+  "make",
+  "model",
+  "truck",
+  "motorcycle",
+  "check digit",
+  "numéro de série",
+  "numéro vin",
+  "voiture",
+  "véhicule",
+  "rappel",
+  "rappels",
+  "carte grise",
+  "décoder",
+]

@@ -1,0 +1,14 @@
+{
+  "country": "Japan",
+  "country abbreviation": "JP",
+  "post code": "100-0001",
+  "places": [
+    {
+      "place name": "Chiyoda",
+      "longitude": "139.7559",
+      "latitude": "35.6845",
+      "state": "Toukyouto",
+      "state abbreviation": ""
+    }
+  ]
+}

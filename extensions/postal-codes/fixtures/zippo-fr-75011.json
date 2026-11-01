@@ -1,0 +1,14 @@
+{
+  "country": "France",
+  "country abbreviation": "FR",
+  "post code": "75011",
+  "places": [
+    {
+      "place name": "Paris 11 Popincourt",
+      "longitude": "2.3795",
+      "latitude": "48.8574",
+      "state": "Île-de-France",
+      "state abbreviation": "A8"
+    }
+  ]
+}

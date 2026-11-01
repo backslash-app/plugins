@@ -1,0 +1,13 @@
+id = "flight-tracker"
+title = "Flight Tracker"
+description = "The aircraft flying above you with altitude, speed, heading and where to look, and any flight by callsign or transponder, live from the OpenSky Network"
+author = "Backslash"
+icon = "✈️"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/flight-tracker"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:b33e0775e8f0240a249222f80a3c2fabe3376f1befaee745b8b3331dc802e7e7"
+permissions = ["Access opensky-network.org", "Access auth.opensky-network.org", "Access geocoding-api.open-meteo.com"]
+commands = ["Flights Overhead", "Find Flight"]
+categories = ["everyday"]

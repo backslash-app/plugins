@@ -1,0 +1,67 @@
+[extension]
+id = "natural-events"
+title = "Natural Events"
+description = "Wildfires, storms, volcanoes, icebergs and floods happening now around the world, with how far they are from you, from NASA EONET"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+categories = ["everyday"]
+
+# NASA EONET is free and needs no key. Open-Meteo only turns your city into coordinates.
+[permissions]
+net = ["eonet.gsfc.nasa.gov", "geocoding-api.open-meteo.com"]
+
+[[commands]]
+name = "natural-events"
+title = "Natural Events"
+description = "Ongoing wildfires, severe storms, erupting volcanoes, icebergs and floods, nearest to you first"
+icon = "bs-globe"
+keywords = [
+  "natural events",
+  "natural disasters",
+  "wildfire",
+  "forest fire",
+  "hurricane",
+  "cyclone",
+  "typhoon",
+  "storm",
+  "volcano",
+  "eruption",
+  "iceberg",
+  "flood",
+  "eonet",
+  "nasa",
+  "catastrophes naturelles",
+  "incendie",
+  "feu de forêt",
+  "ouragan",
+  "tempête",
+  "volcan",
+  "inondation",
+]
+
+[[preferences]]
+name = "location"
+title = "Location"
+description = "Optional: your city (e.g. \"Marseille\" or \"Portland, US\") or \"latitude, longitude\", to see distances and the events near you first"
+
+[[preferences]]
+name = "radius"
+title = "Near you (km)"
+description = "Events closer than this are listed first"
+type = "number"
+default = 500
+
+[[preferences]]
+name = "days"
+title = "Days of wildfires"
+description = "Wildfire reports stay open for months: only those updated in the last days are shown (also used for floods)"
+type = "number"
+default = 30
+
+[[preferences]]
+name = "units"
+title = "Units"
+description = "\"metric\" (km, km/h, ha) or \"imperial\" (mi, mph, acres)"
+default = "metric"

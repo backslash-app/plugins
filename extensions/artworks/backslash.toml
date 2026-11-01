@@ -1,0 +1,44 @@
+[extension]
+id = "artworks"
+title = "Artworks"
+description = "Search the collections of The Met and the Art Institute of Chicago with pictures, artist, date, medium and rights, and a public-domain artwork of the day"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-palette"
+license = "MIT"
+categories = ["media"]
+
+# Both museums' open APIs, and the hosts that serve their pictures (the Art Institute's through IIIF).
+[permissions]
+net = ["collectionapi.metmuseum.org", "images.metmuseum.org", "api.artic.edu", "www.artic.edu"]
+
+[[commands]]
+name = "search"
+title = "Search Artworks"
+description = "Paintings, sculptures and objects from The Met and the Art Institute of Chicago"
+icon = "bs-palette"
+keywords = [
+  "art",
+  "artwork",
+  "painting",
+  "museum",
+  "met",
+  "metropolitan museum",
+  "art institute of chicago",
+  "public domain",
+  "sculpture",
+  "artist",
+  "œuvre",
+  "œuvres d'art",
+  "tableau",
+  "peinture",
+  "musée",
+  "artiste",
+]
+
+[[commands]]
+name = "daily"
+title = "Artwork of the Day"
+description = "A public-domain highlight each day, the same for everyone, and the ones of the last days"
+icon = "bs-palette"
+keywords = ["artwork of the day", "daily art", "painting of the day", "art", "museum", "œuvre du jour", "tableau du jour"]

@@ -1,0 +1,44 @@
+[extension]
+id = "trivia"
+title = "Trivia"
+description = "Multiple-choice and true-or-false quiz questions from Open Trivia DB in 24 categories and three difficulties, with your score, streak and best streak"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-question"
+license = "MIT"
+categories = ["media"]
+
+# Open Trivia DB is free and needs no key. A session token keeps questions from
+# repeating; the extension waits 5 seconds between requests, as the API asks.
+[permissions]
+net = ["opentdb.com"]
+
+[[commands]]
+name = "trivia"
+title = "Trivia"
+description = "Answer a question; pick a difficulty with the chips, a category with Ctrl+L"
+icon = "bs-question"
+keywords = [
+  "trivia",
+  "quiz",
+  "question",
+  "questions",
+  "general knowledge",
+  "pub quiz",
+  "game",
+  "true or false",
+  "multiple choice",
+  "opentdb",
+  "culture générale",
+  "questionnaire",
+  "jeu",
+  "vrai ou faux",
+  "devinette",
+]
+
+[[commands]]
+name = "trivia-stats"
+title = "Trivia Score"
+description = "Your trivia score by category and difficulty, streak and best streak"
+icon = "bs-chart-up"
+keywords = ["trivia", "quiz", "score", "stats", "streak", "statistiques", "résultats"]

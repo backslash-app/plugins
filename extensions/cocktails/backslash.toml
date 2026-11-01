@@ -1,0 +1,76 @@
+[extension]
+id = "cocktails"
+title = "Cocktails"
+description = "Find cocktails by name or ingredient, see what you can make with the bottles you have, recipes in ml or oz, a random pick and favorites, from TheCocktailDB"
+version = "1.0.0"
+author = "Backslash"
+icon = "🍸"
+license = "MIT"
+categories = ["everyday"]
+
+# TheCocktailDB serves its API and the drink photos from one host.
+[permissions]
+net = ["www.thecocktaildb.com"]
+
+[[commands]]
+name = "search"
+title = "Search Cocktails"
+description = "Type a name, an ingredient, \"with gin, lime\" or \"random\""
+icon = "🍸"
+keywords = [
+  "cocktail",
+  "cocktails",
+  "drink",
+  "drinks",
+  "recipe",
+  "mixology",
+  "bartender",
+  "margarita",
+  "mojito",
+  "random cocktail",
+  "boisson",
+  "boissons",
+  "recette",
+  "apéritif",
+  "coquetel",
+]
+
+[[commands]]
+name = "make"
+title = "What Can I Make?"
+description = "Cocktails you can make with the bottles in your bar, and those missing one ingredient"
+icon = "🍸"
+keywords = [
+  "what can i make",
+  "my bar",
+  "ingredients",
+  "home bar",
+  "cocktail",
+  "mon bar",
+  "qu'est-ce que je peux faire",
+  "ingrédients",
+  "cocktails",
+]
+
+[[preferences]]
+name = "bar"
+title = "My bar"
+description = "What you have, separated by commas, e.g. \"gin, vodka, triple sec, lime, mint, tonic\" (English or French)"
+
+[[preferences]]
+name = "units"
+title = "Units"
+description = "\"both\" (as written, with ml or oz in brackets), \"metric\", \"us\" or \"original\""
+default = "both"
+
+[[preferences]]
+name = "language"
+title = "Instructions language"
+description = "\"en\", \"fr\", \"de\", \"es\" or \"it\"; English when a recipe has no translation"
+default = "en"
+
+[[preferences]]
+name = "apiKey"
+title = "Premium API key"
+description = "Optional: with a TheCocktailDB premium key, ingredient searches cover every drink instead of about 440"
+type = "secret"

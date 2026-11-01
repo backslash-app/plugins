@@ -1,0 +1,13 @@
+id = "postal-codes"
+title = "Postal Codes"
+description = "Find the places of a postal code and the postal codes of a place, in about 70 countries, with a map"
+author = "Backslash"
+icon = "bs-mail"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/postal-codes"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:ba2548ebd1e8c9e03a7077edb33c3f2d3aaec654f04d668b46215c0437a4b92a"
+permissions = ["Access api.zippopotam.us", "Access geocoding-api.open-meteo.com"]
+commands = ["Postal Codes"]
+categories = ["everyday"]

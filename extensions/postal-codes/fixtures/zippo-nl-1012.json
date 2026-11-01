@@ -1,0 +1,14 @@
+{
+  "country": "Netherlands",
+  "country abbreviation": "NL",
+  "post code": "1012",
+  "places": [
+    {
+      "place name": "Amsterdam Binnenstad en Oostelijk Havengebied",
+      "longitude": "4.9027",
+      "latitude": "52.3666",
+      "state": "Noord-Holland",
+      "state abbreviation": "NH"
+    }
+  ]
+}
