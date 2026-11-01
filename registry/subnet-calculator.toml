@@ -1,0 +1,13 @@
+id = "subnet-calculator"
+title = "Subnet Calculator"
+description = "IPv4 and IPv6 subnets: network, broadcast, host range, netmask and wildcard, address scope, splitting, membership checks and CIDR summarization"
+author = "Backslash"
+icon = "bs-layers"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/subnet-calculator"
+commit = "edb93654b00eb6cf6d0aa174ae6be383be9e8345"
+checksum = "sha256:e51ddeaf049465aeaa56d5abf67a7eafa3b7eca856bb697cbd35a1fb4a24b316"
+permissions = []
+commands = ["Subnet Calculator"]
+categories = ["network"]

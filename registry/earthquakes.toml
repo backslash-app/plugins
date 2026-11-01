@@ -1,0 +1,13 @@
+id = "earthquakes"
+title = "Earthquakes"
+description = "Recent earthquakes worldwide and near you from the USGS, with magnitude, depth, distance, tsunami flag, PAGER alert and felt reports"
+author = "Backslash"
+icon = "bs-activity"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/earthquakes"
+commit = "edb93654b00eb6cf6d0aa174ae6be383be9e8345"
+checksum = "sha256:32544befaa5fc4c3f01f5d6471386e55919e7239f8bedcf2f7993eb0b192f9ed"
+permissions = ["Access earthquake.usgs.gov", "Access geocoding-api.open-meteo.com"]
+commands = ["Recent Earthquakes", "Earthquakes Near Me"]
+categories = ["everyday"]

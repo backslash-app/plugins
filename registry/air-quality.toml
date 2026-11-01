@@ -1,0 +1,13 @@
+id = "air-quality"
+title = "Air Quality"
+description = "Air quality now and for the next days in any city: European or US AQI, fine particles, ozone, NO₂, UV and pollen, with health advice and the best hours to go out, from Open-Meteo"
+author = "Backslash"
+icon = "bs-wind"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/air-quality"
+commit = "edb93654b00eb6cf6d0aa174ae6be383be9e8345"
+checksum = "sha256:05ce34d1b052bf6be415997b1877bce26c237d09e2f440f866854188bc943d8a"
+permissions = ["Access geocoding-api.open-meteo.com", "Access air-quality-api.open-meteo.com"]
+commands = ["Air Quality"]
+categories = ["everyday"]

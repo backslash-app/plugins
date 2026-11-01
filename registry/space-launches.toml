@@ -1,0 +1,13 @@
+id = "space-launches"
+title = "Space Launches"
+description = "Upcoming and recent rocket launches with a T-minus countdown, status, rocket, mission, orbit, pad and webcasts, and spaceflight events like dockings and spacewalks, from Launch Library 2"
+author = "Backslash"
+icon = "bs-rocket"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/space-launches"
+commit = "edb93654b00eb6cf6d0aa174ae6be383be9e8345"
+checksum = "sha256:05c6b7e3debb21064a655b6ae33262cc9d45b2fe1132ec9b7cd021616106d7c6"
+permissions = ["Access ll.thespacedevs.com"]
+commands = ["Space Launches", "Spaceflight Events"]
+categories = ["everyday"]
