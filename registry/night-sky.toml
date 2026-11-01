@@ -1,0 +1,13 @@
+id = "night-sky"
+title = "Night Sky"
+description = "The planets you can see tonight with where and when to look, the next meteor showers with the Moon's glare, and the eclipses up to 2030 as seen from your place"
+author = "Backslash"
+icon = "bs-star"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/night-sky"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:6cb561250c701aed75fe8105dc6731145b34e9a60288bc31016012b1e4f9f461"
+permissions = ["Access geocoding-api.open-meteo.com"]
+commands = ["Planets Tonight", "Meteor Showers", "Eclipses"]
+categories = ["everyday"]

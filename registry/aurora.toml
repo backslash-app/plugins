@@ -1,0 +1,13 @@
+id = "aurora"
+title = "Aurora Forecast"
+description = "Can you see the northern lights tonight? Kp index now and for 3 days, solar wind, the OVATION aurora model at your place, darkness and clouds, from NOAA SWPC"
+author = "Backslash"
+icon = "bs-sparkle"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/aurora"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:68780695fc2d57e3f2e5042dc9d8c07777ae98bb10cdb301d7e2e23b3f55b402"
+permissions = ["Access services.swpc.noaa.gov", "Access geocoding-api.open-meteo.com", "Access api.open-meteo.com"]
+commands = ["Aurora Forecast"]
+categories = ["everyday"]

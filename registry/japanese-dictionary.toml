@@ -1,0 +1,13 @@
+id = "japanese-dictionary"
+title = "Japanese Dictionary"
+description = "Japanese words from Jisho with readings, meanings, JLPT level and common-word tags, the kanji they are written with, and romaji typed as kana"
+author = "Backslash"
+icon = "bs-font"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/japanese-dictionary"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:19513bf325d7ffe9dd0545115133cd471d32bdf60653e05d5b394a3efbbd4358"
+permissions = ["Access jisho.org", "Access kanjiapi.dev"]
+commands = ["Japanese Dictionary"]
+categories = ["everyday"]

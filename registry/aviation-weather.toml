@@ -1,0 +1,13 @@
+id = "aviation-weather"
+title = "Aviation Weather"
+description = "METAR and TAF for any airport, decoded in plain words, with the flight category, wind, visibility, clouds and QNH, from aviationweather.gov"
+author = "Backslash"
+icon = "bs-wind"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/aviation-weather"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:ec17867b8f3a20a991dfebd9682af52c30f761ee012c23532efaaf45fbea6429"
+permissions = ["Access aviationweather.gov"]
+commands = ["Aviation Weather", "Decode METAR or TAF"]
+categories = ["everyday"]

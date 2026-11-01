@@ -1,0 +1,13 @@
+id = "marine"
+title = "Marine & Surf"
+description = "Waves, swell, wind, sea temperature and currents for your beaches and any coast, now and for 7 days, with a rough surf rating and the best hours, from Open-Meteo"
+author = "Backslash"
+icon = "bs-droplet"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/marine"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:df577bcc64931909f380c896e17a1bec7a2fd5a281e0f6e973e6479a0535c817"
+permissions = ["Access geocoding-api.open-meteo.com", "Access marine-api.open-meteo.com", "Access api.open-meteo.com"]
+commands = ["Marine & Surf"]
+categories = ["everyday"]

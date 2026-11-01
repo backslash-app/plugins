@@ -1,0 +1,13 @@
+id = "thesaurus"
+title = "Thesaurus & Rhymes"
+description = "English synonyms, antonyms, rhymes and near rhymes, words that sound alike, adjectives for a noun and words for a phrase, with syllables and frequency, from Datamuse"
+author = "Backslash"
+icon = "bs-book"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/thesaurus"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:4171652122c35d054269b51ad5becc19aff4a5c649f48596ebebd2de9e10a89c"
+permissions = ["Access api.datamuse.com"]
+commands = ["Thesaurus", "Find Rhymes"]
+categories = ["everyday"]

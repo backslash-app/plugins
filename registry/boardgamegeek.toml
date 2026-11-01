@@ -1,0 +1,13 @@
+id = "boardgamegeek"
+title = "BoardGameGeek"
+description = "Search board games with their players, playing time, weight, rating and rank, and see your BoardGameGeek collection, wishlist and logged plays"
+author = "Backslash"
+icon = "bs-dice"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/boardgamegeek"
+commit = "141d59f61fc60079af624f5ad4333df69e4276b2"
+checksum = "sha256:b8a1c5cf980a4d5ecd7fdfa25d304214d23739a9b4c4e824da840bff0161b21d"
+permissions = ["Access boardgamegeek.com", "Access cf.geekdo-images.com"]
+commands = ["Search Board Games", "My Board Game Collection", "My Board Game Plays"]
+categories = ["media"]
