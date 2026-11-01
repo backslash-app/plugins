@@ -1,0 +1,13 @@
+id = "trivia"
+title = "Trivia"
+description = "Multiple-choice and true-or-false quiz questions from Open Trivia DB in 24 categories and three difficulties, with your score, streak and best streak"
+author = "Backslash"
+icon = "bs-question"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/trivia"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:408e4acce3e971b6814b6d5188aeed5700bed863d5dd99cd28f58c4459602e3c"
+permissions = ["Access opentdb.com"]
+commands = ["Trivia", "Trivia Score"]
+categories = ["media"]

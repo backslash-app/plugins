@@ -1,0 +1,13 @@
+id = "natural-events"
+title = "Natural Events"
+description = "Wildfires, storms, volcanoes, icebergs and floods happening now around the world, with how far they are from you, from NASA EONET"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/natural-events"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:a4e901eb5866a27d8d2dbb74ffef4939216f67dec4784453e8b8fe619f3800b1"
+permissions = ["Access eonet.gsfc.nasa.gov", "Access geocoding-api.open-meteo.com"]
+commands = ["Natural Events"]
+categories = ["everyday"]
