@@ -1,0 +1,56 @@
+[extension]
+id = "periodic-table"
+title = "Periodic Table"
+description = "The 118 elements with their mass, electron configuration, electronegativity, melting and boiling points, and a molar mass calculator"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: the elements ship with the extension and nothing leaves your computer.
+
+[[commands]]
+name = "elements"
+title = "Periodic Table"
+description = "Search the elements by symbol, number or name in English or French, filter by family"
+icon = "bs-layers"
+keywords = [
+  "periodic table",
+  "element",
+  "chemistry",
+  "atom",
+  "atomic number",
+  "atomic mass",
+  "electron configuration",
+  "electronegativity",
+  "mendeleev",
+  "tableau périodique",
+  "élément",
+  "chimie",
+  "masse atomique",
+  "numéro atomique",
+  "configuration électronique",
+  "électronégativité",
+  "mendeleïev",
+]
+
+[[commands]]
+name = "molar-mass"
+title = "Molar Mass Calculator"
+description = "Type H2SO4, Ca(OH)2 or CuSO4·5H2O for its molar mass and the mass percent of each element"
+icon = "bs-calculator"
+keywords = [
+  "molar mass",
+  "molecular weight",
+  "formula",
+  "chemistry",
+  "mass percent",
+  "composition",
+  "g/mol",
+  "masse molaire",
+  "masse moléculaire",
+  "formule",
+  "chimie",
+  "pourcentage massique",
+]
