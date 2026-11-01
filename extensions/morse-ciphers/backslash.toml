@@ -1,0 +1,45 @@
+[extension]
+id = "morse-ciphers"
+title = "Morse & Ciphers"
+description = "Write and read Morse code, the NATO and French spelling alphabets, ROT13, Caesar, Vigenère, Atbash, A1Z26, binary, hex, braille and upside-down text"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-radio"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: everything is computed locally.
+
+[[commands]]
+name = "morse-ciphers"
+title = "Morse & Ciphers"
+description = "Type text to encode it, or Morse, NATO words, binary or braille to decode; caesar … and vigenere KEY …"
+icon = "bs-radio"
+keywords = [
+  "morse",
+  "morse code",
+  "sos",
+  "nato",
+  "phonetic alphabet",
+  "spelling alphabet",
+  "alfa bravo",
+  "rot13",
+  "rot47",
+  "caesar",
+  "cipher",
+  "vigenere",
+  "atbash",
+  "a1z26",
+  "binary",
+  "hex",
+  "braille",
+  "upside down",
+  "code morse",
+  "alphabet radio",
+  "alphabet phonétique",
+  "épeler",
+  "chiffre de césar",
+  "chiffrement",
+  "binaire",
+  "à l'envers",
+]
