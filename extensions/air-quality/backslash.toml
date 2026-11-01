@@ -1,0 +1,51 @@
+[extension]
+id = "air-quality"
+title = "Air Quality"
+description = "Air quality now and for the next days in any city: European or US AQI, fine particles, ozone, NO₂, UV and pollen, with health advice and the best hours to go out, from Open-Meteo"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-wind"
+license = "MIT"
+categories = ["everyday"]
+
+# Open-Meteo is free and needs no API key: one host to find cities, one for air quality.
+[permissions]
+net = ["geocoding-api.open-meteo.com", "air-quality-api.open-meteo.com"]
+
+[[commands]]
+name = "air-quality"
+title = "Air Quality"
+description = "Air quality and pollen for your city and saved cities; type a city name to look it up"
+icon = "bs-wind"
+keywords = [
+  "air quality",
+  "aqi",
+  "pollution",
+  "smog",
+  "pm2.5",
+  "pm10",
+  "fine particles",
+  "ozone",
+  "pollen",
+  "allergy",
+  "hay fever",
+  "uv",
+  "qualité de l'air",
+  "pollution de l'air",
+  "particules fines",
+  "pollens",
+  "allergie",
+  "rhume des foins",
+  "indice atmo",
+]
+
+[[preferences]]
+name = "city"
+title = "Default city"
+description = "Shown when you open the command, e.g. \"Paris\" or \"Lyon, France\""
+
+[[preferences]]
+name = "scale"
+title = "Air quality index"
+description = "\"european\" (European AQI, 0–100+) or \"us\" (US AQI, 0–500)"
+default = "european"
