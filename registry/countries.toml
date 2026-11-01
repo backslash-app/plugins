@@ -1,0 +1,13 @@
+id = "countries"
+title = "Countries"
+description = "Every country and territory with its capital, population, area, languages, currencies, calling code, domain, driving side, time zones and neighbors"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/countries"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:0c6e122f21a17bece6e66b84a65c76d23cff3652714500600a1e21a73bd9513f"
+permissions = []
+commands = ["Countries"]
+categories = ["everyday"]

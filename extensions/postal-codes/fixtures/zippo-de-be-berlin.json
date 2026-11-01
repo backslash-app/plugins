@@ -1,0 +1,51 @@
+{
+  "country": "Germany",
+  "country abbreviation": "DE",
+  "state": "Berlin",
+  "state abbreviation": "BE",
+  "place name": "Berlin",
+  "places": [
+    {
+      "place name": "Berlin",
+      "longitude": "13.3922",
+      "latitude": "52.532",
+      "post code": "10115"
+    },
+    {
+      "place name": "Berlin",
+      "longitude": "13.3874",
+      "latitude": "52.5161",
+      "post code": "10117"
+    },
+    {
+      "place name": "Berlin",
+      "longitude": "13.4109",
+      "latitude": "52.5285",
+      "post code": "10119"
+    },
+    {
+      "place name": "Berlin",
+      "longitude": "52.5233",
+      "latitude": "11000",
+      "post code": "10178"
+    },
+    {
+      "place name": "Berlin",
+      "longitude": "13.4232",
+      "latitude": "52.5136",
+      "post code": "10179"
+    },
+    {
+      "place name": "Berlin Friedrichshain",
+      "longitude": "13.4487",
+      "latitude": "52.5056",
+      "post code": "10243"
+    },
+    {
+      "place name": "Berlin Kreuzberg",
+      "longitude": "13.3908",
+      "latitude": "52.4924",
+      "post code": "10961"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "type": "boolean",
+      "difficulty": "hard",
+      "category": "Celebrities",
+      "question": "Lady%20Gaga%27s%20real%20name%20is%20Stefani%20Joanne%20Angelina%20Germanotta.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    },
+    {
+      "type": "boolean",
+      "difficulty": "easy",
+      "category": "Entertainment%3A%20Video%20Games",
+      "question": "%22Sonic%20the%20Hedgehog%202%22%20originally%20was%20going%20to%20have%20a%20time%20travel%20system.",
+      "correct_answer": "True",
+      "incorrect_answers": ["False"]
+    }
+  ]
+}

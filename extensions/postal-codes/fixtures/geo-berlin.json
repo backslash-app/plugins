@@ -1,0 +1,68 @@
+{
+  "results": [
+    {
+      "id": 2950159,
+      "name": "Berlin",
+      "latitude": 52.52437,
+      "longitude": 13.41053,
+      "country_code": "DE",
+      "country": "Germany",
+      "admin1": "State of Berlin",
+      "timezone": "Europe/Berlin",
+      "population": 3426354,
+      "postcodes": [
+        "10967",
+        "13347"
+      ],
+      "feature_code": "PPLC"
+    },
+    {
+      "id": 5083330,
+      "name": "Berlin",
+      "latitude": 44.46867,
+      "longitude": -71.18508,
+      "country_code": "US",
+      "country": "United States",
+      "admin1": "New Hampshire",
+      "admin2": "Coos",
+      "timezone": "America/New_York",
+      "population": 9367,
+      "postcodes": [
+        "03570"
+      ],
+      "feature_code": "PPL"
+    },
+    {
+      "id": 4500771,
+      "name": "Berlin",
+      "latitude": 39.79123,
+      "longitude": -74.92905,
+      "country_code": "US",
+      "country": "United States",
+      "admin1": "New Jersey",
+      "admin2": "Camden",
+      "timezone": "America/New_York",
+      "population": 7590,
+      "postcodes": [
+        "08009"
+      ],
+      "feature_code": "PPL"
+    },
+    {
+      "id": 5245497,
+      "name": "Berlin",
+      "latitude": 43.96804,
+      "longitude": -88.94345,
+      "country_code": "US",
+      "country": "United States",
+      "admin1": "Wisconsin",
+      "admin2": "Green Lake",
+      "timezone": "America/Chicago",
+      "population": 5420,
+      "postcodes": [
+        "54923"
+      ],
+      "feature_code": "PPL"
+    }
+  ]
+}

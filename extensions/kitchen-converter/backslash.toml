@@ -1,0 +1,51 @@
+[extension]
+id = "kitchen-converter"
+title = "Kitchen Converter"
+description = "Cups and spoons to grams for 66 ingredients, oven temperatures in °C, °F, gas mark and thermostat, recipe scaling and ingredient substitutions"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coffee"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: everything is computed locally.
+
+[[commands]]
+name = "kitchen-converter"
+title = "Kitchen Converter"
+description = "Type 1 cup flour, 200 g sugar in cups, 350 F, gas 6, scale 4 to 6: 200 g flour, 3 eggs, or sub buttermilk"
+icon = "bs-coffee"
+keywords = [
+  "kitchen",
+  "cooking",
+  "baking",
+  "recipe",
+  "cups to grams",
+  "grams to cups",
+  "tablespoon",
+  "teaspoon",
+  "butter stick",
+  "oven temperature",
+  "gas mark",
+  "fahrenheit",
+  "scale recipe",
+  "servings",
+  "substitute",
+  "substitution",
+  "cuisine",
+  "pâtisserie",
+  "recette",
+  "tasse en grammes",
+  "cuillère à soupe",
+  "cuillère à café",
+  "température du four",
+  "thermostat",
+  "adapter une recette",
+  "remplacer un ingrédient",
+]
+
+[[preferences]]
+name = "cup"
+title = "Cup"
+description = "What \"cup\" means: \"us\" (236.6 ml), \"metric\" (250 ml) or \"uk\" (284 ml)"
+default = "us"

@@ -1,0 +1,43 @@
+[extension]
+id = "coordinates"
+title = "Coordinates"
+description = "Convert coordinates between decimal degrees, DMS, UTM, MGRS, geohash and Plus Codes, open them on a map, and get the distance, bearing and midpoint of two points"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: everything is computed locally.
+
+[[commands]]
+name = "coordinates"
+title = "Coordinates"
+description = "Type 48.8584, 2.2945, 48°51'30\"N 2°17'40\"E, 31U 448251 5411943, a geohash, a Plus Code, or A to B"
+icon = "bs-globe"
+keywords = [
+  "coordinates",
+  "gps",
+  "latitude",
+  "longitude",
+  "lat lon",
+  "dms",
+  "degrees minutes seconds",
+  "utm",
+  "mgrs",
+  "geohash",
+  "plus code",
+  "open location code",
+  "distance",
+  "bearing",
+  "midpoint",
+  "great circle",
+  "vincenty",
+  "haversine",
+  "coordonnées",
+  "coordonnées gps",
+  "degrés minutes secondes",
+  "distance à vol d'oiseau",
+  "cap",
+  "point milieu",
+]

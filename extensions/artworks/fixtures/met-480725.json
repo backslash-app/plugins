@@ -1,0 +1,90 @@
+{
+  "objectID": 480725,
+  "isHighlight": false,
+  "accessionNumber": "1970.213",
+  "accessionYear": "1970",
+  "isPublicDomain": false,
+  "primaryImage": "",
+  "primaryImageSmall": "",
+  "additionalImages": [],
+  "constituents": [
+    {
+      "constituentID": 162168,
+      "role": "Artist",
+      "name": "Emil Nolde",
+      "constituentULAN_URL": "http://vocab.getty.edu/page/ulan/500003109",
+      "constituentWikidata_URL": "https://www.wikidata.org/wiki/Q152788",
+      "gender": ""
+    }
+  ],
+  "department": "Modern and Contemporary Art",
+  "objectName": "Painting",
+  "title": "Large Sunflowers",
+  "culture": "",
+  "period": "",
+  "dynasty": "",
+  "reign": "",
+  "portfolio": "",
+  "artistRole": "Artist",
+  "artistPrefix": "",
+  "artistDisplayName": "Emil Nolde",
+  "artistDisplayBio": "German, Nolde 1867–1956 Seebüll",
+  "artistSuffix": "",
+  "artistAlphaSort": "Nolde, Emil",
+  "artistNationality": "German",
+  "artistBeginDate": "1867",
+  "artistEndDate": "1956",
+  "artistGender": "",
+  "artistWikidata_URL": "https://www.wikidata.org/wiki/Q152788",
+  "artistULAN_URL": "http://vocab.getty.edu/page/ulan/500003109",
+  "objectDate": "1928",
+  "objectBeginDate": 1928,
+  "objectEndDate": 1928,
+  "medium": "Oil on panel",
+  "dimensions": "28 7/8 × 34 7/8 in. (73.3 × 88.6 cm)",
+  "measurements": [
+    {
+      "elementName": "Overall",
+      "elementDescription": null,
+      "elementMeasurements": { "Depth": 0.47625095, "Height": 73.34264, "Width": 88.58268 }
+    },
+    {
+      "elementName": "Framed",
+      "elementDescription": "F.1.1970.213 Black wood frame w/ AR plexi",
+      "elementMeasurements": { "Depth": 3.1750064, "Height": 83.82017, "Width": 99.060196 }
+    }
+  ],
+  "creditLine": "Bequest of Walter J. Reinemann, 1970",
+  "geographyType": "",
+  "city": "",
+  "state": "",
+  "county": "",
+  "country": "",
+  "region": "",
+  "subregion": "",
+  "locale": "",
+  "locus": "",
+  "excavation": "",
+  "river": "",
+  "classification": "Paintings",
+  "rightsAndReproduction": "",
+  "linkResource": "",
+  "metadataDate": "2026-10-06T04:59:37.62Z",
+  "repository": "Metropolitan Museum of Art, New York, NY",
+  "objectURL": "https://www.metmuseum.org/art/collection/search/480725",
+  "tags": [
+    {
+      "term": "Flowers",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300132399",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q506"
+    },
+    {
+      "term": "Sunflowers",
+      "AAT_URL": "http://vocab.getty.edu/page/aat/300404749",
+      "Wikidata_URL": "https://www.wikidata.org/wiki/Q171497"
+    }
+  ],
+  "objectWikidata_URL": "https://www.wikidata.org/wiki/Q19923441",
+  "isTimelineWork": false,
+  "GalleryNumber": ""
+}

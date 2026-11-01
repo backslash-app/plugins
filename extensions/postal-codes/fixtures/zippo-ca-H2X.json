@@ -1,0 +1,14 @@
+{
+  "country": "Canada",
+  "country abbreviation": "CA",
+  "post code": "H2X",
+  "places": [
+    {
+      "place name": "Plateau Mont-Royal Southeast",
+      "longitude": "-73.5739",
+      "latitude": "45.5148",
+      "state": "Quebec",
+      "state abbreviation": "QC"
+    }
+  ]
+}

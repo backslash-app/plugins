@@ -1,0 +1,14 @@
+{
+  "country": "Great Britain",
+  "country abbreviation": "GB",
+  "post code": "SW1A",
+  "places": [
+    {
+      "place name": "Westminster Abbey",
+      "longitude": "-0.1966",
+      "latitude": "51.4841",
+      "state": "England",
+      "state abbreviation": "ENG"
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "country": "Germany",
+  "country abbreviation": "DE",
+  "post code": "10967",
+  "places": [
+    {
+      "place name": "Berlin Kreuzberg",
+      "longitude": "13.4137",
+      "latitude": "52.4921",
+      "state": "Berlin",
+      "state abbreviation": "BE"
+    }
+  ]
+}

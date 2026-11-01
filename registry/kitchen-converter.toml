@@ -1,0 +1,13 @@
+id = "kitchen-converter"
+title = "Kitchen Converter"
+description = "Cups and spoons to grams for 66 ingredients, oven temperatures in °C, °F, gas mark and thermostat, recipe scaling and ingredient substitutions"
+author = "Backslash"
+icon = "bs-coffee"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/kitchen-converter"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:a06ab2396cb5a35c5dc22c647f88735a4788aa3ab67ff03ac27809f95c7fd14e"
+permissions = []
+commands = ["Kitchen Converter"]
+categories = ["everyday"]

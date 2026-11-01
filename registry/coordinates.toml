@@ -1,0 +1,13 @@
+id = "coordinates"
+title = "Coordinates"
+description = "Convert coordinates between decimal degrees, DMS, UTM, MGRS, geohash and Plus Codes, open them on a map, and get the distance, bearing and midpoint of two points"
+author = "Backslash"
+icon = "bs-globe"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/coordinates"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:72d140cf6a010138d707267b0b5469e4be95d1ca6d58833ff552e0bba2807e7b"
+permissions = []
+commands = ["Coordinates"]
+categories = ["everyday"]

@@ -1,0 +1,368 @@
+{
+  "title": "EONET Events",
+  "description": "Natural events from EONET.",
+  "link": "https://eonet.gsfc.nasa.gov/api/v3/events",
+  "events": [
+    {
+      "id": "EONET_25827",
+      "title": "Wildfire South Tank Trail, Perry, Mississippi",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25827",
+      "closed": null,
+      "categories": [
+        {
+          "id": "wildfires",
+          "title": "Wildfires"
+        }
+      ],
+      "sources": [
+        {
+          "id": "IRWIN",
+          "url": "https://irwin.doi.gov/observer/incidents/2026-MSMNF-000680"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": 1000.0,
+          "magnitudeUnit": "acres",
+          "date": "2026-10-28T18:02:00Z",
+          "type": "Point",
+          "coordinates": [
+            -89.097783,
+            31.085833
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EONET_25829",
+      "title": "Prescribed Fire Walker Hill 3 Piles RX, Coconino, Arizona",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25829",
+      "closed": null,
+      "categories": [
+        {
+          "id": "wildfires",
+          "title": "Wildfires"
+        }
+      ],
+      "sources": [
+        {
+          "id": "IRWIN",
+          "url": "https://irwin.doi.gov/observer/incidents/2026-AZCOF-001563"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": 784.0,
+          "magnitudeUnit": "acres",
+          "date": "2026-10-28T11:22:00Z",
+          "type": "Point",
+          "coordinates": [
+            -111.835978,
+            35.259781
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EONET_13370",
+      "title": "Wildfire in Australia 1023712",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_13370",
+      "closed": null,
+      "categories": [
+        {
+          "id": "wildfires",
+          "title": "Wildfires"
+        }
+      ],
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=WF&eventid=1023712"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": null,
+          "magnitudeUnit": null,
+          "date": "2025-04-27T19:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            127.84730549567904,
+            -17.14074812671574
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EONET_25729",
+      "title": "Tropical Cyclone Arnab",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25729",
+      "closed": null,
+      "categories": [
+        {
+          "id": "severeStorms",
+          "title": "Severe Storms"
+        }
+      ],
+      "sources": [
+        {
+          "id": "JTWC",
+          "url": "https://www.metoc.navy.mil/jtwc/products/io0226.tcw"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": 35.0,
+          "magnitudeUnit": "kts",
+          "date": "2026-10-25T18:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            89.3,
+            15.6
+          ]
+        },
+        {
+          "magnitudeValue": 50.0,
+          "magnitudeUnit": "kts",
+          "date": "2026-10-26T00:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            88.8,
+            15.3
+          ]
+        },
+        {
+          "magnitudeValue": 65.0,
+          "magnitudeUnit": "kts",
+          "date": "2026-10-26T06:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            88.4,
+            15.3
+          ]
+        },
+        {
+          "magnitudeValue": 65.0,
+          "magnitudeUnit": "kts",
+          "date": "2026-10-28T00:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            81.6,
+            16.2
+          ]
+        },
+        {
+          "magnitudeValue": 55.0,
+          "magnitudeUnit": "kts",
+          "date": "2026-10-28T06:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            81.8,
+            16.4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EONET_25268",
+      "title": "Iceberg B52",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25268",
+      "closed": null,
+      "categories": [
+        {
+          "id": "seaLakeIce",
+          "title": "Sea and Lake Ice"
+        }
+      ],
+      "sources": [
+        {
+          "id": "NATICE",
+          "url": "https://usicecenter.gov/pub/Iceberg_Tabular.csv"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": 48.88,
+          "magnitudeUnit": "NM^2",
+          "date": "2026-10-09T00:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            -130.24,
+            -74.4
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EONET_20822",
+      "title": "Iceberg D33D",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_20822",
+      "closed": null,
+      "categories": [
+        {
+          "id": "seaLakeIce",
+          "title": "Sea and Lake Ice"
+        }
+      ],
+      "sources": [
+        {
+          "id": "NATICE",
+          "url": "https://usicecenter.gov/pub/Iceberg_Tabular.csv"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": 62.73,
+          "magnitudeUnit": "NM^2",
+          "date": "2026-06-25T00:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            -55.51,
+            -64.35
+          ]
+        },
+        {
+          "magnitudeValue": 90.0,
+          "magnitudeUnit": "NM^2",
+          "date": "2026-07-23T00:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            -55.47,
+            -63.78
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EONET_20710",
+      "title": "Nevados del Chillan Volcano, Chile",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_20710",
+      "closed": null,
+      "categories": [
+        {
+          "id": "volcanoes",
+          "title": "Volcanoes"
+        }
+      ],
+      "sources": [
+        {
+          "id": "SIVolcano",
+          "url": "https://volcano.si.edu/volcano.cfm?vn=357070"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": null,
+          "magnitudeUnit": null,
+          "date": "2026-06-15T00:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            -71.378,
+            -36.868
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EONET_20409",
+      "title": "Telica Volcano, Nicaragua",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_20409",
+      "closed": null,
+      "categories": [
+        {
+          "id": "volcanoes",
+          "title": "Volcanoes"
+        }
+      ],
+      "sources": [
+        {
+          "id": "SIVolcano",
+          "url": "https://volcano.si.edu/volcano.cfm?vn=344040"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": null,
+          "magnitudeUnit": null,
+          "date": "2026-05-30T00:00:00Z",
+          "type": "Point",
+          "coordinates": [
+            -86.84,
+            12.606
+          ]
+        }
+      ]
+    },
+    {
+      "id": "EONET_25895",
+      "title": "Flood in Bhutan 1104265",
+      "description": null,
+      "link": "https://eonet.gsfc.nasa.gov/api/v3/events/EONET_25895",
+      "closed": "2026-10-30T00:00:00Z",
+      "categories": [
+        {
+          "id": "floods",
+          "title": "Floods"
+        }
+      ],
+      "sources": [
+        {
+          "id": "GDACS",
+          "url": "https://www.gdacs.org/report.aspx?eventtype=FL&eventid=1104265"
+        }
+      ],
+      "geometry": [
+        {
+          "magnitudeValue": null,
+          "magnitudeUnit": null,
+          "date": "2026-10-28T20:00:00Z",
+          "type": "Polygon",
+          "coordinates": [
+            [
+              [
+                89.7620965,
+                27.467997
+              ],
+              [
+                90.1578097,
+                27.9234352
+              ],
+              [
+                89.978486,
+                28.192672
+              ],
+              [
+                89.7652051,
+                28.182473
+              ],
+              [
+                89.562046,
+                28.120646
+              ],
+              [
+                89.5328564,
+                27.9461172
+              ],
+              [
+                89.7586037,
+                27.471039
+              ],
+              [
+                89.7620965,
+                27.467997
+              ]
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

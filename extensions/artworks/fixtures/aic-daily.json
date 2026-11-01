@@ -1,0 +1,40 @@
+{
+  "preference": null,
+  "pagination": {
+    "total": 228,
+    "limit": 1,
+    "offset": 12,
+    "total_pages": 228,
+    "current_page": 13
+  },
+  "data": [
+    {
+      "_score": 17542.15,
+      "id": 111442,
+      "title": "The Child's Bath",
+      "thumbnail": {
+        "width": 8470,
+        "height": 12853,
+        "alt_text": "Painting of mother in blue, purple, and green-stripped dress washing child's feet."
+      },
+      "date_display": "1893",
+      "artist_display": "Mary Cassatt (American, 1844–1926)",
+      "place_of_origin": "France",
+      "description": "<p>In <em>The Child’s Bath</em>, Cassatt centered two figures in a moment of physical closeness: a woman steadies a young charge on her lap as she holds the child’s foot in the washbasin below. The steep angle from above creates a shallow picture plane, pulling viewers into the space. The carpeted floor seems to sit upright on the surface of the canvas. Adding to this sense of flatness, pattern is everywhere within the frame. These formal elements reflect Cassatt’s intense engagement with Japanese aesthetics in the 1890s.</p>\n<p>An extraordinary composition featuring the artist’s signature subject, <em>The Child’s Bath</em> was widely exhibited beginning in 1893. The Art Institute of Chicago purchased the painting in 1910—making it the first work by Cassatt to enter the museum’s collection.</p>\n",
+      "dimensions": "101.3 × 67.3 cm (39 15/16 × 26 1/2 in.)",
+      "medium_display": "Oil on canvas",
+      "credit_line": "Robert A. Waller Fund",
+      "is_public_domain": true,
+      "artwork_type_title": "Painting",
+      "department_title": "Arts of the Americas",
+      "artist_title": "Mary Cassatt",
+      "style_title": "Impressionism",
+      "classification_title": "painting",
+      "image_id": "3b885ae0-4d46-5fe4-d70a-00474827f02c"
+    }
+  ],
+  "config": {
+    "iiif_url": "https://www.artic.edu/iiif/2",
+    "website_url": "https://www.artic.edu"
+  }
+}

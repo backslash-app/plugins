@@ -1,0 +1,14 @@
+{
+  "country": "Germany",
+  "country abbreviation": "DE",
+  "post code": "10115",
+  "places": [
+    {
+      "place name": "Berlin",
+      "longitude": "13.3922",
+      "latitude": "52.532",
+      "state": "Berlin",
+      "state abbreviation": "BE"
+    }
+  ]
+}

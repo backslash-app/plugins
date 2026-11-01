@@ -1,0 +1,13 @@
+id = "cocktails"
+title = "Cocktails"
+description = "Find cocktails by name or ingredient, see what you can make with the bottles you have, recipes in ml or oz, a random pick and favorites, from TheCocktailDB"
+author = "Backslash"
+icon = "🍸"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/cocktails"
+commit = "4e5d753d50b979b973af980b17ba1caf2074830e"
+checksum = "sha256:93383b8d5f682d21c9edd5212a8ad843638a6098cf8ed605e8d6c75bef92da5c"
+permissions = ["Access www.thecocktaildb.com"]
+commands = ["Search Cocktails", "What Can I Make?"]
+categories = ["everyday"]
