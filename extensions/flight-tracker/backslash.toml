@@ -1,0 +1,85 @@
+[extension]
+id = "flight-tracker"
+title = "Flight Tracker"
+description = "The aircraft flying above you with altitude, speed, heading and where to look, and any flight by callsign or transponder, live from the OpenSky Network"
+version = "1.0.0"
+author = "Backslash"
+icon = "✈️"
+license = "MIT"
+categories = ["everyday"]
+
+# OpenSky answers anonymously with 400 API credits a day; an optional API client
+# (signed in through auth.opensky-network.org) gets 4,000. Open-Meteo only turns
+# your city into coordinates.
+[permissions]
+net = ["opensky-network.org", "auth.opensky-network.org", "geocoding-api.open-meteo.com"]
+
+[[commands]]
+name = "overhead"
+title = "Flights Overhead"
+description = "Aircraft around you, nearest first, with altitude, speed, heading and how high to look"
+icon = "✈️"
+keywords = [
+  "flights",
+  "planes",
+  "aircraft",
+  "overhead",
+  "above me",
+  "airplane",
+  "ads-b",
+  "opensky",
+  "flight radar",
+  "avions",
+  "vols",
+  "avion au-dessus",
+  "au-dessus de moi",
+  "aéronefs",
+]
+
+[[commands]]
+name = "find"
+title = "Find Flight"
+description = "Look up a flight by its callsign (AFR1234), every flight of an airline (AFR) or an aircraft by its transponder address"
+icon = "bs-search"
+keywords = [
+  "flight",
+  "callsign",
+  "flight number",
+  "track flight",
+  "icao24",
+  "transponder",
+  "where is my flight",
+  "suivre un vol",
+  "numéro de vol",
+  "indicatif",
+  "chercher un vol",
+]
+
+[[preferences]]
+name = "location"
+title = "Location"
+description = "Your city (e.g. \"Toulouse\" or \"Denver, US\") or \"latitude, longitude\" (e.g. 43.60, 1.44), for Flights Overhead and distances"
+
+[[preferences]]
+name = "radius"
+title = "Radius (km)"
+description = "How far around you Flights Overhead looks, up to 500 km; up to about 200 km costs one API credit per refresh"
+type = "number"
+default = 50
+
+[[preferences]]
+name = "units"
+title = "Units"
+description = "\"aviation\" (ft, kt, NM), \"metric\" (m, km/h, km) or \"imperial\" (ft, mph, mi)"
+default = "aviation"
+
+[[preferences]]
+name = "clientId"
+title = "OpenSky API client ID"
+description = "Optional: create an API client in your OpenSky account (opensky-network.org → My OpenSky → Account) for 4,000 credits a day instead of 400"
+
+[[preferences]]
+name = "clientSecret"
+title = "OpenSky API client secret"
+description = "Optional: the secret of that API client"
+type = "secret"
