@@ -1,0 +1,42 @@
+[extension]
+id = "postal-codes"
+title = "Postal Codes"
+description = "Find the places of a postal code and the postal codes of a place, in about 70 countries, with a map"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-mail"
+license = "MIT"
+categories = ["everyday"]
+
+# Both services are free and need no key: Zippopotam.us looks up codes,
+# Open-Meteo's geocoding finds places by name.
+[permissions]
+net = ["api.zippopotam.us", "geocoding-api.open-meteo.com"]
+
+[[commands]]
+name = "postal-codes"
+title = "Postal Codes"
+description = "Type a code (75011, us 90210) or a place (Lyon, de Berlin)"
+icon = "bs-mail"
+keywords = [
+  "postal code",
+  "postcode",
+  "zip code",
+  "zip",
+  "post code",
+  "postleitzahl",
+  "plz",
+  "cap",
+  "cedex",
+  "code postal",
+  "codes postaux",
+  "cp",
+  "ville",
+  "commune",
+]
+
+[[preferences]]
+name = "country"
+title = "Default country"
+description = "Two-letter code of the country for codes typed without one, e.g. \"fr\", \"us\" or \"de\""
+default = "fr"

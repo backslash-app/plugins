@@ -1,0 +1,204 @@
+{
+  "results": [
+    {
+      "id": 2996944,
+      "name": "Lyon",
+      "latitude": 45.74906,
+      "longitude": 4.84789,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 520774,
+      "postcodes": [
+        "69000",
+        "69001",
+        "69002",
+        "69003",
+        "69004",
+        "69005",
+        "69006",
+        "69007",
+        "69008",
+        "69009",
+        "69061 CEDEX 06",
+        "69062 CEDEX 06",
+        "69064 CEDEX 06"
+      ],
+      "feature_code": "PPLA"
+    },
+    {
+      "id": 6543969,
+      "name": "Lyon 03",
+      "latitude": 45.76124,
+      "longitude": 4.85184,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 102725,
+      "postcodes": [
+        "69003"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 6543974,
+      "name": "Lyon 08",
+      "latitude": 45.73626,
+      "longitude": 4.86866,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 86154,
+      "postcodes": [
+        "69008"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 6543973,
+      "name": "Lyon 07",
+      "latitude": 45.74525,
+      "longitude": 4.84197,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 82573,
+      "postcodes": [
+        "69007"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 6543972,
+      "name": "Lyon 06",
+      "latitude": 45.76788,
+      "longitude": 4.85064,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 52862,
+      "postcodes": [
+        "69006"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 6543975,
+      "name": "Lyon 09",
+      "latitude": 45.77255,
+      "longitude": 4.80326,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 51983,
+      "postcodes": [
+        "69009"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 6543971,
+      "name": "Lyon 05",
+      "latitude": 45.76106,
+      "longitude": 4.82677,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 49664,
+      "postcodes": [
+        "69005"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 6543970,
+      "name": "Lyon 04",
+      "latitude": 45.77507,
+      "longitude": 4.82712,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 36064,
+      "postcodes": [
+        "69004"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 6543968,
+      "name": "Lyon 02",
+      "latitude": 45.75423,
+      "longitude": 4.83089,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 31303,
+      "postcodes": [
+        "69002"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 6949674,
+      "name": "Lyon 01",
+      "latitude": 45.76758,
+      "longitude": 4.8345,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "population": 29641,
+      "postcodes": [
+        "69001"
+      ],
+      "feature_code": "PPLX"
+    },
+    {
+      "id": 2996938,
+      "name": "Lyons-la-Forêt",
+      "latitude": 49.39892,
+      "longitude": 1.47709,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Normandy",
+      "admin2": "Eure",
+      "timezone": "Europe/Paris",
+      "population": 836,
+      "postcodes": [
+        "27480"
+      ],
+      "feature_code": "PPL"
+    },
+    {
+      "id": 2971156,
+      "name": "Vaise",
+      "latitude": 45.77262,
+      "longitude": 4.80374,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Auvergne-Rhône-Alpes",
+      "admin2": "Rhône",
+      "timezone": "Europe/Paris",
+      "feature_code": "PPLX"
+    }
+  ]
+}

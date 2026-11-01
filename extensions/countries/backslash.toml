@@ -1,0 +1,49 @@
+[extension]
+id = "countries"
+title = "Countries"
+description = "Every country and territory with its capital, population, area, languages, currencies, calling code, domain, driving side, time zones and neighbors"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-globe"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: the data ships with the extension (generated from Wikidata, CC0, by tools/generate.ts).
+
+[[commands]]
+name = "countries"
+title = "Countries"
+description = "Search by name in English or French, capital, ISO code, calling code, domain or currency"
+icon = "bs-globe"
+keywords = [
+  "country",
+  "countries",
+  "capital",
+  "population",
+  "flag",
+  "currency",
+  "calling code",
+  "dialing code",
+  "phone prefix",
+  "iso code",
+  "tld",
+  "driving side",
+  "time zone",
+  "neighbors",
+  "pays",
+  "capitale",
+  "drapeau",
+  "monnaie",
+  "devise",
+  "indicatif",
+  "indicatif téléphonique",
+  "fuseau horaire",
+  "frontières",
+  "voisins",
+]
+
+[[preferences]]
+name = "language"
+title = "Language"
+description = "\"en\" or \"fr\": the language of country names, capitals and labels"
+default = "en"

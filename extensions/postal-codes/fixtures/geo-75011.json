@@ -1,0 +1,75 @@
+{
+  "results": [
+    {
+      "id": 2988507,
+      "name": "Paris",
+      "latitude": 48.85341,
+      "longitude": 2.3488,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Île-de-France Region",
+      "admin2": "Paris Department",
+      "timezone": "Europe/Paris",
+      "population": 2138551,
+      "postcodes": [
+        "75001",
+        "75020",
+        "75002",
+        "75003",
+        "75004",
+        "75005",
+        "75006",
+        "75007",
+        "75008",
+        "75009",
+        "75010",
+        "75011",
+        "75012",
+        "75013",
+        "75014",
+        "75015",
+        "75016",
+        "75017",
+        "75018",
+        "75019"
+      ],
+      "feature_code": "PPLC"
+    },
+    {
+      "id": 2986082,
+      "name": "Paris 11 Popincourt",
+      "latitude": 48.8574,
+      "longitude": 2.3795,
+      "country_code": "FR",
+      "country": "France",
+      "admin1": "Île-de-France Region",
+      "admin2": "Paris Department",
+      "timezone": "Europe/Paris",
+      "population": 138170,
+      "postcodes": [
+        "75011",
+        "75125 CEDEX 11",
+        "75126 CEDEX 11",
+        "75127 CEDEX 11"
+      ],
+      "feature_code": "PPL"
+    },
+    {
+      "id": 4679195,
+      "name": "Carrollton",
+      "latitude": 32.95373,
+      "longitude": -96.89028,
+      "country_code": "US",
+      "country": "United States",
+      "admin1": "Texas",
+      "admin2": "Dallas",
+      "timezone": "America/Chicago",
+      "population": 133168,
+      "postcodes": [
+        "75006",
+        "75011"
+      ],
+      "feature_code": "PPL"
+    }
+  ]
+}

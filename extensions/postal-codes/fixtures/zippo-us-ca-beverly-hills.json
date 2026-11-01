@@ -1,0 +1,39 @@
+{
+  "country": "United States",
+  "country abbreviation": "US",
+  "state": "California",
+  "state abbreviation": "CA",
+  "place name": "Beverly Hills",
+  "places": [
+    {
+      "place name": "Beverly Hills",
+      "longitude": "-118.2987",
+      "latitude": "33.7866",
+      "post code": "90209"
+    },
+    {
+      "place name": "Beverly Hills",
+      "longitude": "-118.4065",
+      "latitude": "34.0901",
+      "post code": "90210"
+    },
+    {
+      "place name": "Beverly Hills",
+      "longitude": "-118.383",
+      "latitude": "34.0652",
+      "post code": "90211"
+    },
+    {
+      "place name": "Beverly Hills",
+      "longitude": "-118.3995",
+      "latitude": "34.0619",
+      "post code": "90212"
+    },
+    {
+      "place name": "Beverly Hills",
+      "longitude": "-118.2987",
+      "latitude": "33.7866",
+      "post code": "90213"
+    }
+  ]
+}
