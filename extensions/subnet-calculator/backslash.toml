@@ -1,0 +1,41 @@
+[extension]
+id = "subnet-calculator"
+title = "Subnet Calculator"
+description = "IPv4 and IPv6 subnets: network, broadcast, host range, netmask and wildcard, address scope, splitting, membership checks and CIDR summarization"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-layers"
+license = "MIT"
+categories = ["network"]
+
+# No permission: everything is computed locally.
+
+[[commands]]
+name = "subnet-calculator"
+title = "Subnet Calculator"
+description = "Type 192.168.1.0/24, 10.0.0.5 255.255.252.0, 2001:db8::/48, /16 split 24, 10.0.0.5 in 10.0.0.0/8 or 500 hosts"
+icon = "bs-layers"
+keywords = [
+  "subnet",
+  "cidr",
+  "ip",
+  "ipv4",
+  "ipv6",
+  "netmask",
+  "subnet mask",
+  "wildcard mask",
+  "broadcast",
+  "prefix",
+  "network",
+  "supernet",
+  "summarize",
+  "aggregate",
+  "ip range",
+  "ipcalc",
+  "sous-réseau",
+  "masque de sous-réseau",
+  "adresse ip",
+  "réseau",
+  "plage d'adresses",
+  "découper",
+]
