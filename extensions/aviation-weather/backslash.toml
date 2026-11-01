@@ -1,0 +1,63 @@
+[extension]
+id = "aviation-weather"
+title = "Aviation Weather"
+description = "METAR and TAF for any airport, decoded in plain words, with the flight category, wind, visibility, clouds and QNH, from aviationweather.gov"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-wind"
+license = "MIT"
+categories = ["everyday"]
+
+# The NOAA Aviation Weather Center's Data API: free, no key. Reports are
+# decoded on your computer; "Decode METAR or TAF" uses no network at all.
+[permissions]
+net = ["aviationweather.gov"]
+
+[[commands]]
+name = "aviation-weather"
+title = "Aviation Weather"
+description = "METAR and TAF for your airports or any airport code you type (LFPG, KJFK, CDG), decoded"
+icon = "bs-wind"
+keywords = [
+  "metar",
+  "taf",
+  "aviation",
+  "airport",
+  "pilot",
+  "flight",
+  "vfr",
+  "ifr",
+  "qnh",
+  "ceiling",
+  "visibility",
+  "icao",
+  "météo aviation",
+  "aéroport",
+  "aéronautique",
+  "pilote",
+  "plafond",
+  "visibilité",
+]
+
+[[commands]]
+name = "decode"
+title = "Decode METAR or TAF"
+description = "Paste a METAR or TAF to read it group by group, without the network"
+icon = "bs-text"
+keywords = [
+  "metar",
+  "taf",
+  "decode",
+  "decoder",
+  "speci",
+  "aviation",
+  "décoder",
+  "décodeur",
+  "message météo",
+  "aéronautique",
+]
+
+[[preferences]]
+name = "airports"
+title = "My airports"
+description = "ICAO or IATA codes shown when you open the command, e.g. \"LFPG, LFPO, KJFK\""

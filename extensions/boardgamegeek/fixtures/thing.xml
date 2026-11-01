@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+  <item type="boardgame" id="13">
+    <thumbnail>https://cf.geekdo-images.com/W3Bsga_uLP9kO91gZ7H8yw__thumb/img/8a9HeqFydO7Uun_le9bXWPnidcA=/fit-in/200x150/filters:strip_icc()/pic2419375.jpg</thumbnail>
+    <image>https://cf.geekdo-images.com/W3Bsga_uLP9kO91gZ7H8yw__original/img/xV7oisd3RQ8R-k18cdWAYthHXsA=/0x0/filters:format(jpeg)/pic2419375.jpg</image>
+    <name type="primary" sortindex="1" value="CATAN" />
+    <name type="alternate" sortindex="1" value="Die Siedler von Catan" />
+    <name type="alternate" sortindex="1" value="Les Colons de Catane" />
+    <description>In CATAN (formerly The Settlers of Catan), players try to be the dominant force on the island of Catan by building settlements, cities, and roads.&amp;#10;&amp;#10;On each turn dice are rolled to determine what resources the island produces. Players build by spending resources (sheep, wheat, wood, brick and ore) &amp;mdash; it&amp;rsquo;s &amp;quot;trading&amp;quot; that wins.</description>
+    <yearpublished value="1995" />
+    <minplayers value="3" />
+    <maxplayers value="4" />
+    <poll name="suggested_numplayers" title="User Suggested Number of Players" totalvotes="2475">
+      <results numplayers="1">
+        <result value="Best" numvotes="2" />
+        <result value="Recommended" numvotes="5" />
+        <result value="Not Recommended" numvotes="1300" />
+      </results>
+      <results numplayers="3">
+        <result value="Best" numvotes="900" />
+        <result value="Recommended" numvotes="1200" />
+        <result value="Not Recommended" numvotes="130" />
+      </results>
+      <results numplayers="4">
+        <result value="Best" numvotes="1600" />
+        <result value="Recommended" numvotes="600" />
+        <result value="Not Recommended" numvotes="40" />
+      </results>
+      <results numplayers="4+">
+        <result value="Best" numvotes="20" />
+        <result value="Recommended" numvotes="100" />
+        <result value="Not Recommended" numvotes="1500" />
+      </results>
+    </poll>
+    <poll-summary name="suggested_numplayers" title="User Suggested Number of Players">
+      <result name="bestwith" value="Best with 4 players" />
+      <result name="recommmendedwith" value="Recommended with 3–4 players" />
+    </poll-summary>
+    <playingtime value="120" />
+    <minplaytime value="60" />
+    <maxplaytime value="120" />
+    <minage value="10" />
+    <link type="boardgamecategory" id="1026" value="Negotiation" />
+    <link type="boardgamemechanic" id="2072" value="Dice Rolling" />
+    <link type="boardgamemechanic" id="2008" value="Trading" />
+    <link type="boardgamefamily" id="3" value="Series: Catan" />
+    <link type="boardgameexpansion" id="325" value="CATAN: Seafarers" />
+    <link type="boardgamedesigner" id="11" value="Klaus Teuber" />
+    <link type="boardgameartist" id="12" value="(Uncredited)" />
+    <link type="boardgamepublisher" id="37" value="KOSMOS" />
+    <statistics page="1">
+      <ratings>
+        <usersrated value="125431" />
+        <average value="7.09451" />
+        <bayesaverage value="6.89" />
+        <ranks>
+          <rank type="subtype" id="1" name="boardgame" friendlyname="Board Game Rank" value="567" bayesaverage="6.89" />
+          <rank type="family" id="5499" name="familygames" friendlyname="Family Game Rank" value="132"
+            bayesaverage="6.86" />
+        </ranks>
+        <stddev value="1.49" />
+        <median value="0" />
+        <owned value="234512" />
+        <trading value="2321" />
+        <wanting value="503" />
+        <wishing value="5000" />
+        <numcomments value="18000" />
+        <numweights value="8000" />
+        <averageweight value="2.2866" />
+      </ratings>
+    </statistics>
+  </item>
+  <item type="boardgameexpansion" id="325">
+    <thumbnail>https://cf.geekdo-images.com/seafarers_thumb.jpg</thumbnail>
+    <image>https://cf.geekdo-images.com/seafarers.jpg</image>
+    <name type="primary" sortindex="1" value="CATAN: Seafarers" />
+    <description>Explore the islands.</description>
+    <yearpublished value="1997" />
+    <minplayers value="3" />
+    <maxplayers value="4" />
+    <poll name="suggested_numplayers" title="User Suggested Number of Players" totalvotes="10">
+      <results numplayers="3">
+        <result value="Best" numvotes="3" />
+        <result value="Recommended" numvotes="5" />
+        <result value="Not Recommended" numvotes="1" />
+      </results>
+      <results numplayers="4">
+        <result value="Best" numvotes="7" />
+        <result value="Recommended" numvotes="2" />
+        <result value="Not Recommended" numvotes="0" />
+      </results>
+    </poll>
+    <playingtime value="90" />
+    <minplaytime value="90" />
+    <maxplaytime value="90" />
+    <minage value="10" />
+    <link type="boardgamedesigner" id="11" value="Klaus Teuber" />
+    <statistics page="1">
+      <ratings>
+        <usersrated value="15000" />
+        <average value="7.25" />
+        <bayesaverage value="0" />
+        <ranks>
+          <rank type="subtype" id="41" name="boardgameexpansion" friendlyname="Expansion Rank" value="Not Ranked"
+            bayesaverage="Not Ranked" />
+        </ranks>
+        <averageweight value="0" />
+      </ratings>
+    </statistics>
+  </item>
+</items>

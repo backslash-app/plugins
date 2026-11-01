@@ -1,0 +1,82 @@
+[extension]
+id = "boardgamegeek"
+title = "BoardGameGeek"
+description = "Search board games with their players, playing time, weight, rating and rank, and see your BoardGameGeek collection, wishlist and logged plays"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-dice"
+license = "MIT"
+categories = ["media"]
+
+# BoardGameGeek's XML API, and its image server for covers. BGG answers only
+# requests that carry the token of an application registered on the site.
+[permissions]
+net = ["boardgamegeek.com", "cf.geekdo-images.com"]
+
+[[commands]]
+name = "search"
+title = "Search Board Games"
+description = "Board games and expansions with players, time, weight, rating, rank and designers"
+icon = "bs-dice"
+keywords = [
+  "boardgamegeek",
+  "bgg",
+  "board game",
+  "tabletop",
+  "game night",
+  "rating",
+  "rank",
+  "expansion",
+  "jeu de société",
+  "jeux de société",
+  "soirée jeux",
+  "extension",
+]
+
+[[commands]]
+name = "collection"
+title = "My Board Game Collection"
+description = "The games you own, your wishlist, the ones you want to play and your ratings"
+icon = "bs-archive"
+keywords = [
+  "boardgamegeek",
+  "bgg",
+  "collection",
+  "shelf",
+  "wishlist",
+  "owned",
+  "want to play",
+  "ludothèque",
+  "ma collection",
+  "liste de souhaits",
+  "jeux de société",
+]
+
+[[commands]]
+name = "plays"
+title = "My Board Game Plays"
+description = "The plays you logged, with players, scores and winners"
+icon = "bs-history"
+keywords = [
+  "boardgamegeek",
+  "bgg",
+  "plays",
+  "logged plays",
+  "scores",
+  "game night",
+  "parties",
+  "parties jouées",
+  "scores",
+  "jeux de société",
+]
+
+[[preferences]]
+name = "token"
+title = "Application token"
+description = "Required by BoardGameGeek since 2025: register an application at boardgamegeek.com/applications, create a token and paste it here"
+type = "secret"
+
+[[preferences]]
+name = "username"
+title = "Username"
+description = "Your BoardGameGeek username, for your collection and plays"

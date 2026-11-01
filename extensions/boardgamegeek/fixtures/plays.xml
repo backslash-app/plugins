@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plays username="meeple" userid="12345" total="57" page="1" termsofuse="https://boardgamegeek.com/xmlapi/termsofuse">
+  <play id="90000003" date="2026-10-31" quantity="1" length="40" incomplete="0" nowinstats="0" location="Home">
+    <item name="Azul" objecttype="thing" objectid="230802">
+      <subtypes>
+        <subtype value="boardgame" />
+      </subtypes>
+    </item>
+    <comments>Close game!&#10;Rematch next week.</comments>
+    <players>
+      <player username="meeple" userid="12345" name="Sam" startposition="1" color="blue" score="78" new="0" rating="0"
+        win="1" />
+      <player username="" userid="0" name="Alex" startposition="2" color="" score="71" new="1" rating="0" win="0" />
+    </players>
+  </play>
+  <play id="90000002" date="2026-10-24" quantity="2" length="0" incomplete="0" nowinstats="0" location="">
+    <item name="Azul" objecttype="thing" objectid="230802">
+      <subtypes>
+        <subtype value="boardgame" />
+      </subtypes>
+    </item>
+    <players>
+      <player username="meeple" userid="12345" name="Sam" startposition="" color="" score="" new="0" rating="0"
+        win="0" />
+      <player username="friend" userid="777" name="Kim" startposition="" color="" score="" new="0" rating="0" win="1" />
+    </players>
+  </play>
+  <play id="90000001" date="2026-09-12" quantity="1" length="120" incomplete="1" nowinstats="0" location="Game café">
+    <item name="CATAN" objecttype="thing" objectid="13">
+      <subtypes>
+        <subtype value="boardgame" />
+      </subtypes>
+    </item>
+  </play>
+</plays>
