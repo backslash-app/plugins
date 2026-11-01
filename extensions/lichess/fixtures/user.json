@@ -1,0 +1,24 @@
+{
+  "id": "thibault",
+  "username": "thibault",
+  "title": "LM",
+  "patron": true,
+  "createdAt": 1290415680000,
+  "seenAt": 1730000000000,
+  "url": "https://lichess.org/@/thibault",
+  "playing": "https://lichess.org/abcdefgh/white",
+  "perfs": {
+    "bullet": { "games": 1200, "rating": 1650, "rd": 60, "prog": -12 },
+    "blitz": { "games": 3400, "rating": 1800, "rd": 45, "prog": 23 },
+    "rapid": { "games": 15, "rating": 1500, "rd": 140, "prog": 0, "prov": true },
+    "classical": { "games": 0, "rating": 1500, "rd": 500, "prog": 0, "prov": true },
+    "correspondence": { "games": 40, "rating": 1700, "rd": 80, "prog": 5 },
+    "puzzle": { "games": 5000, "rating": 2100, "rd": 70, "prog": 8 },
+    "storm": { "runs": 12, "score": 34 },
+    "racer": { "runs": 0, "score": 0 },
+    "streak": { "runs": 3, "score": 17 }
+  },
+  "profile": { "flag": "FR", "location": "Paris", "bio": "I made this.", "firstName": "Thibault", "lastName": "D" },
+  "count": { "all": 4655, "rated": 4600, "win": 2400, "loss": 2000, "draw": 255 },
+  "playTime": { "total": 1036800 }
+}
