@@ -1,0 +1,19 @@
+[extension]
+id = "calculator"
+title = "Calculator"
+description = "Math as you type in the search: + - * / % ^, parentheses, sqrt, sin, ln, pi and implicit multiplication like 2pi or 3(4+1)"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calculator"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: everything is computed locally.
+
+[[commands]]
+name = "calculator"
+title = "Calculator"
+description = "Type 12*(3+4), sqrt(2)/2 or 2pi in the search: the result shows on top"
+icon = "bs-calculator"
+mode = "answer"
+keywords = ["math", "calc", "compute", "arithmetic", "expression", "calcul", "calculatrice", "maths"]
