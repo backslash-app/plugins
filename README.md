@@ -2,10 +2,11 @@
 
 <h1 align="center">Backslash extensions</h1>
 
-<p align="center">The extensions of <a href="https://github.com/backslash-app/backslash">Backslash</a>, the launcher for Linux,<br/>
+<p align="center">The extensions of <a href="https://www.getbackslash.com">Backslash</a>, the launcher for Linux,<br/>
 and everything you need to write your own: an afternoon is plenty.</p>
 
 <p align="center">
+  <a href="https://www.getbackslash.com"><b>getbackslash.com</b></a> ·
   <a href="#build-your-first-extension"><b>Build an extension</b></a> ·
   <a href="#cheat-sheet">Cheat sheet</a> ·
   <a href="#publish-it">Publish</a> ·
@@ -17,7 +18,8 @@ and everything you need to write your own: an afternoon is plenty.</p>
 
 ## Use them
 
-Open **Browse Extensions** in Backslash, or from a terminal:
+Browse them all on [getbackslash.com/extensions](https://www.getbackslash.com/extensions). To install one, open
+**Browse Extensions** in Backslash, or from a terminal:
 
 ```sh
 backslash search            # browse the registry
@@ -342,7 +344,8 @@ Ideas for new extensions and bug reports are welcome in the [issues](https://git
 
 ## First-party extensions
 
-Every extension we maintain, plus npm and System that come with the launcher. More are added all the time.
+Every extension we maintain, plus npm and System that come with the launcher. More are added all the time. Each one
+also has its own page on [getbackslash.com/extensions](https://www.getbackslash.com/extensions).
 
 | Extension                                                 | What it does                                                                                                                                                                                       | Permissions                                                                                                                                                                   |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
