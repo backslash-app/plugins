@@ -103,9 +103,15 @@ async function runScript(script: string, hosts: string, args: string[], stdin = 
       stdout: "null",
       stderr: "null",
     }).spawn();
+    // A script that refuses its arguments exits before reading its input:
+    // writing to it then fails with a broken pipe, which is not the test's concern.
     const w = child.stdin.getWriter();
-    await w.write(new TextEncoder().encode(stdin));
-    await w.close();
+    try {
+      await w.write(new TextEncoder().encode(stdin));
+      await w.close();
+    } catch (e) {
+      if (!(e instanceof Deno.errors.BrokenPipe)) throw e;
+    }
     const { code } = await child.status;
     return {
       code,
