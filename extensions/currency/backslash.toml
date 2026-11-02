@@ -1,0 +1,31 @@
+[extension]
+id = "currency"
+title = "Currency Converter"
+description = "Currency conversions as you type in the search, at the European Central Bank's daily rates (via Frankfurter, cached for 12 hours)"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-coin"
+license = "MIT"
+categories = ["everyday"]
+
+# Frankfurter serves the European Central Bank's reference rates, without a key.
+[permissions]
+net = ["api.frankfurter.dev"]
+
+[[commands]]
+name = "currency"
+title = "Currency Converter"
+description = "Type 20 € en $ or 100 chf in jpy in the search: the result shows on top"
+icon = "bs-coin"
+mode = "answer"
+keywords = [
+  "currency",
+  "exchange rate",
+  "money",
+  "euro",
+  "dollar",
+  "forex",
+  "devise",
+  "taux de change",
+  "convertir",
+]

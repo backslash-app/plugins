@@ -1,0 +1,13 @@
+id = "unit-converter"
+title = "Unit Converter"
+description = "Conversions as you type in the search: length, mass, temperature, data, time, volume, speed and area, in English or French"
+author = "Backslash"
+icon = "bs-calculator"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/unit-converter"
+commit = "c554b21daa4c748a7165851805e24fdcefddb119"
+checksum = "sha256:cf73b6e07d0ace8252ce751b3112c267843a4e65827118973b9af19e15c92d9c"
+permissions = ["Answer in the root search with “Unit Converter”, which sees what you type there"]
+commands = ["Unit Converter"]
+categories = ["everyday"]
