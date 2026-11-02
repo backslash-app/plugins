@@ -1,0 +1,13 @@
+id = "calculator"
+title = "Calculator"
+description = "Math as you type in the search: + - * / % ^, parentheses, sqrt, sin, ln, pi and implicit multiplication like 2pi or 3(4+1)"
+author = "Backslash"
+icon = "bs-calculator"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/calculator"
+commit = "c554b21daa4c748a7165851805e24fdcefddb119"
+checksum = "sha256:57b76c21c314c219eab32f4d5811ec420b71c99c4ff943d157515bc926a36bb3"
+permissions = ["Answer in the root search with “Calculator”, which sees what you type there"]
+commands = ["Calculator"]
+categories = ["everyday"]
