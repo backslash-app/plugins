@@ -1,0 +1,13 @@
+id = "currency"
+title = "Currency Converter"
+description = "Currency conversions as you type in the search, at the European Central Bank's daily rates (via Frankfurter, cached for 12 hours)"
+author = "Backslash"
+icon = "bs-coin"
+version = "1.0.0"
+repository = "https://github.com/backslash-app/plugins"
+path = "extensions/currency"
+commit = "c554b21daa4c748a7165851805e24fdcefddb119"
+checksum = "sha256:b67073bc84d0d52e76a0d46d132eea283110ad492ef1a113a6c1ab0a6eeea7fc"
+permissions = ["Access api.frankfurter.dev", "Answer in the root search with “Currency Converter”, which sees what you type there"]
+commands = ["Currency Converter"]
+categories = ["everyday"]

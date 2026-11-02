@@ -1,0 +1,33 @@
+[extension]
+id = "unit-converter"
+title = "Unit Converter"
+description = "Conversions as you type in the search: length, mass, temperature, data, time, volume, speed and area, in English or French"
+version = "1.0.0"
+author = "Backslash"
+icon = "bs-calculator"
+license = "MIT"
+categories = ["everyday"]
+
+# No permission: everything is computed locally.
+
+[[commands]]
+name = "unit-converter"
+title = "Unit Converter"
+description = "Type 5 km in miles, 72 f to c or 2 GiB en MB in the search: the result shows on top"
+icon = "bs-calculator"
+mode = "answer"
+keywords = [
+  "convert",
+  "conversion",
+  "units",
+  "length",
+  "weight",
+  "temperature",
+  "miles",
+  "celsius",
+  "fahrenheit",
+  "convertir",
+  "unités",
+  "longueur",
+  "poids",
+]

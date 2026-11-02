@@ -109,6 +109,9 @@ function requested(m: Manifest): string[] {
     const every = intervalText(c.interval);
     if (c.mode === "menu-bar") {
       lines.push(`Show “${c.title}” in the system tray${every ? `, updated ${every}` : ""}`);
+    } else if (c.mode === "answer") {
+      // It reads every root search query: worth saying.
+      lines.push(`Answer in the root search with “${c.title}”, which sees what you type there`);
     } else if (every) {
       lines.push(`Run “${c.title}” in the background ${every}`);
     }
